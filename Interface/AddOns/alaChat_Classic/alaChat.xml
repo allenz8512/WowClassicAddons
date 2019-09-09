@@ -1,0 +1,28 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+    <script file = "lib\LibStub\LibStub.lua" />
+    <include file = "lib\CallbackHandler-1.0\CallbackHandler-1.0.xml" />
+    <script file = "lib\LibDataBroker-1.1\LibDataBroker-1.1.lua" />
+    <script file = "lib\LibDBIcon-1.0\LibDBIcon-1.0.lua" />
+
+    <script file="__alaBase.lua"/>
+    <script file="__alaBaseBtn.lua"/>
+    <script file="alaDropMenu.lua"/>
+    <script file="_Global.lua"/>
+    <script file="Locale-zhCN.lua"/>
+    <script file="Locale-zhTW.lua"/>
+    <script file="Locale-enUS.lua"/>
+    <script file="addon.lua"/>
+    <script file="chat.lua"/>
+    <script file="chatEmote.lua"/>
+    <script file="channelBar.lua"/>
+    <script file="otherButton_Roll.lua"/>
+    <script file="otherButton_DBM.lua"/>
+    <script file="ReadyCheck.lua"/>
+    <script file="statReport.lua"/>
+    <script file="chatFrame.lua"/>
+    <script file="WelcomeToGuild.lua"/>
+    <script file="copy.lua"/>
+</Ui>
+

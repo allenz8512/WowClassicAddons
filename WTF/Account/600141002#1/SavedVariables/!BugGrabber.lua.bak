@@ -1,0 +1,29 @@
+
+BugGrabberDB = {
+	["session"] = 22,
+	["lastSanitation"] = 3,
+	["errors"] = {
+		{
+			["message"] = "Interface\\AddOns\\!MoncaiCompare\\EncounterJournal.lua:163: hooksecurefunc(): EncounterJournal_LoadUI is not a function",
+			["time"] = "2019/09/09 21:10:43",
+			["locals"] = "",
+			["stack"] = "[C]: in function `hooksecurefunc'\nInterface\\AddOns\\!MoncaiCompare\\EncounterJournal.lua:163: in main chunk",
+			["session"] = 22,
+			["counter"] = 3,
+		}, -- [1]
+		{
+			["message"] = "Interface\\AddOns\\!MoncaiCompare\\LootJournal.lua:26: hooksecurefunc(): EncounterJournal_LoadUI is not a function",
+			["time"] = "2019/09/09 21:10:43",
+			["locals"] = "",
+			["stack"] = "[C]: in function `hooksecurefunc'\nInterface\\AddOns\\!MoncaiCompare\\LootJournal.lua:26: in main chunk",
+			["session"] = 22,
+			["counter"] = 3,
+		}, -- [2]
+		{
+			["message"] = "(null)",
+			["time"] = "2019/09/09 21:10:45",
+			["session"] = 22,
+			["counter"] = 18,
+		}, -- [3]
+	},
+}

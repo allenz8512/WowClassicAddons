@@ -1,0 +1,42 @@
+lightweight tag 2462b866435a4da76f0443de9559929d5c99ffb1 v1.04.00
+Author:	Moorea Tv <moorea@ymail.com>
+Date:	Mon Aug 26 03:41:56 2019 -0700
+
+commit 2462b866435a4da76f0443de9559929d5c99ffb1
+Author: Moorea Tv <moorea@ymail.com>
+Date:   Mon Aug 26 03:41:56 2019 -0700
+
+    Update BetterVendorPrice.lua
+
+commit af3d223b2437ca9a753fde563dd2bdd58b3401f5
+Author: Moorea Tv <moorea@ymail.com>
+Date:   Mon Aug 26 03:39:30 2019 -0700
+
+    Show AHDB data!
+    
+    Get Auction House DataBase (AHDB) to see AH data in your tooltips
+
+commit 54b9d6d18702a88fca32e703e611722ee708abe6
+Author: Moorea Tv <moorea@ymail.com>
+Date:   Sat Aug 24 16:43:08 2019 -0700
+
+    keep bvp small, exclude AH code from molib
+
+commit 896a63c1dd33d83458f4bdc73e3011759f88c68e
+Author: Moorea Tv <moorea@ymail.com>
+Date:   Fri Aug 16 04:53:32 2019 -0700
+
+    minor options panel message tweaks
+
+commit d7b9f28dc9f53f235e08fa9aca1b66abe47d4165
+Author: Moorea Tv <moorea@ymail.com>
+Date:   Fri Aug 16 04:20:24 2019 -0700
+
+    moved more code to MoLib (saved vars and ADDON_LOADED handling)
+
+commit 1436692c0814b7d8a155eb989d70d5875d1a2b1f
+Author: Moorea Tv <moorea@ymail.com>
+Date:   Wed Aug 14 15:23:39 2019 -0700
+
+    Switching back to retail toc 80200
+
