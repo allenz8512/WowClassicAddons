@@ -4,3 +4,5 @@
   Account/账号ID#1/碧玉矿洞/ 下的目录改成角色名
 
   进入游戏后弹出ELVUI导航关掉，点ESC，选ELVUI，配置文件，现有的配置文件，碧玉矿洞 - 白銀諾艾爾
+
+  ![界面截图](https://github.com/allenz8512/WowClassicAddons/raw/master/Screenshot.jpg)
