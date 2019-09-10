@@ -23,4 +23,7 @@ function LootJournalHook()
 		end	
 	end
 end
-hooksecurefunc("EncounterJournal_LoadUI", LootJournalHook)
+
+if EncounterJournal_LoadUI then
+	hooksecurefunc("EncounterJournal_LoadUI", LootJournalHook)
+end

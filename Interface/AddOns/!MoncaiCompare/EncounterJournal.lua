@@ -160,5 +160,7 @@ function Journal_GameTooltip_ShowCompareItem(self, shift)
 	shoppingTooltip1:Show();
 end
 
-hooksecurefunc("EncounterJournal_LoadUI", JournalHook)
+if EncounterJournal_LoadUI then
+	hooksecurefunc("EncounterJournal_LoadUI", JournalHook)
+end
 --~ GameTooltip:HookScript("OnHide", function(self) print( (self and self:GetName() or "?") .. " hide") end)
