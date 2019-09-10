@@ -1,69 +1,15 @@
 
 BugGrabberDB = {
+	["session"] = 78,
 	["lastSanitation"] = 3,
-	["session"] = 39,
 	["errors"] = {
 		{
-			["message"] = "Interface\\AddOns\\dct_damage\\dctd.lua:162: attempt to concatenate local 'amount' (a nil value)",
-			["time"] = "2019/09/10 09:17:22",
-			["locals"] = "InCombatSkipped",
-			["stack"] = "Interface\\AddOns\\dct_damage\\dctd.lua:162: in function `DCTD_ProcCombatUnfiltered'\nInterface\\AddOns\\dct\\DCT.lua:1138: in function `DCT_BattleLogAnalysis'\nInterface\\AddOns\\dct\\DCT.lua:809: in function `func'\n[string \"*:OnEvent\"]:4: in function <[string \"*:OnEvent\"]:1>",
-			["session"] = 32,
-			["counter"] = 2,
+			["message"] = "[string \"MonkeyQuestFrame:OnUpdate\"]:1: attempt to call global 'MonkeyQuest_OnUpdate' (a nil value)",
+			["time"] = "2019/09/10 12:09:47",
+			["locals"] = "self = MonkeyQuestFrame {\n 0 = <userdata>\n}\nelapsed = 0.010000\n(*temporary) = nil\n(*temporary) = MonkeyQuestFrame {\n 0 = <userdata>\n}\n(*temporary) = 0.010000\n(*temporary) = \"attempt to call global 'MonkeyQuest_OnUpdate' (a nil value)\"\n",
+			["stack"] = "[string \"*:OnUpdate\"]:1: in function <[string \"*:OnUpdate\"]:1>",
+			["session"] = 77,
+			["counter"] = 635,
 		}, -- [1]
-		{
-			["message"] = "Interface\\AddOns\\!MoncaiCompare\\EncounterJournal.lua:163: hooksecurefunc(): EncounterJournal_LoadUI is not a function",
-			["time"] = "2019/09/10 00:18:58",
-			["locals"] = "",
-			["stack"] = "[C]: in function `hooksecurefunc'\nInterface\\AddOns\\!MoncaiCompare\\EncounterJournal.lua:163: in main chunk",
-			["session"] = 39,
-			["counter"] = 11,
-		}, -- [2]
-		{
-			["message"] = "Interface\\AddOns\\!MoncaiCompare\\LootJournal.lua:26: hooksecurefunc(): EncounterJournal_LoadUI is not a function",
-			["time"] = "2019/09/10 00:18:58",
-			["locals"] = "",
-			["stack"] = "[C]: in function `hooksecurefunc'\nInterface\\AddOns\\!MoncaiCompare\\LootJournal.lua:26: in main chunk",
-			["session"] = 39,
-			["counter"] = 11,
-		}, -- [3]
-		{
-			["message"] = "(null)",
-			["time"] = "2019/09/10 00:19:00",
-			["session"] = 39,
-			["counter"] = 66,
-		}, -- [4]
-		{
-			["message"] = "integer overflow attempting to store 2157368193",
-			["time"] = "2019/09/10 09:36:27",
-			["locals"] = "InCombatSkipped",
-			["stack"] = "[C]: in function `format'\n...\\Libraries\\LibClassicHealComm\\LibClassicHealComm.lua:1727: in function `?'\n...\\Libraries\\LibClassicHealComm\\LibClassicHealComm.lua:2073: in function <...\\Libraries\\LibClassicHealComm\\LibClassicHealComm.lua:2072>",
-			["session"] = 39,
-			["counter"] = 1,
-		}, -- [5]
-		{
-			["message"] = "integer overflow attempting to store 2157368993",
-			["time"] = "2019/09/10 09:36:29",
-			["locals"] = "InCombatSkipped",
-			["stack"] = "[C]: in function `format'\n...\\Libraries\\LibClassicHealComm\\LibClassicHealComm.lua:1727: in function `?'\n...\\Libraries\\LibClassicHealComm\\LibClassicHealComm.lua:2073: in function <...\\Libraries\\LibClassicHealComm\\LibClassicHealComm.lua:2072>",
-			["session"] = 39,
-			["counter"] = 1,
-		}, -- [6]
-		{
-			["message"] = "integer overflow attempting to store 2157382673",
-			["time"] = "2019/09/10 09:36:41",
-			["locals"] = "InCombatSkipped",
-			["stack"] = "[C]: in function `format'\n...\\Libraries\\LibClassicHealComm\\LibClassicHealComm.lua:1727: in function `?'\n...\\Libraries\\LibClassicHealComm\\LibClassicHealComm.lua:2073: in function <...\\Libraries\\LibClassicHealComm\\LibClassicHealComm.lua:2072>",
-			["session"] = 39,
-			["counter"] = 1,
-		}, -- [7]
-		{
-			["message"] = "integer overflow attempting to store 2157383473",
-			["time"] = "2019/09/10 09:36:43",
-			["locals"] = "InCombatSkipped",
-			["stack"] = "[C]: in function `format'\n...\\Libraries\\LibClassicHealComm\\LibClassicHealComm.lua:1727: in function `?'\n...\\Libraries\\LibClassicHealComm\\LibClassicHealComm.lua:2073: in function <...\\Libraries\\LibClassicHealComm\\LibClassicHealComm.lua:2072>",
-			["session"] = 39,
-			["counter"] = 1,
-		}, -- [8]
 	},
 }

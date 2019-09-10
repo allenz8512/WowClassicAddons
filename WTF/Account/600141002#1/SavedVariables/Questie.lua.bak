@@ -11,11 +11,11 @@ QuestieConfig = {
 							["Level"] = 34,
 						}, -- [1]
 					},
-					["Timestamp"] = 1568027506,
-					["Quest"] = 186,
-					["Level"] = 36,
 					["Event"] = "Quest",
 					["SubType"] = "Complete",
+					["Level"] = 36,
+					["Quest"] = 186,
+					["Timestamp"] = 1568027506,
 				}, -- [1]
 				{
 					["Party"] = {
@@ -25,11 +25,11 @@ QuestieConfig = {
 							["Level"] = 34,
 						}, -- [1]
 					},
-					["Timestamp"] = 1568027514,
-					["Quest"] = 187,
-					["Level"] = 36,
 					["Event"] = "Quest",
 					["SubType"] = "Accept",
+					["Level"] = 36,
+					["Quest"] = 187,
+					["Timestamp"] = 1568027514,
 				}, -- [2]
 				{
 					["Party"] = {
@@ -39,11 +39,11 @@ QuestieConfig = {
 							["Level"] = 34,
 						}, -- [1]
 					},
-					["Timestamp"] = 1568027627,
-					["Quest"] = 574,
-					["Level"] = 36,
 					["Event"] = "Quest",
 					["SubType"] = "Complete",
+					["Level"] = 36,
+					["Quest"] = 574,
+					["Timestamp"] = 1568027627,
 				}, -- [3]
 				{
 					["Party"] = {
@@ -53,126 +53,126 @@ QuestieConfig = {
 							["Level"] = 34,
 						}, -- [1]
 					},
-					["Timestamp"] = 1568027642,
-					["Quest"] = 202,
-					["Level"] = 36,
 					["Event"] = "Quest",
 					["SubType"] = "Accept",
+					["Level"] = 36,
+					["Quest"] = 202,
+					["Timestamp"] = 1568027642,
 				}, -- [4]
 				{
 					["Party"] = {
 					},
-					["Timestamp"] = 1568038238,
-					["Quest"] = 201,
-					["Level"] = 36,
 					["Event"] = "Quest",
 					["SubType"] = "Complete",
+					["Level"] = 36,
+					["Quest"] = 201,
+					["Timestamp"] = 1568038238,
 				}, -- [5]
 				{
 					["Party"] = {
 					},
-					["Timestamp"] = 1568038255,
-					["Quest"] = 213,
-					["Level"] = 36,
 					["Event"] = "Quest",
 					["SubType"] = "Complete",
+					["Level"] = 36,
+					["Quest"] = 213,
+					["Timestamp"] = 1568038255,
 				}, -- [6]
 				{
 					["Party"] = {
 					},
-					["Timestamp"] = 1568038288,
-					["Quest"] = 1182,
-					["Level"] = 36,
 					["Event"] = "Quest",
 					["SubType"] = "Complete",
+					["Level"] = 36,
+					["Quest"] = 1182,
+					["Timestamp"] = 1568038288,
 				}, -- [7]
 				{
 					["Party"] = {
 					},
-					["Timestamp"] = 1568038293,
-					["Quest"] = 1183,
-					["Level"] = 36,
 					["Event"] = "Quest",
 					["SubType"] = "Accept",
+					["Level"] = 36,
+					["Quest"] = 1183,
+					["Timestamp"] = 1568038293,
 				}, -- [8]
 				{
 					["Party"] = {
 					},
-					["Timestamp"] = 1568038335,
-					["Quest"] = 575,
-					["Level"] = 36,
 					["Event"] = "Quest",
 					["SubType"] = "Complete",
+					["Level"] = 36,
+					["Quest"] = 575,
+					["Timestamp"] = 1568038335,
 				}, -- [9]
 				{
 					["Party"] = {
 					},
-					["Timestamp"] = 1568038348,
-					["Quest"] = 577,
-					["Level"] = 36,
 					["Event"] = "Quest",
 					["SubType"] = "Accept",
+					["Level"] = 36,
+					["Quest"] = 577,
+					["Timestamp"] = 1568038348,
 				}, -- [10]
 				{
 					["Party"] = {
 					},
-					["Timestamp"] = 1568038534,
-					["Quest"] = 8551,
-					["Level"] = 36,
 					["Event"] = "Quest",
 					["SubType"] = "Accept",
+					["Level"] = 36,
+					["Quest"] = 8551,
+					["Timestamp"] = 1568038534,
 				}, -- [11]
 				{
 					["Party"] = {
 					},
-					["Timestamp"] = 1568038556,
-					["Quest"] = 8551,
-					["Level"] = 36,
 					["Event"] = "Quest",
 					["SubType"] = "Abandon",
+					["Level"] = 36,
+					["Quest"] = 8551,
+					["Timestamp"] = 1568038556,
 				}, -- [12]
 				{
 					["Party"] = {
 					},
-					["Event"] = "Quest",
-					["SubType"] = "Accept",
 					["Level"] = 36,
 					["Quest"] = 8551,
 					["Timestamp"] = 1568038594,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
 				}, -- [13]
 				{
-					["Timestamp"] = 1568042638,
 					["Party"] = {
 					},
+					["Timestamp"] = 1568042638,
 					["Event"] = "Level",
 					["NewLevel"] = 37,
 				}, -- [14]
 				{
 					["Party"] = {
 					},
-					["Level"] = 37,
-					["Quest"] = 693,
-					["Timestamp"] = 1568046415,
 					["SubType"] = "Accept",
 					["Event"] = "Quest",
+					["Timestamp"] = 1568046415,
+					["Quest"] = 693,
+					["Level"] = 37,
 				}, -- [15]
 				{
 					["Party"] = {
 					},
-					["Level"] = 37,
-					["Quest"] = 682,
-					["Timestamp"] = 1568046422,
 					["SubType"] = "Accept",
 					["Event"] = "Quest",
+					["Timestamp"] = 1568046422,
+					["Quest"] = 682,
+					["Level"] = 37,
 				}, -- [16]
 				{
 					["Party"] = {
 					},
-					["Level"] = 37,
-					["Quest"] = 684,
-					["Timestamp"] = 1568046433,
 					["SubType"] = "Accept",
 					["Event"] = "Quest",
+					["Timestamp"] = 1568046433,
+					["Quest"] = 684,
+					["Level"] = 37,
 				}, -- [17]
 			},
 			["complete"] = {
@@ -808,14 +808,14 @@ QuestieConfig = {
 			},
 		},
 	},
-	["profileKeys"] = {
-		["白銀諾艾爾 - 碧玉矿洞"] = "Default",
-	},
 	["global"] = {
 		["maxLevelFilter"] = 10,
 		["nameplateX"] = 52,
 		["mapCoordinatesEnabled"] = false,
 		["nameplateY"] = 19,
+	},
+	["profileKeys"] = {
+		["白銀諾艾爾 - 碧玉矿洞"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

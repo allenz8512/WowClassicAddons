@@ -16,9 +16,9 @@ Quartz3DB = {
 				["Default"] = {
 					["w"] = 190,
 					["y"] = 276.888732910156,
-					["x"] = 753,
-					["border"] = "ElvUI GlowBorder",
 					["font"] = "默认",
+					["border"] = "ElvUI GlowBorder",
+					["x"] = 753,
 					["texture"] = "ElvUI Norm",
 				},
 			},
