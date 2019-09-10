@@ -62,6 +62,12 @@ function MonkeyQuest_OnLoad(self)
     
     -- this will catch mobs needed for quests (not needed anymore)
 	-- self:RegisterEvent('UPDATE_MOUSEOVER_UNIT');
+	QuestLogFrame:HookScript('OnShow', function()
+		if (MkQL_SetQuest and self.m_iQuestIndex) then
+			QuestLog_SetSelection(self.m_iQuestIndex)
+			QuestLog_Update()
+		end
+	end)
 end
 
 function MonkeyQuest_OnUpdate(self, elapsed)
@@ -1415,18 +1421,19 @@ function MonkeyQuestButton_OnClick(self, button, down)
 			return;
 		end
 
-		-- show the real questlog
-		-- ShowUIPanel(QuestLogFrame);
-
-		-- actually select the quest entry
-		if (QuestMapFrame:IsShown() and QuestMapFrame:IsVisible()) then
-			QuestMapFrame_OpenToQuestDetails(questID)
+		if not QuestLogFrame:IsVisible() then
+			ShowUIPanel(QuestLogFrame)
 		else
-			QuestLogPopupDetailFrame_Show(self.m_iQuestIndex)
+			QuestLog_SetSelection(self.m_iQuestIndex)
+			QuestLog_Update()
 		end
-
-		-- update the real quest log
-		-- QuestLog_Update();
+		
+		-- actually select the quest entry
+		--if (QuestMapFrame:IsShown() and QuestMapFrame:IsVisible()) then
+		--	QuestMapFrame_OpenToQuestDetails(questID)
+		--else
+		--	QuestLogPopupDetailFrame_Show(self.m_iQuestIndex)
+		--end
 
 	elseif (button == "RightButton") then
 		if(MonkeyQuestConfig[MonkeyQuest.m_global].m_bHideQuestsEnabled == true or MonkeyQuestConfig[MonkeyQuest.m_global].m_bShowHidden == true) then
