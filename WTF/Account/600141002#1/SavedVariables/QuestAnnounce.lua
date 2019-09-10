@@ -13,9 +13,9 @@ QuestAnnounceDB = {
 				},
 				["settings"] = {
 					["enable"] = true,
+					["every"] = 1,
 					["debug"] = false,
 					["sound"] = true,
-					["every"] = 1,
 				},
 				["announceIn"] = {
 					["party"] = true,
@@ -24,6 +24,9 @@ QuestAnnounceDB = {
 					["whisper"] = false,
 					["officer"] = false,
 				},
+			},
+			["settings"] = {
+				["sound"] = false,
 			},
 		},
 	},

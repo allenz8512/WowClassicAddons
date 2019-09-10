@@ -1,14 +1,17 @@
 
 AtlasLootClassicDB = {
-	["global"] = {
-		["__addonrevision"] = 1010008,
-	},
 	["profileKeys"] = {
 		["白银兽骑团员 - 碧玉矿洞"] = "白银兽骑团员 - 碧玉矿洞",
 		["白銀諾艾爾 - 碧玉矿洞"] = "白銀諾艾爾 - 碧玉矿洞",
 	},
+	["global"] = {
+		["__addonrevision"] = 1010008,
+	},
 	["profiles"] = {
 		["白银兽骑团员 - 碧玉矿洞"] = {
+			["minimap"] = {
+				["minimapPos"] = 197.36267728892,
+			},
 			["GUI"] = {
 				["selected"] = {
 					nil, -- [1]
@@ -17,9 +20,6 @@ AtlasLootClassicDB = {
 					1, -- [4]
 					0, -- [5]
 				},
-			},
-			["minimap"] = {
-				["minimapPos"] = 197.36267728892,
 			},
 		},
 		["白銀諾艾爾 - 碧玉矿洞"] = {
@@ -37,7 +37,7 @@ AtlasLootClassicDB = {
 				["selected"] = {
 					nil, -- [1]
 					"Gnomeregan", -- [2]
-					6, -- [3]
+					nil, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},

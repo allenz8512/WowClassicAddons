@@ -60,3 +60,4 @@ Atlas: enabled
 AtlasQuest: enabled
 FriendsMenuXP: enabled
 DamageEx: disabled
+ItemRackOptions: enabled
