@@ -1,0 +1,5 @@
+## Interface: 11302
+## Title: Wide Quest Log Levels
+## Author: bloodline_
+## Notes: Adds Levels to the Quest Log Overview
+WideQuestLogLevels.lua
