@@ -6,8 +6,8 @@ ElvDB = {
 	},
 	["gold"] = {
 		["碧玉矿洞"] = {
-			["白銀諾艾爾"] = 229285,
-			["白银兽骑团员"] = 0,
+			["白銀諾艾爾"] = 294231,
+			["白银兽骑团员"] = 9670,
 		},
 	},
 	["class"] = {
@@ -30,6 +30,20 @@ ElvDB = {
 		},
 	},
 	["profiles"] = {
+		["白银兽骑团员 - 碧玉矿洞"] = {
+			["chat"] = {
+				["panelColorConverted"] = true,
+			},
+			["currentTutorial"] = 1,
+			["v11NamePlateReset"] = true,
+			["movers"] = {
+				["ElvUF_Raid40Mover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,432",
+				["ShiftAB"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,956",
+				["ElvUF_PartyMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,195",
+				["ElvUF_RaidMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,427",
+				["ElvUF_RaidpetMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,736",
+			},
+		},
 		["Minimalistic"] = {
 			["currentTutorial"] = 2,
 			["general"] = {
@@ -88,9 +102,9 @@ ElvDB = {
 				["ElvAB_6"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-488,330",
 				["TooltipMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-50,50",
 				["ElvUF_TankMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,50,995",
-				["ElvUF_PetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,200",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-230,140",
 				["TotemBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,463,50",
+				["ElvUF_PetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,200",
 				["ElvUF_PartyMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,184,773",
 				["AlertFrameMover"] = "TOP,ElvUIParent,TOP,0,-50",
 				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,230,140",
@@ -440,9 +454,9 @@ ElvDB = {
 					["size"] = 50,
 				},
 				["valuecolor"] = {
-					["r"] = 0.96,
-					["g"] = 0.55,
-					["b"] = 0.73,
+					["r"] = 0.67,
+					["g"] = 0.83,
+					["b"] = 0.45,
 				},
 				["font"] = "聊天",
 				["minimap"] = {
@@ -501,11 +515,11 @@ ElvDB = {
 				["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,75",
 				["ElvUF_TargetTargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,173",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-209,153",
-				["ElvNP_PlayerMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-481,4",
 				["ShiftAB"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,500,36",
+				["VOICECHAT"] = "TOPLEFT,ElvUIParent,TOPLEFT,368,-210",
 				["ObjectiveFrameMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-163,-325",
 				["BNETMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-274",
-				["VOICECHAT"] = "TOPLEFT,ElvUIParent,TOPLEFT,368,-210",
+				["ElvNP_PlayerMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-481,4",
 				["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,4",
 				["HonorBarMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-3,-255",
 				["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,209,229",
@@ -862,20 +876,6 @@ ElvDB = {
 				},
 			},
 		},
-		["白银兽骑团员 - 碧玉矿洞"] = {
-			["chat"] = {
-				["panelColorConverted"] = true,
-			},
-			["currentTutorial"] = 1,
-			["v11NamePlateReset"] = true,
-			["movers"] = {
-				["ElvUF_Raid40Mover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,432",
-				["ShiftAB"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,956",
-				["ElvUF_PartyMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,195",
-				["ElvUF_RaidMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,427",
-				["ElvUF_RaidpetMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,736",
-			},
-		},
 		["白銀諾艾爾 - 碧玉矿洞"] = {
 			["databars"] = {
 				["reputation"] = {
@@ -1104,9 +1104,6 @@ ElvDB = {
 						["infoPanel"] = {
 							["enable"] = true,
 						},
-						["name"] = {
-							["text_format"] = "[level]  [name:medium]",
-						},
 						["fader"] = {
 							["hover"] = true,
 							["combat"] = true,
@@ -1116,14 +1113,17 @@ ElvDB = {
 							["playertarget"] = true,
 							["health"] = true,
 						},
+						["health"] = {
+							["attachTextTo"] = "InfoPanel",
+							["xOffset"] = 2,
+						},
 						["orientation"] = "LEFT",
 						["height"] = 50,
 						["buffs"] = {
 							["anchorPoint"] = "TOPLEFT",
 						},
-						["health"] = {
-							["attachTextTo"] = "InfoPanel",
-							["xOffset"] = 2,
+						["name"] = {
+							["text_format"] = "[level]  [name:medium]",
 						},
 						["aurabar"] = {
 							["friendlyAuraType"] = "HARMFUL",
@@ -1319,14 +1319,14 @@ ElvPrivateDB = {
 			["install_complete"] = "1.05",
 		},
 		["白銀諾艾爾 - 碧玉矿洞"] = {
-			["general"] = {
-				["dmgfont"] = "伤害数字",
-				["namefont"] = "默认",
-			},
+			["theme"] = "class",
 			["bags"] = {
 				["enable"] = false,
 			},
-			["theme"] = "class",
+			["general"] = {
+				["namefont"] = "默认",
+				["dmgfont"] = "伤害数字",
+			},
 			["install_complete"] = "1.03",
 		},
 	},

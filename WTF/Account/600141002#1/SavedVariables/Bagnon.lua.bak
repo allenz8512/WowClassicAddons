@@ -63,6 +63,7 @@ Bagnon_Sets = {
 			},
 			["y"] = 223.55549621582,
 			["x"] = -204.667724609375,
+			["showBags"] = true,
 			["borderColor"] = {
 			},
 			["bagBreak"] = false,

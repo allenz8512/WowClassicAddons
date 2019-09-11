@@ -23,9 +23,6 @@ AtlasLootClassicDB = {
 			},
 		},
 		["白銀諾艾爾 - 碧玉矿洞"] = {
-			["minimap"] = {
-				["minimapPos"] = 210.981285177722,
-			},
 			["GUI"] = {
 				["point"] = {
 					nil, -- [1]
@@ -36,11 +33,14 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"Gnomeregan", -- [2]
-					nil, -- [3]
+					"Zul'Farrak", -- [2]
+					12, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},
+			},
+			["minimap"] = {
+				["minimapPos"] = 210.981285177722,
 			},
 		},
 	},

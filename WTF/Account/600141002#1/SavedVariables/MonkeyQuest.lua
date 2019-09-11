@@ -8,31 +8,28 @@ MonkeyQuestConfig = {
 			["千针石林 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["暴风城 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["海潮之石 - false"] = {
+			["海盗的眼睛 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["库尔森的秘密 - false"] = {
+			["刨花皮靴 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["通缉：玛雷兹·考尔 - false"] = {
+			["魔法分析 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["特雷莱恩的符咒魔杖 - false"] = {
+			["歌唱水晶碎片 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["坚硬的尾鳍 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["克拉兹克的要求 - false"] = {
+			["鼻烟 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["吓唬病鬼 - false"] = {
+			["赞吉尔的秘密 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["歌唱水晶碎片 - false"] = {
+			["劈颅巨魔的獠牙 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["荆棘谷 - true"] = {
@@ -41,13 +38,13 @@ MonkeyQuestConfig = {
 			["保全书籍 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["库尔森上校 - false"] = {
+			["猎虎 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["船长的箱子 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["血顶巨魔的耳朵 - false"] = {
+			["地精赞助商 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["猎豹 - false"] = {
@@ -59,20 +56,20 @@ MonkeyQuestConfig = {
 			["荆棘谷的青山 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["地精赞助商 - false"] = {
+			["吓唬病鬼 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["猎虎 - false"] = {
+			["血帆海盗 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["阿拉希高地 - true"] = {
+			["巨魔巫术 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["赞吉尔的秘密 - false"] = {
+			["水元素 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["激流堡徽章 - false"] = {
-				["m_bChecked"] = true,
+			["暴风城 - true"] = {
+				["m_bChecked"] = false,
 			},
 		},
 	},
@@ -127,7 +124,7 @@ MonkeyQuestConfig = {
 		["m_bColourDoneOrFailed"] = false,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_iFrameBottom"] = -231.111083984375,
+		["m_iFrameBottom"] = -108.444381713867,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {

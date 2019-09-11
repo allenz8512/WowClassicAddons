@@ -36,8 +36,8 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"Gnomeregan", -- [2]
-					nil, -- [3]
+					"Zul'Farrak", -- [2]
+					12, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},
