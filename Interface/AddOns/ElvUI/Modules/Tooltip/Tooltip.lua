@@ -43,9 +43,6 @@ local UnitPVPName = UnitPVPName
 local UnitRace = UnitRace
 local UnitReaction = UnitReaction
 local UnitPlayerControlled = UnitPlayerControlled
-local GetSpecialization = GetSpecialization
-local GetSpecializationInfo = GetSpecializationInfo
-local GetSpecializationInfoByID = GetSpecializationInfoByID
 
 -- GLOBALS: ElvUI_KeyBinder, ElvUI_ContainerFrame
 
@@ -181,7 +178,7 @@ function TT:SetUnitText(tt, unit, level, isShiftKeyDown)
 		if not localeClass or not class then return end
 
 		local name = UnitName(unit)
-		local guildName, guildRankName, _, guildRealm = GetGuildInfo(unit)
+		local guildName, guildRankName = GetGuildInfo(unit)
 		local pvpName = UnitPVPName(unit)
 
 		color = _G.CUSTOM_CLASS_COLORS and _G.CUSTOM_CLASS_COLORS[class] or _G.RAID_CLASS_COLORS[class]
@@ -204,10 +201,6 @@ function TT:SetUnitText(tt, unit, level, isShiftKeyDown)
 
 		local lineOffset = 2
 		if guildName then
-			if guildRealm and isShiftKeyDown then
-				guildName = guildName.."-"..guildRealm
-			end
-
 			if self.db.guildRanks then
 				_G.GameTooltipTextLeft2:SetFormattedText("<|cff00ff10%s|r> [|cff00ff10%s|r]", guildName, guildRankName)
 			else
@@ -455,9 +448,9 @@ function TT:GameTooltipStatusBar_OnValueChanged(tt, value)
 	else
 		if unit and not UnitIsPlayer(unit) and not UnitPlayerControlled(unit) and _G.RealMobHealth then
 			local c, m, _, _ = _G.RealMobHealth.GetUnitHealth(unit);
-			tt.text:SetText(E:ShortValue(c).." / "..E:ShortValue(m))
+			tt.text:SetText(c.." / "..m)
 		else
-			tt.text:SetText(E:ShortValue(value).." / "..E:ShortValue(max))
+			tt.text:SetText(value.." / "..max)
 		end
 	end
 end

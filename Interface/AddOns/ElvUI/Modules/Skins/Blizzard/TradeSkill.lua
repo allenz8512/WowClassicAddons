@@ -20,7 +20,7 @@ local function LoadSkin()
 	local TradeSkillFrame = _G.TradeSkillFrame
 	S:HandlePortraitFrame(TradeSkillFrame, true)
 	TradeSkillFrame.backdrop:Point('TOPLEFT', 11, -12)
-	TradeSkillFrame.backdrop:Point('BOTTOMRIGHT', -32, 74)
+	TradeSkillFrame.backdrop:Point('BOTTOMRIGHT', -32, 76)
 
 	_G.TradeSkillRankFrameBorder:StripTextures()
 

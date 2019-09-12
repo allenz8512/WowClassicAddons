@@ -42,7 +42,7 @@ local function OnEvent(self)
 			free, total = free + bagFreeSlots, total + GetContainerNumSlots(i)
 		end
 	end
-	self.text:SetFormattedText(displayString, L["Bags"]..': ', total - free, total)
+	self.text:SetFormattedText(displayString, L["Bags"]..': ', free, total)
 end
 
 local function OnClick()
@@ -59,7 +59,7 @@ local function OnEnter(self)
 		if bagTypeName then
 			local bagName = GetBagName(i)
 			local bagSlots = GetContainerNumSlots(i)
-			DT.tooltip:AddDoubleLine(bagName, format('%d/%d', bagSlots - bagFreeSlots, GetContainerNumSlots(i)))
+			DT.tooltip:AddDoubleLine(bagName, format('%d/%d', bagFreeSlots, bagSlots))
 		end
 	end
 

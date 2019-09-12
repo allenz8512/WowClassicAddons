@@ -11,24 +11,21 @@ local function LoadSkin()
 	-- GossipFrame
 	local GossipFrame = _G.GossipFrame
 	S:HandlePortraitFrame(GossipFrame, true)
-	GossipFrame.backdrop:SetPoint("TOPLEFT", 11, -12)
-	GossipFrame.backdrop:SetPoint("BOTTOMRIGHT", -32, 0)
+	GossipFrame.backdrop:SetPoint('TOPLEFT', 11, -12)
+	GossipFrame.backdrop:SetPoint('BOTTOMRIGHT', -32, 0)
 
-	_G.GossipGreetingScrollFrame:Height(400)
+	local GossipGreetingScrollFrame = _G.GossipGreetingScrollFrame
+	GossipGreetingScrollFrame:CreateBackdrop('Transparent')
+	GossipGreetingScrollFrame.backdrop:Point('TOPLEFT', -6, 2)
+	GossipGreetingScrollFrame:Size(300, 396)
+
+	S:HandleScrollBar(_G.GossipGreetingScrollFrameScrollBar)
+
+	_G.GossipFrameNpcNameText:ClearAllPoints()
+	_G.GossipFrameNpcNameText:Point('CENTER', _G.GossipNpcNameFrame, 'CENTER', -1, 0)
 
 	S:HandleCloseButton(_G.GossipFrameCloseButton, GossipFrame.backdrop)
 	_G.GossipFrameCloseButton:Point('TOPRIGHT', -28, -9)
-
-	local GossipGreetingScrollFrame = _G.GossipGreetingScrollFrame
-	GossipGreetingScrollFrame:SetTemplate()
-
-	S:HandleScrollBar(GossipGreetingScrollFrameScrollBar, 5)
-
-	GossipNpcNameFrame:Width(300)
-	GossipNpcNameFrame:Point("TOPLEFT", GossipFrame.backdrop, "TOPLEFT", 18, -10)
-
-	_G.GossipFrameNpcNameText:ClearAllPoints()
-	_G.GossipFrameNpcNameText:Point('TOP', GossipNpcNameFrame, 'TOP', 13, 8)
 
 	for i = 1, _G.NUMGOSSIPBUTTONS do
 		_G['GossipTitleButton'..i..'GossipIcon']:SetSize(16, 16)
@@ -75,13 +72,13 @@ local function LoadSkin()
 	end)
 
 	S:HandleButton(_G.GossipFrameGreetingGoodbyeButton)
-	_G.GossipFrameGreetingGoodbyeButton:Point("BOTTOMRIGHT", -37, 4)
+	_G.GossipFrameGreetingGoodbyeButton:Point('BOTTOMRIGHT', -38, 7)
 
 	-- ItemTextFrame
 	_G.ItemTextFrame:StripTextures(true)
 	_G.ItemTextFrame:CreateBackdrop('Transparent')
-	_G.ItemTextFrame.backdrop:Point('TOPLEFT', 13, -13)
-	_G.ItemTextFrame.backdrop:Point('BOTTOMRIGHT', -32, 74)
+	_G.ItemTextFrame.backdrop:Point('TOPLEFT', 11, -12)
+	_G.ItemTextFrame.backdrop:Point('BOTTOMRIGHT', -32, 76)
 
 	_G.ItemTextScrollFrame:StripTextures()
 

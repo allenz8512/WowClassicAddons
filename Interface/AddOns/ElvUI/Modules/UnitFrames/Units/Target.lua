@@ -26,7 +26,7 @@ function UF:Construct_TargetFrame(frame)
 	frame.RaidTargetIndicator = self:Construct_RaidIcon(frame)
 	frame.PowerPrediction = self:Construct_PowerPrediction(frame)
 	frame.HealthPrediction = self:Construct_HealComm(frame)
---	frame.DebuffHighlight = self:Construct_DebuffHighlight(frame)
+	frame.DebuffHighlight = self:Construct_DebuffHighlight(frame)
 	frame.InfoPanel = self:Construct_InfoPanel(frame)
 	frame.MouseGlow = self:Construct_MouseGlow(frame)
 	frame.TargetGlow = self:Construct_TargetGlow(frame)
@@ -113,7 +113,7 @@ function UF:Update_TargetFrame(frame, db)
 	UF:Configure_Fader(frame)
 
 	--Debuff Highlight
-	--UF:Configure_DebuffHighlight(frame)
+	UF:Configure_DebuffHighlight(frame)
 
 	--OverHealing
 	UF:Configure_HealComm(frame)

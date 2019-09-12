@@ -484,6 +484,7 @@ P.nameplates = {
 				width = 28,
 				xOffset = 3,
 				yOffset = -5,
+				overlayAlpha = 0.35,
 			},
 			visibility = {
 				hideDelay = 3,
@@ -715,6 +716,7 @@ P.nameplates = {
 				width = 28,
 				xOffset = 3,
 				yOffset = -5,
+				overlayAlpha = 0.35,
 			},
 			markHealers = true,
 			health = {
@@ -928,6 +930,7 @@ P.nameplates = {
 				width = 28,
 				xOffset = 3,
 				yOffset = -5,
+				overlayAlpha = 0.35,
 			},
 			markHealers = true,
 			health = {
@@ -1140,6 +1143,7 @@ P.nameplates = {
 				width = 28,
 				xOffset = 3,
 				yOffset = -5,
+				overlayAlpha = 0.35,
 			},
 			health = {
 				enable = true,
@@ -1357,6 +1361,7 @@ P.nameplates = {
 				width = 28,
 				xOffset = 3,
 				yOffset = -5,
+				overlayAlpha = 0.35,
 			},
 			health = {
 				enable = true,
@@ -2097,6 +2102,7 @@ P.unitframe = {
 				style = '3D',
 				xOffset = 0,
 				yOffset = 0,
+				overlayAlpha = 0.35,
 			},
 			buffs = {
 				enable = false,
@@ -2323,6 +2329,7 @@ P.unitframe = {
 				style = '3D',
 				xOffset = 0,
 				yOffset = 0,
+				overlayAlpha = 0.35,
 			},
 			buffs = {
 				enable = true,
@@ -2489,6 +2496,7 @@ P.unitframe = {
 				style = '3D',
 				xOffset = 0,
 				yOffset = 0,
+				overlayAlpha = 0.35,
 			},
 			buffs = {
 				enable = false,
@@ -2616,6 +2624,7 @@ P.unitframe = {
 				style = '3D',
 				xOffset = 0,
 				yOffset = 0,
+				overlayAlpha = 0.35,
 			},
 			buffs = {
 				enable = false,
@@ -2748,6 +2757,7 @@ P.unitframe = {
 				style = '3D',
 				xOffset = 0,
 				yOffset = 0,
+				overlayAlpha = 0.35,
 			},
 			buffs = {
 				enable = false,
@@ -2910,6 +2920,7 @@ P.unitframe = {
 				style = '3D',
 				xOffset = 0,
 				yOffset = 0,
+				overlayAlpha = 0.35,
 			},
 			buffs = {
 				enable = false,
@@ -3058,6 +3069,7 @@ P.unitframe = {
 				style = '3D',
 				xOffset = 0,
 				yOffset = 0,
+				overlayAlpha = 0.35,
 			},
 			buffs = {
 				enable = false,
@@ -3331,6 +3343,7 @@ P.unitframe = {
 				style = '3D',
 				xOffset = 0,
 				yOffset = 0,
+				overlayAlpha = 0.35,
 			},
 			buffs = {
 				enable = false,
@@ -3552,6 +3565,7 @@ P.unitframe = {
 				style = '3D',
 				xOffset = 0,
 				yOffset = 0,
+				overlayAlpha = 0.35,
 			},
 			buffs = {
 				enable = false,
@@ -3757,6 +3771,7 @@ P.unitframe = {
 				style = '3D',
 				xOffset = 0,
 				yOffset = 0,
+				overlayAlpha = 0.35,
 			},
 			buffs = {
 				enable = false,

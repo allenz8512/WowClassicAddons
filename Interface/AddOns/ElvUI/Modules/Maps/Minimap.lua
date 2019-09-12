@@ -34,12 +34,22 @@ local menuList = {
 			HideUIPanel(_G.SpellBookFrame)
 		end
 	end},
+	{text = _G.TALENTS_BUTTON,
+	func = function()
+		if not _G.TalentFrame then
+			_G.TalentFrame_LoadUI()
+		end
+
+		if not TalentFrame:IsShown() then
+			ShowUIPanel(TalentFrame)
+		else
+			HideUIPanel(TalentFrame)
+		end
+	end},
 	{text = _G.CHAT_CHANNELS,
 	func = _G.ToggleChannelFrame},
 	{text = _G.TIMEMANAGER_TITLE,
-	func = function()
-		ToggleFrame(_G.TimeManagerFrame)
-	end},
+	func = function() ToggleFrame(_G.TimeManagerFrame) end},
 	{text = _G.SOCIAL_LABEL,
 	func = ToggleFriendsFrame},
 	{text = _G.GUILD,
@@ -70,7 +80,8 @@ local menuList = {
 			HideUIPanel(_G.GameMenuFrame);
 			MainMenuMicroButton_SetNormal();
 		end
-	end}
+	end},
+	{text = _G.HELP_BUTTON, func = ToggleHelpFrame}
 }
 
 function M:GetLocTextColor()
@@ -102,7 +113,6 @@ function M:Minimap_OnMouseDown(btn)
 	menuFrame:Hide()
 	local position = self:GetPoint()
 	if btn == "MiddleButton" or btn == "RightButton" then
-		if InCombatLockdown() then _G.UIErrorsFrame:AddMessage(E.InfoColor.._G.ERR_NOT_IN_COMBAT) return end
 		if position:match("LEFT") then
 			E:DropDown(menuList, menuFrame)
 		else

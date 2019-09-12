@@ -852,9 +852,9 @@ oUF.Tags = {
 
 		funcPool['[' .. tag .. ']'] = nil
 
-		tag = '%[' .. tag .. '%]'
+		tag = '%[' .. tag:gsub('[%^%$%(%)%%%.%*%+%-%?]', '%%%1') .. '%]'
 		for tagstr, func in next, tagPool do
-			if(tagstr:match(tag)) then
+			if(tagstr:gsub("%[[^%[%]]*>", "["):gsub("<[^%[%]]*%]", "]"):match(tag)) then
 				tagPool[tagstr] = nil
 
 				for fs in next, taggedFS do
@@ -872,9 +872,9 @@ oUF.Tags = {
 	RefreshEvents = function(self, tag)
 		if(not tag) then return end
 
-		tag = '%[' .. tag .. '%]'
+		tag = '%[' .. tag:gsub('[%^%$%(%)%%%.%*%+%-%?]', '%%%1') .. '%]'
 		for tagstr in next, tagPool do
-			if(tagstr:match(tag)) then
+			if(tagstr:gsub("%[[^%[%]]*>", "["):gsub("<[^%[%]]*%]", "]"):match(tag)) then
 				for fs, ts in next, taggedFS do
 					if(ts == tagstr) then
 						unregisterEvents(fs)

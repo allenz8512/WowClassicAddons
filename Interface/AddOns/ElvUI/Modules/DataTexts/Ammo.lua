@@ -34,7 +34,7 @@ local function OnEvent(self)
 		itemID, count = GetInventoryItemID("player", INVSLOT_AMMO), GetInventoryItemCount("player", INVSLOT_AMMO)
 		if itemID and (count > 0) then
 			name = GetItemInfo(itemID)
-			self.text:SetFormattedText(displayString, name, count)
+			self.text:SetFormattedText(displayString, name or 'Arrow', count) -- Does not need localized. It gets updated.
 		else
 			self.text:SetFormattedText(displayString, INVTYPE_AMMO, 0)
 		end
@@ -119,4 +119,4 @@ local function ValueColorUpdate(hex)
 end
 E.valueColorUpdateFuncs[ValueColorUpdate] = true
 
-DT:RegisterDatatext(INVTYPE_AMMO, {"PLAYER_ENTERING_WORLD", "BAG_UPDATE", "UNIT_INVENTORY_CHANGED"}, OnEvent, nil, OnClick, OnEnter, nil, L["Ammo/Shard Counter"])
+DT:RegisterDatatext(INVTYPE_AMMO, {"PLAYER_ENTERING_WORLD", "BAG_UPDATE", "UNIT_INVENTORY_CHANGED", "GET_ITEM_INFO_RECEIVED"}, OnEvent, nil, OnClick, OnEnter, nil, L["Ammo/Shard Counter"])

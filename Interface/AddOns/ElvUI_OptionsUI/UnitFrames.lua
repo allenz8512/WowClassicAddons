@@ -1566,6 +1566,14 @@ local function GetOptionsTable_Portrait(updateFunc, groupName, numUnits)
 				min = -1, max = 1, step = 0.01,
 				disabled = function() return E.db.unitframe.units[groupName].portrait.style ~= '3D' end,
 			},
+			overlayAlpha = {
+				order = 11,
+				type = "range",
+				name = L["Overlay Alpha"],
+				desc = L["Set the alpha level of portrait when frame is overlayed."],
+				min = 0.01, max = 1, step = 0.01,
+				disabled = function() return E.db.unitframe.units[groupName].portrait.overlay == false end,
+			},
 		},
 	}
 
@@ -3601,7 +3609,6 @@ E.Options.args.unitframe = {
 						},
 					},
 				},
---[=[
 				raidDebuffIndicator = {
 					order = 5,
 					type = "group",
@@ -3648,7 +3655,6 @@ E.Options.args.unitframe = {
 						},
 					},
 				},
-]=]
 			},
 		},
 	},
@@ -6765,7 +6771,6 @@ E.Options.args.unitframe.args.raidpet = {
 	},
 }
 
---[=[
 --Tank Frames
 E.Options.args.unitframe.args.tank = {
 	name = L["TANK"],
@@ -7179,7 +7184,6 @@ E.Options.args.unitframe.args.assist.args.name.args.attachTextTo.values = { ["He
 E.Options.args.unitframe.args.assist.args.targetsGroup.args.name.args.attachTextTo.values = { ["Health"] = L["Health"], ["Frame"] = L["Frame"] }
 E.Options.args.unitframe.args.assist.args.targetsGroup.args.name.get = function(info) return E.db.unitframe.units.assist.targetsGroup.name[info[#info]] end
 E.Options.args.unitframe.args.assist.args.targetsGroup.args.name.set = function(info, value) E.db.unitframe.units.assist.targetsGroup.name[info[#info]] = value; UF.CreateAndUpdateHeaderGroup(UF, 'assist') end
-]=]
 
 --MORE COLORING STUFF YAY
 E.Options.args.unitframe.args.generalOptionsGroup.args.allColorsGroup.args.classResourceGroup = {
