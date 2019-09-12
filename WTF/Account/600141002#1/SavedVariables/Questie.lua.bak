@@ -372,6 +372,292 @@ QuestieConfig = {
 					["Quest"] = 205,
 					["Level"] = 37,
 				}, -- [39]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 37,
+					["Quest"] = 601,
+					["Timestamp"] = 1568134686,
+				}, -- [40]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 37,
+					["Quest"] = 602,
+					["Timestamp"] = 1568134695,
+				}, -- [41]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 37,
+					["Quest"] = 597,
+					["Timestamp"] = 1568134707,
+				}, -- [42]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 37,
+					["Quest"] = 599,
+					["Timestamp"] = 1568134716,
+				}, -- [43]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 37,
+					["Quest"] = 587,
+					["Timestamp"] = 1568134757,
+				}, -- [44]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 37,
+					["Quest"] = 599,
+					["Timestamp"] = 1568134764,
+				}, -- [45]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 37,
+					["Quest"] = 604,
+					["Timestamp"] = 1568134774,
+				}, -- [46]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 37,
+					["Quest"] = 577,
+					["Timestamp"] = 1568134852,
+				}, -- [47]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 37,
+					["Quest"] = 628,
+					["Timestamp"] = 1568134861,
+				}, -- [48]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 37,
+					["Quest"] = 576,
+					["Timestamp"] = 1568134899,
+				}, -- [49]
+				{
+					["Timestamp"] = 1568135345,
+					["Party"] = {
+					},
+					["Event"] = "Level",
+					["NewLevel"] = 38,
+				}, -- [50]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 617,
+					["Timestamp"] = 1568175271,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [51]
+				{
+					["Party"] = {
+					},
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+					["Timestamp"] = 1568177640,
+					["Quest"] = 195,
+					["Level"] = 38,
+				}, -- [52]
+				{
+					["Party"] = {
+					},
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+					["Timestamp"] = 1568177648,
+					["Quest"] = 196,
+					["Level"] = 38,
+				}, -- [53]
+				{
+					["Party"] = {
+					},
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+					["Timestamp"] = 1568177652,
+					["Quest"] = 192,
+					["Level"] = 38,
+				}, -- [54]
+				{
+					["Party"] = {
+					},
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+					["Timestamp"] = 1568177757,
+					["Quest"] = 193,
+					["Level"] = 38,
+				}, -- [55]
+				{
+					["Party"] = {
+					},
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+					["Timestamp"] = 1568177812,
+					["Quest"] = 339,
+					["Level"] = 38,
+				}, -- [56]
+				{
+					["Party"] = {
+					},
+					["SubType"] = "Abandon",
+					["Event"] = "Quest",
+					["Timestamp"] = 1568177909,
+					["Quest"] = 339,
+					["Level"] = 38,
+				}, -- [57]
+				{
+					["Party"] = {
+					},
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+					["Timestamp"] = 1568178027,
+					["Quest"] = 340,
+					["Level"] = 38,
+				}, -- [58]
+				{
+					["Party"] = {
+					},
+					["SubType"] = "Abandon",
+					["Event"] = "Quest",
+					["Timestamp"] = 1568178044,
+					["Quest"] = 340,
+					["Level"] = 38,
+				}, -- [59]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 188,
+					["Timestamp"] = 1568224622,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [60]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 339,
+					["Timestamp"] = 1568224635,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [61]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 339,
+					["Timestamp"] = 1568224640,
+					["SubType"] = "Abandon",
+					["Event"] = "Quest",
+				}, -- [62]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 340,
+					["Timestamp"] = 1568224643,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [63]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 340,
+					["Timestamp"] = 1568224650,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [64]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 341,
+					["Timestamp"] = 1568224653,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [65]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 341,
+					["Timestamp"] = 1568224660,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [66]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 342,
+					["Timestamp"] = 1568224664,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [67]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 342,
+					["Timestamp"] = 1568224675,
+					["SubType"] = "Abandon",
+					["Event"] = "Quest",
+				}, -- [68]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 605,
+					["Timestamp"] = 1568225463,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [69]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 600,
+					["Timestamp"] = 1568225478,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [70]
+				{
+					["Party"] = {
+					},
+					["Level"] = 38,
+					["Quest"] = 628,
+					["Timestamp"] = 1568225525,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [71]
 			},
 			["complete"] = {
 				nil, -- [1]
@@ -561,14 +847,14 @@ QuestieConfig = {
 				true, -- [185]
 				true, -- [186]
 				true, -- [187]
-				nil, -- [188]
+				true, -- [188]
 				true, -- [189]
 				true, -- [190]
 				true, -- [191]
-				nil, -- [192]
+				true, -- [192]
 				nil, -- [193]
 				true, -- [194]
-				nil, -- [195]
+				true, -- [195]
 				nil, -- [196]
 				nil, -- [197]
 				true, -- [198]
@@ -713,8 +999,8 @@ QuestieConfig = {
 				true, -- [337]
 				nil, -- [338]
 				nil, -- [339]
-				nil, -- [340]
-				nil, -- [341]
+				true, -- [340]
+				true, -- [341]
 				nil, -- [342]
 				true, -- [343]
 				true, -- [344]
@@ -888,35 +1174,41 @@ QuestieConfig = {
 				true, -- [512]
 				[575] = true,
 				[583] = true,
-				[2745] = true,
+				[599] = true,
 				[2904] = true,
+				[7321] = true,
 				[1111] = true,
 				[631] = true,
 				[1651] = true,
+				[1115] = true,
 				[1175] = true,
 				[536] = true,
+				[6285] = true,
+				[6281] = true,
 				[560] = true,
+				[6261] = true,
 				[1652] = true,
+				[3101] = true,
 				[1176] = true,
-				[1112] = true,
-				[562] = true,
+				[5762] = true,
+				[5545] = true,
 				[1097] = true,
-				[559] = true,
+				[5261] = true,
 				[632] = true,
 				[1653] = true,
-				[1241] = true,
+				[4606] = true,
 				[783] = true,
 				[1447] = true,
-				[1180] = true,
-				[561] = true,
+				[1302] = true,
+				[4602] = true,
 				[1114] = true,
-				[1182] = true,
-				[1654] = true,
-				[564] = true,
+				[4601] = true,
+				[577] = true,
+				[3905] = true,
 				[1178] = true,
-				[3904] = true,
-				[1243] = true,
-				[5261] = true,
+				[601] = true,
+				[1643] = true,
+				[3903] = true,
 				[1242] = true,
 				[633] = true,
 				[514] = true,
@@ -925,88 +1217,88 @@ QuestieConfig = {
 				[538] = true,
 				[1338] = true,
 				[681] = true,
-				[7321] = true,
-				[1249] = true,
+				[562] = true,
+				[3741] = true,
 				[578] = true,
 				[2947] = true,
-				[5545] = true,
-				[1247] = true,
+				[1180] = true,
+				[3681] = true,
 				[6181] = true,
-				[531] = true,
+				[1110] = true,
 				[1244] = true,
 				[634] = true,
 				[2038] = true,
-				[1110] = true,
-				[1181] = true,
+				[1650] = true,
+				[658] = true,
 				[1324] = true,
-				[1274] = true,
+				[1267] = true,
 				[555] = true,
 				[563] = true,
-				[3903] = true,
+				[1642] = true,
 				[2039] = true,
 				[2951] = true,
 				[595] = true,
-				[4601] = true,
+				[3904] = true,
 				[2158] = true,
-				[4602] = true,
-				[1246] = true,
-				[3905] = true,
+				[2952] = true,
+				[627] = true,
+				[1135] = true,
 				[1786] = true,
-				[1267] = true,
+				[1780] = true,
 				[659] = true,
 				[4605] = true,
 				[2922] = true,
-				[4606] = true,
-				[691] = true,
+				[1104] = true,
+				[564] = true,
 				[1644] = true,
 				[1787] = true,
-				[1245] = true,
-				[1302] = true,
-				[1781] = true,
+				[2745] = true,
+				[2923] = true,
+				[2746] = true,
 				[2924] = true,
-				[6261] = true,
-				[1248] = true,
+				[1105] = true,
+				[628] = true,
 				[1264] = true,
 				[1788] = true,
 				[525] = true,
 				[660] = true,
-				[1643] = true,
+				[2040] = true,
 				[2926] = true,
-				[2746] = true,
+				[1781] = true,
 				[565] = true,
 				[1265] = true,
 				[2927] = true,
-				[2040] = true,
-				[616] = true,
-				[1266] = true,
+				[1654] = true,
+				[597] = true,
+				[605] = true,
 				[2928] = true,
-				[1780] = true,
+				[1182] = true,
 				[1250] = true,
-				[5762] = true,
+				[1266] = true,
 				[2929] = true,
 				[1806] = true,
 				[661] = true,
-				[2923] = true,
+				[1274] = true,
 				[2930] = true,
-				[1105] = true,
-				[1650] = true,
+				[1248] = true,
+				[1249] = true,
 				[574] = true,
-				[1115] = true,
-				[1104] = true,
-				[3681] = true,
-				[1135] = true,
-				[627] = true,
+				[1243] = true,
+				[1246] = true,
+				[1245] = true,
+				[531] = true,
+				[1247] = true,
 				[622] = true,
-				[2952] = true,
+				[1241] = true,
 				[1649] = true,
-				[1642] = true,
-				[658] = true,
-				[3741] = true,
+				[616] = true,
+				[561] = true,
+				[1181] = true,
 				[6661] = true,
-				[3101] = true,
-				[6281] = true,
+				[1112] = true,
+				[559] = true,
 				[2998] = true,
-				[6285] = true,
+				[691] = true,
 			},
 		},
 	},
