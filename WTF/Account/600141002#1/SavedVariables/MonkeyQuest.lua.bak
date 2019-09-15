@@ -8,34 +8,55 @@ MonkeyQuestConfig = {
 			["荆棘谷 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["一捆海蛇草 - false"] = {
+			["蚌肉大餐 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["千针石林 - true"] = {
+			["流放者马特克 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["血色修道院 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["魔法分析 - false"] = {
+			["千针石林 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["坚硬的尾鳍 - false"] = {
+			["以圣光之名 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["烹饪 - true"] = {
+				["m_bChecked"] = false,
+			},
+			["深渊皇冠 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["帅小伙子邓肯 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["祖尔法拉克 - true"] = {
 				["m_bChecked"] = true,
 			},
 			["鼻烟 - false"] = {
 				["m_bChecked"] = true,
 			},
+			["打开钥匙之石 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["阿拉希高地 - true"] = {
+				["m_bChecked"] = false,
+			},
+			["洛克莫丹 - true"] = {
+				["m_bChecked"] = false,
+			},
 			["劈颅巨魔的獠牙 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["保全书籍 - false"] = {
+			["荒芜之地的材料 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["赞吉尔的秘密 - false"] = {
+			["泰坦神话 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["船长的箱子 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["地精赞助商 - false"] = {
+			["寻找阿戈莫德 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["猎豹 - false"] = {
@@ -47,19 +68,19 @@ MonkeyQuestConfig = {
 			["荆棘谷的青山 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["海盗的眼睛 - false"] = {
-				["m_bChecked"] = true,
+			["荒芜之地 - true"] = {
+				["m_bChecked"] = false,
 			},
-			["血帆海盗 - false"] = {
+			["吓唬病鬼 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["巨魔巫术 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["吓唬病鬼 - false"] = {
+			["与圣光同在 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["暴风城 - true"] = {
+			["剃刀高地 - true"] = {
 				["m_bChecked"] = false,
 			},
 		},
@@ -89,33 +110,33 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_iFrameBottom"] = 168.888931274414,
+		["m_bHideTitleButtons"] = false,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11267089844,
-		["m_bColourDoneOrFailed"] = false,
+		["m_bNoBorder"] = true,
 		["m_bLocked"] = true,
 		["m_iQuestPadding"] = 2,
 		["m_bNoHeaders"] = true,
-		["m_bShowNumQuests"] = true,
+		["m_bShowTooltipObjectives"] = true,
 		["m_strOverviewColour"] = "|cFF7F7F7F",
 		["m_iAlpha"] = 0,
 		["m_bColourSubObjectivesByProgress"] = true,
-		["m_strMidObjectiveColour"] = "|cFFFFFF00",
+		["m_iFrameWidth"] = 240,
 		["m_iFontHeight"] = 13,
 		["m_strQuestTitleColour"] = "|cFFFFFFFF",
 		["m_bWorkComplete"] = true,
 		["m_bHideQuestsEnabled"] = false,
-		["m_iFrameWidth"] = 240,
+		["m_strMidObjectiveColour"] = "|cFFFFFF00",
 		["m_bCrashBorder"] = true,
 		["m_strHeaderOpenColour"] = "|cFFBFBFFF",
 		["m_iFrameTop"] = 720.888977050781,
 		["m_bObjectives"] = false,
 		["m_bHideHeader"] = true,
-		["m_bShowTooltipObjectives"] = true,
-		["m_bNoBorder"] = true,
+		["m_bShowNumQuests"] = true,
+		["m_bColourDoneOrFailed"] = false,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_bHideTitleButtons"] = false,
+		["m_iFrameBottom"] = 179.555511474609,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {

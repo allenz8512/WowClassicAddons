@@ -41,7 +41,7 @@ Mail: disabled
 WhatsTraining: enabled
 ClassicCastbars_Options: disabled
 ClassicCastbars: disabled
-CensusPlusClassic: disabled
+CensusPlusClassic: enabled
 Cleanup: disabled
 SortBags: enabled
 WeakAurasCompanion: enabled
@@ -54,7 +54,7 @@ Quartz: enabled
 WeakAuras: disabled
 WeakAurasModelPaths: disabled
 WeakAurasOptions: disabled
-ElvUI_LocationPlus: enabled
+ElvUI_LocationPlus: disabled
 Details_TinyThreat: enabled
 Atlas: enabled
 AtlasQuest: enabled

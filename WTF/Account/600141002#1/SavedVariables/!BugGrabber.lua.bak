@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 94,
 	["lastSanitation"] = 3,
+	["session"] = 115,
 	["errors"] = {
 		{
 			["message"] = "[string \"MonkeyQuestFrame:OnUpdate\"]:1: attempt to call global 'MonkeyQuest_OnUpdate' (a nil value)",
@@ -47,8 +47,30 @@ BugGrabberDB = {
 			["message"] = "...e\\AddOns\\Quartz\\libs\\AceBucket-3.0\\AceBucket-3.0-4.lua:209: attempt to index upvalue 'AceEvent' (a nil value)",
 			["time"] = "2019/09/10 22:52:30",
 			["stack"] = "...e\\AddOns\\Quartz\\libs\\AceBucket-3.0\\AceBucket-3.0-4.lua:209: in function `UnregisterBucket'\n...e\\AddOns\\Quartz\\libs\\AceBucket-3.0\\AceBucket-3.0-4.lua:233: in function `UnregisterAllBuckets'\n...e\\AddOns\\Quartz\\libs\\AceBucket-3.0\\AceBucket-3.0-4.lua:259: in function <...e\\AddOns\\Quartz\\libs\\AceBucket-3.0\\AceBucket-3.0.lua:258>\n[C]: ?\n...xternal\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:70: in function <...xternal\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:65>\n...xternal\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:569: in function <...xternal\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:555>\n(tail call): ?\n(tail call): ?\n...Details\\Libs\\ThreatClassic-1.0\\ThreatClassic-1.0-4.lua:245: in function `?'\n...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:119: in function <...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[C]: ?\n...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:29: in function <...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:64: in function `Fire'\n...xternal\\Wildpants\\libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...xternal\\Wildpants\\libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
-			["session"] = 94,
-			["counter"] = 2,
+			["session"] = 95,
+			["counter"] = 3,
 		}, -- [6]
+		{
+			["message"] = "Couldn't open Interface\\AddOns\\BadBoy\\Libs\\LibChatAnims-2\\LibChatAnims.xml",
+			["session"] = 105,
+			["time"] = "2019/09/13 22:45:52",
+			["counter"] = 8,
+		}, -- [7]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'Atlas' 尝试调用保护功能 'MultiBarBottomLeft:SetFrameStrata()'。",
+			["time"] = "2019/09/13 23:51:04",
+			["locals"] = "InCombatSkipped",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `SetFrameStrata'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:379: in function `Atlas_Init'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:326: in function `Atlas_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:403: in function `RaidFrame_LoadUI'\nInterface\\FrameXML\\RaidFrame.lua:59: in function <Interface\\FrameXML\\RaidFrame.lua:50>",
+			["session"] = 108,
+			["counter"] = 1,
+		}, -- [8]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ItemRack' 尝试调用保护功能 'AttemptToSaveBindings()'。",
+			["time"] = "2019/09/15 01:25:14",
+			["locals"] = "InCombatSkipped",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `AttemptToSaveBindings'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:1829: in function `SetSetBindings'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:385: in function `InitCore'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:187: in function `func'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:797: in function `OnUpdate'\n[string \"*:OnUpdate\"]:1: in function <[string \"*:OnUpdate\"]:1>",
+			["session"] = 110,
+			["counter"] = 1,
+		}, -- [9]
 	},
 }
