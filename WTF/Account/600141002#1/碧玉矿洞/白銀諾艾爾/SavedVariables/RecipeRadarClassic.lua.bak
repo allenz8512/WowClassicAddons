@@ -1,0 +1,16 @@
+
+RecipeRadar_Options = {
+	["Version"] = "1.0.0.6",
+}
+RecipeRadar_Filters = {
+	["Professions"] = {
+	},
+	["PersonAvails"] = {
+	},
+	["Teams"] = {
+		["Horde"] = true,
+		["Alliance"] = false,
+	},
+	["RealmAvails"] = {
+	},
+}

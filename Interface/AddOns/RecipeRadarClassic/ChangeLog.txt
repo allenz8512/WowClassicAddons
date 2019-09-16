@@ -1,0 +1,19 @@
+Recipe Radar Classic ChangeLog
+v 1.0.0.6
+- Fixed nil reference issues
+v 1.0.0.5
+- Fixed mapping vendors to use TomTom
+- Fixed a ton of issues with Enchanting
+v 1.0.0.4
+- Fix most of the locales
+- Fix WorldMapDetailFrame errors
+v 1.0.0.3
+- Fix GetMapContinents for real this time
+- Fix issues with the AddOn configuration screen
+v 1.0.0.2
+- Fix incorrect known skill tracking (issue #1)
+- Fix GetMapContinents() error (issue #8)
+v 1.0.0.1
+- Fix so zone names are used not uiMapIDs for display
+v 1.0.0.0
+- Rewrite for WoW Classic using modern libraries

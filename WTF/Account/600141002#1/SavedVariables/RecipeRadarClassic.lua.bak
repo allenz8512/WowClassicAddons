@@ -1,0 +1,49 @@
+
+RecipeRadar_SkillDB = {
+	["碧玉矿洞"] = {
+		["白銀諾艾爾"] = {
+			["Team"] = "Alliance",
+			["Class"] = "圣骑士",
+			["Professions"] = {
+				["工程学"] = {
+					["Spell"] = {
+					},
+					["Rank"] = 188,
+				},
+				["采矿"] = {
+					["Spell"] = {
+					},
+					["Rank"] = 204,
+				},
+				["Fishing"] = {
+					["Spell"] = {
+					},
+					["Rank"] = 0,
+				},
+			},
+			["Factions"] = {
+			},
+		},
+	},
+}
+RecipeRadar_NameCache = {
+	[21219] = "食谱：美味鼠尾鱼",
+	[17200] = "食谱：小姜饼",
+	[6369] = "食谱：石鳞鳕鱼",
+	[17062] = "食谱：银头鲑鱼",
+	[21099] = "食谱：烤鼠尾鱼",
+	[6326] = "食谱：滑皮鲭鱼",
+	[6328] = "食谱：长嘴泥鳅",
+	[17201] = "食谱：蛋奶酒",
+}
+RecipeRadarDB = {
+	["profileKeys"] = {
+		["白銀諾艾爾 - 碧玉矿洞"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["CurrentContinent"] = 1415,
+			["CurrentRegion"] = 1455,
+		},
+	},
+}
