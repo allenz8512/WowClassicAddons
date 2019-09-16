@@ -21,6 +21,7 @@ locales\frFR.lua
 locales\esES.lua
 locales\ruRU.lua
 locales\zhTW.lua
+locales\zhCN.lua
 
 Globals.lua
 MinimapButton.lua

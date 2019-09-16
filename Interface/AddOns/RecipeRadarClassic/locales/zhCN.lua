@@ -1,4 +1,4 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("RecipeRadarClassic", "zhCN",false)
+local L = LibStub("AceLocale-3.0"):NewLocale("RecipeRadarClassic", "zhCN", false)
 if not L then return end
 -- Localization by 急云（curse id:q09q09）update: 20190913 RecipeRadarClassic 1.0.0.4
 
