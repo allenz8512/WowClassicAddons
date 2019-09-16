@@ -2589,6 +2589,628 @@ QuestieConfig = {
 					["Quest"] = 2769,
 					["Timestamp"] = 1568546041,
 				}, -- [251]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 40,
+					["Quest"] = 2872,
+					["Timestamp"] = 1568547436,
+				}, -- [252]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 40,
+					["Quest"] = 576,
+					["Timestamp"] = 1568547495,
+				}, -- [253]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+					["Level"] = 40,
+					["Quest"] = 576,
+					["Timestamp"] = 1568547501,
+				}, -- [254]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 40,
+					["Quest"] = 576,
+					["Timestamp"] = 1568547693,
+				}, -- [255]
+				{
+					["Timestamp"] = 1568550329,
+					["Party"] = {
+					},
+					["Event"] = "Level",
+					["NewLevel"] = 41,
+				}, -- [256]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 40,
+					["Quest"] = 196,
+					["Timestamp"] = 1568550329,
+				}, -- [257]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 41,
+					["Quest"] = 197,
+					["Timestamp"] = 1568550344,
+				}, -- [258]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 41,
+					["Quest"] = 193,
+					["Timestamp"] = 1568550357,
+				}, -- [259]
+				{
+					["Party"] = {
+						{
+							["Class"] = "术士",
+							["Name"] = "Edge",
+							["Level"] = 38,
+						}, -- [1]
+						{
+							["Class"] = "术士",
+							["Name"] = "Edge",
+							["Level"] = 38,
+						}, -- [2]
+						{
+							["Class"] = "术士",
+							["Name"] = "Edge",
+							["Level"] = 38,
+						}, -- [3]
+						{
+							["Class"] = "术士",
+							["Name"] = "Edge",
+							["Level"] = 38,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 41,
+					["Quest"] = 617,
+					["Timestamp"] = 1568554482,
+				}, -- [260]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 41,
+					["Quest"] = 209,
+					["Timestamp"] = 1568554720,
+				}, -- [261]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 41,
+					["Quest"] = 604,
+					["Timestamp"] = 1568554725,
+				}, -- [262]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+					["Level"] = 41,
+					["Quest"] = 604,
+					["Timestamp"] = 1568557201,
+				}, -- [263]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 41,
+					["Quest"] = 339,
+					["Timestamp"] = 1568557206,
+				}, -- [264]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+					["Level"] = 41,
+					["Quest"] = 339,
+					["Timestamp"] = 1568557235,
+				}, -- [265]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 41,
+					["Quest"] = 342,
+					["Timestamp"] = 1568557239,
+				}, -- [266]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 41,
+					["Quest"] = 342,
+					["Timestamp"] = 1568557252,
+				}, -- [267]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 41,
+					["Quest"] = 339,
+					["Timestamp"] = 1568557261,
+				}, -- [268]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 41,
+					["Quest"] = 205,
+					["Timestamp"] = 1568557352,
+				}, -- [269]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 41,
+					["Quest"] = 206,
+					["Timestamp"] = 1568557364,
+				}, -- [270]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 41,
+					["Quest"] = 606,
+					["Timestamp"] = 1568557507,
+				}, -- [271]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 41,
+					["Quest"] = 607,
+					["Timestamp"] = 1568557511,
+				}, -- [272]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 41,
+					["Quest"] = 607,
+					["Timestamp"] = 1568557556,
+				}, -- [273]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 41,
+					["Quest"] = 348,
+					["Timestamp"] = 1568557579,
+				}, -- [274]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 41,
+					["Quest"] = 339,
+					["Timestamp"] = 1568558283,
+				}, -- [275]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [1]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [2]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [3]
+						{
+							["Class"] = "法师",
+							["Name"] = "Fuse",
+							["Level"] = 34,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 41,
+					["Quest"] = 338,
+					["Timestamp"] = 1568558636,
+				}, -- [276]
+				{
+					["Party"] = {
+					},
+					["Level"] = 41,
+					["Quest"] = 621,
+					["Timestamp"] = 1568593664,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [277]
+				{
+					["Party"] = {
+					},
+					["Level"] = 41,
+					["Quest"] = 604,
+					["Timestamp"] = 1568593678,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [278]
+				{
+					["Party"] = {
+					},
+					["Level"] = 41,
+					["Quest"] = 206,
+					["Timestamp"] = 1568593688,
+					["SubType"] = "Abandon",
+					["Event"] = "Quest",
+				}, -- [279]
+				{
+					["Party"] = {
+					},
+					["Level"] = 41,
+					["Quest"] = 609,
+					["Timestamp"] = 1568593690,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [280]
+				{
+					["Party"] = {
+					},
+					["Level"] = 41,
+					["Quest"] = 1050,
+					["Timestamp"] = 1568594490,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [281]
+				{
+					["Party"] = {
+					},
+					["Level"] = 41,
+					["Quest"] = 6624,
+					["Timestamp"] = 1568598598,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [282]
+				{
+					["Party"] = {
+					},
+					["Level"] = 41,
+					["Quest"] = 6624,
+					["Timestamp"] = 1568598771,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [283]
+				{
+					["Party"] = {
+					},
+					["Level"] = 41,
+					["Quest"] = 580,
+					["Timestamp"] = 1568598947,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [284]
+				{
+					["Party"] = {
+					},
+					["Level"] = 41,
+					["Quest"] = 1106,
+					["Timestamp"] = 1568600802,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [285]
+				{
+					["Party"] = {
+					},
+					["Level"] = 41,
+					["Quest"] = 738,
+					["Timestamp"] = 1568600885,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [286]
+				{
+					["Party"] = {
+					},
+					["Level"] = 41,
+					["Quest"] = 739,
+					["Timestamp"] = 1568600895,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [287]
 			},
 			["complete"] = {
 				nil, -- [1]
@@ -2783,10 +3405,10 @@ QuestieConfig = {
 				true, -- [190]
 				true, -- [191]
 				true, -- [192]
-				nil, -- [193]
+				true, -- [193]
 				true, -- [194]
 				true, -- [195]
-				nil, -- [196]
+				true, -- [196]
 				nil, -- [197]
 				true, -- [198]
 				true, -- [199]
@@ -2795,11 +3417,11 @@ QuestieConfig = {
 				true, -- [202]
 				true, -- [203]
 				true, -- [204]
-				nil, -- [205]
+				true, -- [205]
 				nil, -- [206]
 				true, -- [207]
 				nil, -- [208]
-				nil, -- [209]
+				true, -- [209]
 				true, -- [210]
 				nil, -- [211]
 				true, -- [212]
@@ -2928,11 +3550,11 @@ QuestieConfig = {
 				true, -- [335]
 				true, -- [336]
 				true, -- [337]
-				nil, -- [338]
-				nil, -- [339]
+				true, -- [338]
+				true, -- [339]
 				true, -- [340]
 				true, -- [341]
-				nil, -- [342]
+				true, -- [342]
 				true, -- [343]
 				true, -- [344]
 				true, -- [345]
@@ -3110,7 +3732,7 @@ QuestieConfig = {
 				[1104] = true,
 				[1806] = true,
 				[1105] = true,
-				[555] = true,
+				[1106] = true,
 				[1425] = true,
 				[651] = true,
 				[1107] = true,
@@ -3128,6 +3750,7 @@ QuestieConfig = {
 				[622] = true,
 				[1177] = true,
 				[1241] = true,
+				[1050] = true,
 				[559] = true,
 				[1178] = true,
 				[1242] = true,
@@ -3152,7 +3775,7 @@ QuestieConfig = {
 				[1249] = true,
 				[531] = true,
 				[563] = true,
-				[1186] = true,
+				[595] = true,
 				[1250] = true,
 				[659] = true,
 				[691] = true,
@@ -3182,7 +3805,7 @@ QuestieConfig = {
 				[1643] = true,
 				[2769] = true,
 				[537] = true,
-				[1644] = true,
+				[1389] = true,
 				[601] = true,
 				[633] = true,
 				[1135] = true,
@@ -3201,92 +3824,97 @@ QuestieConfig = {
 				[540] = true,
 				[1650] = true,
 				[1204] = true,
+				[2864] = true,
+				[6285] = true,
 				[1396] = true,
+				[6281] = true,
+				[6261] = true,
+				[6181] = true,
 				[1142] = true,
 				[605] = true,
 				[1780] = true,
-				[6285] = true,
+				[1644] = true,
 				[1398] = true,
 				[3681] = true,
 				[1271] = true,
 				[542] = true,
 				[574] = true,
-				[6281] = true,
-				[6261] = true,
-				[6181] = true,
-				[1651] = true,
+				[606] = true,
 				[5561] = true,
+				[5501] = true,
+				[5261] = true,
+				[4606] = true,
 				[2038] = true,
 				[543] = true,
 				[575] = true,
-				[2922] = true,
+				[607] = true,
 				[1274] = true,
 				[1338] = true,
-				[5501] = true,
+				[555] = true,
 				[2924] = true,
 				[2040] = true,
-				[5261] = true,
-				[4606] = true,
+				[4602] = true,
+				[4601] = true,
 				[2926] = true,
 				[1786] = true,
 				[2927] = true,
-				[554] = true,
+				[3905] = true,
 				[2928] = true,
 				[1787] = true,
 				[2929] = true,
 				[577] = true,
 				[2930] = true,
 				[1788] = true,
-				[4602] = true,
-				[1661] = true,
-				[4601] = true,
-				[514] = true,
-				[3905] = true,
-				[578] = true,
 				[3903] = true,
-				[642] = true,
+				[1661] = true,
 				[2998] = true,
-				[1389] = true,
+				[514] = true,
+				[554] = true,
+				[578] = true,
 				[2951] = true,
-				[1652] = true,
-				[1654] = true,
+				[642] = true,
+				[1651] = true,
+				[1653] = true,
+				[738] = true,
 				[2923] = true,
+				[2922] = true,
+				[6624] = true,
 				[1218] = true,
-				[2864] = true,
 				[2861] = true,
+				[2746] = true,
 				[707] = true,
 				[1219] = true,
-				[2746] = true,
 				[2745] = true,
 				[2158] = true,
+				[2039] = true,
 				[1220] = true,
 				[1284] = true,
-				[2039] = true,
 				[1781] = true,
+				[1654] = true,
 				[1221] = true,
 				[1285] = true,
 				[2945] = true,
-				[1653] = true,
+				[1652] = true,
 				[1222] = true,
 				[1286] = true,
 				[2947] = true,
 				[6134] = true,
 				[4605] = true,
 				[1287] = true,
-				[1206] = true,
 				[631] = true,
 				[560] = true,
 				[632] = true,
-				[1097] = true,
 				[783] = true,
-				[2952] = true,
+				[1097] = true,
 				[561] = true,
+				[2952] = true,
+				[634] = true,
 				[551] = true,
 				[583] = true,
-				[634] = true,
-				[595] = true,
+				[1186] = true,
 				[627] = true,
 				[628] = true,
+				[1206] = true,
 				[1114] = true,
 			},
 		},

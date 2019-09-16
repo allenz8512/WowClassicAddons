@@ -8,16 +8,16 @@ MonkeyQuestConfig = {
 			["荆棘谷 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["蚌肉大餐 - false"] = {
+			["一捆海蛇草 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["流放者马特克 - false"] = {
+			["塔纳利斯 - true"] = {
 				["m_bChecked"] = true,
 			},
 			["血色修道院 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["千针石林 - true"] = {
+			["赞吉尔的秘密 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["以圣光之名 - false"] = {
@@ -32,6 +32,9 @@ MonkeyQuestConfig = {
 			["帅小伙子邓肯 - false"] = {
 				["m_bChecked"] = true,
 			},
+			["荆棘谷热疫 - false"] = {
+				["m_bChecked"] = true,
+			},
 			["祖尔法拉克 - true"] = {
 				["m_bChecked"] = true,
 			},
@@ -41,41 +44,41 @@ MonkeyQuestConfig = {
 			["打开钥匙之石 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["阿拉希高地 - true"] = {
-				["m_bChecked"] = false,
+			["蚌肉大餐 - false"] = {
+				["m_bChecked"] = true,
 			},
 			["洛克莫丹 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["劈颅巨魔的獠牙 - false"] = {
+			["猎龙 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["荒芜之地的材料 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["泰坦神话 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["寻找阿戈莫德 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["猎豹 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["猎龙 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["荆棘谷的青山 - false"] = {
+			["威士忌斯利姆的酒 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["荒芜之地 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["吓唬病鬼 - false"] = {
+			["讨债行动 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["巨魔巫术 - false"] = {
+			["海盗的眼睛 - false"] = {
 				["m_bChecked"] = true,
+			},
+			["莫达洛克 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["斯杜雷的债务 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["血帆海盗 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["阿拉希高地 - true"] = {
+				["m_bChecked"] = false,
 			},
 			["与圣光同在 - false"] = {
 				["m_bChecked"] = true,
@@ -136,7 +139,7 @@ MonkeyQuestConfig = {
 		["m_bColourDoneOrFailed"] = false,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_iFrameBottom"] = 179.555511474609,
+		["m_iFrameBottom"] = -129.777755737305,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {

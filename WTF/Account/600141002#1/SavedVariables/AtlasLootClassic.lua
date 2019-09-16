@@ -31,13 +31,13 @@ AtlasLootClassicDB = {
 					nil, -- [1]
 					nil, -- [2]
 					"CENTER", -- [3]
-					-5.835711272084150e-05, -- [4]
+					5.33331489562988, -- [4]
 					0, -- [5]
 				},
 				["selected"] = {
-					nil, -- [1]
-					"ScarletMonasteryLibrary", -- [2]
-					nil, -- [3]
+					"AtlasLootClassic_Crafting", -- [1]
+					"Engineering", -- [2]
+					9, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},

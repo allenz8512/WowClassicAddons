@@ -2,48 +2,6 @@
 MonkeyQuestConfig = {
 	["碧玉矿洞|白銀諾艾爾"] = {
 		["m_aQuestList"] = {
-			["泰坦神话 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["荆棘谷的青山 - 第一章 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["向马克基雷回报 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["流放者马特克 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["帅小伙子邓肯 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["祖尔法拉克 - true"] = {
-				["m_bChecked"] = true,
-			},
-			["打开钥匙之石 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["洛克莫丹 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["劈颅巨魔的獠牙 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["猎龙 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["荆棘谷的青山 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["血帆海盗 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["巨魔巫术 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["剃刀高地 - true"] = {
-				["m_bChecked"] = false,
-			},
 			["风险投资公司 - false"] = {
 				["m_bChecked"] = true,
 			},
@@ -59,7 +17,7 @@ MonkeyQuestConfig = {
 			["血色修道院 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["寻找阿戈莫德 - false"] = {
+			["赞吉尔的秘密 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["以圣光之名 - false"] = {
@@ -68,40 +26,61 @@ MonkeyQuestConfig = {
 			["烹饪 - true"] = {
 				["m_bChecked"] = false,
 			},
+			["地精工程学 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["工程学 - true"] = {
+				["m_bChecked"] = true,
+			},
 			["深渊皇冠 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["麦佐斯 - false"] = {
+			["帅小伙子邓肯 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["荆棘谷热疫 - false"] = {
 				["m_bChecked"] = true,
 			},
+			["祖尔法拉克 - true"] = {
+				["m_bChecked"] = true,
+			},
 			["鼻烟 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["打开钥匙之石 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["蚌肉大餐 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["洛克莫丹 - true"] = {
+				["m_bChecked"] = false,
+			},
+			["猎龙 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["荒芜之地的材料 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["荆棘谷的青山 - 第四章 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["吓唬病鬼 - false"] = {
+			["威士忌斯利姆的酒 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["荒芜之地 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["蚌肉大餐 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["千针石林 - true"] = {
+			["讨债行动 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["海盗的眼睛 - false"] = {
 				["m_bChecked"] = true,
 			},
+			["莫达洛克 - false"] = {
+				["m_bChecked"] = true,
+			},
 			["斯杜雷的债务 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["血帆海盗 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["阿拉希高地 - true"] = {
@@ -110,8 +89,8 @@ MonkeyQuestConfig = {
 			["与圣光同在 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["猎豹 - false"] = {
-				["m_bChecked"] = true,
+			["剃刀高地 - true"] = {
+				["m_bChecked"] = false,
 			},
 		},
 	},
@@ -140,7 +119,7 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_iFrameBottom"] = -17.7777347564697,
+		["m_iFrameBottom"] = -207.111190795898,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11267089844,
 		["m_bColourDoneOrFailed"] = false,
