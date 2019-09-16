@@ -202,7 +202,8 @@ function RecipeRadar_OnEvent(self, event, ...)
                [RecipeRadar_GetOpposingFaction("player")] = true
       end
 
-   elseif (event == "TRADE_SKILL_UPDATE" or event == "TRADE_SKILL_SHOW") then
+   elseif (event == "TRADE_SKILL_UPDATE") then
+   --elseif (event == "TRADE_SKILL_UPDATE" or event == "TRADE_SKILL_SHOW") then
 
       RecipeRadar_SkillDB_Refresh("trade")
 
