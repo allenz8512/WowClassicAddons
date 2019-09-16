@@ -19,7 +19,7 @@ if not SC_DATA1 or not SC_DATA2 or not SC_DATA3 then return;end
 if not __alaBase then
 	return;
 end
---------------------------------------------------short Channel Name
+----------------------------------------------------------------------------------------------------short Channel Name
 local control_shortChannelName = false;
 local backup_shortChannelName = {};
 local chatFrame = {};
@@ -34,7 +34,7 @@ eventCall("PLAYER_LOGOUT",
 					local f = chatFrame[i];
 					for _, c in pairs(SC_DATA2) do
 						for k, v in pairs(f.channelList) do
-							if v  ==  c[4] then
+							if v == c[4] then
 								f.channelList[k] = c[1];
 							end
 						end
@@ -51,9 +51,9 @@ hooksecurefunc(SlashCmdList, "JOIN",
 			for i = 1, NUM_CHAT_WINDOWS do
 				if i ~= 2 then
 					for k, v in pairs(chatFrame[i].channelList) do
-						if v  ==  c then
+						if v == c then
 							for _, ct in pairs(SC_DATA2) do
-								if string.sub(c, ct[2], ct[3])  ==  ct[1] then
+								if string.sub(c, ct[2], ct[3]) == ct[1] then
 									chatFrame[i].channelList[k] = ct[4];
 								end
 							end
@@ -71,7 +71,7 @@ hooksecurefunc(SlashCmdList, "LEAVE",
 		if  control_shortChannelName then
 			local s = nil;
 			for k, v in pairs(SC_DATA2) do
-				if c  ==  v[1] then
+				if c == v[1] then
 					s = v[4];
 				end
 			end
@@ -79,7 +79,7 @@ hooksecurefunc(SlashCmdList, "LEAVE",
 				if i ~= 2 then
 					local f = chatFrame[i];
 					for k, v in pairs(f.channelList) do
-						if v  ==  s or v  ==  c then
+						if v == s or v == c then
 							table.remove(f.channelList, k);
 							break;
 						end
@@ -91,7 +91,7 @@ hooksecurefunc(SlashCmdList, "LEAVE",
 				if i ~= 2 then
 					local f = chatFrame[i];
 					for k, v in pairs(f.channelList) do
-						if v  ==  c then
+						if v == c then
 							table.remove(f.channelList, k);
 							break;
 						end
@@ -105,12 +105,12 @@ hooksecurefunc("ChatFrame_AddChannel",
 	function(self, c)
 		if control_shortChannelName then
 			for k, v in pairs(self.channelList) do
-				if v  ==  c then
+				if v == c then
 					for _, ct in pairs(SC_DATA2) do
-						if string.sub(c, ct[2], ct[3])  ==  ct[1] then
+						if string.sub(c, ct[2], ct[3]) == ct[1] then
 							local sc = ct[4];
 							for i = 1, k do
-								if self.channelList[i]  ==  ct[4] then
+								if self.channelList[i] == ct[4] then
 									sc = nil;
 									break;
 								end
@@ -129,13 +129,13 @@ hooksecurefunc("ChatFrame_RemoveChannel",
 	function(self, c)
 		if control_shortChannelName then
 			for k, v in pairs(SC_DATA2) do
-				if string.sub(c, v[2], v[3])  ==  v[1] then
+				if string.sub(c, v[2], v[3]) == v[1] then
 					c = v[4];
 					break;
 				end
 			end
 			for k, v in pairs(self.channelList) do
-				if v  ==  c then
+				if v == c then
 					self.channelList[k] = nil;
 					break;
 				end
@@ -150,13 +150,13 @@ hooksecurefunc("CreateChatChannelList",
 			local zoneChannelList = FCF_GetCurrentChatFrame().zoneChannelList;
 			for _, v in pairs(CHAT_CONFIG_CHANNEL_LIST) do
 				for _, c in pairs(SC_DATA2) do
-				    if v.channelName and string.sub(v.channelName, c[2], c[3])  ==  c[1] then
+				    if v.channelName and string.sub(v.channelName, c[2], c[3]) == c[1] then
 					    --v.channelName = c[4];
 						--v.text = string.sub(v.text, 1, 2)..c[4];
 						local checked = nil;
 					    if (channelList) then
 					    	for _, v2 in pairs(channelList) do
-					    		if (v2  ==  c[4] or v2  ==  c[1]) then
+					    		if (v2 == c[4] or v2 == c[1]) then
 					    			checked = 1;
 									break;
 					    		end
@@ -164,7 +164,7 @@ hooksecurefunc("CreateChatChannelList",
 					    end
 					    if (zoneChannelList) then
 					    	for _, v2 in pairs(zoneChannelList) do
-					    		if (v2  ==  c[4] or v2  ==  c[1]) then
+					    		if (v2 == c[4] or v2 == c[1]) then
 					    			checked = 1;
 									break;
 					    		end
@@ -180,7 +180,7 @@ hooksecurefunc("CreateChatChannelList",
 );
 local function _cf_short_channel_name(self, event, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, ...)--main function
 	for k, v in pairs(SC_DATA2) do
-		if arg9  ==  v[1] or string.sub(arg9, v[2], v[3])  ==  v[1] then
+		if arg9 == v[1] or string.sub(arg9, v[2], v[3]) == v[1] then
 			arg9 = v[4];
 			arg4 = arg8..". "..arg9;
 			break;
@@ -198,7 +198,7 @@ local function shortChannelName_ToggleOn()
 			local f = chatFrame[i];
 			for _, c in pairs(SC_DATA2) do
 				for k, v in pairs(f.channelList) do
-					if string.sub(v, c[2], c[3])  ==  c[1] then
+					if string.sub(v, c[2], c[3]) == c[1] then
 						f.channelList[k] = c[4];
 					end
 				end
@@ -222,7 +222,7 @@ local function shortChannelName_ToggleOff()
 			local f = chatFrame[i];
 			for _, c in pairs(SC_DATA2) do
 				for k, v in pairs(f.channelList) do
-					if v  ==  c[4] then
+					if v == c[4] then
 						f.channelList[k] = c[1];
 					end
 				end
@@ -237,7 +237,7 @@ local function shortChannelName_ToggleOff()
 end
 FUNC.ON.shortChannelName = shortChannelName_ToggleOn;
 FUNC.OFF.shortChannelName = shortChannelName_ToggleOff;
---------------------------------------------------filter questAnn
+----------------------------------------------------------------------------------------------------filter questAnn
 local control_filterQuestAnn = false;
 local function _cf_filter_quest_ann(self, event, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, ...)
 	local msg, sender, line = arg1, arg2, arg11;
@@ -274,7 +274,7 @@ local function filterQuestAnn_ToggleOff()
 end
 FUNC.ON.filterQuestAnn = filterQuestAnn_ToggleOn;
 FUNC.OFF.filterQuestAnn = filterQuestAnn_ToggleOff;
-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------level
 local control_level = false;
 local memCache = {  };
 local function cache_MemInfo()
@@ -314,7 +314,7 @@ local _GetPlayerLink = _G.GetPlayerLink;
 _G.GetPlayerLink = function(fullName, nameApp, lineId, cType, cTarget)
 	if control_level then
 		local sender, realm = string.split("-", fullName);
-		if realm == pRealm then
+		if not realm or realm == pRealm then
 			local level = memCache[sender];
 			if level then
 				--nameApp = nameApp .. level;
@@ -384,7 +384,7 @@ local function level_ToggleOff()
 end
 FUNC.ON.level=level_ToggleOn;
 FUNC.OFF.level=level_ToggleOff;
-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------colored name
 --colorNameByClass
 --Chat_ShouldColorChatByClass
 local __Chat_ShouldColorChatByClass = Chat_ShouldColorChatByClass;
@@ -401,12 +401,99 @@ local function ColorNameByClass_ToggleOff()
 end
 FUNC.ON.ColorNameByClass = ColorNameByClass_ToggleOn;
 FUNC.OFF.ColorNameByClass = ColorNameByClass_ToggleOff;
+----------------------------------------------------------------------------------------------------editBox tab
+local control_editBoxTab = false;
+
+local __ChatEdit_CustomTabPressed = ChatEdit_CustomTabPressed;
+--local chatType = { "SAY", "EMOTE", "YELL", "GUILD", "OFFICER", "WHISPER", "PARTY", "RAID", "RAID_WARNING", --[["INSTANCE", ]]};
+--local chatHeader = { "/s ", "/e ", "/y ", "/g ", "/o ", "/w ", "/p ", "/raid ", "/rw ", "/bg " };
+local chatType = { "SAY", "PARTY", "GUILD", "RAID", --[["INSTANCE", ]]};
+local chatHeader = { "/s ", "/p ", "/g ", "/raid ", };
+local function OnTabPressed(self)
+	local cType = self:GetAttribute("chatType");
+	--print(cType);
+	-- if cType == "RAID" then
+	-- 	--self:SetAttribute("chatType", "WHISPER");
+	-- 	--if not self:GetAttribute("tellTarget") or self:GetAttribute("tellTarget") == "" then
+	-- 	--	self:SetAttribute("tellTarget", UnitName("player"));
+	-- 	--end
+	-- 	--ChatEdit_UpdateHeader(self);
+	-- 	if string.sub(self:GetText(), 1, 4) == "/w  " then
+	-- 		self:SetAttribute("chatType", "PARTY");
+	-- 		ChatEdit_UpdateHeader(self);
+	-- 		--string.match(self:GetText(), "/w [^ ]* (.+)")
+	-- 		self:SetText(string.sub(self:GetText(), 4));
+	-- 		self:SetCursorPosition(string.len(self:GetText()));
+	-- 	else
+	-- 		self:SetText("/w  " .. self:GetText());
+	-- 		self:SetCursorPosition(3);
+	-- 	end
+	-- 	--print("WHISPER");
+	-- 	return true;
+	-- else
+	if cType == "WHISPER" or cType == "BN_WHISPER" then
+	else
+		for i = 1, #chatType do
+			if cType == chatType[i] then
+				if i == #chatType then
+					self:SetAttribute("chatType", chatType[1]);
+					ChatEdit_UpdateHeader(self);
+					--self:SetText(chatHeader[1]);
+					--print(chatType[1]);
+				else
+					self:SetAttribute("chatType", chatType[i + 1]);
+					ChatEdit_UpdateHeader(self);
+					--self:SetText(chatHeader[i + 1]);
+					--print(chatType[i + 1]);
+				end
+				return true;
+			end
+		end
+		self:SetAttribute("chatType", "SAY");
+		ChatEdit_UpdateHeader(self);
+	end
+	-- end
+end
+local function editBoxTab_ToggleOn()
+	if not control_editBoxTab then
+		for i=1,NUM_CHAT_WINDOWS do
+			local editbox=_G["ChatFrame"..i.."EditBox"];
+			--editbox:SetScript("OnTabPressed", OnTabPressed);
+			ChatEdit_CustomTabPressed = OnTabPressed;
+		end
+		control_editBoxTab = true;
+	end
+end
+local function editBoxTab_ToggleOff()
+	if control_editBoxTab then
+		for i=1,NUM_CHAT_WINDOWS do
+			local editbox=_G["ChatFrame"..i.."EditBox"];
+			--editbox:SetScript("OnTabPressed", ChatEdit_OnTabPressed);
+			ChatEdit_CustomTabPressed = __ChatEdit_CustomTabPressed;
+		end
+		control_editBoxTab = false;
+	end
+end
+FUNC.ON.editBoxTab = editBoxTab_ToggleOn
+FUNC.OFF.editBoxTab = editBoxTab_ToggleOff
 ----------------------------------------------------------------------------------------------------
+-- local control_restoreAfterWhisper = false;
+FUNC.ON.restoreAfterWhisper = function()
+	--control_restoreAfterWhisper = true;
+	ChatTypeInfo["WHISPER"].sticky = true;
+	ChatTypeInfo["BN_WHISPER"].sticky = true;
+end
+FUNC.OFF.restoreAfterWhisper = function()
+	--control_restoreAfterWhisper = false;
+	ChatTypeInfo["WHISPER"].sticky = false;
+	ChatTypeInfo["BN_WHISPER"].sticky = false;
+end
+----------------------------------------------------------------------------------------------------itemLinkEnhanced
 local control_itemLinkEnhanced = false;
 local __SendChatMessage_itemLinkEnhanced = SendChatMessage;
 local function _cf_itemLinkEnhanced(self, event, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, ...)
 	local _, cn = GetChannelName(arg8);
-	if string.find(cn, SC_DATA3[1]) or string.find(cn, SC_DATA3[2]) then
+	if cn and (string.find(cn, SC_DATA3[1]) or string.find(cn, SC_DATA3[2])) then
 		--if _T_ then print(arg1) end
 		while true do
 			local s, e, f1, f2 = string.find(arg1, "#([[][^#]+[]])#([^#]+)#");
@@ -477,6 +564,85 @@ local function itemLinkEnhanced_ToggleOff()
 end
 FUNC.ON.itemLinkEnhanced = itemLinkEnhanced_ToggleOn
 FUNC.OFF.itemLinkEnhanced = itemLinkEnhanced_ToggleOff
+----------------------------------------------------------------------------------------------------shamanColor
+local control_shamanColor = false;
+local orig_shamanColor_r = RAID_CLASS_COLORS.SHAMAN.r;
+local orig_shamanColor_g = RAID_CLASS_COLORS.SHAMAN.g;
+local orig_shamanColor_b = RAID_CLASS_COLORS.SHAMAN.b;
+local retail_r = 0.0;
+local retail_g = 0.4392147064209;
+local retail_b = 0.86666476726532;
+local function shamanColor_ToggleOn()
+	if not control_shamanColor then
+		RAID_CLASS_COLORS.SHAMAN.r = retail_r;
+		RAID_CLASS_COLORS.SHAMAN.g = retail_g;
+		RAID_CLASS_COLORS.SHAMAN.b = retail_b;
+		control_shamanColor = true;
+	end
+end
+local function shamanColor_ToggleOff()
+	if control_shamanColor then
+		RAID_CLASS_COLORS.SHAMAN.r = orig_shamanColor_r;
+		RAID_CLASS_COLORS.SHAMAN.g = orig_shamanColor_g;
+		RAID_CLASS_COLORS.SHAMAN.b = orig_shamanColor_b;
+		control_shamanColor = false;
+	end
+end
+--string.format("\124cff%.2x%.2x%.2x", 0, 0.4392147064209 * 255, 0.86666476726532 * 255)
+--string.format("\124cff%.2x%.2x%.2x", 0.96 * 255, 0.55 * 255, 0.73 * 255)
+FUNC.ON.shamanColor = shamanColor_ToggleOn;
+FUNC.OFF.shamanColor = shamanColor_ToggleOff;
+----------------------------------------------------------------------------------------------------
+local control_hyperLinkHoverShow = false;
+local LinkHoverType = {
+	["achievement"] = true,
+	["enchant"] = true,
+	["glyph"] = true,
+	["item"] = true,
+	["quest"] = true,
+	["spell"] = true,
+	["talent"] = true,
+	["unit"] = true,
+}
+---------------- > Show tooltips when hovering a link in chat (credits to Adys for his LinkHover)
+local function _OnHyperlinkEnter(_this, linkData, link)
+	if control_hyperLinkHoverShow then
+		local t = linkData:match("^(.-):");
+		if LinkHoverType[t] then
+			ShowUIPanel(GameTooltip)
+			GameTooltip:SetOwner(_this, "ANCHOR_RIGHT");
+			GameTooltip:SetHyperlink(link);
+			GameTooltip:Show();
+		end
+	end
+end
+local function _OnHyperlinkLeave(_this, linkData, link)
+	if control_hyperLinkHoverShow then
+		if GameTooltip:IsOwned(_this) then
+		--local t = linkData:match("^(.-):");
+		--if LinkHoverType[t] then
+			HideUIPanel(GameTooltip);
+		end
+	end
+end
+local function main()
+	for i = 1, NUM_CHAT_WINDOWS do
+		local frame = _G["ChatFrame"..i]
+		frame:SetScript("OnHyperlinkEnter", _OnHyperlinkEnter)
+		frame:SetScript("OnHyperlinkLeave", _OnHyperlinkLeave)
+	end
+end
+FUNC.INIT.hyperLinkHoverShow = main;
+FUNC.ON.hyperLinkHoverShow=function()
+	if not control_hyperLinkHoverShow then
+		control_hyperLinkHoverShow = true;
+	end
+end
+FUNC.OFF.hyperLinkHoverShow=function()
+	if control_hyperLinkHoverShow then
+		control_hyperLinkHoverShow = false;
+	end
+end
 ----------------------------------------------------------------------------------------------------
 local ICON_PATH = NS.ICON_PATH;
 local bfwName = "大脚世界频道";
@@ -488,7 +654,7 @@ local bfwBtn = nil;
 local function find_bfw()
 	local t = {GetChannelList()};
 	for i = 1, #t/3 do
-		if t[i*3-1]  ==  bfwName then
+		if t[i*3-1] == bfwName then
 			return t[i*3-2];
 		end
 	end
@@ -499,7 +665,7 @@ local function _cf_bgWorld_Toggle(self, event, arg1, arg2, arg3, arg4, arg5, arg
 		local bfWorldID = find_bfw();
 		if bfWorldID>0 then
 			local msg, sender, channelID, channel, line = arg1, arg2, arg8, arg9, arg11;
-			if bfWorldID  ==  channelID then
+			if bfWorldID == channelID then
 				return true;
 			end
 		end
@@ -511,10 +677,13 @@ local function bfWorld_Ignore_ToggleOn()
 	if not control_bfWorld_Ignore_Switch then
 		return;
 	end
-	if GetLocale()  ==  "zhCN" then
+	if GetLocale() == "zhCN" then
 		if bfwBtn then
-			bfwBtn:SetNormalTexture(ICON_PATH.."bfw-disabled.blp");
-			bfwBtn:SetPushedTexture(ICON_PATH.."bfw-disabled-down.blp");
+			-- bfwBtn:SetNormalTexture(ICON_PATH.."bfw");
+			-- bfwBtn:SetPushedTexture(ICON_PATH.."bfw");
+			bfwBtn:GetNormalTexture():SetVertexColor(1.0, 0.0, 0.0, 1.0);
+			bfwBtn:GetPushedTexture():SetVertexColor(0.25, 0.0, 0.0, 0.5);
+			bfwBtn:GetHighlightTexture():SetVertexColor(1.0, 0.0, 0.0, 1.0);
 		end
 	end
 end
@@ -523,7 +692,7 @@ local function bfWorld_Ignore_ToggleOff()
 	if not control_bfWorld_Ignore_Switch then
 		return;
 	end
-	if GetLocale()  ==  "zhCN" then
+	if GetLocale() == "zhCN" then
 		if find_bfw()<0 then
 			--JoinChannelByName(bfwName);
 			--SlashCmdList["JOIN"](bfwName, ChatFrame1EditBox);
@@ -535,23 +704,27 @@ local function bfWorld_Ignore_ToggleOff()
 			ChatFrame_AddChannel(DEFAULT_CHAT_FRAME, bfwName);
 		end
 		if bfwBtn then
-			bfwBtn:SetNormalTexture(ICON_PATH.."bfw.blp");
-			bfwBtn:SetPushedTexture(ICON_PATH.."bfw-down.blp");
+			-- bfwBtn:SetNormalTexture(ICON_PATH.."bfw");
+			-- bfwBtn:SetPushedTexture(ICON_PATH.."bfw");
+			bfwBtn:GetNormalTexture():SetVertexColor(1.0, 1.0, 1.0, 1.0);
+			bfwBtn:GetPushedTexture():SetVertexColor(0.25, 0.25, 0.25, 0.5);
+			bfwBtn:GetHighlightTexture():SetVertexColor(1.0, 1.0, 1.0, 1.0);
 		end
 	end
 end
 --alaChatConfig.bfWorld_Ignore
 
 local function bfWorld_Ignore_Init()
-	if GetLocale()  ==  "zhCN" then
+	if GetLocale() == "zhCN" then
 		ChatFrame_AddMessageEventFilter("CHAT_MSG_CHANNEL", _cf_bgWorld_Toggle);
 		if alaChatConfig then
 			bfwBtn = CreateFrame("Button", "_alaChat_bfwBtn_bfwToggle");
 			bfwBtn:SetWidth(28);
 			bfwBtn:SetHeight(28);
-			bfwBtn:SetNormalTexture(ICON_PATH.."bfw.blp");
-			bfwBtn:SetPushedTexture(ICON_PATH.."bfw-down.blp");
-			bfwBtn:SetHighlightTexture(ICON_PATH.."bfw-highlight.blp");
+			bfwBtn:SetNormalTexture(ICON_PATH.."bfw");
+			bfwBtn:SetPushedTexture(ICON_PATH.."bfw");
+			bfwBtn:GetPushedTexture():SetVertexColor(0.25, 0.25, 0.25, 0.25);
+			bfwBtn:SetHighlightTexture(ICON_PATH.."bfw");
 			bfwBtn:GetHighlightTexture():SetBlendMode("ADD");
 			bfwBtn:SetAlpha(0.75);
 			bfwBtn:SetFrameLevel(ChatFrame1:GetFrameLevel()+1);
@@ -609,7 +782,7 @@ local function bfWorld_Ignore_Init()
 	end
 end
 
-if GetLocale()  ==  "zhCN" then
+if GetLocale() == "zhCN" or GetLocale() == "zhTW" then
 
 	FUNC.ON.bfWorld_Ignore = bfWorld_Ignore_ToggleOn;
 	FUNC.OFF.bfWorld_Ignore = bfWorld_Ignore_ToggleOff;

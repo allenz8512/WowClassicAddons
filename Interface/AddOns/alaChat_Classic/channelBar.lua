@@ -22,11 +22,84 @@ if not alaBaseBtn then
 end
 
 local btnPackIndex = 2;
+local ICON_PATH = NS.ICON_PATH;
 --------------------------------------------------channel Bar
+local channelJoinDelay = 0.25;
+
+local CHATTYPE;
+local COLOR;
+local CHAR;
+local INFO;
+local PREF;
+
+
 local function insertEditBox(text)
 	local editBox = ChatEdit_ChooseBoxForSend();
 	ChatEdit_ActivateChat(editBox);
 	editBox:SetText(text);
+end
+local function SetEditBoxHeader(idx)
+	local chatType = CHATTYPE[idx];
+	local editBox = ChatEdit_ChooseBoxForSend();
+	if chatType == "CHANNEL" then
+		local _chatType = editBox:GetAttribute("chatType");
+		local _channelTarget = editBox:GetAttribute("channelTarget");
+			local dataIdx = idx - 9;
+			local t = {GetChannelList()};
+			for i = 1,#t,3 do
+				if t[i+1] == SC_DATA2[dataIdx][1] then
+					if editBox:HasFocus() and _chatType == "CHANNEL" and _channelTarget == t[i] then
+						ChatEdit_DeactivateChat(editBox);
+					else
+						if editBox:HasFocus() then
+							local text = editBox:GetText():gsub("/[^%s]+%s", "");
+							ChatEdit_ActivateChat(editBox);
+							editBox:SetText("/"..t[i].." " .. text);
+						else
+							ChatEdit_ActivateChat(editBox);
+							editBox:SetText("/"..t[i].." ");
+						end
+					end
+					return;
+				end
+			end
+			if select(2, JoinPermanentChannel(SC_DATA2[dataIdx][1], nil, DEFAULT_CHAT_FRAME:GetID(), 1)) then
+				ChatFrame_AddChannel(DEFAULT_CHAT_FRAME, SC_DATA2[dataIdx][1]);
+				C_Timer.After(channelJoinDelay, function()
+					t = {GetChannelList()};
+					for i = 1,#t,3 do
+						if t[i+1] == SC_DATA2[dataIdx][1] then
+							if editBox:HasFocus() and _chatType == "CHANNEL" and _channelTarget == t[i] then
+								ChatEdit_DeactivateChat(editBox);
+							else
+								if editBox:HasFocus() then
+									local text = editBox:GetText():gsub("/[^%s]+%s", "");
+									ChatEdit_ActivateChat(editBox);
+									editBox:SetText("/"..t[i].." " .. text);
+								else
+									ChatEdit_ActivateChat(editBox);
+									editBox:SetText("/"..t[i].." ");
+								end
+							end
+							return;
+						end
+					end
+				end);
+			end
+	else
+		if editBox:HasFocus() and (chatType == editBox:GetAttribute("chatType") or ((chatType == "WHISPER" or chatType == "INSTANCE_CHAT") and editBox:GetText() == PREF[idx])) then
+			ChatEdit_DeactivateChat(editBox);
+		else
+			if editBox:HasFocus() then
+				local text = editBox:GetText():gsub("/[^%s]+%s", "");
+				ChatEdit_ActivateChat(editBox);
+				editBox:SetText(PREF[idx] .. text);
+			else
+				ChatEdit_ActivateChat(editBox);
+				editBox:SetText(PREF[idx]);
+			end
+		end
+	end
 end
 local ChatTypeInfo = ChatTypeInfo;
 
@@ -43,469 +116,92 @@ local function nPrevShown(index)
 	--print(n);
 	return n;
 end
-toggle[1] = function(on)
-	local idx = 1;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."SAY",
-					"char",
-					string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.SAY.r*255,ChatTypeInfo.SAY.g*255,ChatTypeInfo.SAY.b*255)..CB_DATA.T_SAY.."\124r",
-					nil,
-					function(self,button)
-						insertEditBox("/s ");
-					end,
-					{
-						string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.SAY.r*255,ChatTypeInfo.SAY.g*255,ChatTypeInfo.SAY.b*255)..SAY.."\124r",
-					}
-			);
+
+local control_style = "CHAR";
+
+local function SetStyle(i, style)
+	if style == "CHAR" then
+		if btn[i] then
+			alaBaseBtn:ChangeBtnTexture(btn[i], "char", CHAR[i]);
+		end
+	elseif style == "CIRCLE" then
+		if btn[i] then
+			alaBaseBtn:ChangeBtnTexture(btn[i], ICON_PATH .. "channelBarCircle", nil, COLOR[i]);
+		end
+	elseif style == "SQUARE" then
+		if btn[i] then
+			alaBaseBtn:ChangeBtnTexture(btn[i], ICON_PATH .. "channelBarSquare", nil, COLOR[i]);
 		end
 	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[2] = function(on)
-	local idx = 2;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."PARTY",
-					"char",
-					string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.PARTY.r*255,ChatTypeInfo.PARTY.g*255,ChatTypeInfo.PARTY.b*255)..CB_DATA.T_PARTY.."\124r",
-					nil,
-					function(self,button)
-						insertEditBox("/p ");
-					end,
-					{
-						string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.PARTY.r*255,ChatTypeInfo.PARTY.g*255,ChatTypeInfo.PARTY.b*255)..PARTY.."\124r",
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[3] = function(on)
-	local idx = 3;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."RAID",
-					"char",
-					string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.RAID.r*255,ChatTypeInfo.RAID.g*255,ChatTypeInfo.RAID.b*255)..CB_DATA.T_RAID.."\124r",
-					nil,
-					function(self,button)
-						insertEditBox("/raid ");
-					end,
-					{
-						string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.RAID.r*255,ChatTypeInfo.RAID.g*255,ChatTypeInfo.RAID.b*255)..RAID.."\124r",
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[4] = function(on)
-	local idx = 4;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."RW",
-					"char",
-					string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.RAID_WARNING.r*255,ChatTypeInfo.RAID_WARNING.g*255,ChatTypeInfo.RAID_WARNING.b*255)..CB_DATA.T_RW.."\124r",
-					nil,
-					function(self,button)
-						insertEditBox("/rw ");
-					end,
-					{
-						string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.RAID_WARNING.r*255,ChatTypeInfo.RAID_WARNING.g*255,ChatTypeInfo.RAID_WARNING.b*255)..RAID_WARNING.."\124r",
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[5] = function(on)
-	local idx = 5;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."INSTANCE_CHAT",
-					"char",
-					string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.INSTANCE_CHAT.r*255,ChatTypeInfo.INSTANCE_CHAT.g*255,ChatTypeInfo.INSTANCE_CHAT.b*255)..CB_DATA.T_INSTANCE_CHAT.."\124r",
-					nil,
-					function(self,button)
-						insertEditBox("/bg ");
-					end,
-					{
-						string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.INSTANCE_CHAT.r*255,ChatTypeInfo.INSTANCE_CHAT.g*255,ChatTypeInfo.INSTANCE_CHAT.b*255)..INSTANCE_CHAT.."\124r",
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[6] = function(on)
-	local idx = 6;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."GUILD",
-					"char",
-					string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.GUILD.r*255,ChatTypeInfo.GUILD.g*255,ChatTypeInfo.GUILD.b*255)..CB_DATA.T_GUILD.."\124r",
-					nil,
-					function(self,button)
-						insertEditBox("/g ");
-					end,
-					{
-						string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.GUILD.r*255,ChatTypeInfo.GUILD.g*255,ChatTypeInfo.GUILD.b*255)..GUILD.."\124r",
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[7] = function(on)
-	local idx = 7;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."YELL",
-					"char",
-					string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.YELL.r*255,ChatTypeInfo.YELL.g*255,ChatTypeInfo.YELL.b*255)..CB_DATA.T_YELL.."\124r",
-					nil,
-					function(self,button)
-						insertEditBox("/y ");
-					end,
-					{
-						string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.YELL.r*255,ChatTypeInfo.YELL.g*255,ChatTypeInfo.YELL.b*255)..YELL.."\124r",
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[8] = function(on)
-	local idx = 8;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."WHISPER",
-					"char",
-					string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.WHISPER.r*255,ChatTypeInfo.WHISPER.g*255,ChatTypeInfo.WHISPER.b*255)..CB_DATA.T_WHISPER.."\124r",
-					nil,
-					function(self,button)
-						insertEditBox("/w ");
-					end,
-					{
-						string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.WHISPER.r*255,ChatTypeInfo.WHISPER.g*255,ChatTypeInfo.WHISPER.b*255)..WHISPER.."\124r",
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[9] = function(on)
-	local idx = 9;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."OFFICER",
-					"char",
-					string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.OFFICER.r*255,ChatTypeInfo.OFFICER.g*255,ChatTypeInfo.OFFICER.b*255)..CB_DATA.T_OFFICER.."\124r",
-					nil,
-					function(self,button)
-						insertEditBox("/o ");
-					end,
-					{
-						string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.OFFICER.r*255,ChatTypeInfo.OFFICER.g*255,ChatTypeInfo.OFFICER.b*255)..OFFICER.."\124r",
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[10] = function(on)
-	local idx = 10;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."GENERAL",
-					"char",
-					SC_DATA2[1][4],
-					nil,
-					function(self,button)
-						local t = {GetChannelList()};
-						for i = 1,#t/3 do
-							if t[i*3-1] == SC_DATA2[1][1] then
-								insertEditBox("/"..t[i*3-2].." ");
-								return;
-							end
-						end
-					end,
-					{
-						SC_DATA2[1][1],
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[11] = function(on)
-	local idx = 11;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."TRADE",
-					"char",
-					SC_DATA2[2][4],
-					nil,
-					function(self,button)
-						local t = {GetChannelList()};
-						for i = 1,#t/3 do
-							if t[i*3-1] == SC_DATA2[2][1] then
-								insertEditBox("/"..t[i*3-2].." ");
-								return;
-							end
-						end
-					end,
-					{
-						SC_DATA2[2][1],
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[12] = function(on)
-	local idx = 12;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."LOCALDEFENSE",
-					"char",
-					SC_DATA2[3][4],
-					nil,
-					function(self,button)
-						local t = {GetChannelList()};
-						for i = 1,#t/3 do
-							if t[i*3-1] == SC_DATA2[3][1] then
-								insertEditBox("/"..t[i*3-2].." ");
-								return;
-							end
-						end
-					end,
-					{
-						SC_DATA2[3][1],
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[13] = function(on)
-	local idx = 13;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."LOOKINGFORGROUP",
-					"char",
-					SC_DATA2[4][4],
-					nil,
-					function(self,button)
-						local t = {GetChannelList()};
-						for i = 1,#t/3 do
-							if t[i*3-1] == SC_DATA2[4][1] then
-								insertEditBox("/"..t[i*3-2].." ");
-								return;
-							end
-						end
-					end,
-					{
-						SC_DATA2[4][1],
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-toggle[14] = function(on)
-	local idx = 14;
-	if (shown[idx] and on) or (not shown[idx] and not on) then
-		return
-	end
-	shown[idx] = on;
-	if on then
-		if btn[idx] then
-			alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
-		else
-			btn[idx] = alaBaseBtn:CreateBtn(
-					btnPackIndex,
-					nPrevShown(idx) + 1,
-					"ChatBar_".."BFWORLD",
-					"char",
-					"\124cffffdfbf世\124r",
-					nil,
-					function(self,button)
-						local t = {GetChannelList()};
-						for i = 1,#t/3 do
-							if t[i*3-1] == "大脚世界频道" then
-								insertEditBox("/"..t[i*3-2].." ");
-								return;
-							end
-						end
-					end,
-					{
-						"\124cffffdfbf大脚世界频道\124r",
-					}
-			);
-		end
-	else
-		alaBaseBtn:RemoveBtn(btn[idx],true);
-	end
-end
-local function channelBar_ToggleOn(onStartup)
-	if onStartup then 
 		return;
 	end
-	for i = 1,13 do
-		toggle[i](true);
-	end
-	if alaChatConfigFrame and alaChatConfigFrame.config and alaChatConfigFrame.config.channelBarChannel then
-		for i = 1,13 do
-			alaChatConfigFrame.config.channelBarChannel[i] = true;
+end
+
+for idx = 1, 9 do
+	toggle[idx] = function(on)
+		if (shown[idx] and on) or (not shown[idx] and not on) then
+			return
+		end
+		shown[idx] = on;
+		if on then
+			if btn[idx] then
+				alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
+			else
+				btn[idx] = alaBaseBtn:CreateBtn(
+						btnPackIndex,
+						nPrevShown(idx) + 1,
+						nil,
+						"char",
+						CHAR[idx],
+						nil,
+						function(self,button)
+							SetEditBoxHeader(idx);
+						end,
+						{
+							INFO[idx],
+						}
+				);
+			end
+		else
+			alaBaseBtn:RemoveBtn(btn[idx],true);
 		end
 	end
 end
-local function channelBar_ToggleOff(onStartup)
-	for i = 1,13 do
-		toggle[i](false);
-	end
-	if alaChatConfigFrame and alaChatConfigFrame.config and alaChatConfigFrame.config.channelBarChannel then
-		for i = 1,13 do
-			alaChatConfigFrame.config.channelBarChannel[i] = false;
+for idx = 10, 14 do
+	toggle[idx] = function(on)
+		if (shown[idx] and on) or (not shown[idx] and not on) then
+			return
+		end
+		shown[idx] = on;
+		local dataIdx = idx - 9;
+		if on then
+			if btn[idx] then
+				alaBaseBtn:AddBtn(btnPackIndex,nPrevShown(idx) + 1,btn[idx],true,false,true);
+			else
+				btn[idx] = alaBaseBtn:CreateBtn(
+						btnPackIndex,
+						nPrevShown(idx) + 1,
+						nil,
+						"char",
+						CHAR[idx],
+						nil,
+						function(self,button)
+							SetEditBoxHeader(idx);
+						end,
+						{
+							INFO[idx],
+						}
+				);
+			end
+		else
+			alaBaseBtn:RemoveBtn(btn[idx],true);
 		end
 	end
 end
---FUNC.ON.channelBar = channelBar_ToggleOn;
---FUNC.OFF.channelBar = channelBar_ToggleOff;
+
 FUNC.ON.channelBarChannel = function(idx)
-	toggle[idx](true)
+	toggle[idx](true);
+	SetStyle(idx, control_style);
 end
 FUNC.OFF.channelBarChannel = function(idx)
 	toggle[idx](false)
@@ -516,17 +212,115 @@ if not LCONFIG then
 	return;
 end
 FUNC.INIT.channelBarChannel = function()
-	LCONFIG.channelBarChannel[1] = string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.SAY.r*255,ChatTypeInfo.SAY.g*255,ChatTypeInfo.SAY.b*255)..SAY.."\124r";
-	LCONFIG.channelBarChannel[2] = string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.PARTY.r*255,ChatTypeInfo.PARTY.g*255,ChatTypeInfo.PARTY.b*255)..PARTY.."\124r";
-	LCONFIG.channelBarChannel[3] = string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.RAID.r*255,ChatTypeInfo.RAID.g*255,ChatTypeInfo.RAID.b*255)..RAID.."\124r";
-	LCONFIG.channelBarChannel[4] = string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.RAID_WARNING.r*255,ChatTypeInfo.RAID_WARNING.g*255,ChatTypeInfo.RAID_WARNING.b*255)..RAID_WARNING.."\124r";
-	LCONFIG.channelBarChannel[5] = string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.INSTANCE_CHAT.r*255,ChatTypeInfo.INSTANCE_CHAT.g*255,ChatTypeInfo.INSTANCE_CHAT.b*255)..INSTANCE_CHAT.."\124r";
-	LCONFIG.channelBarChannel[6] = string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.GUILD.r*255,ChatTypeInfo.GUILD.g*255,ChatTypeInfo.GUILD.b*255)..GUILD.."\124r";
-	LCONFIG.channelBarChannel[7] = string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.YELL.r*255,ChatTypeInfo.YELL.g*255,ChatTypeInfo.YELL.b*255)..YELL.."\124r";
-	LCONFIG.channelBarChannel[8] = string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.WHISPER.r*255,ChatTypeInfo.WHISPER.g*255,ChatTypeInfo.WHISPER.b*255)..WHISPER.."\124r";
-	LCONFIG.channelBarChannel[9] = string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.OFFICER.r*255,ChatTypeInfo.OFFICER.g*255,ChatTypeInfo.OFFICER.b*255)..OFFICER.."\124r";
-	if GetLocale() == "zhCN" then
-		LCONFIG.channelBarChannel[14] = "世界频道";
+	CHATTYPE = {
+		"SAY",
+		"PARTY",
+		"RAID",
+		"RAID_WARNING",
+		"INSTANCE_CHAT",
+		"GUILD",
+		"YELL",
+		"WHISPER",
+		"OFFICER",
+		"CHANNEL",
+		"CHANNEL",
+		"CHANNEL",
+		"CHANNEL",
+		"CHANNEL",
+	}
+	COLOR = {
+		ChatTypeInfo.SAY,
+		ChatTypeInfo.PARTY,
+		ChatTypeInfo.RAID,
+		ChatTypeInfo.RAID_WARNING,
+		ChatTypeInfo.INSTANCE_CHAT,
+		ChatTypeInfo.GUILD,
+		ChatTypeInfo.YELL,
+		ChatTypeInfo.WHISPER,
+		ChatTypeInfo.OFFICER,
+		{ r = 1.0, g = 0.8745, b = 0.7490, },
+		{ r = 1.0, g = 0.8745, b = 0.7490, },
+		{ r = 1.0, g = 0.8745, b = 0.7490, },
+		{ r = 1.0, g = 0.8745, b = 0.7490, },
+		{ r = 1.0, g = 0.8745, b = 0.7490, },
+	};
+	CHAR = {
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.SAY.r*255,ChatTypeInfo.SAY.g*255,ChatTypeInfo.SAY.b*255)..CB_DATA.T_SAY.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.PARTY.r*255,ChatTypeInfo.PARTY.g*255,ChatTypeInfo.PARTY.b*255)..CB_DATA.T_PARTY.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.RAID.r*255,ChatTypeInfo.RAID.g*255,ChatTypeInfo.RAID.b*255)..CB_DATA.T_RAID.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.RAID_WARNING.r*255,ChatTypeInfo.RAID_WARNING.g*255,ChatTypeInfo.RAID_WARNING.b*255)..CB_DATA.T_RW.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.INSTANCE_CHAT.r*255,ChatTypeInfo.INSTANCE_CHAT.g*255,ChatTypeInfo.INSTANCE_CHAT.b*255)..CB_DATA.T_INSTANCE_CHAT.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.GUILD.r*255,ChatTypeInfo.GUILD.g*255,ChatTypeInfo.GUILD.b*255)..CB_DATA.T_GUILD.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.YELL.r*255,ChatTypeInfo.YELL.g*255,ChatTypeInfo.YELL.b*255)..CB_DATA.T_YELL.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.WHISPER.r*255,ChatTypeInfo.WHISPER.g*255,ChatTypeInfo.WHISPER.b*255)..CB_DATA.T_WHISPER.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.OFFICER.r*255,ChatTypeInfo.OFFICER.g*255,ChatTypeInfo.OFFICER.b*255)..CB_DATA.T_OFFICER.."\124r",
+		"\124cffffdfbf" .. SC_DATA2[1][4] .."\124r",
+		"\124cffffdfbf" .. SC_DATA2[2][4] .."\124r",
+		"\124cffffdfbf" .. SC_DATA2[3][4] .."\124r",
+		"\124cffffdfbf" .. SC_DATA2[4][4] .."\124r",
+		"\124cffffdfbf世\124r",
+	};
+	INFO = {
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.SAY.r*255,ChatTypeInfo.SAY.g*255,ChatTypeInfo.SAY.b*255)..SAY.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.PARTY.r*255,ChatTypeInfo.PARTY.g*255,ChatTypeInfo.PARTY.b*255)..PARTY.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.RAID.r*255,ChatTypeInfo.RAID.g*255,ChatTypeInfo.RAID.b*255)..RAID.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.RAID_WARNING.r*255,ChatTypeInfo.RAID_WARNING.g*255,ChatTypeInfo.RAID_WARNING.b*255)..RAID_WARNING.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.INSTANCE_CHAT.r*255,ChatTypeInfo.INSTANCE_CHAT.g*255,ChatTypeInfo.INSTANCE_CHAT.b*255)..INSTANCE_CHAT.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.GUILD.r*255,ChatTypeInfo.GUILD.g*255,ChatTypeInfo.GUILD.b*255)..GUILD.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.YELL.r*255,ChatTypeInfo.YELL.g*255,ChatTypeInfo.YELL.b*255)..YELL.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.WHISPER.r*255,ChatTypeInfo.WHISPER.g*255,ChatTypeInfo.WHISPER.b*255)..WHISPER.."\124r",
+		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.OFFICER.r*255,ChatTypeInfo.OFFICER.g*255,ChatTypeInfo.OFFICER.b*255)..OFFICER.."\124r",
+		"\124cffffdfbf" .. SC_DATA2[1][1] .."\124r",
+		"\124cffffdfbf" .. SC_DATA2[2][1] .."\124r",
+		"\124cffffdfbf" .. SC_DATA2[3][1] .."\124r",
+		"\124cffffdfbf" .. SC_DATA2[4][1] .."\124r",
+		"\124cffffdfbf大脚世界频道\124r",
+	};
+	PREF = {
+		"/s ",
+		"/p ",
+		"/raid ",
+		"/rw ",
+		"/bg ",
+		"/g ",
+		"/y ",
+		"/w ",
+		"/o ",
+	};
+	for i = 1, 13 do
+		LCONFIG.channelBarChannel[i] = INFO[i];
 	end
+	if GetLocale() == "zhCN" or GetLocale() == "zhTW" then
+		LCONFIG.channelBarChannel[14] = "\124cffffdfbf世界频道\124r";
+	end
+end
+
+FUNC.SETVALUE.channelBarStyle = function(style)
+	if control_style ~= style then
+		if style == "CHAR" then
+			for i = 1, 14 do
+				if btn[i] then
+					alaBaseBtn:ChangeBtnTexture(btn[i], "char", CHAR[i]);
+				end
+			end
+		elseif style == "CIRCLE" then
+			for i = 1, 14 do
+				if btn[i] then
+					alaBaseBtn:ChangeBtnTexture(btn[i], ICON_PATH .. "channelBarCircle", nil, COLOR[i]);
+				end
+			end
+		elseif style == "SQUARE" then
+			for i = 1, 14 do
+				if btn[i] then
+					alaBaseBtn:ChangeBtnTexture(btn[i], ICON_PATH .. "channelBarSquare", nil, COLOR[i]);
+				end
+			end
+		else
+			return;
+		end
+		control_style = style;
+	end
+end
+FUNC.INIT.channelBarStyle = function()
 end
 ----------------------------------------------------------------------------------------------------

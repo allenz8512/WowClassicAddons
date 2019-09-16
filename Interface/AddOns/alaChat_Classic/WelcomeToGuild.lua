@@ -20,7 +20,7 @@ local WTG_STRING_OFF=WTG_STRING.WTG_STRING_OFF or ""
 local control_welcome=false;
 local control_broadCast=false;
 local WTG_delayMin=2;
-local WTG_delayAdd=6;
+local WTG_delayAdd=10;
 ----------------------------------------------------------------------------------------------------
 local math,table,string,pairs,type,select,tonumber,unpack=math,table,string,pairs,type,select,tonumber,unpack;
 ----------------------------------------------------------------------------------------------------
@@ -29,31 +29,63 @@ local random=random;
 if not __alaBase then
 	return;
 end
-local WelcomeMsg_Format={};
-for v in string.gmatch(FORMAT_WELCOME,"%s*([^\n]+)\n") do
-	table.insert(WelcomeMsg_Format,v);
-end
 ------------------------
 local pName;
 local rName;
 local fName;
 local gName;
 --------------------------------------------------
+local WelcomeMsg_Format={};
 local WelcomeMsg={};
+for v in string.gmatch(FORMAT_WELCOME,"%s*([^\n]+)\n") do
+	table.insert(WelcomeMsg_Format,v);
+end
 
-local function periodicGetMemberInfo(n)
+local function updateMsg(_gName)
+	WelcomeMsg={};
+	for _,v in pairs(WelcomeMsg_Format) do
+		v=string.gsub(v,"#GUILD#",gName);
+		v=string.gsub(v,"#PLAYER#",pName);
+		v=string.gsub(v,"#REALM#",rName);
+		table.insert(WelcomeMsg,v);
+		--print(_,v)
+	end
+end
+
+local function welcometoGuildMsg_SetValue(msg)
+	WelcomeMsg_Format = {};
+	for v in string.gmatch(msg,"%s*([^\n]+)\n") do
+		table.insert(WelcomeMsg_Format,v);
+	end
+	local _gName=GetGuildInfo("player");
+	if _gName then
+		updateMsg();
+	end
+end
+
+FUNC.SETVALUE.welcometoGuildMsg=welcometoGuildMsg_SetValue;
+
+local function periodicScanAfterNewMem(n,msg,delay)
 	GuildRoster();
 	for i=1,GetNumGuildMembers() do
 		local name,rank,rankindex0,level,class,area,_,_,_,_,eClass,ach=GetGuildRosterInfo(i);
 		name=string.split("-",name);
-		memCache[name]=level;
 		if name==n then
 			--print(i,name,rank,level,class,area);
-			SendChatMessage(string.format(FORMAT_BROADCAST,name,class,level,area,ach),"GUILD");
+			if control_broadCast then
+				SendChatMessage(string.format(FORMAT_BROADCAST,name,class,level,area,ach),"GUILD");
+			end
+			if control_welcome and msg then
+				msg = string.gsub(msg,"#NAME#",name);
+				msg = string.gsub(msg,"#CLASS#",class);
+				msg = string.gsub(msg,"#LEVEL#",level);
+				msg = string.gsub(msg,"#AREA#",area);
+				delayCall(SendChatMessage,delay,nil,msg,"GUILD");
+			end
 			return;
 		end
 	end
-	delayCall(periodicGetMemberInfo,0.25,nil,n);
+	delayCall(periodicScanAfterNewMem,0.25,nil,n,msg);
 end
 
 local gc_Cache={};
@@ -69,14 +101,14 @@ local function processMsg(_,event,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,a
 				name=n;
 			end
 			if name~=pName then
-				if control_welcome then
+				local msg=nil;
+				local delay=WTG_delayMin+WTG_delayAdd*random();
+				if control_welcome and #WelcomeMsg > 0 then
 					local ind=random(1,#WelcomeMsg);
-					local msg=string.format(WelcomeMsg[ind],name);
-					local delay=WTG_delayMin+WTG_delayAdd*random();
-					delayCall(SendChatMessage,delay,nil,msg,"GUILD");
+					msg=string.format(WelcomeMsg[ind],name);
 				end
-				if control_broadCast then
-					periodicGetMemberInfo(name);
+				if control_broadCast or control_welcome then
+					periodicScanAfterNewMem(name,msg,delay);
 				end
 			end
 		end
@@ -92,13 +124,7 @@ local function Update()
 	if _gName then
 		if _gName~=gName then
 			gName=_gName;
-			WelcomeMsg={};
-			for _,v in pairs(WelcomeMsg_Format) do
-				v=string.gsub(v,"%%GUILD%%",gName);
-				v=string.gsub(v,"%%PLAYER%%",pName);
-				v=string.gsub(v,"%%REALM%%",rName);
-				table.insert(WelcomeMsg,v);
-			end
+			updateMsg(_gName);
 		end
 		if not HE_CHAT_MSG_SYSTEM  then
 			HE_CHAT_MSG_SYSTEM=eventCall("CHAT_MSG_SYSTEM",processMsg,true);
@@ -160,6 +186,7 @@ FUNC.INIT.welcomeToGuild=WelcomeToGuild_Init;
 FUNC.ON.welcomeToGuild=WelcomeToGuild_ToggleOn;
 FUNC.OFF.welcomeToGuild=WelcomeToGuild_ToggleOff;
 FUNC.TOOLTIPS.welcomeToGuild=WelcomeToGuild_Tooltips;
+
 
 local function BroadCastNewMember_ToggleOn()
 	if control_broadCast then

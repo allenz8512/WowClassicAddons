@@ -131,9 +131,8 @@ L.EMOTE_STRING = {
 	Emote_Panel_STRING_3 = "<按住Ctrl拖动>移动图标",
 };
 L.WTG_STRING = {
-	FORMAT_WELCOME = [[
-		欢迎
-	]],
+	FORMAT_WELCOME = [[欢迎]],
+	WELCOME_NOTES = "#GUILD#代表公会名\n#PLAYER#代表自己的名字\n#REALM#代表服务器名\n#NAME#代表入会的玩家名\n#CLASS#代表入会的玩家职业\n#LEVEL#代表入会的玩家等级\n#AREA#代表入会的玩家所在地区",
 	FORMAT_BROADCAST = "新公会成员：%1$s Lv-%3$s %2$s",--name,class,level,area,achievement points
 	WTG_STRING_1 = "\124cffffffff入会欢迎语\124r",
 	WTG_STRING_2 = "\124cff80ffff左键点击切换\124r",
@@ -142,13 +141,19 @@ L.WTG_STRING = {
 	WTG_STRING_OFF = "\124cffff4040已关闭\124r",
 };
 L.CONFIG = {
-	wel						 = "\124cffff3f3falaChat\124r已加载,/alac或/alachat打开设置",
+	wel						 = "\124cffff3f3falaChat\124r已加载,/alac或/alachat打开设置。\n设置窗口移动到【ESC - 界面设置 - 插件(右上角) - alaChat_Classic】",
 	title					 = "设置",
-	itemLinkEnhanced		 = "公共频道物品链接",
+
+	position				 = "位置",
+	scale					 = "缩放",
+	alpha				 = "ALPHA",
+
 	shortChannelName		 = "短频道名",
+	itemLinkEnhanced		 = "公共频道物品链接",
 	chatEmote				 = "聊天表情",
 	ColorNameByClass		 = "聊天职业着色",
-	filterQuestAnn			 = "屏蔽任务进度通报(大脚、有爱)",
+	shamanColor				 = "将\124cfff48cba萨满\124r的职业颜色改成与正式服一样的\124cff006fdc蓝色\124r";
+	channelBarStyle			 = "频道切换栏风格",
 	channelBarChannel		 = 
 	{
 		SAY,
@@ -166,20 +171,24 @@ L.CONFIG = {
 		LOOK_FOR_GROUP,
 		label				 = "频道切换栏",
 	},
+	filterQuestAnn			 = "屏蔽任务进度通报(大脚、有爱)",
 	bfWorld_Ignore_Switch	 = "启用\"屏蔽世界频道按钮\"",
-	bfWorld_Ignore_BtnSize	 = "",
-	chatFrameScroll			 = "聊天框左侧滚动到底部按钮",
+	bfWorld_Ignore_BtnSize	 = "按钮大小",
+	--chatFrameScroll			 = "聊天框左侧滚动到底部按钮",
 	roll					 = "Roll",
 	DBMCountDown			 = "倒计时按钮",
-	welcomeToGuild			 = "欢迎新公会成员",
 	broadCastNewMember		 = "通报新公会成员",
+	welcomeToGuild			 = "欢迎新公会成员",
+	welcometoGuildMsg		 = "公会欢迎语",
 	ReadyCheck				 = "就位确认",
 	statReport				 = "属性通报",
 	copy					 = "复制聊天",
+	copyTagColor			 = "时间戳颜色",
 	level					 = "聊天框显示公会成员等级",
-	scale					 = "缩放",
-	position				 = "位置",
-	hideConfBtn				 = "隐藏设置按钮",
+	--hideConfBtn				 = "隐藏设置按钮",
+	editBoxTab				 = "聊天框Tab键切换频道",
+	restoreAfterWhisper		 = "密语之后恢复原来的频道",
+	hyperLinkHoverShow		 = "鼠标指向聊天框物品链接时显示提示",
 };
 L.REPORT = {
 	neckLevel			 = "项链",

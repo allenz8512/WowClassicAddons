@@ -131,9 +131,8 @@ L.EMOTE_STRING = {
 	Emote_Panel_STRING_3 = "<Ctrl>Move Icon",
 };
 L.WTG_STRING = {
-	FORMAT_WELCOME = [[
-		Welcome
-	]],
+	FORMAT_WELCOME = [[Welcome]],
+	WELCOME_NOTES = "#GUILD# for guildName\n#PLAYER# for selfName\n#REALM# for realmName\n#NAME#for playerName\n#CLASS# for playerClass\n#LEVEL# for playerLevel\n#AREA# for player Current Area",
 	FORMAT_BROADCAST = "New Guild Member:%1$s Lv-%3$s %2$s",--name,class,level,area,achievement points
 	WTG_STRING_1 = "\124cffffffffWelcome To Guild\124r",
 	WTG_STRING_2 = "\124cff80ffffLeft Click To Switch\124r",
@@ -142,13 +141,19 @@ L.WTG_STRING = {
 	WTG_STRING_OFF = "\124cffff4040Off\124r",
 };
 L.CONFIG = {
-	wel					 = "\124cffff3f3falaChat\124r Loaded./alac or /alachat to open config window",
+	wel					 = "\124cffff3f3falaChat\124r Loaded./alac or /alachat to open config window. \nConfig window is moved to [ESC - Interface Options - Addons(at topleft) - alaChat_Classic]",
 	title				 = "Settings",
+
+	position			 = "Position",
+	scale				 = "Bar Scale",
+	alpha				 = "ALPHA",
+
 	shortChannelName	 = "Short channel name",
 	itemLinkEnhanced	 = "Public channel item link",
 	chatEmote			 = "Emote",
 	ColorNameByClass	 = "Color Name By Class In ChatFrame",
-	filterQuestAnn		 = "NONE",
+	shamanColor			 = "Change color for \124cfff48cbashaman\124r to \124cff006fdcBLUE\124r.";
+	channelBarStyle		 = "Channel bar style",
 	channelBarChannel	 = 
 	{
 		SAY,
@@ -166,20 +171,24 @@ L.CONFIG = {
 		LOOK_FOR_GROUP,
 		label			 = "Channel bar",
 	},
+	filterQuestAnn		 = "NONE",
 	--
 	--
-	chatFrameScroll		 = "Add a scroll to bottom button to the left of chatFrame",
+	--chatFrameScroll		 = "Add a scroll to bottom button to the left of chatFrame",
 	roll				 = "Roll",
 	DBMCountDown		 = "Count down(need DBM)",
-	welcomeToGuild		 = "Welcome new guild member",
 	broadCastNewMember	 = "Broadcast new guild member",
+	welcomeToGuild		 = "Welcome",
+	welcometoGuildMsg	 = "Welcome Msg",
 	ReadyCheck			 = "Do Ready Check",
 	statReport			 = "Stat Report",
 	copy				 = "Copy chat",
+	copyTagColor		 = "Color for timestamp",
 	level				 = "Show guild member's level in chat frame",
-	scale				 = "Bar Scale",
-	position			 = "Position",
-	hideConfBtn			 = "Hide conf wheel",
+	--hideConfBtn			 = "Hide conf wheel",
+	editBoxTab			 = "Press tab to switch channel when chatbox is shown",
+	restoreAfterWhisper	 = "Reset to previous channel after whisper",
+	hyperLinkHoverShow	 = "Show tooltip when mouse hovered hyperlink in chat frame",
 };
 L.REPORT = {
 	neckLevel			 = "neck",

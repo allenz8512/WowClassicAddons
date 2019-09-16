@@ -25,12 +25,23 @@ end
 
 local orig_ChatFrame_OnHyperlinkShow=ChatFrame_OnHyperlinkShow;
 local orig_timeStamp=CHAT_TIMESTAMP_FORMAT;
+
+local copy_color = "7f7fff";
+local gsubfmt = "";
+
 local function set(fmt)
 	if fmt then
 		--\cffffff\Hcopy:id::::\h[time]\h\r
-		CHAT_TIMESTAMP_FORMAT="\124cff7f7fff\124HalaCCopy:-1\124h"..fmt.."\124h\124r";
+		CHAT_TIMESTAMP_FORMAT="\124cff" .. copy_color .. "\124HalaCCopy:-1\124h"..fmt.."\124h\124r";
 	else
-		CHAT_TIMESTAMP_FORMAT="\124cff7f7fff\124HalaCCopy:-1\124h**\124h\124r";
+		CHAT_TIMESTAMP_FORMAT="\124cff" .. copy_color .. "\124HalaCCopy:-1\124h**\124h\124r";
+	end
+	gsubfmt = "\124cff" .. copy_color .. "\124HalaCCopy:-1\124h**\124h\124r"
+end
+local function setColor(r, g, b)
+	copy_color = string.format("%.2x%.2x%.2x", r * 255, g * 255, b* 255);
+	if control_copy then
+		set(orig_timeStamp);
 	end
 end
 local function copy_Init()
@@ -50,7 +61,7 @@ local function copy_Init()
 			end
 			--tx=string.gsub(tx,"\124cff%x%x%x%x%x%x\124H[^:]+[1-9-:]+\124h(.*)\124h\124r")
 			--tx=string.gsub(tx,"\124cffffffff\124H[^:]+[1-9-:]+\124h(.*)\124h\124r","%1");
-			tx=string.gsub(tx,"\124cff7f7fff\124HalaCCopy:-1\124h**\124h\124r","");
+			tx=string.gsub(tx,gsubfmt,"");
 			tx=string.gsub(tx,"\124H.-\124h","");
 			tx=string.gsub(tx,"\124cff%x%x%x%x%x%x","");
 			tx=string.gsub(tx,"\124h","");
@@ -121,4 +132,8 @@ end
 FUNC.INIT.copy=copy_Init;
 FUNC.ON.copy=copy_ToggleOn;
 FUNC.OFF.copy=copy_ToggleOff;
+
+--FUNC.ON.copyTagColor=function()end
+--FUNC.OFF.copyTagColor=function()end
+FUNC.SETVALUE.copyTagColor=setColor;
 ----------------------------------------------------------------------------------------------------

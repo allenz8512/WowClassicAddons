@@ -8,13 +8,13 @@ local GameTooltip=GameTooltip;
 if not __alaBase then
 	return;
 end
-local __alaBaseBtn_Version=1.04;
+local __alaBaseBtn_Version=1.06;
 if __alaBaseBtn and __alaBaseBtn.Version>=__alaBaseBtn_Version then
 	return;
 end
 ----------------------------------------------------------------------------------------------------
 local btnSize=24;
-local btnInterval=2;
+local btnInterval=1;
 local backdrop = {
 	bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
 	edgeFile = nil;--"Interface\\Tooltips\\UI-Tooltip-Border",
@@ -297,7 +297,11 @@ function alaBaseBtn:AddPanelBtn(panel,Btn)
 	Btn:SetScript("OnDragStop",onDragStopPB);
 	Btn.panel=panel;
 end
-function alaBaseBtn:CreateBtn(posIndexMajor,posIndexMinor,name,nTex,pTex,hTex,onClickHandler,line,panel,alpha)
+--posIndexMajor,posIndexMinor,name,nTex,pTex,hTex,onClickHandler,line,panel,alpha,color
+--posIndexMajor,name,nTex,pTex,hTex,onClickHandler,line,panel,alpha,color
+--name,nTex,pTex,hTex,onClickHandler,line,panel,alpha,color
+local temp_name_id = 1;
+function alaBaseBtn:CreateBtn(posIndexMajor,posIndexMinor,name,nTex,pTex,hTex,onClickHandler,line,panel,alpha,color)
 	if type(posIndexMajor)=="string" then
 		name,nTex,pTex,hTex,onClickHandler,line,panel,alpha=posIndexMajor,posIndexMinor,name,nTex,pTex,hTex,onClickHandler,line;
 		posIndexMajor=1;
@@ -321,47 +325,54 @@ function alaBaseBtn:CreateBtn(posIndexMajor,posIndexMinor,name,nTex,pTex,hTex,on
 			end
 		end
 	end
-    name=name or "alaBaseBtnChildren";
+	if not name then
+		name = "alaBaseBtnChildren" .. temp_name_id;
+		temp_name_id = temp_name_id + 1;
+	end
 	local btn=CreateFrame("Button",name,alaBaseBtn);
 	btn:SetWidth(btnSize);
 	btn:SetHeight(btnSize);
-	if nTex then
-	    if string.lower(nTex)=="class" then
-		    local btnTexture=btn:CreateTexture(name.."Texture","BACKGROUND");
-		    btnTexture:SetAllPoints(btn);
-		    btnTexture:SetTexture("Interface\\TARGETINGFRAME\\UI-CLASSES-CIRCLES");
-			if pTex and CLASS_ICON_TCOORDS[string.upper(pTex)] then
-				btnTexture:SetTexCoord(unpack(CLASS_ICON_TCOORDS[pTex]));
-			else
-				btnTexture:SetTexCoord(unpack(CLASS_ICON_TCOORDS[select(2,UnitClass("player")) or "WARRIOR"]));
-			end
-		elseif string.lower(nTex)=="char" then
-			--local btnTexture=btn:CreateTexture(name.."Texture","BACKGROUND");
-			--btnTexture:SetAllPoints(btn);
-			--btnTexture:SetTexture("Interface\\AddOns\\_x\\icon\\text_push_frame");
-			--btnTexture:SetTexture("Interface\\Buttons\\UI-Quickslot-Depress");
-		    --btn:SetNormalTexture("Interface\\Buttons\\UI-Quickslot-Depress");
-			local btnFontString=btn:CreateFontString(name.."FontString","ARTWORK");
-			local font,size,outline=PlayerFrame.healthbar.TextString:GetFont();
-			btnFontString:SetFont(font,btnSize*0.75,"OUTLINE");
-			--btnFontString:SetFont("Fonts\\ARKai_C.ttf",btnSize/2,"OUTLINE");
-			btnFontString:SetAllPoints();
-			btnFontString:SetPoint("CENTER",btn);
-			btnFontString:SetText(pTex);
-			--btnFontString:Show();
-		elseif pTex then
-		    btn:SetNormalTexture(nTex);
-		    btn:SetPushedTexture(pTex);
-		else
-		    local btnTexture=btn:CreateTexture(name.."Texture","BACKGROUND");
-		    btnTexture:SetAllPoints(btn);
-		    btnTexture:SetTexture(nTex);
-		end
-	end
+	alaBaseBtn:ChangeBtnTexture(btn, nTex, pTex, color);
+	-- if nTex then
+	--     if string.lower(nTex)=="class" and pTex then
+	-- 	    btn:SetNormalTexture("Interface\\TARGETINGFRAME\\UI-CLASSES-CIRCLES");
+	-- 		btn:SetPushedTexture("Interface\\TARGETINGFRAME\\UI-CLASSES-CIRCLES");
+	-- 		if CLASS_ICON_TCOORDS[string.upper(pTex)] then
+	-- 			btn:GetNormalTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[pTex]));
+	-- 			btn:GetPushedTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[pTex]));
+	-- 		else
+	-- 			btn:GetNormalTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[select(2,UnitClass("player")) or "WARRIOR"]));
+	-- 			btn:GetPushedTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[select(2,UnitClass("player")) or "WARRIOR"]));
+	-- 		end
+	-- 	elseif string.lower(nTex)=="char" then
+	-- 		--local btnTexture=btn:CreateTexture(name.."Texture","BACKGROUND");
+	-- 		--btnTexture:SetAllPoints(btn);
+	-- 		--btnTexture:SetTexture("Interface\\AddOns\\_x\\icon\\text_push_frame");
+	-- 		--btnTexture:SetTexture("Interface\\Buttons\\UI-Quickslot-Depress");
+	-- 	    --btn:SetNormalTexture("Interface\\Buttons\\UI-Quickslot-Depress");
+	-- 		local btnFontString=btn:CreateFontString(name.."FontString","ARTWORK");
+	-- 		--local font,size,outline=PlayerFrame.healthbar.TextString:GetFont();
+	-- 		btnFontString:SetFont(GameFontNormal:GetFont(),22,"NORMAL");
+	-- 		--btnFontString:SetFont("Fonts\\ARKai_C.ttf",btnSize/2,"OUTLINE");
+	-- 		--btnFontString:SetAllPoints();
+	-- 		btnFontString:SetPoint("CENTER");
+	-- 		--btnFontString:SetPoint("CENTER",btn);
+	-- 		btnFontString:SetText(pTex);
+	-- 		--btnFontString:Show();
+	-- 		btn.fontString = btnFontString;
+	-- 	else
+	-- 		btn:SetNormalTexture(nTex);
+	-- 		if pTex then
+	-- 			btn:SetPushedTexture(pTex);
+	-- 		else
+	-- 			btn:SetPushedTexture(nTex);
+	-- 		end
+	-- 	end
+	-- end
 	if hTex then
 		btn:SetHighlightTexture(hTex);
 	else
-		btn:SetHighlightTexture("Interface\\Buttons\\CheckButtonHilight");
+		btn:SetHighlightTexture("Interface\\Buttons\\ui-panel-minimizebutton-highlight");
 	end
 	btn:GetHighlightTexture():SetBlendMode("ADD");
 	--
@@ -381,6 +392,63 @@ function alaBaseBtn:CreateBtn(posIndexMajor,posIndexMinor,name,nTex,pTex,hTex,on
 	    self:AddBtn(posIndexMajor,posIndexMinor,btn);
 	end
 	return btn;
+end
+function alaBaseBtn:ChangeBtnTexture(btn, nTex, pTex, color)
+	if not btn then
+		return;
+	end
+	if nTex then
+	    if string.lower(nTex)=="class" and pTex then
+		    btn:SetNormalTexture("Interface\\TARGETINGFRAME\\UI-CLASSES-CIRCLES");
+			btn:SetPushedTexture("Interface\\TARGETINGFRAME\\UI-CLASSES-CIRCLES");
+			if CLASS_ICON_TCOORDS[string.upper(pTex)] then
+				btn:GetNormalTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[pTex]));
+				btn:GetPushedTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[pTex]));
+			else
+				btn:GetNormalTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[select(2,UnitClass("player")) or "WARRIOR"]));
+				btn:GetPushedTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[select(2,UnitClass("player")) or "WARRIOR"]));
+			end
+			if btn.fontString then
+				btn.fontString:Hide();
+			end
+		elseif string.lower(nTex)=="char" then
+			--local btnTexture=btn:CreateTexture(name.."Texture","BACKGROUND");
+			--btnTexture:SetAllPoints(btn);
+			--btnTexture:SetTexture("Interface\\AddOns\\_x\\icon\\text_push_frame");
+			--btnTexture:SetTexture("Interface\\Buttons\\UI-Quickslot-Depress");
+			--btn:SetNormalTexture("Interface\\Buttons\\UI-Quickslot-Depress");
+			local btnFontString = btn.fontString or btn:CreateFontString(btn:GetName().."FontString","ARTWORK");
+			--local font,size,outline=PlayerFrame.healthbar.TextString:GetFont();
+			btnFontString:SetFont(GameFontNormal:GetFont(),21,"NORMAL");
+			--btnFontString:SetFont("Fonts\\ARKai_C.ttf",btnSize/2,"OUTLINE");
+			--btnFontString:SetAllPoints();
+			btnFontString:SetPoint("CENTER");
+			--btnFontString:SetPoint("CENTER",btn);
+			btnFontString:SetText(pTex);
+			btn.fontString = btnFontString;
+			--btnFontString:Show();
+			btn:SetNormalTexture(nil);
+			btn:SetPushedTexture(nil);
+		else
+			btn:SetNormalTexture(nTex);
+			if pTex then
+				btn:SetPushedTexture(pTex);
+			else
+				btn:SetPushedTexture(nTex);
+			end
+			if color then
+				if btn:GetNormalTexture() then
+					btn:GetNormalTexture():SetVertexColor(color.r, color.g, color.b, color.a or 1.0);
+				end
+				if btn:GetPushedTexture() then
+					btn:GetPushedTexture():SetVertexColor(color.r, color.g, color.b, color.a or 1.0);
+				end
+			end
+			if btn.fontString then
+				btn.fontString:Hide();
+			end
+		end
+	end
 end
 function alaBaseBtn:CreateBtnPanel(name,nTex,pTex,line)
     if not name then
@@ -405,88 +473,105 @@ __alaBaseBtn.Version=__alaBaseBtn_Version;
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 function alaBaseBtn:RecordPos()
-	alaBaseData=alaBaseData or {};
-	alaBaseData.xBtn=alaBaseData.xBtn or {};
-	alaBaseData.xBtn.posEx=alaBaseData.xBtn.posEx or "BELOW_EDITBOX";
-	alaBaseData.xBtn.scale=alaBaseData.xBtn.scale or 1.0;
-	alaBaseData.xBtn.pos={self:GetPoint()};
-	if alaBaseData.xBtn.pos[1] and type(alaBaseData.xBtn.pos[1])=="table" then
-		alaBaseData.xBtn.pos[1]=alaBaseData.xBtn.pos[1]:GetName()
+	alaBaseData.xBtn.pos = { self:GetPoint() };
+	if alaBaseData.xBtn.pos[1] and type(alaBaseData.xBtn.pos[1]) == "table" then
+		alaBaseData.xBtn.pos[1] = alaBaseData.xBtn.pos[1]:GetName()
 	end
-	if alaBaseData.xBtn.pos[2] and type(alaBaseData.xBtn.pos[2])=="table" then
-		alaBaseData.xBtn.pos[2]=alaBaseData.xBtn.pos[2]:GetName()
+	if alaBaseData.xBtn.pos[2] and type(alaBaseData.xBtn.pos[2]) == "table" then
+		alaBaseData.xBtn.pos[2] = alaBaseData.xBtn.pos[2]:GetName()
 	end
+end
+function alaBaseBtn:SetEditBox()
+		for i = 1, NUM_CHAT_WINDOWS do
+			local editbox = _G["ChatFrame" .. i .. "EditBox"];
+			local chatframe = _G["ChatFrame" .. i];
+			if chatframe:GetBottom()>editbox:GetBottom() then
+				editbox:ClearAllPoints();
+				editbox:SetPoint("TOPLEFT", chatframe, "BOTTOMLEFT", - 5, - 5 - btnSize*alaBaseData.xBtn.scale);
+				editbox:SetPoint("TOPRIGHT", chatframe, "BOTTOMRIGHT", - 5, - 5 - btnSize*alaBaseData.xBtn.scale);
+			end
+		end
 end
 function alaBaseBtn:ResetEditBox()
-	if alaBaseData.xBtn.posEx=="ABOVE_EDITOBX" then
-		for i=1,NUM_CHAT_WINDOWS do
-			local editbox=_G["ChatFrame"..i.."EditBox"];
-			local chatframe=_G["ChatFrame"..i];
+		for i = 1, NUM_CHAT_WINDOWS do
+			local editbox = _G["ChatFrame" .. i .. "EditBox"];
+			local chatframe = _G["ChatFrame" .. i];
 			editbox:ClearAllPoints();
-			editbox:SetPoint("TOPLEFT",chatframe,"BOTTOMLEFT",-5,-5-btnSize*alaBaseData.xBtn.scale);
-			editbox:SetPoint("TOPRIGHT",chatframe,"BOTTOMRIGHT",-5,-5-btnSize*alaBaseData.xBtn.scale);
+			editbox:SetPoint("TOPLEFT", chatframe, "BOTTOMLEFT", -5, -2);
+			editbox:SetPoint("TOPRIGHT", chatframe, "BOTTOMRIGHT", -5, -2);
 		end
-	else
-		for i=1,NUM_CHAT_WINDOWS do
-			local editbox=_G["ChatFrame"..i.."EditBox"];
-			local chatframe=_G["ChatFrame"..i];
-			editbox:ClearAllPoints();
-			editbox:SetPoint("TOPLEFT",chatframe,"BOTTOMLEFT",-5,-2);
-			editbox:SetPoint("TOPRIGHT",chatframe,"BOTTOMRIGHT",-5,-2);
-		end
-	end
 end
 function alaBaseBtn:ResetPoint()
-	alaBaseData=alaBaseData or {};
-	alaBaseData.xBtn=alaBaseData.xBtn or {};
-	alaBaseData.xBtn.posEx=alaBaseData.xBtn.posEx or "BELOW_EDITBOX";
-	alaBaseData.xBtn.scale=alaBaseData.xBtn.scale or 1.0;
+	alaBaseData = alaBaseData or {};
+	alaBaseData.xBtn = alaBaseData.xBtn or {};
+	alaBaseData.xBtn.posEx = alaBaseData.xBtn.posEx or "BELOW_EDITBOX";
+	alaBaseData.xBtn.scale = alaBaseData.xBtn.scale or 1.0;
 	self:ClearAllPoints();
-	if alaBaseData.xBtn.posEx=="ABOVE_EDITOBX" then
-		self:SetPoint("TOPLEFT",ChatFrame1,"BOTTOMLEFT",0,-6);
-	elseif alaBaseData.xBtn.posEx=="BELOW_EDITBOX" then
-		self:SetPoint("TOPLEFT",ChatFrame1EditBox,"BOTTOMLEFT",0,-1);
-	elseif alaBaseData.xBtn.posEx=="ABOVE_CHATFRAME" then
-		self:SetPoint("BOTTOMLEFT",ChatFrame1Tab,"TOPLEFT",0,1);
+	if alaBaseData.xBtn.posEx == "ABOVE_EDITOBX" then
+		self:SetPoint("TOPLEFT", ChatFrame1, "BOTTOMLEFT", 0, -6);
+	elseif alaBaseData.xBtn.posEx == "BELOW_EDITBOX" then
+		self:SetPoint("TOPLEFT", ChatFrame1EditBox, "BOTTOMLEFT", 0, -1);
+	elseif alaBaseData.xBtn.posEx == "ABOVE_CHATFRAME" then
+		self:SetPoint("BOTTOMLEFT", ChatFrame1Tab, "TOPLEFT", 0, 1);
 	end
 	self:ResetEditBox();
 	alaBaseBtn:RecordPos();
 end
 
 function alaBaseBtn:Scale(s)
-	alaBaseData.xBtn.scale=s;
+	alaBaseData.xBtn.scale = s;
 	self:SetScale(s);
-	if(alaBaseData.xBtn.posEx=="ABOVE_EDITOBX") then
-		self:ResetEditBox();
+	if(alaBaseData.xBtn.posEx == "ABOVE_EDITOBX") then
+		self:SetEditBox();
 	end
 end
+function alaBaseBtn:Alpha(a)
+	alaBaseData.xBtn.alpha = a;
+	self:SetAlpha(a);
+end
 function alaBaseBtn:Pos(p)
-	if p~=alaBaseData.xBtn.posEx and (p=="ABOVE_EDITOBX" or p=="BELOW_EDITBOX" or p=="ABOVE_CHATFRAME") then
-		alaBaseData.xBtn.posEx=p;--ABOVE_EDITOBX,BELOW_EDITBOX,ABOVE_CHATFRAME
+	if p ~= alaBaseData.xBtn.posEx and (p == "ABOVE_EDITOBX" or p == "BELOW_EDITBOX" or p == "ABOVE_CHATFRAME") then
+		alaBaseData.xBtn.posEx = p;--ABOVE_EDITOBX,BELOW_EDITBOX,ABOVE_CHATFRAME
 		self:ResetPoint();
+		if p == "ABOVE_EDITOBX" then
+			self:SetEditBox();
+		else
+			self:ResetEditBox();
+		end
 	end
 end
 
 eventCall("PLAYER_ENTERING_WORLD",function()
-										alaBaseData=alaBaseData or {};
-										if alaBaseData.xBtn then
-											if not alaBaseData.xBtn._version or alaBaseData.xBtn._version<__alaBaseBtn_Version then
-												alaBaseData.xBtn._version=__alaBaseBtn_Version;
-												alaBaseData=alaBaseData or {};
-												alaBaseData.xBtn=alaBaseData.xBtn or {};
-												alaBaseData.xBtn.posEx=alaBaseData.xBtn.posEx or "BELOW_EDITBOX";
-												alaBaseData.xBtn.scale=alaBaseData.xBtn.scale or 1.0;
+										alaBaseData = alaBaseData or {};
+										alaBaseData.xBtn = alaBaseData.xBtn or {};
+										alaBaseData.xBtn.posEx = alaBaseData.xBtn.posEx or "BELOW_EDITBOX";
+										alaBaseData.xBtn.scale = alaBaseData.xBtn.scale or 1.0;
+										alaBaseData.xBtn.alpha = alaBaseData.xBtn.alpha or 1.0;
+										--if alaBaseData.xBtn then
+											if not alaBaseData.xBtn._version or alaBaseData.xBtn._version < __alaBaseBtn_Version then
+												alaBaseData.xBtn._version = __alaBaseBtn_Version;
+												--alaBaseData = alaBaseData or {};
+												--alaBaseData.xBtn = alaBaseData.xBtn or {};
+												--alaBaseData.xBtn.posEx = alaBaseData.xBtn.posEx or "BELOW_EDITBOX";
+												--alaBaseData.xBtn.scale = alaBaseData.xBtn.scale or 1.0;
 											end
 											if alaBaseData.xBtn.pos then
 												alaBaseBtn:ClearAllPoints();
 												alaBaseBtn:SetPoint(unpack(alaBaseData.xBtn.pos));
-												alaBaseBtn:SetScale(alaBaseData.xBtn.scale);
-												alaBaseBtn:ResetEditBox();
+												if alaBaseData.xBtn.posEx == "ABOVE_EDITOBX" then
+													alaBaseBtn:SetEditBox();
+												end
 											else
 												alaBaseBtn:ResetPoint();
 											end
-										else
-											alaBaseBtn:ResetPoint();
-										end
+											--if alaBaseData.xBtn.scale then
+												alaBaseBtn:SetScale(alaBaseData.xBtn.scale);
+											--end
+											--if alaBaseData.xBtn.alpha then
+												alaBaseBtn:SetAlpha(alaBaseData.xBtn.alpha);
+											--end
+										--else
+										--	alaBaseBtn:ResetPoint();
+										--end
 									end
 								,false);

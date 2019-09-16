@@ -131,9 +131,8 @@ L.EMOTE_STRING = {
 	Emote_Panel_STRING_3 = "<Ctrl>Move Icon",
 };
 L.WTG_STRING = {
-	FORMAT_WELCOME = [[
-		歡迎
-	]],
+	FORMAT_WELCOME = [[歡迎]],
+	WELCOME_NOTES = "#GUILD#代表公会名\n#PLAYER#代表自己的名字\n#REALM#代表服务器名\n#NAME#代表入会的玩家名\n#CLASS#代表入会的玩家职业\n#LEVEL#代表入会的玩家等级\n#AREA#代表入会的玩家所在地区",
 	FORMAT_BROADCAST = "新公會成員：%1$s Lv-%3$s %2$s",--name,class,level,area,achievement points
 	WTG_STRING_1 = "\124cffffffff入會歡迎語\124r",
 	WTG_STRING_2 = "\124cff80ffff左鍵點擊切換\124r",
@@ -142,13 +141,19 @@ L.WTG_STRING = {
 	WTG_STRING_OFF = "\124cffff4040已關閉\124r",
 };
 L.CONFIG = {
-	wel					 = "\124cffff3f3falaChat\124r已加載,/alac或/alachat打開設置",
+	wel					 = "\124cffff3f3falaChat\124r已加載,/alac或/alachat打開設置。\n设置窗口移动到【ESC - 界面設置 - 插件(右上角) - alaChat_Classic】",
 	title				 = "設置",
+
+	position			 = "位置",
+	scale				 = "縮放",
+	alpha				 = "ALPHA",
+
 	shortChannelName	 = "短頻道名",
 	itemLinkEnhanced	 = "公共頻道物品鏈接",
 	chatEmote			 = "聊天表情",
 	ColorNameByClass	 = "聊天職業著色",
-	filterQuestAnn		 = "NONE",
+	shamanColor			 = "將\124cfff48cba薩滿\124r的職業顔色變成與正式服一樣的\124cff006fdc藍色\124r";
+	channelBarStyle		 = "頻道切換欄風格",
 	channelBarChannel	 = 
 	{
 		SAY,
@@ -166,20 +171,24 @@ L.CONFIG = {
 		LOOK_FOR_GROUP,
 		label			 = "頻道切換欄",
 	},
+	filterQuestAnn		 = "NONE",
 	--
 	--
-	chatFrameScroll		 = "聊天框左側滾動到底部按鈕",
+	--chatFrameScroll		 = "聊天框左側滾動到底部按鈕",
 	roll				 = "Roll",
 	DBMCountDown		 = "倒計時",
-	welcomeToGuild		 = "歡迎新公會成員",
 	broadCastNewMember	 = "通報新公會成員",
+	welcomeToGuild		 = "歡迎新公會成員",
+	welcometoGuildMsg	 = "公會歡迎語",
 	ReadyCheck			 = "就位確認",
 	statReport			 = "屬性通報",
 	copy				 = "複製聊天",
+	copyTagColor		 = "時間戳顔色",
 	level				 = "聊天窗體顯示公會成員等級",
-	scale				 = "縮放",
-	position			 = "位置",
-	hideConfBtn			 = "隱藏選項設置齒輪",
+	--hideConfBtn		 = "隱藏選項設置齒輪",
+	editBoxTab			 = "聊天框Tab鍵切換頻道",
+	restoreAfterWhisper	 = "私聊之後恢復到上次的聊天頻道",
+	hyperLinkHoverShow	 = "鼠標指向聊天框的物品鏈接時顯示提示",
 };
 L.REPORT = {
 	neckLevel			 = "項鏈",
