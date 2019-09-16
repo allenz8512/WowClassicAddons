@@ -26,13 +26,19 @@ MonkeyQuestConfig = {
 			["烹饪 - true"] = {
 				["m_bChecked"] = false,
 			},
+			["蚌肉大餐 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["荆棘谷热疫 - false"] = {
+				["m_bChecked"] = true,
+			},
 			["深渊皇冠 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["帅小伙子邓肯 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["荆棘谷热疫 - false"] = {
+			["地精工程学 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["祖尔法拉克 - true"] = {
@@ -44,34 +50,34 @@ MonkeyQuestConfig = {
 			["打开钥匙之石 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["蚌肉大餐 - false"] = {
+			["猎龙 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["洛克莫丹 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["猎龙 - false"] = {
+			["威士忌斯利姆的酒 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["荒芜之地的材料 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["威士忌斯利姆的酒 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["荒芜之地 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["讨债行动 - false"] = {
+			["斯杜雷的债务 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["海盗的眼睛 - false"] = {
 				["m_bChecked"] = true,
 			},
+			["荒芜之地 - true"] = {
+				["m_bChecked"] = false,
+			},
+			["工程学 - true"] = {
+				["m_bChecked"] = true,
+			},
 			["莫达洛克 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["斯杜雷的债务 - false"] = {
+			["讨债行动 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["血帆海盗 - false"] = {
@@ -139,7 +145,7 @@ MonkeyQuestConfig = {
 		["m_bColourDoneOrFailed"] = false,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_iFrameBottom"] = -129.777755737305,
+		["m_iFrameBottom"] = -207.111190795898,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {

@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 123,
+	["session"] = 127,
 	["errors"] = {
 		{
 			["message"] = "[string \"MonkeyQuestFrame:OnUpdate\"]:1: attempt to call global 'MonkeyQuest_OnUpdate' (a nil value)",
@@ -91,28 +91,28 @@ BugGrabberDB = {
 		{
 			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipAddMoney",
 			["time"] = "2019/09/16 10:46:52",
-			["session"] = 123,
-			["counter"] = 3,
+			["session"] = 124,
+			["counter"] = 6,
 		}, -- [12]
 		{
 			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipCleared",
 			["time"] = "2019/09/16 10:46:52",
-			["session"] = 123,
-			["counter"] = 3,
+			["session"] = 124,
+			["counter"] = 6,
 		}, -- [13]
 		{
 			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipSetDefaultAnchor",
 			["time"] = "2019/09/16 10:46:52",
-			["session"] = 123,
-			["counter"] = 4,
+			["session"] = 124,
+			["counter"] = 8,
 		}, -- [14]
 		{
 			["message"] = "Interface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:101: attempt to index field '?' (a nil value)",
 			["time"] = "2019/09/16 10:47:07",
 			["locals"] = "prof_type = \"trade\"\nprofs = <table> {\n Fishing = <table> {\n }\n 工程学 = <table> {\n }\n}\nprof_name = \"工程学\"\nprof_rank = 188\nmax_rank = 225\n(*temporary) = nil\n(*temporary) = <table> {\n}\n(*temporary) = 225\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index field '?' (a nil value)\"\n",
 			["stack"] = "Interface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:101: in function `RecipeRadar_SkillDB_Refresh'\n...ace\\AddOns\\RecipeRadarClassic\\RecipeRadarClassic-1.0.0.6.lua:207: in function `RecipeRadar_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: ?\n[C]: ?\n[C]: in function `UseAction'\nInterface\\FrameXML\\SecureTemplates.lua:338: in function `handler'\nInterface\\FrameXML\\SecureTemplates.lua:616: in function <Interface\\FrameXML\\SecureTemplates.lua:564>\n[C]: ?\n[C]: ?\nInterface\\FrameXML\\SecureHandlers.lua:266: in function <Interface\\FrameXML\\SecureHandlers.lua:263>\n[C]: ?\nInterface\\FrameXML\\SecureHandlers.lua:296: in function <Interface\\FrameXML\\SecureHandlers.lua:279>\n(tail call): ?",
-			["session"] = 123,
-			["counter"] = 7,
+			["session"] = 124,
+			["counter"] = 63,
 		}, -- [15]
 	},
 }

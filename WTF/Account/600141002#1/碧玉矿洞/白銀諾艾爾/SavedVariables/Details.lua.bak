@@ -24,16 +24,17 @@ _detalhes_database = {
 								"治疗结界 <石窟萨满祭司>", -- [1]
 							},
 							["fight_component"] = true,
-							["dps_started"] = false,
+							["on_hold"] = false,
 							["friendlyfire_total"] = 0,
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 200.00675,
 							["serial"] = "Creature-0-4503-0-7577-2894-00007EF32A",
-							["monster"] = true,
+							["dps_started"] = false,
 							["total"] = 200.00675,
-							["damage_taken"] = 3141.00675,
-							["on_hold"] = false,
+							["monster"] = true,
+							["friendlyfire"] = {
+							},
 							["nome"] = "石窟萨满祭司",
 							["spells"] = {
 								["_ActorTable"] = {
@@ -104,8 +105,7 @@ _detalhes_database = {
 							["last_dps"] = 0,
 							["custom"] = 0,
 							["last_event"] = 1568601008,
-							["friendlyfire"] = {
-							},
+							["damage_taken"] = 3141.00675,
 							["start_time"] = 1568601000,
 							["delay"] = 0,
 							["classe"] = "UNKNOW",
@@ -323,6 +323,8 @@ _detalhes_database = {
 							},
 							["grupo"] = true,
 							["nome"] = "白銀諾艾爾",
+							["buff_uptime"] = 48,
+							["tipo"] = 4,
 							["spell_cast"] = {
 								["命令圣印"] = 3,
 								["审判"] = 1,
@@ -330,8 +332,6 @@ _detalhes_database = {
 							["classe"] = "PALADIN",
 							["pets"] = {
 							},
-							["last_event"] = 1568601016,
-							["buff_uptime"] = 48,
 							["buff_uptime_spells"] = {
 								["_ActorTable"] = {
 									["惩罚光环"] = {
@@ -371,7 +371,7 @@ _detalhes_database = {
 								["tipo"] = 9,
 							},
 							["serial"] = "Player-4497-00484697",
-							["tipo"] = 4,
+							["last_event"] = 1568601016,
 						}, -- [1]
 					},
 				}, -- [4]
@@ -393,10 +393,10 @@ _detalhes_database = {
 				["combat_counter"] = 4070,
 				["playing_solo"] = true,
 				["totals"] = {
-					1787.943645, -- [1]
+					1787.895213, -- [1]
 					0, -- [2]
 					{
-						0, -- [1]
+						-0.00768800000000169, -- [1]
 						[0] = 178,
 						["alternatepower"] = 0,
 						[3] = -0.00275899999999751,
@@ -695,16 +695,16 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["monster"] = true,
 							["total"] = 756.006058,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 756.006058,
 							["serial"] = "Creature-0-4503-0-7577-2893-00007EF36E",
-							["dps_started"] = false,
+							["fight_component"] = true,
 							["end_time"] = 1568601000,
-							["friendlyfire_total"] = 0,
+							["dps_started"] = false,
 							["on_hold"] = false,
 							["nome"] = "石窟断骨者",
 							["spells"] = {
@@ -841,7 +841,7 @@ _detalhes_database = {
 							["damage_taken"] = 4357.006058,
 							["start_time"] = 1568600957,
 							["delay"] = 0,
-							["monster"] = true,
+							["friendlyfire_total"] = 0,
 						}, -- [2]
 					},
 				}, -- [1]
@@ -902,6 +902,8 @@ _detalhes_database = {
 							},
 							["grupo"] = true,
 							["nome"] = "白銀諾艾爾",
+							["buff_uptime"] = 77,
+							["tipo"] = 4,
 							["spell_cast"] = {
 								["命令圣印"] = 5,
 								["审判"] = 2,
@@ -909,8 +911,6 @@ _detalhes_database = {
 							["classe"] = "PALADIN",
 							["pets"] = {
 							},
-							["last_event"] = 1568600979,
-							["buff_uptime"] = 77,
 							["buff_uptime_spells"] = {
 								["_ActorTable"] = {
 									["惩罚光环"] = {
@@ -961,7 +961,7 @@ _detalhes_database = {
 								["tipo"] = 9,
 							},
 							["serial"] = "Player-4497-00484697",
-							["tipo"] = 4,
+							["last_event"] = 1568600979,
 						}, -- [1]
 						{
 							["flag_original"] = 68168,
@@ -1297,16 +1297,16 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["monster"] = true,
 							["total"] = 403.002582,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 403.002582,
 							["serial"] = "Creature-0-4503-0-7577-2893-00007EF33A",
-							["dps_started"] = false,
+							["fight_component"] = true,
 							["end_time"] = 1568600941,
-							["friendlyfire_total"] = 0,
+							["dps_started"] = false,
 							["on_hold"] = false,
 							["nome"] = "石窟断骨者",
 							["spells"] = {
@@ -1382,7 +1382,7 @@ _detalhes_database = {
 							["damage_taken"] = 2216.002582,
 							["start_time"] = 1568600921,
 							["delay"] = 0,
-							["monster"] = true,
+							["friendlyfire_total"] = 0,
 						}, -- [2]
 					},
 				}, -- [1]
@@ -1443,6 +1443,8 @@ _detalhes_database = {
 							},
 							["grupo"] = true,
 							["nome"] = "白銀諾艾爾",
+							["buff_uptime"] = 60,
+							["tipo"] = 4,
 							["spell_cast"] = {
 								["命令圣印"] = 5,
 								["审判"] = 1,
@@ -1450,8 +1452,6 @@ _detalhes_database = {
 							["classe"] = "PALADIN",
 							["pets"] = {
 							},
-							["last_event"] = 1568600941,
-							["buff_uptime"] = 60,
 							["buff_uptime_spells"] = {
 								["_ActorTable"] = {
 									["惩罚光环"] = {
@@ -1491,7 +1491,7 @@ _detalhes_database = {
 								["tipo"] = 9,
 							},
 							["serial"] = "Player-4497-00484697",
-							["tipo"] = 4,
+							["last_event"] = 1568600941,
 						}, -- [1]
 					},
 				}, -- [4]
@@ -1625,16 +1625,16 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["monster"] = true,
 							["total"] = 21.004276,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 21.004276,
 							["serial"] = "Creature-0-4517-0-20249-1184-00007E8FD7",
-							["dps_started"] = false,
+							["fight_component"] = true,
 							["end_time"] = 1568600710,
-							["friendlyfire_total"] = 0,
+							["dps_started"] = false,
 							["on_hold"] = false,
 							["nome"] = "峭壁潜伏者",
 							["spells"] = {
@@ -1681,7 +1681,7 @@ _detalhes_database = {
 							["damage_taken"] = 0.004276,
 							["start_time"] = 1568600700,
 							["delay"] = 0,
-							["monster"] = true,
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 1297,
@@ -1945,16 +1945,16 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["monster"] = true,
 							["total"] = 1934.00173,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 1934.00173,
 							["serial"] = "Creature-0-4515-0-21496-5861-00007EE843",
-							["dps_started"] = false,
+							["fight_component"] = true,
 							["end_time"] = 1568599922,
-							["friendlyfire_total"] = 0,
+							["dps_started"] = false,
 							["on_hold"] = false,
 							["nome"] = "暮光火焰卫士",
 							["spells"] = {
@@ -2087,7 +2087,7 @@ _detalhes_database = {
 							["damage_taken"] = 5.00173,
 							["start_time"] = 1568599899,
 							["delay"] = 0,
-							["monster"] = true,
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 1297,
@@ -2697,16 +2697,16 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["monster"] = true,
 							["total"] = 149.001928,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 149.001928,
 							["serial"] = "Creature-0-4514-0-20449-9778-0000FBA008",
-							["dps_started"] = false,
+							["fight_component"] = true,
 							["end_time"] = 1568599630,
-							["friendlyfire_total"] = 0,
+							["dps_started"] = false,
 							["on_hold"] = false,
 							["nome"] = "火炬小鬼",
 							["spells"] = {
@@ -2752,7 +2752,7 @@ _detalhes_database = {
 							["damage_taken"] = 0.001928,
 							["start_time"] = 1568599628,
 							["delay"] = 1568599620,
-							["monster"] = true,
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 1297,
@@ -3026,16 +3026,16 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["monster"] = true,
 							["total"] = 586.002906,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 586.002906,
 							["serial"] = "Creature-0-4514-0-20449-9691-00007EDBEB",
-							["dps_started"] = false,
+							["fight_component"] = true,
 							["end_time"] = 1568599490,
-							["friendlyfire_total"] = 0,
+							["dps_started"] = false,
 							["on_hold"] = false,
 							["nome"] = "毒尖蝎",
 							["spells"] = {
@@ -3108,7 +3108,7 @@ _detalhes_database = {
 							["damage_taken"] = 0.002906,
 							["start_time"] = 1568599482,
 							["delay"] = 1568599477,
-							["monster"] = true,
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 1297,
@@ -3477,16 +3477,16 @@ _detalhes_database = {
 							},
 							["pets"] = {
 							},
-							["fight_component"] = true,
+							["monster"] = true,
 							["total"] = 118.00511,
 							["classe"] = "UNKNOW",
 							["raid_targets"] = {
 							},
 							["total_without_pet"] = 118.00511,
 							["serial"] = "Creature-0-4514-0-20449-9776-00007D7EF6",
-							["dps_started"] = false,
+							["fight_component"] = true,
 							["end_time"] = 1568599455,
-							["friendlyfire_total"] = 0,
+							["dps_started"] = false,
 							["on_hold"] = false,
 							["nome"] = "喷焰小鬼",
 							["spells"] = {
@@ -3532,7 +3532,7 @@ _detalhes_database = {
 							["damage_taken"] = 0.00511,
 							["start_time"] = 1568599442,
 							["delay"] = 0,
-							["monster"] = true,
+							["friendlyfire_total"] = 0,
 						}, -- [1]
 						{
 							["flag_original"] = 1297,
@@ -3796,12 +3796,6 @@ _detalhes_database = {
 			["animate"] = false,
 		},
 	},
-	["announce_prepots"] = {
-		["enabled"] = true,
-		["channel"] = "SELF",
-		["reverse"] = false,
-	},
-	["last_day"] = "16",
 	["cached_talents"] = {
 		["Player-4497-00334628"] = {
 			{
@@ -5882,6 +5876,12 @@ _detalhes_database = {
 			}, -- [49]
 		},
 	},
+	["announce_prepots"] = {
+		["enabled"] = true,
+		["channel"] = "SELF",
+		["reverse"] = false,
+	},
+	["last_day"] = "16",
 	["benchmark_db"] = {
 		["frame"] = {
 		},
@@ -5894,7 +5894,7 @@ _detalhes_database = {
 		["enabled"] = true,
 		["channel"] = "SELF",
 	},
-	["combat_counter"] = 4072,
+	["combat_counter"] = 4076,
 	["announce_deaths"] = {
 		["enabled"] = false,
 		["last_hits"] = 1,
@@ -5912,9 +5912,9 @@ _detalhes_database = {
 						["暮光火焰卫士"] = true,
 						["喷焰小鬼"] = true,
 						["峭壁潜伏者"] = true,
+						["石窟萨满祭司"] = true,
 						["火炬小鬼"] = true,
 						["石窟断骨者"] = true,
-						["石窟萨满祭司"] = true,
 						["毒尖蝎"] = true,
 					},
 					["targets"] = {
@@ -5933,9 +5933,8 @@ _detalhes_database = {
 					["serial"] = "Player-4497-00484697",
 					["dps_started"] = false,
 					["end_time"] = 1568599456,
-					["damage_taken"] = 3766.044763,
-					["friendlyfire"] = {
-					},
+					["on_hold"] = false,
+					["last_dps"] = 37.9339982293132,
 					["nome"] = "白銀諾艾爾",
 					["spells"] = {
 						["_ActorTable"] = {
@@ -6125,10 +6124,11 @@ _detalhes_database = {
 					["total"] = 5163.044763,
 					["custom"] = 0,
 					["tipo"] = 1,
-					["last_dps"] = 37.9339982293132,
+					["friendlyfire"] = {
+					},
 					["start_time"] = 1568599390,
 					["delay"] = 0,
-					["on_hold"] = false,
+					["damage_taken"] = 3766.044763,
 				}, -- [1]
 				{
 					["flag_original"] = 68168,
@@ -6141,17 +6141,17 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["dps_started"] = false,
-					["damage_taken"] = 5.007419,
+					["fight_component"] = true,
+					["on_hold"] = false,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 1934.007419,
 					["serial"] = "Creature-0-4515-0-21496-5861-00007EE843",
-					["monster"] = true,
+					["dps_started"] = false,
 					["end_time"] = 1568599922,
 					["friendlyfire_total"] = 0,
-					["on_hold"] = false,
+					["last_dps"] = 0,
 					["nome"] = "暮光火焰卫士",
 					["spells"] = {
 						["_ActorTable"] = {
@@ -6277,10 +6277,10 @@ _detalhes_database = {
 					},
 					["custom"] = 0,
 					["tipo"] = 1,
-					["last_dps"] = 0,
+					["damage_taken"] = 5.007419,
 					["start_time"] = 1568599896,
 					["delay"] = 0,
-					["fight_component"] = true,
+					["monster"] = true,
 				}, -- [2]
 				{
 					["flag_original"] = 68168,
@@ -6297,17 +6297,17 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["dps_started"] = false,
-					["damage_taken"] = 5003.02315,
+					["fight_component"] = true,
+					["on_hold"] = false,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 804.02315,
 					["serial"] = "Creature-0-4503-0-7577-2893-00007EF33A",
-					["monster"] = true,
+					["dps_started"] = false,
 					["end_time"] = 1568600941,
 					["friendlyfire_total"] = 0,
-					["on_hold"] = false,
+					["last_dps"] = 0,
 					["nome"] = "石窟断骨者",
 					["spells"] = {
 						["_ActorTable"] = {
@@ -6437,10 +6437,10 @@ _detalhes_database = {
 					},
 					["custom"] = 0,
 					["tipo"] = 1,
-					["last_dps"] = 0,
+					["damage_taken"] = 5003.02315,
 					["start_time"] = 1568600895,
 					["delay"] = 0,
-					["fight_component"] = true,
+					["monster"] = true,
 				}, -- [3]
 				{
 					["flag_original"] = 68168,
@@ -6452,17 +6452,17 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["dps_started"] = false,
-					["damage_taken"] = 0.004126,
+					["fight_component"] = true,
+					["on_hold"] = false,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 586.004126,
 					["serial"] = "Creature-0-4514-0-20449-9691-00007EDBEB",
-					["monster"] = true,
+					["dps_started"] = false,
 					["end_time"] = 1568599490,
 					["friendlyfire_total"] = 0,
-					["on_hold"] = false,
+					["last_dps"] = 0,
 					["nome"] = "毒尖蝎",
 					["spells"] = {
 						["_ActorTable"] = {
@@ -6530,10 +6530,10 @@ _detalhes_database = {
 					},
 					["custom"] = 0,
 					["tipo"] = 1,
-					["last_dps"] = 0,
+					["damage_taken"] = 0.004126,
 					["start_time"] = 1568599479,
 					["delay"] = 0,
-					["fight_component"] = true,
+					["monster"] = true,
 				}, -- [4]
 				{
 					["flag_original"] = 2632,
@@ -6547,17 +6547,17 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["dps_started"] = false,
-					["damage_taken"] = 2640.012122,
+					["fight_component"] = true,
+					["on_hold"] = false,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 200.012122,
 					["serial"] = "Creature-0-4503-0-7577-2894-00007EF369",
-					["monster"] = true,
+					["dps_started"] = false,
 					["end_time"] = 1568600979,
 					["friendlyfire_total"] = 0,
-					["on_hold"] = false,
+					["last_dps"] = 0,
 					["nome"] = "石窟萨满祭司",
 					["spells"] = {
 						["_ActorTable"] = {
@@ -6627,10 +6627,10 @@ _detalhes_database = {
 					},
 					["custom"] = 0,
 					["tipo"] = 1,
-					["last_dps"] = 0,
+					["damage_taken"] = 2640.012122,
 					["start_time"] = 1568600960,
 					["delay"] = 0,
-					["fight_component"] = true,
+					["monster"] = true,
 				}, -- [5]
 				{
 					["flag_original"] = 68168,
@@ -6642,17 +6642,17 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["dps_started"] = false,
-					["damage_taken"] = 0.006318,
+					["fight_component"] = true,
+					["on_hold"] = false,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 149.006318,
 					["serial"] = "Creature-0-4514-0-20449-9778-0000FBA008",
-					["monster"] = true,
+					["dps_started"] = false,
 					["end_time"] = 1568599630,
 					["friendlyfire_total"] = 0,
-					["on_hold"] = false,
+					["last_dps"] = 0,
 					["nome"] = "火炬小鬼",
 					["spells"] = {
 						["_ActorTable"] = {
@@ -6693,10 +6693,10 @@ _detalhes_database = {
 					},
 					["custom"] = 0,
 					["tipo"] = 1,
-					["last_dps"] = 0,
+					["damage_taken"] = 0.006318,
 					["start_time"] = 1568599625,
 					["delay"] = 0,
-					["fight_component"] = true,
+					["monster"] = true,
 				}, -- [6]
 				{
 					["flag_original"] = 68168,
@@ -6708,17 +6708,17 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["dps_started"] = false,
-					["damage_taken"] = 0.01274,
+					["fight_component"] = true,
+					["on_hold"] = false,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 118.01274,
 					["serial"] = "Creature-0-4514-0-20449-9776-00007D7EF6",
-					["monster"] = true,
+					["dps_started"] = false,
 					["end_time"] = 1568599456,
 					["friendlyfire_total"] = 0,
-					["on_hold"] = false,
+					["last_dps"] = 0,
 					["nome"] = "喷焰小鬼",
 					["spells"] = {
 						["_ActorTable"] = {
@@ -6759,10 +6759,10 @@ _detalhes_database = {
 					},
 					["custom"] = 0,
 					["tipo"] = 1,
-					["last_dps"] = 0,
+					["damage_taken"] = 0.01274,
 					["start_time"] = 1568599440,
 					["delay"] = 0,
-					["fight_component"] = true,
+					["monster"] = true,
 				}, -- [7]
 				{
 					["flag_original"] = 68168,
@@ -6775,17 +6775,17 @@ _detalhes_database = {
 					},
 					["pets"] = {
 					},
-					["dps_started"] = false,
-					["damage_taken"] = 0.00718,
+					["fight_component"] = true,
+					["on_hold"] = false,
 					["classe"] = "UNKNOW",
 					["raid_targets"] = {
 					},
 					["total_without_pet"] = 21.00718,
 					["serial"] = "Creature-0-4517-0-20249-1184-00007E8FD7",
-					["monster"] = true,
+					["dps_started"] = false,
 					["end_time"] = 1568600710,
 					["friendlyfire_total"] = 0,
-					["on_hold"] = false,
+					["last_dps"] = 0,
 					["nome"] = "峭壁潜伏者",
 					["spells"] = {
 						["_ActorTable"] = {
@@ -6827,10 +6827,10 @@ _detalhes_database = {
 					},
 					["custom"] = 0,
 					["tipo"] = 1,
-					["last_dps"] = 0,
+					["damage_taken"] = 0.00718,
 					["start_time"] = 1568600697,
 					["delay"] = 0,
-					["fight_component"] = true,
+					["monster"] = true,
 				}, -- [8]
 			},
 		}, -- [1]
@@ -6844,7 +6844,7 @@ _detalhes_database = {
 			["_ActorTable"] = {
 				{
 					["received"] = 297.025567,
-					["resource"] = 0.109581,
+					["resource"] = 0.277609,
 					["targets"] = {
 						["白銀諾艾爾"] = 0,
 					},
@@ -7296,7 +7296,7 @@ _detalhes_database = {
 		}, -- [1]
 	},
 	["character_data"] = {
-		["logons"] = 219,
+		["logons"] = 223,
 	},
 	["announce_cooldowns"] = {
 		["enabled"] = false,

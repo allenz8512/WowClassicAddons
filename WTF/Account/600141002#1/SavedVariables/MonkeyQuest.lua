@@ -12,7 +12,7 @@ MonkeyQuestConfig = {
 				["m_bChecked"] = true,
 			},
 			["塔纳利斯 - true"] = {
-				["m_bChecked"] = true,
+				["m_bChecked"] = false,
 			},
 			["血色修道院 - true"] = {
 				["m_bChecked"] = false,
@@ -26,10 +26,10 @@ MonkeyQuestConfig = {
 			["烹饪 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["地精工程学 - false"] = {
+			["蚌肉大餐 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["工程学 - true"] = {
+			["地精工程学 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["深渊皇冠 - false"] = {
@@ -42,7 +42,7 @@ MonkeyQuestConfig = {
 				["m_bChecked"] = true,
 			},
 			["祖尔法拉克 - true"] = {
-				["m_bChecked"] = true,
+				["m_bChecked"] = false,
 			},
 			["鼻烟 - false"] = {
 				["m_bChecked"] = true,
@@ -50,7 +50,7 @@ MonkeyQuestConfig = {
 			["打开钥匙之石 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["蚌肉大餐 - false"] = {
+			["工程学 - true"] = {
 				["m_bChecked"] = true,
 			},
 			["洛克莫丹 - true"] = {
@@ -119,7 +119,7 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_iFrameBottom"] = -207.111190795898,
+		["m_iFrameBottom"] = -129.777755737305,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11267089844,
 		["m_bColourDoneOrFailed"] = false,

@@ -1,9 +1,10 @@
 
 alaBaseData = {
 	["xBtn"] = {
-		["scale"] = 1,
 		["posEx"] = "ABOVE_CHATFRAME",
-		["_version"] = 1.04,
+		["scale"] = 1,
+		["_version"] = 1.06,
+		["alpha"] = 1,
 		["pos"] = {
 			"BOTTOMLEFT", -- [1]
 			"ChatFrame1Tab", -- [2]
@@ -36,17 +37,28 @@ alaChatConfig = {
 	},
 	["copy"] = true,
 	["bfWorld_Ignore_Switch"] = false,
-	["level"] = true,
-	["hideConfBtn"] = true,
-	["welcomeToGuild"] = false,
-	["chatEmote"] = true,
-	["filterQuestAnn"] = false,
-	["_version"] = 190830,
 	["roll"] = true,
+	["level"] = true,
+	["_version"] = 190910,
+	["alpha"] = 1,
+	["welcometoGuildMsg"] = "欢迎",
+	["channelBarStyle"] = "CHAR",
 	["itemLinkEnhanced"] = true,
+	["welcomeToGuild"] = false,
+	["hyperLinkHoverShow"] = false,
+	["chatEmote"] = true,
+	["shamanColor"] = false,
+	["ColorNameByClass"] = true,
+	["editBoxTab"] = true,
+	["filterQuestAnn"] = false,
+	["copyTagColor"] = {
+		0.25, -- [1]
+		0.25, -- [2]
+		1, -- [3]
+	},
 	["position"] = "ABOVE_CHATFRAME",
 	["DBMCountDown"] = true,
-	["ColorNameByClass"] = true,
+	["restoreAfterWhisper"] = true,
 	["broadCastNewMember"] = false,
 	["bfWorld_Ignore"] = false,
 }

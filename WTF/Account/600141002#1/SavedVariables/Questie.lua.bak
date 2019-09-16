@@ -3211,6 +3211,15 @@ QuestieConfig = {
 					["SubType"] = "Accept",
 					["Event"] = "Quest",
 				}, -- [287]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 41,
+					["Quest"] = 4181,
+					["Timestamp"] = 1568602566,
+				}, -- [288]
 			},
 			["complete"] = {
 				nil, -- [1]
