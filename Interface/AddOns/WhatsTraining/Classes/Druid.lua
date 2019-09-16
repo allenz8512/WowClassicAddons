@@ -33,6 +33,7 @@ local tigersFury = {5217 --[[Rank 1]], 6793 --[[Rank 2]], 9845 --[[Rank 3]], 984
 local prowl = {5215, 6783, 9913}
 local rip = {1079 --[[Rank 1]], 9492 --[[Rank 2]], 9493 --[[Rank 3]], 9752 --[[Rank 4]], 9894 --[[Rank 5]], 9896}
 local bash = {5211, 6798, 8983}
+local dash = {1850, 9821}
 
 wt:SetPreviousAbilityMap(
 	{
@@ -51,7 +52,8 @@ wt:SetPreviousAbilityMap(
 		tigersFury,
 		prowl,
 		rip,
-		bash
+		bash,
+		dash
 	}
 )
 
@@ -147,7 +149,7 @@ wt.SpellsByLevel = {
 		{id = 22568, cost = 8000, requiredIds = {768}},
 		{id = 6778, cost = 8000, requiredIds = {5189}},
 		{id = 6785, cost = 8000, requiredIds = {768}},
-		{id = 5226, cost = 8000}
+		{id = 5225, cost = 8000}
 	},
 	[34] = {
 		{id = 8972, cost = 10000, requiredIds = {6809}},

@@ -100,6 +100,9 @@ local eviscerate = {
 	11300 --[[Rank 8]],
 	31016 --[[Rank 9]]
 }
+local sprint = {2983 --[[Rank 1]], 8696 --[[Rank 2]], 11305 --[[Rank 3]]}
+local sliceAndDice = {5171 --[[Rank 1]], 6774 --[[Rank 2]]}
+local vanish = {1856 --[[Rank 1]], 1857 --[[Rank 2]]}
 
 wt:SetPreviousAbilityMap(
 	{
@@ -118,7 +121,10 @@ wt:SetPreviousAbilityMap(
 		instantPoiston,
 		deadlyPoison,
 		sinisterStrike,
-		eviscerate
+		eviscerate,
+		sprint,
+		sliceAndDice,
+		vanish
 	}
 )
 

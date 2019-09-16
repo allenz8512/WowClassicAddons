@@ -7,6 +7,7 @@ local GetFileIDFromPath = GetFileIDFromPath
 local GetSpellInfo = GetSpellInfo
 local GetQuestDifficultyColor = GetQuestDifficultyColor
 local IsSpellKnown = IsSpellKnown
+local IsPlayerSpell = IsPlayerSpell
 local UnitLevel = UnitLevel
 local FauxScrollFrame_Update = FauxScrollFrame_Update
 local FauxScrollFrame_GetOffset = FauxScrollFrame_GetOffset
@@ -21,6 +22,7 @@ local select = select
 local ipairs = ipairs
 local pairs = pairs
 local Spell = Spell
+local Item = Item
 local MAX_SKILLLINE_TABS = MAX_SKILLLINE_TABS
 local GREEN_FONT_COLOR_CODE = GREEN_FONT_COLOR_CODE
 local ORANGE_FONT_COLOR_CODE = ORANGE_FONT_COLOR_CODE
@@ -52,13 +54,21 @@ local MISSINGTALENT_FONT_COLOR_CODE = "|cffffffff"
 local PET_FONT_COLOR_CODE = "|cffffffff"
 
 local function isPreviouslyLearnedAbility(spellId)
-    if (wt.previousAbilityMap == nil) then return false end
+    if (wt.previousAbilityMap == nil) then
+        return false
+    end
 
-    if (not wt.previousAbilityMap[spellId]) then return false end
-	local spellIndex, knownIndex = 0, 0
-	for i, otherId in ipairs(wt.previousAbilityMap[spellId]) do
-		if (otherId == spellId) then spellIndex = i end
-		if (IsSpellKnown(otherId)) then knownIndex = i end
+    if (not wt.previousAbilityMap[spellId]) then
+        return false
+    end
+    local spellIndex, knownIndex = 0, 0
+    for i, otherId in ipairs(wt.previousAbilityMap[spellId]) do
+        if (otherId == spellId) then
+            spellIndex = i
+        end
+        if (IsSpellKnown(otherId) or IsPlayerSpell(otherId)) then
+            knownIndex = i
+        end
     end
     return spellIndex <= knownIndex
 end
@@ -105,25 +115,27 @@ local function getItemInfo(item, level, done)
         return
     end
     local ii = Item:CreateFromItemID(item.id)
-    ii:ContinueOnItemLoad(function()
-        if (itemInfoCache[item.id] ~= nil) then
-            done(true)
-            return
+    ii:ContinueOnItemLoad(
+        function()
+            if (itemInfoCache[item.id] ~= nil) then
+                done(true)
+                return
+            end
+            local rankText = string.match(ii:GetItemName(), parensPattern)
+            itemInfoCache[item.id] = {
+                id = item.id,
+                name = string.gsub(ii:GetItemName(), parensPattern, ""),
+                formattedSubText = rankText,
+                icon = ii:GetItemIcon(),
+                cost = item.cost,
+                formattedCost = GetCoinTextureString(item.cost),
+                level = level,
+                formattedLevel = format(wt.L.LEVEL_FORMAT, level),
+                isItem = true
+            }
+            done(false)
         end
-        local rankText = string.match(ii:GetItemName(), parensPattern)
-        itemInfoCache[item.id] = {
-            id = item.id,
-            name = string.gsub(ii:GetItemName(), parensPattern, ""),
-            formattedSubText = rankText,
-            icon = ii:GetItemIcon(),
-            cost = item.cost,
-            formattedCost = GetCoinTextureString(item.cost),
-            level = level,
-            formattedLevel = format(wt.L.LEVEL_FORMAT, level),
-            isItem = true
-        }
-        done(false)
-    end)
+    )
 end
 
 local function isIgnoredByCTP(spellId)
@@ -156,7 +168,7 @@ local headers = {
     {
         name = wt.L.PET_HEADER,
         color = PET_FONT_COLOR_CODE,
-        key = PET_KEY,
+        key = PET_KEY
         --nameSort = true
     },
     {
@@ -224,15 +236,20 @@ local function rebuildSpells(playerLevel, isLevelUpEvent)
             if (spellInfo ~= nil) then
                 local categoryKey
 
-                if (IsSpellKnown(spellInfo.id)) then
+                if (IsSpellKnown(spellInfo.id) or IsPlayerSpell(spellInfo.id)) then
                     categoryKey = KNOWN_KEY
                 elseif (isIgnoredByCTP(spellInfo.id)) then
                     categoryKey = IGNORED_KEY
-                -- there's no good way to handle pet spells, since IsSpellKnown(id, true) will return true only if the
-                -- current active pet has that spell, and IsSpellKnown(petSpellId) always returns false
                 elseif (wt.IsPetSpell and wt.IsPetSpell(spellInfo.id)) then
-                        categoryKey = PET_KEY
-                elseif (spell.requiredTalentId ~= nil and not IsSpellKnown(spell.requiredTalentId)) then
+                    -- there's no good way to handle pet spells, since IsSpellKnown(id, true) will return true only if the
+                    -- current active pet has that spell, and IsSpellKnown(petSpellId) always returns false
+                    categoryKey = PET_KEY
+                elseif
+                    -- talent abilities for non-mana users don't have multiple ranks in the spellbook
+                    (spell.requiredTalentId ~= nil and
+                        (not IsSpellKnown(spell.requiredTalentId) and not IsPlayerSpell(spell.requiredTalentId) and
+                            not isPreviouslyLearnedAbility(spell.requiredTalentId)))
+                 then
                     categoryKey = MISSINGTALENT_KEY
                 elseif (isPreviouslyLearnedAbility(spellInfo.id)) then
                     -- special case for abilities that don't have multiple ranks in the spellbook
@@ -244,7 +261,9 @@ local function rebuildSpells(playerLevel, isLevelUpEvent)
                     if (spell.requiredIds ~= nil) then
                         for j = 1, #spell.requiredIds do
                             local reqId = spell.requiredIds[j]
-                            hasReqs = hasReqs and IsSpellKnown(reqId)
+                            hasReqs =
+                                hasReqs and
+                                (IsSpellKnown(reqId) or IsPlayerSpell(reqId) or isPreviouslyLearnedAbility(reqId))
                         end
                     end
                     categoryKey = hasReqs and AVAILABLE_KEY or MISSINGREQS_KEY
@@ -292,19 +311,6 @@ local function rebuildSpells(playerLevel, isLevelUpEvent)
     if (wt.MainFrame == nil) then
         return
     end
-    FauxScrollFrame_Update(
-        wt.MainFrame.scrollBar,
-        #spellsAndHeaders,
-        MAX_ROWS,
-        ROW_HEIGHT,
-        nil,
-        nil,
-        nil,
-        nil,
-        nil,
-        nil,
-        true
-    )
 end
 local function rebuildIfNotCached(fromCache)
     if (fromCache or wt.MainFrame == nil) then
@@ -397,6 +403,19 @@ function wt.Update(frame, forceUpdate)
         local spell = spellsAndHeaders[spellIndex]
         wt.SetRowSpell(row, spell)
     end
+    FauxScrollFrame_Update(
+        wt.MainFrame.scrollBar,
+        #spellsAndHeaders,
+        MAX_ROWS,
+        ROW_HEIGHT,
+        nil,
+        nil,
+        nil,
+        nil,
+        nil,
+        nil,
+        true
+    )
     lastOffset = offset
 end
 

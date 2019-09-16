@@ -1,6 +1,6 @@
 ## Interface: 11302
 ## Title: What's Training?
-## Version: 1.6
+## Version: 1.8.4
 ## Author: Sveng
 ## Notes: Shows you what spells are available at your class trainer
 ## X-Curse-Project-ID: 324944
