@@ -12,7 +12,7 @@ MonkeyQuestConfig = {
 				["m_bChecked"] = true,
 			},
 			["塔纳利斯 - true"] = {
-				["m_bChecked"] = true,
+				["m_bChecked"] = false,
 			},
 			["血色修道院 - true"] = {
 				["m_bChecked"] = false,
@@ -29,7 +29,7 @@ MonkeyQuestConfig = {
 			["蚌肉大餐 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["荆棘谷热疫 - false"] = {
+			["地精工程学 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["深渊皇冠 - false"] = {
@@ -38,11 +38,11 @@ MonkeyQuestConfig = {
 			["帅小伙子邓肯 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["地精工程学 - false"] = {
+			["荆棘谷热疫 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["祖尔法拉克 - true"] = {
-				["m_bChecked"] = true,
+				["m_bChecked"] = false,
 			},
 			["鼻烟 - false"] = {
 				["m_bChecked"] = true,
@@ -50,34 +50,34 @@ MonkeyQuestConfig = {
 			["打开钥匙之石 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["猎龙 - false"] = {
+			["工程学 - true"] = {
 				["m_bChecked"] = true,
 			},
 			["洛克莫丹 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["威士忌斯利姆的酒 - false"] = {
+			["猎龙 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["荒芜之地的材料 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["斯杜雷的债务 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["海盗的眼睛 - false"] = {
+			["威士忌斯利姆的酒 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["荒芜之地 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["工程学 - true"] = {
+			["讨债行动 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["海盗的眼睛 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["莫达洛克 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["讨债行动 - false"] = {
+			["斯杜雷的债务 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["血帆海盗 - false"] = {
@@ -122,9 +122,9 @@ MonkeyQuestConfig = {
 		["m_bHideTitleButtons"] = false,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11267089844,
-		["m_bNoBorder"] = true,
-		["m_bLocked"] = true,
 		["m_iQuestPadding"] = 2,
+		["m_bLocked"] = true,
+		["m_bNoBorder"] = true,
 		["m_bNoHeaders"] = true,
 		["m_bShowTooltipObjectives"] = true,
 		["m_strOverviewColour"] = "|cFF7F7F7F",
@@ -145,7 +145,7 @@ MonkeyQuestConfig = {
 		["m_bColourDoneOrFailed"] = false,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_iFrameBottom"] = -207.111190795898,
+		["m_iFrameBottom"] = -129.777755737305,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {

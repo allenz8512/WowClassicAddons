@@ -47,4 +47,4 @@ AtlasQuest: enabled
 FriendsMenuXP: enabled
 DamageEx: disabled
 ItemRackOptions: enabled
-RecipeRadarClassic: disabled
+RecipeRadarClassic: enabled
