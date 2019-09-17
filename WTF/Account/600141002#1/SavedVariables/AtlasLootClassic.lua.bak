@@ -36,7 +36,7 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					"AtlasLootClassic_Crafting", -- [1]
-					"Alchemy", -- [2]
+					"Engineering", -- [2]
 					nil, -- [3]
 					1, -- [4]
 					0, -- [5]

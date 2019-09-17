@@ -11,26 +11,20 @@ MonkeyQuestConfig = {
 			["一捆海蛇草 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["塔纳利斯 - true"] = {
-				["m_bChecked"] = false,
+			["蚌肉大餐 - false"] = {
+				["m_bChecked"] = true,
 			},
-			["血色修道院 - true"] = {
-				["m_bChecked"] = false,
+			["奥达曼 - true"] = {
+				["m_bChecked"] = true,
+			},
+			["奥达曼的蘑菇 - false"] = {
+				["m_bChecked"] = true,
 			},
 			["赞吉尔的秘密 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["以圣光之名 - false"] = {
-				["m_bChecked"] = true,
-			},
 			["烹饪 - true"] = {
 				["m_bChecked"] = false,
-			},
-			["蚌肉大餐 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["地精工程学 - false"] = {
-				["m_bChecked"] = true,
 			},
 			["深渊皇冠 - false"] = {
 				["m_bChecked"] = true,
@@ -50,23 +44,17 @@ MonkeyQuestConfig = {
 			["打开钥匙之石 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["工程学 - true"] = {
-				["m_bChecked"] = true,
-			},
-			["洛克莫丹 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["猎龙 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["荒芜之地的材料 - false"] = {
+			["地精工程学 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["威士忌斯利姆的酒 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["荒芜之地 - true"] = {
-				["m_bChecked"] = false,
+			["船长的箱子 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["工程学 - true"] = {
+				["m_bChecked"] = true,
 			},
 			["讨债行动 - false"] = {
 				["m_bChecked"] = true,
@@ -74,10 +62,10 @@ MonkeyQuestConfig = {
 			["海盗的眼睛 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["莫达洛克 - false"] = {
+			["阿戈莫德的命运 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["斯杜雷的债务 - false"] = {
+			["猎龙 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["血帆海盗 - false"] = {
@@ -119,12 +107,12 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_iFrameBottom"] = -129.777755737305,
+		["m_iFrameBottom"] = -223.111145019531,
 		["m_bHideCompletedQuests"] = true,
-		["m_iFrameLeft"] = 1469.11267089844,
+		["m_iFrameLeft"] = 1469.11291503906,
 		["m_bColourDoneOrFailed"] = false,
 		["m_bLocked"] = true,
-		["m_iQuestPadding"] = 2,
+		["m_bNoBorder"] = true,
 		["m_bNoHeaders"] = true,
 		["m_bShowNumQuests"] = true,
 		["m_strOverviewColour"] = "|cFF7F7F7F",
@@ -142,7 +130,7 @@ MonkeyQuestConfig = {
 		["m_bObjectives"] = false,
 		["m_bHideHeader"] = true,
 		["m_bShowTooltipObjectives"] = true,
-		["m_bNoBorder"] = true,
+		["m_iQuestPadding"] = 2,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
 		["m_bHideTitleButtons"] = false,

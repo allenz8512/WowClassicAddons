@@ -48,3 +48,5 @@ FriendsMenuXP: enabled
 DamageEx: disabled
 ItemRackOptions: enabled
 RecipeRadarClassic: enabled
+NoGoldSeller: disabled
+dct_spellAlert: disabled

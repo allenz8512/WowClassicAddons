@@ -20,6 +20,13 @@ X: -4
 Y: -80
 W: 921
 H: 601
+Frame: AtlasLoot_GUI-Frame
+FrameLevel: 1
+Anchor: CENTER
+X: 5
+Y: 0
+W: 920
+H: 600
 Frame: CensusPlusClassic
 FrameLevel: 1
 Anchor: CENTER

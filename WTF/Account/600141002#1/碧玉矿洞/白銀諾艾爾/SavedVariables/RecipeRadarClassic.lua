@@ -1,6 +1,6 @@
 
 RecipeRadar_Options = {
-	["Version"] = "1.0.0.6",
+	["Version"] = "1.0.0.7",
 }
 RecipeRadar_Filters = {
 	["Professions"] = {
@@ -11,8 +11,8 @@ RecipeRadar_Filters = {
 		["炼金术"] = true,
 		["锻造"] = true,
 		["附魔"] = true,
-		["裁缝"] = true,
 		["Leatherworking"] = true,
+		["裁缝"] = true,
 		["Enchanting"] = true,
 	},
 	["PersonAvails"] = {

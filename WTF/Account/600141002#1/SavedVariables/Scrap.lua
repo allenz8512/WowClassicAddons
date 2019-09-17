@@ -2,7 +2,7 @@
 Scrap_SharedJunk = {
 }
 Scrap_AutoSell = true
-Scrap_AutoRepair = nil
+Scrap_AutoRepair = true
 Scrap_GuildRepair = nil
 Scrap_Safe = true
 Scrap_Learn = nil
