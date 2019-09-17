@@ -1,0 +1,16 @@
+tag a941ac4da5b98ebdac9229b4c0b5a5350c9f7ced Release-1-4
+Author:	Stefan Pedersen <sp@ceptu.com>
+Date:	Thu Sep 12 01:54:39 2019 +0200
+
+commit 45a594da84ff4e89adad82f01d76ed809247bf7c
+Author: Stefan Pedersen <sp@ceptu.com>
+Date:   Thu Sep 12 01:54:27 2019 +0200
+
+    Release 1.4
+
+commit 8653672f409534d76e6d9b3f27271bf1b2e5d336
+Author: Stefan Pedersen <sp@ceptu.com>
+Date:   Thu Sep 12 01:53:35 2019 +0200
+
+    Update frame strata
+
