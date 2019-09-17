@@ -190,12 +190,12 @@ do
 		for i = #_detalhes.savedCustomSpells, 1, -1 do
 			local spelltable = _detalhes.savedCustomSpells [i]
 			local spellid = spelltable [1]
-			if (spellid > 10) then
+			
 				local exists = _GetSpellInfo (spellid)
 				if (not exists) then
 					tremove (_detalhes.savedCustomSpells, i)
 				end
-			end
+			
 		end
 	end
 	
@@ -342,3 +342,22 @@ do
 
 	
 end
+
+
+--[=[
+function (...)
+    
+    local F = CreateFrame ("frame", UIParent)
+    F:SetSize (64, 64)
+    F:SetPoint ("center")
+    
+    local T = F:CreateTexture (nil, "overlay")
+    T:SetPoint ("center")
+    T:SetSize (224, 224)
+    
+    local _, _, icon = GetSpellInfo (1)
+    T:SetTexture ([[Interface\ICONS\INV_Sword_04]])
+    T:SetTexture (    [[Interface\ICONS\INV_Weapon_Bow_07]])
+    
+end
+--]=]
