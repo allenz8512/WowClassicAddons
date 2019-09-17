@@ -28,7 +28,7 @@ ElvUI: enabled
 ElvUI_OptionsUI: enabled
 CharacterStatsClassic: enabled
 WhatsTraining: enabled
-CensusPlusClassic: enabled
+CensusPlusClassic: disabled
 SortBags: enabled
 WeakAurasCompanion: enabled
 alaChat_Classic: enabled
@@ -50,3 +50,5 @@ ItemRackOptions: enabled
 RecipeRadarClassic: enabled
 NoGoldSeller: disabled
 dct_spellAlert: disabled
+ItemTooltipProfessionIcons: enabled
+Mendeleev: disabled

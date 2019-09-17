@@ -133,7 +133,7 @@ MonkeyQuestConfig = {
 		["m_bColourDoneOrFailed"] = false,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_iFrameBottom"] = 75.555534362793,
+		["m_iFrameBottom"] = -223.111145019531,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {
