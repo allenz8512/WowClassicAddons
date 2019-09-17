@@ -17,6 +17,14 @@ Bagnon_Sets = {
 	},
 	["inscribeColor"] = {
 	},
+	["leatherColor"] = {
+	},
+	["tackleColor"] = {
+	},
+	["herbColor"] = {
+	},
+	["normalColor"] = {
+	},
 	["global"] = {
 		["inventory"] = {
 			["rules"] = {
@@ -57,10 +65,10 @@ Bagnon_Sets = {
 			["x"] = -204.667724609375,
 			["borderColor"] = {
 			},
-			["itemScale"] = 1,
-			["scale"] = 1,
-			["alpha"] = 1,
 			["bagBreak"] = false,
+			["alpha"] = 1,
+			["scale"] = 1,
+			["itemScale"] = 1,
 		},
 		["vault"] = {
 			["rules"] = {
@@ -164,19 +172,11 @@ Bagnon_Sets = {
 			},
 			["color"] = {
 			},
-			["x"] = 457.666809082031,
-			["hiddenRules"] = {
-			},
 			["borderColor"] = {
 			},
+			["hiddenRules"] = {
+			},
+			["x"] = 457.666809082031,
 		},
-	},
-	["normalColor"] = {
-	},
-	["herbColor"] = {
-	},
-	["tackleColor"] = {
-	},
-	["leatherColor"] = {
 	},
 }

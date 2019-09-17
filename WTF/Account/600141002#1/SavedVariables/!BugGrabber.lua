@@ -1,24 +1,24 @@
 
 BugGrabberDB = {
-	["session"] = 170,
 	["lastSanitation"] = 3,
+	["session"] = 171,
 	["errors"] = {
 		{
 			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipAddMoney",
-			["session"] = 158,
 			["time"] = "2019/09/17 15:01:09",
+			["session"] = 158,
 			["counter"] = 12,
 		}, -- [1]
 		{
 			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipCleared",
-			["session"] = 158,
 			["time"] = "2019/09/17 15:01:09",
+			["session"] = 158,
 			["counter"] = 12,
 		}, -- [2]
 		{
 			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipSetDefaultAnchor",
-			["session"] = 158,
 			["time"] = "2019/09/17 15:01:09",
+			["session"] = 158,
 			["counter"] = 16,
 		}, -- [3]
 		{
@@ -54,8 +54,8 @@ BugGrabberDB = {
 		}, -- [7]
 		{
 			["message"] = "(null)",
-			["session"] = 165,
 			["time"] = "2019/09/17 17:18:51",
+			["session"] = 165,
 			["counter"] = 7,
 		}, -- [8]
 		{
@@ -66,29 +66,13 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [9]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'RecipeRadarClassic' 尝试调用保护功能 'SpellBookSpellIconsFrame:Show()'。",
-			["time"] = "2019/09/17 17:32:45",
-			["locals"] = "InCombatSkipped",
-			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\SpellBookFrame.lua:148: in function <Interface\\FrameXML\\SpellBookFrame.lua:112>\n[C]: in function `SpellBookFrame_Update'\nInterface\\FrameXML\\SpellBookFrame.lua:97: in function <Interface\\FrameXML\\SpellBookFrame.lua:96>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2078: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:1923: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:1784: in function <Interface\\FrameXML\\UIParent.lua:1780>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2526: in function `ShowUIPanel'\nInterface\\FrameXML\\SpellBookFrame.lua:46: in function `ToggleSpellBook'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:362: in function `RecipeRadar_SkillDB_ShowSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:382: in function `RecipeRadar_SkillDB_ParseSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:39: in function `RecipeRadar_Frame_Show'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:31: in function `RecipeRadar_Toggle'\n...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:68: in function <...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:67>",
-			["session"] = 167,
-			["counter"] = 1,
-		}, -- [10]
-		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'Atlas' 尝试调用保护功能 'MultiBarBottomLeft:SetFrameStrata()'。",
-			["time"] = "2019/09/17 17:32:45",
-			["locals"] = "InCombatSkipped",
-			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `SetFrameStrata'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:379: in function `Atlas_Init'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:326: in function `Atlas_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:416: in function `TradeSkillFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:1148: in function <Interface\\FrameXML\\UIParent.lua:658>\n[C]: ?\n[C]: in function `CastSpell'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:393: in function `RecipeRadar_SkillDB_ParseSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:39: in function `RecipeRadar_Frame_Show'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:31: in function `RecipeRadar_Toggle'\n...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:68: in function <...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:67>",
-			["session"] = 167,
-			["counter"] = 1,
-		}, -- [11]
-		{
 			["message"] = "...rface\\AddOns\\FiveSecondRule\\Modules\\OptionsPanel.lua:34: attempt to index upvalue 'frame' (a nil value)",
 			["time"] = "2019/09/17 17:35:53",
 			["locals"] = "self = FiveSecondRuleOptionsPanelFrame {\n UpdateOptionValues = <function> defined @Interface\\AddOns\\FiveSecondRule\\Modules\\OptionsPanel.lua:33\n 0 = <userdata>\n CreateGUI = <function> defined @Interface\\AddOns\\FiveSecondRule\\Modules\\OptionsPanel.lua:44\n}\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index upvalue 'frame' (a nil value)\"\nframe = nil\n",
 			["stack"] = "...rface\\AddOns\\FiveSecondRule\\Modules\\OptionsPanel.lua:34: in function `UpdateOptionValues'\nInterface\\AddOns\\FiveSecondRule\\FiveSecondRule-1.4.lua:190: in function `onMouseUp'\nInterface\\AddOns\\FiveSecondRule\\FiveSecondRule-1.4.lua:80: in function <Interface\\AddOns\\FiveSecondRule\\FiveSecondRule.lua:80>",
 			["session"] = 168,
 			["counter"] = 2,
-		}, -- [12]
+		}, -- [10]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'TownsfolkTracker' 尝试调用保护功能 'CompactRaidFrame1:Show()'。",
 			["time"] = "2019/09/17 22:44:45",
@@ -96,7 +80,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:353: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:286: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:54: in function <Interface\\FrameXML\\CompactUnitFrame.lua:51>",
 			["session"] = 169,
 			["counter"] = 1,
-		}, -- [13]
+		}, -- [11]
 		{
 			["message"] = "Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant-13.18.lua:290: attempt to call global 'GetGuildBankWithdrawMoney' (a nil value)",
 			["time"] = "2019/09/17 22:57:01",
@@ -104,7 +88,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant-13.18.lua:290: in function `Repair'\nInterface\\AddOns\\Scrap_Merchant\\Scrap_Merchant-13.18.lua:110: in function `OnMerchant'\nInterface\\AddOns\\Scrap_Merchant\\Scrap_Merchant-13.18.lua:98: in function `MERCHANT_SHOW'\nInterface\\AddOns\\Scrap\\Scrap-13.18.lua:103: in function `?'\nInterface\\AddOns\\Scrap\\Scrap-13.18.lua:77: in function <Interface\\AddOns\\Scrap\\Scrap.lua:77>",
 			["session"] = 169,
 			["counter"] = 2,
-		}, -- [14]
+		}, -- [12]
 		{
 			["message"] = "Interface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:603: ContainerIDToInventoryID(): invalid container ID",
 			["time"] = "2019/09/17 22:58:30",
@@ -112,7 +96,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `ContainerIDToInventoryID'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:603: in function `ValidBag'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:575: in function `FindInBank'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:1907: in function `MissingItems'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:1006: in function `BuildMenu'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:1671: in function `MinimapOnClick'\n[string \"*:OnClick\"]:1: in function <[string \"*:OnClick\"]:1>",
 			["session"] = 169,
 			["counter"] = 2,
-		}, -- [15]
+		}, -- [13]
 		{
 			["message"] = "...terface\\AddOns\\Details_Streamer\\Details_Streamer.lua:2040: attempt to index global 'Details_StreamerDB' (a nil value)",
 			["time"] = "2019/09/17 15:01:04",
@@ -120,6 +104,22 @@ BugGrabberDB = {
 			["stack"] = "...terface\\AddOns\\Details_Streamer\\Details_Streamer.lua:2040: in function <...terface\\AddOns\\Details_Streamer\\Details_Streamer.lua:1889>\n(tail call): ?",
 			["session"] = 170,
 			["counter"] = 17,
+		}, -- [14]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'RecipeRadarClassic' 尝试调用保护功能 'SpellBookSpellIconsFrame:Show()'。",
+			["time"] = "2019/09/17 17:32:45",
+			["locals"] = "InCombatSkipped",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\SpellBookFrame.lua:148: in function <Interface\\FrameXML\\SpellBookFrame.lua:112>\n[C]: in function `SpellBookFrame_Update'\nInterface\\FrameXML\\SpellBookFrame.lua:97: in function <Interface\\FrameXML\\SpellBookFrame.lua:96>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2078: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:1923: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:1784: in function <Interface\\FrameXML\\UIParent.lua:1780>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2526: in function `ShowUIPanel'\nInterface\\FrameXML\\SpellBookFrame.lua:46: in function `ToggleSpellBook'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:362: in function `RecipeRadar_SkillDB_ShowSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:382: in function `RecipeRadar_SkillDB_ParseSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:39: in function `RecipeRadar_Frame_Show'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:31: in function `RecipeRadar_Toggle'\n...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:68: in function <...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:67>",
+			["session"] = 171,
+			["counter"] = 2,
+		}, -- [15]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'Atlas' 尝试调用保护功能 'MultiBarBottomLeft:SetFrameStrata()'。",
+			["time"] = "2019/09/17 17:32:45",
+			["locals"] = "InCombatSkipped",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `SetFrameStrata'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:379: in function `Atlas_Init'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:326: in function `Atlas_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:416: in function `TradeSkillFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:1148: in function <Interface\\FrameXML\\UIParent.lua:658>\n[C]: ?\n[C]: in function `CastSpell'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:393: in function `RecipeRadar_SkillDB_ParseSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:39: in function `RecipeRadar_Frame_Show'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:31: in function `RecipeRadar_Toggle'\n...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:68: in function <...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:67>",
+			["session"] = 171,
+			["counter"] = 2,
 		}, -- [16]
 	},
 }

@@ -13,13 +13,6 @@ X: -4
 Y: -80
 W: 921
 H: 601
-Frame: AtlasLoot_GUI-Frame
-FrameLevel: 1
-Anchor: CENTER
-X: 5
-Y: 0
-W: 920
-H: 600
 Frame: DCT_Options
 FrameLevel: 1
 Anchor: TOPLEFT
@@ -27,6 +20,13 @@ X: 30
 Y: -86
 W: 730
 H: 540
+Frame: AtlasLoot_GUI-Frame
+FrameLevel: 1
+Anchor: CENTER
+X: 5
+Y: 0
+W: 920
+H: 600
 Frame: Five Second Rule Statusbar
 FrameLevel: 1
 Anchor: CENTER
