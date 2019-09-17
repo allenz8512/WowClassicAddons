@@ -1,22 +1,52 @@
-lightweight tag 579bb78b4b4d84edcb24c29a95b081407399f694 1.0.0.6-beta
+lightweight tag 446ab921bfae321589fd8b9e9e27e6a665fd2578 1.0.0.7-beta
 Author:	Yunohu <kernighan@gmail.com>
-Date:	Mon Sep 16 00:32:31 2019 +0000
+Date:	Tue Sep 17 00:07:30 2019 +0000
 
-commit 579bb78b4b4d84edcb24c29a95b081407399f694
+commit 446ab921bfae321589fd8b9e9e27e6a665fd2578
 Author: Yunohu <kernighan@gmail.com>
-Date:   Mon Sep 16 00:32:31 2019 +0000
+Date:   Tue Sep 17 00:07:30 2019 +0000
 
-    Version 1.0.0.6
+    Bump version to 1.0.0.7
 
-commit d242ee635be5b03d6803f98e27e6ba96f9983c63
+commit a577c741009b7e23dba4418123fba3a56e01b0da
 Author: Yunohu <kernighan@gmail.com>
-Date:   Mon Sep 16 00:08:26 2019 +0000
+Date:   Tue Sep 17 00:06:21 2019 +0000
 
-    Fix another possible nil reference
+    re #16 - Fix more issues with the tooltip
 
-commit e46d96ab9b8493fa9ee215f37e56a4652807f47a
+commit e3e95484df6df66de39b762756277f4441d7d5c2
 Author: Yunohu <kernighan@gmail.com>
-Date:   Mon Sep 16 00:05:08 2019 +0000
+Date:   Mon Sep 16 22:57:48 2019 +0000
 
-    Fix nil reference
+    Fix loop function
+
+commit c41fac24efc0dfac2fa94b4648d4ed4242a22a7e
+Author: Yunohu <kernighan@gmail.com>
+Date:   Mon Sep 16 21:34:37 2019 +0000
+
+    Fix #16 - Change gametool tip bits
+
+commit 3830462f65255c25e1b83bacc402de865c29371b
+Author: Yunohu <kernighan@gmail.com>
+Date:   Mon Sep 16 21:31:47 2019 +0000
+
+    Fix deDE localization loading
+
+commit 5719f6e59adb0d6b87f0da90d1ffa65beb413408
+Author: Yunohu <kernighan@gmail.com>
+Date:   Mon Sep 16 14:09:55 2019 +0000
+
+    Further coordinate precision for Mythrin'dir
+
+commit a7e8e85e876954babd603be51cdb2da4461237a8
+Author: Yunohu <kernighan@gmail.com>
+Date:   Mon Sep 16 14:01:03 2019 +0000
+
+    Minor Wizard Oil, Minor Mana Oil, and Lesser Wizard Oil are not yet in
+
+commit ab2b9acf2c90b48c72c26d36452a694a93a92253
+Author: Yunohu <kernighan@gmail.com>
+Date:   Mon Sep 16 13:21:54 2019 +0000
+
+    Fix #20 - Load zhCN and koKR
 

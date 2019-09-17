@@ -101,7 +101,7 @@ function RecipeRadar_SkillDB_Refresh(prof_type)
    if (not RecipeRadar_RecipeData[prof_name].Recipes) then return end
    -- iterate over each listed recipe in the currently open skill window
     for i = 1, RecipeRadar_SkillDB_GetRecipeCount(prof_type) do
-      local recipe, hdr = RecipeRadar_SkillDB_GetRecipeCount(prof_type)
+      local recipe, hdr = RecipeRadar_SkillDB_GetRecipeInfo(prof_type, i)
       if (recipe and hdr ~= "header") then
         local itemID = RecipeRadar_SkillDB_GetItemLink(prof_type, i)
 		if(itemID) then

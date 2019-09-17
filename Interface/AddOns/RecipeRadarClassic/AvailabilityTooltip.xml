@@ -9,8 +9,8 @@
    <Script file="AvailabilityTooltip.lua"/>
    <Script file="Availability.lua"/>
 
-   <Frame name="RecipeRadarAvailabilityTooltip" inherits="GameTooltipTemplate" frameStrata="TOOLTIP" parent="UIParent" hidden="true">
-
+   <GameTooltip name="RecipeRadarAvailabilityTooltip" inherits="GameTooltipTemplate" frameStrata="TOOLTIP" parent="UIParent" hidden="true"/>
+   <Frame name="RecipeRadarAvailabilityTooltipFrame" parent="UIParent" hidden="false">
       <Scripts>
          <OnLoad>
             -- this allows for 18 alts per server, though I think 8 is the max

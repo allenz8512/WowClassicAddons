@@ -1,4 +1,4 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("RecipeRadar Classic", "deDE", false)
+local L = LibStub("AceLocale-3.0"):NewLocale("RecipeRadarClassic", "deDE", false)
 if not L then return end
 
    -- the name of the addon!

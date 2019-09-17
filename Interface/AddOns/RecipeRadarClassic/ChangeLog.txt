@@ -1,4 +1,8 @@
 Recipe Radar Classic ChangeLog
+v 1.0.0.7
+- Fix multiple locales to load correctly
+- Fix availbility tooltip frame
+- Disable Enchanting recipes that are not yet in the game 
 v 1.0.0.6
 - Fixed nil reference issues
 v 1.0.0.5
