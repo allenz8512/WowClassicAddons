@@ -5,2894 +5,6 @@ _detalhes_database = {
 	["mythic_dungeon_id"] = 0,
 	["tabela_historico"] = {
 		["tabelas"] = {
-			{
-				{
-					["combatId"] = 6,
-					["tipo"] = 2,
-					["_ActorTable"] = {
-						{
-							["flag_original"] = 1297,
-							["totalabsorbed"] = 0.003797,
-							["damage_from"] = {
-								["南部沙蟹"] = true,
-							},
-							["targets"] = {
-								["南部沙蟹"] = 1916,
-							},
-							["friendlyfire"] = {
-							},
-							["pets"] = {
-							},
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 1916.003797,
-							["on_hold"] = false,
-							["dps_started"] = false,
-							["total"] = 1916.003797,
-							["classe"] = "PALADIN",
-							["serial"] = "Player-4497-00484697",
-							["nome"] = "白銀諾艾爾",
-							["spells"] = {
-								["tipo"] = 2,
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 2,
-										["b_amt"] = 0,
-										["c_dmg"] = 494,
-										["g_amt"] = 0,
-										["n_max"] = 154,
-										["targets"] = {
-											["南部沙蟹"] = 1187,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 693,
-										["n_min"] = 122,
-										["g_dmg"] = 0,
-										["counter"] = 9,
-										["total"] = 1187,
-										["c_max"] = 248,
-										["a_amt"] = 0,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
-										["m_crit"] = 0,
-										["PARRY"] = 2,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 5,
-										["r_amt"] = 0,
-										["c_min"] = 246,
-									}, -- [1]
-									[0] = {
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 123,
-										["targets"] = {
-											["南部沙蟹"] = 729,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 729,
-										["n_min"] = 18,
-										["g_dmg"] = 0,
-										["counter"] = 18,
-										["total"] = 729,
-										["c_max"] = 0,
-										["id"] = 0,
-										["r_dmg"] = 0,
-										["spellschool"] = 2,
-										["a_dmg"] = 0,
-										["m_crit"] = 0,
-										["a_amt"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 18,
-										["r_amt"] = 0,
-										["c_min"] = 0,
-									},
-								},
-							},
-							["grupo"] = true,
-							["end_time"] = 1568712788,
-							["last_dps"] = 0,
-							["custom"] = 0,
-							["tipo"] = 1,
-							["damage_taken"] = 728.003797,
-							["start_time"] = 1568712757,
-							["delay"] = 0,
-							["last_event"] = 1568712787,
-						}, -- [1]
-						{
-							["flag_original"] = 68136,
-							["totalabsorbed"] = 0.003041,
-							["damage_from"] = {
-								["白銀諾艾爾"] = true,
-							},
-							["targets"] = {
-								["白銀諾艾爾"] = 728,
-							},
-							["pets"] = {
-							},
-							["fight_component"] = true,
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 728.003041,
-							["on_hold"] = false,
-							["dps_started"] = false,
-							["total"] = 728.003041,
-							["classe"] = "UNKNOW",
-							["serial"] = "Creature-0-4514-0-190-2544-0000007FE5",
-							["nome"] = "南部沙蟹",
-							["spells"] = {
-								["tipo"] = 2,
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 58,
-										["targets"] = {
-											["白銀諾艾爾"] = 728,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 728,
-										["n_min"] = 45,
-										["g_dmg"] = 0,
-										["counter"] = 15,
-										["total"] = 728,
-										["c_max"] = 0,
-										["MISS"] = 1,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
-										["m_crit"] = 0,
-										["a_amt"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 14,
-										["r_amt"] = 0,
-										["c_min"] = 0,
-									}, -- [1]
-								},
-							},
-							["friendlyfire"] = {
-							},
-							["end_time"] = 1568712788,
-							["last_dps"] = 0,
-							["custom"] = 0,
-							["tipo"] = 1,
-							["damage_taken"] = 1916.003041,
-							["start_time"] = 1568712759,
-							["delay"] = 0,
-							["last_event"] = 1568712787,
-						}, -- [2]
-					},
-				}, -- [1]
-				{
-					["combatId"] = 6,
-					["tipo"] = 3,
-					["_ActorTable"] = {
-					},
-				}, -- [2]
-				{
-					["combatId"] = 6,
-					["tipo"] = 7,
-					["_ActorTable"] = {
-						{
-							["received"] = 400.003922,
-							["resource"] = 0.003922,
-							["targets"] = {
-								["白銀諾艾爾"] = 400,
-							},
-							["pets"] = {
-							},
-							["powertype"] = 0,
-							["classe"] = "PALADIN",
-							["passiveover"] = 0.003922,
-							["total"] = 400.003922,
-							["nome"] = "白銀諾艾爾",
-							["spells"] = {
-								["tipo"] = 7,
-								["_ActorTable"] = {
-									[0] = {
-										["total"] = 400,
-										["id"] = 0,
-										["totalover"] = 0,
-										["targets"] = {
-											["白銀諾艾爾"] = 400,
-										},
-										["counter"] = 20,
-									},
-								},
-							},
-							["grupo"] = true,
-							["flag_original"] = 1297,
-							["last_event"] = 1568712852,
-							["alternatepower"] = 0.003922,
-							["tipo"] = 3,
-							["serial"] = "Player-4497-00484697",
-							["totalover"] = 0.003922,
-						}, -- [1]
-					},
-				}, -- [3]
-				{
-					["combatId"] = 6,
-					["tipo"] = 9,
-					["_ActorTable"] = {
-						{
-							["flag_original"] = 1047,
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["nome"] = "白銀諾艾爾",
-							["buff_uptime"] = 71,
-							["spell_cast"] = {
-								[0] = 6,
-							},
-							["pets"] = {
-							},
-							["classe"] = "PALADIN",
-							["tipo"] = 4,
-							["buff_uptime_spells"] = {
-								["tipo"] = 9,
-								["_ActorTable"] = {
-									[10299] = {
-										["activedamt"] = 1,
-										["id"] = 10299,
-										["targets"] = {
-										},
-										["uptime"] = 31,
-										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[0] = {
-										["activedamt"] = 3,
-										["id"] = 0,
-										["targets"] = {
-										},
-										["uptime"] = 9,
-										["appliedamt"] = 3,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[19852] = {
-										["activedamt"] = 1,
-										["id"] = 19852,
-										["targets"] = {
-										},
-										["uptime"] = 31,
-										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[20134] = {
-										["activedamt"] = 1,
-										["id"] = 20134,
-										["targets"] = {
-										},
-										["actived_at"] = 1568712757,
-										["uptime"] = 0,
-										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = true,
-										["counter"] = 0,
-									},
-								},
-							},
-							["serial"] = "Player-4497-00484697",
-							["last_event"] = 1568712788,
-						}, -- [1]
-					},
-				}, -- [4]
-				{
-					["combatId"] = 6,
-					["tipo"] = 2,
-					["_ActorTable"] = {
-					},
-				}, -- [5]
-				["raid_roster"] = {
-					["白銀諾艾爾"] = true,
-				},
-				["last_events_tables"] = {
-				},
-				["overall_added"] = true,
-				["cleu_timeline"] = {
-				},
-				["alternate_power"] = {
-				},
-				["tempo_start"] = 1568712757,
-				["enemy"] = "南部沙蟹",
-				["combat_counter"] = 4134,
-				["playing_solo"] = true,
-				["totals"] = {
-					2644, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 400,
-						["alternatepower"] = 0,
-						[3] = 0,
-						[6] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
-						["dead"] = 0,
-					}, -- [4]
-					["frags_total"] = 0,
-					["voidzone_damage"] = 0,
-				},
-				["player_last_events"] = {
-				},
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["CombatEndedAt"] = 103315.106,
-				["aura_timeline"] = {
-				},
-				["__call"] = {
-				},
-				["data_inicio"] = "17:32:37",
-				["end_time"] = 103315.106,
-				["totals_grupo"] = {
-					1916, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 400,
-						["alternatepower"] = 0,
-						[3] = 0,
-						[6] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
-						["dead"] = 0,
-					}, -- [4]
-				},
-				["combat_id"] = 6,
-				["TotalElapsedCombatTime"] = 103315.106,
-				["frags_need_refresh"] = true,
-				["PhaseData"] = {
-					{
-						1, -- [1]
-						1, -- [2]
-					}, -- [1]
-					["heal_section"] = {
-					},
-					["heal"] = {
-						{
-						}, -- [1]
-					},
-					["damage_section"] = {
-					},
-					["damage"] = {
-						{
-							["白銀諾艾爾"] = 1916.003797,
-						}, -- [1]
-					},
-				},
-				["frags"] = {
-					["南部沙蟹"] = 1,
-				},
-				["data_fim"] = "17:33:08",
-				["instance_type"] = "none",
-				["CombatSkillCache"] = {
-				},
-				["spells_cast_timeline"] = {
-				},
-				["start_time"] = 103284.245,
-				["TimeData"] = {
-				},
-				["pvp"] = true,
-			}, -- [1]
-			{
-				{
-					["combatId"] = 5,
-					["tipo"] = 2,
-					["_ActorTable"] = {
-						{
-							["flag_original"] = 1297,
-							["totalabsorbed"] = 0.008394,
-							["damage_from"] = {
-								["南部沙蟹"] = true,
-							},
-							["targets"] = {
-								["南部沙蟹"] = 2128,
-							},
-							["friendlyfire"] = {
-							},
-							["pets"] = {
-							},
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 2128.008394,
-							["on_hold"] = false,
-							["dps_started"] = false,
-							["total"] = 2128.008394,
-							["classe"] = "PALADIN",
-							["serial"] = "Player-4497-00484697",
-							["nome"] = "白銀諾艾爾",
-							["spells"] = {
-								["tipo"] = 2,
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 2,
-										["b_amt"] = 0,
-										["c_dmg"] = 550,
-										["g_amt"] = 0,
-										["n_max"] = 152,
-										["targets"] = {
-											["南部沙蟹"] = 1120,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 570,
-										["n_min"] = 127,
-										["g_dmg"] = 0,
-										["counter"] = 6,
-										["total"] = 1120,
-										["c_max"] = 294,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
-										["m_crit"] = 0,
-										["a_amt"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 4,
-										["r_amt"] = 0,
-										["c_min"] = 256,
-									}, -- [1]
-									[0] = {
-										["c_amt"] = 3,
-										["b_amt"] = 0,
-										["c_dmg"] = 724,
-										["g_amt"] = 0,
-										["n_max"] = 158,
-										["targets"] = {
-											["南部沙蟹"] = 1008,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 284,
-										["n_min"] = 18,
-										["g_dmg"] = 0,
-										["counter"] = 11,
-										["total"] = 1008,
-										["c_max"] = 249,
-										["id"] = 0,
-										["r_dmg"] = 0,
-										["spellschool"] = 2,
-										["a_dmg"] = 0,
-										["m_crit"] = 0,
-										["a_amt"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 8,
-										["r_amt"] = 0,
-										["c_min"] = 228,
-									},
-								},
-							},
-							["grupo"] = true,
-							["end_time"] = 1568712750,
-							["last_dps"] = 0,
-							["custom"] = 0,
-							["tipo"] = 1,
-							["damage_taken"] = 467.008394,
-							["start_time"] = 1568712730,
-							["delay"] = 0,
-							["last_event"] = 1568712749,
-						}, -- [1]
-						{
-							["flag_original"] = 68136,
-							["totalabsorbed"] = 0.006319,
-							["damage_from"] = {
-								["白銀諾艾爾"] = true,
-							},
-							["targets"] = {
-								["白銀諾艾爾"] = 467,
-							},
-							["pets"] = {
-							},
-							["fight_component"] = true,
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 467.006319,
-							["on_hold"] = false,
-							["dps_started"] = false,
-							["total"] = 467.006319,
-							["classe"] = "UNKNOW",
-							["serial"] = "Creature-0-4514-0-190-2544-00000080AC",
-							["nome"] = "南部沙蟹",
-							["spells"] = {
-								["tipo"] = 2,
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 2,
-										["b_amt"] = 0,
-										["c_dmg"] = 212,
-										["g_amt"] = 0,
-										["n_max"] = 59,
-										["targets"] = {
-											["白銀諾艾爾"] = 467,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 255,
-										["n_min"] = 46,
-										["g_dmg"] = 0,
-										["counter"] = 9,
-										["MISS"] = 1,
-										["total"] = 467,
-										["c_max"] = 117,
-										["DODGE"] = 1,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_dmg"] = 0,
-										["m_crit"] = 0,
-										["a_amt"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 5,
-										["r_amt"] = 0,
-										["c_min"] = 95,
-									}, -- [1]
-								},
-							},
-							["friendlyfire"] = {
-							},
-							["end_time"] = 1568712750,
-							["last_dps"] = 0,
-							["custom"] = 0,
-							["tipo"] = 1,
-							["damage_taken"] = 2128.006319,
-							["start_time"] = 1568712731,
-							["delay"] = 0,
-							["last_event"] = 1568712748,
-						}, -- [2]
-					},
-				}, -- [1]
-				{
-					["combatId"] = 5,
-					["tipo"] = 3,
-					["_ActorTable"] = {
-					},
-				}, -- [2]
-				{
-					["combatId"] = 5,
-					["tipo"] = 7,
-					["_ActorTable"] = {
-						{
-							["received"] = 80.005226,
-							["resource"] = 0.005226,
-							["targets"] = {
-								["白銀諾艾爾"] = 80,
-							},
-							["pets"] = {
-							},
-							["powertype"] = 0,
-							["classe"] = "PALADIN",
-							["passiveover"] = 0.005226,
-							["total"] = 80.005226,
-							["nome"] = "白銀諾艾爾",
-							["spells"] = {
-								["tipo"] = 7,
-								["_ActorTable"] = {
-									[0] = {
-										["total"] = 80,
-										["id"] = 0,
-										["totalover"] = 0,
-										["targets"] = {
-											["白銀諾艾爾"] = 80,
-										},
-										["counter"] = 4,
-									},
-								},
-							},
-							["grupo"] = true,
-							["flag_original"] = 1297,
-							["last_event"] = 1568712752,
-							["alternatepower"] = 0.005226,
-							["tipo"] = 3,
-							["serial"] = "Player-4497-00484697",
-							["totalover"] = 0.005226,
-						}, -- [1]
-					},
-				}, -- [3]
-				{
-					["combatId"] = 5,
-					["tipo"] = 9,
-					["_ActorTable"] = {
-						{
-							["flag_original"] = 1047,
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["nome"] = "白銀諾艾爾",
-							["buff_uptime"] = 28,
-							["spell_cast"] = {
-								[0] = 7,
-							},
-							["pets"] = {
-							},
-							["classe"] = "PALADIN",
-							["tipo"] = 4,
-							["buff_uptime_spells"] = {
-								["tipo"] = 9,
-								["_ActorTable"] = {
-									[10299] = {
-										["activedamt"] = 1,
-										["id"] = 10299,
-										["targets"] = {
-										},
-										["uptime"] = 20,
-										["appliedamt"] = 1,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[20134] = {
-										["activedamt"] = 0,
-										["id"] = 20134,
-										["targets"] = {
-										},
-										["uptime"] = 0,
-										["appliedamt"] = 0,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[20918] = {
-										["activedamt"] = 0,
-										["id"] = 20918,
-										["targets"] = {
-										},
-										["uptime"] = 0,
-										["appliedamt"] = 0,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-									[0] = {
-										["activedamt"] = 5,
-										["id"] = 0,
-										["targets"] = {
-										},
-										["actived_at"] = 1568712748,
-										["uptime"] = 8,
-										["appliedamt"] = 5,
-										["refreshamt"] = 1,
-										["actived"] = true,
-										["counter"] = 0,
-									},
-									[19852] = {
-										["activedamt"] = 0,
-										["id"] = 19852,
-										["targets"] = {
-										},
-										["uptime"] = 0,
-										["appliedamt"] = 0,
-										["refreshamt"] = 0,
-										["actived"] = false,
-										["counter"] = 0,
-									},
-								},
-							},
-							["serial"] = "Player-4497-00484697",
-							["last_event"] = 1568712750,
-						}, -- [1]
-					},
-				}, -- [4]
-				{
-					["combatId"] = 5,
-					["tipo"] = 2,
-					["_ActorTable"] = {
-					},
-				}, -- [5]
-				["raid_roster"] = {
-					["白銀諾艾爾"] = true,
-				},
-				["CombatStartedAt"] = 103283.905,
-				["tempo_start"] = 1568712730,
-				["last_events_tables"] = {
-				},
-				["alternate_power"] = {
-				},
-				["combat_counter"] = 4133,
-				["playing_solo"] = true,
-				["totals"] = {
-					2595, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 80,
-						["alternatepower"] = 0,
-						[3] = 0,
-						[6] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
-						["dead"] = 0,
-					}, -- [4]
-					["frags_total"] = 0,
-					["voidzone_damage"] = 0,
-				},
-				["totals_grupo"] = {
-					2128, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 80,
-						["alternatepower"] = 0,
-						[3] = 0,
-						[6] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
-						["dead"] = 0,
-					}, -- [4]
-				},
-				["frags_need_refresh"] = true,
-				["instance_type"] = "none",
-				["data_fim"] = "17:32:31",
-				["pvp"] = true,
-				["cleu_timeline"] = {
-				},
-				["enemy"] = "南部沙蟹",
-				["TotalElapsedCombatTime"] = 103277.752,
-				["CombatEndedAt"] = 103277.752,
-				["aura_timeline"] = {
-				},
-				["__call"] = {
-				},
-				["PhaseData"] = {
-					{
-						1, -- [1]
-						1, -- [2]
-					}, -- [1]
-					["heal_section"] = {
-					},
-					["heal"] = {
-						{
-						}, -- [1]
-					},
-					["damage_section"] = {
-					},
-					["damage"] = {
-						{
-							["白銀諾艾爾"] = 2128.008394,
-						}, -- [1]
-					},
-				},
-				["end_time"] = 103277.752,
-				["combat_id"] = 5,
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["spells_cast_timeline"] = {
-				},
-				["overall_added"] = true,
-				["player_last_events"] = {
-				},
-				["CombatSkillCache"] = {
-				},
-				["data_inicio"] = "17:32:10",
-				["start_time"] = 103257.088,
-				["TimeData"] = {
-				},
-				["frags"] = {
-					["南部沙蟹"] = 1,
-				},
-			}, -- [2]
-			{
-				{
-					["tipo"] = 2,
-					["combatId"] = 4,
-					["_ActorTable"] = {
-						{
-							["flag_original"] = 68168,
-							["totalabsorbed"] = 0.003429,
-							["damage_from"] = {
-								["索格努兹"] = true,
-								["白銀諾艾爾"] = true,
-								["掌声送给社会人"] = true,
-								["呼儿马"] = true,
-								["轩辕酷酷"] = true,
-								["豹"] = true,
-								["偷油婆"] = true,
-							},
-							["targets"] = {
-								["索格努兹"] = 215,
-								["掌声送给社会人"] = 949,
-								["轩辕酷酷"] = 862,
-								["呼儿马"] = 673,
-								["豹"] = 1295,
-								["白銀諾艾爾"] = 626,
-							},
-							["pets"] = {
-								"魅魔 <血帆术士>", -- [1]
-							},
-							["classe"] = "UNKNOW",
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 2701.003429,
-							["end_time"] = 1568712730,
-							["friendlyfire_total"] = 0,
-							["dps_started"] = false,
-							["total"] = 4620.003429,
-							["delay"] = 1568711367,
-							["monster"] = true,
-							["nome"] = "血帆术士",
-							["spells"] = {
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 48,
-										["targets"] = {
-											["呼儿马"] = 204,
-											["掌声送给社会人"] = 93,
-											["豹"] = 33,
-											["白銀諾艾爾"] = 81,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 411,
-										["n_min"] = 29,
-										["g_dmg"] = 0,
-										["counter"] = 14,
-										["total"] = 411,
-										["r_amt"] = 0,
-										["c_max"] = 0,
-										["a_dmg"] = 0,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["spellschool"] = 1,
-										["a_amt"] = 0,
-										["m_crit"] = 0,
-										["m_amt"] = 0,
-										["c_min"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 11,
-										["MISS"] = 1,
-										["DODGE"] = 2,
-									}, -- [1]
-									[0] = {
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 276,
-										["targets"] = {
-											["索格努兹"] = 215,
-											["掌声送给社会人"] = 255,
-											["轩辕酷酷"] = 437,
-											["呼儿马"] = 469,
-											["豹"] = 369,
-											["白銀諾艾爾"] = 545,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 2290,
-										["n_min"] = 179,
-										["g_dmg"] = 0,
-										["counter"] = 11,
-										["total"] = 2290,
-										["c_max"] = 0,
-										["r_amt"] = 2,
-										["id"] = 0,
-										["r_dmg"] = 369,
-										["b_dmg"] = 0,
-										["n_amt"] = 10,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 1,
-										["a_amt"] = 0,
-										["RESIST"] = 1,
-										["a_dmg"] = 0,
-										["spellschool"] = 32,
-									},
-								},
-								["tipo"] = 2,
-							},
-							["fight_component"] = true,
-							["damage_taken"] = 7322.003429,
-							["tipo"] = 1,
-							["last_dps"] = 0,
-							["custom"] = 0,
-							["last_event"] = 1568711367,
-							["on_hold"] = false,
-							["start_time"] = 1568712426,
-							["serial"] = "Creature-0-4514-0-190-1564-0000009B77",
-							["friendlyfire"] = {
-							},
-						}, -- [1]
-						{
-							["flag_original"] = 1297,
-							["totalabsorbed"] = 0.006941,
-							["damage_from"] = {
-								["血帆术士"] = true,
-								["魅魔"] = true,
-							},
-							["targets"] = {
-								["血帆术士"] = 1504,
-								["魅魔"] = 1180,
-							},
-							["pets"] = {
-							},
-							["damage_taken"] = 1413.006941,
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 2684.006941,
-							["classe"] = "PALADIN",
-							["dps_started"] = false,
-							["end_time"] = 1568709661,
-							["delay"] = 0,
-							["total"] = 2684.006941,
-							["nome"] = "白銀諾艾爾",
-							["spells"] = {
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 1,
-										["b_amt"] = 0,
-										["c_dmg"] = 400,
-										["g_amt"] = 2,
-										["n_max"] = 195,
-										["targets"] = {
-											["血帆术士"] = 944,
-											["魅魔"] = 354,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 569,
-										["n_min"] = 184,
-										["g_dmg"] = 329,
-										["counter"] = 7,
-										["total"] = 1298,
-										["c_max"] = 400,
-										["r_amt"] = 0,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["a_dmg"] = 0,
-										["b_dmg"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 400,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["a_amt"] = 0,
-										["n_amt"] = 3,
-										["spellschool"] = 1,
-										["DODGE"] = 1,
-									}, -- [1]
-									[0] = {
-										["c_amt"] = 2,
-										["b_amt"] = 0,
-										["c_dmg"] = 477,
-										["g_amt"] = 0,
-										["n_max"] = 238,
-										["targets"] = {
-											["血帆术士"] = 560,
-											["魅魔"] = 826,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 909,
-										["n_min"] = 14,
-										["g_dmg"] = 0,
-										["counter"] = 18,
-										["total"] = 1386,
-										["c_max"] = 243,
-										["r_amt"] = 0,
-										["id"] = 0,
-										["r_dmg"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 15,
-										["m_crit"] = 0,
-										["c_min"] = 234,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["a_amt"] = 0,
-										["RESIST"] = 1,
-										["a_dmg"] = 0,
-										["spellschool"] = 2,
-									},
-								},
-								["tipo"] = 2,
-							},
-							["grupo"] = true,
-							["last_event"] = 1568709659,
-							["last_dps"] = 0,
-							["custom"] = 0,
-							["tipo"] = 1,
-							["friendlyfire"] = {
-							},
-							["start_time"] = 1568709635,
-							["serial"] = "Player-4497-00484697",
-							["on_hold"] = false,
-						}, -- [2]
-						{
-							["flag_original"] = 4680,
-							["totalabsorbed"] = 0.00868,
-							["damage_from"] = {
-								["呼儿马"] = true,
-								["白銀諾艾爾"] = true,
-							},
-							["targets"] = {
-								["呼儿马"] = 2016,
-								["白銀諾艾爾"] = 787,
-							},
-							["pets"] = {
-							},
-							["end_time"] = 1568712730,
-							["last_event"] = 1568711393,
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 2803.00868,
-							["classe"] = "PET",
-							["fight_component"] = true,
-							["total"] = 2803.00868,
-							["delay"] = 1568711393,
-							["nome"] = "魅魔",
-							["spells"] = {
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 4,
-										["b_amt"] = 0,
-										["c_dmg"] = 515,
-										["g_amt"] = 0,
-										["n_max"] = 73,
-										["targets"] = {
-											["呼儿马"] = 2016,
-											["白銀諾艾爾"] = 787,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 2288,
-										["n_min"] = 55,
-										["g_dmg"] = 0,
-										["counter"] = 41,
-										["total"] = 2803,
-										["c_max"] = 136,
-										["r_amt"] = 0,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["a_amt"] = 0,
-										["a_dmg"] = 0,
-										["m_crit"] = 0,
-										["b_dmg"] = 0,
-										["c_min"] = 122,
-										["successful_casted"] = 0,
-										["m_amt"] = 0,
-										["n_amt"] = 35,
-										["spellschool"] = 1,
-										["DODGE"] = 2,
-									}, -- [1]
-								},
-								["tipo"] = 2,
-							},
-							["damage_taken"] = 3117.00868,
-							["last_dps"] = 0,
-							["friendlyfire"] = {
-							},
-							["custom"] = 0,
-							["tipo"] = 1,
-							["on_hold"] = false,
-							["start_time"] = 1568710984,
-							["serial"] = "Creature-0-4514-0-190-10928-0000009B78",
-							["dps_started"] = false,
-						}, -- [3]
-					},
-				}, -- [1]
-				{
-					["tipo"] = 3,
-					["combatId"] = 4,
-					["_ActorTable"] = {
-					},
-				}, -- [2]
-				{
-					["tipo"] = 7,
-					["combatId"] = 4,
-					["_ActorTable"] = {
-						{
-							["received"] = 160.007974,
-							["resource"] = 0.007974,
-							["targets"] = {
-								["白銀諾艾爾"] = 160,
-							},
-							["pets"] = {
-							},
-							["powertype"] = 0,
-							["classe"] = "PALADIN",
-							["passiveover"] = 0.007974,
-							["total"] = 160.007974,
-							["nome"] = "白銀諾艾爾",
-							["spells"] = {
-								["_ActorTable"] = {
-									[0] = {
-										["total"] = 160,
-										["id"] = 0,
-										["totalover"] = 0,
-										["targets"] = {
-											["白銀諾艾爾"] = 160,
-										},
-										["counter"] = 8,
-									},
-								},
-								["tipo"] = 7,
-							},
-							["grupo"] = true,
-							["totalover"] = 0.007974,
-							["last_event"] = 1568709674,
-							["alternatepower"] = 0.007974,
-							["tipo"] = 3,
-							["serial"] = "Player-4497-00484697",
-							["flag_original"] = 1297,
-						}, -- [1]
-					},
-				}, -- [3]
-				{
-					["tipo"] = 9,
-					["combatId"] = 4,
-					["_ActorTable"] = {
-						{
-							["flag_original"] = 1047,
-							["debuff_uptime_spells"] = {
-								["_ActorTable"] = {
-									[0] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 0,
-										["refreshamt"] = 0,
-										["id"] = 0,
-										["uptime"] = 4,
-										["targets"] = {
-										},
-										["appliedamt"] = 1,
-									},
-								},
-								["tipo"] = 9,
-							},
-							["buff_uptime"] = 71,
-							["classe"] = "PALADIN",
-							["buff_uptime_spells"] = {
-								["_ActorTable"] = {
-									[10299] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 1,
-										["refreshamt"] = 0,
-										["id"] = 10299,
-										["uptime"] = 26,
-										["targets"] = {
-										},
-										["appliedamt"] = 1,
-									},
-									[19852] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 1,
-										["refreshamt"] = 0,
-										["id"] = 19852,
-										["uptime"] = 26,
-										["targets"] = {
-										},
-										["appliedamt"] = 1,
-									},
-									[0] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 4,
-										["refreshamt"] = 1,
-										["id"] = 0,
-										["uptime"] = 19,
-										["targets"] = {
-										},
-										["appliedamt"] = 4,
-									},
-								},
-								["tipo"] = 9,
-							},
-							["debuff_uptime"] = 4,
-							["buff_uptime_targets"] = {
-							},
-							["grupo"] = true,
-							["spell_cast"] = {
-								[0] = 9,
-							},
-							["nome"] = "白銀諾艾爾",
-							["tipo"] = 4,
-							["debuff_uptime_targets"] = {
-							},
-							["pets"] = {
-							},
-							["serial"] = "Player-4497-00484697",
-							["last_event"] = 1568709661,
-						}, -- [1]
-						{
-							["flag_original"] = 68168,
-							["last_event"] = 0,
-							["nome"] = "血帆术士",
-							["pets"] = {
-							},
-							["classe"] = "UNKNOW",
-							["spell_cast"] = {
-								[0] = 1,
-							},
-							["tipo"] = 4,
-							["monster"] = true,
-							["serial"] = "Creature-0-4514-0-190-1564-0000009B77",
-							["fight_component"] = true,
-						}, -- [2]
-					},
-				}, -- [4]
-				{
-					["tipo"] = 2,
-					["combatId"] = 4,
-					["_ActorTable"] = {
-					},
-				}, -- [5]
-				["raid_roster"] = {
-					["白銀諾艾爾"] = true,
-				},
-				["CombatStartedAt"] = 103256.687,
-				["tempo_start"] = 1568709635,
-				["last_events_tables"] = {
-				},
-				["alternate_power"] = {
-				},
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["playing_solo"] = true,
-				["totals"] = {
-					10106.882972, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 159.97778,
-						["alternatepower"] = 0,
-						[6] = 0,
-						[3] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["dead"] = 0,
-						["cc_break"] = 0,
-						["interrupt"] = -0.00679199999999991,
-						["debuff_uptime"] = 0,
-						["dispell"] = 0,
-						["cooldowns_defensive"] = 0,
-					}, -- [4]
-					["voidzone_damage"] = 0,
-					["frags_total"] = 0,
-				},
-				["totals_grupo"] = {
-					2684, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 160,
-						["alternatepower"] = 0,
-						[6] = 0,
-						[3] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["dead"] = 0,
-						["cc_break"] = 0,
-						["interrupt"] = 0,
-						["debuff_uptime"] = 0,
-						["dispell"] = 0,
-						["cooldowns_defensive"] = 0,
-					}, -- [4]
-				},
-				["frags_need_refresh"] = true,
-				["instance_type"] = "none",
-				["hasSaved"] = true,
-				["data_fim"] = "16:41:01",
-				["cleu_timeline"] = {
-				},
-				["enemy"] = "血帆术士",
-				["TotalElapsedCombatTime"] = 100187.891,
-				["CombatEndedAt"] = 100187.891,
-				["aura_timeline"] = {
-				},
-				["__call"] = {
-				},
-				["data_inicio"] = "16:40:35",
-				["end_time"] = 100187.891,
-				["combat_id"] = 4,
-				["PhaseData"] = {
-					{
-						1, -- [1]
-						1, -- [2]
-					}, -- [1]
-					["damage"] = {
-						{
-							["白銀諾艾爾"] = 2684.006941,
-						}, -- [1]
-					},
-					["heal_section"] = {
-					},
-					["heal"] = {
-						{
-						}, -- [1]
-					},
-					["damage_section"] = {
-					},
-				},
-				["overall_added"] = true,
-				["frags"] = {
-					["血帆术士"] = 1,
-					["魅魔"] = 1,
-				},
-				["TimeData"] = {
-				},
-				["combat_counter"] = 4127,
-				["CombatSkillCache"] = {
-				},
-				["player_last_events"] = {
-				},
-				["start_time"] = 100161.934,
-				["contra"] = "血帆术士",
-				["spells_cast_timeline"] = {
-				},
-			}, -- [3]
-			{
-				{
-					["tipo"] = 2,
-					["combatId"] = 3,
-					["_ActorTable"] = {
-						{
-							["flag_original"] = 68168,
-							["totalabsorbed"] = 0.007561,
-							["damage_from"] = {
-								["白銀諾艾爾"] = true,
-							},
-							["targets"] = {
-								["白銀諾艾爾"] = 506,
-							},
-							["pets"] = {
-							},
-							["classe"] = "UNKNOW",
-							["fight_component"] = true,
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 506.007561,
-							["delay"] = 1568709608,
-							["dps_started"] = false,
-							["end_time"] = 1568709620,
-							["total"] = 506.007561,
-							["damage_taken"] = 1407.007561,
-							["nome"] = "血帆术士",
-							["spells"] = {
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 43,
-										["targets"] = {
-											["白銀諾艾爾"] = 43,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 43,
-										["n_min"] = 43,
-										["g_dmg"] = 0,
-										["counter"] = 2,
-										["total"] = 43,
-										["c_max"] = 0,
-										["r_amt"] = 0,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["a_dmg"] = 0,
-										["b_dmg"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["a_amt"] = 0,
-										["n_amt"] = 1,
-										["spellschool"] = 1,
-										["MISS"] = 1,
-									}, -- [1]
-									[0] = {
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 261,
-										["targets"] = {
-											["白銀諾艾爾"] = 463,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 463,
-										["n_min"] = 202,
-										["g_dmg"] = 0,
-										["counter"] = 2,
-										["total"] = 463,
-										["c_max"] = 0,
-										["id"] = 0,
-										["r_dmg"] = 0,
-										["r_amt"] = 0,
-										["a_amt"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 2,
-										["b_dmg"] = 0,
-										["n_amt"] = 2,
-										["a_dmg"] = 0,
-										["spellschool"] = 32,
-									},
-								},
-								["tipo"] = 2,
-							},
-							["tipo"] = 1,
-							["last_dps"] = 0,
-							["friendlyfire"] = {
-							},
-							["custom"] = 0,
-							["last_event"] = 1568709608,
-							["on_hold"] = false,
-							["start_time"] = 1568709612,
-							["serial"] = "Creature-0-4514-0-190-1564-0000009B62",
-							["monster"] = true,
-						}, -- [1]
-						{
-							["flag_original"] = 1297,
-							["totalabsorbed"] = 0.002265,
-							["damage_from"] = {
-								["血帆术士"] = true,
-								["小鬼爪牙"] = true,
-							},
-							["targets"] = {
-								["血帆术士"] = 1407,
-								["小鬼爪牙"] = 575,
-							},
-							["pets"] = {
-							},
-							["damage_taken"] = 955.002265,
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 1982.002265,
-							["classe"] = "PALADIN",
-							["dps_started"] = false,
-							["total"] = 1982.002265,
-							["delay"] = 0,
-							["end_time"] = 1568709620,
-							["nome"] = "白銀諾艾爾",
-							["spells"] = {
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 0,
-										["b_amt"] = 1,
-										["c_dmg"] = 0,
-										["g_amt"] = 1,
-										["n_max"] = 219,
-										["targets"] = {
-											["血帆术士"] = 549,
-											["小鬼爪牙"] = 394,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 785,
-										["n_min"] = 175,
-										["g_dmg"] = 158,
-										["counter"] = 5,
-										["total"] = 943,
-										["c_max"] = 0,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["r_amt"] = 0,
-										["a_amt"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 175,
-										["n_amt"] = 4,
-										["a_dmg"] = 0,
-										["spellschool"] = 1,
-									}, -- [1]
-									[0] = {
-										["c_amt"] = 2,
-										["b_amt"] = 0,
-										["c_dmg"] = 483,
-										["g_amt"] = 0,
-										["n_max"] = 192,
-										["targets"] = {
-											["血帆术士"] = 858,
-											["小鬼爪牙"] = 181,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 556,
-										["n_min"] = 18,
-										["g_dmg"] = 0,
-										["counter"] = 6,
-										["total"] = 1039,
-										["c_max"] = 245,
-										["id"] = 0,
-										["r_dmg"] = 0,
-										["r_amt"] = 0,
-										["a_amt"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 238,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 4,
-										["a_dmg"] = 0,
-										["spellschool"] = 2,
-									},
-								},
-								["tipo"] = 2,
-							},
-							["grupo"] = true,
-							["last_event"] = 1568709618,
-							["last_dps"] = 0,
-							["custom"] = 0,
-							["tipo"] = 1,
-							["friendlyfire"] = {
-							},
-							["start_time"] = 1568709602,
-							["serial"] = "Player-4497-00484697",
-							["on_hold"] = false,
-						}, -- [2]
-						{
-							["flag_original"] = 4680,
-							["totalabsorbed"] = 0.005566,
-							["damage_from"] = {
-								["白銀諾艾爾"] = true,
-							},
-							["targets"] = {
-								["白銀諾艾爾"] = 449,
-							},
-							["pets"] = {
-							},
-							["last_event"] = 1568709618,
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 449.005566,
-							["classe"] = "PET",
-							["fight_component"] = true,
-							["total"] = 449.005566,
-							["delay"] = 0,
-							["damage_taken"] = 575.005566,
-							["nome"] = "小鬼爪牙",
-							["spells"] = {
-								["_ActorTable"] = {
-									[0] = {
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 60,
-										["targets"] = {
-											["白銀諾艾爾"] = 449,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 449,
-										["n_min"] = 55,
-										["g_dmg"] = 0,
-										["counter"] = 8,
-										["total"] = 449,
-										["c_max"] = 0,
-										["id"] = 0,
-										["r_dmg"] = 0,
-										["r_amt"] = 0,
-										["a_amt"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 7,
-										["b_dmg"] = 0,
-										["n_amt"] = 8,
-										["a_dmg"] = 0,
-										["spellschool"] = 4,
-									},
-								},
-								["tipo"] = 2,
-							},
-							["on_hold"] = false,
-							["end_time"] = 1568709620,
-							["last_dps"] = 0,
-							["custom"] = 0,
-							["tipo"] = 1,
-							["friendlyfire"] = {
-							},
-							["start_time"] = 1568709602,
-							["serial"] = "Creature-0-4514-0-190-12922-0000009B63",
-							["dps_started"] = false,
-						}, -- [3]
-					},
-				}, -- [1]
-				{
-					["tipo"] = 3,
-					["combatId"] = 3,
-					["_ActorTable"] = {
-					},
-				}, -- [2]
-				{
-					["tipo"] = 7,
-					["combatId"] = 3,
-					["_ActorTable"] = {
-						{
-							["received"] = 120.007917,
-							["resource"] = 0.007917,
-							["targets"] = {
-								["白銀諾艾爾"] = 120,
-							},
-							["pets"] = {
-							},
-							["powertype"] = 0,
-							["classe"] = "PALADIN",
-							["passiveover"] = 0.007917,
-							["total"] = 120.007917,
-							["nome"] = "白銀諾艾爾",
-							["spells"] = {
-								["_ActorTable"] = {
-									[0] = {
-										["total"] = 120,
-										["id"] = 0,
-										["totalover"] = 0,
-										["targets"] = {
-											["白銀諾艾爾"] = 120,
-										},
-										["counter"] = 6,
-									},
-								},
-								["tipo"] = 7,
-							},
-							["grupo"] = true,
-							["totalover"] = 0.007917,
-							["last_event"] = 1568709634,
-							["alternatepower"] = 0.007917,
-							["tipo"] = 3,
-							["serial"] = "Player-4497-00484697",
-							["flag_original"] = 1297,
-						}, -- [1]
-					},
-				}, -- [3]
-				{
-					["tipo"] = 9,
-					["combatId"] = 3,
-					["_ActorTable"] = {
-						{
-							["flag_original"] = 1047,
-							["nome"] = "白銀諾艾爾",
-							["grupo"] = true,
-							["buff_uptime_targets"] = {
-							},
-							["spell_cast"] = {
-								[0] = 7,
-							},
-							["classe"] = "PALADIN",
-							["pets"] = {
-							},
-							["last_event"] = 1568709620,
-							["buff_uptime"] = 25,
-							["buff_uptime_spells"] = {
-								["_ActorTable"] = {
-									[0] = {
-										["activedamt"] = 3,
-										["id"] = 0,
-										["targets"] = {
-										},
-										["actived_at"] = 1568709611,
-										["uptime"] = 6,
-										["counter"] = 0,
-										["refreshamt"] = 0,
-										["actived"] = true,
-										["appliedamt"] = 3,
-									},
-									[10299] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 1,
-										["refreshamt"] = 0,
-										["id"] = 10299,
-										["uptime"] = 19,
-										["targets"] = {
-										},
-										["appliedamt"] = 1,
-									},
-									[19852] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 0,
-										["refreshamt"] = 0,
-										["id"] = 19852,
-										["uptime"] = 0,
-										["targets"] = {
-										},
-										["appliedamt"] = 0,
-									},
-									[20918] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 0,
-										["refreshamt"] = 0,
-										["id"] = 20918,
-										["uptime"] = 0,
-										["targets"] = {
-										},
-										["appliedamt"] = 0,
-									},
-								},
-								["tipo"] = 9,
-							},
-							["serial"] = "Player-4497-00484697",
-							["tipo"] = 4,
-						}, -- [1]
-						{
-							["flag_original"] = 4680,
-							["nome"] = "小鬼爪牙",
-							["last_event"] = 0,
-							["spell_cast"] = {
-								[0] = 7,
-							},
-							["pets"] = {
-							},
-							["classe"] = "PET",
-							["tipo"] = 4,
-							["serial"] = "Creature-0-4514-0-190-12922-0000009B63",
-							["fight_component"] = true,
-						}, -- [2]
-						{
-							["flag_original"] = 68168,
-							["last_event"] = 0,
-							["nome"] = "血帆术士",
-							["pets"] = {
-							},
-							["classe"] = "UNKNOW",
-							["spell_cast"] = {
-								[0] = 2,
-							},
-							["tipo"] = 4,
-							["monster"] = true,
-							["serial"] = "Creature-0-4514-0-190-1564-0000009B62",
-							["fight_component"] = true,
-						}, -- [3]
-					},
-				}, -- [4]
-				{
-					["tipo"] = 2,
-					["combatId"] = 3,
-					["_ActorTable"] = {
-					},
-				}, -- [5]
-				["raid_roster"] = {
-					["白銀諾艾爾"] = true,
-				},
-				["CombatStartedAt"] = 100158.281,
-				["overall_added"] = true,
-				["last_events_tables"] = {
-				},
-				["alternate_power"] = {
-				},
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["playing_solo"] = true,
-				["totals"] = {
-					2936.976207, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 120,
-						["alternatepower"] = 0,
-						[6] = 0,
-						[3] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["dead"] = 0,
-						["cc_break"] = 0,
-						["interrupt"] = 0,
-						["debuff_uptime"] = 0,
-						["dispell"] = 0,
-						["cooldowns_defensive"] = 0,
-					}, -- [4]
-					["voidzone_damage"] = 0,
-					["frags_total"] = 0,
-				},
-				["totals_grupo"] = {
-					1982, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 120,
-						["alternatepower"] = 0,
-						[6] = 0,
-						[3] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["dead"] = 0,
-						["cc_break"] = 0,
-						["interrupt"] = 0,
-						["debuff_uptime"] = 0,
-						["dispell"] = 0,
-						["cooldowns_defensive"] = 0,
-					}, -- [4]
-				},
-				["frags_need_refresh"] = true,
-				["instance_type"] = "none",
-				["hasSaved"] = true,
-				["data_fim"] = "16:40:20",
-				["cleu_timeline"] = {
-				},
-				["enemy"] = "血帆术士",
-				["TotalElapsedCombatTime"] = 100147.311,
-				["CombatEndedAt"] = 100147.311,
-				["aura_timeline"] = {
-				},
-				["__call"] = {
-				},
-				["data_inicio"] = "16:40:02",
-				["end_time"] = 100147.311,
-				["combat_id"] = 3,
-				["PhaseData"] = {
-					{
-						1, -- [1]
-						1, -- [2]
-					}, -- [1]
-					["damage"] = {
-						{
-							["白銀諾艾爾"] = 1982.002265,
-						}, -- [1]
-					},
-					["heal_section"] = {
-					},
-					["heal"] = {
-						{
-						}, -- [1]
-					},
-					["damage_section"] = {
-					},
-				},
-				["tempo_start"] = 1568709601,
-				["spells_cast_timeline"] = {
-				},
-				["contra"] = "血帆术士",
-				["combat_counter"] = 4126,
-				["CombatSkillCache"] = {
-				},
-				["player_last_events"] = {
-				},
-				["start_time"] = 100128.475,
-				["TimeData"] = {
-				},
-				["frags"] = {
-					["血帆术士"] = 1,
-					["血帆水兵"] = 1,
-					["小鬼爪牙"] = 1,
-				},
-			}, -- [4]
-			{
-				{
-					["tipo"] = 2,
-					["combatId"] = 2,
-					["_ActorTable"] = {
-						{
-							["flag_original"] = 1297,
-							["totalabsorbed"] = 0.003059,
-							["damage_from"] = {
-								["血帆法师"] = true,
-							},
-							["targets"] = {
-								["血帆法师"] = 1398,
-							},
-							["pets"] = {
-							},
-							["damage_taken"] = 456.003059,
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 1398.003059,
-							["classe"] = "PALADIN",
-							["dps_started"] = false,
-							["total"] = 1398.003059,
-							["delay"] = 0,
-							["end_time"] = 1568705918,
-							["nome"] = "白銀諾艾爾",
-							["spells"] = {
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 201,
-										["targets"] = {
-											["血帆法师"] = 785,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 785,
-										["n_min"] = 193,
-										["g_dmg"] = 0,
-										["counter"] = 4,
-										["total"] = 785,
-										["c_max"] = 0,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["r_amt"] = 0,
-										["a_amt"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 4,
-										["a_dmg"] = 0,
-										["spellschool"] = 1,
-									}, -- [1]
-									[0] = {
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 187,
-										["targets"] = {
-											["血帆法师"] = 613,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 613,
-										["n_min"] = 117,
-										["g_dmg"] = 0,
-										["counter"] = 4,
-										["total"] = 613,
-										["c_max"] = 0,
-										["id"] = 0,
-										["r_dmg"] = 0,
-										["r_amt"] = 0,
-										["a_amt"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 4,
-										["a_dmg"] = 0,
-										["spellschool"] = 2,
-									},
-								},
-								["tipo"] = 2,
-							},
-							["grupo"] = true,
-							["last_event"] = 1568705916,
-							["last_dps"] = 0,
-							["custom"] = 0,
-							["tipo"] = 1,
-							["friendlyfire"] = {
-							},
-							["start_time"] = 1568705906,
-							["serial"] = "Player-4497-00484697",
-							["on_hold"] = false,
-						}, -- [1]
-						{
-							["flag_original"] = 68168,
-							["totalabsorbed"] = 0.001161,
-							["damage_from"] = {
-								["断剑重铸之鈤"] = true,
-								["白銀諾艾爾"] = true,
-							},
-							["targets"] = {
-								["断剑重铸之鈤"] = 1129,
-								["白銀諾艾爾"] = 456,
-							},
-							["pets"] = {
-							},
-							["classe"] = "UNKNOW",
-							["on_hold"] = false,
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 1585.001161,
-							["delay"] = 1568706030,
-							["monster"] = true,
-							["end_time"] = 1568709601,
-							["total"] = 1585.001161,
-							["friendlyfire"] = {
-							},
-							["nome"] = "血帆法师",
-							["spells"] = {
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 42,
-										["targets"] = {
-											["断剑重铸之鈤"] = 83,
-											["白銀諾艾爾"] = 0,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 83,
-										["n_min"] = 41,
-										["g_dmg"] = 0,
-										["counter"] = 3,
-										["total"] = 83,
-										["c_max"] = 0,
-										["r_amt"] = 0,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["a_dmg"] = 0,
-										["b_dmg"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["a_amt"] = 0,
-										["n_amt"] = 2,
-										["spellschool"] = 1,
-										["DODGE"] = 1,
-									}, -- [1]
-									[0] = {
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 257,
-										["targets"] = {
-											["断剑重铸之鈤"] = 1046,
-											["白銀諾艾爾"] = 456,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 1502,
-										["n_min"] = 32,
-										["g_dmg"] = 0,
-										["counter"] = 14,
-										["total"] = 1502,
-										["c_max"] = 0,
-										["id"] = 0,
-										["r_dmg"] = 0,
-										["r_amt"] = 0,
-										["c_min"] = 0,
-										["m_crit"] = 0,
-										["n_amt"] = 11,
-										["m_amt"] = 0,
-										["successful_casted"] = 3,
-										["b_dmg"] = 0,
-										["RESIST"] = 3,
-										["a_amt"] = 0,
-										["a_dmg"] = 0,
-									},
-								},
-								["tipo"] = 2,
-							},
-							["last_event"] = 1568706030,
-							["fight_component"] = true,
-							["damage_taken"] = 2928.001161,
-							["custom"] = 0,
-							["tipo"] = 1,
-							["last_dps"] = 0,
-							["start_time"] = 1568709478,
-							["serial"] = "Creature-0-4514-0-190-1562-0000008D05",
-							["dps_started"] = false,
-						}, -- [2]
-					},
-				}, -- [1]
-				{
-					["tipo"] = 3,
-					["combatId"] = 2,
-					["_ActorTable"] = {
-					},
-				}, -- [2]
-				{
-					["tipo"] = 7,
-					["combatId"] = 2,
-					["_ActorTable"] = {
-						{
-							["received"] = 100.006157,
-							["resource"] = 0.006157,
-							["targets"] = {
-								["白銀諾艾爾"] = 100,
-							},
-							["pets"] = {
-							},
-							["powertype"] = 0,
-							["classe"] = "PALADIN",
-							["passiveover"] = 0.006157,
-							["total"] = 100.006157,
-							["nome"] = "白銀諾艾爾",
-							["spells"] = {
-								["_ActorTable"] = {
-									[0] = {
-										["total"] = 100,
-										["id"] = 0,
-										["totalover"] = 0,
-										["targets"] = {
-											["白銀諾艾爾"] = 100,
-										},
-										["counter"] = 5,
-									},
-								},
-								["tipo"] = 7,
-							},
-							["grupo"] = true,
-							["totalover"] = 0.006157,
-							["last_event"] = 1568705930,
-							["alternatepower"] = 0.006157,
-							["tipo"] = 3,
-							["serial"] = "Player-4497-00484697",
-							["flag_original"] = 1297,
-						}, -- [1]
-					},
-				}, -- [3]
-				{
-					["tipo"] = 9,
-					["combatId"] = 2,
-					["_ActorTable"] = {
-						{
-							["flag_original"] = 1047,
-							["nome"] = "白銀諾艾爾",
-							["grupo"] = true,
-							["buff_uptime_targets"] = {
-							},
-							["buff_uptime"] = 30,
-							["tipo"] = 4,
-							["spell_cast"] = {
-								[0] = 5,
-							},
-							["classe"] = "PALADIN",
-							["pets"] = {
-							},
-							["buff_uptime_spells"] = {
-								["_ActorTable"] = {
-									[10299] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 1,
-										["refreshamt"] = 0,
-										["id"] = 10299,
-										["uptime"] = 12,
-										["targets"] = {
-										},
-										["appliedamt"] = 1,
-									},
-									[0] = {
-										["activedamt"] = 2,
-										["id"] = 0,
-										["targets"] = {
-										},
-										["actived_at"] = 1568705915,
-										["uptime"] = 6,
-										["counter"] = 0,
-										["refreshamt"] = 0,
-										["actived"] = true,
-										["appliedamt"] = 2,
-									},
-									[19852] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 1,
-										["refreshamt"] = 0,
-										["id"] = 19852,
-										["uptime"] = 12,
-										["targets"] = {
-										},
-										["appliedamt"] = 1,
-									},
-									[20918] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 0,
-										["refreshamt"] = 0,
-										["id"] = 20918,
-										["uptime"] = 0,
-										["targets"] = {
-										},
-										["appliedamt"] = 0,
-									},
-								},
-								["tipo"] = 9,
-							},
-							["serial"] = "Player-4497-00484697",
-							["last_event"] = 1568705918,
-						}, -- [1]
-						{
-							["flag_original"] = 68168,
-							["last_event"] = 0,
-							["nome"] = "血帆法师",
-							["pets"] = {
-							},
-							["classe"] = "UNKNOW",
-							["spell_cast"] = {
-								[0] = 3,
-							},
-							["tipo"] = 4,
-							["monster"] = true,
-							["serial"] = "Creature-0-4514-0-190-1562-0000008D05",
-							["fight_component"] = true,
-						}, -- [2]
-					},
-				}, -- [4]
-				{
-					["tipo"] = 2,
-					["combatId"] = 2,
-					["_ActorTable"] = {
-					},
-				}, -- [5]
-				["raid_roster"] = {
-					["白銀諾艾爾"] = true,
-				},
-				["CombatStartedAt"] = 100125.047,
-				["tempo_start"] = 1568705906,
-				["last_events_tables"] = {
-				},
-				["alternate_power"] = {
-				},
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["playing_solo"] = true,
-				["totals"] = {
-					2982.946329, -- [1]
-					0, -- [2]
-					{
-						-0.00724900000000162, -- [1]
-						[0] = 99.987718,
-						["alternatepower"] = 0,
-						[6] = 0,
-						[3] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["dead"] = 0,
-						["cc_break"] = 0,
-						["interrupt"] = -0.00181399999999998,
-						["debuff_uptime"] = 0,
-						["dispell"] = 0,
-						["cooldowns_defensive"] = 0,
-					}, -- [4]
-					["voidzone_damage"] = 0,
-					["frags_total"] = 0,
-				},
-				["totals_grupo"] = {
-					1398, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 100,
-						["alternatepower"] = 0,
-						[6] = 0,
-						[3] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["dead"] = 0,
-						["cc_break"] = 0,
-						["interrupt"] = 0,
-						["debuff_uptime"] = 0,
-						["dispell"] = 0,
-						["cooldowns_defensive"] = 0,
-					}, -- [4]
-				},
-				["frags_need_refresh"] = true,
-				["instance_type"] = "none",
-				["hasSaved"] = true,
-				["data_fim"] = "15:38:39",
-				["cleu_timeline"] = {
-				},
-				["enemy"] = "血帆法师",
-				["TotalElapsedCombatTime"] = 96445.657,
-				["CombatEndedAt"] = 96445.657,
-				["aura_timeline"] = {
-				},
-				["__call"] = {
-				},
-				["data_inicio"] = "15:38:27",
-				["end_time"] = 96445.657,
-				["combat_id"] = 2,
-				["PhaseData"] = {
-					{
-						1, -- [1]
-						1, -- [2]
-					}, -- [1]
-					["damage"] = {
-						{
-							["白銀諾艾爾"] = 1398.003059,
-						}, -- [1]
-					},
-					["heal_section"] = {
-					},
-					["heal"] = {
-						{
-						}, -- [1]
-					},
-					["damage_section"] = {
-					},
-				},
-				["overall_added"] = true,
-				["frags"] = {
-					["血帆法师"] = 1,
-				},
-				["TimeData"] = {
-				},
-				["combat_counter"] = 4121,
-				["CombatSkillCache"] = {
-				},
-				["player_last_events"] = {
-				},
-				["start_time"] = 96433.766,
-				["contra"] = "血帆法师",
-				["spells_cast_timeline"] = {
-				},
-			}, -- [5]
-			{
-				{
-					["tipo"] = 2,
-					["combatId"] = 1,
-					["_ActorTable"] = {
-						{
-							["flag_original"] = 1297,
-							["totalabsorbed"] = 0.004054,
-							["damage_from"] = {
-								["血帆术士"] = true,
-								["小鬼爪牙 <血帆术士>"] = true,
-							},
-							["targets"] = {
-								["血帆术士"] = 1546,
-							},
-							["pets"] = {
-							},
-							["damage_taken"] = 956.004054,
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 1546.004054,
-							["classe"] = "PALADIN",
-							["dps_started"] = false,
-							["total"] = 1546.004054,
-							["delay"] = 0,
-							["end_time"] = 1568705878,
-							["nome"] = "白銀諾艾爾",
-							["spells"] = {
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 1,
-										["n_max"] = 192,
-										["targets"] = {
-											["血帆术士"] = 1079,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 893,
-										["n_min"] = 166,
-										["g_dmg"] = 186,
-										["counter"] = 6,
-										["total"] = 1079,
-										["c_max"] = 0,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["r_amt"] = 0,
-										["a_amt"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 5,
-										["a_dmg"] = 0,
-										["spellschool"] = 1,
-									}, -- [1]
-									[0] = {
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 165,
-										["targets"] = {
-											["血帆术士"] = 467,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 467,
-										["n_min"] = 18,
-										["g_dmg"] = 0,
-										["counter"] = 7,
-										["total"] = 467,
-										["c_max"] = 0,
-										["id"] = 0,
-										["r_dmg"] = 0,
-										["r_amt"] = 0,
-										["a_amt"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 7,
-										["a_dmg"] = 0,
-										["spellschool"] = 2,
-									},
-								},
-								["tipo"] = 2,
-							},
-							["grupo"] = true,
-							["last_event"] = 1568705877,
-							["last_dps"] = 0,
-							["custom"] = 0,
-							["tipo"] = 1,
-							["friendlyfire"] = {
-							},
-							["start_time"] = 1568705860,
-							["serial"] = "Player-4497-00484697",
-							["on_hold"] = false,
-						}, -- [1]
-						{
-							["flag_original"] = 68168,
-							["totalabsorbed"] = 0.001335,
-							["damage_from"] = {
-								["白銀諾艾爾"] = true,
-							},
-							["targets"] = {
-								["白銀諾艾爾"] = 956,
-							},
-							["pets"] = {
-								"小鬼爪牙 <血帆术士>", -- [1]
-							},
-							["classe"] = "UNKNOW",
-							["monster"] = true,
-							["friendlyfire_total"] = 0,
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 653.001335,
-							["delay"] = 0,
-							["fight_component"] = true,
-							["end_time"] = 1568705878,
-							["total"] = 956.001335,
-							["damage_taken"] = 1546.001335,
-							["nome"] = "血帆术士",
-							["spells"] = {
-								["_ActorTable"] = {
-									{
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 42,
-										["targets"] = {
-											["白銀諾艾爾"] = 162,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 162,
-										["n_min"] = 39,
-										["g_dmg"] = 0,
-										["counter"] = 4,
-										["total"] = 162,
-										["c_max"] = 0,
-										["id"] = 1,
-										["r_dmg"] = 0,
-										["r_amt"] = 0,
-										["a_amt"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 0,
-										["b_dmg"] = 0,
-										["n_amt"] = 4,
-										["a_dmg"] = 0,
-										["spellschool"] = 1,
-									}, -- [1]
-									[0] = {
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 269,
-										["targets"] = {
-											["白銀諾艾爾"] = 491,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 491,
-										["n_min"] = 222,
-										["g_dmg"] = 0,
-										["counter"] = 2,
-										["total"] = 491,
-										["c_max"] = 0,
-										["id"] = 0,
-										["r_dmg"] = 0,
-										["r_amt"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 3,
-										["b_dmg"] = 0,
-										["n_amt"] = 2,
-										["a_amt"] = 0,
-										["a_dmg"] = 0,
-									},
-								},
-								["tipo"] = 2,
-							},
-							["tipo"] = 1,
-							["last_dps"] = 0,
-							["friendlyfire"] = {
-							},
-							["custom"] = 0,
-							["last_event"] = 1568705875,
-							["on_hold"] = false,
-							["start_time"] = 1568705861,
-							["serial"] = "Creature-0-4514-0-190-1564-0000008D0A",
-							["dps_started"] = false,
-						}, -- [2]
-						{
-							["flag_original"] = 4680,
-							["totalabsorbed"] = 0.006949,
-							["damage_from"] = {
-							},
-							["targets"] = {
-								["白銀諾艾爾"] = 303,
-							},
-							["pets"] = {
-							},
-							["friendlyfire_total"] = 0,
-							["tipo"] = 1,
-							["classe"] = "PET",
-							["raid_targets"] = {
-							},
-							["total_without_pet"] = 303.006949,
-							["delay"] = 0,
-							["fight_component"] = true,
-							["total"] = 303.006949,
-							["end_time"] = 1568705878,
-							["ownerName"] = "血帆术士",
-							["nome"] = "小鬼爪牙 <血帆术士>",
-							["spells"] = {
-								["_ActorTable"] = {
-									[0] = {
-										["c_amt"] = 0,
-										["b_amt"] = 0,
-										["c_dmg"] = 0,
-										["g_amt"] = 0,
-										["n_max"] = 61,
-										["targets"] = {
-											["白銀諾艾爾"] = 303,
-										},
-										["m_dmg"] = 0,
-										["n_dmg"] = 303,
-										["n_min"] = 59,
-										["g_dmg"] = 0,
-										["counter"] = 5,
-										["total"] = 303,
-										["c_max"] = 0,
-										["id"] = 0,
-										["r_dmg"] = 0,
-										["r_amt"] = 0,
-										["m_crit"] = 0,
-										["c_min"] = 0,
-										["m_amt"] = 0,
-										["successful_casted"] = 5,
-										["b_dmg"] = 0,
-										["n_amt"] = 5,
-										["a_amt"] = 0,
-										["a_dmg"] = 0,
-									},
-								},
-								["tipo"] = 2,
-							},
-							["damage_taken"] = 0.006949,
-							["friendlyfire"] = {
-							},
-							["last_dps"] = 0,
-							["custom"] = 0,
-							["last_event"] = 1568705872,
-							["on_hold"] = false,
-							["start_time"] = 1568705863,
-							["serial"] = "Creature-0-4514-0-190-12922-0000008D3D",
-							["dps_started"] = false,
-						}, -- [3]
-					},
-				}, -- [1]
-				{
-					["tipo"] = 3,
-					["combatId"] = 1,
-					["_ActorTable"] = {
-					},
-				}, -- [2]
-				{
-					["tipo"] = 7,
-					["combatId"] = 1,
-					["_ActorTable"] = {
-						{
-							["received"] = 180.003712,
-							["resource"] = 0.003712,
-							["targets"] = {
-								["白銀諾艾爾"] = 180,
-							},
-							["pets"] = {
-							},
-							["powertype"] = 0,
-							["classe"] = "PALADIN",
-							["passiveover"] = 0.003712,
-							["total"] = 180.003712,
-							["nome"] = "白銀諾艾爾",
-							["spells"] = {
-								["_ActorTable"] = {
-									[0] = {
-										["total"] = 180,
-										["id"] = 0,
-										["totalover"] = 0,
-										["targets"] = {
-											["白銀諾艾爾"] = 180,
-										},
-										["counter"] = 9,
-									},
-								},
-								["tipo"] = 7,
-							},
-							["grupo"] = true,
-							["totalover"] = 0.003712,
-							["last_event"] = 1568705905,
-							["alternatepower"] = 0.003712,
-							["tipo"] = 3,
-							["serial"] = "Player-4497-00484697",
-							["flag_original"] = 1297,
-						}, -- [1]
-					},
-				}, -- [3]
-				{
-					["tipo"] = 9,
-					["combatId"] = 1,
-					["_ActorTable"] = {
-						{
-							["flag_original"] = 1047,
-							["nome"] = "白銀諾艾爾",
-							["grupo"] = true,
-							["buff_uptime_targets"] = {
-							},
-							["buff_uptime"] = 52,
-							["tipo"] = 4,
-							["spell_cast"] = {
-								[0] = 5,
-							},
-							["classe"] = "PALADIN",
-							["pets"] = {
-							},
-							["buff_uptime_spells"] = {
-								["_ActorTable"] = {
-									[10299] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 1,
-										["refreshamt"] = 0,
-										["id"] = 10299,
-										["uptime"] = 18,
-										["targets"] = {
-										},
-										["appliedamt"] = 1,
-									},
-									[19852] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 1,
-										["refreshamt"] = 0,
-										["id"] = 19852,
-										["uptime"] = 18,
-										["targets"] = {
-										},
-										["appliedamt"] = 1,
-									},
-									[0] = {
-										["counter"] = 0,
-										["actived"] = false,
-										["activedamt"] = 2,
-										["refreshamt"] = 0,
-										["id"] = 0,
-										["uptime"] = 16,
-										["targets"] = {
-										},
-										["appliedamt"] = 2,
-									},
-								},
-								["tipo"] = 9,
-							},
-							["serial"] = "Player-4497-00484697",
-							["last_event"] = 1568705878,
-						}, -- [1]
-						{
-							["flag_original"] = 68168,
-							["last_event"] = 0,
-							["nome"] = "血帆术士",
-							["pets"] = {
-								"小鬼爪牙 <血帆术士>", -- [1]
-							},
-							["classe"] = "UNKNOW",
-							["spell_cast"] = {
-								[0] = 3,
-							},
-							["tipo"] = 4,
-							["monster"] = true,
-							["serial"] = "Creature-0-4514-0-190-1564-0000008D0A",
-							["fight_component"] = true,
-						}, -- [2]
-						{
-							["flag_original"] = 4680,
-							["ownerName"] = "血帆术士",
-							["nome"] = "小鬼爪牙 <血帆术士>",
-							["classe"] = "PET",
-							["spell_cast"] = {
-								[0] = 5,
-							},
-							["pets"] = {
-							},
-							["tipo"] = 4,
-							["last_event"] = 0,
-							["serial"] = "Creature-0-4514-0-190-12922-0000008D3D",
-							["fight_component"] = true,
-						}, -- [3]
-					},
-				}, -- [4]
-				{
-					["tipo"] = 2,
-					["combatId"] = 1,
-					["_ActorTable"] = {
-					},
-				}, -- [5]
-				["raid_roster"] = {
-					["白銀諾艾爾"] = true,
-				},
-				["CombatStartedAt"] = 96433.085,
-				["overall_added"] = true,
-				["last_events_tables"] = {
-				},
-				["alternate_power"] = {
-				},
-				["cleu_events"] = {
-					["n"] = 1,
-				},
-				["playing_solo"] = true,
-				["totals"] = {
-					2502, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 180,
-						["alternatepower"] = 0,
-						[6] = 0,
-						[3] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["dead"] = 0,
-						["cc_break"] = 0,
-						["interrupt"] = 0,
-						["debuff_uptime"] = 0,
-						["dispell"] = 0,
-						["cooldowns_defensive"] = 0,
-					}, -- [4]
-					["voidzone_damage"] = 0,
-					["frags_total"] = 0,
-				},
-				["player_last_events"] = {
-				},
-				["frags_need_refresh"] = true,
-				["instance_type"] = "none",
-				["hasSaved"] = true,
-				["data_fim"] = "15:37:59",
-				["cleu_timeline"] = {
-				},
-				["enemy"] = "血帆术士",
-				["TotalElapsedCombatTime"] = 96405.534,
-				["CombatEndedAt"] = 96405.534,
-				["aura_timeline"] = {
-				},
-				["__call"] = {
-				},
-				["PhaseData"] = {
-					{
-						1, -- [1]
-						1, -- [2]
-					}, -- [1]
-					["damage"] = {
-						{
-							["白銀諾艾爾"] = 1546.004054,
-						}, -- [1]
-					},
-					["heal_section"] = {
-					},
-					["heal"] = {
-						{
-						}, -- [1]
-					},
-					["damage_section"] = {
-					},
-				},
-				["end_time"] = 96405.534,
-				["combat_id"] = 1,
-				["data_inicio"] = "15:37:41",
-				["tempo_start"] = 1568705860,
-				["spells_cast_timeline"] = {
-				},
-				["contra"] = "血帆术士",
-				["combat_counter"] = 4120,
-				["CombatSkillCache"] = {
-				},
-				["totals_grupo"] = {
-					1546, -- [1]
-					0, -- [2]
-					{
-						0, -- [1]
-						[0] = 180,
-						["alternatepower"] = 0,
-						[6] = 0,
-						[3] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["dead"] = 0,
-						["cc_break"] = 0,
-						["interrupt"] = 0,
-						["debuff_uptime"] = 0,
-						["dispell"] = 0,
-						["cooldowns_defensive"] = 0,
-					}, -- [4]
-				},
-				["start_time"] = 96387.921,
-				["TimeData"] = {
-				},
-				["frags"] = {
-					["血帆术士"] = 1,
-				},
-			}, -- [6]
 		},
 	},
 	["last_version"] = "v8.2.0.7183",
@@ -2914,7 +26,7 @@ _detalhes_database = {
 		["custom"] = "",
 		["next"] = "",
 	},
-	["last_instance_time"] = 1568563988,
+	["last_instance_time"] = 1568736604,
 	["active_profile"] = "白銀諾艾爾-碧玉矿洞",
 	["mythic_dungeon_currentsaved"] = {
 		["dungeon_name"] = "",
@@ -2932,7 +44,7 @@ _detalhes_database = {
 		["DETAILS_PLUGIN_TINY_THREAT"] = {
 			["updatespeed"] = 1,
 			["enabled"] = true,
-			["showamount"] = false,
+			["animate"] = false,
 			["useplayercolor"] = false,
 			["author"] = "Details! Team",
 			["useclasscolors"] = false,
@@ -2941,10 +53,9 @@ _detalhes_database = {
 				1, -- [2]
 				1, -- [3]
 			},
-			["animate"] = false,
+			["showamount"] = false,
 		},
 	},
-	["last_day"] = "17",
 	["cached_talents"] = {
 		["Player-4497-00484697"] = {
 			{
@@ -3212,25 +323,938 @@ _detalhes_database = {
 				2, -- [4]
 			}, -- [44]
 		},
+		["Player-4497-00334628"] = {
+			{
+				132282, -- [1]
+				3, -- [2]
+				1, -- [3]
+				1, -- [4]
+			}, -- [1]
+			{
+				132269, -- [1]
+				0, -- [2]
+				1, -- [3]
+				2, -- [4]
+			}, -- [2]
+			{
+				132155, -- [1]
+				3, -- [2]
+				1, -- [3]
+				3, -- [4]
+			}, -- [3]
+			{
+				132337, -- [1]
+				2, -- [2]
+				2, -- [3]
+				1, -- [4]
+			}, -- [4]
+			{
+				136031, -- [1]
+				2, -- [2]
+				2, -- [3]
+				2, -- [4]
+			}, -- [5]
+			{
+				132326, -- [1]
+				0, -- [2]
+				2, -- [3]
+				4, -- [4]
+			}, -- [6]
+			{
+				135275, -- [1]
+				2, -- [2]
+				3, -- [3]
+				1, -- [4]
+			}, -- [7]
+			{
+				135881, -- [1]
+				0, -- [2]
+				3, -- [3]
+				2, -- [4]
+			}, -- [8]
+			{
+				132090, -- [1]
+				3, -- [2]
+				3, -- [3]
+				3, -- [4]
+			}, -- [9]
+			{
+				132400, -- [1]
+				5, -- [2]
+				4, -- [3]
+				2, -- [4]
+			}, -- [10]
+			{
+				132312, -- [1]
+				2, -- [2]
+				4, -- [3]
+				3, -- [4]
+			}, -- [11]
+			{
+				132397, -- [1]
+				0, -- [2]
+				5, -- [3]
+				1, -- [4]
+			}, -- [12]
+			{
+				132306, -- [1]
+				1, -- [2]
+				5, -- [3]
+				2, -- [4]
+			}, -- [13]
+			{
+				133476, -- [1]
+				0, -- [2]
+				5, -- [3]
+				3, -- [4]
+			}, -- [14]
+			{
+				135328, -- [1]
+				4, -- [2]
+				5, -- [3]
+				4, -- [4]
+			}, -- [15]
+			{
+				135562, -- [1]
+				0, -- [2]
+				6, -- [3]
+				1, -- [4]
+			}, -- [16]
+			{
+				132316, -- [1]
+				0, -- [2]
+				6, -- [3]
+				3, -- [4]
+			}, -- [17]
+			{
+				132355, -- [1]
+				0, -- [2]
+				7, -- [3]
+				2, -- [4]
+			}, -- [18]
+			{
+				136075, -- [1]
+				0, -- [2]
+				1, -- [3]
+				2, -- [4]
+			}, -- [19]
+			{
+				132292, -- [1]
+				0, -- [2]
+				1, -- [3]
+				3, -- [4]
+			}, -- [20]
+			{
+				132366, -- [1]
+				0, -- [2]
+				2, -- [3]
+				2, -- [4]
+			}, -- [21]
+			{
+				136097, -- [1]
+				0, -- [2]
+				2, -- [3]
+				3, -- [4]
+			}, -- [22]
+			{
+				132338, -- [1]
+				0, -- [2]
+				3, -- [3]
+				1, -- [4]
+			}, -- [23]
+			{
+				136147, -- [1]
+				0, -- [2]
+				3, -- [3]
+				2, -- [4]
+			}, -- [24]
+			{
+				136218, -- [1]
+				0, -- [2]
+				3, -- [3]
+				3, -- [4]
+			}, -- [25]
+			{
+				132333, -- [1]
+				0, -- [2]
+				3, -- [3]
+				4, -- [4]
+			}, -- [26]
+			{
+				132147, -- [1]
+				0, -- [2]
+				4, -- [3]
+				1, -- [4]
+			}, -- [27]
+			{
+				135358, -- [1]
+				0, -- [2]
+				4, -- [3]
+				2, -- [4]
+			}, -- [28]
+			{
+				136224, -- [1]
+				0, -- [2]
+				4, -- [3]
+				3, -- [4]
+			}, -- [29]
+			{
+				132340, -- [1]
+				0, -- [2]
+				5, -- [3]
+				1, -- [4]
+			}, -- [30]
+			{
+				136146, -- [1]
+				0, -- [2]
+				5, -- [3]
+				2, -- [4]
+			}, -- [31]
+			{
+				132307, -- [1]
+				0, -- [2]
+				5, -- [3]
+				4, -- [4]
+			}, -- [32]
+			{
+				136009, -- [1]
+				0, -- [2]
+				6, -- [3]
+				1, -- [4]
+			}, -- [33]
+			{
+				132152, -- [1]
+				0, -- [2]
+				6, -- [3]
+				3, -- [4]
+			}, -- [34]
+			{
+				136012, -- [1]
+				0, -- [2]
+				7, -- [3]
+				2, -- [4]
+			}, -- [35]
+			{
+				134952, -- [1]
+				0, -- [2]
+				1, -- [3]
+				2, -- [4]
+			}, -- [36]
+			{
+				136056, -- [1]
+				0, -- [2]
+				1, -- [3]
+				3, -- [4]
+			}, -- [37]
+			{
+				132277, -- [1]
+				0, -- [2]
+				2, -- [3]
+				1, -- [4]
+			}, -- [38]
+			{
+				135892, -- [1]
+				0, -- [2]
+				2, -- [3]
+				3, -- [4]
+			}, -- [39]
+			{
+				135995, -- [1]
+				0, -- [2]
+				2, -- [3]
+				4, -- [4]
+			}, -- [40]
+			{
+				135871, -- [1]
+				0, -- [2]
+				3, -- [3]
+				1, -- [4]
+			}, -- [41]
+			{
+				132110, -- [1]
+				0, -- [2]
+				3, -- [3]
+				2, -- [4]
+			}, -- [42]
+			{
+				132353, -- [1]
+				0, -- [2]
+				3, -- [3]
+				3, -- [4]
+			}, -- [43]
+			{
+				132347, -- [1]
+				0, -- [2]
+				3, -- [3]
+				4, -- [4]
+			}, -- [44]
+			{
+				132363, -- [1]
+				0, -- [2]
+				4, -- [3]
+				1, -- [4]
+			}, -- [45]
+			{
+				132343, -- [1]
+				0, -- [2]
+				4, -- [3]
+				2, -- [4]
+			}, -- [46]
+			{
+				136080, -- [1]
+				0, -- [2]
+				4, -- [3]
+				3, -- [4]
+			}, -- [47]
+			{
+				132362, -- [1]
+				0, -- [2]
+				5, -- [3]
+				1, -- [4]
+			}, -- [48]
+			{
+				132325, -- [1]
+				0, -- [2]
+				5, -- [3]
+				2, -- [4]
+			}, -- [49]
+			{
+				132357, -- [1]
+				0, -- [2]
+				5, -- [3]
+				3, -- [4]
+			}, -- [50]
+			{
+				135321, -- [1]
+				0, -- [2]
+				6, -- [3]
+				3, -- [4]
+			}, -- [51]
+			{
+				134951, -- [1]
+				0, -- [2]
+				7, -- [3]
+				2, -- [4]
+			}, -- [52]
+		},
+		["Player-4497-0056679A"] = {
+			{
+				136230, -- [1]
+				3, -- [2]
+				1, -- [3]
+				2, -- [4]
+			}, -- [1]
+			{
+				136118, -- [1]
+				5, -- [2]
+				1, -- [3]
+				3, -- [4]
+			}, -- [2]
+			{
+				136138, -- [1]
+				0, -- [2]
+				2, -- [3]
+				1, -- [4]
+			}, -- [3]
+			{
+				136163, -- [1]
+				2, -- [2]
+				2, -- [3]
+				2, -- [4]
+			}, -- [4]
+			{
+				136126, -- [1]
+				2, -- [2]
+				2, -- [3]
+				3, -- [4]
+			}, -- [5]
+			{
+				136169, -- [1]
+				3, -- [2]
+				2, -- [3]
+				4, -- [4]
+			}, -- [6]
+			{
+				136139, -- [1]
+				3, -- [2]
+				3, -- [3]
+				1, -- [4]
+			}, -- [7]
+			{
+				136157, -- [1]
+				0, -- [2]
+				3, -- [3]
+				2, -- [4]
+			}, -- [8]
+			{
+				136132, -- [1]
+				1, -- [2]
+				3, -- [3]
+				3, -- [4]
+			}, -- [9]
+			{
+				136127, -- [1]
+				2, -- [2]
+				4, -- [3]
+				1, -- [4]
+			}, -- [10]
+			{
+				136223, -- [1]
+				2, -- [2]
+				4, -- [3]
+				2, -- [4]
+			}, -- [11]
+			{
+				136208, -- [1]
+				0, -- [2]
+				4, -- [3]
+				4, -- [4]
+			}, -- [12]
+			{
+				136188, -- [1]
+				1, -- [2]
+				5, -- [3]
+				2, -- [4]
+			}, -- [13]
+			{
+				136162, -- [1]
+				1, -- [2]
+				5, -- [3]
+				3, -- [4]
+			}, -- [14]
+			{
+				136162, -- [1]
+				0, -- [2]
+				5, -- [3]
+				4, -- [4]
+			}, -- [15]
+			{
+				136195, -- [1]
+				5, -- [2]
+				6, -- [3]
+				2, -- [4]
+			}, -- [16]
+			{
+				136141, -- [1]
+				0, -- [2]
+				7, -- [3]
+				2, -- [4]
+			}, -- [17]
+			{
+				135230, -- [1]
+				0, -- [2]
+				1, -- [3]
+				1, -- [4]
+			}, -- [18]
+			{
+				136218, -- [1]
+				0, -- [2]
+				1, -- [3]
+				2, -- [4]
+			}, -- [19]
+			{
+				136172, -- [1]
+				1, -- [2]
+				1, -- [3]
+				3, -- [4]
+			}, -- [20]
+			{
+				136168, -- [1]
+				0, -- [2]
+				2, -- [3]
+				1, -- [4]
+			}, -- [21]
+			{
+				136221, -- [1]
+				0, -- [2]
+				2, -- [3]
+				2, -- [4]
+			}, -- [22]
+			{
+				135932, -- [1]
+				0, -- [2]
+				2, -- [3]
+				3, -- [4]
+			}, -- [23]
+			{
+				136220, -- [1]
+				0, -- [2]
+				3, -- [3]
+				1, -- [4]
+			}, -- [24]
+			{
+				136082, -- [1]
+				0, -- [2]
+				3, -- [3]
+				2, -- [4]
+			}, -- [25]
+			{
+				136121, -- [1]
+				0, -- [2]
+				3, -- [3]
+				3, -- [4]
+			}, -- [26]
+			{
+				136164, -- [1]
+				0, -- [2]
+				4, -- [3]
+				2, -- [4]
+			}, -- [27]
+			{
+				136206, -- [1]
+				0, -- [2]
+				4, -- [3]
+				3, -- [4]
+			}, -- [28]
+			{
+				136154, -- [1]
+				0, -- [2]
+				5, -- [3]
+				1, -- [4]
+			}, -- [29]
+			{
+				136184, -- [1]
+				0, -- [2]
+				5, -- [3]
+				2, -- [4]
+			}, -- [30]
+			{
+				132386, -- [1]
+				0, -- [2]
+				5, -- [3]
+				4, -- [4]
+			}, -- [31]
+			{
+				136203, -- [1]
+				0, -- [2]
+				6, -- [3]
+				3, -- [4]
+			}, -- [32]
+			{
+				136160, -- [1]
+				0, -- [2]
+				7, -- [3]
+				2, -- [4]
+			}, -- [33]
+			{
+				134131, -- [1]
+				0, -- [2]
+				7, -- [3]
+				3, -- [4]
+			}, -- [34]
+			{
+				136197, -- [1]
+				0, -- [2]
+				1, -- [3]
+				2, -- [4]
+			}, -- [35]
+			{
+				135831, -- [1]
+				0, -- [2]
+				1, -- [3]
+				3, -- [4]
+			}, -- [36]
+			{
+				136146, -- [1]
+				0, -- [2]
+				2, -- [3]
+				2, -- [4]
+			}, -- [37]
+			{
+				135805, -- [1]
+				0, -- [2]
+				2, -- [3]
+				3, -- [4]
+			}, -- [38]
+			{
+				135809, -- [1]
+				0, -- [2]
+				3, -- [3]
+				1, -- [4]
+			}, -- [39]
+			{
+				136136, -- [1]
+				0, -- [2]
+				3, -- [3]
+				2, -- [4]
+			}, -- [40]
+			{
+				135813, -- [1]
+				0, -- [2]
+				3, -- [3]
+				3, -- [4]
+			}, -- [41]
+			{
+				136191, -- [1]
+				0, -- [2]
+				3, -- [3]
+				4, -- [4]
+			}, -- [42]
+			{
+				135819, -- [1]
+				0, -- [2]
+				4, -- [3]
+				1, -- [4]
+			}, -- [43]
+			{
+				136133, -- [1]
+				0, -- [2]
+				4, -- [3]
+				2, -- [4]
+			}, -- [44]
+			{
+				135827, -- [1]
+				0, -- [2]
+				4, -- [3]
+				4, -- [4]
+			}, -- [45]
+			{
+				135830, -- [1]
+				0, -- [2]
+				5, -- [3]
+				1, -- [4]
+			}, -- [46]
+			{
+				135817, -- [1]
+				0, -- [2]
+				5, -- [3]
+				2, -- [4]
+			}, -- [47]
+			{
+				136207, -- [1]
+				0, -- [2]
+				5, -- [3]
+				3, -- [4]
+			}, -- [48]
+			{
+				135826, -- [1]
+				0, -- [2]
+				6, -- [3]
+				3, -- [4]
+			}, -- [49]
+			{
+				135807, -- [1]
+				0, -- [2]
+				7, -- [3]
+				2, -- [4]
+			}, -- [50]
+		},
+		["Player-4497-00619488"] = {
+			{
+				135894, -- [1]
+				2, -- [2]
+				1, -- [3]
+				1, -- [4]
+			}, -- [1]
+			{
+				135892, -- [1]
+				0, -- [2]
+				1, -- [3]
+				2, -- [4]
+			}, -- [2]
+			{
+				136096, -- [1]
+				0, -- [2]
+				1, -- [3]
+				3, -- [4]
+			}, -- [3]
+			{
+				135463, -- [1]
+				0, -- [2]
+				2, -- [3]
+				1, -- [4]
+			}, -- [4]
+			{
+				136011, -- [1]
+				0, -- [2]
+				2, -- [3]
+				2, -- [4]
+			}, -- [5]
+			{
+				136170, -- [1]
+				0, -- [2]
+				2, -- [3]
+				3, -- [4]
+			}, -- [6]
+			{
+				136006, -- [1]
+				0, -- [2]
+				3, -- [3]
+				1, -- [4]
+			}, -- [7]
+			{
+				136116, -- [1]
+				0, -- [2]
+				3, -- [3]
+				2, -- [4]
+			}, -- [8]
+			{
+				135733, -- [1]
+				0, -- [2]
+				3, -- [3]
+				3, -- [4]
+			}, -- [9]
+			{
+				136153, -- [1]
+				0, -- [2]
+				4, -- [3]
+				1, -- [4]
+			}, -- [10]
+			{
+				135856, -- [1]
+				0, -- [2]
+				4, -- [3]
+				2, -- [4]
+			}, -- [11]
+			{
+				136208, -- [1]
+				0, -- [2]
+				4, -- [3]
+				4, -- [4]
+			}, -- [12]
+			{
+				136031, -- [1]
+				0, -- [2]
+				5, -- [3]
+				2, -- [4]
+			}, -- [13]
+			{
+				136129, -- [1]
+				0, -- [2]
+				5, -- [3]
+				3, -- [4]
+			}, -- [14]
+			{
+				136222, -- [1]
+				0, -- [2]
+				6, -- [3]
+				2, -- [4]
+			}, -- [15]
+			{
+				136048, -- [1]
+				0, -- [2]
+				7, -- [3]
+				2, -- [4]
+			}, -- [16]
+			{
+				135812, -- [1]
+				0, -- [2]
+				1, -- [3]
+				2, -- [4]
+			}, -- [17]
+			{
+				135821, -- [1]
+				0, -- [2]
+				1, -- [3]
+				3, -- [4]
+			}, -- [18]
+			{
+				135818, -- [1]
+				0, -- [2]
+				2, -- [3]
+				1, -- [4]
+			}, -- [19]
+			{
+				135815, -- [1]
+				0, -- [2]
+				2, -- [3]
+				2, -- [4]
+			}, -- [20]
+			{
+				135807, -- [1]
+				0, -- [2]
+				2, -- [3]
+				3, -- [4]
+			}, -- [21]
+			{
+				135813, -- [1]
+				0, -- [2]
+				3, -- [3]
+				1, -- [4]
+			}, -- [22]
+			{
+				135826, -- [1]
+				0, -- [2]
+				3, -- [3]
+				2, -- [4]
+			}, -- [23]
+			{
+				135808, -- [1]
+				0, -- [2]
+				3, -- [3]
+				3, -- [4]
+			}, -- [24]
+			{
+				135805, -- [1]
+				0, -- [2]
+				3, -- [3]
+				4, -- [4]
+			}, -- [25]
+			{
+				135827, -- [1]
+				0, -- [2]
+				4, -- [3]
+				1, -- [4]
+			}, -- [26]
+			{
+				135806, -- [1]
+				0, -- [2]
+				4, -- [3]
+				2, -- [4]
+			}, -- [27]
+			{
+				135820, -- [1]
+				0, -- [2]
+				4, -- [3]
+				4, -- [4]
+			}, -- [28]
+			{
+				136115, -- [1]
+				0, -- [2]
+				5, -- [3]
+				2, -- [4]
+			}, -- [29]
+			{
+				135903, -- [1]
+				0, -- [2]
+				5, -- [3]
+				3, -- [4]
+			}, -- [30]
+			{
+				135817, -- [1]
+				0, -- [2]
+				6, -- [3]
+				3, -- [4]
+			}, -- [31]
+			{
+				135824, -- [1]
+				0, -- [2]
+				7, -- [3]
+				2, -- [4]
+			}, -- [32]
+			{
+				135850, -- [1]
+				2, -- [2]
+				1, -- [3]
+				1, -- [4]
+			}, -- [33]
+			{
+				135846, -- [1]
+				5, -- [2]
+				1, -- [3]
+				2, -- [4]
+			}, -- [34]
+			{
+				135989, -- [1]
+				3, -- [2]
+				1, -- [3]
+				3, -- [4]
+			}, -- [35]
+			{
+				135855, -- [1]
+				4, -- [2]
+				2, -- [3]
+				1, -- [4]
+			}, -- [36]
+			{
+				135842, -- [1]
+				1, -- [2]
+				2, -- [3]
+				2, -- [4]
+			}, -- [37]
+			{
+				135840, -- [1]
+				0, -- [2]
+				2, -- [3]
+				3, -- [4]
+			}, -- [38]
+			{
+				135864, -- [1]
+				0, -- [2]
+				2, -- [3]
+				4, -- [4]
+			}, -- [39]
+			{
+				135845, -- [1]
+				3, -- [2]
+				3, -- [3]
+				1, -- [4]
+			}, -- [40]
+			{
+				135865, -- [1]
+				0, -- [2]
+				3, -- [3]
+				2, -- [4]
+			}, -- [41]
+			{
+				135857, -- [1]
+				1, -- [2]
+				3, -- [3]
+				4, -- [4]
+			}, -- [42]
+			{
+				136141, -- [1]
+				2, -- [2]
+				4, -- [3]
+				1, -- [4]
+			}, -- [43]
+			{
+				135860, -- [1]
+				3, -- [2]
+				4, -- [3]
+				2, -- [4]
+			}, -- [44]
+			{
+				135849, -- [1]
+				0, -- [2]
+				4, -- [3]
+				3, -- [4]
+			}, -- [45]
+			{
+				135841, -- [1]
+				1, -- [2]
+				5, -- [3]
+				2, -- [4]
+			}, -- [46]
+			{
+				135852, -- [1]
+				0, -- [2]
+				5, -- [3]
+				3, -- [4]
+			}, -- [47]
+			{
+				135836, -- [1]
+				1, -- [2]
+				6, -- [3]
+				3, -- [4]
+			}, -- [48]
+			{
+				135988, -- [1]
+				0, -- [2]
+				7, -- [3]
+				2, -- [4]
+			}, -- [49]
+		},
 	},
 	["announce_prepots"] = {
 		["enabled"] = true,
 		["channel"] = "SELF",
 		["reverse"] = false,
 	},
+	["last_day"] = "18",
 	["benchmark_db"] = {
 		["frame"] = {
 		},
 	},
 	["last_realversion"] = 140,
-	["combat_id"] = 6,
+	["combat_id"] = 28,
 	["savedStyles"] = {
 	},
 	["announce_firsthit"] = {
 		["enabled"] = true,
 		["channel"] = "SELF",
 	},
-	["combat_counter"] = 4134,
+	["combat_counter"] = 4234,
 	["announce_deaths"] = {
 		["enabled"] = false,
 		["last_hits"] = 1,
@@ -3242,401 +1266,240 @@ _detalhes_database = {
 			["tipo"] = 2,
 			["_ActorTable"] = {
 				{
-					["flag_original"] = 1297,
-					["totalabsorbed"] = 0.031726,
+					["flag_original"] = 1298,
+					["totalabsorbed"] = 0.151031,
+					["friendlyfire"] = {
+						["海豹"] = {
+							["spells"] = {
+								[0] = 16,
+							},
+							["total"] = 16,
+						},
+					},
 					["damage_from"] = {
-						["血帆术士"] = true,
-						["小鬼爪牙 <血帆术士>"] = true,
-						["血帆法师"] = true,
-						["南部沙蟹"] = true,
-						["小鬼爪牙"] = true,
-						["魅魔"] = true,
+						["血色卫兵"] = true,
+						["赫洛德"] = true,
+						["血色保卫者"] = true,
+						["血色防御者"] = true,
+						["火元素"] = true,
+						["血色士兵"] = true,
+						["血色仆从"] = true,
+						["海豹"] = true,
+						["血色招魂师"] = true,
+						["血色咒术师"] = true,
+						["血色预备兵"] = true,
 					},
 					["targets"] = {
-						["血帆术士"] = 4457,
-						["南部沙蟹"] = 4044,
-						["魅魔"] = 1180,
-						["血帆法师"] = 1398,
-						["小鬼爪牙"] = 575,
+						["血色卫兵"] = 18458,
+						["赫洛德"] = 2909,
+						["血色保卫者"] = 11886,
+						["血色防御者"] = 12983,
+						["火元素"] = 2007,
+						["血色士兵"] = 14602,
+						["血色仆从"] = 11080,
+						["血色招魂师"] = 3205,
+						["血色咒术师"] = 3735,
+						["血色预备兵"] = 1068,
 					},
 					["pets"] = {
 					},
-					["friendlyfire_total"] = 0,
+					["colocacao"] = 1,
+					["fight_component"] = true,
+					["friendlyfire_total"] = 16,
 					["raid_targets"] = {
+						[8] = 7189,
 					},
-					["total_without_pet"] = 11654.031726,
-					["end_time"] = 1568705879,
-					["tipo"] = 1,
+					["total_without_pet"] = 81933.151031,
+					["classe"] = "WARRIOR",
 					["dps_started"] = false,
-					["total"] = 11654.031726,
-					["classe"] = "PALADIN",
-					["delay"] = 0,
-					["nome"] = "白銀諾艾爾",
+					["total"] = 81933.151031,
+					["last_event"] = 0,
+					["end_time"] = 1568736683,
+					["nome"] = "海豹",
 					["spells"] = {
+						["tipo"] = 2,
 						["_ActorTable"] = {
 							{
-								["c_amt"] = 5,
-								["b_amt"] = 1,
-								["c_dmg"] = 1444,
-								["g_amt"] = 4,
-								["n_max"] = 219,
+								["c_amt"] = 14,
+								["b_amt"] = 26,
+								["c_dmg"] = 3759,
+								["g_amt"] = 82,
+								["n_max"] = 193,
 								["targets"] = {
-									["血帆术士"] = 2572,
-									["南部沙蟹"] = 2307,
-									["魅魔"] = 354,
-									["血帆法师"] = 785,
-									["小鬼爪牙"] = 394,
+									["血色卫兵"] = 7456,
+									["赫洛德"] = 1653,
+									["血色保卫者"] = 6310,
+									["血色防御者"] = 5558,
+									["火元素"] = 143,
+									["血色士兵"] = 5493,
+									["血色仆从"] = 4626,
+									["血色招魂师"] = 1651,
+									["血色咒术师"] = 1888,
+									["血色预备兵"] = 1068,
 								},
 								["m_dmg"] = 0,
-								["n_dmg"] = 4295,
+								["n_dmg"] = 24712,
 								["n_min"] = 0,
-								["g_dmg"] = 673,
-								["counter"] = 37,
-								["total"] = 6412,
-								["c_max"] = 400,
-								["c_min"] = 0,
+								["g_dmg"] = 7375,
+								["counter"] = 343,
+								["a_amt"] = 0,
+								["total"] = 35846,
+								["c_max"] = 361,
+								["DODGE"] = 14,
 								["id"] = 1,
 								["r_dmg"] = 0,
-								["r_amt"] = 0,
-								["a_amt"] = 0,
+								["MISS"] = 26,
+								["a_dmg"] = 0,
 								["m_crit"] = 0,
-								["PARRY"] = 2,
+								["PARRY"] = 21,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
-								["b_dmg"] = 175,
-								["n_amt"] = 25,
-								["a_dmg"] = 0,
-								["DODGE"] = 1,
-							}, -- [1]
-							[0] = {
-								["c_amt"] = 7,
-								["b_amt"] = 0,
-								["c_dmg"] = 1684,
-								["g_amt"] = 0,
-								["n_max"] = 238,
-								["targets"] = {
-									["血帆术士"] = 1885,
-									["南部沙蟹"] = 1737,
-									["魅魔"] = 826,
-									["血帆法师"] = 613,
-									["小鬼爪牙"] = 181,
-								},
-								["m_dmg"] = 0,
-								["n_dmg"] = 3558,
-								["n_min"] = 0,
-								["g_dmg"] = 0,
-								["counter"] = 64,
-								["total"] = 5242,
-								["c_max"] = 249,
-								["id"] = 0,
-								["r_dmg"] = 0,
+								["b_dmg"] = 2727,
+								["n_amt"] = 186,
 								["r_amt"] = 0,
 								["c_min"] = 0,
+							}, -- [1]
+							[0] = {
+								["c_amt"] = 13,
+								["b_amt"] = 22,
+								["c_dmg"] = 4119,
+								["g_amt"] = 0,
+								["n_max"] = 354,
+								["targets"] = {
+									["血色卫兵"] = 11002,
+									["赫洛德"] = 1256,
+									["血色保卫者"] = 5576,
+									["血色防御者"] = 7425,
+									["火元素"] = 1864,
+									["血色士兵"] = 9109,
+									["血色仆从"] = 6454,
+									["血色招魂师"] = 1554,
+									["血色咒术师"] = 1847,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 41968,
+								["IMMUNE"] = 1,
+								["MISS"] = 20,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 548,
+								["DODGE"] = 16,
+								["total"] = 46087,
+								["c_max"] = 497,
+								["a_amt"] = 0,
+								["id"] = 0,
+								["r_dmg"] = 0,
+								["RESIST"] = 3,
+								["a_dmg"] = 0,
 								["m_crit"] = 0,
-								["n_amt"] = 56,
+								["PARRY"] = 14,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
-								["b_dmg"] = 0,
-								["RESIST"] = 1,
-								["a_amt"] = 0,
-								["a_dmg"] = 0,
+								["b_dmg"] = 2760,
+								["n_amt"] = 481,
+								["r_amt"] = 0,
+								["c_min"] = 0,
 							},
 						},
-						["tipo"] = 2,
 					},
 					["grupo"] = true,
-					["friendlyfire"] = {
-					},
-					["damage_taken"] = 4975.031726,
-					["custom"] = 0,
-					["colocacao"] = 1,
-					["last_event"] = 0,
 					["on_hold"] = false,
-					["start_time"] = 1568705751,
-					["serial"] = "Player-4497-00484697",
-					["last_dps"] = 92.6231638822991,
+					["serial"] = "Player-4497-00334628",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["last_dps"] = 58.0641842384553,
+					["start_time"] = 1568735379,
+					["delay"] = 0,
+					["damage_taken"] = 39880.151031,
 				}, -- [1]
 				{
-					["flag_original"] = 68168,
-					["totalabsorbed"] = 0.014658,
+					["flag_original"] = 1298,
+					["totalabsorbed"] = 0.128495,
 					["damage_from"] = {
-						["白銀諾艾爾"] = true,
+						["血色士兵"] = true,
+						["血色仆从"] = true,
+						["血色卫兵"] = true,
+						["血色预备兵"] = true,
+						["血色保卫者"] = true,
+						["血色咒术师"] = true,
+						["血色防御者"] = true,
 					},
 					["targets"] = {
-						["索格努兹"] = 0,
-						["掌声送给社会人"] = 0,
-						["轩辕酷酷"] = 0,
-						["呼儿马"] = 0,
-						["豹"] = 0,
-						["白銀諾艾爾"] = 2088,
+						["血色卫兵"] = 12266,
+						["赫洛德"] = 2969,
+						["血色保卫者"] = 12171,
+						["血色防御者"] = 11463,
+						["火元素"] = 207,
+						["血色士兵"] = 12076,
+						["血色仆从"] = 10112,
+						["血色招魂师"] = 2578,
+						["血色咒术师"] = 1603,
+						["血色预备兵"] = 2843,
 					},
 					["pets"] = {
-						"小鬼爪牙 <血帆术士>", -- [1]
 					},
-					["dps_started"] = false,
-					["on_hold"] = false,
 					["friendlyfire_total"] = 0,
 					["raid_targets"] = {
+						[8] = 6122,
 					},
-					["total_without_pet"] = 1785.014658,
-					["delay"] = 0,
-					["fight_component"] = true,
-					["total"] = 2088.014658,
-					["classe"] = "UNKNOW",
-					["last_dps"] = 0,
-					["nome"] = "血帆术士",
+					["total_without_pet"] = 68288.128495,
+					["classe"] = "MAGE",
+					["colocacao"] = 2,
+					["dps_started"] = false,
+					["end_time"] = 1568736683,
+					["last_event"] = 0,
+					["total"] = 68288.128495,
+					["nome"] = "Fuse",
 					["spells"] = {
+						["tipo"] = 2,
 						["_ActorTable"] = {
-							{
-								["c_amt"] = 0,
-								["b_amt"] = 0,
-								["c_dmg"] = 0,
-								["g_amt"] = 0,
-								["n_max"] = 44,
-								["targets"] = {
-									["呼儿马"] = 0,
-									["白銀諾艾爾"] = 286,
-									["豹"] = 0,
-									["掌声送给社会人"] = 0,
-								},
-								["m_dmg"] = 0,
-								["n_dmg"] = 286,
-								["n_min"] = 0,
-								["g_dmg"] = 0,
-								["counter"] = 8,
-								["total"] = 286,
-								["c_max"] = 0,
-								["id"] = 1,
-								["r_dmg"] = 0,
-								["r_amt"] = 0,
-								["a_amt"] = 0,
-								["m_crit"] = 0,
-								["c_min"] = 0,
-								["m_amt"] = 0,
-								["successful_casted"] = 0,
-								["b_dmg"] = 0,
-								["n_amt"] = 7,
-								["a_dmg"] = 0,
-								["MISS"] = 1,
-							}, -- [1]
 							[0] = {
-								["c_amt"] = 0,
+								["c_amt"] = 18,
 								["b_amt"] = 0,
-								["c_dmg"] = 0,
+								["c_dmg"] = 6156,
 								["g_amt"] = 0,
-								["n_max"] = 276,
+								["n_max"] = 209,
 								["targets"] = {
-									["索格努兹"] = 0,
-									["掌声送给社会人"] = 0,
-									["轩辕酷酷"] = 0,
-									["呼儿马"] = 0,
-									["豹"] = 0,
-									["白銀諾艾爾"] = 1499,
+									["血色卫兵"] = 12266,
+									["赫洛德"] = 2969,
+									["血色保卫者"] = 12171,
+									["血色防御者"] = 11463,
+									["火元素"] = 207,
+									["血色士兵"] = 12076,
+									["血色仆从"] = 10112,
+									["血色招魂师"] = 2578,
+									["血色咒术师"] = 1603,
+									["血色预备兵"] = 2843,
 								},
 								["m_dmg"] = 0,
-								["n_dmg"] = 1499,
+								["n_dmg"] = 62132,
 								["n_min"] = 0,
 								["g_dmg"] = 0,
-								["counter"] = 6,
-								["total"] = 1499,
-								["c_max"] = 0,
+								["counter"] = 477,
+								["total"] = 68288,
+								["c_max"] = 395,
+								["IMMUNE"] = 3,
 								["id"] = 0,
-								["r_dmg"] = 0,
-								["r_amt"] = 0,
-								["m_crit"] = 0,
-								["c_min"] = 0,
-								["m_amt"] = 0,
-								["successful_casted"] = 6,
-								["b_dmg"] = 0,
-								["n_amt"] = 6,
-								["a_amt"] = 0,
+								["r_dmg"] = 25,
+								["RESIST"] = 9,
 								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["a_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 0,
+								["n_amt"] = 447,
+								["r_amt"] = 1,
+								["c_min"] = 0,
 							},
-						},
-						["tipo"] = 2,
-					},
-					["tipo"] = 1,
-					["damage_taken"] = 4457.014658,
-					["end_time"] = 1568705879,
-					["custom"] = 0,
-					["last_event"] = 0,
-					["friendlyfire"] = {
-					},
-					["start_time"] = 1568705843,
-					["serial"] = "Creature-0-4514-0-190-1564-0000008D0A",
-					["monster"] = true,
-				}, -- [2]
-				{
-					["flag_original"] = 68136,
-					["totalabsorbed"] = 0.010683,
-					["damage_from"] = {
-						["白銀諾艾爾"] = true,
-					},
-					["targets"] = {
-						["白銀諾艾爾"] = 1195,
-					},
-					["pets"] = {
-					},
-					["on_hold"] = false,
-					["classe"] = "UNKNOW",
-					["raid_targets"] = {
-					},
-					["total_without_pet"] = 1195.010683,
-					["fight_component"] = true,
-					["dps_started"] = false,
-					["end_time"] = 1568712751,
-					["friendlyfire"] = {
-					},
-					["last_event"] = 0,
-					["nome"] = "南部沙蟹",
-					["spells"] = {
-						["tipo"] = 2,
-						["_ActorTable"] = {
-							{
-								["c_amt"] = 2,
-								["b_amt"] = 0,
-								["c_dmg"] = 212,
-								["g_amt"] = 0,
-								["n_max"] = 59,
-								["targets"] = {
-									["白銀諾艾爾"] = 1195,
-								},
-								["m_dmg"] = 0,
-								["n_dmg"] = 983,
-								["n_min"] = 0,
-								["g_dmg"] = 0,
-								["counter"] = 24,
-								["total"] = 1195,
-								["c_max"] = 117,
-								["DODGE"] = 1,
-								["id"] = 1,
-								["r_dmg"] = 0,
-								["MISS"] = 2,
-								["a_dmg"] = 0,
-								["m_crit"] = 0,
-								["a_amt"] = 0,
-								["m_amt"] = 0,
-								["successful_casted"] = 0,
-								["b_dmg"] = 0,
-								["n_amt"] = 19,
-								["r_amt"] = 0,
-								["c_min"] = 0,
-							}, -- [1]
-						},
-					},
-					["friendlyfire_total"] = 0,
-					["total"] = 1195.010683,
-					["serial"] = "Creature-0-4514-0-190-2544-00000080AC",
-					["custom"] = 0,
-					["tipo"] = 1,
-					["damage_taken"] = 4044.010683,
-					["start_time"] = 1568712700,
-					["delay"] = 0,
-					["last_dps"] = 0,
-				}, -- [3]
-				{
-					["flag_original"] = 4680,
-					["totalabsorbed"] = 0.015489,
-					["damage_from"] = {
-						["白銀諾艾爾"] = true,
-					},
-					["targets"] = {
-						["呼儿马"] = 0,
-						["白銀諾艾爾"] = 787,
-					},
-					["pets"] = {
-					},
-					["tipo"] = 1,
-					["classe"] = "PET",
-					["raid_targets"] = {
-					},
-					["total_without_pet"] = 787.015489,
-					["friendlyfire_total"] = 0,
-					["fight_component"] = true,
-					["end_time"] = 1568709661,
-					["delay"] = 0,
-					["damage_taken"] = 1180.015489,
-					["nome"] = "魅魔",
-					["spells"] = {
-						["_ActorTable"] = {
-							{
-								["c_amt"] = 2,
-								["b_amt"] = 0,
-								["c_dmg"] = 258,
-								["g_amt"] = 0,
-								["n_max"] = 73,
-								["targets"] = {
-									["呼儿马"] = 0,
-									["白銀諾艾爾"] = 787,
-								},
-								["m_dmg"] = 0,
-								["n_dmg"] = 529,
-								["n_min"] = 0,
-								["g_dmg"] = 0,
-								["counter"] = 10,
-								["total"] = 787,
-								["c_max"] = 136,
-								["id"] = 1,
-								["r_dmg"] = 0,
-								["r_amt"] = 0,
-								["m_crit"] = 0,
-								["c_min"] = 0,
-								["m_amt"] = 0,
-								["successful_casted"] = 0,
-								["b_dmg"] = 0,
-								["n_amt"] = 8,
-								["a_amt"] = 0,
-								["a_dmg"] = 0,
-							}, -- [1]
-						},
-						["tipo"] = 2,
-					},
-					["on_hold"] = false,
-					["total"] = 787.015489,
-					["friendlyfire"] = {
-					},
-					["custom"] = 0,
-					["last_event"] = 0,
-					["last_dps"] = 0,
-					["start_time"] = 1568709633,
-					["serial"] = "Creature-0-4514-0-190-10928-0000009B78",
-					["dps_started"] = false,
-				}, -- [4]
-				{
-					["flag_original"] = 68168,
-					["totalabsorbed"] = 0.00688,
-					["damage_from"] = {
-						["白銀諾艾爾"] = true,
-					},
-					["targets"] = {
-						["断剑重铸之鈤"] = 0,
-						["白銀諾艾爾"] = 456,
-					},
-					["pets"] = {
-					},
-					["fight_component"] = true,
-					["on_hold"] = false,
-					["classe"] = "UNKNOW",
-					["raid_targets"] = {
-					},
-					["total_without_pet"] = 456.00688,
-					["delay"] = 0,
-					["dps_started"] = false,
-					["end_time"] = 1568705919,
-					["friendlyfire_total"] = 0,
-					["last_dps"] = 0,
-					["nome"] = "血帆法师",
-					["spells"] = {
-						["_ActorTable"] = {
-							{
+							[2] = {
 								["c_amt"] = 0,
 								["b_amt"] = 0,
 								["c_dmg"] = 0,
 								["g_amt"] = 0,
 								["n_max"] = 0,
 								["targets"] = {
-									["断剑重铸之鈤"] = 0,
-									["白銀諾艾爾"] = 0,
+									["血色招魂师"] = 0,
 								},
 								["m_dmg"] = 0,
 								["n_dmg"] = 0,
@@ -3645,240 +1508,2312 @@ _detalhes_database = {
 								["counter"] = 1,
 								["total"] = 0,
 								["c_max"] = 0,
-								["id"] = 1,
+								["id"] = 2,
 								["r_dmg"] = 0,
-								["r_amt"] = 0,
-								["a_amt"] = 0,
+								["RESIST"] = 1,
+								["a_dmg"] = 0,
 								["m_crit"] = 0,
-								["c_min"] = 0,
+								["a_amt"] = 0,
 								["m_amt"] = 0,
 								["successful_casted"] = 0,
 								["b_dmg"] = 0,
 								["n_amt"] = 0,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["grupo"] = true,
+					["friendlyfire"] = {
+					},
+					["on_hold"] = false,
+					["serial"] = "Player-4497-00619488",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["damage_taken"] = 3345.128495,
+					["start_time"] = 1568735788,
+					["delay"] = 0,
+					["last_dps"] = 48.3942631808799,
+				}, -- [2]
+				{
+					["flag_original"] = 1298,
+					["totalabsorbed"] = 0.151308,
+					["damage_from"] = {
+						["血色卫兵"] = true,
+						["赫洛德"] = true,
+						["血色保卫者"] = true,
+						["血色防御者"] = true,
+						["火元素"] = true,
+						["血色士兵"] = true,
+						["血色仆从"] = true,
+						["血色招魂师"] = true,
+						["血色预备兵"] = true,
+						["血色咒术师"] = true,
+						["血色豪侠"] = true,
+					},
+					["targets"] = {
+						["血色卫兵"] = 8995,
+						["赫洛德"] = 2593,
+						["血色保卫者"] = 5649,
+						["血色防御者"] = 7814,
+						["火元素"] = 616,
+						["血色士兵"] = 5024,
+						["血色豪侠"] = 1365,
+						["血色招魂师"] = 4575,
+						["血色预备兵"] = 103,
+						["血色咒术师"] = 1662,
+						["血色仆从"] = 10014,
+					},
+					["friendlyfire"] = {
+					},
+					["pets"] = {
+					},
+					["colocacao"] = 3,
+					["classe"] = "WARRIOR",
+					["raid_targets"] = {
+						[8] = 4170,
+					},
+					["total_without_pet"] = 48410.151308,
+					["friendlyfire_total"] = 0,
+					["dps_started"] = false,
+					["end_time"] = 1568736476,
+					["last_event"] = 0,
+					["total"] = 48410.151308,
+					["nome"] = "Devops",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 23,
+								["b_amt"] = 27,
+								["c_dmg"] = 4548,
+								["g_amt"] = 27,
+								["n_max"] = 160,
+								["targets"] = {
+									["血色卫兵"] = 6291,
+									["赫洛德"] = 2522,
+									["血色保卫者"] = 4042,
+									["血色防御者"] = 4233,
+									["火元素"] = 505,
+									["血色士兵"] = 3841,
+									["血色豪侠"] = 1277,
+									["血色招魂师"] = 2689,
+									["血色预备兵"] = 103,
+									["血色咒术师"] = 1309,
+									["血色仆从"] = 6647,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 27305,
+								["n_min"] = 0,
+								["g_dmg"] = 1606,
+								["counter"] = 392,
+								["MISS"] = 28,
+								["total"] = 33459,
+								["c_max"] = 315,
+								["a_amt"] = 0,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["DODGE"] = 23,
 								["a_dmg"] = 0,
-								["DODGE"] = 1,
+								["m_crit"] = 0,
+								["PARRY"] = 17,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 2007,
+								["n_amt"] = 274,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
+							[0] = {
+								["c_amt"] = 16,
+								["b_amt"] = 6,
+								["c_dmg"] = 4009,
+								["g_amt"] = 0,
+								["n_max"] = 197,
+								["targets"] = {
+									["血色卫兵"] = 2704,
+									["赫洛德"] = 71,
+									["血色保卫者"] = 1607,
+									["血色防御者"] = 3581,
+									["火元素"] = 111,
+									["血色士兵"] = 1183,
+									["血色豪侠"] = 88,
+									["血色招魂师"] = 1886,
+									["血色咒术师"] = 353,
+									["血色仆从"] = 3367,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 10942,
+								["DODGE"] = 12,
+								["RESIST"] = 1,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 317,
+								["MISS"] = 13,
+								["total"] = 14951,
+								["c_max"] = 376,
+								["a_amt"] = 0,
+								["id"] = 0,
+								["r_dmg"] = 0,
+								["BLOCK"] = 3,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 6,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 848,
+								["n_amt"] = 266,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["grupo"] = true,
+					["on_hold"] = false,
+					["serial"] = "Player-4497-00559D05",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["damage_taken"] = 24160.151308,
+					["start_time"] = 1568735223,
+					["delay"] = 0,
+					["last_dps"] = 34.3071871298553,
+				}, -- [3]
+				{
+					["flag_original"] = 1298,
+					["totalabsorbed"] = 0.121278,
+					["damage_from"] = {
+						["血色士兵"] = true,
+						["血色仆从"] = true,
+						["血色卫兵"] = true,
+						["血色招魂师"] = true,
+						["赫洛德"] = true,
+						["血色保卫者"] = true,
+						["血色防御者"] = true,
+						["血色预备兵"] = true,
+					},
+					["targets"] = {
+						["血色卫兵"] = 8200,
+						["赫洛德"] = 3745,
+						["血色保卫者"] = 7535,
+						["血色防御者"] = 8425,
+						["火元素"] = 1035,
+						["血色士兵"] = 6413,
+						["血色仆从"] = 7213,
+						["血色招魂师"] = 717,
+						["血色咒术师"] = 532,
+						["血色预备兵"] = 213,
+					},
+					["pets"] = {
+					},
+					["friendlyfire_total"] = 0,
+					["raid_targets"] = {
+						[8] = 2198,
+					},
+					["total_without_pet"] = 44028.121278,
+					["classe"] = "DRUID",
+					["colocacao"] = 4,
+					["dps_started"] = false,
+					["end_time"] = 1568736683,
+					["last_event"] = 0,
+					["total"] = 44028.121278,
+					["nome"] = "物理學聖劍",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 78,
+								["b_amt"] = 34,
+								["c_dmg"] = 6029,
+								["g_amt"] = 306,
+								["n_max"] = 114,
+								["targets"] = {
+									["血色卫兵"] = 4357,
+									["赫洛德"] = 931,
+									["血色保卫者"] = 3878,
+									["血色防御者"] = 3368,
+									["火元素"] = 762,
+									["血色士兵"] = 3631,
+									["血色仆从"] = 3115,
+									["血色招魂师"] = 391,
+									["血色咒术师"] = 219,
+									["血色预备兵"] = 213,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 8436,
+								["n_min"] = 0,
+								["g_dmg"] = 6400,
+								["counter"] = 778,
+								["a_amt"] = 0,
+								["total"] = 20865,
+								["c_max"] = 119,
+								["MISS"] = 51,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["DODGE"] = 60,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 39,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 573,
+								["n_amt"] = 244,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
+							[0] = {
+								["c_amt"] = 14,
+								["b_amt"] = 5,
+								["c_dmg"] = 2817,
+								["g_amt"] = 0,
+								["n_max"] = 285,
+								["targets"] = {
+									["血色卫兵"] = 3843,
+									["赫洛德"] = 2814,
+									["血色保卫者"] = 3657,
+									["血色防御者"] = 5057,
+									["火元素"] = 273,
+									["血色士兵"] = 2782,
+									["血色仆从"] = 4098,
+									["血色招魂师"] = 326,
+									["血色咒术师"] = 313,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 20346,
+								["RESIST"] = 1,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 351,
+								["a_amt"] = 0,
+								["total"] = 23163,
+								["c_max"] = 313,
+								["DODGE"] = 18,
+								["id"] = 0,
+								["r_dmg"] = 0,
+								["MISS"] = 27,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 7,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 104,
+								["n_amt"] = 284,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["grupo"] = true,
+					["friendlyfire"] = {
+					},
+					["on_hold"] = false,
+					["serial"] = "Player-4497-0054F494",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["damage_taken"] = 7113.121278,
+					["start_time"] = 1568735680,
+					["delay"] = 0,
+					["last_dps"] = 31.2017408508016,
+				}, -- [4]
+				{
+					["flag_original"] = 1297,
+					["totalabsorbed"] = 0.136894,
+					["damage_from"] = {
+						["血色卫兵"] = true,
+						["血色保卫者"] = true,
+						["血色防御者"] = true,
+						["火元素"] = true,
+						["血色士兵"] = true,
+						["血色仆从"] = true,
+						["血色招魂师"] = true,
+						["血色预备兵"] = true,
+						["血色豪侠"] = true,
+					},
+					["targets"] = {
+						["血色卫兵"] = 3869,
+						["血色保卫者"] = 2932,
+						["血色防御者"] = 5227,
+						["火元素"] = 692,
+						["血色士兵"] = 4171,
+						["血色仆从"] = 3675,
+						["血色招魂师"] = 677,
+						["血色咒术师"] = 897,
+						["血色豪侠"] = 1167,
+					},
+					["friendlyfire"] = {
+					},
+					["pets"] = {
+					},
+					["colocacao"] = 5,
+					["classe"] = "PALADIN",
+					["raid_targets"] = {
+						[8] = 1574,
+					},
+					["total_without_pet"] = 23307.136894,
+					["friendlyfire_total"] = 0,
+					["dps_started"] = false,
+					["end_time"] = 1568736476,
+					["last_event"] = 0,
+					["total"] = 23307.136894,
+					["nome"] = "白銀諾艾爾",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 18,
+								["b_amt"] = 15,
+								["c_dmg"] = 3541,
+								["g_amt"] = 0,
+								["n_max"] = 155,
+								["targets"] = {
+									["血色卫兵"] = 3181,
+									["血色保卫者"] = 1980,
+									["血色防御者"] = 3900,
+									["火元素"] = 540,
+									["血色士兵"] = 2051,
+									["血色仆从"] = 2834,
+									["血色招魂师"] = 544,
+									["血色咒术师"] = 789,
+									["血色豪侠"] = 959,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 13237,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 152,
+								["total"] = 16778,
+								["c_max"] = 266,
+								["a_amt"] = 0,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["MISS"] = 2,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 3,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 1221,
+								["n_amt"] = 129,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
+							[0] = {
+								["c_amt"] = 4,
+								["b_amt"] = 6,
+								["c_dmg"] = 896,
+								["g_amt"] = 0,
+								["n_max"] = 248,
+								["targets"] = {
+									["血色卫兵"] = 688,
+									["血色保卫者"] = 952,
+									["血色防御者"] = 1327,
+									["火元素"] = 152,
+									["血色士兵"] = 2120,
+									["血色仆从"] = 841,
+									["血色招魂师"] = 133,
+									["血色咒术师"] = 108,
+									["血色豪侠"] = 208,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 5633,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 71,
+								["total"] = 6529,
+								["c_max"] = 243,
+								["DODGE"] = 2,
+								["id"] = 0,
+								["r_dmg"] = 0,
+								["RESIST"] = 1,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["a_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 543,
+								["n_amt"] = 64,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["grupo"] = true,
+					["on_hold"] = false,
+					["serial"] = "Player-4497-00484697",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["damage_taken"] = 7074.136894,
+					["start_time"] = 1568735936,
+					["delay"] = 0,
+					["last_dps"] = 16.5172445298983,
+				}, -- [5]
+				{
+					["flag_original"] = 1298,
+					["totalabsorbed"] = 0.009796,
+					["damage_from"] = {
+						["血色豪侠"] = true,
+					},
+					["targets"] = {
+						["血色豪侠"] = 3069,
+					},
+					["last_event"] = 0,
+					["pets"] = {
+						"帕格匹特 <Edge>", -- [1]
+					},
+					["colocacao"] = 5,
+					["classe"] = "WARLOCK",
+					["raid_targets"] = {
+					},
+					["total_without_pet"] = 2548.009796,
+					["friendlyfire_total"] = 0,
+					["dps_started"] = false,
+					["end_time"] = 1568736476,
+					["friendlyfire"] = {
+					},
+					["on_hold"] = false,
+					["nome"] = "Edge",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							[0] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["c_dmg"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 138,
+								["targets"] = {
+									["血色豪侠"] = 2548,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 2548,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 57,
+								["total"] = 2548,
+								["c_max"] = 0,
+								["id"] = 0,
+								["r_dmg"] = 0,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["a_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 0,
+								["n_amt"] = 57,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["grupo"] = true,
+					["total"] = 3069.009796,
+					["serial"] = "Player-4497-0056679A",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["damage_taken"] = 352.009796,
+					["start_time"] = 1568736436,
+					["delay"] = 0,
+					["last_dps"] = 23.9751405849686,
+				}, -- [6]
+				{
+					["flag_original"] = 2632,
+					["totalabsorbed"] = 0.068089,
+					["damage_from"] = {
+						["物理學聖劍"] = true,
+						["Devops"] = true,
+						["海豹"] = true,
+						["Fuse"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+						["物理學聖劍"] = 1074,
+						["Devops"] = 4276,
+						["海豹"] = 11432,
+						["Fuse"] = 294,
+						["白銀諾艾爾"] = 1342,
+					},
+					["pets"] = {
+					},
+					["dps_started"] = false,
+					["friendlyfire_total"] = 0,
+					["raid_targets"] = {
+						[16] = 4276,
+						[4] = 1342,
+						[32] = 11432,
+					},
+					["total_without_pet"] = 18418.068089,
+					["last_event"] = 0,
+					["on_hold"] = false,
+					["monster"] = true,
+					["total"] = 18418.068089,
+					["fight_component"] = true,
+					["classe"] = "UNKNOW",
+					["nome"] = "血色卫兵",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 6,
+								["b_amt"] = 0,
+								["c_dmg"] = 1481,
+								["g_amt"] = 0,
+								["n_max"] = 229,
+								["targets"] = {
+									["物理學聖劍"] = 1074,
+									["Devops"] = 4276,
+									["海豹"] = 11432,
+									["Fuse"] = 294,
+									["白銀諾艾爾"] = 1342,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 16937,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 167,
+								["a_amt"] = 0,
+								["total"] = 18418,
+								["c_max"] = 294,
+								["MISS"] = 7,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["DODGE"] = 8,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 7,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 0,
+								["n_amt"] = 139,
+								["r_amt"] = 0,
+								["c_min"] = 0,
 							}, -- [1]
 							[0] = {
 								["c_amt"] = 0,
 								["b_amt"] = 0,
 								["c_dmg"] = 0,
 								["g_amt"] = 0,
-								["n_max"] = 236,
+								["n_max"] = 0,
 								["targets"] = {
-									["断剑重铸之鈤"] = 0,
-									["白銀諾艾爾"] = 456,
+									["海豹"] = 0,
+									["Devops"] = 0,
 								},
 								["m_dmg"] = 0,
-								["n_dmg"] = 456,
+								["n_dmg"] = 0,
 								["n_min"] = 0,
 								["g_dmg"] = 0,
 								["counter"] = 4,
-								["total"] = 456,
+								["a_amt"] = 0,
+								["total"] = 0,
 								["c_max"] = 0,
+								["DODGE"] = 1,
 								["id"] = 0,
 								["r_dmg"] = 0,
+								["MISS"] = 1,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 2,
+								["m_amt"] = 0,
+								["successful_casted"] = 23,
+								["b_dmg"] = 0,
+								["n_amt"] = 0,
 								["r_amt"] = 0,
 								["c_min"] = 0,
-								["m_crit"] = 0,
-								["n_amt"] = 3,
-								["m_amt"] = 0,
-								["successful_casted"] = 3,
-								["b_dmg"] = 0,
-								["RESIST"] = 1,
-								["a_amt"] = 0,
-								["a_dmg"] = 0,
 							},
 						},
-						["tipo"] = 2,
 					},
-					["tipo"] = 1,
 					["friendlyfire"] = {
 					},
-					["total"] = 456.00688,
+					["end_time"] = 1568736961,
+					["serial"] = "Creature-0-4517-189-12751-4290-000080F739",
 					["custom"] = 0,
-					["last_event"] = 0,
-					["damage_taken"] = 1398.00688,
-					["start_time"] = 1568705906,
-					["serial"] = "Creature-0-4514-0-190-1562-0000008D05",
-					["monster"] = true,
-				}, -- [5]
+					["tipo"] = 1,
+					["last_dps"] = 0,
+					["start_time"] = 1568736615,
+					["delay"] = 0,
+					["damage_taken"] = 51788.068089,
+				}, -- [7]
 				{
-					["flag_original"] = 4680,
-					["totalabsorbed"] = 0.011866,
+					["flag_original"] = 68168,
+					["totalabsorbed"] = 0.055183,
 					["damage_from"] = {
+						["物理學聖劍"] = true,
+						["Devops"] = true,
+						["海豹"] = true,
+						["Fuse"] = true,
 						["白銀諾艾爾"] = true,
 					},
 					["targets"] = {
-						["白銀諾艾爾"] = 449,
+						["物理學聖劍"] = 1643,
+						["Devops"] = 6765,
+						["海豹"] = 7224,
+						["Fuse"] = 504,
+						["白銀諾艾爾"] = 938,
 					},
 					["pets"] = {
 					},
-					["tipo"] = 1,
-					["classe"] = "PET",
-					["raid_targets"] = {
-					},
-					["total_without_pet"] = 449.011866,
+					["dps_started"] = false,
 					["friendlyfire_total"] = 0,
+					["raid_targets"] = {
+						[16] = 6765,
+						[32] = 7224,
+						[4] = 938,
+					},
+					["total_without_pet"] = 17074.055183,
+					["last_event"] = 0,
+					["on_hold"] = false,
+					["monster"] = true,
+					["total"] = 17074.055183,
 					["fight_component"] = true,
-					["end_time"] = 1568709620,
-					["delay"] = 0,
-					["damage_taken"] = 575.011866,
-					["nome"] = "小鬼爪牙",
+					["classe"] = "UNKNOW",
+					["nome"] = "血色仆从",
 					["spells"] = {
+						["tipo"] = 2,
 						["_ActorTable"] = {
+							{
+								["c_amt"] = 19,
+								["b_amt"] = 1,
+								["c_dmg"] = 2479,
+								["g_amt"] = 0,
+								["n_max"] = 201,
+								["targets"] = {
+									["物理學聖劍"] = 1643,
+									["Devops"] = 6765,
+									["海豹"] = 7224,
+									["Fuse"] = 504,
+									["白銀諾艾爾"] = 938,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 14595,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 359,
+								["a_amt"] = 0,
+								["total"] = 17074,
+								["c_max"] = 239,
+								["MISS"] = 90,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["DODGE"] = 25,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 16,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 44,
+								["n_amt"] = 209,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
 							[0] = {
 								["c_amt"] = 0,
 								["b_amt"] = 0,
 								["c_dmg"] = 0,
 								["g_amt"] = 0,
-								["n_max"] = 60,
+								["n_max"] = 0,
 								["targets"] = {
-									["白銀諾艾爾"] = 449,
 								},
 								["m_dmg"] = 0,
-								["n_dmg"] = 449,
+								["n_dmg"] = 0,
 								["n_min"] = 0,
 								["g_dmg"] = 0,
-								["counter"] = 8,
-								["total"] = 449,
+								["counter"] = 0,
+								["total"] = 0,
 								["c_max"] = 0,
 								["id"] = 0,
 								["r_dmg"] = 0,
-								["r_amt"] = 0,
-								["m_crit"] = 0,
-								["c_min"] = 0,
-								["m_amt"] = 0,
-								["successful_casted"] = 7,
-								["b_dmg"] = 0,
-								["n_amt"] = 8,
-								["a_amt"] = 0,
 								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["a_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 10,
+								["b_dmg"] = 0,
+								["n_amt"] = 0,
+								["r_amt"] = 0,
+								["c_min"] = 0,
 							},
 						},
-						["tipo"] = 2,
 					},
-					["on_hold"] = false,
-					["total"] = 449.011866,
 					["friendlyfire"] = {
 					},
+					["end_time"] = 1568737422,
+					["serial"] = "Creature-0-4517-189-12751-4295-000200F738",
 					["custom"] = 0,
-					["last_event"] = 0,
+					["tipo"] = 1,
 					["last_dps"] = 0,
-					["start_time"] = 1568709599,
-					["serial"] = "Creature-0-4514-0-190-12922-0000009B63",
+					["start_time"] = 1568737158,
+					["delay"] = 0,
+					["damage_taken"] = 42094.055183,
+				}, -- [8]
+				{
+					["flag_original"] = 2632,
+					["totalabsorbed"] = 239.025163,
+					["damage_from"] = {
+						["物理學聖劍"] = true,
+						["Devops"] = true,
+						["海豹"] = true,
+						["Fuse"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+						["物理學聖劍"] = 602,
+						["Devops"] = 1812,
+						["海豹"] = 5653,
+						["Fuse"] = 1344,
+						["白銀諾艾爾"] = 2366,
+					},
+					["pets"] = {
+					},
+					["friendlyfire_total"] = 0,
+					["raid_targets"] = {
+						[16] = 1812,
+						[32] = 5653,
+						[4] = 2366,
+					},
+					["total_without_pet"] = 11777.025163,
+					["last_event"] = 0,
+					["on_hold"] = false,
+					["monster"] = true,
+					["total"] = 11777.025163,
+					["fight_component"] = true,
+					["classe"] = "UNKNOW",
+					["nome"] = "血色士兵",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 13,
+								["b_amt"] = 3,
+								["c_dmg"] = 1657,
+								["g_amt"] = 0,
+								["n_max"] = 113,
+								["targets"] = {
+									["物理學聖劍"] = 602,
+									["Devops"] = 1812,
+									["海豹"] = 5653,
+									["Fuse"] = 1344,
+									["白銀諾艾爾"] = 2366,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 10120,
+								["IMMUNE"] = 3,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 203,
+								["DODGE"] = 14,
+								["total"] = 11777,
+								["c_max"] = 171,
+								["a_amt"] = 1,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["MISS"] = 13,
+								["a_dmg"] = 82,
+								["m_crit"] = 0,
+								["PARRY"] = 7,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 99,
+								["n_amt"] = 153,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
+							[0] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["c_dmg"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 0,
+								["targets"] = {
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 0,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 0,
+								["total"] = 0,
+								["c_max"] = 0,
+								["id"] = 0,
+								["r_dmg"] = 0,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["a_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 35,
+								["b_dmg"] = 0,
+								["n_amt"] = 0,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["friendlyfire"] = {
+					},
 					["dps_started"] = false,
-				}, -- [6]
+					["end_time"] = 1568736683,
+					["serial"] = "Creature-0-4517-189-12751-4286-000200F73A",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["last_dps"] = 0,
+					["start_time"] = 1568736407,
+					["delay"] = 0,
+					["damage_taken"] = 42286.025163,
+				}, -- [9]
+				{
+					["flag_original"] = 2632,
+					["totalabsorbed"] = 0.043586,
+					["damage_from"] = {
+						["物理學聖劍"] = true,
+						["Devops"] = true,
+						["海豹"] = true,
+						["Fuse"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+						["物理學聖劍"] = 793,
+						["Devops"] = 2189,
+						["海豹"] = 7592,
+						["Fuse"] = 27,
+						["白銀諾艾爾"] = 835,
+					},
+					["pets"] = {
+					},
+					["dps_started"] = false,
+					["friendlyfire_total"] = 0,
+					["raid_targets"] = {
+						[16] = 2189,
+						[4] = 835,
+						[32] = 7592,
+					},
+					["total_without_pet"] = 11436.043586,
+					["last_event"] = 0,
+					["on_hold"] = false,
+					["monster"] = true,
+					["total"] = 11436.043586,
+					["fight_component"] = true,
+					["classe"] = "UNKNOW",
+					["nome"] = "血色防御者",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 12,
+								["b_amt"] = 2,
+								["c_dmg"] = 1541,
+								["g_amt"] = 0,
+								["n_max"] = 127,
+								["targets"] = {
+									["物理學聖劍"] = 793,
+									["Devops"] = 2189,
+									["海豹"] = 7592,
+									["白銀諾艾爾"] = 609,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 9642,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 186,
+								["a_amt"] = 0,
+								["total"] = 11183,
+								["c_max"] = 165,
+								["MISS"] = 9,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["DODGE"] = 5,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 17,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 71,
+								["n_amt"] = 143,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
+							[0] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["c_dmg"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 16,
+								["targets"] = {
+									["Fuse"] = 27,
+									["白銀諾艾爾"] = 226,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 253,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 22,
+								["total"] = 253,
+								["c_max"] = 0,
+								["DODGE"] = 2,
+								["id"] = 0,
+								["r_dmg"] = 0,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 2,
+								["m_amt"] = 0,
+								["successful_casted"] = 54,
+								["b_dmg"] = 0,
+								["n_amt"] = 18,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["friendlyfire"] = {
+					},
+					["end_time"] = 1568737422,
+					["serial"] = "Creature-0-4517-189-12751-4298-000300F738",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["last_dps"] = 0,
+					["start_time"] = 1568737075,
+					["delay"] = 0,
+					["damage_taken"] = 45912.043586,
+				}, -- [10]
+				{
+					["flag_original"] = 2632,
+					["totalabsorbed"] = 0.007456,
+					["on_hold"] = false,
+					["damage_from"] = {
+						["物理學聖劍"] = true,
+						["Devops"] = true,
+						["海豹"] = true,
+						["Fuse"] = true,
+					},
+					["targets"] = {
+						["物理學聖劍"] = 2007,
+						["Devops"] = 6515,
+						["海豹"] = 865,
+					},
+					["pets"] = {
+					},
+					["fight_component"] = true,
+					["classe"] = "UNKNOW",
+					["raid_targets"] = {
+						[16] = 6515,
+						[32] = 865,
+					},
+					["total_without_pet"] = 9387.007456,
+					["last_event"] = 0,
+					["dps_started"] = false,
+					["end_time"] = 1568738488,
+					["friendlyfire"] = {
+					},
+					["friendlyfire_total"] = 0,
+					["nome"] = "赫洛德",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 0,
+								["b_amt"] = 1,
+								["c_dmg"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 402,
+								["targets"] = {
+									["Devops"] = 3288,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 3288,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 25,
+								["a_amt"] = 0,
+								["total"] = 3288,
+								["c_max"] = 0,
+								["MISS"] = 1,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["DODGE"] = 2,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 4,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 165,
+								["n_amt"] = 18,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
+							[0] = {
+								["c_amt"] = 0,
+								["b_amt"] = 1,
+								["c_dmg"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 371,
+								["targets"] = {
+									["物理學聖劍"] = 2007,
+									["Devops"] = 3227,
+									["海豹"] = 865,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 6099,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 28,
+								["total"] = 6099,
+								["c_max"] = 0,
+								["DODGE"] = 3,
+								["id"] = 0,
+								["r_dmg"] = 0,
+								["MISS"] = 2,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["a_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 15,
+								["b_dmg"] = 218,
+								["n_amt"] = 23,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["monster"] = true,
+					["total"] = 9387.007456,
+					["serial"] = "Creature-0-4517-189-12751-3975-000000F738",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["damage_taken"] = 12216.007456,
+					["start_time"] = 1568738382,
+					["delay"] = 0,
+					["last_dps"] = 0,
+				}, -- [11]
+				{
+					["flag_original"] = 2632,
+					["totalabsorbed"] = 0.047679,
+					["damage_from"] = {
+						["物理學聖劍"] = true,
+						["Devops"] = true,
+						["海豹"] = true,
+						["Fuse"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+						["物理學聖劍"] = 379,
+						["Devops"] = 619,
+						["海豹"] = 4304,
+						["Fuse"] = 894,
+						["白銀諾艾爾"] = 535,
+					},
+					["pets"] = {
+					},
+					["friendlyfire_total"] = 0,
+					["raid_targets"] = {
+						[16] = 619,
+						[32] = 4304,
+						[4] = 535,
+					},
+					["total_without_pet"] = 6731.047679,
+					["last_event"] = 0,
+					["on_hold"] = false,
+					["monster"] = true,
+					["total"] = 6731.047679,
+					["fight_component"] = true,
+					["classe"] = "UNKNOW",
+					["nome"] = "血色保卫者",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 5,
+								["b_amt"] = 0,
+								["c_dmg"] = 665,
+								["g_amt"] = 0,
+								["n_max"] = 87,
+								["targets"] = {
+									["物理學聖劍"] = 379,
+									["Devops"] = 619,
+									["海豹"] = 4304,
+									["Fuse"] = 894,
+									["白銀諾艾爾"] = 535,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 6066,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 123,
+								["MISS"] = 8,
+								["total"] = 6731,
+								["c_max"] = 150,
+								["a_amt"] = 0,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["DODGE"] = 11,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 5,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 0,
+								["n_amt"] = 94,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
+							[0] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["c_dmg"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 0,
+								["targets"] = {
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 0,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 0,
+								["total"] = 0,
+								["c_max"] = 0,
+								["id"] = 0,
+								["r_dmg"] = 0,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["a_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 29,
+								["b_dmg"] = 0,
+								["n_amt"] = 0,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["friendlyfire"] = {
+					},
+					["dps_started"] = false,
+					["end_time"] = 1568736961,
+					["serial"] = "Creature-0-4517-189-12751-4292-000280F738",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["last_dps"] = 0,
+					["start_time"] = 1568736638,
+					["delay"] = 0,
+					["damage_taken"] = 40173.047679,
+				}, -- [12]
+				{
+					["flag_original"] = 2632,
+					["totalabsorbed"] = 0.01809,
+					["damage_from"] = {
+						["物理學聖劍"] = true,
+						["Devops"] = true,
+						["海豹"] = true,
+						["Fuse"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+						["物理學聖劍"] = 524,
+						["Devops"] = 1024,
+						["海豹"] = 1192,
+						["白銀諾艾爾"] = 551,
+					},
+					["pets"] = {
+					},
+					["dps_started"] = false,
+					["friendlyfire_total"] = 0,
+					["raid_targets"] = {
+						[16] = 1024,
+						[32] = 1192,
+						[4] = 551,
+					},
+					["total_without_pet"] = 3291.01809,
+					["last_event"] = 0,
+					["on_hold"] = false,
+					["monster"] = true,
+					["total"] = 3291.01809,
+					["fight_component"] = true,
+					["classe"] = "UNKNOW",
+					["nome"] = "血色招魂师",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 1,
+								["b_amt"] = 0,
+								["c_dmg"] = 64,
+								["g_amt"] = 0,
+								["n_max"] = 35,
+								["targets"] = {
+									["海豹"] = 127,
+									["Devops"] = 334,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 397,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 15,
+								["total"] = 461,
+								["c_max"] = 64,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["a_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 0,
+								["n_amt"] = 14,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
+							[0] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["c_dmg"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 180,
+								["targets"] = {
+									["物理學聖劍"] = 524,
+									["Devops"] = 690,
+									["海豹"] = 1065,
+									["白銀諾艾爾"] = 551,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 2830,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 51,
+								["total"] = 2830,
+								["c_max"] = 0,
+								["id"] = 0,
+								["r_dmg"] = 361,
+								["RESIST"] = 5,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["a_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 14,
+								["b_dmg"] = 0,
+								["n_amt"] = 46,
+								["r_amt"] = 8,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["friendlyfire"] = {
+					},
+					["end_time"] = 1568736917,
+					["serial"] = "Creature-0-4517-189-12751-4289-000000F738",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["last_dps"] = 0,
+					["start_time"] = 1568736827,
+					["delay"] = 0,
+					["damage_taken"] = 11752.01809,
+				}, -- [13]
+				{
+					["flag_original"] = 2632,
+					["totalabsorbed"] = 0.004724,
+					["on_hold"] = false,
+					["damage_from"] = {
+						["帕格匹特 <Edge>"] = true,
+						["Devops"] = true,
+						["Edge"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+						["Devops"] = 492,
+						["Edge"] = 352,
+						["白銀諾艾爾"] = 367,
+					},
+					["pets"] = {
+					},
+					["fight_component"] = true,
+					["classe"] = "UNKNOW",
+					["raid_targets"] = {
+						352, -- [1]
+						[4] = 367,
+						[16] = 492,
+					},
+					["total_without_pet"] = 1211.004724,
+					["last_event"] = 0,
+					["dps_started"] = false,
+					["end_time"] = 1568736476,
+					["friendlyfire"] = {
+					},
+					["friendlyfire_total"] = 0,
+					["nome"] = "血色豪侠",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 0,
+								["b_amt"] = 1,
+								["c_dmg"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 72,
+								["targets"] = {
+									["Devops"] = 430,
+									["Edge"] = 321,
+									["白銀諾艾爾"] = 334,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 1085,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 24,
+								["total"] = 1085,
+								["c_max"] = 0,
+								["a_amt"] = 0,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["DODGE"] = 1,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 2,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 23,
+								["n_amt"] = 21,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
+							[0] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["c_dmg"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 33,
+								["targets"] = {
+									["Devops"] = 62,
+									["Edge"] = 31,
+									["白銀諾艾爾"] = 33,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 126,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 6,
+								["total"] = 126,
+								["c_max"] = 0,
+								["id"] = 0,
+								["r_dmg"] = 0,
+								["MISS"] = 1,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["a_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 8,
+								["b_dmg"] = 0,
+								["n_amt"] = 5,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["monster"] = true,
+					["total"] = 1211.004724,
+					["serial"] = "Creature-0-4517-189-12751-4287-000180F738",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["damage_taken"] = 5601.004724,
+					["start_time"] = 1568736435,
+					["delay"] = 0,
+					["last_dps"] = 0,
+				}, -- [14]
 				{
 					["flag_original"] = 4680,
-					["totalabsorbed"] = 0.014359,
+					["totalabsorbed"] = 0.021244,
+					["damage_from"] = {
+						["物理學聖劍"] = true,
+						["Devops"] = true,
+						["海豹"] = true,
+						["Fuse"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+						["Devops"] = 144,
+						["海豹"] = 774,
+						["白銀諾艾爾"] = 112,
+					},
+					["pets"] = {
+					},
+					["on_hold"] = false,
+					["classe"] = "PET",
+					["raid_targets"] = {
+						[16] = 144,
+						[4] = 112,
+						[32] = 774,
+					},
+					["total_without_pet"] = 1030.021244,
+					["fight_component"] = true,
+					["dps_started"] = false,
+					["end_time"] = 1568736742,
+					["friendlyfire"] = {
+					},
+					["last_event"] = 0,
+					["nome"] = "火元素",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 1,
+								["b_amt"] = 0,
+								["c_dmg"] = 117,
+								["g_amt"] = 0,
+								["n_max"] = 65,
+								["targets"] = {
+									["物理學聖劍"] = 0,
+									["Devops"] = 144,
+									["海豹"] = 774,
+									["白銀諾艾爾"] = 112,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 913,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 25,
+								["a_amt"] = 0,
+								["total"] = 1030,
+								["c_max"] = 117,
+								["MISS"] = 2,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["DODGE"] = 4,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 1,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 0,
+								["n_amt"] = 17,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
+						},
+					},
+					["friendlyfire_total"] = 0,
+					["total"] = 1030.021244,
+					["serial"] = "Creature-0-4517-189-12751-575-000000F73A",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["damage_taken"] = 4557.021244,
+					["start_time"] = 1568736689,
+					["delay"] = 0,
+					["last_dps"] = 0,
+				}, -- [15]
+				{
+					["flag_original"] = 2632,
+					["totalabsorbed"] = 0.024466,
+					["on_hold"] = false,
+					["damage_from"] = {
+						["物理學聖劍"] = true,
+						["Devops"] = true,
+						["海豹"] = true,
+						["Fuse"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+						["Devops"] = 234,
+						["海豹"] = 535,
+						["Fuse"] = 176,
+					},
+					["pets"] = {
+					},
+					["fight_component"] = true,
+					["classe"] = "UNKNOW",
+					["raid_targets"] = {
+						[32] = 535,
+						[16] = 234,
+					},
+					["total_without_pet"] = 945.024466,
+					["last_event"] = 0,
+					["dps_started"] = false,
+					["end_time"] = 1568736742,
+					["friendlyfire"] = {
+					},
+					["friendlyfire_total"] = 0,
+					["nome"] = "血色咒术师",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 1,
+								["b_amt"] = 0,
+								["c_dmg"] = 60,
+								["g_amt"] = 0,
+								["n_max"] = 35,
+								["targets"] = {
+									["海豹"] = 293,
+									["Fuse"] = 35,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 268,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 11,
+								["total"] = 328,
+								["c_max"] = 60,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["a_amt"] = 0,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 1,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 0,
+								["n_amt"] = 9,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
+							[0] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["c_dmg"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 141,
+								["targets"] = {
+									["白銀諾艾爾"] = 0,
+									["Devops"] = 234,
+									["海豹"] = 242,
+									["Fuse"] = 141,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 617,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 6,
+								["total"] = 617,
+								["c_max"] = 0,
+								["id"] = 0,
+								["r_dmg"] = 0,
+								["RESIST"] = 1,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["a_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 6,
+								["b_dmg"] = 0,
+								["n_amt"] = 5,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["monster"] = true,
+					["total"] = 945.024466,
+					["serial"] = "Creature-0-4517-189-12751-4297-000080F739",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["damage_taken"] = 8429.024466,
+					["start_time"] = 1568736694,
+					["delay"] = 0,
+					["last_dps"] = 0,
+				}, -- [16]
+				{
+					["flag_original"] = 2632,
+					["totalabsorbed"] = 0.007825,
+					["on_hold"] = false,
+					["damage_from"] = {
+						["物理學聖劍"] = true,
+						["Devops"] = true,
+						["海豹"] = true,
+						["Fuse"] = true,
+					},
+					["targets"] = {
+						["物理學聖劍"] = 91,
+						["Devops"] = 90,
+						["海豹"] = 293,
+						["Fuse"] = 106,
+						["白銀諾艾爾"] = 28,
+					},
+					["pets"] = {
+					},
+					["fight_component"] = true,
+					["classe"] = "UNKNOW",
+					["raid_targets"] = {
+						[16] = 90,
+						[32] = 293,
+						[4] = 28,
+					},
+					["total_without_pet"] = 608.007825,
+					["last_event"] = 0,
+					["dps_started"] = false,
+					["end_time"] = 1568738523,
+					["friendlyfire"] = {
+					},
+					["friendlyfire_total"] = 0,
+					["nome"] = "血色预备兵",
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 2,
+								["b_amt"] = 2,
+								["c_dmg"] = 91,
+								["g_amt"] = 0,
+								["n_max"] = 28,
+								["targets"] = {
+									["物理學聖劍"] = 91,
+									["Devops"] = 90,
+									["海豹"] = 293,
+									["Fuse"] = 106,
+									["白銀諾艾爾"] = 28,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 517,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 34,
+								["a_amt"] = 0,
+								["total"] = 608,
+								["c_max"] = 46,
+								["DODGE"] = 2,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["MISS"] = 1,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["PARRY"] = 5,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 3,
+								["n_amt"] = 24,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							}, -- [1]
+						},
+					},
+					["monster"] = true,
+					["total"] = 608.007825,
+					["serial"] = "Creature-0-4517-189-12751-6575-0005010CBC",
+					["custom"] = 0,
+					["tipo"] = 1,
+					["damage_taken"] = 4227.007825,
+					["start_time"] = 1568738500,
+					["delay"] = 0,
+					["last_dps"] = 0,
+				}, -- [17]
+				{
+					["flag_original"] = 4370,
+					["totalabsorbed"] = 0.005173,
 					["damage_from"] = {
 					},
 					["targets"] = {
-						["白銀諾艾爾"] = 303,
+						["血色豪侠"] = 521,
 					},
 					["pets"] = {
 					},
-					["dps_started"] = false,
-					["tipo"] = 1,
+					["on_hold"] = false,
 					["classe"] = "PET",
 					["raid_targets"] = {
 					},
-					["total_without_pet"] = 303.014359,
-					["delay"] = 0,
-					["fight_component"] = true,
-					["end_time"] = 1568705879,
-					["on_hold"] = false,
-					["ownerName"] = "血帆术士",
-					["nome"] = "小鬼爪牙 <血帆术士>",
-					["spells"] = {
-						["_ActorTable"] = {
-							[0] = {
-								["c_amt"] = 0,
-								["b_amt"] = 0,
-								["c_dmg"] = 0,
-								["g_amt"] = 0,
-								["n_max"] = 61,
-								["targets"] = {
-									["白銀諾艾爾"] = 303,
-								},
-								["m_dmg"] = 0,
-								["n_dmg"] = 303,
-								["n_min"] = 0,
-								["g_dmg"] = 0,
-								["counter"] = 5,
-								["total"] = 303,
-								["c_max"] = 0,
-								["id"] = 0,
-								["r_dmg"] = 0,
-								["r_amt"] = 0,
-								["m_crit"] = 0,
-								["c_min"] = 0,
-								["m_amt"] = 0,
-								["successful_casted"] = 5,
-								["b_dmg"] = 0,
-								["n_amt"] = 5,
-								["a_amt"] = 0,
-								["a_dmg"] = 0,
-							},
-						},
-						["tipo"] = 2,
-					},
-					["damage_taken"] = 0.014359,
+					["total_without_pet"] = 521.005173,
+					["last_event"] = 0,
+					["friendlyfire_total"] = 0,
+					["dps_started"] = false,
+					["total"] = 521.005173,
+					["end_time"] = 1568736476,
+					["ownerName"] = "Edge",
+					["nome"] = "帕格匹特 <Edge>",
 					["friendlyfire"] = {
 					},
-					["total"] = 303.014359,
+					["spells"] = {
+						["tipo"] = 2,
+						["_ActorTable"] = {
+							[0] = {
+								["c_amt"] = 1,
+								["b_amt"] = 0,
+								["c_dmg"] = 55,
+								["g_amt"] = 0,
+								["n_max"] = 41,
+								["targets"] = {
+									["血色豪侠"] = 521,
+								},
+								["m_dmg"] = 0,
+								["n_dmg"] = 466,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 13,
+								["total"] = 521,
+								["c_max"] = 55,
+								["id"] = 0,
+								["r_dmg"] = 0,
+								["a_dmg"] = 0,
+								["m_crit"] = 0,
+								["a_amt"] = 0,
+								["m_amt"] = 0,
+								["successful_casted"] = 0,
+								["b_dmg"] = 0,
+								["n_amt"] = 12,
+								["r_amt"] = 0,
+								["c_min"] = 0,
+							},
+						},
+					},
+					["serial"] = "Pet-0-4517-189-12751-416-0300016F3E",
 					["custom"] = 0,
-					["last_event"] = 0,
+					["tipo"] = 1,
 					["last_dps"] = 0,
-					["start_time"] = 1568705861,
-					["serial"] = "Creature-0-4514-0-190-12922-0000008D3D",
-					["friendlyfire_total"] = 0,
-				}, -- [7]
+					["start_time"] = 1568736436,
+					["delay"] = 0,
+					["damage_taken"] = 0.005173,
+				}, -- [18]
 			},
 		}, -- [1]
 		{
 			["tipo"] = 3,
 			["_ActorTable"] = {
+				{
+					["flag_original"] = 1298,
+					["totalabsorb"] = 0.004553,
+					["last_hps"] = 0,
+					["targets_overheal"] = {
+					},
+					["targets"] = {
+						["Edge"] = 225,
+					},
+					["spells"] = {
+						["tipo"] = 3,
+						["_ActorTable"] = {
+							[0] = {
+								["c_amt"] = 0,
+								["totalabsorb"] = 0,
+								["targets_overheal"] = {
+								},
+								["n_max"] = 50,
+								["targets"] = {
+									["Edge"] = 225,
+								},
+								["n_min"] = 0,
+								["counter"] = 7,
+								["overheal"] = 0,
+								["total"] = 225,
+								["c_max"] = 0,
+								["id"] = 0,
+								["targets_absorbs"] = {
+								},
+								["c_curado"] = 0,
+								["m_crit"] = 0,
+								["c_min"] = 0,
+								["m_amt"] = 0,
+								["n_curado"] = 225,
+								["n_amt"] = 7,
+								["totaldenied"] = 0,
+								["m_healed"] = 0,
+								["absorbed"] = 0,
+							},
+						},
+					},
+					["pets"] = {
+					},
+					["totalover_without_pet"] = 0.004553,
+					["healing_from"] = {
+						["Edge"] = true,
+					},
+					["classe"] = "WARLOCK",
+					["totalover"] = 0.004553,
+					["total_without_pet"] = 225.004553,
+					["healing_taken"] = 225.004553,
+					["iniciar_hps"] = false,
+					["fight_component"] = true,
+					["total"] = 225.004553,
+					["heal_enemy_amt"] = 0,
+					["end_time"] = 1568736476,
+					["nome"] = "Edge",
+					["targets_absorbs"] = {
+					},
+					["grupo"] = true,
+					["start_time"] = 1568736455,
+					["heal_enemy"] = {
+					},
+					["serial"] = "Player-4497-0056679A",
+					["custom"] = 0,
+					["tipo"] = 2,
+					["on_hold"] = false,
+					["totaldenied"] = 0.004553,
+					["delay"] = 0,
+					["last_event"] = 0,
+				}, -- [1]
+				{
+					["flag_original"] = 1297,
+					["totalabsorb"] = 0.143021,
+					["last_hps"] = 0,
+					["healing_from"] = {
+						["物理學聖劍"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+						["物理學聖劍"] = 4953,
+						["Devops"] = 26084,
+						["海豹"] = 39402,
+						["Fuse"] = 2235,
+						["白銀諾艾爾"] = 2842,
+					},
+					["targets_absorbs"] = {
+					},
+					["pets"] = {
+					},
+					["iniciar_hps"] = false,
+					["targets_overheal"] = {
+						["物理學聖劍"] = 84,
+						["Devops"] = 5654,
+						["海豹"] = 4777,
+						["Fuse"] = 1025,
+						["白銀諾艾爾"] = 1,
+					},
+					["classe"] = "PALADIN",
+					["totalover"] = 11541.143021,
+					["total_without_pet"] = 63975.143021,
+					["totalover_without_pet"] = 0.143021,
+					["heal_enemy_amt"] = 0,
+					["fight_component"] = true,
+					["total"] = 63975.143021,
+					["end_time"] = 1568736476,
+					["healing_taken"] = 3519.143021,
+					["nome"] = "白銀諾艾爾",
+					["spells"] = {
+						["tipo"] = 3,
+						["_ActorTable"] = {
+							[0] = {
+								["c_amt"] = 10,
+								["totalabsorb"] = 0,
+								["targets_overheal"] = {
+									["物理學聖劍"] = 84,
+									["Devops"] = 5654,
+									["海豹"] = 4777,
+									["Fuse"] = 1025,
+									["白銀諾艾爾"] = 1,
+								},
+								["n_max"] = 996,
+								["targets"] = {
+									["物理學聖劍"] = 4869,
+									["Devops"] = 20430,
+									["海豹"] = 34625,
+									["Fuse"] = 1210,
+									["白銀諾艾爾"] = 2841,
+								},
+								["n_min"] = 0,
+								["counter"] = 105,
+								["overheal"] = 11541,
+								["total"] = 63975,
+								["c_max"] = 992,
+								["id"] = 0,
+								["targets_absorbs"] = {
+								},
+								["c_curado"] = 7651,
+								["m_crit"] = 0,
+								["c_min"] = 0,
+								["m_amt"] = 0,
+								["n_curado"] = 56324,
+								["n_amt"] = 95,
+								["totaldenied"] = 0,
+								["m_healed"] = 0,
+								["absorbed"] = 0,
+							},
+						},
+					},
+					["grupo"] = true,
+					["start_time"] = 1568736160,
+					["heal_enemy"] = {
+					},
+					["serial"] = "Player-4497-00484697",
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
+					["totaldenied"] = 0.143021,
+					["delay"] = 0,
+					["tipo"] = 2,
+				}, -- [2]
+				{
+					["flag_original"] = 1298,
+					["totalabsorb"] = 0.1073,
+					["last_hps"] = 0,
+					["healing_from"] = {
+						["物理學聖劍"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+					},
+					["targets_absorbs"] = {
+					},
+					["pets"] = {
+					},
+					["iniciar_hps"] = false,
+					["targets_overheal"] = {
+					},
+					["classe"] = "WARRIOR",
+					["totalover"] = 0.1073,
+					["total_without_pet"] = 0.1073,
+					["totalover_without_pet"] = 0.1073,
+					["heal_enemy_amt"] = 0,
+					["fight_component"] = true,
+					["total"] = 0.1073,
+					["end_time"] = 1568736476,
+					["healing_taken"] = 20630.1073,
+					["nome"] = "Devops",
+					["spells"] = {
+						["tipo"] = 3,
+						["_ActorTable"] = {
+						},
+					},
+					["grupo"] = true,
+					["start_time"] = 1568736473,
+					["heal_enemy"] = {
+					},
+					["serial"] = "Player-4497-00559D05",
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
+					["totaldenied"] = 0.1073,
+					["delay"] = 0,
+					["tipo"] = 2,
+				}, -- [3]
+				{
+					["flag_original"] = 1298,
+					["totalabsorb"] = 0.109741,
+					["last_hps"] = 0,
+					["healing_from"] = {
+						["物理學聖劍"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+					},
+					["targets_absorbs"] = {
+					},
+					["pets"] = {
+					},
+					["iniciar_hps"] = false,
+					["targets_overheal"] = {
+					},
+					["classe"] = "WARRIOR",
+					["totalover"] = 0.109741,
+					["total_without_pet"] = 0.109741,
+					["totalover_without_pet"] = 0.109741,
+					["heal_enemy_amt"] = 0,
+					["fight_component"] = true,
+					["total"] = 0.109741,
+					["end_time"] = 1568736742,
+					["healing_taken"] = 35801.109741,
+					["nome"] = "海豹",
+					["spells"] = {
+						["tipo"] = 3,
+						["_ActorTable"] = {
+						},
+					},
+					["grupo"] = true,
+					["start_time"] = 1568736739,
+					["heal_enemy"] = {
+					},
+					["serial"] = "Player-4497-00334628",
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
+					["totaldenied"] = 0.109741,
+					["delay"] = 0,
+					["tipo"] = 2,
+				}, -- [4]
+				{
+					["flag_original"] = 66834,
+					["totalabsorb"] = 300.015493,
+					["last_hps"] = 0,
+					["healing_from"] = {
+						["Fuse"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+						["Fuse"] = 300,
+					},
+					["targets_absorbs"] = {
+						["Fuse"] = 300,
+					},
+					["pets"] = {
+					},
+					["iniciar_hps"] = false,
+					["targets_overheal"] = {
+					},
+					["healing_taken"] = 1510.015493,
+					["totalover"] = 0.015493,
+					["total_without_pet"] = 300.015493,
+					["totalover_without_pet"] = 0.015493,
+					["classe"] = "MAGE",
+					["fight_component"] = true,
+					["total"] = 300.015493,
+					["end_time"] = 1568736857,
+					["heal_enemy_amt"] = 0,
+					["nome"] = "Fuse",
+					["spells"] = {
+						["tipo"] = 3,
+						["_ActorTable"] = {
+							[8495] = {
+								["c_amt"] = 0,
+								["totalabsorb"] = 300,
+								["targets_overheal"] = {
+								},
+								["n_max"] = 88,
+								["targets"] = {
+									["Fuse"] = 300,
+								},
+								["n_min"] = 0,
+								["counter"] = 4,
+								["overheal"] = 0,
+								["total"] = 300,
+								["c_max"] = 0,
+								["id"] = 8495,
+								["targets_absorbs"] = {
+									["Fuse"] = 300,
+								},
+								["c_curado"] = 0,
+								["m_crit"] = 0,
+								["c_min"] = 0,
+								["m_amt"] = 0,
+								["n_curado"] = 300,
+								["n_amt"] = 4,
+								["totaldenied"] = 0,
+								["m_healed"] = 0,
+								["absorbed"] = 0,
+							},
+						},
+					},
+					["grupo"] = true,
+					["start_time"] = 1568736851,
+					["heal_enemy"] = {
+					},
+					["serial"] = "Player-4497-00619488",
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
+					["totaldenied"] = 0.015493,
+					["delay"] = 0,
+					["tipo"] = 2,
+				}, -- [5]
+				{
+					["flag_original"] = 66834,
+					["totalabsorb"] = 0.043884,
+					["last_hps"] = 0,
+					["healing_from"] = {
+						["物理學聖劍"] = true,
+						["白銀諾艾爾"] = true,
+					},
+					["targets"] = {
+						["物理學聖劍"] = 649,
+						["Devops"] = 342,
+						["海豹"] = 1564,
+						["白銀諾艾爾"] = 678,
+					},
+					["targets_absorbs"] = {
+					},
+					["pets"] = {
+					},
+					["iniciar_hps"] = false,
+					["targets_overheal"] = {
+						["物理學聖劍"] = 61,
+						["Devops"] = 485,
+						["海豹"] = 388,
+					},
+					["classe"] = "DRUID",
+					["totalover"] = 934.043884,
+					["total_without_pet"] = 2691.043884,
+					["totalover_without_pet"] = 0.043884,
+					["heal_enemy_amt"] = 0,
+					["fight_component"] = true,
+					["total"] = 2691.043884,
+					["end_time"] = 1568736857,
+					["healing_taken"] = 5506.043884,
+					["nome"] = "物理學聖劍",
+					["spells"] = {
+						["tipo"] = 3,
+						["_ActorTable"] = {
+							[0] = {
+								["c_amt"] = 0,
+								["totalabsorb"] = 0,
+								["targets_overheal"] = {
+									["物理學聖劍"] = 61,
+									["Devops"] = 485,
+									["海豹"] = 388,
+								},
+								["n_max"] = 470,
+								["targets"] = {
+									["物理學聖劍"] = 637,
+									["Devops"] = 200,
+									["海豹"] = 1176,
+									["白銀諾艾爾"] = 678,
+								},
+								["n_min"] = 0,
+								["counter"] = 33,
+								["overheal"] = 934,
+								["total"] = 2691,
+								["c_max"] = 0,
+								["id"] = 0,
+								["targets_absorbs"] = {
+								},
+								["c_curado"] = 0,
+								["m_crit"] = 0,
+								["c_min"] = 0,
+								["m_amt"] = 0,
+								["n_curado"] = 2691,
+								["n_amt"] = 33,
+								["totaldenied"] = 0,
+								["m_healed"] = 0,
+								["absorbed"] = 0,
+							},
+						},
+					},
+					["grupo"] = true,
+					["start_time"] = 1568736790,
+					["heal_enemy"] = {
+					},
+					["serial"] = "Player-4497-0054F494",
+					["custom"] = 0,
+					["last_event"] = 0,
+					["on_hold"] = false,
+					["totaldenied"] = 0.043884,
+					["delay"] = 0,
+					["tipo"] = 2,
+				}, -- [6]
 			},
 		}, -- [2]
 		{
 			["tipo"] = 7,
 			["_ActorTable"] = {
 				{
-					["received"] = 460.040775,
-					["resource"] = 0.209051,
+					["flag_original"] = 1298,
+					["resource"] = 0.059079,
 					["targets"] = {
-						["白銀諾艾爾"] = 200,
+						["Devops"] = 153,
+					},
+					["pets"] = {
+					},
+					["powertype"] = 1,
+					["classe"] = "WARRIOR",
+					["totalover"] = 0.006431,
+					["fight_component"] = true,
+					["alternatepower"] = 0.059079,
+					["nome"] = "Devops",
+					["spells"] = {
+						["tipo"] = 7,
+						["_ActorTable"] = {
+							[0] = {
+								["total"] = 153,
+								["id"] = 0,
+								["totalover"] = 0,
+								["targets"] = {
+									["Devops"] = 153,
+								},
+								["counter"] = 17,
+							},
+						},
+					},
+					["grupo"] = true,
+					["received"] = 153.059079,
+					["last_event"] = 0,
+					["passiveover"] = 0.006431,
+					["total"] = 153.059079,
+					["serial"] = "Player-4497-00559D05",
+					["tipo"] = 3,
+				}, -- [1]
+				{
+					["received"] = 5240.148991,
+					["resource"] = 0.148991,
+					["targets"] = {
+						["Fuse"] = 1060,
+						["白銀諾艾爾"] = 5240,
 					},
 					["pets"] = {
 					},
 					["powertype"] = 0,
 					["classe"] = "PALADIN",
-					["passiveover"] = 0.005867,
-					["total"] = 460.040775,
+					["passiveover"] = 0.006748,
+					["fight_component"] = true,
+					["total"] = 6300.148991,
+					["tipo"] = 3,
 					["nome"] = "白銀諾艾爾",
 					["spells"] = {
+						["tipo"] = 7,
 						["_ActorTable"] = {
 							[0] = {
-								["total"] = 460,
+								["total"] = 6300,
 								["id"] = 0,
 								["totalover"] = 0,
 								["targets"] = {
-									["白銀諾艾爾"] = 200,
+									["Fuse"] = 1060,
+									["白銀諾艾爾"] = 5240,
 								},
-								["counter"] = 23,
+								["counter"] = 315,
 							},
 						},
-						["tipo"] = 7,
 					},
 					["grupo"] = true,
+					["totalover"] = 0.006748,
 					["flag_original"] = 1297,
-					["tipo"] = 3,
-					["alternatepower"] = 0.040775,
 					["last_event"] = 0,
+					["alternatepower"] = 0.148991,
 					["serial"] = "Player-4497-00484697",
-					["totalover"] = 0.005867,
-				}, -- [1]
+				}, -- [2]
+				{
+					["received"] = 1455.037996,
+					["resource"] = 0.037996,
+					["targets"] = {
+						["Fuse"] = 395,
+					},
+					["pets"] = {
+					},
+					["powertype"] = 0,
+					["classe"] = "MAGE",
+					["passiveover"] = 0.001398,
+					["fight_component"] = true,
+					["total"] = 395.037996,
+					["tipo"] = 3,
+					["nome"] = "Fuse",
+					["spells"] = {
+						["tipo"] = 7,
+						["_ActorTable"] = {
+							[0] = {
+								["total"] = 395,
+								["id"] = 0,
+								["totalover"] = 0,
+								["targets"] = {
+									["Fuse"] = 395,
+								},
+								["counter"] = 1,
+							},
+						},
+					},
+					["grupo"] = true,
+					["totalover"] = 0.001398,
+					["flag_original"] = 1298,
+					["last_event"] = 0,
+					["alternatepower"] = 0.037996,
+					["serial"] = "Player-4497-00619488",
+				}, -- [3]
+				{
+					["received"] = 518.112223,
+					["resource"] = 0.112223,
+					["targets"] = {
+						["海豹"] = 518,
+					},
+					["pets"] = {
+					},
+					["powertype"] = 1,
+					["classe"] = "WARRIOR",
+					["passiveover"] = 0.007562,
+					["fight_component"] = true,
+					["total"] = 518.112223,
+					["tipo"] = 3,
+					["nome"] = "海豹",
+					["spells"] = {
+						["tipo"] = 7,
+						["_ActorTable"] = {
+							[0] = {
+								["total"] = 518,
+								["id"] = 0,
+								["totalover"] = 0,
+								["targets"] = {
+									["海豹"] = 518,
+								},
+								["counter"] = 254,
+							},
+						},
+					},
+					["grupo"] = true,
+					["totalover"] = 0.007562,
+					["flag_original"] = 1298,
+					["last_event"] = 0,
+					["alternatepower"] = 0.112223,
+					["serial"] = "Player-4497-00334628",
+				}, -- [4]
 			},
 		}, -- [3]
 		{
@@ -3887,155 +3822,825 @@ _detalhes_database = {
 				{
 					["flag_original"] = 1047,
 					["debuff_uptime_spells"] = {
+						["tipo"] = 9,
 						["_ActorTable"] = {
 							[0] = {
-								["counter"] = 0,
-								["activedamt"] = 0,
-								["appliedamt"] = 1,
+								["refreshamt"] = 0,
+								["activedamt"] = 1,
+								["appliedamt"] = 10,
 								["id"] = 0,
-								["uptime"] = 4,
+								["uptime"] = 34,
 								["targets"] = {
 								},
-								["refreshamt"] = 0,
+								["counter"] = 0,
 							},
 						},
-						["tipo"] = 9,
 					},
-					["pets"] = {
-					},
-					["classe"] = "PALADIN",
+					["buff_uptime"] = 82,
+					["classe"] = "WARLOCK",
 					["buff_uptime_spells"] = {
+						["tipo"] = 9,
 						["_ActorTable"] = {
-							[19852] = {
-								["counter"] = 0,
-								["activedamt"] = 4,
-								["appliedamt"] = 4,
-								["id"] = 19852,
-								["uptime"] = 87,
-								["targets"] = {
-								},
+							[18371] = {
 								["refreshamt"] = 0,
-							},
-							[20918] = {
-								["counter"] = 0,
 								["activedamt"] = 0,
 								["appliedamt"] = 0,
-								["id"] = 20918,
+								["id"] = 18371,
 								["uptime"] = 0,
 								["targets"] = {
 								},
-								["refreshamt"] = 0,
+								["counter"] = 0,
 							},
-							[20134] = {
-								["actived_at"] = 1568712757,
+							[19709] = {
 								["refreshamt"] = 0,
 								["activedamt"] = 1,
 								["appliedamt"] = 1,
+								["id"] = 19709,
+								["uptime"] = 41,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[0] = {
+								["refreshamt"] = 0,
+								["activedamt"] = 3,
+								["appliedamt"] = 3,
+								["id"] = 0,
+								["uptime"] = 0,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[11733] = {
+								["refreshamt"] = 0,
+								["activedamt"] = 1,
+								["appliedamt"] = 1,
+								["id"] = 11733,
+								["uptime"] = 41,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+						},
+					},
+					["fight_component"] = true,
+					["debuff_uptime"] = 34,
+					["buff_uptime_targets"] = {
+					},
+					["grupo"] = true,
+					["spell_cast"] = {
+						[0] = 18,
+					},
+					["debuff_uptime_targets"] = {
+					},
+					["last_event"] = 0,
+					["tipo"] = 4,
+					["nome"] = "Edge",
+					["serial"] = "Player-4497-0056679A",
+					["pets"] = {
+						"帕格匹特 <Edge>", -- [1]
+					},
+				}, -- [1]
+				{
+					["flag_original"] = 1047,
+					["debuff_uptime_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["refreshamt"] = 13,
+								["activedamt"] = 0,
+								["appliedamt"] = 16,
+								["id"] = 0,
+								["uptime"] = 167,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+						},
+					},
+					["dispell"] = 1.001054,
+					["buff_uptime"] = 4160,
+					["classe"] = "PALADIN",
+					["buff_uptime_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[1032] = {
+								["refreshamt"] = 0,
+								["activedamt"] = 1,
+								["appliedamt"] = 1,
+								["id"] = 1032,
+								["uptime"] = 41,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[20134] = {
+								["refreshamt"] = 0,
+								["activedamt"] = 0,
+								["appliedamt"] = 0,
 								["id"] = 20134,
 								["uptime"] = 0,
 								["targets"] = {
 								},
 								["counter"] = 0,
 							},
-							[10299] = {
-								["counter"] = 0,
-								["activedamt"] = 6,
-								["appliedamt"] = 6,
-								["id"] = 10299,
-								["uptime"] = 126,
+							[20918] = {
+								["actived_at"] = 4706211177,
+								["refreshamt"] = 0,
+								["activedamt"] = 8,
+								["appliedamt"] = 8,
+								["id"] = 20918,
+								["uptime"] = 218,
 								["targets"] = {
 								},
+								["counter"] = 0,
+							},
+							[1135] = {
+								["actived_at"] = 6274951306,
 								["refreshamt"] = 0,
+								["activedamt"] = 5,
+								["appliedamt"] = 5,
+								["id"] = 1135,
+								["uptime"] = 50,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[19709] = {
+								["actived_at"] = 1568737867,
+								["refreshamt"] = 0,
+								["activedamt"] = 12,
+								["appliedamt"] = 12,
+								["id"] = 19709,
+								["uptime"] = 602,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[19746] = {
+								["refreshamt"] = 0,
+								["activedamt"] = 23,
+								["appliedamt"] = 23,
+								["id"] = 19746,
+								["uptime"] = 1205,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[5007] = {
+								["refreshamt"] = 0,
+								["appliedamt"] = 1,
+								["activedamt"] = 1,
+								["uptime"] = 0,
+								["id"] = 5007,
+								["actived_at"] = 1568736968,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[10299] = {
+								["actived_at"] = 1568736777,
+								["refreshamt"] = 0,
+								["activedamt"] = 4,
+								["appliedamt"] = 4,
+								["id"] = 10299,
+								["uptime"] = 87,
+								["targets"] = {
+								},
+								["counter"] = 0,
 							},
 							[0] = {
-								["counter"] = 0,
 								["refreshamt"] = 2,
-								["activedamt"] = 19,
-								["uptime"] = 64,
+								["appliedamt"] = 51,
+								["activedamt"] = 51,
+								["uptime"] = 539,
 								["id"] = 0,
-								["appliedamt"] = 19,
+								["actived_at"] = 25099797498,
 								["targets"] = {
 								},
-								["actived_at"] = 4706128274,
+								["counter"] = 0,
+							},
+							[19852] = {
+								["actived_at"] = 1568738183,
+								["refreshamt"] = 0,
+								["activedamt"] = 27,
+								["appliedamt"] = 27,
+								["id"] = 19852,
+								["uptime"] = 1339,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[1133] = {
+								["actived_at"] = 1568736968,
+								["refreshamt"] = 0,
+								["activedamt"] = 2,
+								["appliedamt"] = 2,
+								["id"] = 1133,
+								["uptime"] = 79,
+								["targets"] = {
+								},
+								["counter"] = 0,
 							},
 						},
+					},
+					["dispell_spells"] = {
 						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["dispell"] = 1,
+								["id"] = 0,
+								["dispell_oque"] = {
+									[0] = 1,
+								},
+								["targets"] = {
+									["Edge"] = 1,
+								},
+								["counter"] = 0,
+							},
+						},
 					},
-					["debuff_uptime"] = 4,
-					["nome"] = "白銀諾艾爾",
-					["grupo"] = true,
-					["spell_cast"] = {
-						[0] = 39,
-					},
+					["fight_component"] = true,
+					["debuff_uptime"] = 167,
 					["debuff_uptime_targets"] = {
 					},
-					["tipo"] = 4,
 					["buff_uptime_targets"] = {
 					},
-					["last_event"] = 0,
-					["serial"] = "Player-4497-00484697",
-					["buff_uptime"] = 277,
-				}, -- [1]
-				{
-					["monster"] = true,
-					["last_event"] = 0,
-					["nome"] = "血帆术士",
-					["pets"] = {
-						"小鬼爪牙 <血帆术士>", -- [1]
-					},
-					["classe"] = "UNKNOW",
-					["flag_original"] = 68168,
-					["tipo"] = 4,
-					["fight_component"] = true,
-					["serial"] = "Creature-0-4514-0-190-1564-0000008D0A",
+					["grupo"] = true,
 					["spell_cast"] = {
-						[0] = 6,
+						[0] = 232,
+					},
+					["dispell_oque"] = {
+						[0] = 1,
+					},
+					["dispell_targets"] = {
+						["Edge"] = 1,
+					},
+					["last_event"] = 0,
+					["tipo"] = 4,
+					["nome"] = "白銀諾艾爾",
+					["serial"] = "Player-4497-00484697",
+					["pets"] = {
 					},
 				}, -- [2]
 				{
-					["flag_original"] = 4680,
-					["ownerName"] = "血帆术士",
-					["nome"] = "小鬼爪牙 <血帆术士>",
+					["flag_original"] = 4370,
 					["classe"] = "PET",
+					["ownerName"] = "Edge",
+					["nome"] = "帕格匹特 <Edge>",
 					["pets"] = {
 					},
-					["fight_component"] = true,
-					["tipo"] = 4,
-					["last_event"] = 0,
-					["serial"] = "Creature-0-4514-0-190-12922-0000008D3D",
 					["spell_cast"] = {
-						[0] = 5,
+						[0] = 17,
 					},
+					["tipo"] = 4,
+					["serial"] = "Pet-0-4517-189-12751-416-0300016F3E",
+					["last_event"] = 0,
 				}, -- [3]
 				{
 					["monster"] = true,
-					["last_event"] = 0,
-					["nome"] = "血帆法师",
+					["tipo"] = 4,
+					["nome"] = "血色豪侠",
 					["pets"] = {
 					},
-					["classe"] = "UNKNOW",
-					["flag_original"] = 68168,
-					["tipo"] = 4,
-					["fight_component"] = true,
-					["serial"] = "Creature-0-4514-0-190-1562-0000008D05",
 					["spell_cast"] = {
-						[0] = 3,
+						[0] = 8,
 					},
+					["flag_original"] = 68168,
+					["last_event"] = 0,
+					["fight_component"] = true,
+					["serial"] = "Creature-0-4517-189-12751-4287-000180F738",
+					["classe"] = "UNKNOW",
 				}, -- [4]
 				{
+					["flag_original"] = 1047,
+					["debuff_uptime_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["actived_at"] = 6274951515,
+								["refreshamt"] = 140,
+								["activedamt"] = -5,
+								["appliedamt"] = 268,
+								["id"] = 0,
+								["uptime"] = 761,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+						},
+					},
+					["buff_uptime"] = 2939,
+					["classe"] = "MAGE",
+					["interrupt_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["id"] = 0,
+								["interrompeu_oque"] = {
+									[0] = 4,
+								},
+								["targets"] = {
+									["血色保卫者"] = 3,
+									["血色招魂师"] = 1,
+								},
+								["counter"] = 4,
+							},
+						},
+					},
+					["buff_uptime_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["refreshamt"] = 0,
+								["activedamt"] = 2,
+								["appliedamt"] = 2,
+								["id"] = 0,
+								["uptime"] = 13,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[1461] = {
+								["refreshamt"] = 0,
+								["activedamt"] = 27,
+								["appliedamt"] = 27,
+								["id"] = 1461,
+								["uptime"] = 1371,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[1133] = {
+								["refreshamt"] = 0,
+								["appliedamt"] = 13,
+								["activedamt"] = 13,
+								["uptime"] = 184,
+								["id"] = 1133,
+								["actived_at"] = 14118635357,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[1127] = {
+								["refreshamt"] = 0,
+								["appliedamt"] = 3,
+								["activedamt"] = 3,
+								["uptime"] = 0,
+								["id"] = 1127,
+								["actived_at"] = 4706210636,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[7302] = {
+								["refreshamt"] = 0,
+								["activedamt"] = 27,
+								["appliedamt"] = 27,
+								["id"] = 7302,
+								["uptime"] = 1371,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+						},
+					},
+					["interrompeu_oque"] = {
+						[0] = 4,
+					},
 					["fight_component"] = true,
-					["nome"] = "小鬼爪牙",
-					["classe"] = "PET",
+					["debuff_uptime"] = 761,
+					["interrupt"] = 4.019595,
+					["buff_uptime_targets"] = {
+					},
+					["interrupt_targets"] = {
+						["血色保卫者"] = 3,
+						["血色招魂师"] = 1,
+					},
+					["grupo"] = true,
 					["spell_cast"] = {
-						[0] = 7,
+						[0] = 322,
+					},
+					["debuff_uptime_targets"] = {
+					},
+					["last_event"] = 0,
+					["nome"] = "Fuse",
+					["tipo"] = 4,
+					["serial"] = "Player-4497-00619488",
+					["pets"] = {
+					},
+				}, -- [5]
+				{
+					["flag_original"] = 1047,
+					["debuff_uptime_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["refreshamt"] = 24,
+								["activedamt"] = 0,
+								["appliedamt"] = 40,
+								["id"] = 0,
+								["uptime"] = 295,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+						},
+					},
+					["buff_uptime"] = 2727,
+					["classe"] = "DRUID",
+					["buff_uptime_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["actived_at"] = 3137475836,
+								["refreshamt"] = 0,
+								["activedamt"] = 7,
+								["appliedamt"] = 7,
+								["id"] = 0,
+								["uptime"] = 37,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[5487] = {
+								["refreshamt"] = 0,
+								["activedamt"] = 0,
+								["appliedamt"] = 0,
+								["id"] = 5487,
+								["uptime"] = 0,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[5234] = {
+								["refreshamt"] = 0,
+								["activedamt"] = 27,
+								["appliedamt"] = 27,
+								["id"] = 5234,
+								["uptime"] = 1371,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[5215] = {
+								["refreshamt"] = 0,
+								["appliedamt"] = 5,
+								["activedamt"] = 5,
+								["uptime"] = 0,
+								["id"] = 5215,
+								["actived_at"] = 7843686271,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[768] = {
+								["actived_at"] = 3137476686,
+								["refreshamt"] = 0,
+								["activedamt"] = 27,
+								["appliedamt"] = 27,
+								["id"] = 768,
+								["uptime"] = 1319,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+						},
+					},
+					["fight_component"] = true,
+					["debuff_uptime"] = 295,
+					["buff_uptime_targets"] = {
+					},
+					["grupo"] = true,
+					["spell_cast"] = {
+						[0] = 265,
+					},
+					["debuff_uptime_targets"] = {
+					},
+					["last_event"] = 0,
+					["nome"] = "物理學聖劍",
+					["tipo"] = 4,
+					["serial"] = "Player-4497-0054F494",
+					["pets"] = {
+					},
+				}, -- [6]
+				{
+					["flag_original"] = 1298,
+					["debuff_uptime_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["actived_at"] = 3137476163,
+								["refreshamt"] = 35,
+								["activedamt"] = -3,
+								["appliedamt"] = 120,
+								["id"] = 0,
+								["uptime"] = 796,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+						},
 					},
 					["pets"] = {
 					},
-					["last_event"] = 0,
+					["classe"] = "WARRIOR",
+					["interrupt_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["id"] = 0,
+								["interrompeu_oque"] = {
+									[0] = 2,
+								},
+								["targets"] = {
+									["血色咒术师"] = 1,
+									["血色保卫者"] = 1,
+								},
+								["counter"] = 2,
+							},
+						},
+					},
+					["buff_uptime_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["refreshamt"] = 0,
+								["appliedamt"] = 8,
+								["activedamt"] = 8,
+								["uptime"] = 69,
+								["id"] = 0,
+								["actived_at"] = 7843686308,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[11549] = {
+								["actived_at"] = 3137474559,
+								["refreshamt"] = 0,
+								["activedamt"] = 9,
+								["appliedamt"] = 9,
+								["id"] = 11549,
+								["uptime"] = 303,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+						},
+					},
+					["interrompeu_oque"] = {
+						[0] = 2,
+					},
+					["fight_component"] = true,
+					["debuff_uptime"] = 796,
+					["buff_uptime_targets"] = {
+					},
+					["nome"] = "Devops",
+					["interrupt_targets"] = {
+						["血色咒术师"] = 1,
+						["血色保卫者"] = 1,
+					},
+					["grupo"] = true,
+					["spell_cast"] = {
+						[0] = 252,
+					},
+					["buff_uptime"] = 372,
 					["tipo"] = 4,
-					["serial"] = "Creature-0-4514-0-190-12922-0000009B63",
-					["flag_original"] = 4680,
-				}, -- [5]
+					["debuff_uptime_targets"] = {
+					},
+					["interrupt"] = 2.011491,
+					["serial"] = "Player-4497-00559D05",
+					["last_event"] = 0,
+				}, -- [7]
+				{
+					["monster"] = true,
+					["tipo"] = 4,
+					["nome"] = "血色士兵",
+					["pets"] = {
+					},
+					["spell_cast"] = {
+						[0] = 35,
+					},
+					["flag_original"] = 2632,
+					["last_event"] = 0,
+					["fight_component"] = true,
+					["serial"] = "Creature-0-4517-189-12751-4286-000280F73A",
+					["classe"] = "UNKNOW",
+				}, -- [8]
+				{
+					["flag_original"] = 1298,
+					["debuff_uptime_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["refreshamt"] = 14,
+								["appliedamt"] = 78,
+								["activedamt"] = -12,
+								["uptime"] = 916,
+								["id"] = 0,
+								["actived_at"] = 9412423675,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+						},
+					},
+					["buff_uptime"] = 445,
+					["classe"] = "WARRIOR",
+					["buff_uptime_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["actived_at"] = 6274951001,
+								["refreshamt"] = 0,
+								["activedamt"] = 58,
+								["appliedamt"] = 58,
+								["id"] = 0,
+								["uptime"] = 317,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[11549] = {
+								["actived_at"] = 1568738051,
+								["refreshamt"] = 0,
+								["activedamt"] = 3,
+								["appliedamt"] = 3,
+								["id"] = 11549,
+								["uptime"] = 128,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[29131] = {
+								["refreshamt"] = 0,
+								["appliedamt"] = 6,
+								["activedamt"] = 6,
+								["uptime"] = 0,
+								["id"] = 29131,
+								["actived_at"] = 9412423865,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+							[12292] = {
+								["refreshamt"] = 0,
+								["activedamt"] = 0,
+								["appliedamt"] = 0,
+								["id"] = 12292,
+								["uptime"] = 0,
+								["targets"] = {
+								},
+								["counter"] = 0,
+							},
+						},
+					},
+					["fight_component"] = true,
+					["debuff_uptime"] = 916,
+					["nome"] = "海豹",
+					["grupo"] = true,
+					["spell_cast"] = {
+						[0] = 249,
+					},
+					["debuff_uptime_targets"] = {
+					},
+					["last_event"] = 0,
+					["buff_uptime_targets"] = {
+					},
+					["tipo"] = 4,
+					["serial"] = "Player-4497-00334628",
+					["pets"] = {
+					},
+				}, -- [9]
+				{
+					["monster"] = true,
+					["tipo"] = 4,
+					["nome"] = "血色咒术师",
+					["pets"] = {
+					},
+					["spell_cast"] = {
+						[0] = 6,
+					},
+					["flag_original"] = 2632,
+					["last_event"] = 0,
+					["fight_component"] = true,
+					["serial"] = "Creature-0-4517-189-12751-4297-000080F739",
+					["classe"] = "UNKNOW",
+				}, -- [10]
+				{
+					["monster"] = true,
+					["tipo"] = 4,
+					["nome"] = "血色招魂师",
+					["pets"] = {
+					},
+					["spell_cast"] = {
+						[0] = 14,
+					},
+					["flag_original"] = 2632,
+					["last_event"] = 0,
+					["fight_component"] = true,
+					["serial"] = "Creature-0-4517-189-12751-4289-000000F738",
+					["classe"] = "UNKNOW",
+				}, -- [11]
+				{
+					["monster"] = true,
+					["tipo"] = 4,
+					["nome"] = "血色保卫者",
+					["pets"] = {
+					},
+					["spell_cast"] = {
+						[0] = 29,
+					},
+					["flag_original"] = 2632,
+					["last_event"] = 0,
+					["fight_component"] = true,
+					["serial"] = "Creature-0-4517-189-12751-4292-000280F738",
+					["classe"] = "UNKNOW",
+				}, -- [12]
+				{
+					["fight_component"] = true,
+					["nome"] = "血色卫兵",
+					["flag_original"] = 68168,
+					["spell_cast"] = {
+						[0] = 23,
+					},
+					["monster"] = true,
+					["tipo"] = 4,
+					["classe"] = "UNKNOW",
+					["pets"] = {
+					},
+					["serial"] = "Creature-0-4517-189-12751-4290-000080F739",
+					["last_event"] = 0,
+				}, -- [13]
+				{
+					["monster"] = true,
+					["fight_component"] = true,
+					["interrupt"] = 3.013533,
+					["interrupt_targets"] = {
+						["Fuse"] = 1,
+						["白銀諾艾爾"] = 2,
+					},
+					["classe"] = "UNKNOW",
+					["flag_original"] = 2632,
+					["pets"] = {
+					},
+					["nome"] = "血色防御者",
+					["tipo"] = 4,
+					["last_event"] = 0,
+					["interrupt_spells"] = {
+						["tipo"] = 9,
+						["_ActorTable"] = {
+							[0] = {
+								["id"] = 0,
+								["interrompeu_oque"] = {
+									[0] = 3,
+								},
+								["targets"] = {
+									["Fuse"] = 1,
+									["白銀諾艾爾"] = 2,
+								},
+								["counter"] = 3,
+							},
+						},
+					},
+					["spell_cast"] = {
+						[0] = 54,
+					},
+					["serial"] = "Creature-0-4517-189-12751-4298-000300F738",
+					["interrompeu_oque"] = {
+						[0] = 3,
+					},
+				}, -- [14]
+				{
+					["monster"] = true,
+					["tipo"] = 4,
+					["nome"] = "血色仆从",
+					["pets"] = {
+					},
+					["spell_cast"] = {
+						[0] = 10,
+					},
+					["flag_original"] = 2632,
+					["last_event"] = 0,
+					["fight_component"] = true,
+					["serial"] = "Creature-0-4517-189-12751-4295-000200F738",
+					["classe"] = "UNKNOW",
+				}, -- [15]
+				{
+					["monster"] = true,
+					["tipo"] = 4,
+					["nome"] = "赫洛德",
+					["pets"] = {
+					},
+					["spell_cast"] = {
+						[0] = 15,
+					},
+					["flag_original"] = 2632,
+					["last_event"] = 0,
+					["fight_component"] = true,
+					["serial"] = "Creature-0-4517-189-12751-3975-000000F738",
+					["classe"] = "UNKNOW",
+				}, -- [16]
 			},
 		}, -- [4]
 		{
@@ -4045,134 +4650,264 @@ _detalhes_database = {
 		}, -- [5]
 		["raid_roster"] = {
 		},
-		["tempo_start"] = 1568705860,
+		["tempo_start"] = 1568736435,
 		["last_events_tables"] = {
 		},
 		["alternate_power"] = {
 		},
-		["segments_added"] = {
-			{
-				["elapsed"] = 30.8610000000044,
-				["type"] = 0,
-				["name"] = "南部沙蟹",
-				["clock"] = "17:32:37",
-			}, -- [1]
-			{
-				["elapsed"] = 20.6640000000043,
-				["type"] = 0,
-				["name"] = "南部沙蟹",
-				["clock"] = "17:32:10",
-			}, -- [2]
-			{
-				["elapsed"] = 25.9569999999949,
-				["type"] = 0,
-				["name"] = "血帆术士",
-				["clock"] = "16:40:35",
-			}, -- [3]
-			{
-				["elapsed"] = 18.8359999999957,
-				["type"] = 0,
-				["name"] = "血帆术士",
-				["clock"] = "16:40:02",
-			}, -- [4]
-			{
-				["elapsed"] = 11.8910000000033,
-				["type"] = 0,
-				["name"] = "血帆法师",
-				["clock"] = "15:38:27",
-			}, -- [5]
-			{
-				["elapsed"] = 17.6129999999976,
-				["type"] = 0,
-				["name"] = "血帆术士",
-				["clock"] = "15:37:41",
-			}, -- [6]
-		},
-		["combat_counter"] = 4119,
+		["combat_counter"] = 4206,
 		["totals"] = {
-			18076.088967, -- [1]
-			0, -- [2]
+			351464.95409, -- [1]
+			67191.38105, -- [2]
 			{
-				0, -- [1]
-				[0] = 460.034908,
+				671.157309, -- [1]
+				[0] = 6695.178841,
 				["alternatepower"] = 0,
-				[6] = 0,
 				[3] = 0,
+				[6] = 0,
 			}, -- [3]
 			{
 				["buff_uptime"] = 0,
 				["ress"] = 0,
-				["dead"] = 0,
-				["cc_break"] = 0,
-				["interrupt"] = 0,
 				["debuff_uptime"] = 0,
-				["dispell"] = 0,
 				["cooldowns_defensive"] = 0,
+				["interrupt"] = 9.044619,
+				["dispell"] = 1.001054,
+				["cc_break"] = 0,
+				["dead"] = 0,
 			}, -- [4]
-			["voidzone_damage"] = 0,
 			["frags_total"] = 0,
+			["voidzone_damage"] = 0,
 		},
 		["player_last_events"] = {
+		},
+		["spells_cast_timeline"] = {
 		},
 		["frags_need_refresh"] = false,
 		["aura_timeline"] = {
 		},
 		["__call"] = {
 		},
-		["data_inicio"] = "15:37:41",
-		["end_time"] = 103315.106,
-		["cleu_timeline"] = {
+		["data_inicio"] = "00:07:15",
+		["end_time"] = 517728.756,
+		["cleu_events"] = {
+			["n"] = 1,
+		},
+		["segments_added"] = {
+			{
+				["elapsed"] = 20.0089999999618,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:41:43",
+			}, -- [1]
+			{
+				["elapsed"] = 125.005999999994,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:39:23",
+			}, -- [2]
+			{
+				["elapsed"] = 60.005999999994,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:37:28",
+			}, -- [3]
+			{
+				["elapsed"] = 32.005999999994,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:36:23",
+			}, -- [4]
+			{
+				["elapsed"] = 64,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:35:05",
+			}, -- [5]
+			{
+				["elapsed"] = 24,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:34:12",
+			}, -- [6]
+			{
+				["elapsed"] = 68.0029999999679,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:33:01",
+			}, -- [7]
+			{
+				["elapsed"] = 42.0009999999893,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:31:59",
+			}, -- [8]
+			{
+				["elapsed"] = 45.0020000000368,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:31:08",
+			}, -- [9]
+			{
+				["elapsed"] = 69.0009999999893,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:29:28",
+			}, -- [10]
+			{
+				["elapsed"] = 50.9990000000107,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:28:32",
+			}, -- [11]
+			{
+				["elapsed"] = 65,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:27:19",
+			}, -- [12]
+			{
+				["elapsed"] = 56.0019999999786,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:25:45",
+			}, -- [13]
+			{
+				["elapsed"] = 50.0009999999893,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:24:40",
+			}, -- [14]
+			{
+				["elapsed"] = 35.0019999999786,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:23:55",
+			}, -- [15]
+			{
+				["elapsed"] = 36.0039999999572,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:23:06",
+			}, -- [16]
+			{
+				["elapsed"] = 98.0040000000154,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:21:04",
+			}, -- [17]
+			{
+				["elapsed"] = 60.0049999999465,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:19:44",
+			}, -- [18]
+			{
+				["elapsed"] = 37.0050000000047,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:18:51",
+			}, -- [19]
+			{
+				["elapsed"] = 44.0039999999572,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:17:39",
+			}, -- [20]
+			{
+				["elapsed"] = 55.0009999999893,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:16:08",
+			}, -- [21]
+			{
+				["elapsed"] = 40,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:15:21",
+			}, -- [22]
+			{
+				["elapsed"] = 28.0039999999572,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:14:49",
+			}, -- [23]
+			{
+				["elapsed"] = 79.0060000000522,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:12:58",
+			}, -- [24]
+			{
+				["elapsed"] = 21,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:12:28",
+			}, -- [25]
+			{
+				["elapsed"] = 35,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:11:47",
+			}, -- [26]
+			{
+				["elapsed"] = 31,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:10:52",
+			}, -- [27]
+			{
+				["elapsed"] = 41.0079999999725,
+				["type"] = 5,
+				["name"] = "垃圾清理",
+				["clock"] = "00:07:15",
+			}, -- [28]
 		},
 		["totals_grupo"] = {
-			11654.02851, -- [1]
-			0, -- [2]
+			269035.678898, -- [1]
+			67191.393939, -- [2]
 			{
-				0, -- [1]
-				[0] = 460.034908,
+				671.157309, -- [1]
+				[0] = 6695.178841,
 				["alternatepower"] = 0,
-				[6] = 0,
 				[3] = 0,
+				[6] = 0,
 			}, -- [3]
 			{
 				["buff_uptime"] = 0,
 				["ress"] = 0,
-				["dead"] = 0,
-				["cc_break"] = 0,
-				["interrupt"] = 0,
 				["debuff_uptime"] = 0,
-				["dispell"] = 0,
 				["cooldowns_defensive"] = 0,
+				["interrupt"] = 6.031086,
+				["dispell"] = 1.001054,
+				["cc_break"] = 0,
+				["dead"] = 0,
 			}, -- [4]
 		},
-		["overall_refreshed"] = true,
+		["frags"] = {
+		},
+		["data_fim"] = "00:42:03",
+		["overall_enemy_name"] = "-- x -- x --",
+		["CombatSkillCache"] = {
+		},
+		["cleu_timeline"] = {
+		},
+		["start_time"] = 516317.677,
+		["TimeData"] = {
+		},
 		["PhaseData"] = {
 			{
 				1, -- [1]
 				1, -- [2]
 			}, -- [1]
-			["damage"] = {
-			},
 			["heal_section"] = {
 			},
 			["heal"] = {
 			},
 			["damage_section"] = {
 			},
-		},
-		["hasSaved"] = true,
-		["spells_cast_timeline"] = {
-		},
-		["data_fim"] = "17:33:08",
-		["overall_enemy_name"] = "-- x -- x --",
-		["CombatSkillCache"] = {
-		},
-		["frags"] = {
-		},
-		["start_time"] = 103189.284,
-		["TimeData"] = {
-		},
-		["cleu_events"] = {
-			["n"] = 1,
+			["damage"] = {
+			},
 		},
 	},
 	["force_font_outline"] = "",
@@ -4210,7 +4945,7 @@ _detalhes_database = {
 		}, -- [1]
 	},
 	["character_data"] = {
-		["logons"] = 263,
+		["logons"] = 265,
 	},
 	["announce_cooldowns"] = {
 		["enabled"] = false,

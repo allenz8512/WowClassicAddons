@@ -1,6 +1,6 @@
 !MoncaiCompare: enabled
-Scrap_Visualizer: enabled
-Scrap_Spotlight: enabled
+Scrap_Visualizer: disabled
+Scrap_Spotlight: disabled
 AtlasLootClassic_PvP: disabled
 Questie: enabled
 Auctionator: enabled
@@ -20,9 +20,9 @@ Bagnon_GuildBank: enabled
 Bagnon_VoidStorage: enabled
 BetterVendorPrice: enabled
 RealMobHealth: enabled
-Scrap: enabled
-Scrap_Merchant: enabled
-Scrap_Options: enabled
+Scrap: disabled
+Scrap_Merchant: disabled
+Scrap_Options: disabled
 WeaponSwingTimer: enabled
 ElvUI: enabled
 ElvUI_OptionsUI: enabled
