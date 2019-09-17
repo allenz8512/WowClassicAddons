@@ -3,7 +3,6 @@ local UnitGroupRolesAssigned = DetailsFramework.UnitGroupRolesAssigned
 
 --> check unloaded files:
 if (
-	-- version 1.21.0
 	not _G._detalhes.atributo_custom.damagedoneTooltip or
 	not _G._detalhes.atributo_custom.healdoneTooltip
 	) then
@@ -1877,13 +1876,11 @@ function _G._detalhes:Start()
 	--Details.overall_flag = 0x10
 	
 	--show warning message about classic beta
+	
 	if (not DetailsFramework.IsClassicWow()) then
-		print ("|CFFFFFF00[Details!]: you're using the classic version of Details! on the 8.2.0 patch. If you need help, see our Discord (/details discord)")
+		print ("|CFFFFFF00[Details!]: Details! now has a separated version for Classic, Twitch app should give the right version, any issues report at Discord (/details discord).")
 	else
-		if (math.random (0, 2) == 0) then
-			print ("|CFFFFFF00[Details!]: Tiny Threat (aggro meter) plugin is updated to classic (cogwheel > raid plugins > Tiny Thread).")
-			print ("|CFFFFFF00[Details!]: Show users which has their Details! updated.")
-		end
+		print ("|CFFFFFF00[Details!]: you're using using the wrong version of Details!, please get the classic version, if you need help see our Discord (/details discord).")
 	end
 
 end

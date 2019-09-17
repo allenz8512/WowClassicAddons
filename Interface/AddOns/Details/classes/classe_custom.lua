@@ -25,9 +25,7 @@
 	local _type = type --lua local
 	local _pcall = pcall -- lua local
 	
-	local GetSpellInfo = Details.GetSpellInfoC -- api local
-	local _GetSpellInfo = Details.GetSpellInfoC -- api local
-	
+	local _GetSpellInfo = _detalhes.getspellinfo -- api local
 	local _IsInRaid = IsInRaid -- api local
 	local _IsInGroup = IsInGroup -- api local
 	local _GetNumGroupMembers = GetNumGroupMembers -- api local

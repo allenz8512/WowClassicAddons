@@ -1,0 +1,12 @@
+Changes since tag v8.2.0.7177.140
+
+commit 09cb8a7ab92883b8cdaa8e635bec124e8eba64ee
+Author: Tercio Jose <terciob19@hotmail.com>
+Date:   Sat Sep 7 19:17:06 2019 -0300
+
+    General Updates.
+    
+    - localizations updates.
+    - string bug fixes.
+    - coments updates.
+
