@@ -11,6 +11,7 @@ TF_STABLE_MASTERS = {
     { zone = TF_ZONE.UNDERCITY, x = 0.6743, y = 0.3758, name = "Anya Maulray", faction = TF_FACTION.HORDE },
     { zone = TF_ZONE.SILVERPINE_FOREST, x = 0.4345, y = 0.4118, name = "Sarah Goode", faction = TF_FACTION.HORDE },
     { zone = TF_ZONE.HILLSBRAD_FOOTHILLS, x = 0.6230, y = 0.1970, name = "Theodore Mont Claire", faction = TF_FACTION.HORDE },
+    { zone = TF_ZONE.HILLSBRAD_FOOTHILLS, x = 0.5042, y = 0.5880, name = "Wesley", faction = TF_FACTION.ALLIANCE },
     { zone = TF_ZONE.DUN_MOROGH, x = 0.4701, y = 0.5266, name = "Shelby Stoneflint", faction = TF_FACTION.ALLIANCE },
     { zone = TF_ZONE.IRONFORGE, x = 0.6929, y = 0.8356, name = "Ulbrek Firehand", faction = TF_FACTION.ALLIANCE },
     { zone = TF_ZONE.LOCH_MODAN, x = 0.3464, y = 0.4810, name = "Lina Hearthstove", faction = TF_FACTION.ALLIANCE },
@@ -34,4 +35,8 @@ TF_STABLE_MASTERS = {
     { zone = TF_ZONE.REDRIDGE_MOUNTAINS, x = 0.2681, y = 0.4656, name = "Penny", faction = TF_FACTION.ALLIANCE },
     { zone = TF_ZONE.DUSKWOOD, x = 0.7402, y = 0.4611, name = "Steven Black", faction = TF_FACTION.ALLIANCE },
     { zone = TF_ZONE.DUSTWALLOW_MARSH, x = 0.6601, y = 0.4550, name = "Michael", faction = TF_FACTION.ALLIANCE },
+    { zone = TF_ZONE.DESOLACE, x = 0.2490, y = 0.6867, name = "Aboda", faction = TF_FACTION.HORDE },
+    { zone = TF_ZONE.THE_HINTERLANDS, x = 0.1441, y = 0.4522, name = "Killium Bouldertoe", faction = TF_FACTION.ALLIANCE },
+    { zone = TF_ZONE.THE_HINTERLANDS, x = 0.7916, y = 0.7953, name = "Huntsman Markhor", faction = TF_FACTION.HORDE },
+    { zone = TF_ZONE.SWAMP_OF_SORROWS, x = 0.4556, y = 0.5517, name = "Hekkru", faction = TF_FACTION.HORDE },
 }

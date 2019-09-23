@@ -256,6 +256,9 @@ function TownsfolkTracker:GenerateTooltip(title, point, folktype, inside, prefix
         if (point.wanders) then
             GameTooltip:AddLine("("..L["Wanders this path"]..")", 0.6, 0.6, 0.6)
         end
+        if (point.temporary) then
+            GameTooltip:AddLine("("..L["Not always here"]..")", 0.6, 0.6, 0.6)
+        end
     end
 end
 

@@ -7,6 +7,7 @@ TF_REAGENT_VENDORS = {
     { zone = TF_ZONE.STONETALON_MOUNTAINS, x = 0.4762, y = 0.6159, name = "Jeeda", faction = TF_FACTION.HORDE },
     { zone = TF_ZONE.UNDERCITY, x = 0.6970, y = 0.3906, name = "Thomas Mordan", faction = TF_FACTION.HORDE },
     { zone = TF_ZONE.UNDERCITY, x = 0.8277, y = 0.1586, name = "Hannah Akeley", faction = TF_FACTION.HORDE },
+    { zone = TF_ZONE.HILLSBRAD_FOOTHILLS, x = 0.5082, y = 0.5902, name = "Jaysin Lanyda", faction = TF_FACTION.ALLIANCE },
     { zone = TF_ZONE.IRONFORGE, x = 0.1916, y = 0.5611, name = "Barim Jurgenstaad", faction = TF_FACTION.ALLIANCE },
     { zone = TF_ZONE.IRONFORGE, x = 0.3133, y = 0.2776, name = "Ginny Longberry", faction = TF_FACTION.ALLIANCE },
     { zone = TF_ZONE.WETLANDS, x = 0.0834, y = 0.5641, name = "Falkan Armonis", faction = TF_FACTION.ALLIANCE },
@@ -23,4 +24,7 @@ TF_REAGENT_VENDORS = {
     { zone = TF_ZONE.FERALAS, x = 0.7464, y = 0.4491, name = "Tarhus", faction = TF_FACTION.HORDE },
     { zone = TF_ZONE.DUSKWOOD, x = 0.7611, y = 0.4527, name = "Alyssa Eva", faction = TF_FACTION.ALLIANCE },
     { zone = TF_ZONE.ARATHI_HIGHLANDS, x = 0.2720, y = 0.5880, name = "Deneb Walker", tag = "Scrolls & Potions", faction = TF_FACTION.ALLIANCE },
+    { zone = TF_ZONE.THE_HINTERLANDS, x = 0.7880, y = 0.7826, name = "Mystic Yayo'jin", faction = TF_FACTION.HORDE },
+    { zone = TF_ZONE.SWAMP_OF_SORROWS, x = 0.4578, y = 0.5284, name = "Thultazor", faction = TF_FACTION.HORDE },
+    { zone = TF_ZONE.DUSTWALLOW_MARSH, x = 0.3649, y = 0.3036, name = "Balai Lok'Wein", profession = TF_PROFESSION.FIRST_AID, faction = TF_FACTION.HORDE },
 }

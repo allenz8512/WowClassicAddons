@@ -225,4 +225,11 @@ TF_CLASS_TRAINERS = {
     { zone = TF_ZONE.FERALAS, x = 0.7599, y = 0.4229, name = "Jannos Lighthoof", class = TF_CLASS.DRUID, faction = TF_FACTION.HORDE },
     { zone = TF_ZONE.DUSTWALLOW_MARSH, x = 0.6740, y = 0.4741, name = "Brother Karman", class = TF_CLASS.PALADIN, faction = TF_FACTION.ALLIANCE },
     { zone = TF_ZONE.DUSTWALLOW_MARSH, x = 0.6788, y = 0.4841, name = "Captain Evencane", class = TF_CLASS.WARRIOR, faction = TF_FACTION.ALLIANCE },
+    { zone = TF_ZONE.ALTERAC_MOUNTAINS, x = 0.8445, y = 0.8032, name = "Fahrad", class = TF_CLASS.ROGUE },
+    { zone = TF_ZONE.SWAMP_OF_SORROWS, x = 0.4490, y = 0.5762, name = "Malosh", class = TF_CLASS.WARRIOR, faction = TF_FACTION.HORDE },
+    { zone = TF_ZONE.SWAMP_OF_SORROWS, x = 0.4735, y = 0.5290, name = "Grokor", class = TF_CLASS.HUNTER, tag = "Pet Trainer", faction = TF_FACTION.HORDE },
+    { zone = TF_ZONE.SWAMP_OF_SORROWS, x = 0.4726, y = 0.5342, name = "Ogromm", class = TF_CLASS.HUNTER, faction = TF_FACTION.HORDE },
+    { zone = TF_ZONE.SWAMP_OF_SORROWS, x = 0.4865, y = 0.5564, name = "Kartosh", class = TF_CLASS.WARLOCK, faction = TF_FACTION.HORDE },
+    { zone = TF_ZONE.SWAMP_OF_SORROWS, x = 0.4857, y = 0.5527, name = "Greshka", class = TF_CLASS.WARLOCK, tag = "Demon Trainer", faction = TF_FACTION.HORDE },
+    { zone = TF_ZONE.SWAMP_OF_SORROWS, x = 0.4818, y = 0.5794, name = "Haromm", class = TF_CLASS.SHAMAN, faction = TF_FACTION.HORDE },
 }
