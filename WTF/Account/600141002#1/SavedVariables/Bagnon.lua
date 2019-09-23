@@ -53,8 +53,8 @@ Bagnon_Sets = {
 			},
 			["hiddenRules"] = {
 			},
-			["y"] = 223.55549621582,
-			["x"] = -204.667724609375,
+			["y"] = 230.666610717773,
+			["x"] = -114.001220703125,
 			["borderColor"] = {
 			},
 			["itemScale"] = 1,
@@ -131,7 +131,7 @@ Bagnon_Sets = {
 			},
 		},
 		["bank"] = {
-			["y"] = 343.167114257813,
+			["y"] = -342.277282714844,
 			["rules"] = {
 				"all", -- [1]
 				"all/all", -- [2]
@@ -159,12 +159,12 @@ Bagnon_Sets = {
 				"contain/all", -- [24]
 				"misc/all", -- [25]
 			},
-			["point"] = "BOTTOMLEFT",
+			["point"] = "TOPLEFT",
 			["hiddenBags"] = {
 			},
 			["color"] = {
 			},
-			["x"] = 457.666809082031,
+			["x"] = 341.222229003906,
 			["hiddenRules"] = {
 			},
 			["borderColor"] = {

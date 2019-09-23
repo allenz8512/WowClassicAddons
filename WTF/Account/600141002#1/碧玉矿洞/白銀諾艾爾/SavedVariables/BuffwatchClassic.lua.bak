@@ -1,0 +1,17 @@
+
+BuffwatchPlayerConfig = {
+	["ShowPets"] = false,
+	["Minimized"] = false,
+	["Scale"] = 1.5,
+	["ShowCastableBuffs"] = true,
+	["ShowAllForPlayer"] = false,
+	["AnchorPoint"] = "Auto",
+	["HideUnmonitored"] = false,
+	["Version"] = "1.06",
+	["WindowLocked"] = false,
+	["ShowOnlyMine"] = true,
+	["Mode"] = "Party",
+	["SortOrder"] = "Raid Order",
+}
+BuffwatchSaveBuffs = {
+}

@@ -1,27 +1,15 @@
 
 AtlasLootClassicDB = {
 	["profileKeys"] = {
-		["白银兽骑团员 - 碧玉矿洞"] = "白银兽骑团员 - 碧玉矿洞",
 		["白銀諾艾爾 - 碧玉矿洞"] = "白銀諾艾爾 - 碧玉矿洞",
+		["白银兽骑团友 - 碧玉矿洞"] = "白银兽骑团友 - 碧玉矿洞",
+		["白银兽骑团员 - 碧玉矿洞"] = "白银兽骑团员 - 碧玉矿洞",
+		["白银兽骑团委 - 碧玉矿洞"] = "白银兽骑团委 - 碧玉矿洞",
 	},
 	["global"] = {
 		["__addonrevision"] = 1010008,
 	},
 	["profiles"] = {
-		["白银兽骑团员 - 碧玉矿洞"] = {
-			["minimap"] = {
-				["minimapPos"] = 197.36267728892,
-			},
-			["GUI"] = {
-				["selected"] = {
-					"AtlasLootClassic_Crafting", -- [1]
-					"Engineering", -- [2]
-					4, -- [3]
-					1, -- [4]
-					0, -- [5]
-				},
-			},
-		},
 		["白銀諾艾爾 - 碧玉矿洞"] = {
 			["minimap"] = {
 				["minimapPos"] = 189.749632322577,
@@ -36,8 +24,35 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"ScarletMonasteryGraveyard", -- [2]
+					"RazorfenDowns", -- [2]
+					nil, -- [3]
+					1, -- [4]
+					0, -- [5]
+				},
+			},
+		},
+		["白银兽骑团友 - 碧玉矿洞"] = {
+		},
+		["白银兽骑团员 - 碧玉矿洞"] = {
+			["minimap"] = {
+				["minimapPos"] = 197.36267728892,
+			},
+			["GUI"] = {
+				["selected"] = {
+					"AtlasLootClassic_Crafting", -- [1]
+					"Engineering", -- [2]
 					4, -- [3]
+					1, -- [4]
+					0, -- [5]
+				},
+			},
+		},
+		["白银兽骑团委 - 碧玉矿洞"] = {
+			["GUI"] = {
+				["selected"] = {
+					nil, -- [1]
+					"Ragefire", -- [2]
+					nil, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},

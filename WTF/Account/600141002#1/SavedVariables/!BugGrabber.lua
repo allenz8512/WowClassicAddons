@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 171,
+	["session"] = 223,
 	["errors"] = {
 		{
 			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipAddMoney",
@@ -74,21 +74,13 @@ BugGrabberDB = {
 			["counter"] = 2,
 		}, -- [10]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'TownsfolkTracker' 尝试调用保护功能 'CompactRaidFrame1:Show()'。",
-			["time"] = "2019/09/17 22:44:45",
-			["locals"] = "InCombatSkipped",
-			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:353: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:286: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:54: in function <Interface\\FrameXML\\CompactUnitFrame.lua:51>",
-			["session"] = 169,
-			["counter"] = 1,
-		}, -- [11]
-		{
 			["message"] = "Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant-13.18.lua:290: attempt to call global 'GetGuildBankWithdrawMoney' (a nil value)",
 			["time"] = "2019/09/17 22:57:01",
 			["locals"] = "self = Scrap {\n 0 = <userdata>\n OnLeave = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:167\n PrintMoney = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:301\n CheckFilters = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:162\n VARIABLES_LOADED = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:84\n ShowTooltip = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:141\n LowLevel = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:194\n Junk = <table> {\n }\n IsBetterEquip = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:226\n GetSlot = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:240\n OnMerchant = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:104\n OnItemSold = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:307\n LoadTooltip = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:254\n numLines = 10\n Repair = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:287\n limit = 2\n tab = MerchantFrameSecureTab0 {\n }\n AnyJunk = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:280\n PixelSnapDisabled = true\n ToggleJunk = <function> defined =[C]:-1\n Print = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:305\n GetBuypackStack = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:356\n OnItemRefund = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:332\n IterateJunk = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:118\n GetJunkValue = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:265\n IsLowEquip = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:206\n SellJunk = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:222\n UpdateButtonPosition = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:201\n BelongsToSet = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:271\n CanGuildRepair = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:300\n OnEnter = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:135\n IsJunk = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:112\n HighLevel = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:190\n OnReceiveDrag = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:188\n HasSpotlight = true\n GetID = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:315\n ToggleCursorJunk = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:253\n IsSoulbound = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:275\n OnClick = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:174\n UpdateButtonState = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:195\n BAG_UPDATE = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:128\n MERCHANT_CLOSED = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:123\n MERCHANT_SHOW = <function> defined @Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant.lua:95\n CombatItem = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:202\n IsOtherClass = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:289\n StandardQuality = <function> defined @Interface\\AddOns\\Scrap\\Scrap.lua:198\n}\ncost = 355\n(*temporary) = nil\n(*temporary) = \"attempt to call global 'GetGuildBankWithdrawMoney' (a nil value)\"\nL = <table> {\n Removed = \"已从垃圾列表删除: %s\"\n SoldJunk = \"你出售垃圾共获得 %s\"\n Tutorial_Button = \"當你訪問商人的時候，Scrap 會自動出售你的垃圾，但你也能手動出售。|n|cffffd200左鍵點擊|r Scrap 按鈕出售垃圾。|n|cffffd200右鍵點擊|r Scrap 按鈕開啟下拉選單。\"\n Added = \"已添加到垃圾列表: %s\"\n SafeMode = \"安全模式\"\n ShowTutorials = \"显示教学\"\n LowConsume = \"低等級消耗品\"\n Junk = \"垃圾\"\n Tutorial_Drag = \"如果你想教 Scrap 知道哪些該賣、哪些不該賣的話，怎麼辦呢？只需要|cffffd200拖曳|r該項物品到 Scrap 按鈕上。|n|n或者，你可以到|cffffd200按鈕設定|r�",
 			["stack"] = "Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant-13.18.lua:290: in function `Repair'\nInterface\\AddOns\\Scrap_Merchant\\Scrap_Merchant-13.18.lua:110: in function `OnMerchant'\nInterface\\AddOns\\Scrap_Merchant\\Scrap_Merchant-13.18.lua:98: in function `MERCHANT_SHOW'\nInterface\\AddOns\\Scrap\\Scrap-13.18.lua:103: in function `?'\nInterface\\AddOns\\Scrap\\Scrap-13.18.lua:77: in function <Interface\\AddOns\\Scrap\\Scrap.lua:77>",
 			["session"] = 169,
 			["counter"] = 2,
-		}, -- [12]
+		}, -- [11]
 		{
 			["message"] = "Interface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:603: ContainerIDToInventoryID(): invalid container ID",
 			["time"] = "2019/09/17 22:58:30",
@@ -96,7 +88,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `ContainerIDToInventoryID'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:603: in function `ValidBag'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:575: in function `FindInBank'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:1907: in function `MissingItems'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:1006: in function `BuildMenu'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:1671: in function `MinimapOnClick'\n[string \"*:OnClick\"]:1: in function <[string \"*:OnClick\"]:1>",
 			["session"] = 169,
 			["counter"] = 2,
-		}, -- [13]
+		}, -- [12]
 		{
 			["message"] = "...terface\\AddOns\\Details_Streamer\\Details_Streamer.lua:2040: attempt to index global 'Details_StreamerDB' (a nil value)",
 			["time"] = "2019/09/17 15:01:04",
@@ -104,22 +96,53 @@ BugGrabberDB = {
 			["stack"] = "...terface\\AddOns\\Details_Streamer\\Details_Streamer.lua:2040: in function <...terface\\AddOns\\Details_Streamer\\Details_Streamer.lua:1889>\n(tail call): ?",
 			["session"] = 170,
 			["counter"] = 17,
-		}, -- [14]
+		}, -- [13]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'RecipeRadarClassic' 尝试调用保护功能 'SpellBookSpellIconsFrame:Show()'。",
 			["time"] = "2019/09/17 17:32:45",
 			["locals"] = "InCombatSkipped",
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\SpellBookFrame.lua:148: in function <Interface\\FrameXML\\SpellBookFrame.lua:112>\n[C]: in function `SpellBookFrame_Update'\nInterface\\FrameXML\\SpellBookFrame.lua:97: in function <Interface\\FrameXML\\SpellBookFrame.lua:96>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2078: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:1923: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:1784: in function <Interface\\FrameXML\\UIParent.lua:1780>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2526: in function `ShowUIPanel'\nInterface\\FrameXML\\SpellBookFrame.lua:46: in function `ToggleSpellBook'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:362: in function `RecipeRadar_SkillDB_ShowSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:382: in function `RecipeRadar_SkillDB_ParseSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:39: in function `RecipeRadar_Frame_Show'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:31: in function `RecipeRadar_Toggle'\n...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:68: in function <...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:67>",
-			["session"] = 171,
-			["counter"] = 2,
+			["session"] = 175,
+			["counter"] = 3,
+		}, -- [14]
+		{
+			["message"] = "...ddOns\\CensusPlusClassic\\modules\\CensusPlayerList.lua:110: attempt to concatenate global 'CENSUSPlus_MAXXED' (a nil value)",
+			["time"] = "2019/09/18 16:53:16",
+			["locals"] = "guildKey = nil\nraceKey = nil\nclassKey = nil\nlevelKey = nil\nrealmName = \"4497_碧玉矿洞\"\nfactionGroup = \"Alliance\"\ntotalCharactersText = \"全部角色: 1000\"\n(*temporary) = \"全部角色: 1000\"\n(*temporary) = \" -- \"\n(*temporary) = nil\n(*temporary) = 1000\n(*temporary) = CensusPlusPlayerListScrollFrame {\n ScrollBar = CensusPlusPlayerListScrollFrameScrollBar {\n }\n offset = 0\n ScrollChildFrame = CensusPlusPlayerListScrollFrameScrollChildFrame {\n }\n 0 = <userdata>\n}\n(*temporary) = 1000\n(*temporary) = 20\n(*temporary) = \"attempt to concatenate global 'CENSUSPlus_MAXXED' (a nil value)\"\nCPp = <table> {\n TZWarningSent = false\n IsCensusPlusInProgress = true\n AutoCensus = true\n EnableProfiling = false\n Options_Holder = <table> {\n }\n LastCensusRun = 1568796717\n FirstLoad = false\n InterfaceVersion = \"Captain Placeholder\"\n CensusPlusManuallyPaused = false\n LevelSelected = 0\n LocaleSet = false\n ClassSelected = 0\n GuildSelected = 0\n RaceSelected = 0\n AutoStartTimer = 30\n}\ng_PlayerList = <table> {\n 1 = <table> {\n }\n 2 = <table> {\n }\n 3 = <table> {\n }\n 4 = <table> {\n }\n 5 = <table> {\n }\n 6 = <table> {\n }\n 7 = <table> {\n }\n 8 = <table> {\n }\n 9 = <table> {\n }\n 10 = <table> {\n }\n 11 = <table> {\n }\n 12 = <table> {\n }\n 13 = <table> {\n }\n 14 = <table> {\n }\n 15 = <table> {\n }\n 16 = <table> {\n }\n 17 = <table> {\n }\n 18 = <table> {\n }\n 19 = <table> {\n }\n 20 = <table> {\n }\n 21 = <table> {\n }\n 22 = <table> {\n }\n 23 = <table> {\n }\n 24 = <table> {\n }\n 25 = <table> {\n }\n 26 = <table> {\n }\n 27 = <table> {\n }\n 28 = <table> {\n }\n 29 = <table> {\n }\n 30 = <table> {\n }\n 31 = <table> {\n }\n 32 = <table> {\n }\n 33 = <table> {\n }\n 34 = <table> {\n }\n 35 = <table> {\n }\n 36 = <table> {\n }\n 37 = <table> {\n }\n 38 = <table> {\n }\n 39 = <table> {\n }\n 40 = <table> {\n }\n 41 = <table> {\n }\n 42 = <table> {\n }\n 43 = <table> {\n }\n 44 = <table> {\n }\n 45 = <table> {\n }\n 46 = <table> {\n }\n 47 = <table> {\n }\n 48 = <table> {\n }\n 49 = <table> {\n }\n 50 = <table> {\n }\n 51 = <table> {\n }\n 52 = <table> {\n }\n 53 = <table> {\n }\n 54 = <table> {\n }\n 55 = <table> {\n }\n 56 = <table> {\n }\n 57 = <table> {\n }\n 58 = <table> {\n }\n 59 = <table> {\n }\n 60 = <table> {\n }\n 61 = <table> {\n }\n 62 = <table> {\n }\n 63 = <table> {\n }\n 64 = <table> {\n }\n 65 = <table> {\n }\n 66 = <table> {\n }\n 67 = <table> {\n }\n 68 = <table> {\n }\n 69 = <table> {\n }\n 70 = <table> {\n }\n 71 = <table> {\n }\n 72 = <table> {\n }\n 73 = <table> {\n }\n 74 = <table> {\n }\n 75 = <table> {\n }\n 76 = <table> {\n }\n 77 = <table> {\n }\n 78 = <table> {\n }\n 79 = <table> {\n }\n 80 = <table> {\n }\n 81 = <table> {\n }\n 82 = <table> {\n }\n 83 = <table> {\n }\n 84 = <table> {\n }\n 85 = <table> {\n }\n 86 = <table> {\n }\n 87 = <table> {\n }\n 88 = <table> {\n }\n 89 = <table> {\n }\n 90 = <table> {\n }\n 91 = <table> {\n }\n 92 = <table> {\n }\n 93 = <table> {\n }\n 94 = <table> {\n }\n 95 = <table> {\n }\n 96 = <table> {\n }\n 97 = <table> {\n }\n 98 = <table> {\n }\n 99 = <table> {\n }\n 100 = <table> {\n }\n 101 = <table> {\n }\n 102 = <table> {\n }\n 103 = <table> {\n }\n 104 = <table> {\n }\n 105 = <table> {\n }\n 106 = <table> {\n }\n 107 = <table> {\n }\n 108 = <table> {\n }\n 109 = <table> {\n }\n 110 = <table> {\n }\n 111 = <table> {\n }\n 112 = <table> {\n }\n 113 = <table> {\n }\n 114 = <table> {\n }\n 115 = <table> {\n }\n 116 = <table> {\n }\n 117 = <table> {\n }\n 118 = <table> {\n }\n 119 = <table> {\n }\n 120 = <table> {\n }\n 121 = <table> {\n }\n 122 = <table> {\n }\n 123 = <table> {\n }\n 124 = <table> {\n }\n 125 = <table> {\n }\n 126 = <table> {\n }\n 127 = <table> {\n }\n 128 = <table> {\n }\n 129 = <table> {\n }\n 130 = <table> {\n }\n 131 = <table> {\n }\n 132 = <table> {\n }\n 133 = <table> {\n }\n 134 = <table> {\n }\n 135 = <table> {\n }\n 136 = <table> {\n }\n 137 = <table> {\n }\n 138 = <table> {\n }\n 139 = <table> {\n }\n 140 = <table> {\n }\n 141 = <table> {\n }\n 142 = <table> {\n }\n 143 = <table> {\n }\n 144 = <table> {\n }\n 145 = <table> {\n }\n 146 = <table> {\n }\n 147 = <table> {\n }\n 148 = <table> {\n }\n 149 = <table> {\n }\n 150 = <table> {\n }\n 151 = <table> {\n }\n 152 = <table> {\n }\n 153 = <table> {\n }\n 154 = <table> {\n }\n 155 = <table> {\n }\n 156 = <table> {\n }\n 157 = <table> {\n }\n 158 = <table> {\n }\n 159 = <table> {\n }\n 160 = <table> {\n }\n 161 =",
+			["stack"] = "...ddOns\\CensusPlusClassic\\modules\\CensusPlayerList.lua:110: in function `CensusPlus_PlayerListOnShow'\n[string \"*:OnShow\"]:1: in function <[string \"*:OnShow\"]:1>\n[C]: in function `Show'\n...ddOns\\CensusPlusClassic\\modules\\CensusPlayerList.lua:43: in function `CensusPlus_ShowPlayerList'\n[string \"*:OnClick\"]:5: in function <[string \"*:OnClick\"]:1>",
+			["session"] = 177,
+			["counter"] = 1,
 		}, -- [15]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'RecipeRadarClassic' 尝试调用保护功能 'CompactRaidFrame1:Show()'。",
+			["time"] = "2019/09/23 00:42:35",
+			["locals"] = "InCombatSkipped",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:353: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:286: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:54: in function <Interface\\FrameXML\\CompactUnitFrame.lua:51>",
+			["session"] = 207,
+			["counter"] = 1,
+		}, -- [16]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'TownsfolkTracker' 尝试调用保护功能 'CompactRaidFrame1:Show()'。",
+			["time"] = "2019/09/17 22:44:45",
+			["locals"] = "InCombatSkipped",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:353: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:286: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:54: in function <Interface\\FrameXML\\CompactUnitFrame.lua:51>",
+			["session"] = 211,
+			["counter"] = 9,
+		}, -- [17]
+		{
+			["message"] = "...e\\AddOns\\Fizzle\\Libs\\AceBucket-3.0\\AceBucket-3.0-4.lua:209: attempt to index upvalue 'AceEvent' (a nil value)",
+			["time"] = "2019/09/23 17:26:20",
+			["stack"] = "...e\\AddOns\\Fizzle\\Libs\\AceBucket-3.0\\AceBucket-3.0-4.lua:209: in function `UnregisterBucket'\n...e\\AddOns\\Fizzle\\Libs\\AceBucket-3.0\\AceBucket-3.0-4.lua:233: in function `UnregisterAllBuckets'\n...e\\AddOns\\Fizzle\\Libs\\AceBucket-3.0\\AceBucket-3.0-4.lua:259: in function <...e\\AddOns\\Fizzle\\Libs\\AceBucket-3.0\\AceBucket-3.0.lua:258>\n[C]: ?\n...xternal\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:70: in function <...xternal\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:65>\n...xternal\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:569: in function <...xternal\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:555>\n(tail call): ?\n(tail call): ?\n...Details\\Libs\\ThreatClassic-1.0\\ThreatClassic-1.0-4.lua:245: in function `?'\n...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:119: in function <...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[C]: ?\n...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:29: in function <...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:64: in function `Fire'\n...xternal\\Wildpants\\libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...xternal\\Wildpants\\libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 223,
+			["counter"] = 1,
+		}, -- [18]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'Atlas' 尝试调用保护功能 'MultiBarBottomLeft:SetFrameStrata()'。",
 			["time"] = "2019/09/17 17:32:45",
 			["locals"] = "InCombatSkipped",
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `SetFrameStrata'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:379: in function `Atlas_Init'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:326: in function `Atlas_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:416: in function `TradeSkillFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:1148: in function <Interface\\FrameXML\\UIParent.lua:658>\n[C]: ?\n[C]: in function `CastSpell'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:393: in function `RecipeRadar_SkillDB_ParseSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:39: in function `RecipeRadar_Frame_Show'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:31: in function `RecipeRadar_Toggle'\n...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:68: in function <...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:67>",
-			["session"] = 171,
-			["counter"] = 2,
-		}, -- [16]
+			["session"] = 223,
+			["counter"] = 8,
+		}, -- [19]
 	},
 }

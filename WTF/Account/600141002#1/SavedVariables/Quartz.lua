@@ -10,6 +10,17 @@ Quartz3DB = {
 		["Flight"] = {
 		},
 		["Mirror"] = {
+			["profiles"] = {
+				["Default"] = {
+					["mirroranchor"] = "free",
+					["mirrory"] = 850,
+					["mirrorheight"] = 25,
+					["mirrorfont"] = "默认",
+					["mirrorx"] = 780,
+					["mirrorwidth"] = 200,
+					["mirrorfontsize"] = 11,
+				},
+			},
 		},
 		["Player"] = {
 			["profiles"] = {
@@ -33,8 +44,10 @@ Quartz3DB = {
 		},
 	},
 	["profileKeys"] = {
-		["白银兽骑团员 - 碧玉矿洞"] = "Default",
 		["白銀諾艾爾 - 碧玉矿洞"] = "Default",
+		["白银兽骑团友 - 碧玉矿洞"] = "Default",
+		["白银兽骑团员 - 碧玉矿洞"] = "Default",
+		["白银兽骑团委 - 碧玉矿洞"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

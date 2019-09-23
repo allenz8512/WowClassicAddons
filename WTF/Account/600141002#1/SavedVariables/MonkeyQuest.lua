@@ -8,77 +8,83 @@ MonkeyQuestConfig = {
 			["荆棘谷 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["一捆海蛇草 - false"] = {
+			["意志石板 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["蚌肉大餐 - false"] = {
+			["塔纳利斯 - true"] = {
 				["m_bChecked"] = true,
 			},
 			["奥达曼 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["奥达曼的蘑菇 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["赞吉尔的秘密 - false"] = {
+			["千针石林 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["烹饪 - true"] = {
+			["鲁瑟兰村 - true"] = {
 				["m_bChecked"] = false,
+			},
+			["回复菲兹尔 - false"] = {
+				["m_bChecked"] = true,
 			},
 			["深渊皇冠 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["帅小伙子邓肯 - false"] = {
+			["麦佐斯 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["荆棘谷热疫 - false"] = {
+			["奥术符文 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["祖尔法拉克 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["鼻烟 - false"] = {
+			["重要的补给 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["打开钥匙之石 - false"] = {
+			["铁炉堡 - true"] = {
+				["m_bChecked"] = false,
+			},
+			["科泰罗的谜题 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["地精工程学 - false"] = {
+			["调查神庙 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["威士忌斯利姆的酒 - false"] = {
+			["召唤大地公主 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["船长的箱子 - false"] = {
+			["暴风城 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["工程学 - true"] = {
+			["星，手，心 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["讨债行动 - false"] = {
+			["月神之兽？ - false"] = {
 				["m_bChecked"] = true,
 			},
-			["海盗的眼睛 - false"] = {
+			["荒芜之地 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["阿戈莫德的命运 - false"] = {
+			["研究石元素 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["猎龙 - false"] = {
+			["瓶中信 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["血帆海盗 - false"] = {
+			["大地的震颤 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["拭目以待 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["阿拉希高地 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["与圣光同在 - false"] = {
+			["寻找OOX-17/TN！ - false"] = {
 				["m_bChecked"] = true,
 			},
-			["剃刀高地 - true"] = {
-				["m_bChecked"] = false,
+			["潜水采珍珠 - false"] = {
+				["m_bChecked"] = true,
 			},
 		},
 	},
@@ -133,10 +139,36 @@ MonkeyQuestConfig = {
 		["m_bColourDoneOrFailed"] = false,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_iFrameBottom"] = -119.111129760742,
+		["m_iFrameBottom"] = -156.4443359375,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {
+		["m_aQuestList"] = {
+		},
+	},
+	["碧玉矿洞|白银兽骑团委"] = {
+		["m_aQuestList"] = {
+			["贝尔丁的补给 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["啤酒烤猪排 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["海格纳的弹药 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["烹饪 - true"] = {
+				["m_bChecked"] = true,
+			},
+			["丹莫罗 - true"] = {
+				["m_bChecked"] = true,
+			},
+			["灰色洞穴 - false"] = {
+				["m_bChecked"] = true,
+			},
+		},
+	},
+	["碧玉矿洞|白银兽骑团友"] = {
 		["m_aQuestList"] = {
 		},
 	},

@@ -40,7 +40,7 @@ Quartz: enabled
 WeakAuras: disabled
 WeakAurasModelPaths: disabled
 WeakAurasOptions: disabled
-ElvUI_LocationPlus: disabled
+ElvUI_LocationPlus: enabled
 Details_TinyThreat: enabled
 Atlas: enabled
 AtlasQuest: enabled
