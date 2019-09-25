@@ -1,0 +1,8 @@
+## Interface: 11300
+## Title: AutoDismount
+## Version: 1.0.1
+## License: MIT
+## Notes: Dismounts you when opening Flightpath, or whenever "Cannot use while mounted" OR "Can't attack while mounted" errors appear. Also tries to remove druid and shaman forms.
+## SavedVariables: AUTO_DISMOUNT_FORM_CANCEL
+AutoDismount.lua
+AutoDismount.xml
