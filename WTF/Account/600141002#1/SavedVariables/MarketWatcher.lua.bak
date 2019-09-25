@@ -1,0 +1,7 @@
+
+MarketWatcherHistory = {
+}
+MarketWatcherWatched = {
+}
+MarketWatcherConfig = {
+}

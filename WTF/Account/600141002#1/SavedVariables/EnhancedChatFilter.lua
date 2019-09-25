@@ -2,26 +2,41 @@
 ecfDB = {
 	["enableDND"] = true,
 	["enableRepeat"] = true,
-	["repeatFilterGroup"] = true,
+	["addonQRF"] = false,
 	["addonRAF"] = false,
 	["enableMSF"] = false,
-	["addonQRF"] = false,
+	["repeatFilterGroup"] = true,
+	["blackWordFilterGroup"] = false,
+	["lootQualityMin"] = 0,
+	["lootCurrencyFilterList"] = {
+	},
+	["enableAggressive"] = false,
+	["enableCFA"] = true,
+	["lootItemFilterList"] = {
+	},
+	["lesserBlackWordThreshold"] = 3,
 	["blackWordList"] = {
-		["黑暗深渊"] = {
+		["AA"] = {
 		},
 		["剃刀沼泽"] = {
 		},
-		["AA"] = {
-		},
-		["血色"] = {
+		["STSM"] = {
 		},
 		["矿井"] = {
 		},
-		["STSM"] = {
+		["黑暗深渊"] = {
+		},
+		["血色"] = {
+		},
+		["武器库"] = {
+		},
+		["影牙"] = {
+		},
+		["军火库"] = {
 		},
 		["死矿"] = {
 		},
-		["影牙"] = {
+		["监狱"] = {
 		},
 		["矮子本"] = {
 		},
@@ -33,17 +48,8 @@ ecfDB = {
 		},
 		["大米"] = {
 		},
-		["监狱"] = {
+		["图书馆"] = {
 		},
 	},
-	["lootQualityMin"] = 0,
-	["lesserBlackWordThreshold"] = 3,
-	["enableAggressive"] = false,
-	["enableCFA"] = true,
-	["lootItemFilterList"] = {
-	},
-	["lootCurrencyFilterList"] = {
-	},
-	["blackWordFilterGroup"] = false,
 	["advancedConfig"] = false,
 }

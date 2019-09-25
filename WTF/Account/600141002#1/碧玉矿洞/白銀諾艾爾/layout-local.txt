@@ -2,8 +2,8 @@ Version: 1
 Frame: ccc
 FrameLevel: 1
 Anchor: RIGHT
-X: -228
-Y: -175
+X: -188
+Y: -88
 W: 186
 H: 216
 Frame: BuffwatchFrame
@@ -20,6 +20,13 @@ X: 0
 Y: 0
 W: 365
 H: 240
+Frame: DCT_Options
+FrameLevel: 1
+Anchor: TOPLEFT
+X: 30
+Y: -86
+W: 730
+H: 540
 Frame: AtlasFrame
 FrameLevel: 1
 Anchor: TOP
@@ -34,13 +41,6 @@ X: 5
 Y: 0
 W: 920
 H: 600
-Frame: DCT_Options
-FrameLevel: 1
-Anchor: TOPLEFT
-X: 30
-Y: -86
-W: 730
-H: 540
 Frame: Five Second Rule Statusbar
 FrameLevel: 1
 Anchor: CENTER

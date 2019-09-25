@@ -1,24 +1,24 @@
 
 BugGrabberDB = {
+	["session"] = 234,
 	["lastSanitation"] = 3,
-	["session"] = 223,
 	["errors"] = {
 		{
 			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipAddMoney",
-			["time"] = "2019/09/17 15:01:09",
 			["session"] = 158,
+			["time"] = "2019/09/17 15:01:09",
 			["counter"] = 12,
 		}, -- [1]
 		{
 			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipCleared",
-			["time"] = "2019/09/17 15:01:09",
 			["session"] = 158,
+			["time"] = "2019/09/17 15:01:09",
 			["counter"] = 12,
 		}, -- [2]
 		{
 			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipSetDefaultAnchor",
-			["time"] = "2019/09/17 15:01:09",
 			["session"] = 158,
+			["time"] = "2019/09/17 15:01:09",
 			["counter"] = 16,
 		}, -- [3]
 		{
@@ -53,18 +53,12 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [7]
 		{
-			["message"] = "(null)",
-			["time"] = "2019/09/17 17:18:51",
-			["session"] = 165,
-			["counter"] = 7,
-		}, -- [8]
-		{
 			["message"] = "...dOns\\RatingBuster\\libs\\AceEvent-2.0\\AceEvent-2.0-66043.lua:130: Attempt to register unknown event \"MEETINGSTONE_CHANGED\"",
 			["time"] = "2019/09/17 17:18:53",
 			["stack"] = "...dOns\\RatingBuster\\libs\\AceEvent-2.0\\AceEvent-2.0-66043.lua:910: in function <...dOns\\RatingBuster\\libs\\AceEvent-2.0\\AceEvent-2.0.lua:903>",
 			["session"] = 165,
 			["counter"] = 1,
-		}, -- [9]
+		}, -- [8]
 		{
 			["message"] = "...rface\\AddOns\\FiveSecondRule\\Modules\\OptionsPanel.lua:34: attempt to index upvalue 'frame' (a nil value)",
 			["time"] = "2019/09/17 17:35:53",
@@ -72,7 +66,7 @@ BugGrabberDB = {
 			["stack"] = "...rface\\AddOns\\FiveSecondRule\\Modules\\OptionsPanel.lua:34: in function `UpdateOptionValues'\nInterface\\AddOns\\FiveSecondRule\\FiveSecondRule-1.4.lua:190: in function `onMouseUp'\nInterface\\AddOns\\FiveSecondRule\\FiveSecondRule-1.4.lua:80: in function <Interface\\AddOns\\FiveSecondRule\\FiveSecondRule.lua:80>",
 			["session"] = 168,
 			["counter"] = 2,
-		}, -- [10]
+		}, -- [9]
 		{
 			["message"] = "Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant-13.18.lua:290: attempt to call global 'GetGuildBankWithdrawMoney' (a nil value)",
 			["time"] = "2019/09/17 22:57:01",
@@ -80,7 +74,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\Scrap_Merchant\\Scrap_Merchant-13.18.lua:290: in function `Repair'\nInterface\\AddOns\\Scrap_Merchant\\Scrap_Merchant-13.18.lua:110: in function `OnMerchant'\nInterface\\AddOns\\Scrap_Merchant\\Scrap_Merchant-13.18.lua:98: in function `MERCHANT_SHOW'\nInterface\\AddOns\\Scrap\\Scrap-13.18.lua:103: in function `?'\nInterface\\AddOns\\Scrap\\Scrap-13.18.lua:77: in function <Interface\\AddOns\\Scrap\\Scrap.lua:77>",
 			["session"] = 169,
 			["counter"] = 2,
-		}, -- [11]
+		}, -- [10]
 		{
 			["message"] = "Interface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:603: ContainerIDToInventoryID(): invalid container ID",
 			["time"] = "2019/09/17 22:58:30",
@@ -88,7 +82,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `ContainerIDToInventoryID'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:603: in function `ValidBag'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:575: in function `FindInBank'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:1907: in function `MissingItems'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:1006: in function `BuildMenu'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:1671: in function `MinimapOnClick'\n[string \"*:OnClick\"]:1: in function <[string \"*:OnClick\"]:1>",
 			["session"] = 169,
 			["counter"] = 2,
-		}, -- [12]
+		}, -- [11]
 		{
 			["message"] = "...terface\\AddOns\\Details_Streamer\\Details_Streamer.lua:2040: attempt to index global 'Details_StreamerDB' (a nil value)",
 			["time"] = "2019/09/17 15:01:04",
@@ -96,15 +90,7 @@ BugGrabberDB = {
 			["stack"] = "...terface\\AddOns\\Details_Streamer\\Details_Streamer.lua:2040: in function <...terface\\AddOns\\Details_Streamer\\Details_Streamer.lua:1889>\n(tail call): ?",
 			["session"] = 170,
 			["counter"] = 17,
-		}, -- [13]
-		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'RecipeRadarClassic' 尝试调用保护功能 'SpellBookSpellIconsFrame:Show()'。",
-			["time"] = "2019/09/17 17:32:45",
-			["locals"] = "InCombatSkipped",
-			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\SpellBookFrame.lua:148: in function <Interface\\FrameXML\\SpellBookFrame.lua:112>\n[C]: in function `SpellBookFrame_Update'\nInterface\\FrameXML\\SpellBookFrame.lua:97: in function <Interface\\FrameXML\\SpellBookFrame.lua:96>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2078: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:1923: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:1784: in function <Interface\\FrameXML\\UIParent.lua:1780>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2526: in function `ShowUIPanel'\nInterface\\FrameXML\\SpellBookFrame.lua:46: in function `ToggleSpellBook'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:362: in function `RecipeRadar_SkillDB_ShowSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:382: in function `RecipeRadar_SkillDB_ParseSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:39: in function `RecipeRadar_Frame_Show'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:31: in function `RecipeRadar_Toggle'\n...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:68: in function <...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:67>",
-			["session"] = 175,
-			["counter"] = 3,
-		}, -- [14]
+		}, -- [12]
 		{
 			["message"] = "...ddOns\\CensusPlusClassic\\modules\\CensusPlayerList.lua:110: attempt to concatenate global 'CENSUSPlus_MAXXED' (a nil value)",
 			["time"] = "2019/09/18 16:53:16",
@@ -112,7 +98,7 @@ BugGrabberDB = {
 			["stack"] = "...ddOns\\CensusPlusClassic\\modules\\CensusPlayerList.lua:110: in function `CensusPlus_PlayerListOnShow'\n[string \"*:OnShow\"]:1: in function <[string \"*:OnShow\"]:1>\n[C]: in function `Show'\n...ddOns\\CensusPlusClassic\\modules\\CensusPlayerList.lua:43: in function `CensusPlus_ShowPlayerList'\n[string \"*:OnClick\"]:5: in function <[string \"*:OnClick\"]:1>",
 			["session"] = 177,
 			["counter"] = 1,
-		}, -- [15]
+		}, -- [13]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'RecipeRadarClassic' 尝试调用保护功能 'CompactRaidFrame1:Show()'。",
 			["time"] = "2019/09/23 00:42:35",
@@ -120,29 +106,83 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:353: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:286: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:54: in function <Interface\\FrameXML\\CompactUnitFrame.lua:51>",
 			["session"] = 207,
 			["counter"] = 1,
-		}, -- [16]
-		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'TownsfolkTracker' 尝试调用保护功能 'CompactRaidFrame1:Show()'。",
-			["time"] = "2019/09/17 22:44:45",
-			["locals"] = "InCombatSkipped",
-			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:353: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:286: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:54: in function <Interface\\FrameXML\\CompactUnitFrame.lua:51>",
-			["session"] = 211,
-			["counter"] = 9,
-		}, -- [17]
+		}, -- [14]
 		{
 			["message"] = "...e\\AddOns\\Fizzle\\Libs\\AceBucket-3.0\\AceBucket-3.0-4.lua:209: attempt to index upvalue 'AceEvent' (a nil value)",
 			["time"] = "2019/09/23 17:26:20",
 			["stack"] = "...e\\AddOns\\Fizzle\\Libs\\AceBucket-3.0\\AceBucket-3.0-4.lua:209: in function `UnregisterBucket'\n...e\\AddOns\\Fizzle\\Libs\\AceBucket-3.0\\AceBucket-3.0-4.lua:233: in function `UnregisterAllBuckets'\n...e\\AddOns\\Fizzle\\Libs\\AceBucket-3.0\\AceBucket-3.0-4.lua:259: in function <...e\\AddOns\\Fizzle\\Libs\\AceBucket-3.0\\AceBucket-3.0.lua:258>\n[C]: ?\n...xternal\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:70: in function <...xternal\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:65>\n...xternal\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0-12.lua:569: in function <...xternal\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:555>\n(tail call): ?\n(tail call): ?\n...Details\\Libs\\ThreatClassic-1.0\\ThreatClassic-1.0-4.lua:245: in function `?'\n...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:119: in function <...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[C]: ?\n...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:29: in function <...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:64: in function `Fire'\n...xternal\\Wildpants\\libs\\AceEvent-3.0\\AceEvent-3.0-4.lua:120: in function <...xternal\\Wildpants\\libs\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 223,
 			["counter"] = 1,
+		}, -- [15]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'TownsfolkTracker' 尝试调用保护功能 'CompactRaidFrame1:Show()'。",
+			["time"] = "2019/09/17 22:44:45",
+			["locals"] = "InCombatSkipped",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:353: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:286: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:54: in function <Interface\\FrameXML\\CompactUnitFrame.lua:51>",
+			["session"] = 227,
+			["counter"] = 11,
+		}, -- [16]
+		{
+			["message"] = "...ace\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI-1.10.lua:310: attempt to index global 'TradeSkillFrameSearchBox' (a nil value)",
+			["time"] = "2019/09/25 11:30:12",
+			["locals"] = "addonName = \"BiggerTradeskillUI\"\nBTSUi = <table> {\n TradeSkillFilterFrame_LoadInvSlots = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:21\n TradeSkillSubClassDropDown_Initialize = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:82\n TradeSkillFilterFrame_LoadSubClasses = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:87\n TradeSkillInvSlotDropDownButton_OnClick = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:62\n TradeSkillSubClassDropDownButton_OnClick = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:143\n TradeSkillFilterFrame_InvSlotName = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:53\n TradeSkillFrame_Update = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:157\n TradeSkillInvSlotDropDown_Initialize = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:16\n HeightUpdated = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:260\n TradeSkillSetFilter = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:76\n TradeSkillFrame_SetSelection = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:178\n}\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"TOPRIGHT\"\n(*temporary) = TradeSkillFrame {\n 0 = <userdata>\n backdrop = <unnamed> {\n }\n}\n(*temporary) = \"TOPRIGHT\"\n(*temporary) = -37\n(*temporary) = -33\n(*temporary) = <userdata>\n(*temporary) = \"Interface\\AddOns\\ElvUI\\Media\\Textures\\PlusButton.tga\"\n(*temporary) = <userdata>\n(*temporary) = TradeSkillSkill26 {\n 0 = <userdata>\n}\n(*temporary) = \"Interface\\Buttons\\UI-MinusButton-UP\"\n(*temporary) = \"attempt to index global 'TradeSkillFrameSearchBox' (a nil value)\"\n",
+			["stack"] = "...ace\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI-1.10.lua:310: in main chunk\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:416: in function `TradeSkillFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:1148: in function <Interface\\FrameXML\\UIParent.lua:658>\n[C]: ?\n[C]: ?\n[C]: ?\n[C]: in function `UseAction'\nInterface\\FrameXML\\SecureTemplates.lua:338: in function `handler'\nInterface\\FrameXML\\SecureTemplates.lua:616: in function <Interface\\FrameXML\\SecureTemplates.lua:564>\n[C]: ?\n[C]: ?\nInterface\\FrameXML\\SecureHandlers.lua:266: in function <Interface\\FrameXML\\SecureHandlers.lua:263>\n[C]: ?\nInterface\\FrameXML\\SecureHandlers.lua:296: in function <Interface\\FrameXML\\SecureHandlers.lua:279>\n(tail call): ?",
+			["session"] = 229,
+			["counter"] = 1,
+		}, -- [17]
+		{
+			["message"] = "Interface\\AddOns\\BiggerTradeskillUI\\ElvUI-1.11.lua:12: attempt to index global 'BTSUiHaveMatsCheckText' (a nil value)",
+			["time"] = "2019/09/25 11:30:12",
+			["locals"] = "addonName = \"BiggerTradeskillUI\"\nBTSUi = <table> {\n TradeSkillFilterFrame_LoadInvSlots = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:21\n TradeSkillSubClassDropDown_Initialize = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:82\n TradeSkillFilterFrame_LoadSubClasses = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:87\n TradeSkillInvSlotDropDownButton_OnClick = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:62\n TradeSkillSubClassDropDownButton_OnClick = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:143\n TradeSkillFilterFrame_InvSlotName = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:53\n TradeSkillFrame_Update = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:157\n TradeSkillInvSlotDropDown_Initialize = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:16\n HeightUpdated = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:260\n TradeSkillSetFilter = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:76\n TradeSkillFrame_SetSelection = <function> defined @Interface\\AddOns\\BiggerTradeskillUI\\BiggerTradeSkillUI.lua:178\n}\nE = <table> {\n GetTimeInfo = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Math.lua:329\n mylevel = 48\n Bags = <table> {\n }\n privateVars = <table> {\n }\n HandleCommandBar = <function> defined @Interface\\AddOns\\ElvUI\\Core\\API.lua:93\n CancelTimer = <function> defined @Interface\\AddOns\\Details\\Libs\\AceTimer-3.0\\AceTimer-3.0.lua:147\n FormatMoney = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Math.lua:383\n ExitVehicleShowFrames = <function> defined @Interface\\AddOns\\ElvUI\\Core\\API.lua:337\n HelloKittyToggle = <function> defined @Interface\\AddOns\\ElvUI\\Core\\AprilFools.lua:351\n UpdateUnitFrames = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:846\n CopyTable = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:487\n DispelClasses = <table> {\n }\n SetMoversPositions = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Movers.lua:480\n ScheduleTimer = <function> defined @Interface\\AddOns\\Details\\Libs\\AceTimer-3.0\\AceTimer-3.0.lua:94\n PriestColors = <table> {\n }\n UpdateBags = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:899\n SetupTheme = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Install.lua:165\n media = <table> {\n }\n UnlocalizedClassName = <function> defined @Interface\\AddOns\\ElvUI\\Core\\API.lua:27\n data = <table> {\n }\n EnableBlizzardAddOns = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Commands.lua:215\n UIScale = <function> defined @Interface\\AddOns\\ElvUI\\Core\\PixelPerfect.lua:27\n db = <table> {\n }\n FramesOverlap = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Math.lua:117\n SetEnabledState = <function> defined @Interface\\AddOns\\Bagnon\\external\\Wildpants\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:424\n Hook = <function> defined @Interface\\AddOns\\ElvUI\\Libraries\\Ace3\\AceHook-3.0\\AceHook-3.0.lua:274\n Options = <table> {\n }\n UpdateLayout = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:864\n Layout = <table> {\n }\n PluginInstaller = <table> {\n }\n PixelBestSize = <function> defined @Interface\\AddOns\\ElvUI\\Core\\PixelPerfect.lua:68\n UnregisterEventForObject = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Core.lua:1143\n Distributor = <table> {\n }\n SendPluginVersionCheck = <function> defined @Interface\\AddOns\\ElvUI\\Libraries\\LibElvUIPlugin-1.0\\LibElvUIPlugin-1.0.lua:145\n HiddenFrame = <unnamed> {\n }\n Media = <table> {\n }\n PositionGameMenuButton = <function> defined @Interface\\AddOns\\ElvUI\\init.lua:207\n ScanTooltipTextures = <function> defined @Interface\\AddOns\\ElvUI\\Core\\API.lua:36\n SafeGetPoint = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Toolkit.lua:20\n UIFrameFade = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Animation.lua:211\n MinimapWidth = 220\n TexturePath = \"Interface\\\\AddOns\\\\ElvUI_Classic\\\\Media\\\\Textures\\\\\"\n StaticPopup_CreateSecureButton = <function> defined @Interface\\A",
+			["stack"] = "Interface\\AddOns\\BiggerTradeskillUI\\ElvUI-1.11.lua:12: in main chunk\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:416: in function `TradeSkillFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:1148: in function <Interface\\FrameXML\\UIParent.lua:658>\n[C]: ?\n[C]: ?\n[C]: ?\n[C]: in function `UseAction'\nInterface\\FrameXML\\SecureTemplates.lua:338: in function `handler'\nInterface\\FrameXML\\SecureTemplates.lua:616: in function <Interface\\FrameXML\\SecureTemplates.lua:564>\n[C]: ?\n[C]: ?\nInterface\\FrameXML\\SecureHandlers.lua:266: in function <Interface\\FrameXML\\SecureHandlers.lua:263>\n[C]: ?\nInterface\\FrameXML\\SecureHandlers.lua:296: in function <Interface\\FrameXML\\SecureHandlers.lua:279>\n(tail call): ?",
+			["session"] = 229,
+			["counter"] = 1,
 		}, -- [18]
+		{
+			["message"] = "(null)",
+			["session"] = 229,
+			["time"] = "2019/09/17 17:18:51",
+			["counter"] = 13,
+		}, -- [19]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'RecipeRadarClassic' 尝试调用保护功能 'SpellBookSpellIconsFrame:Show()'。",
+			["time"] = "2019/09/17 17:32:45",
+			["locals"] = "InCombatSkipped",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\SpellBookFrame.lua:148: in function <Interface\\FrameXML\\SpellBookFrame.lua:112>\n[C]: in function `SpellBookFrame_Update'\nInterface\\FrameXML\\SpellBookFrame.lua:97: in function <Interface\\FrameXML\\SpellBookFrame.lua:96>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2078: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:1923: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:1784: in function <Interface\\FrameXML\\UIParent.lua:1780>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2526: in function `ShowUIPanel'\nInterface\\FrameXML\\SpellBookFrame.lua:46: in function `ToggleSpellBook'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:362: in function `RecipeRadar_SkillDB_ShowSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:382: in function `RecipeRadar_SkillDB_ParseSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:39: in function `RecipeRadar_Frame_Show'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:31: in function `RecipeRadar_Toggle'\n...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:68: in function <...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:67>",
+			["session"] = 231,
+			["counter"] = 4,
+		}, -- [20]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'Atlas' 尝试调用保护功能 'MultiBarBottomLeft:SetFrameStrata()'。",
 			["time"] = "2019/09/17 17:32:45",
 			["locals"] = "InCombatSkipped",
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `SetFrameStrata'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:379: in function `Atlas_Init'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:326: in function `Atlas_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:416: in function `TradeSkillFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:1148: in function <Interface\\FrameXML\\UIParent.lua:658>\n[C]: ?\n[C]: in function `CastSpell'\nInterface\\AddOns\\RecipeRadarClassic\\SkillDB.lua:393: in function `RecipeRadar_SkillDB_ParseSpellbookFrame'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:39: in function `RecipeRadar_Frame_Show'\nInterface\\AddOns\\RecipeRadarClassic\\MainFrame.lua:31: in function `RecipeRadar_Toggle'\n...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:68: in function <...nterface\\AddOns\\RecipeRadarClassic\\MinimapButton.lua:67>",
-			["session"] = 223,
-			["counter"] = 8,
-		}, -- [19]
+			["session"] = 231,
+			["counter"] = 9,
+		}, -- [21]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ItemRack' 尝试调用保护功能 'AttemptToSaveBindings()'。",
+			["time"] = "2019/09/25 20:59:23",
+			["locals"] = "InCombatSkipped",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `AttemptToSaveBindings'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:1829: in function `SetSetBindings'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:385: in function `InitCore'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:187: in function `func'\nInterface\\AddOns\\ItemRack\\ItemRack-3.11.nil.lua:797: in function `OnUpdate'\n[string \"*:OnUpdate\"]:1: in function <[string \"*:OnUpdate\"]:1>",
+			["session"] = 232,
+			["counter"] = 1,
+		}, -- [22]
+		{
+			["message"] = "Interface\\FrameXML\\CompactUnitFrame.lua:1580: Attempt to access forbidden object from code tainted by an AddOn",
+			["time"] = "2019/09/25 22:19:44",
+			["locals"] = "(*temporary) = <unnamed> {\n 0 = <userdata>\n background = <unnamed> {\n }\n border = <unnamed> {\n }\n barTexture = <unnamed> {\n }\n}\n(*temporary) = true\n",
+			["stack"] = "[C]: in function `SetShown'\nInterface\\FrameXML\\CompactUnitFrame.lua:1580: in function `DefaultCompactNamePlateFrameSetupInternal'\nInterface\\FrameXML\\CompactUnitFrame.lua:1550: in function `DefaultCompactNamePlateFrameSetup'\nInterface\\FrameXML\\CompactUnitFrame.lua:1554: in function `func'\nInterface\\FrameXML\\CompactUnitFrame.lua:206: in function `CompactUnitFrame_SetUpFrame'\n...e\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua:103: in function `ApplyFrameOptions'\n...e\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua:82: in function `OnNamePlateAdded'\n...e\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua:42: in function <...e\\AddOns\\Blizzard_NamePlates\\Blizzard_NamePlates.lua:33>\n[C]: ?",
+			["session"] = 232,
+			["counter"] = 16,
+		}, -- [23]
+		{
+			["message"] = "Interface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:150: Wrong object type for function",
+			["time"] = "2019/09/26 00:41:31",
+			["locals"] = "(*temporary) = <table> {\n}\n(*temporary) = nil\n",
+			["stack"] = "[C]: in function `IsForbidden'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:150: in function `Atr_FrameIsAccessible'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:138: in function `Atr_IsAuctionatorFrame'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:77: in function <Interface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:76>\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:132: in function `Atr_LocalizeFrames'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:1178: in function `Atr_Init'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:917: in function `Atr_OnAddonLoaded'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:168: in function `Atr_EventHandler'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:364: in function `AuctionFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:1124: in function <Interface\\FrameXML\\UIParent.lua:658>",
+			["session"] = 234,
+			["counter"] = 1,
+		}, -- [24]
 	},
 }
