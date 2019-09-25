@@ -4,7 +4,7 @@ local S = E:GetModule('Skins')
 --Cache global variables
 --Lua functions
 local _G = _G
-local floor, format = math.floor, string.format
+local floor, format = floor, format
 --WoW API / Variables
 local hooksecurefunc = hooksecurefunc
 
@@ -32,7 +32,7 @@ local function LoadSkin()
 		end
 	end)
 
-	for i = 1, MIRRORTIMER_NUMTIMERS do
+	for i = 1, _G.MIRRORTIMER_NUMTIMERS do
 		local mirrorTimer = _G['MirrorTimer'..i]
 		local statusBar = _G['MirrorTimer'..i..'StatusBar']
 		local text = _G['MirrorTimer'..i..'Text']

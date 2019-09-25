@@ -164,7 +164,7 @@ local function LoadSkin()
 					isActive = entry.isActive;
 				end
 			else
-				texture, _, _, _, _, isQuestItem, questId, isActive = GetLootSlotInfo(slot);
+				texture, _, _, _, _, _, isQuestItem, questId, isActive = GetLootSlotInfo(slot);
 			end
 
 			if(texture) then

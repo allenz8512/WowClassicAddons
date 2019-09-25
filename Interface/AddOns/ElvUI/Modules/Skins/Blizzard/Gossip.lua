@@ -12,12 +12,11 @@ local function LoadSkin()
 	local GossipFrame = _G.GossipFrame
 	S:HandlePortraitFrame(GossipFrame, true)
 	GossipFrame.backdrop:SetPoint('TOPLEFT', 11, -12)
-	GossipFrame.backdrop:SetPoint('BOTTOMRIGHT', -32, 0)
+	GossipFrame.backdrop:SetPoint('BOTTOMRIGHT', -32, 66)
 
 	local GossipGreetingScrollFrame = _G.GossipGreetingScrollFrame
 	GossipGreetingScrollFrame:CreateBackdrop('Transparent')
 	GossipGreetingScrollFrame.backdrop:Point('TOPLEFT', -6, 2)
-	GossipGreetingScrollFrame:Size(300, 396)
 
 	S:HandleScrollBar(_G.GossipGreetingScrollFrameScrollBar)
 
@@ -25,7 +24,6 @@ local function LoadSkin()
 	_G.GossipFrameNpcNameText:Point('CENTER', _G.GossipNpcNameFrame, 'CENTER', -1, 0)
 
 	S:HandleCloseButton(_G.GossipFrameCloseButton, GossipFrame.backdrop)
-	_G.GossipFrameCloseButton:Point('TOPRIGHT', -28, -9)
 
 	for i = 1, _G.NUMGOSSIPBUTTONS do
 		_G['GossipTitleButton'..i..'GossipIcon']:SetSize(16, 16)
@@ -72,7 +70,6 @@ local function LoadSkin()
 	end)
 
 	S:HandleButton(_G.GossipFrameGreetingGoodbyeButton)
-	_G.GossipFrameGreetingGoodbyeButton:Point('BOTTOMRIGHT', -38, 7)
 
 	-- ItemTextFrame
 	_G.ItemTextFrame:StripTextures(true)
@@ -83,12 +80,7 @@ local function LoadSkin()
 	_G.ItemTextScrollFrame:StripTextures()
 
 	S:HandleNextPrevButton(_G.ItemTextPrevPageButton)
-	_G.ItemTextPrevPageButton:ClearAllPoints()
-	_G.ItemTextPrevPageButton:Point('TOPLEFT', _G.ItemTextFrame, 'TOPLEFT', 30, -50)
-
 	S:HandleNextPrevButton(_G.ItemTextNextPageButton)
-	_G.ItemTextNextPageButton:ClearAllPoints()
-	_G.ItemTextNextPageButton:Point('TOPRIGHT', _G.ItemTextFrame, 'TOPRIGHT', -48, -50)
 
 	_G.ItemTextPageText:SetTextColor(1, 1, 1)
 	hooksecurefunc(_G.ItemTextPageText, 'SetTextColor', function(pageText, headerType, r, g, b)

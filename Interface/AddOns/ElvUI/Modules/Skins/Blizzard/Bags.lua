@@ -5,12 +5,17 @@ local S = E:GetModule('Skins');
 --Lua functions
 local _G = _G
 local unpack = unpack
-local match = string.match
+local select = select
 --WoW API / Variables
+local CreateFrame = CreateFrame
+local GetItemInfo = GetItemInfo
 local GetItemQualityColor = GetItemQualityColor
 local GetContainerItemLink = GetContainerItemLink
 local BANK_CONTAINER = BANK_CONTAINER
+local NUM_BANKBAGSLOTS = NUM_BANKBAGSLOTS
 local NUM_CONTAINER_FRAMES = NUM_CONTAINER_FRAMES
+local NUM_BANKGENERIC_SLOTS = NUM_BANKGENERIC_SLOTS
+local MAX_CONTAINER_ITEMS = MAX_CONTAINER_ITEMS
 
 function S:ContainerFrame_Update(self)
 	local id = self:GetID()
@@ -97,13 +102,14 @@ local function LoadSkin()
 	S:SecureHook('ContainerFrame_Update')
 
 	-- BankFrame
+	local BankFrame = _G.BankFrame
 	BankFrame:CreateBackdrop('Transparent')
 	BankFrame.backdrop:Point('TOPLEFT', 10, -11)
 	BankFrame.backdrop:Point('BOTTOMRIGHT', -26, 93)
 
 	BankFrame:StripTextures(true)
 
-	S:HandleCloseButton(BankCloseButton, BankFrame.backdrop)
+	S:HandleCloseButton(_G.BankCloseButton, BankFrame.backdrop)
 
 	local button, buttonIcon
 	for i = 1, NUM_BANKGENERIC_SLOTS, 1 do
@@ -121,8 +127,8 @@ local function LoadSkin()
 
 	BankFrame.itemBackdrop = CreateFrame('Frame', 'BankFrameItemBackdrop', BankFrame)
 	BankFrame.itemBackdrop:SetTemplate('Default')
-	BankFrame.itemBackdrop:Point('TOPLEFT', BankFrameItem1, 'TOPLEFT', -6, 6)
-	BankFrame.itemBackdrop:Point('BOTTOMRIGHT', BankFrameItem24, 'BOTTOMRIGHT', 6, -6)
+	BankFrame.itemBackdrop:Point('TOPLEFT', _G.BankFrameItem1, 'TOPLEFT', -6, 6)
+	BankFrame.itemBackdrop:Point('BOTTOMRIGHT', _G.BankFrameItem24, 'BOTTOMRIGHT', 6, -6)
 	BankFrame.itemBackdrop:SetFrameLevel(BankFrame:GetFrameLevel())
 
 	for i = 1, NUM_BANKBAGSLOTS, 1 do
@@ -143,11 +149,11 @@ local function LoadSkin()
 
 	BankFrame.bagBackdrop = CreateFrame('Frame', 'BankFrameBagBackdrop', BankFrame)
 	BankFrame.bagBackdrop:SetTemplate('Default')
-	BankFrame.bagBackdrop:Point('TOPLEFT', BankFrameBag1, 'TOPLEFT', -6, 6)
-	BankFrame.bagBackdrop:Point('BOTTOMRIGHT', BankFrameBag6, 'BOTTOMRIGHT', 6, -6)
+	BankFrame.bagBackdrop:Point('TOPLEFT', _G.BankFrameBag1, 'TOPLEFT', -6, 6)
+	BankFrame.bagBackdrop:Point('BOTTOMRIGHT', _G.BankFrameBag6, 'BOTTOMRIGHT', 6, -6)
 	BankFrame.bagBackdrop:SetFrameLevel(BankFrame:GetFrameLevel())
 
-	S:HandleButton(BankFramePurchaseButton)
+	S:HandleButton(_G.BankFramePurchaseButton)
 
 	S:SecureHook('BankFrameItemButton_Update')
 end

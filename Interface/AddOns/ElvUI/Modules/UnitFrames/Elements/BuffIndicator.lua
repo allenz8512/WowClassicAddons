@@ -26,6 +26,7 @@ local counterOffsets = {
 	['TOPRIGHT'] = {-6, 1},
 	['BOTTOMLEFT'] = {6, 1},
 	['BOTTOMRIGHT'] = {-6, 1},
+	['CENTER'] = {0, 0},
 	['LEFT'] = {6, 1},
 	['RIGHT'] = {-6, 1},
 	['TOP'] = {0, 0},

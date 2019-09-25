@@ -271,7 +271,7 @@ local function clearPendingHeals()
 	for casterGUID, spells in pairs(pendingHeals) do
 		for _, pending in pairs(spells) do
 			if( pending.bitType ) then
- 				table.wipe(tempPlayerList)
+				table.wipe(tempPlayerList)
 				for i=#(pending), 1, -5 do table.insert(tempPlayerList, pending[i - 4]) end
 
 				if( #(tempPlayerList) > 0 ) then
@@ -286,7 +286,7 @@ local function clearPendingHeals()
 	for casterGUID, spells in pairs(pendingHots) do
 		for _, pending in pairs(spells) do
 			if( pending.bitType ) then
- 				table.wipe(tempPlayerList)
+				table.wipe(tempPlayerList)
 				for i=#(pending), 1, -5 do table.insert(tempPlayerList, pending[i - 4]) end
 
 				if( #(tempPlayerList) > 0 ) then
@@ -390,6 +390,10 @@ local function filterData(spells, filterGUID, bitFlag, time, ignoreGUID)
 	local healAmount = 0
 	local currentTime = GetTime()
 
+	if not spells then
+		return healAmount
+	end
+
 	for _, pending in pairs(spells) do
 		if( pending.bitType and bit.band(pending.bitType, bitFlag) > 0 ) then
 			for i=1, #(pending), 5 do
@@ -447,7 +451,7 @@ function HealComm:GetHealAmount(guid, bitFlag, time, casterGUID)
 end
 
 -- Gets healing amounts for everyone except the player using the passed filters
-function HealComm:GetOthersHealAmount(guid)
+function HealComm:GetOthersHealAmount(guid, bitFlag, time)
 	local amount = 0
 	for casterGUID, spells in pairs(pendingHeals) do
 		if( casterGUID ~= playerGUID ) then
@@ -463,7 +467,7 @@ function HealComm:GetOthersHealAmount(guid)
 	return amount > 0 and amount or nil
 end
 
-function HealComm:GetCasterHealAmount(guid)
+function HealComm:GetCasterHealAmount(guid, bitFlag, time)
 	local amount = pendingHeals[guid] and filterData(pendingHeals[guid], nil, bitFlag, time, true) or 0
 	amount = amount + (pendingHots[guid] and filterData(pendingHots[guid], nil, bitFlag, time, true) or 0)
 	return amount > 0 and amount or nil
@@ -926,7 +930,7 @@ if( playerClass == "PRIEST" ) then
 			if( spellName == Renew or spellName == GreaterHealHot ) then
 				healModifier = healModifier + talentData[ImprovedRenew].current
 
-				ticks = hotData[spellID].ticks
+				local ticks = hotData[spellID].ticks
 				duration = 15
 
 				healAmount = healAmount / ticks
@@ -1184,7 +1188,7 @@ function HealComm:UNIT_AURA(unit)
 	local increase, decrease, playerIncrease, playerDecrease = 1, 1, 1, 1
 
 	-- Scan debuffs
-	id = 1
+	local id = 1
 	while( true ) do
 		local _, _, stack, _, _, _, _, _, _, spellID = UnitAura(unit, id, "HARMFUL")
 		if( not spellID ) then break end

@@ -6,9 +6,10 @@ local S = E:GetModule('Skins')
 local _G = _G
 local unpack = unpack
 local pairs = pairs
-local find, strfind = string.find, strfind
+local strfind = strfind
 --WoW API / Variables
-local GetInventoryItemTexture = GetInventoryItemTexture
+local HasPetUI = HasPetUI
+local GetPetHappiness = GetPetHappiness
 local GetInventoryItemQuality = GetInventoryItemQuality
 local GetItemQualityColor = GetItemQualityColor
 local GetNumFactions = GetNumFactions
@@ -75,34 +76,29 @@ local function LoadSkin()
 
 	HandleResistanceFrame('MagicResFrame')
 
-	for _, slot in pairs({ PaperDollItemsFrame:GetChildren() }) do
-		local icon = _G[slot:GetName()..'IconTexture']
-		local cooldown = _G[slot:GetName()..'Cooldown']
+	for _, slot in pairs({ _G.PaperDollItemsFrame:GetChildren() }) do
+		if slot:IsObjectType("Button") then
+			local icon = _G[slot:GetName()..'IconTexture']
+			local cooldown = _G[slot:GetName()..'Cooldown']
 
-		slot:StripTextures()
-		slot:SetTemplate('Default', true, true)
-		slot:StyleButton()
+			slot:StripTextures()
+			slot:SetTemplate('Default', true, true)
+			slot:StyleButton()
 
-		S:HandleIcon(icon)
+			S:HandleIcon(icon)
 
-		if cooldown then
-			E:RegisterCooldown(cooldown)
+			if cooldown then
+				E:RegisterCooldown(cooldown)
+			end
 		end
 	end
 
-	hooksecurefunc('PaperDollItemSlotButton_Update', function(self, cooldownOnly)
-		if cooldownOnly then return end
-
-		local textureName = GetInventoryItemTexture('player', self:GetID())
-		if textureName then
-			local rarity = GetInventoryItemQuality('player', self:GetID())
-			if rarity and rarity > 1 then
-				self:SetBackdropBorderColor(GetItemQualityColor(rarity))
-			else
-				self:SetBackdropBorderColor(unpack(E.media.bordercolor))
-			end
+	hooksecurefunc('PaperDollItemSlotButton_Update', function(self)
+		local rarity = GetInventoryItemQuality('player', self:GetID())
+		if rarity and rarity > 1 then
+			E:SetBackdropBorderColor(self, GetItemQualityColor(rarity))
 		else
-			self:SetBackdropBorderColor(unpack(E.media.bordercolor))
+			E:SetBackdropBorderColor(self, unpack(E.media.bordercolor))
 		end
 	end)
 

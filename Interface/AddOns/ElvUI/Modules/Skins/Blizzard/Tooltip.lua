@@ -8,7 +8,7 @@ local _G = _G
 local pairs = pairs
 --WoW API / Variables
 
-local function LoadSkin()
+function S:Tooltip_LoadSkin()
 	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.tooltip ~= true then return end
 
 	S:HandleCloseButton(_G.ItemRefCloseButton)
@@ -26,17 +26,15 @@ local function LoadSkin()
 		_G.ItemRefTooltip,
 		_G.ItemRefShoppingTooltip1,
 		_G.ItemRefShoppingTooltip2,
-		_G.ItemRefShoppingTooltip3,
 		_G.AutoCompleteBox,
 		_G.FriendsTooltip,
 		_G.ShoppingTooltip1,
 		_G.ShoppingTooltip2,
-		_G.ShoppingTooltip3,
-		_G.ReputationParagonTooltip,
 		_G.EmbeddedItemTooltip,
 		-- already have locals
 		GameTooltip,
 	}
+
 	for _, tt in pairs(tooltips) do
 		TT:SecureHookScript(tt, 'OnShow', 'SetStyle')
 	end
@@ -58,4 +56,4 @@ local function LoadSkin()
 	TT:SecureHookScript(GameTooltip, 'OnUpdate', 'CheckBackdropColor')
 end
 
-S:AddCallback('SkinTooltip', LoadSkin)
+S:AddCallback('SkinTooltip', S.Tooltip_LoadSkin)

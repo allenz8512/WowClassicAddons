@@ -5,15 +5,13 @@ local ACD = E.Libs.AceConfigDialog
 
 local _G = _G
 local tconcat = table.concat
-local pairs, type, strsplit, match, gsub = pairs, type, strsplit, string.match, string.gsub
+local pairs, type, strsplit, strmatch, gsub = pairs, type, strsplit, strmatch, gsub
 local next, ipairs, tremove, tinsert, sort, tonumber, format = next, ipairs, tremove, tinsert, sort, tonumber, format
 
-local GetClassInfo = GetClassInfo
-local GetDifficultyInfo = GetDifficultyInfo
-local GetNumClasses = GetNumClasses
-local GetSpellInfo = GetSpellInfo
 local GetCVar = GetCVar
 local GetCVarBool = GetCVarBool
+local GetDifficultyInfo = GetDifficultyInfo
+local GetSpellInfo = GetSpellInfo
 local SetCVar = SetCVar
 
 local raidTargetIcon = "|TInterface\\TargetingFrame\\UI-RaidTargetingIcon_%s:0|t %s"
@@ -33,7 +31,7 @@ end
 
 local function filterMatch(s,v)
 	local m1, m2, m3, m4 = "^"..v.."$", "^"..v..",", ","..v.."$", ","..v..","
-	return (match(s, m1) and m1) or (match(s, m2) and m2) or (match(s, m3) and m3) or (match(s, m4) and v..",")
+	return (strmatch(s, m1) and m1) or (strmatch(s, m2) and m2) or (strmatch(s, m3) and m3) or (strmatch(s, m4) and v..",")
 end
 
 local function filterPriority(auraType, unit, value, remove, movehere, friendState)
@@ -50,7 +48,7 @@ local function filterPriority(auraType, unit, value, remove, movehere, friendSta
 		tremove(tbl, sm);tinsert(tbl, sv, movehere);
 		E.db.nameplates.units[unit][auraType].filters.priority = tconcat(tbl,',')
 	elseif found and friendState then
-		local realValue = match(value, "^Friendly:([^,]*)") or match(value, "^Enemy:([^,]*)") or value
+		local realValue = strmatch(value, "^Friendly:([^,]*)") or strmatch(value, "^Enemy:([^,]*)") or value
 		local friend = filterMatch(filter, filterValue("Friendly:"..realValue))
 		local enemy = filterMatch(filter, filterValue("Enemy:"..realValue))
 		local default = filterMatch(filter, filterValue(realValue))
@@ -59,7 +57,7 @@ local function filterPriority(auraType, unit, value, remove, movehere, friendSta
 			(friend and (not enemy) and format("%s%s","Enemy:",realValue))					--[x] friend [ ] enemy: > enemy
 		or	((not enemy and not friend) and format("%s%s","Friendly:",realValue))			--[ ] friend [ ] enemy: > friendly
 		or	(enemy and (not friend) and default and format("%s%s","Friendly:",realValue))	--[ ] friend [x] enemy: (default exists) > friendly
-		or	(enemy and (not friend) and match(value, "^Enemy:") and realValue)				--[ ] friend [x] enemy: (no default) > realvalue
+		or	(enemy and (not friend) and strmatch(value, "^Enemy:") and realValue)				--[ ] friend [x] enemy: (no default) > realvalue
 		or	(friend and enemy and realValue)												--[x] friend [x] enemy: > default
 
 		if state then
@@ -709,7 +707,7 @@ local function UpdateFilterGroup()
 							type = 'input',
 							get = function(info) return "" end,
 							set = function(info, value)
-								if match(value, "^[%s%p]-$") then
+								if strmatch(value, "^[%s%p]-$") then
 									return
 								end
 								E.global.nameplate.filters[selectedNameplateFilter].triggers.names[value] = true;
@@ -724,7 +722,7 @@ local function UpdateFilterGroup()
 							type = 'input',
 							get = function(info) return "" end,
 							set = function(info, value)
-								if match(value, "^[%s%p]-$") then
+								if strmatch(value, "^[%s%p]-$") then
 									return
 								end
 								E.global.nameplate.filters[selectedNameplateFilter].triggers.names[value] = nil;
@@ -868,7 +866,7 @@ local function UpdateFilterGroup()
 							type = 'input',
 							get = function(info) return "" end,
 							set = function(info, value)
-								if match(value, "^[%s%p]-$") then return end
+								if strmatch(value, "^[%s%p]-$") then return end
 
 								E.global.nameplate.filters[selectedNameplateFilter].triggers.casting.spells[value] = true;
 								UpdateFilterGroup();
@@ -882,7 +880,7 @@ local function UpdateFilterGroup()
 							type = 'input',
 							get = function(info) return "" end,
 							set = function(info, value)
-								if match(value, "^[%s%p]-$") then
+								if strmatch(value, "^[%s%p]-$") then
 									return
 								end
 								E.global.nameplate.filters[selectedNameplateFilter].triggers.casting.spells[value] = nil;
@@ -1393,7 +1391,7 @@ local function UpdateFilterGroup()
 							type = 'input',
 							get = function(info) return "" end,
 							set = function(info, value)
-								if match(value, "^[%s%p]-$") then return end
+								if strmatch(value, "^[%s%p]-$") then return end
 
 								E.global.nameplate.filters[selectedNameplateFilter].triggers.cooldowns.names[value] = "ONCD";
 								UpdateFilterGroup();
@@ -1407,7 +1405,7 @@ local function UpdateFilterGroup()
 							type = 'input',
 							get = function(info) return "" end,
 							set = function(info, value)
-								if match(value, "^[%s%p]-$") then
+								if strmatch(value, "^[%s%p]-$") then
 									return
 								end
 								E.global.nameplate.filters[selectedNameplateFilter].triggers.cooldowns.names[value] = nil;
@@ -1462,7 +1460,7 @@ local function UpdateFilterGroup()
 							type = 'input',
 							get = function(info) return "" end,
 							set = function(info, value)
-								if match(value, "^[%s%p]-$") then return end
+								if strmatch(value, "^[%s%p]-$") then return end
 
 								E.global.nameplate.filters[selectedNameplateFilter].triggers.buffs.names[value] = true;
 								UpdateFilterGroup();
@@ -1476,7 +1474,7 @@ local function UpdateFilterGroup()
 							type = 'input',
 							get = function(info) return "" end,
 							set = function(info, value)
-								if match(value, "^[%s%p]-$") then
+								if strmatch(value, "^[%s%p]-$") then
 									return
 								end
 								E.global.nameplate.filters[selectedNameplateFilter].triggers.buffs.names[value] = nil;
@@ -1532,7 +1530,7 @@ local function UpdateFilterGroup()
 							type = 'input',
 							get = function(info) return "" end,
 							set = function(info, value)
-								if match(value, "^[%s%p]-$") then return end
+								if strmatch(value, "^[%s%p]-$") then return end
 
 								E.global.nameplate.filters[selectedNameplateFilter].triggers.debuffs.names[value] = true;
 								UpdateFilterGroup();
@@ -1546,7 +1544,7 @@ local function UpdateFilterGroup()
 							type = 'input',
 							get = function(info) return "" end,
 							set = function(info, value)
-								if match(value, "^[%s%p]-$") then
+								if strmatch(value, "^[%s%p]-$") then
 									return
 								end
 								E.global.nameplate.filters[selectedNameplateFilter].triggers.debuffs.names[value] = nil;
@@ -2946,10 +2944,10 @@ local function GetUnitSettings(unit, name)
 									filterPriority('buffs', unit, carryFilterFrom, true)
 								end,
 								stateSwitchGetText = function(_, TEXT)
-									local friend, enemy = match(TEXT, "^Friendly:([^,]*)"), match(TEXT, "^Enemy:([^,]*)")
+									local friend, enemy = strmatch(TEXT, "^Friendly:([^,]*)"), strmatch(TEXT, "^Enemy:([^,]*)")
 									local text = friend or enemy or TEXT
 									local SF, localized = E.global.unitframe.specialFilters[text], L[text]
-									local blockText = SF and localized and text:match("^block") and localized:gsub("^%[.-]%s?", "")
+									local blockText = SF and localized and strmatch(text, "^block") and gsub(localized, "^%[.-]%s?", "")
 									local filterText = (blockText and format("|cFF999999%s|r %s", _G.BLOCK, blockText)) or localized or text
 									return (friend and format("|cFF33FF33%s|r %s", _G.FRIEND, filterText)) or (enemy and format("|cFFFF3333%s|r %s", _G.ENEMY, filterText)) or filterText
 								end,
@@ -3234,10 +3232,10 @@ local function GetUnitSettings(unit, name)
 									filterPriority('debuffs', unit, carryFilterFrom, true)
 								end,
 								stateSwitchGetText = function(_, TEXT)
-									local friend, enemy = match(TEXT, "^Friendly:([^,]*)"), match(TEXT, "^Enemy:([^,]*)")
+									local friend, enemy = strmatch(TEXT, "^Friendly:([^,]*)"), strmatch(TEXT, "^Enemy:([^,]*)")
 									local text = friend or enemy or TEXT
 									local SF, localized = E.global.unitframe.specialFilters[text], L[text]
-									local blockText = SF and localized and text:match("^block") and localized:gsub("^%[.-]%s?", "")
+									local blockText = SF and localized and strmatch(text, "^block") and gsub(localized, "^%[.-]%s?", "")
 									local filterText = (blockText and format("|cFF999999%s|r %s", _G.BLOCK, blockText)) or localized or text
 									return (friend and format("|cFF33FF33%s|r %s", _G.FRIEND, filterText)) or (enemy and format("|cFFFF3333%s|r %s", _G.ENEMY, filterText)) or filterText
 								end,
@@ -4751,7 +4749,7 @@ E.Options.args.nameplate = {
 					type = 'input',
 					get = function(info) return "" end,
 					set = function(info, value)
-						if match(value, "^[%s%p]-$") then
+						if strmatch(value, "^[%s%p]-$") then
 							return
 						end
 						if E.global.nameplate.filters[value] then

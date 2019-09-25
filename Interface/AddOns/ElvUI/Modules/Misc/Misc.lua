@@ -8,7 +8,6 @@ local format = format
 --WoW API / Variables
 local AcceptGroup = AcceptGroup
 local BNGetGameAccountInfoByGUID = BNGetGameAccountInfoByGUID
-local CanGuildBankRepair = CanGuildBankRepair
 local CanMerchantRepair = CanMerchantRepair
 local GetCVarBool, SetCVar = GetCVarBool, SetCVar
 local GetGuildBankWithdrawMoney = GetGuildBankWithdrawMoney
@@ -79,7 +78,7 @@ do -- Auto Repair Functions
 
 		if POSS and COST > 0 then
 			--This check evaluates to true even if the guild bank has 0 gold, so we add an override
-			if TYPE == 'GUILD' and (playerOverride or (IsInGuild() and (not CanGuildBankRepair() or COST > GetGuildBankWithdrawMoney()))) then
+			if TYPE == 'GUILD' and (playerOverride or (IsInGuild() and COST > GetGuildBankWithdrawMoney())) then
 				TYPE = 'PLAYER'
 			end
 

@@ -5,7 +5,6 @@ local S = E:GetModule('Skins')
 --Lua functions
 local _G = _G
 local unpack = unpack
-local format = format
 --WoW API / Variables
 local HideUIPanel = HideUIPanel
 local ShowUIPanel = ShowUIPanel
@@ -15,12 +14,19 @@ local function LoadSkin()
 
 	local MacroFrame = _G.MacroFrame
 	S:HandlePortraitFrame(MacroFrame, true)
-	MacroFrame:Width(360)
+	MacroFrame.backdrop:Point('TOPLEFT', -5, 0)
+	MacroFrame.backdrop:Point('BOTTOMRIGHT', -2, -1)
+
+	_G.MacroFrameCloseButton:Point('TOPRIGHT', 2, 3)
 
 	_G.MacroFrameTextBackground:StripTextures()
-	_G.MacroFrameTextBackground:SetTemplate()
+	_G.MacroFrameTextBackground:CreateBackdrop('Default')
+	_G.MacroFrameTextBackground.backdrop:Point('TOPLEFT', 0, -3)
+	_G.MacroFrameTextBackground.backdrop:Point('BOTTOMRIGHT', -3, 2)
+
 	_G.MacroButtonScrollFrame:StripTextures()
-	_G.MacroButtonScrollFrame:CreateBackdrop()
+	_G.MacroButtonScrollFrame:CreateBackdrop('Default')
+	_G.MacroButtonScrollFrame:Point('TOPLEFT', 8, -65)
 
 	S:HandleScrollBar(_G.MacroButtonScrollFrameScrollBar)
 	S:HandleScrollBar(_G.MacroFrameScrollFrameScrollBar)
@@ -41,11 +47,18 @@ local function LoadSkin()
 		S:HandleButton(buttons[i])
 	end
 
+	_G.MacroCancelButton:ClearAllPoints()
+	_G.MacroCancelButton:Point('TOPRIGHT', MacroFrameTextBackground.backdrop, 'TOPRIGHT', 0, 34)
+	_G.MacroSaveButton:Point('BOTTOMLEFT', _G.MacroCancelButton, 'TOPLEFT', 0, 2)
+
+	_G.MacroDeleteButton:Point('BOTTOMLEFT', 0, 4)
+	_G.MacroExitButton:Point('BOTTOMRIGHT', -7, 4)
+
 	_G.MacroNewButton:ClearAllPoints()
-	_G.MacroNewButton:SetPoint('RIGHT', _G.MacroExitButton, 'LEFT', -2 , 0)
+	_G.MacroNewButton:SetPoint('TOPRIGHT', _G.MacroExitButton, 'TOPLEFT', -2 , 0)
 
 	for i = 1, 2 do
-		local tab = _G[format('MacroFrameTab%s', i)]
+		local tab = _G['MacroFrameTab'..i]
 		tab:Height(22)
 	end
 	_G.MacroFrameTab1:Point('TOPLEFT', MacroFrame, 'TOPLEFT', 85, -39)
@@ -86,17 +99,28 @@ local function LoadSkin()
 	end
 
 	--Icon selection frame
-	ShowUIPanel(MacroFrame); --Toggle frame to create necessary variables needed for popup frame
-	HideUIPanel(MacroFrame);
+	ShowUIPanel(MacroFrame) --Toggle frame to create necessary variables needed for popup frame
+	HideUIPanel(MacroFrame)
 	local MacroPopupFrame = _G.MacroPopupFrame
 	MacroPopupFrame:Show() --Toggle the frame in order to create the necessary button elements
 	MacroPopupFrame:Hide()
 
 	-- Popout Frame
-	S:HandleButton(MacroPopupFrame.BorderBox.OkayButton)
-	S:HandleButton(MacroPopupFrame.BorderBox.CancelButton)
+	S:HandleButton(_G.MacroPopupFrame.BorderBox.OkayButton)
+	_G.MacroPopupFrame.BorderBox.OkayButton:Point('TOPRIGHT', _G.MacroPopupFrame.BorderBox.CancelButton, 'TOPLEFT', -2, 0)
+	S:HandleButton(_G.MacroPopupFrame.BorderBox.CancelButton)
+	_G.MacroPopupFrame.BorderBox.CancelButton:Point('BOTTOMRIGHT', _G.MacroPopupFrame.BorderBox, 'BOTTOMRIGHT', -4, 4)
+
+	_G.MacroPopupButton1:Point('TOPLEFT', _G.MacroPopupScrollFrame, 'TOPLEFT', 6, -6)
+
+	_G.MacroPopupScrollFrame:CreateBackdrop('Default')
+	_G.MacroPopupScrollFrame.backdrop:Point('BOTTOMRIGHT', -2, -1)
+	_G.MacroPopupScrollFrame:Point('TOPLEFT', _G.MacroPopupFrame.BorderBox, 'TOPLEFT', 25, -75)
+
 	S:HandleScrollBar(_G.MacroPopupScrollFrameScrollBar)
 	S:HandleEditBox(_G.MacroPopupEditBox)
+	_G.MacroPopupEditBox:Point('TOPLEFT', 25, -25)
+
 	_G.MacroPopupNameLeft:SetTexture()
 	_G.MacroPopupNameMiddle:SetTexture()
 	_G.MacroPopupNameRight:SetTexture()

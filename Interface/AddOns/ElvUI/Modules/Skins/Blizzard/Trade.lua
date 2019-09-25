@@ -73,24 +73,24 @@ local function LoadSkin()
 		recipientButton.bg:SetFrameLevel(recipientButton:GetFrameLevel() - 3)
 	end
 
-	_G.TradeHighlightPlayerTop:SetColorTexture(0, 1, 0, 0.2)
-	_G.TradeHighlightPlayerBottom:SetColorTexture(0, 1, 0, 0.2)
-	_G.TradeHighlightPlayerMiddle:SetColorTexture(0, 1, 0, 0.2)
+	_G.TradeHighlightPlayerTop:SetColorTexture(0, 1, 0, 0.3)
+	_G.TradeHighlightPlayerBottom:SetColorTexture(0, 1, 0, 0.3)
+	_G.TradeHighlightPlayerMiddle:SetColorTexture(0, 1, 0, 0.3)
 	_G.TradeHighlightPlayer:SetFrameStrata('HIGH')
 
-	_G.TradeHighlightPlayerEnchantTop:SetColorTexture(0, 1, 0, 0.2)
-	_G.TradeHighlightPlayerEnchantBottom:SetColorTexture(0, 1, 0, 0.2)
-	_G.TradeHighlightPlayerEnchantMiddle:SetColorTexture(0, 1, 0, 0.2)
+	_G.TradeHighlightPlayerEnchantTop:SetColorTexture(0, 1, 0, 0.3)
+	_G.TradeHighlightPlayerEnchantBottom:SetColorTexture(0, 1, 0, 0.3)
+	_G.TradeHighlightPlayerEnchantMiddle:SetColorTexture(0, 1, 0, 0.3)
 	_G.TradeHighlightPlayerEnchant:SetFrameStrata('HIGH')
 
-	_G.TradeHighlightRecipientTop:SetColorTexture(0, 1, 0, 0.2)
-	_G.TradeHighlightRecipientBottom:SetColorTexture(0, 1, 0, 0.2)
-	_G.TradeHighlightRecipientMiddle:SetColorTexture(0, 1, 0, 0.2)
+	_G.TradeHighlightRecipientTop:SetColorTexture(0, 1, 0, 0.3)
+	_G.TradeHighlightRecipientBottom:SetColorTexture(0, 1, 0, 0.3)
+	_G.TradeHighlightRecipientMiddle:SetColorTexture(0, 1, 0, 0.3)
 	_G.TradeHighlightRecipient:SetFrameStrata('HIGH')
 
-	_G.TradeHighlightRecipientEnchantTop:SetColorTexture(0, 1, 0, 0.2)
-	_G.TradeHighlightRecipientEnchantBottom:SetColorTexture(0, 1, 0, 0.2)
-	_G.TradeHighlightRecipientEnchantMiddle:SetColorTexture(0, 1, 0, 0.2)
+	_G.TradeHighlightRecipientEnchantTop:SetColorTexture(0, 1, 0, 0.3)
+	_G.TradeHighlightRecipientEnchantBottom:SetColorTexture(0, 1, 0, 0.3)
+	_G.TradeHighlightRecipientEnchantMiddle:SetColorTexture(0, 1, 0, 0.3)
 	_G.TradeHighlightRecipientEnchant:SetFrameStrata('HIGH')
 
 	hooksecurefunc('TradeFrame_UpdatePlayerItem', function(id)
@@ -100,7 +100,7 @@ local function LoadSkin()
 		if link then
 			local quality = select(3, GetItemInfo(link))
 			tradeItemName:SetTextColor(GetItemQualityColor(quality))
-			if quality then
+			if quality and quality > 1 then
 				tradeItemButton:SetBackdropBorderColor(GetItemQualityColor(quality))
 			else
 				tradeItemButton:SetBackdropBorderColor(unpack(E.media.bordercolor))
@@ -117,7 +117,7 @@ local function LoadSkin()
 		if link then
 			local quality = select(3, GetItemInfo(link))
 			tradeItemName:SetTextColor(GetItemQualityColor(quality))
-			if quality then
+			if quality and quality > 1 then
 				tradeItemButton:SetBackdropBorderColor(GetItemQualityColor(quality))
 			else
 				tradeItemButton:SetBackdropBorderColor(unpack(E.media.bordercolor))

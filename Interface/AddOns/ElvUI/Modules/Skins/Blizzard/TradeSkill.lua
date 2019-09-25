@@ -4,10 +4,13 @@ local S = E:GetModule('Skins')
 --Cache global variables
 --Lua functions
 local _G = _G
-local unpack = unpack
-local find, match, split = string.find, string.match, string.split
+local strfind = strfind
+local unpack, select = unpack, select
 --WoW API / Variables
+local CreateFrame = CreateFrame
 local GetItemInfo = GetItemInfo
+local GetTradeSkillNumReagents = GetTradeSkillNumReagents
+local GetTradeSkillInfo = GetTradeSkillInfo
 local GetItemQualityColor = GetItemQualityColor
 local GetTradeSkillItemLink = GetTradeSkillItemLink
 local GetTradeSkillReagentInfo = GetTradeSkillReagentInfo

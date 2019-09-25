@@ -4,9 +4,9 @@ local S = E:GetModule('Skins')
 --Cache global variables
 --Lua functions
 local _G = _G
-local pairs = pairs
-local unpack = unpack
-local find, format, match = string.find, string.format, string.match
+local unpack, type, gsub = unpack, type, gsub
+local select, ipairs, pairs = select, ipairs, pairs
+local strfind, strmatch = strfind, strmatch
 --WoW API / Variables
 local GetMoney = GetMoney
 local GetQuestMoneyToGet = GetQuestMoneyToGet
@@ -17,7 +17,17 @@ local GetQuestLogItemLink = GetQuestLogItemLink
 local GetNumQuestLogRewards = GetNumQuestLogRewards
 local GetQuestLogRequiredMoney = GetQuestLogRequiredMoney
 local GetNumQuestLeaderBoards = GetNumQuestLeaderBoards
+local GetQuestLogLeaderBoard = GetQuestLogLeaderBoard
+local GetNumQuestLogChoices = GetNumQuestLogChoices
+local GetNumQuestRewards = GetNumQuestRewards
+local GetNumQuestChoices = GetNumQuestChoices
+local GetNumQuestLogEntries = GetNumQuestLogEntries
+local GetQuestLogTitle = GetQuestLogTitle
+local IsQuestComplete = IsQuestComplete
 local hooksecurefunc = hooksecurefunc
+local MAX_NUM_ITEMS = MAX_NUM_ITEMS
+local MAX_REQUIRED_ITEMS = MAX_REQUIRED_ITEMS
+local MAX_NUM_QUESTS = MAX_NUM_QUESTS
 
 local function HandleReward(button)
 	if not button then return end
@@ -134,6 +144,7 @@ local function LoadSkin()
 	end
 
 	local function QuestQualityColors(button, text, link)
+		local quality
 		if link then
 			quality = select(3, GetItemInfo(link))
 		end
@@ -176,7 +187,7 @@ local function LoadSkin()
 			_G[self:GetName()..'Name']:SetTextColor(1, 0.80, 0.10)
 
 			for _, button in ipairs(_G.QuestInfoRewardsFrame.RewardButtons) do
-				local link = button.type and (QuestInfoFrame.questLog and GetQuestLogItemLink or GetQuestItemLink)(button.type, button:GetID())
+				local link = button.type and (_G.QuestInfoFrame.questLog and GetQuestLogItemLink or GetQuestItemLink)(button.type, button:GetID())
 				if button ~= self then
 					QuestQualityColors(button, button.Name, link)
 				end
@@ -277,7 +288,7 @@ local function LoadSkin()
 
 		local rewardsCount = numQuestChoices + numQuestRewards
 		if rewardsCount > 0 then
-			local button, name, link
+			local button, link
 			local questItemName = questState..'Item'
 
 			for i = 1, rewardsCount do
@@ -373,53 +384,26 @@ local function LoadSkin()
 
 	_G.QuestFrame:CreateBackdrop('Transparent')
 	_G.QuestFrame.backdrop:Point('TOPLEFT', 11, -12)
-	_G.QuestFrame.backdrop:Point('BOTTOMRIGHT', -32, 0)
+	_G.QuestFrame.backdrop:Point('BOTTOMRIGHT', -32, 66)
 
 	_G.QuestLogFrame:CreateBackdrop('Transparent')
 	_G.QuestLogFrame.backdrop:Point('TOPLEFT', 11, -12)
-	_G.QuestLogFrame.backdrop:Point('BOTTOMRIGHT', -32, 0)
+	_G.QuestLogFrame.backdrop:Point('BOTTOMRIGHT', -32, 45)
 
 	_G.QuestLogListScrollFrame:CreateBackdrop('Transparent')
 	_G.QuestLogListScrollFrame.backdrop:Point('TOPLEFT', -1, 2)
-	_G.QuestLogListScrollFrame:Width(303)
 
 	_G.QuestLogDetailScrollFrame:CreateBackdrop('Transparent')
 	_G.QuestLogDetailScrollFrame.backdrop:Point('TOPLEFT', -1, 2)
-	_G.QuestLogDetailScrollFrame:Size(303)
 
 	_G.QuestDetailScrollFrame:CreateBackdrop('Transparent')
 	_G.QuestDetailScrollFrame.backdrop:Point('TOPLEFT', -6, 2)
-	_G.QuestDetailScrollFrame:Size(300, 396)
 
 	_G.QuestRewardScrollFrame:CreateBackdrop('Transparent')
 	_G.QuestRewardScrollFrame.backdrop:Point('TOPLEFT', -6, 2)
-	_G.QuestRewardScrollFrame:Size(300, 396)
 
 	_G.QuestProgressScrollFrame:CreateBackdrop('Transparent')
 	_G.QuestProgressScrollFrame.backdrop:Point('TOPLEFT', -6, 2)
-	_G.QuestProgressScrollFrame:Size(300, 396)
-
-	_G.QuestLogNoQuestsText:ClearAllPoints()
-	_G.QuestLogNoQuestsText:Point('CENTER', EmptyQuestLogFrame, 'CENTER', -45, 65)
-
-	_G.QuestLogFrameAbandonButton:Point('BOTTOMLEFT', 18, 7)
-	_G.QuestLogFrameAbandonButton:Width(107)
-	_G.QuestLogFrameAbandonButton:SetText(ABANDON_QUEST_ABBREV)
-
-	_G.QuestFramePushQuestButton:ClearAllPoints()
-	_G.QuestFramePushQuestButton:Point('LEFT', QuestLogFrameAbandonButton, 'RIGHT', 4, 0)
-	_G.QuestFramePushQuestButton:Width(106)
-	_G.QuestFramePushQuestButton:SetText(SHARE_QUEST_ABBREV)
-
-	_G.QuestFrameExitButton:Point('BOTTOMRIGHT', -38, 7)
-	_G.QuestFrameExitButton:Width(107)
-
-	_G.QuestFrameAcceptButton:Point('BOTTOMLEFT', 18, 7)
-	_G.QuestFrameDeclineButton:Point('BOTTOMRIGHT', -38, 7)
-	_G.QuestFrameCompleteButton:Point('BOTTOMLEFT', 18, 7)
-	_G.QuestFrameGoodbyeButton:Point('BOTTOMRIGHT', -38, 7)
-	_G.QuestFrameCompleteQuestButton:Point('BOTTOMLEFT', 18, 7)
-	_G.QuestFrameCancelButton:Point('BOTTOMRIGHT', -38, 7)
 
 	_G.QuestLogSkillHighlight:StripTextures()
 
@@ -437,7 +421,7 @@ local function LoadSkin()
 	QuestLogHighlightFrame.Right:SetPoint('RIGHT', QuestLogHighlightFrame, 'CENTER')
 	QuestLogHighlightFrame.Right:SetTexture(E.media.blankTex)
 
-	hooksecurefunc(QuestLogSkillHighlight, 'SetVertexColor', function(_, r, g, b)
+	hooksecurefunc(_G.QuestLogSkillHighlight, 'SetVertexColor', function(_, r, g, b)
 		QuestLogHighlightFrame.Left:SetGradientAlpha('Horizontal', r, g, b, 0.35, r, g, b, 0)
 		QuestLogHighlightFrame.Right:SetGradientAlpha('Horizontal', r, g, b, 0, r, g, b, 0.35)
 	end)
@@ -450,8 +434,9 @@ local function LoadSkin()
 	S:HandleCloseButton(_G.QuestLogFrameCloseButton, _G.QuestLogFrame.backdrop)
 	_G.QuestLogFrameCloseButton:Point('TOPRIGHT', -28, -9)
 
-	for i = 1, _G.QUESTS_DISPLAYED do
-		local questLogTitle = _G['QuestLogTitle'..i]
+	local index = 1
+	while _G['QuestLogTitle'..index] do
+		local questLogTitle = _G['QuestLogTitle'..index]
 
 		questLogTitle:SetNormalTexture(E.Media.Textures.PlusButton)
 		questLogTitle.SetNormalTexture = E.noop
@@ -464,9 +449,9 @@ local function LoadSkin()
 
 		questLogTitle:Width(300)
 
-		_G['QuestLogTitle'..i..'Highlight']:SetAlpha(0)
+		_G['QuestLogTitle'..index..'Highlight']:SetAlpha(0)
 
-		_G['QuestLogTitle'..i..'Tag']:Point('RIGHT', -30, 0)
+		_G['QuestLogTitle'..index..'Tag']:Point('RIGHT', -30, 0)
 
 		hooksecurefunc(questLogTitle, 'SetNormalTexture', function(self, texture)
 			local tex = self:GetNormalTexture()
@@ -479,6 +464,8 @@ local function LoadSkin()
 				tex:SetTexture()
 			end
 		end)
+
+		index = index + 1
 	end
 
 	local QuestLogCollapseAllButton = _G.QuestLogCollapseAllButton

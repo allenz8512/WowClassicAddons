@@ -25,6 +25,7 @@ function UF:Construct_PlayerFrame(frame)
 	frame.Portrait2D = self:Construct_Portrait(frame, 'texture')
 	frame.Buffs = self:Construct_Buffs(frame)
 	frame.Debuffs = self:Construct_Debuffs(frame)
+	frame.DebuffHighlight = self:Construct_DebuffHighlight(frame)
 	frame.Castbar = self:Construct_Castbar(frame, L["Player Castbar"])
 
 	--Create a holder frame all "classbars" can be positioned into
@@ -163,6 +164,9 @@ function UF:Update_PlayerFrame(frame, db)
 
 	--OverHealing
 	UF:Configure_HealComm(frame)
+
+	--Debuff Highlight
+	UF:Configure_DebuffHighlight(frame)
 
 	--AuraBars
 	UF:Configure_AuraBars(frame)

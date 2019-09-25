@@ -19,9 +19,10 @@ V.general = {
 	replaceBlizzFonts = true,
 	minimap = {
 		enable = true,
-		hideClassHallReport = false,
 		hideCalendar = true,
+		hideTracking = false,
 	},
+	worldMap = true,
 	classColorMentionsSpeech = true,
 	raidUtility = true,
 	voiceOverlay = true,

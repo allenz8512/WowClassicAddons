@@ -6,7 +6,6 @@ local S = E:GetModule('Skins')
 local _G = _G
 local unpack = unpack
 local pairs = pairs
-local match = string.match
 --WoW API / Variables
 local GetInventoryItemLink = GetInventoryItemLink
 local GetItemInfo = GetItemInfo
@@ -17,58 +16,42 @@ local function LoadSkin()
 	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.inspect then return end
 
 	local InspectFrame = _G.InspectFrame
-	InspectFrame:StripTextures(true)
-	InspectFrame:CreateBackdrop('Transparent')
-	InspectFrame.backdrop:Point('TOPLEFT', 10, -12)
-	InspectFrame.backdrop:Point('BOTTOMRIGHT', -31, 75)
+	S:HandlePortraitFrame(InspectFrame, true)
+	InspectFrame.backdrop:Point('TOPLEFT', 11, -12)
+	InspectFrame.backdrop:Point('BOTTOMRIGHT', -32, 76)
 
-	S:HandleCloseButton(InspectFrameCloseButton)
+	S:HandleCloseButton(_G.InspectFrameCloseButton, InspectFrame.backdrop)
+	_G.InspectFrameCloseButton:Point('TOPRIGHT', -28, -9)
 
-	for i = 1, 2 do
+	for i = 1, #INSPECTFRAME_SUBFRAMES do
 		S:HandleTab(_G['InspectFrameTab'..i])
 	end
 
-	InspectPaperDollFrame:StripTextures()
+	_G.InspectPaperDollFrame:StripTextures()
 
-	local slots = {
-		'HeadSlot',
-		'NeckSlot',
-		'ShoulderSlot',
-		'BackSlot',
-		'ChestSlot',
-		'ShirtSlot',
-		'TabardSlot',
-		'WristSlot',
-		'HandsSlot',
-		'WaistSlot',
-		'LegsSlot',
-		'FeetSlot',
-		'Finger0Slot',
-		'Finger1Slot',
-		'Trinket0Slot',
-		'Trinket1Slot',
-		'MainHandSlot',
-		'SecondaryHandSlot',
-		'RangedSlot'
-	}
-
-	for _, slot in pairs(slots) do
-		local icon = _G['Inspect'..slot..'IconTexture']
-		local slot = _G['Inspect'..slot]
+	for _, slot in pairs({ _G.InspectPaperDollItemsFrame:GetChildren() }) do
+		local icon = _G[slot:GetName()..'IconTexture']
+		local cooldown = _G[slot:GetName()..'Cooldown']
 
 		slot:StripTextures()
-		slot:StyleButton(false)
-		slot:SetTemplate('Default', true)
+		slot:CreateBackdrop('Default')
+		slot.backdrop:SetAllPoints()
+		slot:SetFrameLevel(slot:GetFrameLevel() + 2)
+		slot:StyleButton()
 
 		icon:SetTexCoord(unpack(E.TexCoords))
 		icon:SetInside()
+
+		if cooldown then
+			E:RegisterCooldown(cooldown)
+		end
 	end
 
 	hooksecurefunc('InspectPaperDollItemSlotButton_Update', function(button)
 		if button.hasItem then
-			local itemLink = GetInventoryItemLink(InspectFrame.unit, button:GetID())
-			if itemLink then
-				local quality = select(3, GetItemInfo(itemLink))
+			local itemID = GetInventoryItemID(InspectFrame.unit, button:GetID())
+			if itemID then
+				local quality = select(3, GetItemInfo(itemID))
 				if not quality then
 					E:Delay(0.1, function()
 						if InspectFrame.unit then
@@ -76,27 +59,27 @@ local function LoadSkin()
 						end
 					end)
 					return
-				elseif quality then
-					button:SetBackdropBorderColor(GetItemQualityColor(quality))
+				elseif quality and quality > 1 then
+					button.backdrop:SetBackdropBorderColor(GetItemQualityColor(quality))
 					return
 				end
 			end
 		end
-		button:SetBackdropBorderColor(unpack(E.media.bordercolor))
+		button.backdrop:SetBackdropBorderColor(unpack(E.media.bordercolor))
 	end)
 
-	S:HandleRotateButton(InspectModelFrameRotateLeftButton)
-	InspectModelFrameRotateLeftButton:Point('TOPLEFT', 3, -3)
+	S:HandleRotateButton(_G.InspectModelFrameRotateLeftButton)
+	_G.InspectModelFrameRotateLeftButton:Point('TOPLEFT', 3, -3)
 
-	S:HandleRotateButton(InspectModelFrameRotateRightButton)
-	InspectModelFrameRotateRightButton:Point('TOPLEFT', InspectModelFrameRotateLeftButton, 'TOPRIGHT', 3, 0)
+	S:HandleRotateButton(_G.InspectModelFrameRotateRightButton)
+	_G.InspectModelFrameRotateRightButton:Point('TOPLEFT', _G.InspectModelFrameRotateLeftButton, 'TOPRIGHT', 3, 0)
 
 	-- Honor Frame
-	InspectHonorFrame:StripTextures()
+	_G.InspectHonorFrame:StripTextures()
 
-	InspectHonorFrameProgressButton:CreateBackdrop()
-	InspectHonorFrameProgressBar:SetStatusBarTexture(E.media.normTex)
-	E:RegisterStatusBar(InspectHonorFrameProgressBar)
+	_G.InspectHonorFrameProgressButton:CreateBackdrop()
+	_G.InspectHonorFrameProgressBar:SetStatusBarTexture(E.media.normTex)
+	E:RegisterStatusBar(_G.InspectHonorFrameProgressBar)
 end
 
 S:AddCallbackForAddon('Blizzard_InspectUI', 'Inspect', LoadSkin)

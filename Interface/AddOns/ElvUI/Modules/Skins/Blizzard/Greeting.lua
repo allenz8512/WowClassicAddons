@@ -4,7 +4,7 @@ local S = E:GetModule('Skins')
 --Cache global variables
 --Lua functions
 local _G = _G
-local find = string.find
+local strfind = strfind
 local gsub = gsub
 
 local function LoadSkin()
@@ -25,15 +25,15 @@ local function LoadSkin()
 
 	S:HandleScrollBar(_G.QuestGreetingScrollFrameScrollBar)
 
-	QuestFrameGreetingPanel:HookScript('OnShow', function()
+	_G.QuestFrameGreetingPanel:HookScript('OnShow', function()
 		_G.GreetingText:SetTextColor(1, 1, 1)
 		_G.CurrentQuestsText:SetTextColor(1, 0.80, 0.10)
 		_G.AvailableQuestsText:SetTextColor(1, 0.80, 0.10)
 
-		for i = 1, MAX_NUM_QUESTS do
+		for i = 1, _G.MAX_NUM_QUESTS do
 			local button = _G['QuestTitleButton'..i]
 			if button:GetFontString() then
-				if button:GetFontString():GetText() and find(button:GetFontString():GetText(), '|cff000000') then
+				if button:GetFontString():GetText() and strfind(button:GetFontString():GetText(), '|cff000000') then
 					button:GetFontString():SetText(gsub(button:GetFontString():GetText(), '|cff000000', '|cffFFFF00'))
 				end
 			end

@@ -384,16 +384,16 @@ function NP:PLAYER_ENTERING_WORLD()
 	if NP.db.units.PLAYER.enable and NP.db.units.PLAYER.useStaticPosition then
 		NP:UpdatePlate(_G.ElvNP_Player)
 	end
+
+	if instanceType == 'party' or instanceType == 'raid' then
+		NamePlateDriverFrame:UpdateNamePlateOptions()
+	end
 end
 
 function NP:ConfigureAll()
 	--NP:StyleFilterConfigure() -- keep this at the top
 
-	local Scale = E.global.general.UIScale
-
-	C_NamePlate_SetNamePlateSelfSize(NP.db.plateSize.personalWidth * Scale, NP.db.plateSize.personalHeight * Scale)
-	C_NamePlate_SetNamePlateEnemySize(NP.db.plateSize.enemyWidth * Scale, NP.db.plateSize.enemyHeight * Scale)
-	C_NamePlate_SetNamePlateFriendlySize(NP.db.plateSize.friendlyWidth * Scale, NP.db.plateSize.friendlyHeight * Scale)
+	--local Scale = E.global.general.UIScale
 
 	NP:PLAYER_REGEN_ENABLED()
 
@@ -528,6 +528,8 @@ function NP:NamePlateCallBack(nameplate, event, unit)
 			NP:PlateFade(nameplate, 1, 0, 1)
 		end
 
+		nameplate:UpdateTags()
+
 		--NP:StyleFilterUpdate(nameplate, event) -- keep this at the end
 	elseif event == "NAME_PLATE_UNIT_REMOVED" then
 		--NP:StyleFilterClear(nameplate) -- keep this at the top
@@ -594,10 +596,15 @@ function NP:Initialize()
 	end
 
 	hooksecurefunc(_G.NamePlateDriverFrame, "UpdateNamePlateOptions", function()
-		local Scale = E.global.general.UIScale
-		C_NamePlate_SetNamePlateSelfSize(NP.db.plateSize.personalWidth * Scale, NP.db.plateSize.personalHeight * Scale)
-		C_NamePlate_SetNamePlateEnemySize(NP.db.plateSize.enemyWidth * Scale, NP.db.plateSize.enemyHeight * Scale)
-		C_NamePlate_SetNamePlateFriendlySize(NP.db.plateSize.friendlyWidth * Scale, NP.db.plateSize.friendlyHeight * Scale)
+		if not InCombatLockdown() then
+			local Scale = E.global.general.UIScale
+			C_NamePlate_SetNamePlateSelfSize(NP.db.plateSize.personalWidth * Scale, NP.db.plateSize.personalHeight * Scale)
+			C_NamePlate_SetNamePlateEnemySize(NP.db.plateSize.enemyWidth * Scale, NP.db.plateSize.enemyHeight * Scale)
+
+			if NP.InstanceType ~= 'party' and NP.InstanceType ~= 'raid' then
+				C_NamePlate_SetNamePlateFriendlySize(NP.db.plateSize.friendlyWidth * Scale, NP.db.plateSize.friendlyHeight * Scale)
+			end
+		end
 	end)
 
 	oUF:Spawn("player", "ElvNP_Player", "")
