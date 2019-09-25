@@ -1,0 +1,23 @@
+## Interface: 11302
+## Title: Market Watcher
+## Notes: Records the state of the auction house for specified items
+## Author: Torrid
+## SavedVariables: MarketWatcherHistory, MarketWatcherWatched, MarketWatcherConfig
+## Version: 2.2.3c
+## X-Embeds: LibGraph-2.0
+
+LibStub\LibStub.lua
+LibGraph-2.0\LibGraph-2.0.lua
+
+Localization.lua
+Localization.ko.lua
+MarketWatcher.lua
+History.lua
+History.xml
+Scan.lua
+Scan.xml
+Filters.lua
+Filters.xml
+Graph.lua
+Config.lua
+Config.xml

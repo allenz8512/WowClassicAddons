@@ -1,0 +1,1349 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\..\FrameXML\UI.xsd">
+
+	<Button name="MarketWatcherScanAuctionButtonTemplate" hidden="true" virtual="true">
+		<Size>
+			<AbsDimension x="250" y="16"/>
+		</Size>
+		<Layers>
+			<Layer level="OVERLAY">
+				<!--
+				<FontString name="$parentName" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="80" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="18" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				-->
+				<FontString name="$parentSeller" inherits="GameFontHighlightSmall" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="80" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="20" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentTimeLeft" inherits="GameFontHighlightSmall" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="60" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="100" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentCostPerUnit" inherits="GameFontHighlightSmall" justifyH="RIGHT">
+					<Size>
+						<AbsDimension x="60" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="RIGHT"/>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentCost" inherits="GameFontHighlightSmall" justifyH="RIGHT">
+					<Size>
+						<AbsDimension x="50" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="RIGHT">
+							<Offset>
+								<AbsDimension x="-45" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Frame name="$parentItem">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BORDER">
+						<Texture name="$parentIconTexture"/>
+						<FontString name="$parentCount" inherits="NumberFontNormalSmall" justifyH="RIGHT" hidden="true">
+							<Anchors>
+								<Anchor point="BOTTOMRIGHT">
+									<Offset>
+										<AbsDimension x="5" y="-1"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString name="$parentStock" inherits="NumberFontNormalSmall" justifyH="LEFT" hidden="true">
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="0" y="-2"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+			</OnLoad>
+			<OnClick>
+				MarketWatcher.Scan.AuctionButton_OnClick(self, button);
+			</OnClick>
+			<OnEnter>
+				MarketWatcher.Scan.AuctionButton_OnEnter(self);
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+		<HighlightTexture name="$parentHighlight" file="Interface\HelpFrame\HelpFrameButton-Highlight" alphaMode="ADD">
+			<Size>
+				<AbsDimension x="250" y="16"/>
+			</Size>
+			<Anchors>
+				<Anchor point="TOPLEFT"/>
+			</Anchors>
+			<TexCoords left="0" right="1.0" top="0" bottom="0.578125"/>
+		</HighlightTexture>
+	</Button>
+
+	<Button name="MarketWatcherScanStatsButtonTemplate" hidden="false" virtual="true">
+		<Size>
+			<AbsDimension x="250" y="84"/>
+		</Size>
+		<Frames>
+			<Frame setAllPoints="true">
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentItemName" inherits="GameFontNormal" justifyH="LEFT">
+							<Size>
+								<AbsDimension x="220" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="17" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString name="$parentStatsText" inherits="GameFontNormalSmall" justifyH="LEFT" justifyV="TOP">
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="0" y="-17"/>
+									</Offset>
+								</Anchor>
+								<Anchor point="BOTTOMRIGHT">
+									<Offset>
+										<AbsDimension x="10" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<Color r="0.8" g="0.8" b="0.8"/>
+						</FontString>
+					</Layer>
+					<Layer level="BORDER">
+						<Texture name="$parentItemIconTexture">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+			</OnLoad>
+			<OnClick>
+				MarketWatcher.Scan.StatsButton_OnClick(self, button);
+			</OnClick>
+			<OnEnter>
+				MarketWatcher.Scan.ScanStatsButton_OnEnter(self);
+			</OnEnter>
+			<OnLeave>
+				MarketWatcherScanMouseoverFrame:Hide();
+				GameTooltip:Hide();
+				if ( MarketWatcherScanStatsTooltipGraph ) then
+					MarketWatcherScanStatsTooltipGraph:Hide();
+				end
+			</OnLeave>
+		</Scripts>
+		<HighlightTexture file="Interface\GLUES\CharacterSelect\Glue-CharacterSelect-Highlight.blp" alphaMode="ADD">
+		<!--
+			<TexCoords left="0.04" right="0.96" top="0.11" bottom="0.85"/>
+		-->
+		<!--
+		<HighlightTexture file="Interface\PaperDollInfoFrame\UI-Character-Tab-Highlight" alphaMode="ADD">
+		-->
+		<!--
+		<HighlightTexture name="$parentHighlight" file="Interface\Buttons\UI-Button-Outline" alphaMode="ADD">
+			<TexCoords left="0.2" right="0.78" top="0.2" bottom="0.78"/>
+		-->
+			<Size>
+				<AbsDimension x="280" y="114"/>
+			</Size>
+			<Anchors>
+				<Anchor point="CENTER">
+					<Offset>
+						<AbsDimension x="0" y="2"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+			<Color r="1.0" g="1.0" b="1.0" a="0.5"/>
+		</HighlightTexture>
+	</Button>
+
+	<Frame name="MarketWatcherScanMouseoverFrame" parent="UIParent" frameStrata="HIGH">
+		<Size>
+			<AbsDimension x="100" y="100"/>
+		</Size>
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentHeaderText" inherits="GameFontNormalSmall" justifyV="TOP" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="8" y="-8"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="0.8" g="0.8" b="0.8"/>
+				</FontString>
+				<FontString name="$parentNumAuctionsText" inherits="GameFontNormalSmall" justifyV="TOP" justifyH="RIGHT" nonspacewrap="true">
+					<Size>
+						<AbsDimension x="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentHeaderText" relativePoint="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="-5" y="-8"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="0.8" g="0.8" b="0.8"/>
+				</FontString>
+				<FontString name="$parentStackSizeText" inherits="GameFontNormalSmall" justifyV="TOP" justifyH="RIGHT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentNumAuctionsText" relativePoint="TOPRIGHT"/>
+					</Anchors>
+					<Color r="0.8" g="0.8" b="0.8"/>
+				</FontString>
+				<FontString name="$parentPriceText" inherits="GameFontNormalSmall" justifyV="TOP" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentStackSizeText" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="2" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="0.8" g="0.8" b="0.8"/>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				self:SetBackdropColor(TOOLTIP_DEFAULT_BACKGROUND_COLOR.r, TOOLTIP_DEFAULT_BACKGROUND_COLOR.g, TOOLTIP_DEFAULT_BACKGROUND_COLOR.b);
+			</OnLoad>
+		</Scripts>
+	</Frame>
+
+	<Frame name="MarketWatcherScanFrame" toplevel="true" hidden="true">
+		<Size>
+			<AbsDimension x="832" y="447"/>
+		</Size>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentTitle" inherits="GameFontNormal" text="MARKETWATCHER_SCAN">
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="-18"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentScanTimeText" inherits="GameFontNormal">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="80" y="-39"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentItemsDisplayedText" inherits="GameFontNormal">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="80" y="-54"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1.0" g="1.0" b="1.0"/>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+
+			<Frame name="$parentStatus" setAllPoints="true" hidden="true">
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentQueryCount" inherits="GameFontHighlight">
+							<Anchors>
+								<Anchor point="CENTER">
+									<Offset>
+										<AbsDimension x="0" y="35"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString name="$parentQuery" inherits="GameFontHighlight">
+							<Anchors>
+								<Anchor point="TOP" relativeTo="$parentQueryCount" relativePoint="BOTTOM">
+									<Offset>
+										<AbsDimension x="0" y="-15"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString name="$parentQueryStatus" inherits="GameFontNormal">
+							<Anchors>
+								<Anchor point="TOP" relativeTo="$parentQuery" relativePoint="BOTTOM">
+									<Offset>
+										<AbsDimension x="0" y="-25"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button name="$parentAbortButton" inherits="UIPanelButtonTemplate" text="MARKETWATCHER_ABORT">
+						<Size>
+							<AbsDimension x="60" y="22"/>
+						</Size>
+						<Anchors>
+							<Anchor point="CENTER">
+								<Offset>
+									<AbsDimension x="0" y="-100"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								MarketWatcher.Scan.Abort(self);
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>
+			</Frame>
+
+			<Button name="$parentScanButton" inherits="UIPanelButtonTemplate" text="MARKETWATCHER_SCAN">
+				<Size>
+					<AbsDimension x="60" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-12" y="-45"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MarketWatcher.Scan.ScanButton_OnClick();
+					</OnClick>
+				</Scripts>
+			</Button>
+
+			<CheckButton name="$parentRecordCheckBox" inherits="UICheckButtonTemplate">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentScanButton" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-100" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<HitRectInsets>
+					<AbsInset left="0" right="0" top="0" bottom="0"/>
+				</HitRectInsets>
+				<Scripts>
+					<OnLoad>
+						_G[self:GetName().."Text"]:SetText(MARKETWATCHER_RECORDHISTORY);
+						self:SetChecked(1);
+					</OnLoad>
+					<OnShow>
+						MarketWatcher.Scan.RecordCheckBox_OnShow(self);
+					</OnShow>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+						GameTooltip:SetText(MARKETWATCHER_TOOLTIP4, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</CheckButton>
+
+			<Button name="$parentStatsButton1" inherits="MarketWatcherScanStatsButtonTemplate" hidden="true" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="21" y="-74"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentStatsButton2" inherits="MarketWatcherScanStatsButtonTemplate" hidden="true" id="2">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentStatsButton1" relativePoint="RIGHT"/>
+				</Anchors>
+			</Button>
+			<Button name="$parentStatsButton3" inherits="MarketWatcherScanStatsButtonTemplate" hidden="true" id="3">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentStatsButton1" relativePoint="BOTTOM"/>
+				</Anchors>
+			</Button>
+			<Button name="$parentStatsButton4" inherits="MarketWatcherScanStatsButtonTemplate" hidden="true" id="4">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentStatsButton3" relativePoint="RIGHT"/>
+				</Anchors>
+			</Button>
+			<Button name="$parentStatsButton5" inherits="MarketWatcherScanStatsButtonTemplate" hidden="true" id="5">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentStatsButton3" relativePoint="BOTTOM"/>
+				</Anchors>
+			</Button>
+			<Button name="$parentStatsButton6" inherits="MarketWatcherScanStatsButtonTemplate" hidden="true" id="6">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentStatsButton5" relativePoint="RIGHT"/>
+				</Anchors>
+			</Button>
+			<Button name="$parentStatsButton7" inherits="MarketWatcherScanStatsButtonTemplate" hidden="true" id="7">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentStatsButton5" relativePoint="BOTTOM"/>
+				</Anchors>
+			</Button>
+			<Button name="$parentStatsButton8" inherits="MarketWatcherScanStatsButtonTemplate" hidden="true" id="8">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentStatsButton7" relativePoint="RIGHT"/>
+				</Anchors>
+			</Button>
+
+			<ScrollFrame name="$parentStatsScrollFrame" inherits="FauxScrollFrameTemplate" hidden="true">
+				<Size>
+					<AbsDimension x="465" y="335"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-311" y="-75"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture file="Interface\PaperDollInfoFrame\UI-Character-ScrollBar">
+							<Size>
+								<AbsDimension x="31" y="256"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
+									<Offset>
+										<AbsDimension x="-2" y="5"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0" right="0.484375" top="0" bottom="1.0"/>
+						</Texture>
+						<Texture file="Interface\PaperDollInfoFrame\UI-Character-ScrollBar">
+							<Size>
+								<AbsDimension x="31" y="106"/>
+							</Size>
+							<Anchors>
+								<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT">
+									<Offset>
+										<AbsDimension x="-2" y="-2"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.515625" right="1.0" top="0" bottom="0.4140625"/>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnVerticalScroll>
+						FauxScrollFrame_OnVerticalScroll(self, offset, 85, MarketWatcher.Scan.DisplayStats);
+					</OnVerticalScroll>
+				</Scripts>
+			</ScrollFrame>
+
+			<Frame name="$parentAuctions" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-2" y="-2"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Size>
+					<AbsDimension x="300" y="447"/>
+				</Size>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="GameFontNormalSmall" text="">
+							<Anchors>
+								<Anchor point="CENTER">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<Color r="1.0" g="1.0" b="1.0"/>
+						</FontString>
+						<FontString name="$parentSearchCountText" inherits="GameFontNormalSmall" text="">
+							<Anchors>
+								<Anchor point="BOTTOM">
+									<Offset>
+										<AbsDimension x="-5" y="43"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<Color r="1.0" g="1.0" b="1.0"/>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button name="$parentButton1" inherits="MarketWatcherScanAuctionButtonTemplate" id="1">
+						<Anchors>
+							<Anchor point="TOPRIGHT">
+								<Offset>
+									<AbsDimension x="-30" y="-71"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton2" inherits="MarketWatcherScanAuctionButtonTemplate" id="2">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton1" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton3" inherits="MarketWatcherScanAuctionButtonTemplate" id="3">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton2" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton4" inherits="MarketWatcherScanAuctionButtonTemplate" id="4">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton3" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton5" inherits="MarketWatcherScanAuctionButtonTemplate" id="5">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton4" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton6" inherits="MarketWatcherScanAuctionButtonTemplate" id="6">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton5" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton7" inherits="MarketWatcherScanAuctionButtonTemplate" id="7">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton6" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton8" inherits="MarketWatcherScanAuctionButtonTemplate" id="8">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton7" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton9" inherits="MarketWatcherScanAuctionButtonTemplate" id="9">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton8" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton10" inherits="MarketWatcherScanAuctionButtonTemplate" id="10">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton9" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton11" inherits="MarketWatcherScanAuctionButtonTemplate" id="11">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton10" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton12" inherits="MarketWatcherScanAuctionButtonTemplate" id="12">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton11" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton13" inherits="MarketWatcherScanAuctionButtonTemplate" id="13">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton12" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton14" inherits="MarketWatcherScanAuctionButtonTemplate" id="14">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton13" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton15" inherits="MarketWatcherScanAuctionButtonTemplate" id="15">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton14" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton16" inherits="MarketWatcherScanAuctionButtonTemplate" id="16">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton15" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton17" inherits="MarketWatcherScanAuctionButtonTemplate" id="17">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton16" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton18" inherits="MarketWatcherScanAuctionButtonTemplate" id="18">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton17" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton19" inherits="MarketWatcherScanAuctionButtonTemplate" id="19">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton18" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton20" inherits="MarketWatcherScanAuctionButtonTemplate" id="20">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentButton19" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+
+					<Button name="$parentPrevPageButton">
+						<Size>
+							<AbsDimension x="16" y="16"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentButton20" relativePoint="BOTTOMLEFT"/>
+						</Anchors>
+						<Layers>
+							<Layer level="BACKGROUND">
+								<FontString inherits="GameFontNormal" justifyH="LEFT" text="PREV">
+									<Anchors>
+										<Anchor point="LEFT" relativePoint="RIGHT"/>
+									</Anchors>
+								</FontString>
+							</Layer>
+						</Layers>
+						<Scripts>
+							<OnClick>
+								PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+								MarketWatcher.Scan.page = MarketWatcher.Scan.page - 1;
+								if ( MarketWatcher.QueryItem(MarketWatcher.Scan.selectedItem, MarketWatcher.Scan.page) ) then
+									self:Disable();
+									MarketWatcher.Scan.AuctionWaitingIndicator();
+								else
+									MarketWatcher.Scan.page = MarketWatcher.Scan.page + 1;
+								end
+							</OnClick>
+						</Scripts>
+						<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Up"/>
+						<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Down"/>
+						<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Disabled"/>
+						<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+					</Button>
+					<Button name="$parentNextPageButton">
+						<Size>
+							<AbsDimension x="16" y="16"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPRIGHT" relativeTo="$parentButton20" relativePoint="BOTTOMRIGHT"/>
+						</Anchors>
+						<Layers>
+							<Layer level="BACKGROUND">
+								<FontString inherits="GameFontNormal" justifyH="RIGHT" text="NEXT">
+									<Anchors>
+										<Anchor point="RIGHT" relativePoint="LEFT"/>
+									</Anchors>
+								</FontString>
+							</Layer>
+						</Layers>
+						<Scripts>
+							<OnClick>
+								PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+								MarketWatcher.Scan.page = MarketWatcher.Scan.page + 1;
+								if ( MarketWatcher.QueryItem(MarketWatcher.Scan.selectedItem, MarketWatcher.Scan.page) ) then
+									self:Disable();
+									MarketWatcher.Scan.AuctionWaitingIndicator();
+								else
+									MarketWatcher.Scan.page = MarketWatcher.Scan.page - 1;
+								end
+							</OnClick>
+						</Scripts>
+						<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
+						<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
+						<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
+						<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+					</Button>
+
+					<ScrollFrame name="$parentScrollFrame" inherits="FauxScrollFrameTemplate">
+						<Size>
+							<AbsDimension x="465" y="334"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPRIGHT">
+								<Offset>
+									<AbsDimension x="-31" y="-74"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture file="Interface\PaperDollInfoFrame\UI-Character-ScrollBar">
+									<Size>
+										<AbsDimension x="31" y="256"/>
+									</Size>
+									<Anchors>
+										<Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
+											<Offset>
+												<AbsDimension x="-2" y="5"/>
+											</Offset>
+										</Anchor>
+									</Anchors>
+									<TexCoords left="0" right="0.484375" top="0" bottom="1.0"/>
+								</Texture>
+								<Texture file="Interface\PaperDollInfoFrame\UI-Character-ScrollBar">
+									<Size>
+										<AbsDimension x="31" y="106"/>
+									</Size>
+									<Anchors>
+										<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT">
+											<Offset>
+												<AbsDimension x="-2" y="-2"/>
+											</Offset>
+										</Anchor>
+									</Anchors>
+									<TexCoords left="0.515625" right="1.0" top="0" bottom="0.4140625"/>
+								</Texture>
+							</Layer>
+						</Layers>
+						<Scripts>
+							<OnVerticalScroll>
+								FauxScrollFrame_OnVerticalScroll(self, offset, 16, MarketWatcher.Scan.ListAuctions_Update);
+							</OnVerticalScroll>
+						</Scripts>
+					</ScrollFrame>
+
+					<Frame name="$parentSellOptions" enableMouse="true" toplevel="true" hidden="true">
+						<Size>
+							<AbsDimension x="176" y="335"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="0" y="10"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+							<EdgeSize>
+								<AbsValue val="16"/>
+							</EdgeSize>
+							<TileSize>
+								<AbsValue val="16"/>
+							</TileSize>
+							<BackgroundInsets>
+								<AbsInset left="5" right="5" top="5" bottom="5"/>
+							</BackgroundInsets>
+						</Backdrop>
+						<Layers>
+							<Layer level="BACKGROUND">
+								<Texture file="Interface\PaperDoll\UI-PaperDoll-SlotBackground.blp" tile="true">
+									<Anchors>
+										<Anchor point="TOPLEFT">
+											<Offset>
+												<AbsDimension x="4" y="-4"/>
+											</Offset>
+										</Anchor>
+										<Anchor point="BOTTOMRIGHT">
+											<Offset>
+												<AbsDimension x="-2" y="4"/>
+											</Offset>
+										</Anchor>
+									</Anchors>
+									<TexCoords left="0.3" right="0.8" top="0.2" bottom="0.8"/>
+								</Texture>
+							</Layer>
+							<Layer level="OVERLAY">
+								<FontString name="$parentSelectedTradeskillText" inherits="GameFontHighlightSmall" justifyH="LEFT">
+									<Color r="0.6" g="0.6" b="0.6"/>
+								</FontString>
+							</Layer>
+						</Layers>
+						<Frames>
+
+							<!-- duration radios -->
+							<CheckButton name="$parentRadio1" inherits="UIRadioButtonTemplate" id="1">
+								<Anchors>
+									<Anchor point="TOPLEFT">
+										<Offset>
+											<AbsDimension x="13" y="-10"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Scripts>
+									<OnLoad>
+										_G[self:GetName().."Text"]:SetText("2h");
+									</OnLoad>
+									<OnShow>
+										MarketWatcher.Scan.DurationRadio_OnShow(self);
+									</OnShow>
+									<OnClick>
+										MarketWatcher.Scan.DurationRadio_OnClick(self);
+									</OnClick>
+								</Scripts>
+							</CheckButton>
+							<CheckButton name="$parentRadio2" inherits="UIRadioButtonTemplate" id="2">
+								<Anchors>
+									<Anchor point="LEFT" relativeTo="$parentRadio1" relativePoint="RIGHT">
+										<Offset>
+											<AbsDimension x="37" y="0"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Scripts>
+									<OnLoad>
+										_G[self:GetName().."Text"]:SetText("8h");
+									</OnLoad>
+									<OnShow>
+										MarketWatcher.Scan.DurationRadio_OnShow(self);
+									</OnShow>
+									<OnClick>
+										MarketWatcher.Scan.DurationRadio_OnClick(self);
+									</OnClick>
+								</Scripts>
+							</CheckButton>
+							<CheckButton name="$parentRadio3" inherits="UIRadioButtonTemplate" id="3">
+								<Anchors>
+									<Anchor point="LEFT" relativeTo="$parentRadio2" relativePoint="RIGHT">
+										<Offset>
+											<AbsDimension x="37" y="0"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Scripts>
+									<OnLoad>
+										_G[self:GetName().."Text"]:SetText("24h");
+									</OnLoad>
+									<OnShow>
+										MarketWatcher.Scan.DurationRadio_OnShow(self);
+									</OnShow>
+									<OnClick>
+										MarketWatcher.Scan.DurationRadio_OnClick(self);
+									</OnClick>
+								</Scripts>
+							</CheckButton>
+
+							<!-- Sell One money + button -->
+							<Frame name="$parentSellOneBidMoney" inherits="MoneyInputFrameTemplate">
+								<Anchors>
+									<Anchor point="TOPLEFT">
+										<Offset>
+											<AbsDimension x="25" y="-45"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Layers>
+									<Layer level="OVERLAY">
+										<FontString inherits="GameFontNormal" justifyH="LEFT" text="BID">
+											<Anchors>
+												<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT">
+													<Offset>
+														<AbsDimension x="0" y="0"/>
+													</Offset>
+												</Anchor>
+											</Anchors>
+										</FontString>
+									</Layer>
+								</Layers>
+								<Scripts>
+									<OnLoad>
+										_G[self:GetName().."Gold"]:SetMaxLetters(6);
+										self:SetScale(.8);
+									</OnLoad>
+								</Scripts>
+							</Frame>
+							<Frame name="$parentSellOneBuyoutMoney" inherits="MoneyInputFrameTemplate">
+								<Anchors>
+									<Anchor point="TOP" relativeTo="$parentSellOneBidMoney" relativePoint="BOTTOM">
+										<Offset>
+											<AbsDimension x="0" y="-15"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Layers>
+									<Layer level="OVERLAY">
+										<FontString inherits="GameFontNormal" justifyH="LEFT" text="BUYOUT">
+											<Anchors>
+												<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT">
+													<Offset>
+														<AbsDimension x="0" y="0"/>
+													</Offset>
+												</Anchor>
+											</Anchors>
+										</FontString>
+									</Layer>
+								</Layers>
+								<Scripts>
+									<OnLoad>
+										_G[self:GetName().."Gold"]:SetMaxLetters(6);
+										self:SetScale(.8);
+									</OnLoad>
+								</Scripts>
+							</Frame>
+							<Button name="$parentSellOneButton" inherits="UIPanelButtonTemplate" text="MARKETWATCHER_SELL_ONE">
+								<Size>
+									<AbsDimension x="150" y="22"/>
+								</Size>
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeTo="$parentSellOneBuyoutMoney" relativePoint="BOTTOMLEFT">
+										<Offset>
+											<AbsDimension x="-6" y="-5"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Scripts>
+									<OnClick>
+										MarketWatcher.Scan.SellButton_OnClick(self, 1);
+									</OnClick>
+								</Scripts>
+							</Button>
+
+							<!-- Sell Stack money frames + button -->
+							<Frame name="$parentSellStackBidMoney" inherits="MoneyInputFrameTemplate">
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeTo="$parentSellOneButton" relativePoint="BOTTOMLEFT">
+										<Offset>
+											<AbsDimension x="5" y="-20"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Layers>
+									<Layer level="OVERLAY">
+										<FontString inherits="GameFontNormal" justifyH="LEFT" text="BID">
+											<Anchors>
+												<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT">
+													<Offset>
+														<AbsDimension x="0" y="0"/>
+													</Offset>
+												</Anchor>
+											</Anchors>
+										</FontString>
+									</Layer>
+								</Layers>
+								<Scripts>
+									<OnLoad>
+										_G[self:GetName().."Gold"]:SetMaxLetters(6);
+										self:SetScale(.8);
+									</OnLoad>
+								</Scripts>
+							</Frame>
+							<Frame name="$parentSellStackBuyoutMoney" inherits="MoneyInputFrameTemplate">
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeTo="$parentSellStackBidMoney" relativePoint="BOTTOMLEFT">
+										<Offset>
+											<AbsDimension x="0" y="-15"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Layers>
+									<Layer level="OVERLAY">
+										<FontString inherits="GameFontNormal" justifyH="LEFT" text="BUYOUT">
+											<Anchors>
+												<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT">
+													<Offset>
+														<AbsDimension x="0" y="0"/>
+													</Offset>
+												</Anchor>
+											</Anchors>
+										</FontString>
+									</Layer>
+								</Layers>
+								<Scripts>
+									<OnLoad>
+										_G[self:GetName().."Gold"]:SetMaxLetters(6);
+										self:SetScale(.8);
+									</OnLoad>
+								</Scripts>
+							</Frame>
+							<Button name="$parentSellStackButton" inherits="UIPanelButtonTemplate" text="MARKETWATCHER_SELL_STACK">
+								<Size>
+									<AbsDimension x="90" y="22"/>
+								</Size>
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeTo="$parentSellStackBuyoutMoney" relativePoint="BOTTOMLEFT">
+										<Offset>
+											<AbsDimension x="-6" y="-5"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Scripts>
+									<OnClick>
+										MarketWatcher.Scan.SellButton_OnClick(self, "stack");
+									</OnClick>
+									<OnEnter>
+										local stackSize = MarketWatcherScanFrameAuctionsSellOptionsStackSizeEditBox:GetNumber();
+										local buyoutPrice = MoneyInputFrame_GetCopper(MarketWatcherScanFrameAuctionsSellOptionsSellStackBuyoutMoney);
+										local bidPrice = MoneyInputFrame_GetCopper(MarketWatcherScanFrameAuctionsSellOptionsSellStackBidMoney);
+
+										GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+										SetTooltipMoney(GameTooltip, floor(bidPrice / stackSize), "STATIC", AUCTION_TOOLTIP_BID_PREFIX);
+										SetTooltipMoney(GameTooltip, floor(buyoutPrice / stackSize), "STATIC", AUCTION_TOOLTIP_BUYOUT_PREFIX);
+										GameTooltip:Show();
+									</OnEnter>
+									<OnLeave>
+										GameTooltip:Hide();
+									</OnLeave>
+								</Scripts>
+							</Button>
+							<EditBox name="$parentStackSizeEditBox" letters="4" numeric="true" autoFocus="false" inherits="InputBoxTemplate">
+								<Size>
+									<AbsDimension x="30" y="16"/>
+								</Size>
+								<Anchors>
+									<Anchor point="LEFT" relativeTo="$parentSellStackButton" relativePoint="RIGHT">
+										<Offset>
+											<AbsDimension x="20" y="0"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Frames>
+									<Button name="$parentLeftButton">
+										<Size>
+											<AbsDimension x="16" y="16"/>
+										</Size>
+										<Anchors>
+											<Anchor point="RIGHT" relativePoint="LEFT">
+												<Offset>
+													<AbsDimension x="-3" y="-1"/>
+												</Offset>
+											</Anchor>
+										</Anchors>
+										<Scripts>
+											<OnClick>
+												self:GetParent():SetText( self:GetParent():GetNumber() - 1 );
+											</OnClick>
+										</Scripts>
+										<NormalTexture file="Interface\MoneyFrame\Arrow-Left-Up"/>
+										<PushedTexture file="Interface\MoneyFrame\Arrow-Left-Down"/>
+										<DisabledTexture file="Interface\MoneyFrame\Arrow-Left-Disabled"/>
+									</Button>
+									<Button name="$parentRightButton">
+										<Size>
+											<AbsDimension x="16" y="16"/>
+										</Size>
+										<Anchors>
+											<Anchor point="LEFT" relativePoint="RIGHT">
+												<Offset>
+													<AbsDimension x="1" y="0"/>
+												</Offset>
+											</Anchor>
+										</Anchors>
+										<Scripts>
+											<OnClick>
+												self:GetParent():SetText( self:GetParent():GetNumber() + 1 );
+											</OnClick>
+										</Scripts>
+										<NormalTexture file="Interface\MoneyFrame\Arrow-Right-Up"/>
+										<PushedTexture file="Interface\MoneyFrame\Arrow-Right-Down"/>
+										<DisabledTexture file="Interface\MoneyFrame\Arrow-Right-Disabled"/>
+									</Button>
+								</Frames>
+								<Scripts>
+									<OnTextChanged>
+										MarketWatcher.Scan.StackSizeEditBox_OnTextChanged(self);
+									</OnTextChanged>
+									<OnEnterPressed>
+										self:ClearFocus();
+									</OnEnterPressed>
+								</Scripts>
+							</EditBox>
+
+							<Button name="$parentCreateButton" inherits="UIPanelButtonTemplate" text="MARKETWATCHER_CREATE">
+								<Size>
+									<AbsDimension x="150" y="22"/>
+								</Size>
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeTo="$parentSellStackButton" relativePoint="BOTTOMLEFT">
+										<Offset>
+											<AbsDimension x="0" y="-20"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Scripts>
+									<OnClick>
+										MarketWatcher.Scan.CreateButton_OnClick(self);
+									</OnClick>
+									<OnEnter>
+										MarketWatcher.Scan.CreateButton_OnEnter(self);
+									</OnEnter>
+									<OnLeave>
+										GameTooltip:Hide();
+										self:UnregisterEvent("TRADE_SKILL_UPDATE");
+									</OnLeave>
+									<OnHide>
+										self:UnregisterEvent("TRADE_SKILL_UPDATE");
+									</OnHide>
+									<OnEvent>
+										MarketWatcher.Scan.CreateButton_OnEnter(self);	-- reagents/mats sometimes return nil, so need to check event
+									</OnEvent>
+								</Scripts>
+							</Button>
+							<Button name="$parentCancelAuctionsButton" inherits="UIPanelButtonTemplate" text="MARKETWATCHER_CANCEL_AUCTIONS">
+								<Size>
+									<AbsDimension x="150" y="22"/>
+								</Size>
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeTo="$parentCreateButton" relativePoint="BOTTOMLEFT">
+										<Offset>
+											<AbsDimension x="0" y="-20"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Scripts>
+									<OnClick>
+										MarketWatcher.Scan.CancelAuctionsButton_OnClick(self);
+									</OnClick>
+								</Scripts>
+							</Button>
+							<Button name="$parentRescanItemButton" inherits="UIPanelButtonTemplate" text="MARKETWATCHER_RESCAN_ITEM">
+								<Size>
+									<AbsDimension x="150" y="22"/>
+								</Size>
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeTo="$parentCancelAuctionsButton" relativePoint="BOTTOMLEFT">
+										<Offset>
+											<AbsDimension x="0" y="-20"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Scripts>
+									<OnClick>
+										MarketWatcher.Scan.RescanItemButton_OnClick(self);
+									</OnClick>
+								</Scripts>
+							</Button>
+						</Frames>
+						<Scripts>
+							<OnLoad>
+								MoneyInputFrame_SetPreviousFocus( _G[self:GetName().."SellOneBidMoney"], _G[self:GetName().."SellOneBuyoutMoneyCopper"] );
+								MoneyInputFrame_SetNextFocus(     _G[self:GetName().."SellOneBidMoney"], _G[self:GetName().."SellOneBuyoutMoneyGold"] );
+
+								MoneyInputFrame_SetPreviousFocus( _G[self:GetName().."SellOneBuyoutMoney"], _G[self:GetName().."SellOneBidMoneyCopper"] );
+								MoneyInputFrame_SetNextFocus(     _G[self:GetName().."SellOneBuyoutMoney"], _G[self:GetName().."SellOneBidMoneyGold"] );
+
+								MoneyInputFrame_SetPreviousFocus( _G[self:GetName().."SellStackBidMoney"], _G[self:GetName().."SellStackBuyoutMoneyCopper"] );
+								MoneyInputFrame_SetNextFocus(     _G[self:GetName().."SellStackBidMoney"], _G[self:GetName().."SellStackBuyoutMoneyGold"] );
+
+								MoneyInputFrame_SetPreviousFocus( _G[self:GetName().."SellStackBuyoutMoney"], _G[self:GetName().."SellStackBidMoneyCopper"] );
+								MoneyInputFrame_SetNextFocus(     _G[self:GetName().."SellStackBuyoutMoney"], _G[self:GetName().."SellStackBidMoneyGold"] );
+
+								MarketWatcherScanFrameAuctionsSellOptionsSelectedTradeskillText:ClearAllPoints();
+								MarketWatcherScanFrameAuctionsSellOptionsSelectedTradeskillText:SetPoint("BOTTOM", MarketWatcherScanFrameAuctionsSellOptionsCreateButton, "TOP", 0, 3);
+							</OnLoad>
+							<OnShow>
+								--if ( not C_TradeSkillUI.GetTradeSkillLine() ) then
+								--	_G[self:GetName().."CreateButton"]:Disable();
+								--end
+							</OnShow>
+							<OnHide>
+								self:SetScript("OnEvent", nil);
+							</OnHide>
+						</Scripts>
+					</Frame>
+
+				</Frames>
+			</Frame>
+
+			<Button name="$parentApplyFiltersButton" inherits="UIPanelButtonTemplate" text="MARKETWATCHER_APPLY_FILTERS">
+				<Size>
+					<AbsDimension x="100" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="180" y="14"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:Disable();
+					</OnLoad>
+					<OnClick>
+						MarketWatcher.Scan.ApplyButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentEditFiltersButton" inherits="UIPanelButtonTemplate" text="MARKETWATCHER_EDIT_FILTERS">
+				<Size>
+					<AbsDimension x="100" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentApplyFiltersButton" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MarketWatcherFiltersFrame:Show();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentCancelUndercutButton" inherits="UIPanelButtonTemplate" text="MARKETWATCHER_CANCEL_UNDERCUT">
+				<Size>
+					<AbsDimension x="120" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentEditFiltersButton" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:Disable();
+					</OnLoad>
+					<OnClick>
+						--StaticPopup_Show("MW_CANCEL_UNDERCUT_CONFIRM");
+						MarketWatcher.Scan.CancelUndercutAuctions();
+					</OnClick>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+						GameTooltip:SetText(MARKETWATCHER_TOOLTIP6, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+			<Button name="$parentUnHideButton" inherits="UIPanelButtonTemplate" text="MARKETWATCHER_UNHIDE" hidden="true">
+				<Size>
+					<AbsDimension x="70" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentItemsDisplayedText" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="5" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetScale(.8);
+					</OnLoad>
+					<OnClick>
+						MarketWatcher.Scan.UnHideButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+			</Button>
+
+			<Button name="$parentCloseButton" inherits="UIPanelButtonTemplate" text="CLOSE">
+				<Size>
+					<AbsDimension x="80" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-8" y="14"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HideUIPanel(self:GetParent():GetParent());
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentBuyoutButton" inherits="UIPanelButtonTemplate" text="BUYOUT">
+				<Size>
+					<AbsDimension x="80" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentCloseButton" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:Disable();
+					</OnLoad>
+					<OnClick>
+						StaticPopup_Show("MW_BUYOUT_AUCTION");
+						self:Disable();
+					</OnClick>
+				</Scripts>
+			</Button>
+
+		</Frames>
+		<Scripts>
+			<OnShow>
+				MarketWatcher.Scan.ScanFrame_OnShow(self);
+			</OnShow>
+			<OnHide>
+				MarketWatcher.Scan.ScanFrame_OnHide(self);
+			</OnHide>
+			<OnEvent>
+				MarketWatcher.Scan.ScanFrame_OnEvent(self, event, ...);
+			</OnEvent>
+		</Scripts>
+
+	</Frame>
+</Ui>

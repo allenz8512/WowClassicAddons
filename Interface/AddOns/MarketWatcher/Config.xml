@@ -1,0 +1,344 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\..\FrameXML\UI.xsd">
+
+	<Frame name="MarketWatcherConfigFrame" frameStrata="HIGH" toplevel="true" enableMouse="true" topLevel="true" hidden="true">
+		<Size>
+			<AbsDimension x="475" y="300"/>
+		</Size>
+		<Backdrop edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11"/>
+				<Size>
+					<AbsDimension x="128" y="17"/>
+				</Size>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32"/>
+			</EdgeSize>
+		</Backdrop>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture file="Interface\PaperDoll\UI-PaperDoll-SlotBackground.blp" tile="true">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="8" y="-8"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="-3" y="8"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.3" right="0.8" top="0.2" bottom="0.8"/>
+				</Texture>
+			</Layer>
+			<Layer level="ARTWORK">
+				<Texture file="Interface\DialogFrame\UI-DialogBox-Header">
+					<Size>
+						<AbsDimension x="350" y="64"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="12"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<FontString name="$parentTitle" inherits="GameFontNormal" text="MARKETWATCHER_CONFIG_HEADER">
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="-1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+
+			<Slider name="$parentQueryDelaySlider" inherits="OptionsSliderTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-55" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentValueText" inherits="GameFontNormal">
+							<Anchors>
+								<Anchor point="BOTTOM">
+									<Offset>
+										<AbsDimension x="0" y="-10" />
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnShow>
+						self:Enable();
+						self:SetObeyStepOnDrag(true);
+						self:SetMinMaxValues(.4, 1);
+						self:SetValueStep(.1);
+						self:SetValue(MarketWatcher.GetConfig().queryDelay);
+						_G[self:GetName().."Text"]:SetText(MARKETWATCHER_QUERYDELAY);
+						_G[self:GetName().."ValueText"]:SetFormattedText("%.1f", MarketWatcher.GetConfig().queryDelay);
+						_G[self:GetName().."Low"]:SetText(.4);
+						_G[self:GetName().."High"]:SetText(1);
+					</OnShow>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_LEFT");
+						GameTooltip:SetBackdropColor(TOOLTIP_DEFAULT_BACKGROUND_COLOR.r, TOOLTIP_DEFAULT_BACKGROUND_COLOR.g, TOOLTIP_DEFAULT_BACKGROUND_COLOR.b);
+						GameTooltip:SetText(MARKETWATCHER_TOOLTIP13, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnValueChanged>
+						PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+						_G[self:GetName().."ValueText"]:SetFormattedText("%.1f", self:GetValue());
+					</OnValueChanged>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Slider>
+			<Slider name="$parentDefaultUndercutSlider" inherits="OptionsSliderTemplate">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentQueryDelaySlider" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-35" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentValueText" inherits="GameFontNormal">
+							<Anchors>
+								<Anchor point="BOTTOM">
+									<Offset>
+										<AbsDimension x="0" y="-10" />
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnShow>
+						self:Enable();
+						self:SetObeyStepOnDrag(true);
+						self:SetMinMaxValues(0, 10);
+						self:SetValueStep(1);
+						self:SetValue(MarketWatcher.GetConfig().defaultUndercut or 0);
+						_G[self:GetName().."Text"]:SetText(MARKETWATCHER_DEFAULT_UNDERCUT);
+
+						if ( not MarketWatcher.GetConfig().defaultUndercut or MarketWatcher.GetConfig().defaultUndercut > 0 ) then
+							_G[self:GetName().."ValueText"]:SetText(MarketWatcher.GetConfig().defaultUndercut.."%");
+						else
+							_G[self:GetName().."ValueText"]:SetFormattedText(COPPER_AMOUNT, 1);
+						end
+
+						_G[self:GetName().."Low"]:SetFormattedText(COPPER_AMOUNT, 1);
+						_G[self:GetName().."High"]:SetText("10%");
+					</OnShow>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_LEFT");
+						GameTooltip:SetBackdropColor(TOOLTIP_DEFAULT_BACKGROUND_COLOR.r, TOOLTIP_DEFAULT_BACKGROUND_COLOR.g, TOOLTIP_DEFAULT_BACKGROUND_COLOR.b);
+						GameTooltip:SetText(MARKETWATCHER_TOOLTIP15, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnValueChanged>
+						PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+						if ( self:GetValue() > 0 ) then
+							_G[self:GetName().."ValueText"]:SetText(self:GetValue().."%");
+						else
+							_G[self:GetName().."ValueText"]:SetFormattedText(COPPER_AMOUNT, 1);
+						end
+					</OnValueChanged>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Slider>
+			<Slider name="$parentBidPriceMarkdownSlider" inherits="OptionsSliderTemplate">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentDefaultUndercutSlider" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-35" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentValueText" inherits="GameFontNormal">
+							<Anchors>
+								<Anchor point="BOTTOM">
+									<Offset>
+										<AbsDimension x="0" y="-10" />
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnShow>
+						self:Enable();
+						self:SetObeyStepOnDrag(true);
+						self:SetMinMaxValues(0, 20);
+						self:SetValueStep(1);
+						self.valueStep = 1;
+						self:SetValue( MarketWatcher.GetConfig().bidPriceMarkdown or 1 );
+						_G[self:GetName().."Text"]:SetText(MARKETWATCHER_BID_PRICE_MARKDOWN);
+						_G[self:GetName().."ValueText"]:SetFormattedText( "%.0f%%", MarketWatcher.GetConfig().bidPriceMarkdown or 0 );
+						_G[self:GetName().."Low"]:SetText("0%");
+						_G[self:GetName().."High"]:SetText("20%");
+					</OnShow>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_LEFT");
+						GameTooltip:SetBackdropColor(TOOLTIP_DEFAULT_BACKGROUND_COLOR.r, TOOLTIP_DEFAULT_BACKGROUND_COLOR.g, TOOLTIP_DEFAULT_BACKGROUND_COLOR.b);
+						GameTooltip:SetText(MARKETWATCHER_TOOLTIP16, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnValueChanged>
+						PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+						_G[self:GetName().."ValueText"]:SetText(self:GetValue().."%");
+					</OnValueChanged>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Slider>
+			<Slider name="$parentIgnoreSensitivitySlider" inherits="OptionsSliderTemplate">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentBidPriceMarkdownSlider" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-35" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentValueText" inherits="GameFontNormal">
+							<Anchors>
+								<Anchor point="BOTTOM">
+									<Offset>
+										<AbsDimension x="0" y="-10" />
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnShow>
+						self:Enable();
+						self:SetObeyStepOnDrag(true);
+						self:SetMinMaxValues(2, 4);
+						self:SetValueStep(0.1);
+						self:SetValue( MarketWatcher.GetConfig().ignoreSensitivity or 3 );
+						_G[self:GetName().."Text"]:SetText(MARKETWATCHER_IGNORE_SENSITIVITY);
+						_G[self:GetName().."ValueText"]:SetFormattedText( "%.1f", MarketWatcher.GetConfig().ignoreSensitivity or 3 );
+						_G[self:GetName().."Low"]:SetText("2");
+						_G[self:GetName().."High"]:SetText("4");
+					</OnShow>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_LEFT");
+						GameTooltip:SetBackdropColor(TOOLTIP_DEFAULT_BACKGROUND_COLOR.r, TOOLTIP_DEFAULT_BACKGROUND_COLOR.g, TOOLTIP_DEFAULT_BACKGROUND_COLOR.b);
+						GameTooltip:SetText(MARKETWATCHER_TOOLTIP20, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnValueChanged>
+						PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+						_G[self:GetName().."ValueText"]:SetText(format("%.1f", self:GetValue()));
+					</OnValueChanged>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Slider>
+			<Button name="$parentAuditButton" inherits="UIPanelButtonTemplate" text="MARKETWATCHER_AUDIT">
+				<Size>
+					<AbsDimension x="110" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentIgnoreSensitivitySlider" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-30"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MarketWatcher.Config.Audit();
+					</OnClick>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_LEFT");
+						GameTooltip:SetBackdropColor(TOOLTIP_DEFAULT_BACKGROUND_COLOR.r, TOOLTIP_DEFAULT_BACKGROUND_COLOR.g, TOOLTIP_DEFAULT_BACKGROUND_COLOR.b);
+						GameTooltip:SetText(MARKETWATCHER_TOOLTIP14, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+
+			<Button name="$parentCancelButton" inherits="UIPanelButtonTemplate" text="CANCEL">
+				<Size>
+					<AbsDimension x="60" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-20" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						self:GetParent():Hide();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentOkayButton" inherits="UIPanelButtonTemplate" text="OKAY">
+				<Size>
+					<AbsDimension x="60" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-90" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MarketWatcher.Config.OkayButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+			</Button>
+
+
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				self:SetPoint("CENTER", AuctionFrame);
+			</OnLoad>
+			<OnShow>
+				PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB);
+				MarketWatcher.Config.Frame_OnShow();
+			</OnShow>
+			<OnHide>
+				PlaySound(SOUNDKIT.IG_MAINMENU_CLOSE);
+			</OnHide>
+		</Scripts>
+	</Frame>
+
+</Ui>
