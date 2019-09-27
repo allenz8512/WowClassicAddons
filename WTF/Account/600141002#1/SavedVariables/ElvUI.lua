@@ -8,9 +8,9 @@ ElvDB = {
 	["gold"] = {
 		["碧玉矿洞"] = {
 			["白银兽骑团委"] = 64,
-			["白銀諾艾爾"] = 280720,
+			["白銀諾艾爾"] = 365550,
 			["白银兽骑团友"] = 0,
-			["白银兽骑团员"] = 16451,
+			["白银兽骑团员"] = 35091,
 		},
 	},
 	["class"] = {
@@ -32,6 +32,35 @@ ElvDB = {
 			["UIScale"] = 0.8,
 			["fadeMapWhenMoving"] = false,
 			["smallerWorldMapScale"] = 0.5,
+		},
+		["unitframe"] = {
+			["aurafilters"] = {
+				["paladin"] = {
+					["spells"] = {
+						[1032] = {
+							["enable"] = true,
+							["priority"] = 0,
+							["stackThreshold"] = 0,
+						},
+						[19746] = {
+							["enable"] = true,
+							["priority"] = 0,
+							["stackThreshold"] = 0,
+						},
+						[10300] = {
+							["enable"] = true,
+							["priority"] = 0,
+							["stackThreshold"] = 0,
+						},
+						[13819] = {
+							["enable"] = true,
+							["priority"] = 0,
+							["stackThreshold"] = 0,
+						},
+					},
+					["type"] = "Blacklist",
+				},
+			},
 		},
 	},
 	["profiles"] = {
@@ -69,9 +98,9 @@ ElvDB = {
 					["size"] = 50,
 				},
 				["valuecolor"] = {
-					["r"] = 0.96,
-					["g"] = 0.55,
-					["b"] = 0.73,
+					["r"] = 0.67,
+					["g"] = 0.83,
+					["b"] = 0.45,
 				},
 				["topPanel"] = false,
 				["bordercolor"] = {
@@ -145,22 +174,22 @@ ElvDB = {
 				["BelowMinimapContainerMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-274",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-209,153",
 				["QuestTimerFrameMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,142,-4",
-				["ElvUF_TargetTargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,173",
+				["ReputationBarMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-3,-264",
 				["AzeriteBarMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-3,-245",
 				["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,75",
-				["ReputationBarMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-3,-264",
-				["ElvNP_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-207,274",
+				["ElvAB_5"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-497,45",
 				["ShiftAB"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,500,36",
+				["VOICECHAT"] = "TOPLEFT,ElvUIParent,TOPLEFT,368,-210",
 				["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,4",
 				["ObjectiveFrameMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-163,-325",
 				["BNETMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-274",
-				["VOICECHAT"] = "TOPLEFT,ElvUIParent,TOPLEFT,368,-210",
+				["ElvNP_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-207,274",
 				["ElvUF_PetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-114,243",
 				["HonorBarMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-3,-255",
 				["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,209,229",
 				["LevelUpBossBannerMover"] = "TOP,ElvUIParent,TOP,-1,-120",
 				["TalkingHeadFrameMover"] = "BOTTOM,ElvUIParent,BOTTOM,-1,373",
-				["ElvAB_5"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-497,45",
+				["ElvUF_TargetTargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,173",
 				["TotemBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,490,4",
 				["ElvAB_4"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,499,44",
 				["RightChatMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,4",
@@ -221,7 +250,7 @@ ElvDB = {
 					["player"] = {
 						["debuffs"] = {
 							["sizeOverride"] = 0,
-							["enable"] = false,
+							["yOffset"] = 25,
 						},
 						["portrait"] = {
 							["enable"] = true,
@@ -231,10 +260,6 @@ ElvDB = {
 						},
 						["CombatIcon"] = {
 							["anchorPoint"] = "TOPLEFT",
-						},
-						["aurabar"] = {
-							["friendlyAuraType"] = "HARMFUL",
-							["attachTo"] = "BUFFS",
 						},
 						["castbar"] = {
 							["enable"] = false,
@@ -595,9 +620,9 @@ ElvDB = {
 				["ElvAB_6"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-488,330",
 				["TooltipMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-50,50",
 				["ElvUF_TankMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,50,995",
-				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-230,140",
 				["TotemBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,463,50",
 				["ElvUF_PetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,200",
+				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-230,140",
 				["ElvUF_PartyMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,184,773",
 				["AlertFrameMover"] = "TOP,ElvUIParent,TOP,0,-50",
 				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,230,140",
@@ -929,23 +954,23 @@ ElvPrivateDB = {
 		["白银兽骑团友 - 碧玉矿洞"] = {
 		},
 		["白银兽骑团员 - 碧玉矿洞"] = {
-			["install_complete"] = "1.05",
 			["bags"] = {
 				["enable"] = false,
 			},
+			["install_complete"] = "1.05",
 		},
 		["白銀諾艾爾 - 碧玉矿洞"] = {
-			["general"] = {
-				["chatBubbleFont"] = "聊天",
-				["dmgfont"] = "伤害数字",
-				["chatBubbleFontSize"] = 12,
-				["chatBubbles"] = "backdrop_noborder",
-				["namefont"] = "默认",
-			},
+			["theme"] = "class",
 			["bags"] = {
 				["enable"] = false,
 			},
-			["theme"] = "class",
+			["general"] = {
+				["chatBubbleFontSize"] = 12,
+				["chatBubbles"] = "backdrop_noborder",
+				["chatBubbleFont"] = "聊天",
+				["namefont"] = "默认",
+				["dmgfont"] = "伤害数字",
+			},
 			["install_complete"] = "1.03",
 		},
 	},

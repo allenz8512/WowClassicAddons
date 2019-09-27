@@ -2,107 +2,83 @@
 MonkeyQuestConfig = {
 	["碧玉矿洞|白銀諾艾爾"] = {
 		["m_aQuestList"] = {
-			["返回铁炉堡 - false"] = {
-				["m_bChecked"] = true,
+			["荆棘谷 - true"] = {
+				["m_bChecked"] = false,
 			},
 			["通缉：卡利夫·斯科比斯汀 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["海盗的帽子！ - false"] = {
-				["m_bChecked"] = true,
-			},
-			["辛特兰 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["砂槌食人魔 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["进一步的任务 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["铁炉堡 - true"] = {
-				["m_bChecked"] = true,
-			},
-			["沉没的神庙 - true"] = {
-				["m_bChecked"] = true,
-			},
-			["召唤大地公主 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["加兹瑞迪安 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["祖尔祭坛 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["瓶中信 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["西部荒野 - true"] = {
-				["m_bChecked"] = true,
-			},
-			["荆棘谷 - true"] = {
-				["m_bChecked"] = true,
-			},
-			["意志石板 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["塔纳利斯 - true"] = {
+			["安戈洛环形山 - true"] = {
 				["m_bChecked"] = false,
 			},
 			["远古之卵 - false"] = {
 				["m_bChecked"] = true,
 			},
+			["安戈洛的泥土 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["南海复仇 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["达纳苏斯 - true"] = {
+				["m_bChecked"] = false,
+			},
 			["斯杜雷的货物 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["暴风城 - true"] = {
-				["m_bChecked"] = true,
-			},
-			["加基森水业公司 - false"] = {
+			["火山的活动 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["琥珀酒 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["奥达曼 - true"] = {
+			["铁炉堡 - true"] = {
+				["m_bChecked"] = false,
+			},
+			["加基森水业公司 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["拉普索迪的故事 - false"] = {
+			["海盗的帽子！ - false"] = {
+				["m_bChecked"] = true,
+			},
+			["沉没的神庙 - true"] = {
+				["m_bChecked"] = false,
+			},
+			["召唤大地公主 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["威士忌斯利姆的酒 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["尤卡·斯库比格特 - false"] = {
+			["口渴的地精 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["协助大德鲁伊 - false"] = {
+			["祖尔祭坛 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["小心运送 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["灌木谷 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["黑石深渊 - true"] = {
-				["m_bChecked"] = true,
-			},
-			["进入阿塔哈卡神庙 - false"] = {
+			["极度粘稠的沥青 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["远方的软泥怪 - false"] = {
 				["m_bChecked"] = true,
 			},
+			["瓶中信 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["进入阿塔哈卡神庙 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["塔纳利斯 - true"] = {
+				["m_bChecked"] = false,
+			},
 			["阿拉希高地 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["南海复仇 - false"] = {
-				["m_bChecked"] = true,
+			["西部荒野 - true"] = {
+				["m_bChecked"] = false,
 			},
-			["口渴的地精 - false"] = {
-				["m_bChecked"] = true,
+			["辛特兰 - true"] = {
+				["m_bChecked"] = false,
 			},
 		},
 	},
@@ -131,7 +107,7 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_iFrameBottom"] = 195.555618286133,
+		["m_iFrameBottom"] = 680.889038085938,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11291503906,
 		["m_bColourDoneOrFailed"] = false,

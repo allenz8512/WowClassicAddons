@@ -24,6 +24,9 @@ AtlasLootClassicDB = {
 		["白银兽骑团友 - 碧玉矿洞"] = {
 		},
 		["白银兽骑团员 - 碧玉矿洞"] = {
+			["minimap"] = {
+				["minimapPos"] = 197.36267728892,
+			},
 			["GUI"] = {
 				["selected"] = {
 					"AtlasLootClassic_Crafting", -- [1]
@@ -33,14 +36,8 @@ AtlasLootClassicDB = {
 					0, -- [5]
 				},
 			},
-			["minimap"] = {
-				["minimapPos"] = 197.36267728892,
-			},
 		},
 		["白銀諾艾爾 - 碧玉矿洞"] = {
-			["minimap"] = {
-				["minimapPos"] = 189.849014787741,
-			},
 			["GUI"] = {
 				["point"] = {
 					nil, -- [1]
@@ -50,12 +47,15 @@ AtlasLootClassicDB = {
 					0, -- [5]
 				},
 				["selected"] = {
-					"AtlasLootClassic_Crafting", -- [1]
-					"FirstAid", -- [2]
+					nil, -- [1]
+					"RazorfenDowns", -- [2]
 					nil, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},
+			},
+			["minimap"] = {
+				["minimapPos"] = 190.856382417295,
 			},
 		},
 	},

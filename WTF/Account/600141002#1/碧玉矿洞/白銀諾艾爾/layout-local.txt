@@ -41,6 +41,13 @@ X: 5
 Y: 0
 W: 920
 H: 600
+Frame: TalentedFrame
+FrameLevel: 1
+Anchor: CENTER
+X: 0
+Y: 0
+W: 872
+H: 512
 Frame: Five Second Rule Statusbar
 FrameLevel: 1
 Anchor: CENTER
