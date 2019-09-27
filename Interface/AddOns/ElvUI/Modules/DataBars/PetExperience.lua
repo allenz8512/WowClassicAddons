@@ -11,6 +11,7 @@ local GetExpansionLevel = GetExpansionLevel
 local MAX_PLAYER_LEVEL_TABLE = MAX_PLAYER_LEVEL_TABLE
 local InCombatLockdown = InCombatLockdown
 local CreateFrame = CreateFrame
+local HasPetUI = HasPetUI
 
 function mod:UpdatePetExperience(event)
 	if E.myclass ~= 'HUNTER' then return end
@@ -103,7 +104,7 @@ end
 
 function mod:EnableDisable_PetExperienceBar()
 	if E.myclass ~= 'HUNTER' then return end
-	if (UnitLevel('pet') ~= MAX_PLAYER_LEVEL_TABLE[GetExpansionLevel()] or not self.db.petExperience.hideAtMaxLevel) and self.db.petExperience.enable then
+	if (UnitLevel('pet') ~= MAX_PLAYER_LEVEL_TABLE[GetExpansionLevel()] or not self.db.petExperience.hideAtMaxLevel) and self.db.petExperience.enable and HasPetUI() then
 		self:UpdatePetExperience()
 		E:EnableMover(self.petExpBar.mover:GetName())
 	else
@@ -133,6 +134,6 @@ function mod:LoadPetExperienceBar()
 
 	self:UpdatePetExperienceDimensions()
 
-	E:CreateMover(self.petExpBar, "PetExperienceBarMover", L["Pet Experience Bar"], nil, nil, nil, nil, nil, 'databars,experience')
+	E:CreateMover(self.petExpBar, "PetExperienceBarMover", L["Pet Experience Bar"], nil, nil, nil, nil, nil, 'databars,petExperience')
 	self:EnableDisable_PetExperienceBar()
 end

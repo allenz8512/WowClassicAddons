@@ -252,6 +252,17 @@ for textFormat, length in pairs({veryshort = 5, short = 10, medium = 15, long = 
 	end
 end
 
+ElvUF.Tags.Events['name:abbrev'] = 'UNIT_NAME_UPDATE'
+ElvUF.Tags.Methods['name:abbrev'] = function(unit)
+	local name = UnitName(unit)
+
+	if name and strfind(name, '%s') then
+		name = abbrev(name)
+	end
+
+	return name ~= nil and name or ''
+end
+
 ElvUF.Tags.Events['health:max'] = 'UNIT_MAXHEALTH'
 ElvUF.Tags.Methods['health:max'] = function(unit)
 	local _, max = E:UnitHealthValues(unit)

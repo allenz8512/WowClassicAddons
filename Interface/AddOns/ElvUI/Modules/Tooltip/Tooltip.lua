@@ -480,11 +480,6 @@ function TT:GameTooltip_OnTooltipSetItem(tt)
 		local left = " "
 		local right = " "
 		local bankCount = " "
-		local quality = select(3, GetItemInfo(link))
-
-		if quality and quality > 1 then
-			tt:SetBackdropBorderColor(GetItemQualityColor(quality))
-		end
 
 		if link ~= nil and self.db.spellID then
 			left = (("|cFFCA3C3C%s|r %s"):format(_G.ID, link)):match(":(%w+)")
@@ -559,6 +554,28 @@ function TT:CheckBackdropColor(tt)
 		if r ~= red or g ~= green or b ~= blue then
 			tt:SetBackdropColor(red, green, blue, self.db.colorAlpha)
 		end
+	end
+end
+
+function TT:SetBorderColor(_, tt)
+	if not tt.GetItem then return end
+
+	local _, link = tt:GetItem()
+	if link then
+		local _, _, quality = GetItemInfo(link)
+		if quality and quality > 1 then
+			tt:SetBackdropBorderColor(GetItemQualityColor(quality))
+		end
+	end
+end
+
+function TT:ToggleItemQualityBorderColor()
+	if E.db.tooltip.itemQualityBorderColor then
+		if not self:IsHooked(TT, "SetStyle", "SetBorderColor") then
+			self:SecureHook(TT, "SetStyle", "SetBorderColor")
+		end
+	else
+		self:Unhook(TT, "SetStyle", "SetBorderColor")
 	end
 end
 
@@ -733,6 +750,8 @@ function TT:Initialize()
 	GameTooltipAnchor:Size(130, 20)
 	GameTooltipAnchor:SetFrameLevel(GameTooltipAnchor:GetFrameLevel() + 400)
 	E:CreateMover(GameTooltipAnchor, 'TooltipMover', L["Tooltip"], nil, nil, nil, nil, nil, 'tooltip,general')
+
+	self:ToggleItemQualityBorderColor()
 
 	self:SecureHook('SetItemRef')
 	self:SecureHook('GameTooltip_SetDefaultAnchor')

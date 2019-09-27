@@ -77,8 +77,7 @@ function S:HandleInsetFrame(frame)
 	if frame.Bg then frame.Bg:Hide() end
 end
 
--- All frames that have a Portrait
-function S:HandlePortraitFrame(frame, setBackdrop)
+function S:HandleFrame(frame, setBackdrop, template, x1, y1, x2, y2)
 	assert(frame, "doesn't exist!")
 
 	local name = frame and frame.GetName and frame:GetName()
@@ -102,11 +101,15 @@ function S:HandlePortraitFrame(frame, setBackdrop)
 	end
 
 	if setBackdrop then
-		frame:CreateBackdrop('Transparent')
-		frame.backdrop:SetAllPoints()
+		frame:CreateBackdrop(template or 'Transparent')
 	else
-		frame:SetTemplate('Transparent')
+		frame:SetTemplate(template or 'Transparent')
 	end
+
+    if frame.backdrop then
+        frame.backdrop:Point('TOPLEFT', x1 or 0, y1 or 0)
+        frame.backdrop:Point('BOTTOMRIGHT', x2 or 0, y2 or 0)
+    end
 end
 
 function S:SetModifiedBackdrop()
@@ -682,7 +685,7 @@ end
 local handleCloseButtonOnEnter = function(btn) if btn.Texture then btn.Texture:SetVertexColor(unpack(E.media.rgbvaluecolor)) end end
 local handleCloseButtonOnLeave = function(btn) if btn.Texture then btn.Texture:SetVertexColor(1, 1, 1) end end
 
-function S:HandleCloseButton(f, point)
+function S:HandleCloseButton(f, point, x, y)
 	f:StripTextures()
 
 	if not f.Texture then
@@ -696,7 +699,7 @@ function S:HandleCloseButton(f, point)
 	end
 
 	if point then
-		f:Point("TOPRIGHT", point, "TOPRIGHT", 2, 2)
+		f:Point("TOPRIGHT", point, "TOPRIGHT", x or 2, y or 2)
 	end
 end
 

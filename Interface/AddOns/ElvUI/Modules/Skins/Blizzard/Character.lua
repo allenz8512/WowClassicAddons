@@ -1,4 +1,4 @@
-local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
+local E, L, V, P, G = unpack(select(2, ...)) --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local S = E:GetModule('Skins')
 
 --Cache global variables
@@ -19,16 +19,13 @@ local CHARACTERFRAME_SUBFRAMES = CHARACTERFRAME_SUBFRAMES
 local hooksecurefunc = hooksecurefunc
 
 local function LoadSkin()
-	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.character ~= true then return end
+	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.character then return end
 
 	-- Character Frame
-	_G.CharacterFrame:StripTextures(true)
+	local CharacterFrame = _G.CharacterFrame
+	S:HandleFrame(CharacterFrame, true, nil, 11, -12, -32, 76)
 
-	_G.CharacterFrame:CreateBackdrop('Transparent')
-	_G.CharacterFrame.backdrop:Point('TOPLEFT', 11, -12)
-	_G.CharacterFrame.backdrop:Point('BOTTOMRIGHT', -32, 76)
-
-	S:HandleCloseButton(_G.CharacterFrameCloseButton)
+	S:HandleCloseButton(_G.CharacterFrameCloseButton, CharacterFrame.backdrop)
 
 	for i = 1, #CHARACTERFRAME_SUBFRAMES do
 		S:HandleTab(_G['CharacterFrameTab'..i])
@@ -77,7 +74,7 @@ local function LoadSkin()
 	HandleResistanceFrame('MagicResFrame')
 
 	for _, slot in pairs({ _G.PaperDollItemsFrame:GetChildren() }) do
-		if slot:IsObjectType("Button") then
+		if slot:IsObjectType('Button') then
 			local icon = _G[slot:GetName()..'IconTexture']
 			local cooldown = _G[slot:GetName()..'Cooldown']
 
@@ -257,7 +254,7 @@ local function LoadSkin()
 	end
 
 	hooksecurefunc('SkillFrame_SetStatusBar', function(statusBarID, skillIndex, numSkills)
-		local skillLine = _G["SkillTypeLabel"..statusBarID]
+		local skillLine = _G['SkillTypeLabel'..statusBarID]
 		if strfind(skillLine:GetNormalTexture():GetTexture(), 'MinusButton') then
 			skillLine:SetNormalTexture(E.Media.Textures.MinusButton)
 		else
@@ -277,8 +274,8 @@ local function LoadSkin()
 	_G.SkillDetailStatusBar:SetStatusBarTexture(E.media.normTex)
 	E:RegisterStatusBar(_G.SkillDetailStatusBar)
 
-	S:HandleNextPrevButton(_G.SkillDetailStatusBarUnlearnButton)
-	-- S:SquareButton_SetIcon(SkillDetailStatusBarUnlearnButton, 'DELETE')
+	S:HandleCloseButton(_G.SkillDetailStatusBarUnlearnButton)
+	S:HandleButton(_G.SkillDetailStatusBarUnlearnButton)
 	_G.SkillDetailStatusBarUnlearnButton:Size(24)
 	_G.SkillDetailStatusBarUnlearnButton:Point('LEFT', _G.SkillDetailStatusBarBorder, 'RIGHT', 5, 0)
 	_G.SkillDetailStatusBarUnlearnButton:SetHitRectInsets(0, 0, 0, 0)

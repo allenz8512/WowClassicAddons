@@ -1,4 +1,4 @@
-local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
+local E, L, V, P, G = unpack(select(2, ...)) --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local S = E:GetModule('Skins')
 
 --Cache global variables
@@ -14,15 +14,13 @@ local GetItemQualityColor = GetItemQualityColor
 local hooksecurefunc = hooksecurefunc
 
 local function LoadSkin()
-	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.mail ~= true then return end
+	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.mail then return end
 
 	-- Mail Frame / Inbox Frame
 	local MailFrame = _G.MailFrame
-	S:HandlePortraitFrame(MailFrame, true)
-	MailFrame.backdrop:Point('TOPLEFT', -5, 0)
-	MailFrame.backdrop:Point('BOTTOMRIGHT', -2, 0)
+	S:HandleFrame(MailFrame, true, nil, -5, 0, -2, 0)
 
-	_G.MailFrameCloseButton:Point('TOPRIGHT', MailFrame.backdrop, 'TOPRIGHT', 4, 3)
+	_G.MailFrameCloseButton:Point('TOPRIGHT', 0, 2)
 
 	_G.InboxFrameBg:StripTextures()
 	_G.MailFrameBg:StripTextures()
@@ -183,7 +181,7 @@ local function LoadSkin()
 	-- Open Mail Frame
 	local OpenMailFrame = _G.OpenMailFrame
 	OpenMailFrame:StripTextures(true) -- stupid portrait
-	S:HandlePortraitFrame(OpenMailFrame, true)
+	S:HandleFrame(OpenMailFrame, true)
 	OpenMailFrame.backdrop:Point('TOPLEFT', -5, 0)
 	OpenMailFrame.backdrop:Point('BOTTOMRIGHT', -2, 0)
 
@@ -209,11 +207,11 @@ local function LoadSkin()
 
 	hooksecurefunc('OpenMailFrame_UpdateButtonPositions', function()
 		for i = 1, _G.ATTACHMENTS_MAX_RECEIVE do
-			local ItemLink = GetInboxItemLink(_G.InboxFrame.openMailID, i)
+			local itemLink = GetInboxItemLink(_G.InboxFrame.openMailID, i)
 			local button = _G['OpenMailAttachmentButton'..i]
 
-			if ItemLink then
-				local quality = select(3, GetItemInfo(ItemLink))
+			if itemLink then
+				local quality = select(3, GetItemInfo(itemLink))
 
 				if quality and quality > 1 then
 					button:SetBackdropBorderColor(GetItemQualityColor(quality))
@@ -269,4 +267,4 @@ local function LoadSkin()
 	_G.OpenMailMoneyButtonCount:SetDrawLayer('OVERLAY')
 end
 
-S:AddCallback('Mail', LoadSkin)
+S:AddCallback('Skin_Mail', LoadSkin)

@@ -1,4 +1,4 @@
-local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
+local E, L, V, P, G = unpack(select(2, ...)) --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local S = E:GetModule('Skins')
 
 --Cache global variables
@@ -10,14 +10,12 @@ local HideUIPanel = HideUIPanel
 local ShowUIPanel = ShowUIPanel
 
 local function LoadSkin()
-	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.macro ~= true then return end
+	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.macro then return end
 
 	local MacroFrame = _G.MacroFrame
-	S:HandlePortraitFrame(MacroFrame, true)
-	MacroFrame.backdrop:Point('TOPLEFT', -5, 0)
-	MacroFrame.backdrop:Point('BOTTOMRIGHT', -2, -1)
+	S:HandleFrame(MacroFrame, true, nil, -5, 0, -2, -1)
 
-	_G.MacroFrameCloseButton:Point('TOPRIGHT', 2, 3)
+	_G.MacroFrameCloseButton:Point('TOPRIGHT', 0, 2)
 
 	_G.MacroFrameTextBackground:StripTextures()
 	_G.MacroFrameTextBackground:CreateBackdrop('Default')
@@ -38,8 +36,6 @@ local function LoadSkin()
 		_G.MacroNewButton,
 		_G.MacroExitButton,
 		_G.MacroEditButton,
-		_G.MacroFrameTab1,
-		_G.MacroFrameTab2,
 	}
 
 	for i = 1, #buttons do
@@ -59,10 +55,22 @@ local function LoadSkin()
 
 	for i = 1, 2 do
 		local tab = _G['MacroFrameTab'..i]
+		tab:StripTextures()
+		S:HandleButton(tab)
+
 		tab:Height(22)
+		tab:ClearAllPoints()
+
+		if i == 1 then
+			tab:Point('TOPLEFT', MacroFrame, 'TOPLEFT', 7, -40)
+			tab:Width(125)
+		elseif i == 2 then
+			tab:Point('TOPRIGHT', MacroFrame, 'TOPRIGHT', -35, -40)
+			tab:Width(168)
+		end
+
+		tab.SetWidth = E.noop
 	end
-	_G.MacroFrameTab1:Point('TOPLEFT', MacroFrame, 'TOPLEFT', 85, -39)
-	_G.MacroFrameTab2:Point('LEFT', _G.MacroFrameTab1, 'RIGHT', 4, 0)
 
 	--Reposition edit button
 	_G.MacroEditButton:ClearAllPoints()
@@ -133,4 +141,4 @@ local function LoadSkin()
 	end)
 end
 
-S:AddCallbackForAddon('Blizzard_MacroUI', 'Macro', LoadSkin)
+S:AddCallbackForAddon('Blizzard_MacroUI', 'Skin_Blizzard_MacroUI', LoadSkin)

@@ -1,4 +1,4 @@
-local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
+local E, L, V, P, G = unpack(select(2, ...)) --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local S = E:GetModule('Skins')
 
 --Cache global variables
@@ -17,24 +17,22 @@ local GetCraftReagentItemLink = GetCraftReagentItemLink
 local hooksecurefunc = hooksecurefunc
 
 local function LoadSkin()
-	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.craft ~= true then return end
+	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.craft then return end
 
 	local CraftFrame = _G.CraftFrame
-	local CraftRankFrame = _G.CraftRankFrame
-	CraftFrame:StripTextures(true)
-	CraftFrame:CreateBackdrop('Transparent')
-	CraftFrame.backdrop:Point('TOPLEFT', 10, -12)
-	CraftFrame.backdrop:Point('BOTTOMRIGHT', -32, 76)
+	S:HandleFrame(CraftFrame, true, nil, 11, -12, -32, 76)
 
-	_G.CraftRankFrameBorder:StripTextures()
+	local CraftRankFrame = _G.CraftRankFrame
 	CraftRankFrame:StripTextures()
 	CraftRankFrame:Size(322, 16)
 	CraftRankFrame:ClearAllPoints()
 	CraftRankFrame:Point('TOP', -10, -45)
 	CraftRankFrame:CreateBackdrop()
-	CraftRankFrame:SetStatusBarTexture(E['media'].normTex)
+	CraftRankFrame:SetStatusBarTexture(E.media.normTex)
 	CraftRankFrame:SetStatusBarColor(0.13, 0.35, 0.80)
 	E:RegisterStatusBar(CraftRankFrame)
+
+	_G.CraftRankFrameBorder:StripTextures()
 
 	_G.CraftListScrollFrame:StripTextures()
 	_G.CraftDetailScrollFrame:StripTextures()
@@ -142,7 +140,7 @@ local function LoadSkin()
 
 	hooksecurefunc('CraftFrame_SetSelection', function(id)
 		if ( not id ) then
-			return;
+			return
 		end
 
 		local CraftReagentLabel = _G.CraftReagentLabel
@@ -199,15 +197,15 @@ local function LoadSkin()
 		end
 
 		if (numReagents < 5) then
-			_G.CraftDetailScrollFrameScrollBar:Hide();
-			_G.CraftDetailScrollFrameTop:Hide();
-			_G.CraftDetailScrollFrameBottom:Hide();
+			_G.CraftDetailScrollFrameScrollBar:Hide()
+			_G.CraftDetailScrollFrameTop:Hide()
+			_G.CraftDetailScrollFrameBottom:Hide()
 		else
-			_G.CraftDetailScrollFrameScrollBar:Show();
-			_G.CraftDetailScrollFrameTop:Show();
-			_G.CraftDetailScrollFrameBottom:Show();
+			_G.CraftDetailScrollFrameScrollBar:Show()
+			_G.CraftDetailScrollFrameTop:Show()
+			_G.CraftDetailScrollFrameBottom:Show()
 		end
 	end)
 end
 
-S:AddCallbackForAddon('Blizzard_CraftUI', 'Craft', LoadSkin)
+S:AddCallbackForAddon('Blizzard_CraftUI', 'Skin_Blizzard_CraftUI', LoadSkin)

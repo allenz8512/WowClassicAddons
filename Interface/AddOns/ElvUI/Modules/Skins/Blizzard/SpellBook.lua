@@ -1,4 +1,4 @@
-local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
+local E, L, V, P, G = unpack(select(2, ...)) --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local S = E:GetModule('Skins')
 
 --Cache global variables
@@ -11,12 +11,9 @@ local BOOKTYPE_SPELL = BOOKTYPE_SPELL
 local MAX_SKILLLINE_TABS = MAX_SKILLLINE_TABS
 
 local function LoadSkin()
-	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.spellbook ~= true then return end
+	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.spellbook then return end
 
-	local SpellBookFrame = _G.SpellBookFrame
-	S:HandlePortraitFrame(SpellBookFrame, true)
-	SpellBookFrame.backdrop:Point('TOPLEFT', 11, -12)
-	SpellBookFrame.backdrop:Point('BOTTOMRIGHT', -32, 76)
+	S:HandleFrame(_G.SpellBookFrame, true, nil, 11, -12, -32, 76)
 
 	_G.SpellBookTitleText:Point('TOP', -10, -17)
 	_G.SpellBookTitleText:SetTextColor(1, 1, 1)
@@ -37,7 +34,6 @@ local function LoadSkin()
 	_G.SpellBookNextPageButton:Size(24)
 
 	S:HandleCloseButton(_G.SpellBookCloseButton, SpellBookFrame.backdrop)
-	_G.SpellBookCloseButton:Point('TOPRIGHT', -28, -9)
 
 	for i = 1, 3 do
 		local tab = _G['SpellBookFrameTabButton'..i]
@@ -146,4 +142,4 @@ local function LoadSkin()
 	end
 end
 
-S:AddCallback('Spellbook', LoadSkin)
+S:AddCallback('Skin_Spellbook', LoadSkin)

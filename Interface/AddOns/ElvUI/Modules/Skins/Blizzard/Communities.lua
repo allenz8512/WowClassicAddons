@@ -1,4 +1,4 @@
-local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
+local E, L, V, P, G = unpack(select(2, ...)) --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local S = E:GetModule('Skins')
 
 --Lua functions
@@ -30,18 +30,16 @@ local function UpdateNames(self)
 end
 
 local function LoadSkin()
-	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.Communities ~= true then return end
+	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.Communities then return end
 
 	local CommunitiesFrame = _G.CommunitiesFrame
 	CommunitiesFrame:StripTextures()
 	_G.CommunitiesFrameInset.Bg:Hide()
 	CommunitiesFrame.CommunitiesList.InsetFrame:StripTextures()
 
-	S:HandlePortraitFrame(CommunitiesFrame, true)
-	CommunitiesFrame.backdrop:SetPoint("TOPLEFT", -5, 0)
-	CommunitiesFrame.backdrop:SetPoint("BOTTOMRIGHT", -1, 0)
+	S:HandleFrame(CommunitiesFrame, true, nil, -5, 0, -1, 0)
 
-	_G.CommunitiesFrameCloseButton:Point('TOPRIGHT', 2, 3)
+	_G.CommunitiesFrameCloseButton:Point('TOPRIGHT', 0, 2)
 
 	local CommunitiesFrameCommunitiesList = _G.CommunitiesFrameCommunitiesList
 	CommunitiesFrameCommunitiesList.FilligreeOverlay:Hide()
@@ -54,27 +52,27 @@ local function LoadSkin()
 		S:HandleTab(_G['CommunitiesFrameTab'..i])
 	end
 
-	hooksecurefunc(_G.CommunitiesListEntryMixin, "SetClubInfo", function(self, clubInfo, isInvitation, isTicket)
+	hooksecurefunc(_G.CommunitiesListEntryMixin, 'SetClubInfo', function(self, clubInfo, isInvitation, isTicket)
 		if clubInfo then
 			self.Background:Hide()
 			self.CircleMask:Hide()
 
 			self.Icon:ClearAllPoints()
-			self.Icon:SetPoint("TOPLEFT", 8, -17)
+			self.Icon:Point('TOPLEFT', 8, -17)
 			S:HandleIcon(self.Icon)
 			self.IconRing:Hide()
 
 			if not self.IconBorder then
-				self.IconBorder = self:CreateTexture(nil, "BORDER")
+				self.IconBorder = self:CreateTexture(nil, 'BORDER')
 				self.IconBorder:SetOutside(self.Icon)
 				self.IconBorder:Hide()
 			end
 
 			if not self.bg then
-				self.bg = CreateFrame("Frame", nil, self)
-				self.bg:CreateBackdrop("Transparent")
-				self.bg:SetPoint("TOPLEFT", 7, -16)
-				self.bg:SetPoint("BOTTOMRIGHT", -10, 12)
+				self.bg = CreateFrame('Frame', nil, self)
+				self.bg:CreateBackdrop('Transparent')
+				self.bg:Point('TOPLEFT', 7, -16)
+				self.bg:Point('BOTTOMRIGHT', -10, 12)
 			end
 
 			local isGuild = clubInfo.clubType == Enum.ClubType.Guild
@@ -104,19 +102,19 @@ local function LoadSkin()
 	end)
 
 	-- Add Community Button
-	hooksecurefunc(_G.CommunitiesListEntryMixin, "SetAddCommunity", function(self)
+	hooksecurefunc(_G.CommunitiesListEntryMixin, 'SetAddCommunity', function(self)
 		self.Background:Hide()
 		self.CircleMask:Hide()
 
 		S:HandleIcon(self.Icon)
-		self.Icon:Point("TOPLEFT", 8, -20)
+		self.Icon:Point('TOPLEFT', 8, -20)
 		self.IconRing:Hide()
 
 		if not self.bg then
-			self.bg = CreateFrame("Frame", nil, self)
-			self.bg:CreateBackdrop("Transparent")
-			self.bg:SetPoint("TOPLEFT", 7, -16)
-			self.bg:SetPoint("BOTTOMRIGHT", -10, 12)
+			self.bg = CreateFrame('Frame', nil, self)
+			self.bg:CreateBackdrop('Transparent')
+			self.bg:Point('TOPLEFT', 7, -16)
+			self.bg:Point('BOTTOMRIGHT', -10, 12)
 		end
 
 		local highlight = self:GetHighlightTexture()
@@ -133,7 +131,7 @@ local function LoadSkin()
 
 	S:HandleButton(CommunitiesFrame.InviteButton)
 	CommunitiesFrame.AddToChatButton:ClearAllPoints()
-	CommunitiesFrame.AddToChatButton:Point("BOTTOM", CommunitiesFrame.ChatEditBox, "BOTTOMRIGHT", -5, -30) -- needs probably adjustment
+	CommunitiesFrame.AddToChatButton:Point('BOTTOM', CommunitiesFrame.ChatEditBox, 'BOTTOMRIGHT', -5, -30) -- needs probably adjustment
 	S:HandleButton(CommunitiesFrame.AddToChatButton)
 
 	S:HandleScrollBar(CommunitiesFrame.MemberList.ListScrollFrame.scrollBar)
@@ -143,7 +141,7 @@ local function LoadSkin()
 	S:HandleDropDownBox(CommunitiesFrame.StreamDropDownMenu)
 	S:HandleDropDownBox(CommunitiesFrame.CommunitiesListDropDownMenu, nil, true) -- use an override here to adjust the damn text position >.>
 
-	hooksecurefunc(_G.CommunitiesNotificationSettingsStreamEntryMixin, "SetFilter", function(self)
+	hooksecurefunc(_G.CommunitiesNotificationSettingsStreamEntryMixin, 'SetFilter', function(self)
 		self.ShowNotificationsButton:SetSize(20, 20)
 		self.HideNotificationsButton:SetSize(20, 20)
 		S:HandleCheckBox(self.ShowNotificationsButton)
@@ -155,14 +153,14 @@ local function LoadSkin()
 	CommunitiesFrame.MemberList.InsetFrame:Hide()
 
 	CommunitiesFrame.Chat:StripTextures()
-	CommunitiesFrame.Chat.InsetFrame:SetTemplate("Transparent")
+	CommunitiesFrame.Chat.InsetFrame:SetTemplate('Transparent')
 
 	S:HandleEditBox(CommunitiesFrame.ChatEditBox)
 	CommunitiesFrame.ChatEditBox:Size(120, 20)
 
 	-- Member Details
 	CommunitiesFrame.InvitationFrame:StripTextures()
-	CommunitiesFrame.InvitationFrame:CreateBackdrop("Transparent")
+	CommunitiesFrame.InvitationFrame:CreateBackdrop('Transparent')
 
 	-- [[ ROSTER TAB ]]
 	local MemberList = CommunitiesFrame.MemberList
@@ -178,12 +176,12 @@ local function LoadSkin()
 	S:HandleCheckBox(CommunitiesFrame.MemberList.ShowOfflineButton)
 	CommunitiesFrame.MemberList.ShowOfflineButton:Size(25, 25)
 
-	hooksecurefunc(CommunitiesFrame.MemberList, "RefreshListDisplay", function(self)
+	hooksecurefunc(CommunitiesFrame.MemberList, 'RefreshListDisplay', function(self)
 		for i = 1, self.ColumnDisplay:GetNumChildren() do
 			local child = select(i, self.ColumnDisplay:GetChildren())
 			if not child.IsSkinned then
 				child:StripTextures()
-				child:SetTemplate("Transparent")
+				child:SetTemplate('Transparent')
 
 				child.IsSkinned = true
 			end
@@ -191,13 +189,13 @@ local function LoadSkin()
 
 		for _, button in ipairs(self.ListScrollFrame.buttons or {}) do
 			if button and not button.hooked then
-				hooksecurefunc(button, "RefreshExpandedColumns", UpdateNames)
+				hooksecurefunc(button, 'RefreshExpandedColumns', UpdateNames)
 				if button.ProfessionHeader then
 					local header = button.ProfessionHeader
 					for i = 1, 3 do
 						select(i, header:GetRegions()):Hide()
 					end
-					header:SetTemplate("Transparent")
+					header:SetTemplate('Transparent')
 				end
 
 				button.hooked = true
@@ -211,7 +209,7 @@ local function LoadSkin()
 	-- Notification Settings Dialog
 	local NotificationSettings = _G.CommunitiesFrame.NotificationSettingsDialog
 	NotificationSettings:StripTextures()
-	NotificationSettings:CreateBackdrop("Transparent")
+	NotificationSettings:CreateBackdrop('Transparent')
 	NotificationSettings.backdrop:SetAllPoints()
 
 	S:HandleDropDownBox(CommunitiesFrame.NotificationSettingsDialog.CommunitiesListDropDownMenu)
@@ -225,7 +223,7 @@ local function LoadSkin()
 	-- Create Channel Dialog
 	local EditStreamDialog = CommunitiesFrame.EditStreamDialog
 	EditStreamDialog:StripTextures()
-	EditStreamDialog:CreateBackdrop("Transparent")
+	EditStreamDialog:CreateBackdrop('Transparent')
 	EditStreamDialog.backdrop:SetAllPoints()
 
 	S:HandleEditBox(EditStreamDialog.NameEdit)
@@ -239,7 +237,7 @@ local function LoadSkin()
 	-- Communities Settings
 	local Settings = _G.CommunitiesSettingsDialog
 	Settings:StripTextures()
-	Settings:CreateBackdrop("Transparent")
+	Settings:CreateBackdrop('Transparent')
 	Settings.backdrop:SetAllPoints()
 
 	Settings.IconPreview:SetTexCoord(unpack(E.TexCoords))
@@ -258,7 +256,7 @@ local function LoadSkin()
 	-- Avatar Picker
 	local Avatar = _G.CommunitiesAvatarPickerDialog
 	Avatar:StripTextures()
-	Avatar:CreateBackdrop("Transparent")
+	Avatar:CreateBackdrop('Transparent')
 	Avatar.backdrop:SetAllPoints()
 
 	Avatar.ScrollFrame:StripTextures()
@@ -277,7 +275,7 @@ local function LoadSkin()
 	-- TO DO: Fix the Tabs
 	TicketManager.InviteManager.ListScrollFrame:StripTextures()
 
-	TicketManager:CreateBackdrop("Transparent")
+	TicketManager:CreateBackdrop('Transparent')
 	TicketManager.backdrop:SetAllPoints()
 
 	S:HandleButton(TicketManager.LinkToChat)
@@ -292,4 +290,4 @@ local function LoadSkin()
 	S:HandleButton(TicketManager.MaximizeButton)
 end
 
-S:AddCallbackForAddon("Blizzard_Communities", "Communities", LoadSkin)
+S:AddCallbackForAddon('Blizzard_Communities', 'Skin_Blizzard_Communities', LoadSkin)

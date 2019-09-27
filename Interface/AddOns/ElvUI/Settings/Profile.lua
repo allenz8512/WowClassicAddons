@@ -1745,6 +1745,7 @@ P.tooltip = {
 	playerTitles = true,
 	guildRanks = true,
 	itemCount = 'BAGS_ONLY',
+	itemQualityBorderColor = true,
 	spellID = true,
 	showMount = true,
 	npcID = true,

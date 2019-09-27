@@ -1,15 +1,15 @@
-local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
+local E, L, V, P, G = unpack(select(2, ...)) --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local S = E:GetModule('Skins')
 local TT = E:GetModule('Tooltip')
 
 --Cache global variables
 --Lua functions
 local _G = _G
-local pairs = pairs
+local ipairs = ipairs
 --WoW API / Variables
 
-function S:Tooltip_LoadSkin()
-	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.tooltip ~= true then return end
+local function LoadSkin()
+	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.tooltip then return end
 
 	S:HandleCloseButton(_G.ItemRefCloseButton)
 
@@ -35,7 +35,7 @@ function S:Tooltip_LoadSkin()
 		GameTooltip,
 	}
 
-	for _, tt in pairs(tooltips) do
+	for _, tt in ipairs(tooltips) do
 		TT:SecureHookScript(tt, 'OnShow', 'SetStyle')
 	end
 
@@ -56,4 +56,4 @@ function S:Tooltip_LoadSkin()
 	TT:SecureHookScript(GameTooltip, 'OnUpdate', 'CheckBackdropColor')
 end
 
-S:AddCallback('SkinTooltip', S.Tooltip_LoadSkin)
+S:AddCallback('Skin_Tooltip', LoadSkin)

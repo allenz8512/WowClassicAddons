@@ -384,16 +384,10 @@ function NP:PLAYER_ENTERING_WORLD()
 	if NP.db.units.PLAYER.enable and NP.db.units.PLAYER.useStaticPosition then
 		NP:UpdatePlate(_G.ElvNP_Player)
 	end
-
-	if instanceType == 'party' or instanceType == 'raid' then
-		NamePlateDriverFrame:UpdateNamePlateOptions()
-	end
 end
 
 function NP:ConfigureAll()
 	--NP:StyleFilterConfigure() -- keep this at the top
-
-	--local Scale = E.global.general.UIScale
 
 	NP:PLAYER_REGEN_ENABLED()
 
@@ -594,18 +588,6 @@ function NP:Initialize()
 		BlizzPlateManaBar:Hide()
 		BlizzPlateManaBar:UnregisterAllEvents()
 	end
-
-	hooksecurefunc(_G.NamePlateDriverFrame, "UpdateNamePlateOptions", function()
-		if not InCombatLockdown() then
-			local Scale = E.global.general.UIScale
-			C_NamePlate_SetNamePlateSelfSize(NP.db.plateSize.personalWidth * Scale, NP.db.plateSize.personalHeight * Scale)
-			C_NamePlate_SetNamePlateEnemySize(NP.db.plateSize.enemyWidth * Scale, NP.db.plateSize.enemyHeight * Scale)
-
-			if NP.InstanceType ~= 'party' and NP.InstanceType ~= 'raid' then
-				C_NamePlate_SetNamePlateFriendlySize(NP.db.plateSize.friendlyWidth * Scale, NP.db.plateSize.friendlyHeight * Scale)
-			end
-		end
-	end)
 
 	oUF:Spawn("player", "ElvNP_Player", "")
 

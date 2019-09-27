@@ -317,17 +317,21 @@ local function MinimapPostDrag()
 	_G.MinimapBackdrop:SetAllPoints(_G.Minimap)
 end
 
+function M:GetMinimapShape()
+	--Support for other mods
+	if E.private.general.minimap.enable then
+		function GetMinimapShape()
+			return 'SQUARE'
+		end
+	end
+end
+
 function M:Initialize()
 	self.Initialized = true
 
 	if not E.private.general.minimap.enable then
 		Minimap:SetMaskTexture([[Interface\CharacterFrame\TempPortraitAlphaMask]])
 		return
-	end
-
-	--Support for other mods
-	function GetMinimapShape()
-		return 'SQUARE'
 	end
 
 	menuFrame:SetTemplate("Transparent", true)

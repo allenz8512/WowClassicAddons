@@ -1,13 +1,13 @@
-local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
+local E, L, V, P, G = unpack(select(2, ...)) --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local S = E:GetModule('Skins')
 
 --Cache global variables
 --Lua functions
 local _G = _G
 local unpack = unpack
-local pairs = pairs
+local ipairs = ipairs
 --WoW API / Variables
-local GetInventoryItemLink = GetInventoryItemLink
+local GetInventoryItemID = GetInventoryItemID
 local GetItemInfo = GetItemInfo
 local GetItemQualityColor = GetItemQualityColor
 local hooksecurefunc = hooksecurefunc
@@ -16,20 +16,17 @@ local function LoadSkin()
 	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.inspect then return end
 
 	local InspectFrame = _G.InspectFrame
-	S:HandlePortraitFrame(InspectFrame, true)
-	InspectFrame.backdrop:Point('TOPLEFT', 11, -12)
-	InspectFrame.backdrop:Point('BOTTOMRIGHT', -32, 76)
+	S:HandleFrame(InspectFrame, true, nil, 11, -12, -32, 76)
 
-	S:HandleCloseButton(_G.InspectFrameCloseButton, InspectFrame.backdrop)
-	_G.InspectFrameCloseButton:Point('TOPRIGHT', -28, -9)
+	S:HandleCloseButton(_G.InspectFrameCloseButton, InspectFrame.backdrop, 3, 3)
 
-	for i = 1, #INSPECTFRAME_SUBFRAMES do
+	for i = 1, #_G.INSPECTFRAME_SUBFRAMES do
 		S:HandleTab(_G['InspectFrameTab'..i])
 	end
 
 	_G.InspectPaperDollFrame:StripTextures()
 
-	for _, slot in pairs({ _G.InspectPaperDollItemsFrame:GetChildren() }) do
+	for _, slot in ipairs({ _G.InspectPaperDollItemsFrame:GetChildren() }) do
 		local icon = _G[slot:GetName()..'IconTexture']
 		local cooldown = _G[slot:GetName()..'Cooldown']
 
@@ -47,17 +44,19 @@ local function LoadSkin()
 		end
 	end
 
-	hooksecurefunc('InspectPaperDollItemSlotButton_Update', function(button)
+	local function styleButton(button)
 		if button.hasItem then
 			local itemID = GetInventoryItemID(InspectFrame.unit, button:GetID())
 			if itemID then
 				local quality = select(3, GetItemInfo(itemID))
+
 				if not quality then
 					E:Delay(0.1, function()
 						if InspectFrame.unit then
-							InspectPaperDollItemSlotButton_Update(button)
+							styleButton(button)
 						end
 					end)
+
 					return
 				elseif quality and quality > 1 then
 					button.backdrop:SetBackdropBorderColor(GetItemQualityColor(quality))
@@ -65,8 +64,11 @@ local function LoadSkin()
 				end
 			end
 		end
+
 		button.backdrop:SetBackdropBorderColor(unpack(E.media.bordercolor))
-	end)
+	end
+
+	hooksecurefunc('InspectPaperDollItemSlotButton_Update', styleButton)
 
 	S:HandleRotateButton(_G.InspectModelFrameRotateLeftButton)
 	_G.InspectModelFrameRotateLeftButton:Point('TOPLEFT', 3, -3)
@@ -82,4 +84,4 @@ local function LoadSkin()
 	E:RegisterStatusBar(_G.InspectHonorFrameProgressBar)
 end
 
-S:AddCallbackForAddon('Blizzard_InspectUI', 'Inspect', LoadSkin)
+S:AddCallbackForAddon('Blizzard_InspectUI', 'Skin_Blizzard_InspectUI', LoadSkin)

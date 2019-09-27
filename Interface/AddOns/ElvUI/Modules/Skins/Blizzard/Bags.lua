@@ -1,5 +1,5 @@
-local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
-local S = E:GetModule('Skins');
+local E, L, V, P, G = unpack(select(2, ...)) --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
+local S = E:GetModule('Skins')
 
 --Cache global variables
 --Lua functions
@@ -32,11 +32,11 @@ function S:ContainerFrame_Update(self)
 				itemButton:SetBackdropBorderColor(GetItemQualityColor(quality))
 				itemButton.ignoreBorderColors = true
 			else
-				itemButton:SetBackdropBorderColor(unpack(E['media'].bordercolor))
+				itemButton:SetBackdropBorderColor(unpack(E.media.bordercolor))
 				itemButton.ignoreBorderColors = true
 			end
 		else
-			itemButton:SetBackdropBorderColor(unpack(E['media'].bordercolor))
+			itemButton:SetBackdropBorderColor(unpack(E.media.bordercolor))
 			itemButton.ignoreBorderColors = true
 		end
 	end
@@ -51,29 +51,26 @@ function S:BankFrameItemButton_Update(self)
 				self:SetBackdropBorderColor(GetItemQualityColor(quality))
 				self.ignoreBorderColors = true
 			else
-				self:SetBackdropBorderColor(unpack(E['media'].bordercolor))
+				self:SetBackdropBorderColor(unpack(E.media.bordercolor))
 				self.ignoreBorderColors = true
 			end
 		else
-			self:SetBackdropBorderColor(unpack(E['media'].bordercolor))
+			self:SetBackdropBorderColor(unpack(E.media.bordercolor))
 			self.ignoreBorderColors = true
 		end
 	end
 end
 
 local function LoadSkin()
-	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.bags ~= true or E.private.bags.enable then return end
+	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.bags or E.private.bags.enable then return end
 
 	-- ContainerFrame
 	local containerFrame, containerFrameClose
-	for i = 1, NUM_CONTAINER_FRAMES, 1 do
+	for i = 1, _G.NUM_CONTAINER_FRAMES, 1 do
 		containerFrame = _G['ContainerFrame'..i]
 		containerFrameClose = _G['ContainerFrame'..i..'CloseButton']
 
-		containerFrame:StripTextures(true)
-		containerFrame:CreateBackdrop('Transparent')
-		containerFrame.backdrop:Point('TOPLEFT', 9, -4)
-		containerFrame.backdrop:Point('BOTTOMRIGHT', -4, 2)
+		S:HandleFrame(containerFrame, true, nil, 9, -4, -4, 2)
 
 		S:HandleCloseButton(containerFrameClose)
 
@@ -103,9 +100,7 @@ local function LoadSkin()
 
 	-- BankFrame
 	local BankFrame = _G.BankFrame
-	BankFrame:CreateBackdrop('Transparent')
-	BankFrame.backdrop:Point('TOPLEFT', 10, -11)
-	BankFrame.backdrop:Point('BOTTOMRIGHT', -26, 93)
+	S:HandleFrame(BankFrame, true, nil, 10, -11, -26, 93)
 
 	BankFrame:StripTextures(true)
 
@@ -144,7 +139,7 @@ local function LoadSkin()
 		buttonIcon:SetTexCoord(unpack(E.TexCoords))
 
 		-- _G['BankFrameItem'..i..'HighlightFrameTexture']:SetInside()
-		-- _G['BankFrameItem'..i..'HighlightFrameTexture']:SetTexture(unpack(E['media'].rgbvaluecolor), 0.3)
+		-- _G['BankFrameItem'..i..'HighlightFrameTexture']:SetTexture(unpack(E.media.rgbvaluecolor), 0.3)
 	end
 
 	BankFrame.bagBackdrop = CreateFrame('Frame', 'BankFrameBagBackdrop', BankFrame)
@@ -158,4 +153,4 @@ local function LoadSkin()
 	S:SecureHook('BankFrameItemButton_Update')
 end
 
-S:AddCallback('SkinBags', LoadSkin)
+S:AddCallback('Skin_Bags', LoadSkin)
