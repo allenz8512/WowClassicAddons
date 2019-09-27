@@ -9,20 +9,28 @@ function RecipeRadar_AvailabilityTooltip_AddLine(msg, color)
       RecipeRadar_Print("ASSERT FAILED: tooltip has too many lines.")
       return
    end
-
-   -- handle null messages
-   if (not msg or msg == "") then
-      msg = " "
-   end
+   
+   local line_num = RecipeRadarAvailabilityTooltip.Lines + 1
+   local line = _G["RecipeRadarAvailabilityTooltipText" .. line_num]
 
    -- handle null colors
    if (color) then
-      RecipeRadarAvailabilityTooltip:AddLine(msg, color.r, color.g, color.b)
+      line:SetTextColor(color.r, color.g, color.b)
    else
-      RecipeRadarAvailabilityTooltip:AddLine(msg, 1, 1, 1)
+      line:SetTextColor(1, 1, 1)
    end
+   
+   -- handle null messages
+   if (not msg or msg == "") then
+      line:SetText(" ")
+   else
+      line:SetText(msg)
+   end
+   
+   line:Show()
 
-   RecipeRadarAvailabilityTooltip:Show()
+   RecipeRadarAvailabilityTooltip.Lines = line_num
+
 end
 
 function RecipeRadar_AvailabilityTooltip_Show(frame)
@@ -33,7 +41,7 @@ function RecipeRadar_AvailabilityTooltip_Show(frame)
    end
 
    -- calculate the width of the tooltip
-   local height = 20
+   local height = 20 
    local width = 0
    for i = 1, RecipeRadarAvailabilityTooltip.Lines do
       local line = _G["RecipeRadarAvailabilityTooltipText" .. i]
@@ -55,7 +63,7 @@ function RecipeRadar_AvailabilityTooltip_Show(frame)
    if (RecipeRadar_Options.ActiveTab == 2) then
       offset = RECIPERADAR_VENDOR_OFFSET
    end
-
+   
    if (frame_left < frame_right) then
       if (RecipeRadarListScrollFrame:IsVisible()) then
          RecipeRadarAvailabilityTooltip:SetPoint(

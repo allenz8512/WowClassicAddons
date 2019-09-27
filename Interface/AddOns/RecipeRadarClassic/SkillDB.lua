@@ -93,8 +93,15 @@ function RecipeRadar_SkillDB_Refresh(prof_type)
    if (not prof_name) then  -- Beast Training, for instance, will cause this
       return
    end
-   
+  
    if (not profs[prof_name]) then profs[prof_name] = { } end
+
+   -- Deal with a bug in the Blizzard API where the count is zero
+   -- until at least one tradeskill has been opened.
+   -- This was causing the skill database to get constantly reset
+   local dummy = RecipeRadar_SkillDB_GetRecipeCount(prof_type)
+   if (dummy == 0) then return end
+
    profs[prof_name].Rank = prof_rank
    profs[prof_name].Spell = { }
 
@@ -104,6 +111,7 @@ function RecipeRadar_SkillDB_Refresh(prof_type)
       local recipe, hdr = RecipeRadar_SkillDB_GetRecipeInfo(prof_type, i)
       if (recipe and hdr ~= "header") then
         local itemID = RecipeRadar_SkillDB_GetItemLink(prof_type, i)
+        itemID = tonumber(itemID)
 		if(itemID) then
 		  local recipeTable = RecipeRadar_RecipeData[prof_name].Recipes
 		  for _, recipe in pairs(RecipeRadar_RecipeData[prof_name].Recipes) do
@@ -400,7 +408,6 @@ function RecipeRadar_SkillDB_ParseSpellbookFrame()
          if (not profs[spec_prof]) then profs[spec_prof] = { } end
          profs[spec_prof].Specialty = name
       end
-      
    end
 
    HideUIPanel(TradeSkillFrame)

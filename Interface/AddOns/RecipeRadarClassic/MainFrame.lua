@@ -36,7 +36,7 @@ end
 function RecipeRadar_Frame_Show()
 
    ShowUIPanel(RecipeRadarFrame)
-   RecipeRadar_SkillDB_ParseSpellbookFrame()
+   --RecipeRadar_SkillDB_ParseSpellbookFrame()
    RecipeRadar_SkillDB_ParseSkillFrame()
    RecipeRadar_SkillDB_ParseReputationFrame()
    RecipeRadar_FrameUpdate()

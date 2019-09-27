@@ -2,7 +2,7 @@
 -- RadarTab.lua: handles clicking and drawing for the Radar tab
 -- $Id: RadarTab.lua 1049 2008-10-29 14:57:03Z jnmiller $
 local L = LibStub("AceLocale-3.0"):GetLocale("RecipeRadarClassic")
-local HBD = LibStub("HereBeDragons-2.0")
+local LT = LibStub("LibTouristClassic-1.0")
 
 function RecipeRadar_RadarTab_Init()
 
@@ -51,6 +51,7 @@ function RecipeRadar_RadarTab_Update()
 
    local title = L["Recipe Radar Classic"]
    if (RecipeRadar.db.profile.CurrentRegion) then
+      local HBD = LT:GetHBD(); 
       local regionName = HBD:GetLocalizedMap(RecipeRadar.db.profile.CurrentRegion)
       if (not regionName) then
         regionName = C_Map.GetBestMapForUnit("player")

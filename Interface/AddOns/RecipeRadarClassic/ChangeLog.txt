@@ -1,4 +1,20 @@
 Recipe Radar Classic ChangeLog
+v 1.0.0.20
+- Fix HereBeDragons error by fixing LibTourist library loading
+v 1.0.0.18
+- Fix function call to LibTourist
+v 1.0.0.17
+- Fix library packaging locations
+- Fix koKR to not cause an error
+v 1.0.0.12
+- Update pkgmeta so we pull down the libraries at build time
+v 1.0.0.9
+- Fix recipe database getting cleared
+- Fix profession frame popups
+- Revert tooltip to prior version
+v 1.0.0.8
+- Fix koKR locale again
+- Fix recipe database not updating
 v 1.0.0.7
 - Fix multiple locales to load correctly
 - Fix availbility tooltip frame

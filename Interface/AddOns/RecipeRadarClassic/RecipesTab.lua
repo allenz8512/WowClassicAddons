@@ -2,7 +2,7 @@
 -- RecipesTab.lua: handles clicking and drawing for the Recipes tab
 -- $Id: RecipesTab.lua 1049 2008-10-29 14:57:03Z jnmiller $
 local L = LibStub("AceLocale-3.0"):GetLocale("RecipeRadarClassic")
-local HBD = LibStub("HereBeDragons-2.0")
+local LT = LibStub("LibTouristClassic-1.0")
 
 ------------------------------------------------------------------------
 -- Main window refresh code
@@ -196,6 +196,7 @@ function RecipeRadar_RecipesTab_AddRecipe(key, recipe)
             _G["RecipeRadarVendor" .. index .. "Highlight"]:SetTexture("")
             
             -- basic drawing code
+            local HBD = LT:GetHBD();
             button:SetText(HBD:GetLocalizedMap(location.Region))
             VendorNameDummyText:SetText(location.Region)
             button:SetNormalFontObject(RecipeRadarGray)

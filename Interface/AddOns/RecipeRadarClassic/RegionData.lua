@@ -1682,16 +1682,17 @@ RecipeRadar_RegionData = {
             { ID = 5772, Type = L["Tailoring"], Skill = 115, Cost = 500, Spell = 6688, Item = 5763 },
          },
       },
-      {
-         Name = L["Smudge Thunderwood"],
-         Team = "Neutral",
-         Coordinates = {
-            { x = 0.842, y = 0.185 },
-         },
-         Recipes = {
-            { ID = 18160, Type = L["Cooking"], Skill = 60, Cost = 200, Notes = L["Rogue Only"], Spell = 9513, Item = 7676 },
-         },
-      },
+--      Thistle Tea not in game
+--      {
+--         Name = L["Smudge Thunderwood"],
+--         Team = "Neutral",
+--         Coordinates = {
+--            { x = 0.842, y = 0.185 },
+--         },
+--         Recipes = {
+--            { ID = 18160, Type = L["Cooking"], Skill = 60, Cost = 200, Notes = L["Rogue Only"], Spell = 9513, Item = 7676 },
+--         },
+--      },
    },
 },
 

@@ -1,5 +1,5 @@
 ## Interface: 11302
-## Version: 1.0.0.7
+## Version: 1.0.0.20
 ## Title: Recipe Radar Classic
 ## Author: Kernighan
 ## X-Contributor: speedwaystar, SecureAgent, Kernighan, Yunohu, Jay Miller

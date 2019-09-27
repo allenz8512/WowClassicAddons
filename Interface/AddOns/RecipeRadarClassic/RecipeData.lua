@@ -4036,18 +4036,19 @@ RecipeRadar_RecipeData = {
             { Region = 1458, Vendor = L["Ronald Burch"], Team = "Horde" },
          },
       },
-      {
-         ID = 18160,
-         Spell = 9513,
-         Item = 7676,
-         Type = L["Cooking"],
-         Skill = 60,
-         Cost = 200,
-         Notes = L["Rogue Only"],
-         Locations = {
-            { Region = 1424, Vendor = L["Smudge Thunderwood"], Team = "Neutral" },
-         },
-      },
+-- Thistle Tea not in game
+--      {
+--         ID = 18160,
+--         Spell = 9513,
+--         Item = 7676,
+--         Type = L["Cooking"],
+--         Skill = 60,
+--         Cost = 200,
+--         Notes = L["Rogue Only"],
+--         Locations = {
+--            { Region = 1424, Vendor = L["Smudge Thunderwood"], Team = "Neutral" },
+--         },
+--      },
    },
 },
 

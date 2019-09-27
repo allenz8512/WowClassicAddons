@@ -1,52 +1,22 @@
-lightweight tag 446ab921bfae321589fd8b9e9e27e6a665fd2578 1.0.0.7-beta
+lightweight tag f0cc882d28893ebb27eff23768244b14de4d5923 1.0.0.20-beta
 Author:	Yunohu <kernighan@gmail.com>
-Date:	Tue Sep 17 00:07:30 2019 +0000
+Date:	Thu Sep 26 21:19:54 2019 +0000
 
-commit 446ab921bfae321589fd8b9e9e27e6a665fd2578
+commit f0cc882d28893ebb27eff23768244b14de4d5923
 Author: Yunohu <kernighan@gmail.com>
-Date:   Tue Sep 17 00:07:30 2019 +0000
+Date:   Thu Sep 26 21:19:54 2019 +0000
 
-    Bump version to 1.0.0.7
+    Version 1.0.0.20
 
-commit a577c741009b7e23dba4418123fba3a56e01b0da
+commit 0070746c4674db1c62f16df976909cd931afb80a
 Author: Yunohu <kernighan@gmail.com>
-Date:   Tue Sep 17 00:06:21 2019 +0000
+Date:   Thu Sep 26 21:19:44 2019 +0000
 
-    re #16 - Fix more issues with the tooltip
+    Fix loading LibTourist
 
-commit e3e95484df6df66de39b762756277f4441d7d5c2
+commit d76519a466c252f49b822fc5f2c7a37d1e137427
 Author: Yunohu <kernighan@gmail.com>
-Date:   Mon Sep 16 22:57:48 2019 +0000
+Date:   Thu Sep 26 20:36:13 2019 +0000
 
-    Fix loop function
-
-commit c41fac24efc0dfac2fa94b4648d4ed4242a22a7e
-Author: Yunohu <kernighan@gmail.com>
-Date:   Mon Sep 16 21:34:37 2019 +0000
-
-    Fix #16 - Change gametool tip bits
-
-commit 3830462f65255c25e1b83bacc402de865c29371b
-Author: Yunohu <kernighan@gmail.com>
-Date:   Mon Sep 16 21:31:47 2019 +0000
-
-    Fix deDE localization loading
-
-commit 5719f6e59adb0d6b87f0da90d1ffa65beb413408
-Author: Yunohu <kernighan@gmail.com>
-Date:   Mon Sep 16 14:09:55 2019 +0000
-
-    Further coordinate precision for Mythrin'dir
-
-commit a7e8e85e876954babd603be51cdb2da4461237a8
-Author: Yunohu <kernighan@gmail.com>
-Date:   Mon Sep 16 14:01:03 2019 +0000
-
-    Minor Wizard Oil, Minor Mana Oil, and Lesser Wizard Oil are not yet in
-
-commit ab2b9acf2c90b48c72c26d36452a694a93a92253
-Author: Yunohu <kernighan@gmail.com>
-Date:   Mon Sep 16 13:21:54 2019 +0000
-
-    Fix #20 - Load zhCN and koKR
+    Drop mapIDs file
 

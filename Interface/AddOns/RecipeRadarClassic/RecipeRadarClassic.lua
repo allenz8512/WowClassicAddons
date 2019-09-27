@@ -2,6 +2,7 @@
 -- RecipeRadar.lua: main event code and general utility functions
 -- $Id: RecipeRadar.lua 1060 2008-11-16 04:27:27Z jnmiller $
 local L = LibStub("AceLocale-3.0"):GetLocale("RecipeRadarClassic")
+local LT = LibStub("LibTouristClassic-1.0")
 
 RecipeRadar = LibStub("AceAddon-3.0"):NewAddon("RecipeRadar", "AceHook-3.0", "AceEvent-3.0")
 local RecipeRadar     = RecipeRadar
@@ -100,7 +101,7 @@ local options = {
    else
 
       -- otherwise just populate with all the continent's regions
-      regions = RecipeRadar_GetMapZones(RecipeRadar.db.profile.CurrentContinent)
+      regions = LT:GetMapZonesAlt(RecipeRadar.db.profile.CurrentContinent)
 
    end
 return regions
@@ -202,9 +203,7 @@ function RecipeRadar_OnEvent(self, event, ...)
                [RecipeRadar_GetOpposingFaction("player")] = true
       end
 
-   --elseif (event == "TRADE_SKILL_UPDATE" or event == "TRADE_SKILL_SHOW") then
    elseif (event == "TRADE_SKILL_UPDATE") then
-
 
       RecipeRadar_SkillDB_Refresh("trade")
 
@@ -362,8 +361,8 @@ function RecipeRadar_GetCurrentContinent()
       return region.Continent
    else
       -- region is not in our database, so we search for it
-      for cont_id, _ in pairs( { RecipeRadar_GetMapContinents() } ) do
-         for _, zone in pairs( { RecipeRadar_GetMapZones(cont_id) } ) do
+      for cont_id, _ in pairs( { LT:GetMapContinentsAlt() } ) do
+         for _, zone in pairs( { LT:GetMapZonesAlt(cont_id) } ) do
             if (RecipeRadar.db.profile.CurrentRegion == zone) then
                return cont_id
             end
@@ -812,37 +811,4 @@ function RecipeRadar_Print(msg, r, g, b)
          (g or RecipeRadar_Colors.MainFont.g),
          (b or RecipeRadar_Colors.MainFont.b))
 
-end
-
--- Borrowded from libTourist until the libTourist Classic mod is available
-function RecipeRadar_GetMapContinents()
-	local continents = C_Map.GetMapChildrenInfo(COSMIC_MAP_ID, Enum.UIMapType.Continent, true)
-	local retValue = {}
-	for i, continentInfo in ipairs(continents) do
-		--trace("Continent "..tostring(i)..": "..continentInfo.mapID..": ".. continentInfo.name)
-		retValue[continentInfo.mapID] = continentInfo.name
-	end
-	return retValue
-end
-
-function RecipeRadar_GetMapZones(continentID)
-	if mapZonesByContinentID[continentID] then
-		-- Get from cache
-		return mapZonesByContinentID[continentID]
-	else	
-		local mapZones = {}
-		local recursive = (continentID ~= 947)  -- 947 = Azeroth, parent for Nazjatar zone -> get Nazjatar only and not all zones of the Azeroth continents
-		local mapChildrenInfo = { C_Map.GetMapChildrenInfo(continentID, Enum.UIMapType.Zone, recursive) }
-		for key, zones in pairs(mapChildrenInfo) do  -- don't know what this extra table is for
-			for zoneIndex, zone in pairs(zones) do
-				-- Get the localized zone name
-				mapZones[zone.mapID] = zone.name
-			end
-		end
-
-		-- Add to cache
-		mapZonesByContinentID[continentID] = mapZones		
-		
-		return mapZones
-	end
 end
