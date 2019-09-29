@@ -9,6 +9,7 @@ do
 	for _, event in pairs{
 		'ADDON_LOADED',
 		'UNIT_SPELLCAST_SENT',
+		'UNIT_SPELLCAST_SUCCEEDED',
 		'COMBAT_LOG_EVENT_UNFILTERED',
 		'CHAT_MSG_COMBAT_HONOR_GAIN',
 		'PLAYER_REGEN_ENABLED',
@@ -23,8 +24,6 @@ local HEIGHT = 16
 local MAXBARS = 11
 
 local BARS, TIMERS, EFFECT = {}, {}, {}
-
-local FREEZING_TRAP_RANK
 
 function Print(msg)
 	DEFAULT_CHAT_FRAME:AddMessage('<ccc> ' .. msg)
@@ -224,15 +223,17 @@ function TargetDebuffs()
 	return debuffs
 end
 
-function UNIT_SPELLCAST_SENT(_, target_name, cast_guid, spell)
-	if spell == 1499 then
-		FREEZING_TRAP_RANK = 1
-	elseif spell == 14310 then
-		FREEZING_TRAP_RANK = 2
-	elseif spell == 14311 then
-		FREEZING_TRAP_RANK = 3
+function UNIT_SPELLCAST_SENT(_, _, _, spell)
+	if spell == 6770 or spell == 2070 or spell == 11297 or spell == 1499 or spell == 14310 or spell == 14311 then -- Sap, Freezing Trap
+		SetEffectDuration(spell)
 	end
+end
 
+function UNIT_SPELLCAST_SUCCEEDED(_, _, spell)
+	SetEffectDuration(spell)
+end
+
+function SetEffectDuration(spell)
 	local effect = SPELL_EFFECT[spell] or spell
 
 	if not DURATION[effect] then
@@ -244,9 +245,10 @@ function UNIT_SPELLCAST_SENT(_, target_name, cast_guid, spell)
 		duration = duration + COMBO[effect] * GetComboPoints('player', 'target')
 	end
 	if BONUS[effect] then
-		duration = duration + BONUS[effect]()
+		duration = duration + BONUS[effect](duration)
 	end
-	EFFECT[GetSpellInfo(effect)] = { id = effect, duration = duration }	
+
+	EFFECT[GetSpellInfo(effect)] = { id = effect, duration = duration }
 end
 
 function AuraGone(unit, effect_name)
@@ -401,28 +403,30 @@ function COMBAT_LOG_EVENT_UNFILTERED()
 
 	if event == 'UNIT_DIED' then
 		UnitDied(unit)
+		return
 	end
 
 	if source ~= UnitGUID'player' and source ~= UnitGUID'pet' then
 		return
 	end
+
 	if event == 'SPELL_AURA_APPLIED' or event == 'SPELL_AURA_REFRESH' then
 		local effect_info = EFFECT[effect_name]
 		if effect_info then
 			StartTimer(effect_info.id, unit, unit_name, effect_info.duration)
+			return
 		end
 		local effect, duration
-		if effect_name == GetSpellInfo(14309) and FREEZING_TRAP_RANK then -- Freezing Trap Effect
-			local _, _, _, _, rank = GetTalentInfo(3, 7)
-			effect = 14309
-			duration = (5 + 5 * FREEZING_TRAP_RANK) * (1 + rank * .15)
-		elseif effect_name == GetSpellInfo(6358) then -- Seduction
+		if effect_name == GetSpellInfo(6358) then -- Seduction
 			effect = 6358
 			local _, _, _, _, rank = GetTalentInfo(2, 7)
 			duration = 15 * (1 + rank * .1)
 		elseif effect_name == GetSpellInfo(11201) then -- Crippling Poison
 			effect = 11201
 			duration = 12
+		elseif effect_name == GetSpellInfo(13810) then -- Frost Trap Aura
+			effect = 13810
+			duration = 30
 		elseif effect_name == GetSpellInfo(15269) then -- Blackout
 			effect = 15269
 			duration = 3
@@ -432,8 +436,8 @@ function COMBAT_LOG_EVENT_UNFILTERED()
 		elseif effect_name == GetSpellInfo(18118) then -- Aftermath
 			effect = 18118
 			duration = 5
-		elseif effect_name == GetSpellInfo(12497) then -- Frostbite
-			effect = 12497
+		elseif effect_name == GetSpellInfo(12494) then -- Frostbite
+			effect = 12494
 			duration = 5
 		elseif effect_name == GetSpellInfo(19229) then -- Improved Wing Clip
 			effect = 19229

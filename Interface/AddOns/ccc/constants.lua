@@ -13,6 +13,9 @@ SPELL_EFFECT = { -- TODO multiple effects? effect different from action?
 	[20616] = 20614, -- Intercept (Rank 2)
 	[20617] = 20615, -- Intercept (Rank 3)
 	[22641] = 13327, -- Reckless Charge
+	[1499] = 3355, -- Freezing Trap (Rank 1)
+	[14310] = 14308, -- Freezing Trap (Rank 2)
+	[14311] = 14309, -- Freezing Trap (Rank 3)
 }
 
 DURATION = {
@@ -106,6 +109,9 @@ DURATION = {
 	[14326] = 15, -- Scare Beast (Rank 2)
 	[14327] = 20, -- Scare Beast (Rank 3)
 	[19503] = 4, -- Scatter Shot
+	[3355] = 10, -- Freezing Trap Effect (Rank 1)
+	[14308] = 15, -- Freezing Trap Effect (Rank 2)
+	[14309] = 20, -- Freezing Trap Effect (Rank 3)
 	[19386] = 12, -- Wyvern String (Rank 1)
 	[24132] = 12, -- Wyvern String (Rank 2)
 	[24133] = 12, -- Wyvern String (Rank 3)
@@ -219,6 +225,9 @@ do
 		bash = function()
 			return talentRank(2, 4) * .5
 		end,
+		freezing_trap_effect = function(duration)
+			return duration * talentRank(3, 7) * .15
+		end,
 	}
 
 	BONUS = {
@@ -267,7 +276,9 @@ DR_CLASS = {
 	[28271] = 2, -- Polymorph: Turtle
 	[28272] = 2, -- Polymorph: Pig
 
-	[14309] = 3, -- Freezing Trap Effect
+	[3355] = 3, -- Freezing Trap Effect (Rank 1)
+	[14308] = 3, -- Freezing Trap Effect (Rank 2)
+	[14309] = 3, -- Freezing Trap Effect (Rank 3)
 	[19386] = 3, -- Wyvern String (Rank 1)
 	[24132] = 3, -- Wyvern String (Rank 2)
 	[24133] = 3, -- Wyvern String (Rank 3)
@@ -296,7 +307,7 @@ DR_CLASS = {
 	[865] = 7, -- Frost Nova (Rank 2)
 	[6131] = 7, -- Frost Nova (Rank 3)
 	[10230] = 7, -- Frost Nova (Rank 4)
-	[12497] = 6, -- Frostbite (Rank 3)
+	[12494] = 7, -- Frostbite (Rank 1)
 
 	[1833] = 8, -- Cheap Shot
 
@@ -362,7 +373,9 @@ HEARTBEAT = {
 	[1513] = true, -- Scare Beast (Rank 1)
 	[14326] = true, -- Scare Beast (Rank 2)
 	[14327] = true, -- Scare Beast (Rank 3)
-	[14309] = true, -- Freezing Trap (Rank 3)
+	[3355] = true, -- Freezing Trap Effect (Rank 1)
+	[14308] = true, -- Freezing Trap Effect (Rank 2)
+	[14309] = true, -- Freezing Trap Effect (Rank 3)
 	[339] = true, -- Entangling Roots (Rank 1)
 	[1062] = true, -- Entangling Roots (Rank 2)
 	[5195] = true, -- Entangling Roots (Rank 3)
