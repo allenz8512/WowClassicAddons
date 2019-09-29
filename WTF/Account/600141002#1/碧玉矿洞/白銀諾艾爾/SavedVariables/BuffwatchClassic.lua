@@ -1,17 +1,17 @@
 
 BuffwatchPlayerConfig = {
 	["ShowPets"] = false,
-	["SortOrder"] = "Raid Order",
+	["Minimized"] = false,
 	["Scale"] = 1.5,
 	["ShowCastableBuffs"] = true,
-	["Version"] = "1.06",
+	["ShowAllForPlayer"] = false,
 	["AnchorPoint"] = "Auto",
 	["HideUnmonitored"] = false,
-	["ShowAllForPlayer"] = false,
+	["Version"] = "1.06",
 	["ShowOnlyMine"] = true,
 	["WindowLocked"] = false,
 	["Mode"] = "Party",
-	["Minimized"] = false,
+	["SortOrder"] = "Raid Order",
 }
 BuffwatchSaveBuffs = {
 	["一生挚爱倩"] = {

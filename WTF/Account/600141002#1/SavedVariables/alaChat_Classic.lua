@@ -51,14 +51,14 @@ alaChatConfig = {
 		1, -- [3]
 	},
 	["chatEmote"] = true,
-	["alpha"] = 1,
+	["welcometoGuildMsg"] = "欢迎",
 	["filterQuestAnn"] = false,
 	["editBoxTab"] = true,
 	["ColorNameByClass"] = true,
 	["hyperLinkHoverShow"] = false,
 	["itemLinkEnhanced"] = true,
 	["DBMCountDown"] = true,
-	["welcometoGuildMsg"] = "欢迎",
+	["alpha"] = 1,
 	["_version"] = 190910,
 	["bfWorld_Ignore"] = false,
 }

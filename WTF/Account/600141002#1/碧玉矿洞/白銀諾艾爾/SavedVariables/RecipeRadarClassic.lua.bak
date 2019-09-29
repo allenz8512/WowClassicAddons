@@ -11,8 +11,8 @@ RecipeRadar_Filters = {
 		["炼金术"] = true,
 		["锻造"] = true,
 		["附魔"] = true,
-		["Leatherworking"] = true,
 		["裁缝"] = true,
+		["Leatherworking"] = true,
 		["Enchanting"] = true,
 	},
 	["PersonAvails"] = {

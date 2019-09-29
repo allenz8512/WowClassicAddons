@@ -249,6 +249,29 @@ MarketWatcherHistory = {
 						3, -- [8]
 					}, -- [2]
 				}, -- [12]
+				{
+					1569738851, -- [1]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						1, -- [3]
+						"毁人肾宝", -- [4]
+						506660, -- [5]
+						304440, -- [6]
+						304440, -- [7]
+						4, -- [8]
+					}, -- [2]
+					{
+						12, -- [1]
+						2, -- [2]
+						334440, -- [3]
+						3, -- [4]
+						nil, -- [5]
+						304440, -- [6]
+						334440, -- [7]
+						3, -- [8]
+					}, -- [3]
+				}, -- [13]
 			},
 			[13047] = {
 				{
@@ -541,6 +564,19 @@ MarketWatcherHistory = {
 				{
 					1569725530, -- [1]
 				}, -- [20]
+				{
+					1569738838, -- [1]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						1, -- [3]
+						"弓滿弦", -- [4]
+						203176, -- [5]
+						56588, -- [6]
+						56588, -- [7]
+						2, -- [8]
+					}, -- [2]
+				}, -- [21]
 			},
 			[17713] = {
 				{
@@ -585,6 +621,9 @@ MarketWatcherHistory = {
 				{
 					1569725530, -- [1]
 				}, -- [14]
+				{
+					1569738833, -- [1]
+				}, -- [15]
 			},
 			[1203] = {
 				{
@@ -1230,6 +1269,9 @@ MarketWatcherHistory = {
 						3, -- [8]
 					}, -- [2]
 				}, -- [21]
+				{
+					1569738833, -- [1]
+				}, -- [22]
 			},
 			[13070] = {
 				{
@@ -1245,6 +1287,9 @@ MarketWatcherHistory = {
 						3, -- [8]
 					}, -- [2]
 				}, -- [1]
+				{
+					1569738833, -- [1]
+				}, -- [2]
 			},
 			[11302] = {
 				{
@@ -1370,6 +1415,9 @@ MarketWatcherHistory = {
 				{
 					1569725530, -- [1]
 				}, -- [11]
+				{
+					1569738833, -- [1]
+				}, -- [12]
 			},
 			[16724] = {
 				{
@@ -1822,6 +1870,59 @@ MarketWatcherHistory = {
 						4, -- [8]
 					}, -- [6]
 				}, -- [10]
+				{
+					1569738849, -- [1]
+					{
+						10, -- [1]
+						3, -- [2]
+						0, -- [3]
+						3, -- [4]
+						nil, -- [5]
+						83636, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [2]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						1, -- [3]
+						"莫轻歌丶", -- [4]
+						95054, -- [5]
+						83636, -- [6]
+						0, -- [7]
+						4, -- [8]
+					}, -- [3]
+					{
+						10, -- [1]
+						4, -- [2]
+						0, -- [3]
+						3, -- [4]
+						nil, -- [5]
+						103636, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [4]
+					{
+						10, -- [1]
+						5, -- [2]
+						0, -- [3]
+						3, -- [4]
+						nil, -- [5]
+						125000, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [5]
+					{
+						10, -- [1]
+						6, -- [2]
+						0, -- [3]
+						3, -- [4]
+						nil, -- [5]
+						130091, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [6]
+				}, -- [11]
 			},
 			[1168] = {
 				{
@@ -1889,6 +1990,29 @@ MarketWatcherHistory = {
 						2, -- [8]
 					}, -- [2]
 				}, -- [5]
+				{
+					1569738854, -- [1]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						1, -- [3]
+						"二秃子", -- [4]
+						3355166, -- [5]
+						3003444, -- [6]
+						0, -- [7]
+						4, -- [8]
+					}, -- [2]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						1, -- [3]
+						"安伊娜", -- [4]
+						3500000, -- [5]
+						3003444, -- [6]
+						0, -- [7]
+						4, -- [8]
+					}, -- [3]
+				}, -- [6]
 			},
 			[811] = {
 				{
@@ -2140,6 +2264,49 @@ MarketWatcherHistory = {
 						4, -- [8]
 					}, -- [2]
 				}, -- [13]
+				{
+					1569738853, -- [1]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						1, -- [3]
+						"落奔王", -- [4]
+						420076, -- [5]
+						420000, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [2]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						1, -- [3]
+						"妙空喵", -- [4]
+						455000, -- [5]
+						455000, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [3]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						1, -- [3]
+						"王泊棠", -- [4]
+						494813, -- [5]
+						470072, -- [6]
+						0, -- [7]
+						4, -- [8]
+					}, -- [4]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						1, -- [3]
+						"忠诚杰诺斯", -- [4]
+						507500, -- [5]
+						482125, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [5]
+				}, -- [14]
 			},
 		},
 	},
@@ -2160,9 +2327,9 @@ MarketWatcherWatched = {
 				["maxEntries"] = 100,
 				["classID"] = 4,
 				["texture"] = 132523,
-				["name"] = "勇气腰带",
-				["noneOnSale"] = true,
 				["minLevel"] = 53,
+				["noneOnSale"] = true,
+				["name"] = "勇气腰带",
 				["subClassID"] = 4,
 				["stackOnly"] = false,
 				["recordHistory"] = false,
@@ -2182,9 +2349,9 @@ MarketWatcherWatched = {
 				["maxEntries"] = 100,
 				["classID"] = 4,
 				["texture"] = 132960,
-				["name"] = "勇气护手",
-				["noneOnSale"] = "true",
 				["minLevel"] = 54,
+				["noneOnSale"] = "true",
+				["name"] = "勇气护手",
 				["subClassID"] = 4,
 				["stackOnly"] = false,
 				["recordHistory"] = false,
@@ -2204,9 +2371,9 @@ MarketWatcherWatched = {
 				["maxEntries"] = 100,
 				["classID"] = 2,
 				["texture"] = 133488,
-				["name"] = "世界之树的嫩枝",
-				["noneOnSale"] = true,
 				["minLevel"] = 53,
+				["noneOnSale"] = true,
+				["name"] = "世界之树的嫩枝",
 				["subClassID"] = 5,
 				["stackOnly"] = false,
 				["recordHistory"] = true,
@@ -2228,11 +2395,11 @@ MarketWatcherWatched = {
 				["subType"] = "盾牌",
 				["summaryConditional"] = "no",
 				["noneOnSale"] = true,
-				["minLevel"] = 54,
+				["name"] = "骨火",
 				["recordHistory"] = true,
 				["stackOnly"] = false,
 				["subClassID"] = 6,
-				["name"] = "骨火",
+				["minLevel"] = 54,
 				["texture"] = 134947,
 			},
 			[17713] = {
@@ -2250,17 +2417,17 @@ MarketWatcherWatched = {
 				["subType"] = "其它",
 				["summaryConditional"] = "no",
 				["noneOnSale"] = true,
-				["name"] = "黑石戒指",
+				["minLevel"] = 49,
 				["recordHistory"] = true,
 				["stackOnly"] = false,
 				["subClassID"] = 0,
-				["minLevel"] = 49,
+				["name"] = "黑石戒指",
 				["texture"] = 133359,
 			},
-			[1203] = {
-				["equipLoc"] = "INVTYPE_SHIELD",
+			[12633] = {
+				["equipLoc"] = "INVTYPE_HEAD",
 				["summaryStackOnly"] = false,
-				["iLevel"] = 54,
+				["iLevel"] = 60,
 				["bidThreshold"] = 0,
 				["buyoutThreshold"] = 0,
 				["maxAge"] = 30,
@@ -2269,15 +2436,15 @@ MarketWatcherWatched = {
 				["type"] = "护甲",
 				["maxEntries"] = 100,
 				["classID"] = 4,
-				["texture"] = 134952,
-				["name"] = "暴风城纹章盾",
-				["noneOnSale"] = true,
-				["minLevel"] = 49,
-				["subClassID"] = 6,
+				["texture"] = 133111,
+				["minLevel"] = 55,
+				["noneOnSale"] = "true",
+				["name"] = "白魂头盔",
+				["subClassID"] = 4,
 				["stackOnly"] = false,
-				["recordHistory"] = true,
+				["recordHistory"] = false,
 				["summaryConditional"] = "no",
-				["subType"] = "盾牌",
+				["subType"] = "板甲",
 			},
 			[13070] = {
 				["equipLoc"] = "INVTYPE_FEET",
@@ -2294,11 +2461,11 @@ MarketWatcherWatched = {
 				["subType"] = "板甲",
 				["summaryConditional"] = "no",
 				["noneOnSale"] = true,
-				["minLevel"] = 53,
+				["name"] = "萨菲隆的鳞片长靴",
 				["recordHistory"] = true,
 				["stackOnly"] = false,
 				["subClassID"] = 4,
-				["name"] = "萨菲隆的鳞片长靴",
+				["minLevel"] = 53,
 				["texture"] = 132586,
 			},
 			[11302] = {
@@ -2316,11 +2483,11 @@ MarketWatcherWatched = {
 				["subType"] = "其它",
 				["summaryConditional"] = "no",
 				["noneOnSale"] = true,
-				["minLevel"] = 47,
+				["name"] = "乌瑟尔的力量",
 				["recordHistory"] = true,
 				["stackOnly"] = false,
 				["subClassID"] = 0,
-				["name"] = "乌瑟尔的力量",
+				["minLevel"] = 47,
 				["texture"] = 133439,
 			},
 			[16724] = {
@@ -2338,11 +2505,11 @@ MarketWatcherWatched = {
 				["subType"] = "板甲",
 				["summaryConditional"] = "no",
 				["noneOnSale"] = true,
-				["minLevel"] = 54,
+				["name"] = "光铸护手",
 				["recordHistory"] = true,
 				["stackOnly"] = false,
 				["subClassID"] = 4,
-				["name"] = "光铸护手",
+				["minLevel"] = 54,
 				["texture"] = 132953,
 			},
 			[811] = {
@@ -2360,11 +2527,11 @@ MarketWatcherWatched = {
 				["subType"] = "单手斧",
 				["summaryConditional"] = "no",
 				["noneOnSale"] = true,
-				["minLevel"] = 52,
+				["name"] = "密林战斧",
 				["recordHistory"] = true,
 				["stackOnly"] = false,
 				["subClassID"] = 0,
-				["name"] = "密林战斧",
+				["minLevel"] = 52,
 				["texture"] = 132398,
 			},
 			[871] = {
@@ -2382,17 +2549,17 @@ MarketWatcherWatched = {
 				["subType"] = "单手斧",
 				["summaryConditional"] = "no",
 				["noneOnSale"] = true,
-				["minLevel"] = 42,
+				["name"] = "风暴战斧",
 				["recordHistory"] = true,
 				["stackOnly"] = false,
 				["subClassID"] = 0,
-				["name"] = "风暴战斧",
+				["minLevel"] = 42,
 				["texture"] = 132408,
 			},
-			[12633] = {
-				["equipLoc"] = "INVTYPE_HEAD",
+			[1203] = {
+				["equipLoc"] = "INVTYPE_SHIELD",
 				["summaryStackOnly"] = false,
-				["iLevel"] = 60,
+				["iLevel"] = 54,
 				["bidThreshold"] = 0,
 				["buyoutThreshold"] = 0,
 				["maxAge"] = 30,
@@ -2401,15 +2568,15 @@ MarketWatcherWatched = {
 				["type"] = "护甲",
 				["maxEntries"] = 100,
 				["classID"] = 4,
-				["texture"] = 133111,
-				["name"] = "白魂头盔",
-				["noneOnSale"] = "true",
-				["minLevel"] = 55,
-				["subClassID"] = 4,
+				["texture"] = 134952,
+				["minLevel"] = 49,
+				["noneOnSale"] = true,
+				["name"] = "暴风城纹章盾",
+				["subClassID"] = 6,
 				["stackOnly"] = false,
-				["recordHistory"] = false,
+				["recordHistory"] = true,
 				["summaryConditional"] = "no",
-				["subType"] = "板甲",
+				["subType"] = "盾牌",
 			},
 		},
 	},
@@ -2422,15 +2589,15 @@ MarketWatcherConfig = {
 			["ignoreOutliers"] = false,
 			["ignoreSensitivity"] = 3,
 			["bidPriceMarkdown"] = 0,
-			["saveOnBrowse"] = false,
-			["queryDelay"] = 0.5,
-			["lastRecordedScan"] = 1569725544,
-			["defaultUndercut"] = 0,
 			["graphSettings"] = {
 				["Low"] = {
 					true, -- [1]
 				},
 			},
+			["queryDelay"] = 0.5,
+			["lastRecordedScan"] = 1569738855,
+			["defaultUndercut"] = 0,
+			["saveOnBrowse"] = false,
 			["filters"] = {
 				["historicalBelowThis"] = {
 					["value"] = "0",
