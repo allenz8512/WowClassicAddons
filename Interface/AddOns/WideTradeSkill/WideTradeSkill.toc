@@ -1,0 +1,9 @@
+## Interface: 11302
+## Title: Wide Trade Skill
+## Author: Allenz
+## Notes: Doubles the Width of the Trade Skill Frame
+## Version: 1.0.0
+## LoadOnDemand: 1
+## LoadWith: Blizzard_TradeSkillUI
+
+WideTradeSkill.lua
