@@ -2,8 +2,7 @@
 WeakAurasSaved = {
 	["dynamicIconCache"] = {
 	},
-	["displays"] = {
-	},
+	["login_squelch_time"] = 10,
 	["minimap"] = {
 		["minimapPos"] = 168.023833857154,
 		["hide"] = false,
@@ -13,6 +12,7 @@ WeakAurasSaved = {
 	["clearOldHistory"] = 30,
 	["registered"] = {
 	},
-	["login_squelch_time"] = 10,
+	["displays"] = {
+	},
 	["editor_theme"] = "Monokai",
 }

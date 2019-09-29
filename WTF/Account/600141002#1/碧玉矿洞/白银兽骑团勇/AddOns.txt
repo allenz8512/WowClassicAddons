@@ -1,0 +1,5 @@
+Talented: disabled
+Talented_Data: disabled
+WeakAuras: enabled
+WeakAurasModelPaths: enabled
+WeakAurasOptions: enabled

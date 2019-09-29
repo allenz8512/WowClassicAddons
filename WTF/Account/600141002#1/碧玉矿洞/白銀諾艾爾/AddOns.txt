@@ -37,9 +37,9 @@ Leatrix_Maps: enabled
 MerInspect: enabled
 oGlow: enabled
 Quartz: enabled
-WeakAuras: disabled
-WeakAurasModelPaths: disabled
-WeakAurasOptions: disabled
+WeakAuras: enabled
+WeakAurasModelPaths: enabled
+WeakAurasOptions: enabled
 ElvUI_LocationPlus: enabled
 Details_TinyThreat: enabled
 Atlas: enabled
@@ -52,3 +52,5 @@ NoGoldSeller: disabled
 dct_spellAlert: disabled
 ItemTooltipProfessionIcons: enabled
 Mendeleev: disabled
+Talented: disabled
+Talented_Data: disabled

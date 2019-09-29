@@ -1,29 +1,47 @@
 
 BuffwatchPlayerConfig = {
 	["ShowPets"] = false,
-	["HideUnmonitored"] = false,
+	["SortOrder"] = "Raid Order",
 	["Scale"] = 1.5,
 	["ShowCastableBuffs"] = true,
-	["ShowAllForPlayer"] = false,
-	["AnchorPoint"] = "Auto",
-	["SortOrder"] = "Raid Order",
 	["Version"] = "1.06",
-	["Minimized"] = false,
+	["AnchorPoint"] = "Auto",
+	["HideUnmonitored"] = false,
+	["ShowAllForPlayer"] = false,
+	["ShowOnlyMine"] = true,
 	["WindowLocked"] = false,
 	["Mode"] = "Party",
-	["ShowOnlyMine"] = true,
+	["Minimized"] = false,
 }
 BuffwatchSaveBuffs = {
-	["海豹"] = {
+	["一生挚爱倩"] = {
 		["Buffs"] = {
 			{
 				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135943,
-				["Buff"] = "光明祝福",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
-	["玩具"] = {
+	["Fuse"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
+			}, -- [1]
+		},
+	},
+	["流量小心"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
+			}, -- [1]
+		},
+	},
+	["白銀諾艾爾"] = {
 		["Buffs"] = {
 			{
 				["Buff"] = "力量祝福",
@@ -32,20 +50,38 @@ BuffwatchSaveBuffs = {
 			}, -- [1]
 		},
 	},
-	["艾米莉"] = {
+	["物理學聖劍"] = {
 		["Buffs"] = {
 			{
 				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135967,
-				["Buff"] = "拯救祝福",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
-	["一生挚爱倩"] = {
+	["玩具"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "智慧祝福",
-				["Icon"] = 135970,
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
+			}, -- [1]
+		},
+	},
+	["艾米莉"] = {
+		["Buffs"] = {
+			{
+				["Buff"] = "拯救祝福",
+				["Icon"] = 135967,
+				["CasterName"] = "白銀諾艾爾",
+			}, -- [1]
+		},
+	},
+	["海豹"] = {
+		["Buffs"] = {
+			{
+				["Buff"] = "光明祝福",
+				["Icon"] = 135943,
 				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
 		},
@@ -59,21 +95,12 @@ BuffwatchSaveBuffs = {
 			}, -- [1]
 		},
 	},
-	["流量小心"] = {
-		["Buffs"] = {
-			{
-				["Buff"] = "力量祝福",
-				["Icon"] = 135906,
-				["CasterName"] = "白銀諾艾爾",
-			}, -- [1]
-		},
-	},
 	["惹毛了乱锤"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "力量祝福",
-				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
 			}, -- [1]
 		},
 	},

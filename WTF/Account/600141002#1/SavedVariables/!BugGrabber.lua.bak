@@ -1,7 +1,22 @@
 
 BugGrabberDB = {
+	["session"] = 252,
 	["lastSanitation"] = 3,
-	["session"] = 241,
 	["errors"] = {
+		{
+			["message"] = "Interface\\AddOns\\Talented\\view-查看.lua:227: bad argument #1 to 'ipairs' (table expected, got nil)",
+			["time"] = "2019/09/29 11:02:53",
+			["locals"] = "(*temporary) = nil\n(*temporary) = \"table expected, got nil\"\n = <function> defined =[C]:-1\n",
+			["stack"] = "[C]: in function `ipairs'\nInterface\\AddOns\\Talented\\view-查看.lua:227: in function `Update'\nInterface\\AddOns\\Talented\\viewmode.lua:92: in function `UpdateView'\nInterface\\AddOns\\Talented\\core.lua:339: in function `Update'\nInterface\\AddOns\\Talented\\core.lua:326: in function <Interface\\AddOns\\Talented\\core.lua:323>\n(tail call): ?\n[string \"TOGGLETALENTS\"]:1: in function <[string \"TOGGLETALENTS\"]:1>",
+			["session"] = 252,
+			["counter"] = 1,
+		}, -- [1]
+		{
+			["message"] = "Interface\\AddOns\\Talented\\encode.lua:235: attempt to perform arithmetic on local 'r2' (a nil value)",
+			["time"] = "2019/09/29 11:03:09",
+			["stack"] = "Interface\\AddOns\\Talented\\encode.lua:235: in function `TemplateToString'\nInterface\\AddOns\\Talented\\encode.lua:251: in function `PackTemplate'\nInterface\\AddOns\\Talented\\core.lua:373: in function `?'\n...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:119: in function <...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[C]: ?\n...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:29: in function <...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n...ssic\\lib\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua:64: in function `Fire'\n...AddOns\\AtlasLootClassic\\Libs\\AceDB-3.0\\AceDB-3.0-27.lua:362: in function <...AddOns\\AtlasLootClassic\\Libs\\AceDB-3.0\\AceDB-3.0.lua:359>",
+			["session"] = 252,
+			["counter"] = 1,
+		}, -- [2]
 	},
 }

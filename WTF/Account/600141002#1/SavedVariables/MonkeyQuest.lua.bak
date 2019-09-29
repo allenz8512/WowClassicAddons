@@ -5,41 +5,38 @@ MonkeyQuestConfig = {
 			["荆棘谷 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["通缉：卡利夫·斯科比斯汀 - false"] = {
+			["船只的残骸 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["安戈洛环形山 - true"] = {
+			["菲拉斯的正义 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["塔纳利斯 - true"] = {
 				["m_bChecked"] = false,
 			},
 			["远古之卵 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["安戈洛的泥土 - false"] = {
+			["异种蝎的威胁 - false"] = {
 				["m_bChecked"] = true,
-			},
-			["达纳苏斯 - true"] = {
-				["m_bChecked"] = false,
 			},
 			["辛特兰 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["斯杜雷的货物 - false"] = {
+			["深入神庙 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["火山的活动 - false"] = {
+			["菲拉斯 - true"] = {
 				["m_bChecked"] = true,
 			},
 			["琥珀酒 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["瓶中信 - false"] = {
+			["祖尔祭坛 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["加基森水业公司 - false"] = {
+			["击败沙尔扎鲁 - false"] = {
 				["m_bChecked"] = true,
-			},
-			["铁炉堡 - true"] = {
-				["m_bChecked"] = false,
 			},
 			["沉没的神庙 - true"] = {
 				["m_bChecked"] = false,
@@ -50,25 +47,25 @@ MonkeyQuestConfig = {
 			["威士忌斯利姆的酒 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["口渴的地精 - false"] = {
+			["质量的保证 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["祖尔祭坛 - false"] = {
+			["高原荒野 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["塔纳利斯 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["远方的软泥怪 - false"] = {
+			["大保姆 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["极度粘稠的沥青 - false"] = {
+			["雕像群的秘密 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["瓶中信 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["进入阿塔哈卡神庙 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["海盗的帽子！ - false"] = {
+			["寻找知识 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["阿拉希高地 - true"] = {
@@ -77,7 +74,7 @@ MonkeyQuestConfig = {
 			["西部荒野 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["南海复仇 - false"] = {
+			["斯普琳科的秘密佐料 - false"] = {
 				["m_bChecked"] = true,
 			},
 		},
@@ -107,33 +104,33 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_bHideTitleButtons"] = false,
+		["m_iFrameBottom"] = 278.22216796875,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11291503906,
-		["m_iQuestPadding"] = 2,
+		["m_bColourDoneOrFailed"] = false,
 		["m_bLocked"] = true,
 		["m_bNoBorder"] = true,
 		["m_bNoHeaders"] = true,
-		["m_bShowTooltipObjectives"] = true,
+		["m_bShowNumQuests"] = true,
 		["m_strOverviewColour"] = "|cFF7F7F7F",
 		["m_iAlpha"] = 0,
 		["m_bColourSubObjectivesByProgress"] = true,
-		["m_iFrameWidth"] = 240,
+		["m_strMidObjectiveColour"] = "|cFFFFFF00",
 		["m_iFontHeight"] = 13,
 		["m_strQuestTitleColour"] = "|cFFFFFFFF",
 		["m_bWorkComplete"] = true,
 		["m_bHideQuestsEnabled"] = false,
-		["m_strMidObjectiveColour"] = "|cFFFFFF00",
+		["m_iFrameWidth"] = 240,
 		["m_bCrashBorder"] = true,
 		["m_strHeaderOpenColour"] = "|cFFBFBFFF",
 		["m_iFrameTop"] = 720.888977050781,
 		["m_bObjectives"] = false,
 		["m_bHideHeader"] = true,
-		["m_bShowNumQuests"] = true,
-		["m_bColourDoneOrFailed"] = false,
+		["m_bShowTooltipObjectives"] = true,
+		["m_iQuestPadding"] = 2,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_iFrameBottom"] = 512.888793945313,
+		["m_bHideTitleButtons"] = false,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {
@@ -145,19 +142,19 @@ MonkeyQuestConfig = {
 			["贝尔丁的补给 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["啤酒烤猪排 - false"] = {
+			["灰色洞穴 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["海格纳的弹药 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["烹饪 - true"] = {
-				["m_bChecked"] = true,
-			},
 			["丹莫罗 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["灰色洞穴 - false"] = {
+			["烹饪 - true"] = {
+				["m_bChecked"] = true,
+			},
+			["啤酒烤猪排 - false"] = {
 				["m_bChecked"] = true,
 			},
 		},
