@@ -1,69 +1,41 @@
 if not WeakAuras.IsCorrectVersion() then return end
 
-if not(GetLocale() == "esES") then
+if not(GetLocale() == "itIT") then
   return
 end
 
 local L = WeakAuras.L
 
 -- WeakAuras/Templates
-	--[[Translation missing --]]
-	L["Abilities"] = "Abilities"
+	L["Abilities"] = "Abilità"
 	--[[Translation missing --]]
 	L["Ability Charges"] = "Ability Charges"
-	--[[Translation missing --]]
-	L["Add Triggers"] = "Add Triggers"
-	L["Always Active"] = "Siempre activo"
-	--[[Translation missing --]]
-	L["Always Show"] = "Always Show"
-	--[[Translation missing --]]
-	L["Always show the aura, highlight it if debuffed."] = "Always show the aura, highlight it if debuffed."
-	--[[Translation missing --]]
-	L["Always show the aura, turns grey if on cooldown."] = "Always show the aura, turns grey if on cooldown."
-	--[[Translation missing --]]
-	L["Always show the aura, turns grey if the debuff not active."] = "Always show the aura, turns grey if the debuff not active."
-	--[[Translation missing --]]
-	L["Always shows the aura, grey if buff not active."] = "Always shows the aura, grey if buff not active."
-	--[[Translation missing --]]
-	L["Always shows the aura, highlight it if buffed."] = "Always shows the aura, highlight it if buffed."
-	--[[Translation missing --]]
-	L["Always shows the aura, highlight when active, turns blue on insufficient resources."] = "Always shows the aura, highlight when active, turns blue on insufficient resources."
-	--[[Translation missing --]]
-	L["Always shows the aura, highlight while proc is active, blue on insufficient resources."] = "Always shows the aura, highlight while proc is active, blue on insufficient resources."
-	--[[Translation missing --]]
-	L["Always shows the aura, highlight while proc is active, blue when not usable."] = "Always shows the aura, highlight while proc is active, blue when not usable."
-	--[[Translation missing --]]
-	L["Always shows the aura, highlight while proc is active, turns red when out of range, blue on insufficient resources."] = "Always shows the aura, highlight while proc is active, turns red when out of range, blue on insufficient resources."
-	--[[Translation missing --]]
-	L["Always shows the aura, turns blue on insufficient resources."] = "Always shows the aura, turns blue on insufficient resources."
-	--[[Translation missing --]]
-	L["Always shows the aura, turns blue when not usable."] = "Always shows the aura, turns blue when not usable."
-	--[[Translation missing --]]
-	L["Always shows the aura, turns grey if on cooldown."] = "Always shows the aura, turns grey if on cooldown."
-	--[[Translation missing --]]
-	L["Always shows the aura, turns grey if the ability is not usable and red when out of range."] = "Always shows the aura, turns grey if the ability is not usable and red when out of range."
-	--[[Translation missing --]]
-	L["Always shows the aura, turns grey if the ability is not usable."] = "Always shows the aura, turns grey if the ability is not usable."
-	--[[Translation missing --]]
-	L["Always shows the aura, turns red when out of range, blue on insufficient resources."] = "Always shows the aura, turns red when out of range, blue on insufficient resources."
-	--[[Translation missing --]]
-	L["Always shows the aura, turns red when out of range."] = "Always shows the aura, turns red when out of range."
-	--[[Translation missing --]]
-	L["Back"] = "Back"
-	--[[Translation missing --]]
-	L["Basic Show On Cooldown"] = "Basic Show On Cooldown"
-	--[[Translation missing --]]
-	L["Bloodlust/Heroism"] = "Bloodlust/Heroism"
-	--[[Translation missing --]]
-	L["Buff"] = "Buff"
-	--[[Translation missing --]]
+	L["Add Triggers"] = "Aggiungi Inneschi"
+	L["Always Active"] = "Sempre Attivo"
+	L["Always Show"] = "Mostra Sempre"
+	L["Always show the aura, highlight it if debuffed."] = "Mostra sempre l'aura, evidenziata se c'è il debuff."
+	L["Always show the aura, turns grey if on cooldown."] = "Mostra sempre l'aura, diventa grigia se in ricarica."
+	L["Always show the aura, turns grey if the debuff not active."] = "Mostra sempre l'aura, diventa grigia se il debuff non è attivo."
+	L["Always shows the aura, grey if buff not active."] = "Mostra sempre l'aura, grigia se il buff non è attivo."
+	L["Always shows the aura, highlight it if buffed."] = "Mostra sempre l'aura, evidenziata se c'è il buff."
+	L["Always shows the aura, highlight when active, turns blue on insufficient resources."] = "Mostra sempre l'aura, evidenziata quando attiva, diventa blu se la risorsa è insufficiente."
+	L["Always shows the aura, highlight while proc is active, blue on insufficient resources."] = "Mostra sempre l'aura, evidenziata se il proc è attivo, blu se la risorsa è insufficiente."
+	L["Always shows the aura, highlight while proc is active, blue when not usable."] = "Mostra sempre l'aura, evidenzata quando il proc è attivo, blu quando non utilizzabile."
+	L["Always shows the aura, highlight while proc is active, turns red when out of range, blue on insufficient resources."] = "Mostra sempre l'aura, evidenziata quando il proc è attivo, rossa quando fuori portata, blu se la risorsa è insufficiente."
+	L["Always shows the aura, turns blue on insufficient resources."] = "Mostra sempre l'aura, diventa blu se la risorsa è insufficiente."
+	L["Always shows the aura, turns blue when not usable."] = "Mostra sempre l'aura, diventa blu quando non utilizzablie."
+	L["Always shows the aura, turns grey if on cooldown."] = "Mostra sempre l'aura, diventa grigia se in ricarica."
+	L["Always shows the aura, turns grey if the ability is not usable and red when out of range."] = "Mostra sempre l'aura, diventa grigica se l'abilità non è utilizzabile e rossa quando fuori portata."
+	L["Always shows the aura, turns grey if the ability is not usable."] = "Mostra sempre l'aura, diventa grigia se l'abilità non è utilizzabile."
+	L["Always shows the aura, turns red when out of range, blue on insufficient resources."] = "Mostra sempre l'aura, diventa rossa quando fuori portata, blu se la risorsa è insufficiente."
+	L["Always shows the aura, turns red when out of range."] = "Mostra sempre l'aura,, diventa rossa quando fuori portata."
+	L["Back"] = "Indietro"
+	L["Basic Show On Cooldown"] = "Semplice Mostra in Ricarica"
+	L["Bloodlust/Heroism"] = "Brama di Sangue/Eroismo"
 	L["buff"] = "buff"
-	--[[Translation missing --]]
 	L["Buffs"] = "Buffs"
-	--[[Translation missing --]]
-	L["Cancel"] = "Cancel"
-	--[[Translation missing --]]
-	L["Cast"] = "Cast"
+	L["Cancel"] = "Cancella"
+	L["Cast"] = "Lancia"
 	--[[Translation missing --]]
 	L["Charge and Buff Tracking"] = "Charge and Buff Tracking"
 	--[[Translation missing --]]
@@ -75,11 +47,17 @@ local L = WeakAuras.L
 	--[[Translation missing --]]
 	L["cooldown"] = "cooldown"
 	--[[Translation missing --]]
+	L["Cooldown"] = "Cooldown"
+	--[[Translation missing --]]
 	L["Cooldown Tracking"] = "Cooldown Tracking"
 	--[[Translation missing --]]
 	L["Create Auras"] = "Create Auras"
 	--[[Translation missing --]]
+	L["debuff"] = "debuff"
+	--[[Translation missing --]]
 	L["Debuffs"] = "Debuffs"
+	--[[Translation missing --]]
+	L["debuiff"] = "debuiff"
 	--[[Translation missing --]]
 	L["Enchants"] = "Enchants"
 	--[[Translation missing --]]
@@ -122,8 +100,10 @@ local L = WeakAuras.L
 	L["Only shows the aura if the target has the buff."] = "Only shows the aura if the target has the buff."
 	--[[Translation missing --]]
 	L["Only shows the aura when the ability is on cooldown."] = "Only shows the aura when the ability is on cooldown."
-	L["Pet alive"] = "Mascota viva"
-	L["Pet Behavior"] = "Comportamiento de mascota"
+	--[[Translation missing --]]
+	L["Pet alive"] = "Pet alive"
+	--[[Translation missing --]]
+	L["Pet Behavior"] = "Pet Behavior"
 	--[[Translation missing --]]
 	L["PvP Azerite Traits"] = "PvP Azerite Traits"
 	--[[Translation missing --]]
@@ -193,9 +173,13 @@ local L = WeakAuras.L
 	--[[Translation missing --]]
 	L["Show Totem and Charge Information"] = "Show Totem and Charge Information"
 	--[[Translation missing --]]
+	L["slow debuff"] = "slow debuff"
+	--[[Translation missing --]]
 	L["Specific Azerite Traits"] = "Specific Azerite Traits"
 	--[[Translation missing --]]
 	L["Stance"] = "Stance"
+	--[[Translation missing --]]
+	L["stun debuff"] = "stun debuff"
 	--[[Translation missing --]]
 	L["Track the charge and proc, highlight while proc is active, turns red when out of range, blue on insufficient resources."] = "Track the charge and proc, highlight while proc is active, turns red when out of range, blue on insufficient resources."
 	--[[Translation missing --]]

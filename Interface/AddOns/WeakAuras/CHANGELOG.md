@@ -1,35 +1,23 @@
-# [2.14.6](https://github.com/WeakAuras/WeakAuras2/tree/2.14.6) (2019-08-30)
+# [2.15.1](https://github.com/WeakAuras/WeakAuras2/tree/2.15.1) (2019-09-27)
 
-[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.14.5...2.14.6)
+[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.15.0...2.15.1)
 
 ## Highlights
 
- - Bug fixes! Bug fixes! Get your bug fixes! 
+ - Bug fixes
+- Workaround for things Blizzard broke in 8.2.5 
 
 ## Commits
 
-InfusOnWoW (1):
+InfusOnWoW (3):
 
-- Fix regression Talent Selected Trigger
+- Fix LoadFunction
+- Make WA_GetUnitBuff work on 8.2.5
+- Fix description of "Specific Unit"
 
-LAMBOLEY Lucas (1):
+mrbuds (3):
 
-- Update .luacheckrc
-
-Stanzilla (2):
-
-- add back the missing true(th)
-- remove last remnants of sticky duration, see our [wiki](https://github.com/WeakAuras/WeakAuras2/wiki/Deprecations) on what to use instead
-
-Vardex (1):
-
-- Fix wrong duration for oh enchantment
-
-mrbuds (5):
-
-- fix nil error in stance trigger
-- fix WeakAuras.GetProperties with unknown region type fixes #1643
-- classic: WA_GetUnitAura return duration & expirationTime from LibClassicDurations
-- fix a bug with combat log trigger arguments fix #1638
-- classic: fix register unknown event in bufftrigger1
+- fix nil error in Action Usable spellInRange condition round 2
+- power trigger: invert table use for power types with classic's one this fix "stagger" not shown on retail
+- fix "select" conditions with function for values  fixes #1728
 
