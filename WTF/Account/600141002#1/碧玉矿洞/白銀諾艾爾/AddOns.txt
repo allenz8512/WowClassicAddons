@@ -28,7 +28,7 @@ ElvUI: enabled
 ElvUI_OptionsUI: enabled
 CharacterStatsClassic: enabled
 WhatsTraining: enabled
-CensusPlusClassic: disabled
+CensusPlusClassic: enabled
 SortBags: enabled
 WeakAurasCompanion: enabled
 alaChat_Classic: enabled
@@ -75,3 +75,4 @@ WideTradeSkill: enabled
 dct: enabled
 dct_damage: enabled
 dct_options: enabled
+[D4KiR] Healer Protection: disabled

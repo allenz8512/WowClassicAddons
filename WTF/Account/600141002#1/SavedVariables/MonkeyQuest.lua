@@ -5,23 +5,29 @@ MonkeyQuestConfig = {
 			["荆棘谷 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["船只的残骸 - false"] = {
+			["生命之种 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["菲拉斯的正义 - false"] = {
+			["寻找OOX-22/FE！ - false"] = {
 				["m_bChecked"] = true,
 			},
-			["塔纳利斯 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["远古之卵 - false"] = {
+			["晨光石 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["异种蝎的威胁 - false"] = {
+			["神灵哈卡 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["辛特兰 - true"] = {
-				["m_bChecked"] = false,
+			["拯救OOX-22/FE！ - false"] = {
+				["m_bChecked"] = true,
+			},
+			["预言者迦玛兰 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["原始雪人毛皮 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["霍尔雷·黑须 - false"] = {
+				["m_bChecked"] = true,
 			},
 			["深入神庙 - false"] = {
 				["m_bChecked"] = true,
@@ -32,49 +38,52 @@ MonkeyQuestConfig = {
 			["琥珀酒 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["祖尔祭坛 - false"] = {
+			["尤卡·斯库比格特 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["击败沙尔扎鲁 - false"] = {
+			["即将孵化 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["维利塔恩的污染 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["大地的污染 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["扭曲的邪恶 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["沉没的神庙 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["召唤大地公主 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["威士忌斯利姆的酒 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["质量的保证 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["高原荒野 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["大保姆 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["雕像群的秘密 - false"] = {
+			["艾奎尼克斯法杖 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["瓶中信 - false"] = {
 				["m_bChecked"] = true,
 			},
+			["更高的品质 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["玛拉顿 - true"] = {
+				["m_bChecked"] = true,
+			},
+			["贱民的指引 - false"] = {
+				["m_bChecked"] = true,
+			},
 			["进入阿塔哈卡神庙 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["寻找知识 - false"] = {
+			["雕像群的秘密 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["阿拉希高地 - true"] = {
+			["黑石深渊 - true"] = {
 				["m_bChecked"] = false,
 			},
 			["西部荒野 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["斯普琳科的秘密佐料 - false"] = {
+			["暗影残片 - false"] = {
 				["m_bChecked"] = true,
 			},
 		},
@@ -104,33 +113,33 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_bHideTitleButtons"] = false,
+		["m_iFrameBottom"] = 150.222229003906,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11291503906,
-		["m_bNoBorder"] = true,
+		["m_bColourDoneOrFailed"] = false,
 		["m_bLocked"] = true,
 		["m_iQuestPadding"] = 2,
 		["m_bNoHeaders"] = true,
-		["m_bShowTooltipObjectives"] = true,
+		["m_bShowNumQuests"] = true,
 		["m_strOverviewColour"] = "|cFF7F7F7F",
 		["m_iAlpha"] = 0,
 		["m_bColourSubObjectivesByProgress"] = true,
-		["m_iFrameWidth"] = 240,
+		["m_strMidObjectiveColour"] = "|cFFFFFF00",
 		["m_iFontHeight"] = 13,
 		["m_strQuestTitleColour"] = "|cFFFFFFFF",
 		["m_bWorkComplete"] = true,
 		["m_bHideQuestsEnabled"] = false,
-		["m_strMidObjectiveColour"] = "|cFFFFFF00",
+		["m_iFrameWidth"] = 240,
 		["m_bCrashBorder"] = true,
 		["m_strHeaderOpenColour"] = "|cFFBFBFFF",
 		["m_iFrameTop"] = 720.888977050781,
 		["m_bObjectives"] = false,
 		["m_bHideHeader"] = true,
-		["m_bShowNumQuests"] = true,
-		["m_bColourDoneOrFailed"] = false,
+		["m_bShowTooltipObjectives"] = true,
+		["m_bNoBorder"] = true,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_iFrameBottom"] = 179.555603027344,
+		["m_bHideTitleButtons"] = false,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {
@@ -142,19 +151,19 @@ MonkeyQuestConfig = {
 			["贝尔丁的补给 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["啤酒烤猪排 - false"] = {
+			["灰色洞穴 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["海格纳的弹药 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["烹饪 - true"] = {
-				["m_bChecked"] = true,
-			},
 			["丹莫罗 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["灰色洞穴 - false"] = {
+			["烹饪 - true"] = {
+				["m_bChecked"] = true,
+			},
+			["啤酒烤猪排 - false"] = {
 				["m_bChecked"] = true,
 			},
 		},

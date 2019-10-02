@@ -1,5 +1,0 @@
-
-CensusPlus_PerCharInfo = {
-	["Version"] = {
-	},
-}

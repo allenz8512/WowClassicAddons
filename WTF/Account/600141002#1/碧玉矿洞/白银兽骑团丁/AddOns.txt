@@ -25,7 +25,7 @@ BuffwatchClassic: enabled
 !BugGrabber: enabled
 BugSack: enabled
 ccc: enabled
-CensusPlusClassic: disabled
+CensusPlusClassic: enabled
 Details: enabled
 Details_TinyThreat: enabled
 EnhancedChatFilter: enabled
@@ -65,3 +65,4 @@ dct_damage: enabled
 dct_spellAlert: disabled
 dct_options: enabled
 Questie: enabled
+[D4KiR] Healer Protection: disabled

@@ -2,54 +2,76 @@
 ecfDB = {
 	["enableDND"] = true,
 	["enableRepeat"] = true,
-	["addonQRF"] = false,
+	["repeatFilterGroup"] = true,
 	["addonRAF"] = false,
 	["enableMSF"] = false,
-	["repeatFilterGroup"] = true,
-	["blackWordFilterGroup"] = false,
-	["lootQualityMin"] = 0,
-	["lootCurrencyFilterList"] = {
-	},
-	["enableAggressive"] = false,
-	["enableCFA"] = true,
-	["lootItemFilterList"] = {
-	},
-	["lesserBlackWordThreshold"] = 3,
+	["addonQRF"] = false,
 	["blackWordList"] = {
+		["ADM"] = {
+		},
 		["AA"] = {
 		},
-		["剃刀沼泽"] = {
+		["血色"] = {
+		},
+		["奥达曼"] = {
+		},
+		["剃刀"] = {
 		},
 		["STSM"] = {
 		},
 		["矿井"] = {
 		},
+		["祖尔"] = {
+		},
+		["教堂"] = {
+		},
+		["SW"] = {
+		},
+		["ZR"] = {
+		},
+		["月饼"] = {
+		},
+		["矮子本"] = {
+		},
+		["矮人本"] = {
+		},
 		["黑暗深渊"] = {
 		},
-		["血色"] = {
+		["TD"] = {
+		},
+		["XS"] = {
 		},
 		["武器库"] = {
+		},
+		["ZUL"] = {
 		},
 		["影牙"] = {
 		},
 		["军火库"] = {
 		},
-		["死矿"] = {
-		},
 		["监狱"] = {
 		},
-		["矮子本"] = {
+		["死矿"] = {
 		},
 		["诺莫瑞根"] = {
 		},
 		["SK"] = {
 		},
-		["TD沼泽"] = {
+		["图书馆"] = {
 		},
 		["大米"] = {
 		},
-		["图书馆"] = {
+		["矮子副本"] = {
 		},
 	},
+	["lootQualityMin"] = 0,
+	["lesserBlackWordThreshold"] = 3,
+	["enableAggressive"] = false,
+	["enableCFA"] = true,
+	["lootItemFilterList"] = {
+	},
+	["lootCurrencyFilterList"] = {
+	},
+	["blackWordFilterGroup"] = false,
 	["advancedConfig"] = false,
 }

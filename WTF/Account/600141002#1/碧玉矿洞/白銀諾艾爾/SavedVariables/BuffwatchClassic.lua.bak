@@ -1,29 +1,40 @@
 
 BuffwatchPlayerConfig = {
+	["Minimized"] = false,
 	["ShowPets"] = false,
-	["HideUnmonitored"] = false,
 	["Scale"] = 1.5,
 	["ShowCastableBuffs"] = true,
-	["Minimized"] = false,
+	["Version"] = "1.07",
 	["AnchorPoint"] = "Auto",
 	["SortOrder"] = "Raid Order",
-	["Version"] = "1.06",
-	["WindowLocked"] = false,
-	["ShowOnlyMine"] = true,
-	["Mode"] = "Party",
 	["ShowAllForPlayer"] = false,
+	["HideUnmonitored"] = false,
+	["WindowLocked"] = false,
+	["Mode"] = "Party",
+	["ShowOnlyMine"] = true,
+}
+BuffwatchSaveTempEnch = {
 }
 BuffwatchSaveBuffs = {
-	["一生挚爱倩"] = {
+	["地瓜爱番薯"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "智慧祝福",
-				["Icon"] = 135970,
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
+			}, -- [1]
+		},
+	},
+	["人民币窝"] = {
+		["Buffs"] = {
+			{
+				["Buff"] = "力量祝福",
+				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
 		},
 	},
-	["Fuse"] = {
+	["最爱百威"] = {
 		["Buffs"] = {
 			{
 				["Buff"] = "智慧祝福",
@@ -35,9 +46,99 @@ BuffwatchSaveBuffs = {
 	["流量小心"] = {
 		["Buffs"] = {
 			{
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
+			}, -- [1]
+		},
+	},
+	["飛揚"] = {
+		["Buffs"] = {
+			{
+				["Buff"] = "智慧祝福",
+				["Icon"] = 135970,
+				["CasterName"] = "白銀諾艾爾",
+			}, -- [1]
+		},
+	},
+	["桉叶帝国"] = {
+		["Buffs"] = {
+			{
 				["Buff"] = "力量祝福",
 				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
+			}, -- [1]
+		},
+	},
+	["海豹"] = {
+		["Buffs"] = {
+			{
+				["Buff"] = "光明祝福",
+				["Icon"] = 135943,
+				["CasterName"] = "白銀諾艾爾",
+			}, -- [1]
+		},
+	},
+	["腊肉汤"] = {
+		["Buffs"] = {
+			{
+				["Buff"] = "智慧祝福",
+				["Icon"] = 135970,
+				["CasterName"] = "白銀諾艾爾",
+			}, -- [1]
+		},
+	},
+	["牧小白"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
+			}, -- [1]
+		},
+	},
+	["西瓜籽"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
+			}, -- [1]
+		},
+	},
+	["惹毛了乱锤"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
+			}, -- [1]
+		},
+	},
+	["维兰德星歌"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
+			}, -- [1]
+		},
+	},
+	["一生挚爱倩"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
+			}, -- [1]
+		},
+	},
+	["Fuse"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
@@ -52,37 +153,32 @@ BuffwatchSaveBuffs = {
 	},
 	["物理學聖劍"] = {
 		["Buffs"] = {
-			{
-				["Buff"] = "智慧祝福",
-				["Icon"] = 135970,
-				["CasterName"] = "白銀諾艾爾",
-			}, -- [1]
 		},
 	},
 	["玩具"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "力量祝福",
-				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
 			}, -- [1]
 		},
 	},
 	["艾米莉"] = {
 		["Buffs"] = {
 			{
-				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135967,
 				["Buff"] = "拯救祝福",
+				["Icon"] = 135967,
+				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
 		},
 	},
-	["海豹"] = {
+	["全弹发射"] = {
 		["Buffs"] = {
 			{
+				["Buff"] = "力量祝福",
+				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135943,
-				["Buff"] = "光明祝福",
 			}, -- [1]
 		},
 	},
@@ -95,7 +191,7 @@ BuffwatchSaveBuffs = {
 			}, -- [1]
 		},
 	},
-	["惹毛了乱锤"] = {
+	["Devops"] = {
 		["Buffs"] = {
 			{
 				["Buff"] = "力量祝福",
