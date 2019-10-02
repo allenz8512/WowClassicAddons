@@ -1,0 +1,20 @@
+## Interface: 11302
+## Title: CChatNotifier
+## Author: coolmodi
+## Version: 1.0
+## Notes: Watchs chat and notifies you if it finds words you look for.
+## Notes-deDE: Beobachtet Chat und benachrichtigt dich wenn es gesuchte Wörter findet.
+## SavedVariablesPerCharacter: CChatNotifier_settings, CChatNotifier_data
+
+libs/SettingsCreator.lua
+
+i18n/loc.lua
+i18n/enUS.lua
+i18n/deDE.lua
+i18n/zhCN.lua
+
+main.lua
+settings.lua
+UI/MainUI.lua
+UI/MainUI_functions.lua
+UI/minimapButton.lua
