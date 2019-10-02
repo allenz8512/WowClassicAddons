@@ -29,7 +29,7 @@ QSL_ttab[92] = 125;
 
 local StreamPool = {}
 
-function QuestieStreamLib:GetStream() -- returns a new stream
+function QuestieStreamLib:getStream() -- returns a new stream
     local stream = tremove(StreamPool)
     if stream then
         return stream
@@ -51,111 +51,111 @@ function QuestieStreamLib:GetStream() -- returns a new stream
 end
 
 
-function QuestieStreamLib:SetPointer(pointer)
+function QuestieStreamLib:setPointer(pointer)
     self._pointer = pointer;
 end
 
-function QuestieStreamLib:ReadByte()
+function QuestieStreamLib:readByte()
     local r = self._buffer[self._pointer];
     self._pointer = self._pointer + 1;
     return r;
 end
 
-function QuestieStreamLib:ReadBytes(count)
+function QuestieStreamLib:readBytes(count)
     local ret = {};
     for i=1,count do
-        table.insert(ret, self:ReadByte());
+        table.insert(ret, self:readByte());
     end
     return unpack(ret)
 end
 
-function QuestieStreamLib:ReadShorts(count)
+function QuestieStreamLib:readShorts(count)
     local ret = {};
     for i=1,count do
-        table.insert(ret, self:ReadShort());
+        table.insert(ret, self:readShort());
     end
     return unpack(ret)
 end
 
-function QuestieStreamLib:ReadShort()
-    return bit.lshift(self:ReadByte(), 8) + self:ReadByte();
+function QuestieStreamLib:readShort()
+    return bit.lshift(self:readByte(), 8) + self:readByte();
 end
 
-function QuestieStreamLib:ReadInt()
-    return bit.lshift(self:ReadByte(), 24) + bit.lshift(self:ReadByte(), 16) + bit.lshift(self:ReadByte(), 8) + self:ReadByte();
+function QuestieStreamLib:readInt()
+    return bit.lshift(self:readByte(), 24) + bit.lshift(self:readByte(), 16) + bit.lshift(self:readByte(), 8) + self:readByte();
 end
 
-function QuestieStreamLib:ReadTinyString()
-    local length = self:ReadByte();
+function QuestieStreamLib:readTinyString()
+    local length = self:readByte();
     local ret = "";
     for i = 1, length do
-        ret = ret .. string.char(self:ReadByte()) -- bad lua code is bad
+        ret = ret .. string.char(self:readByte()) -- bad lua code is bad
     end
     return ret;
 end
 
-function QuestieStreamLib:ReadShortString()
-    local length = self:ReadShort();
+function QuestieStreamLib:readShortString()
+    local length = self:readShort();
     local ret = "";
     for i = 1, length do
-        ret = ret .. string.char(self:ReadByte()) -- bad lua code is bad
+        ret = ret .. string.char(self:readByte()) -- bad lua code is bad
     end
     return ret;
 end
 
-function QuestieStreamLib:WriteByte(val)
+function QuestieStreamLib:writeByte(val)
     --print("wbyte: " .. val);
     self._buffer[self._pointer] = mod(val, 256);
     --print("wbyte: " .. _buffer[_pointer]);
     self._pointer = self._pointer + 1;
 end
 
-function QuestieStreamLib:WriteBytes(...)
+function QuestieStreamLib:writeBytes(...)
     for _,val in pairs({...}) do
-        self:WriteByte(val)
+        self:writeByte(val)
     end
 end
 
-function QuestieStreamLib:WriteShorts(...)
+function QuestieStreamLib:writeShorts(...)
     for _,val in pairs({...}) do
-        self:WriteShort(val)
+        self:writeShort(val)
     end
 end
 
-function QuestieStreamLib:WriteShort(val)
+function QuestieStreamLib:writeShort(val)
     --print("wshort: " .. val);
-    self:WriteByte(mod(bit.rshift(val, 8), 256));
-    self:WriteByte(mod(val, 256));
+    self:writeByte(mod(bit.rshift(val, 8), 256));
+    self:writeByte(mod(val, 256));
 end
 
-function QuestieStreamLib:WriteInt(val)
-    self:WriteByte(mod(bit.rshift(val, 24), 256));
-    self:WriteByte(mod(bit.rshift(val, 16), 256));
-    self:WriteByte(mod(bit.rshift(val, 8), 256));
-    self:WriteByte(mod(val, 256));
+function QuestieStreamLib:writeInt(val)
+    self:writeByte(mod(bit.rshift(val, 24), 256));
+    self:writeByte(mod(bit.rshift(val, 16), 256));
+    self:writeByte(mod(bit.rshift(val, 8), 256));
+    self:writeByte(mod(val, 256));
 end
 
-function QuestieStreamLib:WriteTinyString(val)
-    self:WriteByte(string.len(val));
+function QuestieStreamLib:writeTinyString(val)
+    self:writeByte(string.len(val));
     for i=1,string.len(val) do
-        self:WriteByte(string.byte(val, i));
+        self:writeByte(string.byte(val, i));
     end
 end
 
-function QuestieStreamLib:WriteShortString(val)
-    self:WriteShort(string.len(val));
+function QuestieStreamLib:writeShortString(val)
+    self:writeShort(string.len(val));
     for i=1,string.len(val) do
-        self:WriteByte(string.byte(val, i));
+        self:writeByte(string.byte(val, i));
     end
 end
 
-function QuestieStreamLib:Save()
+function QuestieStreamLib:save()
     local lmt = 0;
     local result = ""
     if self._size < self._pointer then
         self._size = self._pointer
     end
-    for i=0, self._size do
+    for i=0,self._size do
         local e = self._buffer[i]
         if e == nil then
             return result
@@ -176,7 +176,7 @@ function QuestieStreamLib:Save()
     return result
 end
 
-function QuestieStreamLib:SavePart(limit)
+function QuestieStreamLib:savePart(limit)
     local lmt = 0;
     local result = ""
     if self._size < self._pointer then
@@ -185,8 +185,8 @@ function QuestieStreamLib:SavePart(limit)
     if limit > self._size then
         limit = self._size
     end
-    for i=1, limit do
-        local e = self:ReadByte()
+    for i=1,limit do
+        local e = self:readByte()
         if not e then return result; end
         local level = math.floor(e / 86);
         if not (lmt == level) then
@@ -204,16 +204,16 @@ function QuestieStreamLib:SavePart(limit)
     return result
 end
 
-function QuestieStreamLib:LoadPart(bin)
+function QuestieStreamLib:loadPart(bin)
     local level = 0;
     for i = 1, string.len(bin) do
         local v = string.byte(bin, i);
         --print(v);
         if QSL_dltab[v] == nil then
             if QSL_dttab[v] then
-                self:WriteByte(level * 86 + QSL_dttab[v]);
+                self:writeByte(level * 86 + QSL_dttab[v]);
             else
-                self:WriteByte(level * 86 + v - 33);
+                self:writeByte(level * 86 + v - 33);
             end
         else
             level = QSL_dltab[v];
@@ -222,7 +222,7 @@ function QuestieStreamLib:LoadPart(bin)
     self._size = self._pointer;
 end
 
-function QuestieStreamLib:Load(bin)
+function QuestieStreamLib:load(bin)
     self._pointer = 0;
     self._size = 0;
     local level = 0;
@@ -231,9 +231,9 @@ function QuestieStreamLib:Load(bin)
         --print(v);
         if QSL_dltab[v] == nil then
             if QSL_dttab[v] then
-                self:WriteByte(level * 86 + QSL_dttab[v]);
+                self:writeByte(level * 86 + QSL_dttab[v]);
             else
-                self:WriteByte(level * 86 + v - 33);
+                self:writeByte(level * 86 + v - 33);
             end
         else
             level = QSL_dltab[v];

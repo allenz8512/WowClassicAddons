@@ -1,6 +1,3 @@
 <Ui xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
   <Script file="config.lua"/>
-  <Script file="lookupNpcs.lua"/>
-  <Script file="lookupQuests.lua"/>
-  <Script file="lookupObjects.lua"/>
 </Ui>

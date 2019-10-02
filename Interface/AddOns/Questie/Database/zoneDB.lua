@@ -429,7 +429,7 @@ instanceData = {
 
 
 
-function QuestieDBZone:ZoneCreateConversion()
+function QuestieDBZone:zoneCreateConvertion()
   Questie:Debug(DEBUG_DEVELOP, "[QuestieDBZone] Converting ZoneIds")
     for index, Data in ipairs(zoneDataClassicDemo) do
         local buildNr = select(4, GetBuildInfo())

@@ -66,8 +66,8 @@ queryType   Which type of search to run, possible values:
 function QuestieSearch:Search(query, searchType, queryType)
     -- Set up defaults
     queryType = queryType or "chars"
-    local minLengthInt = 1
-    local minLengthChars = 1
+    minLengthInt = 1
+    minLengthChars = 1
     -- Search type specific preparations
     local actualDatabase;
     local NAME_KEY;
