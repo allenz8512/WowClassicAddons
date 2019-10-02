@@ -30,6 +30,11 @@
 -- 1.06
 -- Added check to only load LibClassicDurations version 1.8 or newer
 
+-- 1.07
+-- Added checking for Temporary Weapon Enchants
+-- Added group buffs for Intellect, Fortitude, Spirit, MotW, Shadow Prot,
+--  Might, Wisdom, Salvation, Kings, Light & Sanctuary
+
 -- ****************************************************************************
 -- **                                                                        **
 -- **  Variables                                                             **
@@ -41,8 +46,8 @@ local addonName, BUFFWATCHADDON = ...;
 BUFFWATCHADDON_G = { };
 
 BUFFWATCHADDON.NAME = "Buffwatch Classic";
-BUFFWATCHADDON.VERSION = "1.06";
-BUFFWATCHADDON.RELEASE_DATE = "22 Sep 2019";
+BUFFWATCHADDON.VERSION = "1.07";
+BUFFWATCHADDON.RELEASE_DATE = "01 Oct 2019";
 BUFFWATCHADDON.HELPFRAMENAME = "Buffwatch Help";
 BUFFWATCHADDON.MODE_DROPDOWN_LIST = {
     "Solo",
@@ -125,10 +130,23 @@ BuffwatchConfig = CopyTable(BUFFWATCHADDON.DEFAULTS);
 -- Save player options
 BuffwatchPlayerConfig = CopyTable(BUFFWATCHADDON.PLAYER_DEFAULTS);
 
-local BuffwatchPlayerBuffs = { };  -- List of buffs that are shown for each player
-BuffwatchSaveBuffs = { };          -- List of locked buffs that we save between sessions for each player
+local BuffwatchPlayerBuffs = { };       -- List of buffs that are shown for each player
+local BuffwatchPlayerTempEnch = { };    -- List of temporary enchants that are shown for this player
+BuffwatchSaveBuffs = { };               -- List of locked buffs that we save between sessions for each player
+BuffwatchSaveTempEnch = { };            -- List of locked temporary enchants that we save between sessions for this player
 
 local debugchatframe = DEFAULT_CHAT_FRAME;  -- Frame to output debug messages to
+
+local tempEnchantMapping = {
+    [1] = 16,	--Main hand
+    [2] = 17,	--Off-hand
+    [3] = 18,	--Ranged
+};
+local tempEnchantSlotMapping = {
+    [1] = "Main hand",
+    [2] = "Off hand",
+    [3] = "Ranged",
+};
 
 local UnitAura = _G.UnitAura; -- Use local copy, to be replaced if LibClassicDurations is present
 
@@ -150,6 +168,7 @@ function BUFFWATCHADDON_G.OnLoad(self)
     self:RegisterEvent("ADDON_LOADED");
     self:RegisterEvent("PLAYER_REGEN_ENABLED");
     self:RegisterEvent("PLAYER_REGEN_DISABLED");
+    self:RegisterEvent("UNIT_INVENTORY_CHANGED");
 
     SlashCmdList["BUFFWATCH"] = BUFFWATCHADDON.SlashHandler;
     SLASH_BUFFWATCH1 = "/buffwatch";
@@ -158,25 +177,69 @@ function BUFFWATCHADDON_G.OnLoad(self)
     GroupBuffs.Buff = { };
     GroupBuffs.GroupName = { };
 
-    GroupBuffs.GroupName[1] = "Mage Armor"
+    GroupBuffs.GroupName[1] = "Mage Armor";
     GroupBuffs.Buff["Mage Armor"] = 1;
     GroupBuffs.Buff["Frost Armor"] = 1;
     GroupBuffs.Buff["Ice Armor"] = 1;
 
-    GroupBuffs.GroupName[2] = "Flasks"
-    GroupBuffs.Buff["Flask of Supreme Power"] = 2;
-    GroupBuffs.Buff["Flask of the Titans"] = 2;
-    GroupBuffs.Buff["Flask of Distilled Wisdom"] = 2;
-    GroupBuffs.Buff["Flask of Chromatic Resistance"] = 2;
-    GroupBuffs.Buff["Flask of Petrification"] = 2;
+    GroupBuffs.GroupName[2] = "Intellect";
+    GroupBuffs.Buff["Arcane Intellect"] = 2;
+    GroupBuffs.Buff["Arcane Brilliance"] = 2;
 
-    GroupBuffs.GroupName[3] = "Agility Elixirs"
-    GroupBuffs.Buff["Elixir of the Mongoose"] = 3;
-    GroupBuffs.Buff["Elixir of Greater Agility"] = 3;
+    GroupBuffs.GroupName[3] = "Fortitude";
+    GroupBuffs.Buff["Power Word: Fortitude"] = 3;
+    GroupBuffs.Buff["Prayer of Fortitude"] = 3;
 
-    GroupBuffs.GroupName[4] = "Armor Elixirs"
-    GroupBuffs.Buff["Elixir of Superior Defense"] = 4;
-    GroupBuffs.Buff["Elixir of Greater Defense"] = 4;
+    GroupBuffs.GroupName[4] = "Spirit";
+    GroupBuffs.Buff["Divine Spirit"] = 4;
+    GroupBuffs.Buff["Prayer of Spirit"] = 4;
+
+    GroupBuffs.GroupName[5] = "Mark of the Wild";
+    GroupBuffs.Buff["Mark of the Wild"] = 5;
+    GroupBuffs.Buff["Gift of the Wild"] = 5;
+
+    GroupBuffs.GroupName[6] = "Shadow Protection";
+    GroupBuffs.Buff["Shadow Protection"] = 6;
+    GroupBuffs.Buff["Prayer of Shadow Protection"] = 6;
+
+    GroupBuffs.GroupName[7] = "Might";
+    GroupBuffs.Buff["Blessing of Might"] = 7;
+    GroupBuffs.Buff["Greater Blessing of Might"] = 7;
+
+    GroupBuffs.GroupName[8] = "Wisdom";
+    GroupBuffs.Buff["Blessing of Wisdom"] = 8;
+    GroupBuffs.Buff["Greater Blessing of Wisdom"] = 8;
+
+    GroupBuffs.GroupName[9] = "Salvation";
+    GroupBuffs.Buff["Blessing of Salvation"] = 9;
+    GroupBuffs.Buff["Greater Blessing of Salvation"] = 9;
+
+    GroupBuffs.GroupName[10] = "Kings";
+    GroupBuffs.Buff["Blessing of Kings"] = 10;
+    GroupBuffs.Buff["Greater Blessing of Kings"] = 10;
+
+    GroupBuffs.GroupName[11] = "Light";
+    GroupBuffs.Buff["Blessing of Light"] = 11;
+    GroupBuffs.Buff["Greater Blessing of Light"] = 11;
+
+    GroupBuffs.GroupName[12] = "Sanctuary";
+    GroupBuffs.Buff["Blessing of Sanctuary"] = 12;
+    GroupBuffs.Buff["Greater Blessing of Sanctuary"] = 12;
+
+    GroupBuffs.GroupName[13] = "Flasks";
+    GroupBuffs.Buff["Flask of Supreme Power"] = 13;
+    GroupBuffs.Buff["Flask of the Titans"] = 13;
+    GroupBuffs.Buff["Flask of Distilled Wisdom"] = 13;
+    GroupBuffs.Buff["Flask of Chromatic Resistance"] = 13;
+    GroupBuffs.Buff["Flask of Petrification"] = 13;
+
+    GroupBuffs.GroupName[14] = "Agility Elixirs";
+    GroupBuffs.Buff["Elixir of the Mongoose"] = 14;
+    GroupBuffs.Buff["Elixir of Greater Agility"] = 14;
+
+    GroupBuffs.GroupName[15] = "Armor Elixirs";
+    GroupBuffs.Buff["Elixir of Superior Defense"] = 15;
+    GroupBuffs.Buff["Elixir of Greater Defense"] = 15;
 
     GroupBuffs.Group = { };
 
@@ -184,11 +247,11 @@ function BUFFWATCHADDON_G.OnLoad(self)
     --  which we can iterate through to check for a replacement
     for k, v in pairs(GroupBuffs.Buff) do
 
-      if GroupBuffs.Group[v] == nil then
-        GroupBuffs.Group[v] = { };
-      end
+        if GroupBuffs.Group[v] == nil then
+            GroupBuffs.Group[v] = { };
+        end
 
-      table.insert(GroupBuffs.Group[v], k);
+        table.insert(GroupBuffs.Group[v], k);
 
     end
 
@@ -222,8 +285,8 @@ end
         for i = 1, 10 do
             windowname = GetChatWindowInfo(i);
             if windowname and windowname == "BWDebug" then
-            debugchatframe = _G["ChatFrame"..i];
-            break;
+                debugchatframe = _G["ChatFrame"..i];
+                break;
             end
         end
 
@@ -277,11 +340,21 @@ end
                 BUFFWATCHADDON.ResizeWindow();
             end
 
+        elseif event == "UNIT_INVENTORY_CHANGED" and UnitIsUnit(select(1, ...), "player") then
+
+            -- Check if player gained or lost a temporary enchant
+            local player = Player_Info[UnitName("player")];
+
+            if player ~= nil then
+                BUFFWATCHADDON.Player_GetTemporaryEnchants(player);
+                BUFFWATCHADDON.ResizeWindow();
+            end
+
         elseif event == "PLAYER_REGEN_ENABLED" then
 
             -- We have come out of combat, remove combat restrictions and process any pending events
             for _, v in pairs(Player_Info) do
-                local curr_lock = _G["BuffwatchFrame_PlayerFrame" .. v.ID .. "_Lock"]
+                local curr_lock = _G["BuffwatchFrame_PlayerFrame" .. v.ID .. "_Lock"];
                 curr_lock:Enable();
             end
 
@@ -291,7 +364,7 @@ end
 
             -- We have entered combat, enforce combat restrictions
             for _, v in pairs(Player_Info) do
-                local curr_lock = _G["BuffwatchFrame_PlayerFrame" .. v.ID .. "_Lock"]
+                local curr_lock = _G["BuffwatchFrame_PlayerFrame" .. v.ID .. "_Lock"];
                 curr_lock:Disable();
             end
 
@@ -315,6 +388,7 @@ end
                     player.DeadorDC = DeadorDC;
                     BUFFWATCHADDON.Player_ColourName(player);
                     BUFFWATCHADDON.Player_GetBuffs(player);
+                    BUFFWATCHADDON.Player_GetTemporaryEnchants(player);
                 end
 
             end
@@ -344,7 +418,7 @@ function BUFFWATCHADDON_G.Set_AllChecks(checked)
     -- Toggle all checkboxes on or off
     for _, v in pairs(Player_Info) do
 
-        local curr_lock = _G["BuffwatchFrame_PlayerFrame" .. v.ID .. "_Lock"]
+        local curr_lock = _G["BuffwatchFrame_PlayerFrame" .. v.ID .. "_Lock"];
 
         if curr_lock:GetChecked() ~= checked then
             curr_lock:SetChecked(checked);
@@ -358,10 +432,16 @@ function BUFFWATCHADDON_G.Set_AllChecks(checked)
             if not checked then
                 -- Unchecked, so refresh buff list
                 BUFFWATCHADDON.Player_GetBuffs(v);
+                BUFFWATCHADDON.Player_GetTemporaryEnchants(v);
             else
                 -- Checked, so save buff list
                 BuffwatchSaveBuffs[v.Name] = { };
                 BuffwatchSaveBuffs[v.Name]["Buffs"] = BuffwatchPlayerBuffs[v.Name]["Buffs"];
+
+                if v.IsUnitPlayer then
+                    BuffwatchSaveTempEnch = BuffwatchPlayerTempEnch;
+                end
+
             end
 
         end
@@ -493,12 +573,17 @@ function BUFFWATCHADDON_G.Check_Clicked(self, button, down)
     local playerid = self:GetParent():GetID();
     local checked = self:GetChecked();
     local playername = _G["BuffwatchFrame_PlayerFrame"..playerid.."_NameText"]:GetText();
+    local player = Player_Info[playername];
 
     if checked then
 
         -- Checked, so save buff list
         BuffwatchSaveBuffs[playername] = { };
         BuffwatchSaveBuffs[playername]["Buffs"] = BuffwatchPlayerBuffs[playername]["Buffs"];
+
+        if player.IsUnitPlayer then
+            BuffwatchSaveTempEnch = BuffwatchPlayerTempEnch;
+        end
 
         -- Check the 'Check All' checkbox, if all players are now locked
         if BUFFWATCHADDON.InspectPlayerLocks() then
@@ -514,7 +599,8 @@ function BUFFWATCHADDON_G.Check_Clicked(self, button, down)
     else
         -- Unchecked, so refresh buff list
         BuffwatchFrame_LockAll:SetChecked(false);
-        BUFFWATCHADDON.Player_GetBuffs(Player_Info[playername]);
+        BUFFWATCHADDON.Player_GetBuffs(player);
+        BUFFWATCHADDON.Player_GetTemporaryEnchants(player);
         BUFFWATCHADDON.ResizeWindow();
     end
 
@@ -540,9 +626,10 @@ function BUFFWATCHADDON_G.Buff_Clicked(self, button, down)
 
                 -- Hide all but the clicked buff and adjust positions
                 for i = 1, maxBuffCount do
-                    if _G[playerframe.."_Buff"..i] then
+                    local curr_buff = _G[playerframe.."_Buff"..i];
+                    if curr_buff then
                         if i ~= buffid then
-                            _G[playerframe.."_Buff"..i]:Hide();
+                            curr_buff:Hide();
                             BuffwatchPlayerBuffs[playername]["Buffs"][i] = nil;
                         else
                             self:SetPoint("TOPLEFT", playerframe.."_Name", "TOPLEFT", maxnamewidth + 5, 4);
@@ -550,6 +637,22 @@ function BUFFWATCHADDON_G.Buff_Clicked(self, button, down)
                     else
                         break;
                     end
+                end
+
+                -- Temporary Enchants are always shown last, so just hide them
+                if Player_Info[playername].IsUnitPlayer then
+                    if BUFFWATCHADDON.GetLen(BuffwatchPlayerTempEnch) > 0 then
+                        for i = 1, 3 do
+                            local curr_buff = _G[playerframe.."_TemporaryEnchant"..i];
+                            if curr_buff then
+                                curr_buff:Hide();
+                                BuffwatchPlayerTempEnch[i] = nil;
+                            end
+                        end
+                    end
+
+                    BuffwatchSaveTempEnch = { };
+
                 end
 
                 BuffwatchSaveBuffs[playername]["Buffs"] = BuffwatchPlayerBuffs[playername]["Buffs"];
@@ -569,6 +672,13 @@ function BUFFWATCHADDON_G.Buff_Clicked(self, button, down)
                 if nextbuffid then
                     _G[playerframe.."_Buff"..nextbuffid]:ClearAllPoints();
                     _G[playerframe.."_Buff"..nextbuffid]:SetPoint(self:GetPoint());
+                else
+                    -- Last buff, check for Temp Enchants and re-anchor first
+                    local firsttempenchid = next(BuffwatchPlayerTempEnch, nil);
+                    if firsttempenchid then
+                        _G[playerframe.."_TemporaryEnchant"..firsttempenchid]:ClearAllPoints();
+                        _G[playerframe.."_TemporaryEnchant"..firsttempenchid]:SetPoint(self:GetPoint());
+                    end
                 end
 
                 if BuffwatchPlayerConfig.HideUnmonitored then
@@ -595,6 +705,86 @@ BUFFWATCHADDON.Debug("Array : Player="..playername..", Buff="..BuffwatchPlayerBu
 BUFFWATCHADDON.Debug("Attribute : Player="..UnitName(curr_buff:GetAttribute("unit1"))..", Buff="..curr_buff:GetAttribute("spell1"));
 end ]]
     end
+end
+
+function BUFFWATCHADDON_G.TemporaryEnchant_Clicked(self, button, down)
+
+    local playerid = self:GetParent():GetID();
+    local playerframe = "BuffwatchFrame_PlayerFrame"..playerid;
+
+    if _G[playerframe.."_Lock"]:GetChecked() and IsAltKeyDown() then
+
+        if InCombatLockdown() then
+
+            BUFFWATCHADDON.Print("Cannot hide buffs while in combat.");
+
+        else
+
+            local buffid = self:GetID();
+            local playername = _G[playerframe.."_NameText"]:GetText();
+
+            if button == "LeftButton" then
+
+                -- Hide all normal buffs
+                for i = 1, maxBuffCount do
+                    local curr_buff = _G[playerframe.."_Buff"..i];
+                    if curr_buff then
+                        curr_buff:Hide();
+                        BuffwatchPlayerBuffs[playername]["Buffs"][i] = nil;
+                    else
+                        break;
+                    end
+                end
+
+                -- Hide all but the clicked temporary enchant, and adjust positions
+                for i = 1, 3 do
+                    local curr_buff = _G[playerframe.."_TemporaryEnchant"..i];
+                    if curr_buff then
+                        if i ~= buffid then
+                            curr_buff:Hide();
+                            BuffwatchPlayerTempEnch[i] = nil;
+                        else
+                            self:SetPoint("TOPLEFT", playerframe.."_Name", "TOPLEFT", maxnamewidth + 5, 4);
+                        end
+                    end
+                end
+
+                BuffwatchSaveBuffs[playername]["Buffs"] = BuffwatchPlayerBuffs[playername]["Buffs"];
+                BuffwatchSaveTempEnch = BuffwatchPlayerTempEnch;
+
+                BUFFWATCHADDON.ResizeWindow();
+
+            elseif button == "RightButton" then
+
+                local nextbuffid = next(BuffwatchPlayerTempEnch, buffid);
+
+                -- Hide the clicked buff
+                self:Hide();
+                BuffwatchPlayerTempEnch[buffid] = nil;
+
+                -- Re-anchor any following buff
+                if nextbuffid then
+                    _G[playerframe.."_TemporaryEnchant"..nextbuffid]:ClearAllPoints();
+                    _G[playerframe.."_TemporaryEnchant"..nextbuffid]:SetPoint(self:GetPoint());
+                end
+
+                if BuffwatchPlayerConfig.HideUnmonitored then
+                    if _G[playerframe.."_Lock"]:GetChecked()
+                        and next(BuffwatchPlayerBuffs[playername]["Buffs"], nil) == nil
+                        and next(BuffwatchPlayerTempEnch, nil) == nil then
+
+                        BUFFWATCHADDON.PositionPlayerFrame(playerid);
+                    end
+                end
+
+                BUFFWATCHADDON.ResizeWindow();
+
+            end
+
+        end
+
+    end
+
 end
 
 function BUFFWATCHADDON_G.Buff_Tooltip(self)
@@ -636,6 +826,23 @@ function BUFFWATCHADDON_G.Buff_Tooltip(self)
     end
 
     GameTooltip:Show();
+end
+
+function BUFFWATCHADDON_G.TemporaryEnchant_Tooltip(self)
+
+    local i = self:GetID();
+    local tempenchants = { GetWeaponEnchantInfo() };
+
+    if tempenchants[4 * (i - 1) + 1] == true then
+        -- If the temporary enchant is present, show the tooltip for it
+        GameTooltip:SetOwner(self, "ANCHOR_BOTTOMLEFT");
+        GameTooltip:SetInventoryItem("player", tempEnchantMapping[i]);
+    else
+        -- If the buff isn't present, create a tooltip
+        GameTooltip:SetOwner(self, "ANCHOR_BOTTOMLEFT");
+        GameTooltip:SetText(BuffwatchPlayerTempEnch[i]["Buff"], 1, 1, 0);
+    end
+
 end
 
 -- ****************************************************************************
@@ -807,6 +1014,8 @@ end
     IsPet - true if a pet (pets are sorted last, and can be hidden)
     SubGroup - 1 if in party, or 1-8 if in raid (Used for sorting)
     DeadorDC - For greying out player frames if dead or disconnected
+    LastBuffId - Last visible buffbuttonid for attaching Temp Enchant buffbuttons
+    IsUnitPlayer - Is this our player
     Checked - Used only in this function to determine players that are no longer present
 ]]--
 function BUFFWATCHADDON.GetPlayerInfo()
@@ -882,6 +1091,10 @@ function BUFFWATCHADDON.GetPlayerInfo()
                     end
 
                     Player_Info[unitname]["UNIT_ID"] = UNIT_IDs[i];
+                    if UnitIsUnit(UNIT_IDs[i], "player") then
+                        Player_Info[unitname]["IsUnitPlayer"] = true;
+                    end
+
                     -- Setup left and right click actions on the name button
                     namebutton:SetAttribute("type1", "target");
                     namebutton:SetAttribute("type2", "assist");
@@ -892,9 +1105,9 @@ function BUFFWATCHADDON.GetPlayerInfo()
                     if not BuffwatchPlayerBuffs[unitname] then
                         BuffwatchPlayerBuffs[unitname] = { };
                         BuffwatchPlayerBuffs[unitname]["Buffs"] = { };
-
                         BUFFWATCHADDON.Player_LoadBuffs(Player_Info[unitname]);
                         BUFFWATCHADDON.Player_GetBuffs(Player_Info[unitname]);
+                        BUFFWATCHADDON.Player_GetTemporaryEnchants(Player_Info[unitname]);
                     end
 
                     positionframe = true;
@@ -1058,7 +1271,9 @@ function BUFFWATCHADDON.PositionPlayerFrame(playerid)
     fpos, playerdata = BUFFWATCHADDON.GetPlayerFramePosition(playerid);
 
     -- Insert frame into new order if it should be visible (ie. hide it if it is locked with no buffs and HideUnmonitored is set)
-    if fpos and (not BuffwatchPlayerConfig.HideUnmonitored or (next(BuffwatchPlayerBuffs[playerdata.Name]["Buffs"], nil) ~= nil) or not _G["BuffwatchFrame_PlayerFrame"..playerid.."_Lock"]:GetChecked()) then
+    if fpos and (not BuffwatchPlayerConfig.HideUnmonitored or not _G["BuffwatchFrame_PlayerFrame"..playerid.."_Lock"]:GetChecked()
+        or next(BuffwatchPlayerBuffs[playerdata.Name]["Buffs"], nil) ~= nil
+        or (playerdata.IsUnitPlayer and next(BuffwatchPlayerTempEnch, nil) ~= nil)) then
 
         -- Insert back into current order in new position
         table.insert(Current_Order, fpos,  playerdata);
@@ -1119,7 +1334,10 @@ function BUFFWATCHADDON.GetPlayerFramePosition(playerid)
         if BuffwatchPlayerConfig.HideUnmonitored then
 
             -- Adjust final player count, if any frames are hidden
-            if _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Lock"]:GetChecked() and (next(BuffwatchPlayerBuffs[v.Name]["Buffs"], nil) == nil) then
+            if _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Lock"]:GetChecked()
+                and next(BuffwatchPlayerBuffs[v.Name]["Buffs"], nil) == nil
+                and next(BuffwatchPlayerTempEnch, nil) == nil then
+
                 hiddencount = hiddencount + 1;
             end
 
@@ -1210,6 +1428,7 @@ function BUFFWATCHADDON.GetAllBuffs()
 
     for _, v in pairs(Player_Info) do
         BUFFWATCHADDON.Player_GetBuffs(v);
+        BUFFWATCHADDON.Player_GetTemporaryEnchants(v);
     end
 
     BUFFWATCHADDON.ResizeWindow();
@@ -1234,7 +1453,7 @@ function BUFFWATCHADDON.Player_GetBuffs(v)
 
             -- Setup buff filter
             local showbuffs = "HELPFUL";
-            if BuffwatchPlayerConfig.ShowAllForPlayer == false or UnitIsUnit(v.UNIT_ID, "player") == false then
+            if BuffwatchPlayerConfig.ShowAllForPlayer == false or not v.IsUnitPlayer then
                 if BuffwatchPlayerConfig.ShowCastableBuffs == true then
                     if BuffwatchPlayerConfig.ShowOnlyMine == true then
                         showbuffs = "HELPFUL|RAID|PLAYER";
@@ -1246,7 +1465,7 @@ function BUFFWATCHADDON.Player_GetBuffs(v)
                 end
             end
 
-            local lastshownid = 0;
+            local lastbuffid = 0;
 
             for i = 1, maxBuffCount do
 
@@ -1262,13 +1481,13 @@ function BUFFWATCHADDON.Player_GetBuffs(v)
                         curr_buff = BUFFWATCHADDON.CreateBuffButton(v.ID, i);
                     end
 
-                    if lastshownid == 0 then
+                    if lastbuffid == 0 then
                         curr_buff:SetPoint("TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_Name", "TOPLEFT", maxnamewidth + 5, 4);
                     else
-                        curr_buff:SetPoint("TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_Buff"..lastshownid, "TOPRIGHT");
+                        curr_buff:SetPoint("TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_Buff"..lastbuffid, "TOPRIGHT");
                     end
 
-                    lastshownid = i;
+                    lastbuffid = i;
 
                     local curr_buff_icon = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Buff"..i.."Icon"];
 
@@ -1308,6 +1527,21 @@ function BUFFWATCHADDON.Player_GetBuffs(v)
 
             end
 
+            if v.IsUnitPlayer then
+                Player_Info[v.Name]["LastBuffId"] = lastbuffid;
+
+                -- Re-attach the first temp enchant
+                local i = next(BuffwatchPlayerTempEnch);
+                if i then
+                    local curr_buff = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_TemporaryEnchant"..i];
+                    if lastbuffid == 0 then
+                        curr_buff:SetPoint("TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_Name", "TOPLEFT", maxnamewidth + 5, 4);
+                    else
+                        curr_buff:SetPoint("TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_Buff"..lastbuffid, "TOPRIGHT");
+                    end
+                end
+            end
+
         end
 
     else
@@ -1323,9 +1557,10 @@ function BUFFWATCHADDON.Player_GetBuffs(v)
 
                 local curr_buff = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Buff"..i];
                 if not curr_buff then break; end
-                local curr_buff_icon = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Buff"..i.."Icon"];
 
                 if curr_buff:IsShown() then
+
+                    local curr_buff_icon = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Buff"..i.."Icon"];
 
                     -- Set buff icon to grey if player is dead or offline
                     if v.DeadorDC == 1 then
@@ -1361,19 +1596,17 @@ function BUFFWATCHADDON.Player_GetBuffs(v)
                                 -- Iterate Group for this buff
                                 for _, val in ipairs(GroupBuffs.Group[buffGroup]) do
 
-                                  if val ~= buff then
-                                    -- note: may need to start passing castername in here if we end up
-                                    --       having Special Buffs that also have replacements
-                                    buffid = BUFFWATCHADDON.FindBuff(playerbuffs, val);
+                                    if val ~= buff then
+                                        -- note: may need to start passing castername in here if we end up
+                                        --       having Special Buffs that also have replacements
+                                        buffid = BUFFWATCHADDON.FindBuff(playerbuffs, val);
 
-                                    if buffid ~= 0 then
-
-                                      buff = val;
-                                      break;
+                                        if buffid ~= 0 then
+                                            buff = val;
+                                            break;
+                                        end
 
                                     end
-
-                                  end
 
                                 end
 
@@ -1454,6 +1687,125 @@ function BUFFWATCHADDON.Player_GetBuffs(v)
 
 end
 
+function BUFFWATCHADDON.Player_GetTemporaryEnchants(v)
+
+    if not v.IsUnitPlayer then return; end
+
+    local player_lock = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Lock"];
+
+    if not player_lock:GetChecked() then
+
+        if InCombatLockdown() then
+            BUFFWATCHADDON.Add_InCombat_Events({"Player_GetTemporaryEnchants", v});
+        else
+            BUFFWATCHADDON.Player_CreateTemporaryEnchants(v, GetWeaponEnchantInfo());
+        end
+
+    else
+
+        local lockedbuffcount = BUFFWATCHADDON.GetLen(BuffwatchPlayerTempEnch);
+
+        if lockedbuffcount > 0 then
+
+            local tempenchants = { GetWeaponEnchantInfo() };
+
+            for i = 1, 3 do
+
+                local curr_buff = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_TemporaryEnchant"..i];
+                if curr_buff and curr_buff:IsShown() then
+
+                    local curr_buff_icon = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_TemporaryEnchant"..i.."Icon"];
+
+                    -- Set buff icon to grey if player is dead or offline
+                    if v.DeadorDC == 1 then
+
+                        curr_buff_icon:SetVertexColor(0.4,0.4,0.4);
+
+                    else
+
+                        if tempenchants[4 * (i - 1) + 1] == true then
+                            -- Set buff icon to its normal colour if it exists
+                            curr_buff_icon:SetVertexColor(1,1,1);
+                            -- Reset the icon in case the weapon has changed
+                            local icon = GetInventoryItemTexture(v.UNIT_ID, tempEnchantMapping[i]);
+                            curr_buff_icon:SetTexture(icon);
+                            BuffwatchPlayerTempEnch[i]["Icon"] = icon;
+                        else
+                            curr_buff_icon:SetVertexColor(1,0,0);
+                        end
+
+                    end
+
+                end
+
+            end
+
+        end
+
+    end
+
+end
+
+function BUFFWATCHADDON.Player_CreateTemporaryEnchants(v, ...)
+
+    local numVals = select("#", ...);
+    local numItems = numVals / 4;
+    local attachFrame;
+    local teid = 0;
+
+    if numItems ~= 0 then
+        local lastbuffid = Player_Info[v.Name]["LastBuffId"];
+        if lastbuffid == 0 then
+            attachFrame = { "TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_Name", "TOPLEFT", maxnamewidth + 5, 4 };
+        else
+            attachFrame = { "TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_Buff"..lastbuffid, "TOPRIGHT" };
+        end
+    end
+
+    BuffwatchPlayerTempEnch = { };
+    BuffwatchSaveTempEnch = { };
+
+    for i = 1, 3 do
+        -- Check for temporary weapon enchant
+        local hasEnchant, enchantExpiration = select(4 * (i - 1) + 1, ...);
+        local curr_buff = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_TemporaryEnchant"..i];
+
+        if hasEnchant then
+
+            if curr_buff == nil then
+                curr_buff = BUFFWATCHADDON.CreateTemporaryEnchantButton(v.ID, i);
+            end
+            if teid == 0 then
+                curr_buff:SetPoint(unpack(attachFrame));
+            else
+                curr_buff:SetPoint("TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_TemporaryEnchant"..teid, "TOPRIGHT");
+            end
+
+            teid = i;
+
+            local curr_buff_icon = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_TemporaryEnchant"..i.."Icon"];
+
+            curr_buff_icon:SetVertexColor(1,1,1);
+            local icon = GetInventoryItemTexture(v.UNIT_ID, tempEnchantMapping[i]);
+            curr_buff_icon:SetTexture(icon);
+            curr_buff:Show();
+            BuffwatchPlayerTempEnch[i] = { };
+            BuffwatchPlayerTempEnch[i]["Buff"] = tempEnchantSlotMapping[i].." temporary enchant";
+            BuffwatchPlayerTempEnch[i]["Icon"] = icon;
+
+        else
+
+            if curr_buff then
+                local curr_buff_icon = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_TemporaryEnchant"..i.."Icon"];
+
+                curr_buff:Hide();
+                curr_buff_icon:SetTexture(nil);
+            end
+
+        end
+    end
+end
+
 function BUFFWATCHADDON.GetPlayerBuffs(unitid)
 
     local playerbuffs = { };
@@ -1500,10 +1852,15 @@ function BUFFWATCHADDON.SetBuffAlignment()
 
 end
 
--- Setup buff list for the player based on our BuffwatchSaveBuffs list
+-- Setup buff list for the player based on our BuffwatchSaveBuffs & BuffwatchSaveTempEnch lists
 function BUFFWATCHADDON.Player_LoadBuffs(v)
 
+    local lastbuffid = 0;
+    local savedbuffs = false;
+
     if BuffwatchSaveBuffs[v.Name] then
+
+        savedbuffs = true;
 
         local tmp = BuffwatchSaveBuffs[v.Name]["Buffs"];
 
@@ -1519,8 +1876,6 @@ function BUFFWATCHADDON.Player_LoadBuffs(v)
         end
 
         BuffwatchPlayerBuffs[v.Name]["Buffs"] = BuffwatchSaveBuffs[v.Name]["Buffs"];
-
-        local playerbuffs = BUFFWATCHADDON.GetPlayerBuffs(v.UNIT_ID);
 
         for i = 1, maxBuffCount do
 
@@ -1539,9 +1894,11 @@ function BUFFWATCHADDON.Player_LoadBuffs(v)
                     curr_buff:SetPoint("TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_Buff"..(i-1), "TOPRIGHT");
                 end
 
+                lastbuffid = i;
+
                 local curr_buff_icon = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Buff"..i.."Icon"];
 
-                curr_buff_icon:SetVertexColor(1,1,1);
+                curr_buff_icon:SetVertexColor(0.4,0.4,0.4);
                 curr_buff_icon:SetTexture(BuffwatchSaveBuffs[v.Name]["Buffs"][i]["Icon"]);
                 curr_buff:Show();
 
@@ -1550,35 +1907,6 @@ function BUFFWATCHADDON.Player_LoadBuffs(v)
                 curr_buff:SetAttribute("type", "spell");
                 curr_buff:SetAttribute("unit1", v.UNIT_ID);
                 curr_buff:SetAttribute("spell1", buff);
---BUFFWATCHADDON.Debug("LoadBuffs: Player="..v.Name)
---BUFFWATCHADDON.Debug("LoadBuffs: Buff="..buff)
-
-                local castername;
-                if SpecialBuffs[buff] == 1 then
-                    castername = BuffwatchSaveBuffs[v.Name]["Buffs"][i]["CasterName"] or "";
-                end
-
-                local buffid = BUFFWATCHADDON.FindBuff(playerbuffs, buff, castername);
-
-                if buffid ~= 0 then
-                    local caster = playerbuffs[buffid]["Caster"];
-
-                    if caster then
-                        BuffwatchPlayerBuffs[v.Name]["Buffs"][i]["CasterName"] = UnitName(caster);
-                    end
-
-                    local duration = playerbuffs[buffid]["Duration"];
-                    if BuffwatchConfig.Spirals == true and duration and duration > 0 then
-                        local expTime = playerbuffs[buffid]["ExpTime"];
---BUFFWATCHADDON.Debug("LoadBuffs: BuffID="..i..", expTime="..expTime..",duration="..duration)
-                        curr_buff.cooldown:Show();
-                        curr_buff.cooldown:SetHideCountdownNumbers(BuffwatchConfig.HideCooldownText); -- For Blizz text
-                        curr_buff.cooldown:SetCooldown(expTime - duration, duration);
-                    else
---BUFFWATCHADDON.Debug("LoadBuffs: BuffID="..i..", Hiding")
-                        curr_buff.cooldown:Hide();
-                    end
-                end
 
             else
 
@@ -1597,13 +1925,47 @@ function BUFFWATCHADDON.Player_LoadBuffs(v)
 
         end
 
+    end
+
+    local teid = 0;
+
+    if v.IsUnitPlayer and next(BuffwatchSaveTempEnch) then
+        -- Load temporary enchants
+        local attachFrame;
+
+        if lastbuffid == 0 then
+            attachFrame = { "TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_Name", "TOPLEFT", maxnamewidth + 5, 4 };
+        else
+            attachFrame = { "TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_Buff"..lastbuffid, "TOPRIGHT" };
+        end
+
+        BuffwatchPlayerTempEnch = BuffwatchSaveTempEnch;
+
+        for i = 1, 3 do
+            if BuffwatchSaveTempEnch[i] then
+                local curr_buff = BUFFWATCHADDON.CreateTemporaryEnchantButton(v.ID, i);
+                if teid == 0 then
+                    curr_buff:SetPoint(unpack(attachFrame));
+                else
+                    curr_buff:SetPoint("TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_TemporaryEnchant"..teid, "TOPRIGHT");
+                end
+
+                teid = i;
+
+                local curr_buff_icon = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_TemporaryEnchant"..i.."Icon"];
+
+                curr_buff_icon:SetVertexColor(0.4,0.4,0.4);
+                curr_buff_icon:SetTexture(BuffwatchSaveTempEnch[i]["Icon"]);
+                curr_buff:Show();
+            end
+        end
+    end
+
+    if savedbuffs or teid > 0 then
         _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Lock"]:SetChecked(true);
-
     else
-
         _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Lock"]:SetChecked(false);
         BuffwatchFrame_LockAll:SetChecked(false);
-
     end
 
 end
@@ -1621,6 +1983,21 @@ function BUFFWATCHADDON.CreateBuffButton(playerframeid, buffbuttonid)
     buffbutton.cooldown = cooldown;
 
     return buffbutton;
+end
+
+function BUFFWATCHADDON.CreateTemporaryEnchantButton(playerframeid, tebuttonid)
+    local tebutton = CreateFrame("Button", "BuffwatchFrame_PlayerFrame"..playerframeid.."_TemporaryEnchant"..tebuttonid,
+        _G["BuffwatchFrame_PlayerFrame"..playerframeid], "Buffwatch_TemporaryEnchant_Template");
+    tebutton:SetID(tebuttonid);
+
+    local cooldown = CreateFrame("Cooldown", "BuffwatchFrame_PlayerFrame"..playerframeid.."_TemporaryEnchant"..tebuttonid.."_Cooldown",
+        tebutton, "CooldownFrameTemplate");
+    cooldown:SetAllPoints(tebutton);
+    cooldown:SetReverse(true);
+    cooldown:SetScale(BuffwatchConfig.CooldownTextScale);
+    tebutton.cooldown = cooldown;
+
+    return tebutton;
 end
 
 function BUFFWATCHADDON.SetMinimized(self, minimized)
@@ -1685,7 +2062,10 @@ function BUFFWATCHADDON.ResizeWindow()
 
                 -- Only count player frames that are not hidden
                 for _, v in pairs(Player_Info) do
-                    if not _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Lock"]:GetChecked() or (next(BuffwatchPlayerBuffs[v.Name]["Buffs"], nil) ~= nil) then
+                    if not _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Lock"]:GetChecked()
+                        or next(BuffwatchPlayerBuffs[v.Name]["Buffs"], nil) ~= nil
+                        or next(BuffwatchPlayerTempEnch, nil) ~= nil then
+
                         players = players + 1;
                     end
                 end
@@ -1696,9 +2076,12 @@ function BUFFWATCHADDON.ResizeWindow()
 
             local maxbuffs = 0;
   -- ***** may need to move this to only check when buffs actually get hidden or shown
-            for _, v in pairs(BuffwatchPlayerBuffs) do
+            for k, v in pairs(BuffwatchPlayerBuffs) do
 
                 len = BUFFWATCHADDON.GetLen(v.Buffs);
+                if Player_Info[k].IsUnitPlayer then
+                    len = len + BUFFWATCHADDON.GetLen(BuffwatchPlayerTempEnch);
+                end
 
                 if maxbuffs < len then
                     maxbuffs = len;
@@ -1755,7 +2138,7 @@ function BUFFWATCHADDON.Add_InCombat_Events(value)
 
         if value[1] == v[1] then
 
-            if value[1] == "GetBuffs" then
+            if value[1] == "GetBuffs" or value[1] == "Player_GetTemporaryEnchants" then
 
                 if value[2].ID == v[2].ID then
                     found = true;
@@ -1765,7 +2148,6 @@ function BUFFWATCHADDON.Add_InCombat_Events(value)
             elseif value[1] == "GetPlayerInfo" then
                 found = true;
                 break;
-
             end
 
         end
@@ -1796,6 +2178,12 @@ function BUFFWATCHADDON.Process_InCombat_Events()
 
             if Player_Info[t[2].Name] ~= nil then
                 BUFFWATCHADDON.Player_GetBuffs(t[2]);
+            end
+
+        elseif t[1] == "Player_GetTemporaryEnchants" then
+
+            if Player_Info[t[2].Name] ~= nil then
+                BUFFWATCHADDON.Player_GetTemporaryEnchants(t[2]);
             end
 
         end
@@ -2109,8 +2497,8 @@ function BUFFWATCHADDON.Wait(delay, func, ...)
 end
 
 function BUFFWATCHADDON.CopyDefaults(from, to)
-    if not from then return { } end
-    if not to then to = { } end
+    if not from then return { }; end
+    if not to then to = { }; end
 
     for k, v in pairs(from) do
         if type(v) == "table" then
@@ -2230,9 +2618,9 @@ function BUFFWATCHADDON_G.GetBuffwatchPlayerBuffs()
 
 end
 
-function BUFFWATCHADDON_G.GetBuffwatchSaveBuffs()
+function BUFFWATCHADDON_G.GetBuffwatchPlayerTempEnch()
 
-    return BuffwatchSaveBuffs;
+    return BuffwatchPlayerTempEnch;
 
 end
 
@@ -2247,4 +2635,4 @@ function BUFFWATCHADDON_G.GetGroupBuffs()
     return GroupBuffs;
 
 end
-]]
+--]]
