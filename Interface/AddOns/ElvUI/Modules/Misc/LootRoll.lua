@@ -48,7 +48,6 @@ local function SetTip(frame)
 	local GameTooltip = _G.GameTooltip
 	GameTooltip:SetOwner(frame, "ANCHOR_RIGHT")
 	GameTooltip:SetText(frame.tiptext)
-	if frame:IsEnabled() == 0 then GameTooltip:AddLine("|cffff3333"..L["Can't Roll"]) end
 	for name, tbl in pairs(frame.parent.rolls) do
 		if rolltypes[tbl[1]] == rolltypes[frame.rolltype] then
 			local classColor = _G.CUSTOM_CLASS_COLORS and _G.CUSTOM_CLASS_COLORS[tbl[2]] or _G.RAID_CLASS_COLORS[tbl[2]]
@@ -218,17 +217,32 @@ function M:START_LOOT_ROLL(_, rollID, time)
 	f.greed:SetText(0)
 	f.pass:SetText(0)
 
-	local texture, name, _, quality, bop, canNeed, canGreed = GetLootRollItemInfo(rollID)
+	local texture, name, _, quality, bop, canNeed, canGreed, _, reasonNeed, reasonGreed = GetLootRollItemInfo(rollID)
 
 	f.button.icon:SetTexture(texture)
 	f.button.link = GetLootRollItemLink(rollID)
 
-	if canNeed then f.needbutt:Enable() else f.needbutt:Disable() end
-	if canGreed then f.greedbutt:Enable() else f.greedbutt:Disable() end
 	SetDesaturation(f.needbutt:GetNormalTexture(), not canNeed)
 	SetDesaturation(f.greedbutt:GetNormalTexture(), not canGreed)
-	if canNeed then f.needbutt:SetAlpha(1) else f.needbutt:SetAlpha(0.2) end
-	if canGreed then f.greedbutt:SetAlpha(1) else f.greedbutt:SetAlpha(0.2) end
+
+	if canNeed then
+		f.needbutt:Enable()
+		f.needbutt:SetAlpha(1)
+		f.needbutt.tiptext = NEED
+	else
+		f.needbutt:Disable()
+		f.needbutt:SetAlpha(0.2)
+		f.needbutt.tiptext = _G["LOOT_ROLL_INELIGIBLE_REASON"..reasonNeed]
+	end
+	if canGreed then
+		f.greedbutt:Enable()
+		f.greedbutt:SetAlpha(1)
+		f.greedbutt.tiptext = GREED
+	else
+		f.greedbutt:Disable()
+		f.greedbutt:SetAlpha(0.2)
+		f.greedbutt.tiptext = _G["LOOT_ROLL_INELIGIBLE_REASON"..reasonGreed]
+	end
 
 	f.fsbind:SetText(bop and "BoP" or "BoE")
 	f.fsbind:SetVertexColor(bop and 1 or .3, bop and .3 or 1, bop and .1 or .3)

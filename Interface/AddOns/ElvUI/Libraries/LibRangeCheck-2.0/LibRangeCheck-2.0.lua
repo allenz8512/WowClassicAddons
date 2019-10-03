@@ -140,9 +140,9 @@ HarmSpells["PALADIN"] = {
 }
 
 FriendSpells["PRIEST"] = {
-    527, -- ["Purify"], -- 40
-    17, -- ["Power Word: Shield"], -- 40
+    2050, -- Lesser Heal
 }
+
 HarmSpells["PRIEST"] = {
     589, -- ["Shadow Word: Pain"], -- 40
     5019, -- ["Shoot"], -- 30

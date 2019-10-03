@@ -21,9 +21,7 @@ local function LoadSkin()
 	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.tradeskill then return end
 
 	local TradeSkillFrame = _G.TradeSkillFrame
-	S:HandleFrame(TradeSkillFrame, true)
-	TradeSkillFrame.backdrop:Point('TOPLEFT', 11, -12)
-	TradeSkillFrame.backdrop:Point('BOTTOMRIGHT', -32, 76)
+	S:HandleFrame(TradeSkillFrame, true, nil, 11, -12, -32, 76)
 
 	_G.TradeSkillRankFrameBorder:StripTextures()
 
@@ -102,28 +100,17 @@ local function LoadSkin()
 
 	_G.TradeSkillSkillIcon:Size(40)
 	_G.TradeSkillSkillIcon:Point('TOPLEFT', 2, -3)
-	_G.TradeSkillSkillIcon:StyleButton(nil, true)
-	_G.TradeSkillSkillIcon:SetTemplate('Default')
 
 	for i = 1, _G.MAX_TRADE_SKILL_REAGENTS do
-		local reagent = _G['TradeSkillReagent'..i]
 		local icon = _G['TradeSkillReagent'..i..'IconTexture']
 		local count = _G['TradeSkillReagent'..i..'Count']
 		local nameFrame = _G['TradeSkillReagent'..i..'NameFrame']
 
-		icon:SetTexCoord(unpack(E.TexCoords))
+		S:HandleIcon(icon, true)
 		icon:SetDrawLayer('OVERLAY')
-
-		icon.backdrop = CreateFrame('Frame', nil, reagent)
-		icon.backdrop:SetFrameLevel(reagent:GetFrameLevel() - 1)
-		icon.backdrop:SetTemplate('Default')
-		icon.backdrop:SetOutside(icon)
-
-		icon:SetParent(icon.backdrop)
-		count:SetParent(icon.backdrop)
 		count:SetDrawLayer('OVERLAY')
 
-		nameFrame:Kill()
+		nameFrame:SetAlpha(0)
 	end
 
 	_G.TradeSkillHighlight:SetTexture(E.Media.Textures.Highlight)
@@ -138,18 +125,16 @@ local function LoadSkin()
 	S:HandleEditBox(_G.TradeSkillInputBox)
 	S:HandleNextPrevButton(_G.TradeSkillIncrementButton)
 
-	S:HandleCloseButton(_G.TradeSkillFrameCloseButton)
+	S:HandleCloseButton(_G.TradeSkillFrameCloseButton, TradeSkillFrame.backdrop)
+
+	_G.TradeSkillSkillIcon:CreateBackdrop()
 
 	hooksecurefunc('TradeSkillFrame_SetSelection', function(id)
 		local skillType = select(2, GetTradeSkillInfo(id))
 		if skillType == 'header' then return end
 
 		if _G.TradeSkillSkillIcon:GetNormalTexture() then
-			_G.TradeSkillSkillIcon:SetAlpha(1)
-			_G.TradeSkillSkillIcon:GetNormalTexture():SetTexCoord(unpack(E.TexCoords))
-			_G.TradeSkillSkillIcon:GetNormalTexture():SetInside()
-		else
-			_G.TradeSkillSkillIcon:SetAlpha(0)
+			S:HandleIcon(_G.TradeSkillSkillIcon:GetNormalTexture())
 		end
 
 		local skillLink = GetTradeSkillItemLink(id)
@@ -161,10 +146,10 @@ local function LoadSkin()
 			if quality and quality > 1 then
 				r, g, b = GetItemQualityColor(quality)
 
-				_G.TradeSkillSkillIcon:SetBackdropBorderColor(r, g, b)
+				_G.TradeSkillSkillIcon.backdrop:SetBackdropBorderColor(r, g, b)
 				_G.TradeSkillSkillName:SetTextColor(r, g, b)
 			else
-				_G.TradeSkillSkillIcon:SetBackdropBorderColor(unpack(E.media.bordercolor))
+				_G.TradeSkillSkillIcon.backdrop:SetBackdropBorderColor(unpack(E.media.bordercolor))
 				_G.TradeSkillSkillName:SetTextColor(1, 1, 1)
 			end
 		end
@@ -174,7 +159,6 @@ local function LoadSkin()
 			local reagentLink = GetTradeSkillReagentItemLink(id, i)
 
 			if reagentLink then
-				local reagent = _G['TradeSkillReagent'..i]
 				local icon = _G['TradeSkillReagent'..i..'IconTexture']
 				local quality = select(3, GetItemInfo(reagentLink))
 
@@ -183,7 +167,6 @@ local function LoadSkin()
 					r, g, b = GetItemQualityColor(quality)
 
 					icon.backdrop:SetBackdropBorderColor(r, g, b)
-					reagent:SetBackdropBorderColor(r, g, b)
 
 					if playerReagentCount < reagentCount then
 						name:SetTextColor(0.5, 0.5, 0.5)
@@ -191,7 +174,6 @@ local function LoadSkin()
 						name:SetTextColor(r, g, b)
 					end
 				else
-					reagent:SetBackdropBorderColor(unpack(E.media.bordercolor))
 					icon.backdrop:SetBackdropBorderColor(unpack(E.media.bordercolor))
 				end
 			end

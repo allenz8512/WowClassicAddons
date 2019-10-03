@@ -55,7 +55,7 @@ local function LoadSkin()
 		end
 	end)
 
-	local close = _G.GMChatFrameCloseButton
+	local GMChatFrameCloseButton = _G.GMChatFrameCloseButton
 	S:HandleCloseButton(GMChatFrameCloseButton, GMChatTab.backdrop, 2, 4)
 
 	TicketStatusFrame:HookScript("OnShow", function(self)

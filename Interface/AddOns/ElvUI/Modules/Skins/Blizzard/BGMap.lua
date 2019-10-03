@@ -44,7 +44,7 @@ local function LoadSkin()
 	local BattlefieldMapFrame = _G.BattlefieldMapFrame
 	local BattlefieldMapTab = _G.BattlefieldMapTab
 
-	S:HandleFrame(BattlefieldMapFrame, false)
+	S:HandleFrame(BattlefieldMapFrame, true)
 
 	refreshAlpha() -- will need this soon
 	BattlefieldMapFrame:SetClampedToScreen(true)

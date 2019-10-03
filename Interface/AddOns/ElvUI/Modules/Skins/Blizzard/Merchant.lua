@@ -97,7 +97,7 @@ local function LoadSkin()
 
 	S:HandleFrame(_G.MerchantBuyBackItem, true, nil, -1, 3, 2, -2)
 	_G.MerchantBuyBackItem:Height(46)
-	_G.MerchantBuyBackItem:Point('TOPLEFT', _G.MerchantItem10, 'BOTTOMLEFT', 0, -13)
+	S:HandlePointXY(_G.MerchantBuyBackItem, 0, -16)
 
 	_G.MerchantBuyBackItemItemButton:StripTextures()
 	_G.MerchantBuyBackItemItemButton:StyleButton()
@@ -115,19 +115,17 @@ local function LoadSkin()
 	_G.MerchantBuyBackItemMoneyFrame:ClearAllPoints()
 	_G.MerchantBuyBackItemMoneyFrame:Point('BOTTOMLEFT', _G.MerchantBuyBackItemItemButton, 'BOTTOMRIGHT', 3, 0)
 
-	local function MerchantItemPoint()
-		_G.MerchantItem1:Point('TOPLEFT', _G.MerchantFrame, 'TOPLEFT', 7, -40)
-		_G.MerchantItem2:Point('TOPLEFT', _G.MerchantItem1, 'TOPLEFT', 163, 0)
-		_G.MerchantItem3:Point('TOPLEFT', _G.MerchantItem1, 'BOTTOMLEFT', 0, -13)
-		_G.MerchantItem4:Point('TOPLEFT', _G.MerchantItem3, 'TOPLEFT', 163, 0)
-		_G.MerchantItem5:Point('TOPLEFT', _G.MerchantItem3, 'BOTTOMLEFT', 0, -13)
-		_G.MerchantItem6:Point('TOPLEFT', _G.MerchantItem5, 'TOPLEFT', 163, 0)
-		_G.MerchantItem7:Point('TOPLEFT', _G.MerchantItem5, 'BOTTOMLEFT', 0, -13)
-		_G.MerchantItem8:Point('TOPLEFT', _G.MerchantItem7, 'TOPLEFT', 163, 0)
-		_G.MerchantItem9:Point('TOPLEFT', _G.MerchantItem7, 'BOTTOMLEFT', 0, -13)
-		_G.MerchantItem10:Point('TOPLEFT', _G.MerchantItem9, 'TOPLEFT', 163, 0)
-		_G.MerchantItem11:Point('TOPLEFT', _G.MerchantItem9, 'BOTTOMLEFT', 0, -13)
-		_G.MerchantItem12:Point('TOPLEFT', _G.MerchantItem11, 'TOPLEFT', 163, 0)
+	local function merchantItemPoint()
+		S:HandlePointXY(_G.MerchantItem1, 6, -40)
+
+		-- evens
+		for i = 3, _G.BUYBACK_ITEMS_PER_PAGE, 2 do
+			S:HandlePointXY(_G['MerchantItem'..i], 0, -16)
+		end
+		-- odds
+		for i = 2, _G.BUYBACK_ITEMS_PER_PAGE, 2 do
+			S:HandlePointXY(_G['MerchantItem'..i], 12, 0)
+		end
 	end
 
 	-- skin tabs
@@ -183,7 +181,7 @@ local function LoadSkin()
 
 		_G.MerchantRepairText:Point('BOTTOMLEFT', 14, 69)
 
-		MerchantItemPoint()
+		merchantItemPoint()
 	end)
 
 	hooksecurefunc('MerchantFrame_UpdateBuybackInfo', function()
@@ -210,7 +208,8 @@ local function LoadSkin()
 				end
 			end
 		end
-		MerchantItemPoint()
+
+		merchantItemPoint()
 	end)
 end
 

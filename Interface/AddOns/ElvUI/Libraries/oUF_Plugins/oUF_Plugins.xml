@@ -5,5 +5,5 @@
 	<Script file="oUF_DebuffHighlight\oUF_DebuffHighlight.lua"/>
 	<Script file="oUF_Fader\oUF_Fader.lua"/>
 	<Script file="oUF_Cutaway\oUF_Cutaway.lua"/>
-	<Script file="oUF_EnergyTicker\oUF_EnergyTicker.lua"/>
+	<Script file="oUF_EnergyManaRegen\oUF_EnergyManaRegen.lua"/>
 </Ui>

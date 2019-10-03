@@ -91,7 +91,7 @@ local function LoadSkin()
 
 	S:HandleScrollBar(_G.ItemTextScrollFrameScrollBar)
 
-	S:HandleCloseButton(_G.ItemTextCloseButton)
+	S:HandleCloseButton(_G.ItemTextCloseButton, ItemTextFrame.backdrop)
 
 	local NPCFriendshipStatusBar = _G.NPCFriendshipStatusBar
 	NPCFriendshipStatusBar:StripTextures()

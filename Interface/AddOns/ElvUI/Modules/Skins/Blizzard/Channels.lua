@@ -10,16 +10,13 @@ local function LoadSkin()
 	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.Channels then return end
 
 	local ChannelFrame = _G.ChannelFrame
-	local CreateChannelPopup = _G.CreateChannelPopup
-
 	S:HandleFrame(ChannelFrame, true, nil, -5)
-	CreateChannelPopup:StripTextures()
-
-	CreateChannelPopup:CreateBackdrop('Transparent')
 
 	S:HandleButton(ChannelFrame.NewButton)
-	ChannelFrame.NewButton:Point('BOTTOMLEFT', -1, 4)
 	S:HandleButton(ChannelFrame.SettingsButton)
+
+	S:HandlePointXY(ChannelFrame.NewButton, -1, 4)
+	S:HandlePointXY(ChannelFrameCloseButton, 2, 2)
 
 	S:HandleScrollBar(ChannelFrame.ChannelRoster.ScrollFrame.scrollBar)
 	ChannelFrame.ChannelRoster.ScrollFrame.scrollBar:Point('TOPLEFT', ChannelFrame.ChannelRoster.ScrollFrame, 'TOPRIGHT', 1, -13)
@@ -28,17 +25,21 @@ local function LoadSkin()
 	S:HandleScrollBar(ChannelFrame.ChannelList.ScrollBar)
 	ChannelFrame.ChannelList.ScrollBar:Point('BOTTOMLEFT', ChannelFrame.ChannelList, 'BOTTOMRIGHT', 0, 15)
 
-	S:HandleCloseButton(CreateChannelPopup.CloseButton)
+	local CreateChannelPopup = _G.CreateChannelPopup
+	S:HandleFrame(CreateChannelPopup, true)
+
 	S:HandleButton(CreateChannelPopup.OKButton)
 	S:HandleButton(CreateChannelPopup.CancelButton)
 
 	S:HandleEditBox(CreateChannelPopup.Name)
 	S:HandleEditBox(CreateChannelPopup.Password)
 
-	_G.VoiceChatPromptActivateChannel:StripTextures()
-	_G.VoiceChatPromptActivateChannel:CreateBackdrop('Transparent')
-	S:HandleButton(_G.VoiceChatPromptActivateChannel.AcceptButton)
-	S:HandleCloseButton(_G.VoiceChatPromptActivateChannel.CloseButton)
+	S:HandlePointXY(CreateChannelPopup.CloseButton, 2, 2)
+
+	local VoiceChatPromptActivateChannel = _G.VoiceChatPromptActivateChannel
+	S:HandleFrame(VoiceChatPromptActivateChannel, true)
+	S:HandleButton(VoiceChatPromptActivateChannel.AcceptButton)
+	S:HandleCloseButton(VoiceChatPromptActivateChannel.CloseButton, VoiceChatPromptActivateChannel.backrop)
 
 	-- Hide the Channel Header Textures
 	hooksecurefunc(_G.ChannelButtonHeaderMixin, 'Update', function(self)

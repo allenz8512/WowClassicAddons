@@ -23,7 +23,7 @@ local ACD = E.Libs.AceConfigDialog
 
 local function BuildABConfig()
 	group.general = {
-		order = 1,
+		order = 0,
 		type = "group",
 		name = L["General Options"],
 		childGroups = "tab",
@@ -362,7 +362,7 @@ local function BuildABConfig()
 	group.barPet = {
 		name = L["Pet Bar"],
 		type = 'group',
-		order = 2,
+		order = 49,
 		guiInline = false,
 		disabled = function() return not E.ActionBars.Initialized; end,
 		get = function(info) return E.db.actionbar.barPet[info[#info]] end,
@@ -484,7 +484,7 @@ local function BuildABConfig()
 	group.stanceBar = {
 		name = L["Stance Bar"],
 		type = 'group',
-		order = 3,
+		order = 48,
 		guiInline = false,
 		disabled = function() return not E.ActionBars.Initialized; end,
 		get = function(info) return E.db.actionbar.stanceBar[info[#info]] end,
@@ -629,7 +629,7 @@ local function BuildABConfig()
 	group.microbar = {
 		type = "group",
 		name = L["Micro Bar"],
-		order = 4,
+		order = 47,
 		disabled = function() return not E.ActionBars.Initialized; end,
 		get = function(info) return E.db.actionbar.microbar[info[#info]] end,
 		set = function(info, value) E.db.actionbar.microbar[info[#info]] = value; AB:UpdateMicroPositionDimensions() end,
@@ -704,7 +704,7 @@ local function BuildABConfig()
 	for i=1, 6 do
 		local name = L["Bar "]..i
 		group['bar'..i] = {
-			order = 4+i,
+			order = i,
 			name = name,
 			type = 'group',
 			guiInline = false,
@@ -889,7 +889,7 @@ local function BuildABConfig()
 	group.extraActionButton = {
 		type = "group",
 		name = L["Boss Button"],
-		order = 11,
+		order = 46,
 		disabled = function() return not E.ActionBars.Initialized; end,
 		get = function(info) return E.db.actionbar.extraActionButton[info[#info]] end,
 		args = {

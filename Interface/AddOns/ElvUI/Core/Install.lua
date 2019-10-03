@@ -254,7 +254,6 @@ function E:SetupLayout(layout, noDataReset, noDisplayMsg)
 		E.db.bags.bagWidth = 474
 		E.db.bags.bankSize = 42
 		E.db.bags.bankWidth = 474
-		E.db.bags.itemLevelCustomColorEnable = true
 		E.db.bags.scrapIcon = true
 		--Chat
 		E.db.chat.fontSize = 10
@@ -310,7 +309,6 @@ function E:SetupLayout(layout, noDataReset, noDisplayMsg)
 		E.db.movers.PetExperienceBarMover = "BOTTOM,ElvUIParent,BOTTOM,0,53"
 		E.db.movers.LevelUpBossBannerMover = "TOP,ElvUIParent,TOP,-1,-120"
 		E.db.movers.LootFrameMover = "TOPLEFT,ElvUIParent,TOPLEFT,418,-186"
-		E.db.movers.LossControlMover = "BOTTOM,ElvUIParent,BOTTOM,-1,507"
 		E.db.movers.MirrorTimer1Mover = "TOP,ElvUIParent,TOP,-1,-96"
 		E.db.movers.ObjectiveFrameMover = "TOPRIGHT,ElvUIParent,TOPRIGHT,-163,-325"
 		E.db.movers.ReputationBarMover = "TOPRIGHT,ElvUIParent,TOPRIGHT,-3,-246"
@@ -407,7 +405,6 @@ function E:SetupLayout(layout, noDataReset, noDisplayMsg)
 		E.db.unitframe.units.raid.roleIcon.position = "BOTTOMRIGHT"
 		E.db.unitframe.units.raid.roleIcon.size = 12
 		E.db.unitframe.units.raid.roleIcon.xOffset = 0
-		E.db.unitframe.units.raid.visibility = "[@raid6,noexists] hide;show"
 		E.db.unitframe.units.raid.width = 92
 			--Raid40
 		E.db.unitframe.units.raid40.enable = false
@@ -430,7 +427,6 @@ function E:SetupLayout(layout, noDataReset, noDisplayMsg)
 			E.db.movers.VOICECHAT = "TOPLEFT,ElvUIParent,TOPLEFT,250,-82"
 			E.db.unitframe.units.party.enable = false
 			E.db.unitframe.units.party.health.frequentUpdates = true
-			E.db.unitframe.units.raid.visibility = "[nogroup] hide;show"
 			E.db.unitframe.units.raid40.health.frequentUpdates = true
 		end
 	end

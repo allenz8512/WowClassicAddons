@@ -527,6 +527,22 @@ E.Options.args.general = {
 					get = function(info) return E.private.general.raidUtility end,
 					set = function(info, value) E.private.general.raidUtility = value; E:StaticPopup_Show("PRIVATE_RL") end
 				},
+				DurabilityGroup = {
+					order = 7,
+					type = "group",
+					name = L["Durability"],
+					guiInline = true,
+					get = function(info) return E.db.general.durabilityScale end,
+					set = function(info, value) E.db.general.durabilityScale = value; E:StaticPopup_Show("PRIVATE_RL") end,
+					args = {
+						scale = {
+							order = 1,
+							type = "range",
+							name = L["Scale"],
+							min = 0.5, max = 8, step = 0.5,
+						}
+					}
+				},
 --[=[
 				itemLevelInfo = {
 					order = 11,
@@ -594,7 +610,7 @@ E.Options.args.general = {
 			},
 		},
 		misc = {
-			order = 12,
+			order = 20,
 			type = "group",
 			name = L["Miscellaneous"],
 			get = function(info) return E.db.general[info[#info]] end,
@@ -655,3 +671,18 @@ E.Options.args.general = {
 		},
 	},
 }
+
+E.Options.args.tagGroup = {
+	order = 925,
+	type = "group",
+	name = L["Available Tags"],
+	args = {}
+}
+
+for Tag in next, E.oUF.Tags.Events do
+	E.Options.args.tagGroup.args[Tag] = {
+		type = 'description',
+		fontSize = 'medium',
+		name = Tag,
+	}
+end

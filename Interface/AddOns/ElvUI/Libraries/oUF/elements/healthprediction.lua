@@ -81,8 +81,8 @@ local function Update(self, event, unit)
 
 	local guid = UnitGUID(unit)
 
-	local allIncomingHeal = HealComm:GetHealAmount(guid, HealComm.ALL_HEALS) or 0
-	local myIncomingHeal = (HealComm:GetHealAmount(guid, HealComm.ALL_HEALS, nil, myGUID) or 0) * (HealComm:GetHealModifier(myGUID) or 1)
+	local allIncomingHeal = HealComm:GetHealAmount(guid, element.healType) or 0
+	local myIncomingHeal = (HealComm:GetHealAmount(guid, element.healType, nil, myGUID) or 0) * (HealComm:GetHealModifier(myGUID) or 1)
 	local health, maxHealth = UnitHealth(unit), UnitHealthMax(unit)
 	local otherIncomingHeal = 0
 
@@ -170,6 +170,7 @@ local function Enable(self)
 	if(element) then
 		element.__owner = self
 		element.ForceUpdate = ForceUpdate
+		element.healType = element.healType or HealComm.ALL_HEALS
 
 		self:RegisterEvent('UNIT_HEALTH_FREQUENT', Path)
 		self:RegisterEvent('UNIT_MAXHEALTH', Path)
@@ -272,12 +273,15 @@ local function Disable(self)
 			element.overHealAbsorb:Hide()
 		end
 
-		self:UnregisterEvent('UNIT_HEALTH', Path)
+		HealComm.UnregisterCallback(element, 'HealComm_HealStarted')
+		HealComm.UnregisterCallback(element, 'HealComm_HealUpdated')
+		HealComm.UnregisterCallback(element, 'HealComm_HealDelayed')
+		HealComm.UnregisterCallback(element, 'HealComm_HealStopped')
+		HealComm.UnregisterCallback(element, 'HealComm_ModifierChanged')
+		HealComm.UnregisterCallback(element, 'HealComm_GUIDDisappeared')
+
 		self:UnregisterEvent('UNIT_MAXHEALTH', Path)
 		self:UnregisterEvent('UNIT_HEALTH_FREQUENT', Path)
-		self:UnregisterEvent('UNIT_HEAL_PREDICTION', Path)
-		self:UnregisterEvent('UNIT_ABSORB_AMOUNT_CHANGED', Path)
-		self:UnregisterEvent('UNIT_HEAL_ABSORB_AMOUNT_CHANGED', Path)
 	end
 end
 

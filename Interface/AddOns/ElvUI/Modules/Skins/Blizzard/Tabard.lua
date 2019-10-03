@@ -38,34 +38,34 @@ local function LoadSkin()
 	end
 
 	for i = 1, 5 do
-		local custom = _G["TabardFrameCustomization"..i]
-		custom:StripTextures()
-		S:HandleNextPrevButton(_G["TabardFrameCustomization"..i.."LeftButton"])
-		S:HandleNextPrevButton(_G["TabardFrameCustomization"..i.."RightButton"])
+		local custom = 'TabardFrameCustomization'..i
+		_G[custom]:StripTextures()
+		S:HandleNextPrevButton(_G[custom..'LeftButton'])
+		S:HandleNextPrevButton(_G[custom..'RightButton'])
 
 		if i > 1 then
-			custom:ClearAllPoints()
-			custom:Point('TOP', _G['TabardFrameCustomization'..i - 1], 'BOTTOM', 0, -6)
+			_G[custom]:ClearAllPoints()
+			_G[custom]:Point('TOP', _G['TabardFrameCustomization'..i - 1], 'BOTTOM', 0, -6)
 		else
-			local point, anchor, point2, x, y = custom:GetPoint()
-			custom:Point(point, anchor, point2, x, y+4)
+			local point, anchor, point2, x, y = _G[custom]:GetPoint()
+			_G[custom]:Point(point, anchor, point2, x, y+4)
 		end
 	end
 
 	_G.TabardCharacterModelRotateLeftButton:Point('BOTTOMLEFT', 4, 4)
 	_G.TabardCharacterModelRotateRightButton:Point('TOPLEFT', _G.TabardCharacterModelRotateLeftButton, 'TOPRIGHT', 4, 0)
 
-	hooksecurefunc(_G.TabardCharacterModelRotateLeftButton, "SetPoint", function(self)
+	hooksecurefunc(_G.TabardCharacterModelRotateLeftButton, 'SetPoint', function(self)
 		if self._blocked then return end
 		self._blocked = true
-		self:Point("BOTTOMLEFT", 4, 4)
+		self:Point('BOTTOMLEFT', 4, 4)
 		self._blocked = nil
 	end)
 
-	hooksecurefunc(_G.TabardCharacterModelRotateRightButton, "SetPoint", function(self)
+	hooksecurefunc(_G.TabardCharacterModelRotateRightButton, 'SetPoint', function(self)
 		if self._blocked then return end
 		self._blocked = true
-		self:Point("TOPLEFT", TabardCharacterModelRotateLeftButton, "TOPRIGHT", 4, 0)
+		self:Point('TOPLEFT', TabardCharacterModelRotateLeftButton, 'TOPRIGHT', 4, 0)
 		self._blocked = nil
 	end)
 end

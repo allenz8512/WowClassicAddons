@@ -243,6 +243,9 @@ local function LoadSkin()
 			local check = _G['DropDownList'..level..'Button'..i..'Check']
 			local uncheck = _G['DropDownList'..level..'Button'..i..'UnCheck']
 			local highlight = _G['DropDownList'..level..'Button'..i..'Highlight']
+			local text = _G['DropDownList'..level..'Button'..i..'NormalText']
+
+			S:HandlePointXY(text, 5)
 
 			highlight:SetTexture(E.Media.Textures.Highlight)
 			highlight:SetBlendMode('BLEND')

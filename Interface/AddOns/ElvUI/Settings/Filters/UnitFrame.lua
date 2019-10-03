@@ -21,15 +21,115 @@ G.unitframe.aurafilters.CCDebuffs = {
 	type = 'Whitelist',
 	spells = {
 	--Druid
+	[339] = Defaults(1), --Entangling Roots(Rank 1)
+	[1062] = Defaults(1), --Entangling Roots(Rank 2)
+	[5195] = Defaults(1), --Entangling Roots(Rank 3)
+	[5196] = Defaults(1), --Entangling Roots(Rank 4)
+	[9852] = Defaults(1), --Entangling Roots(Rank 5)
+	[9853] = Defaults(1), --Entangling Roots(Rank 6)
+	[2637] = Defaults(1), --Hibernate(Rank 1)
+	[18657] = Defaults(1), --Hibernate(Rank 2)
+	[18658] = Defaults(1), --Hibernate(Rank 3)
+	[19675] = Defaults(2), --Feral Charge Effect
+	[5211] = Defaults(4), --Bash(Rank 1)
+	[6798] = Defaults(4), --Bash(Rank 2)
+	[8983] = Defaults(4), --Bash(Rank 3)
+	[16922] = Defaults(2), --Starfire Stun
+	[9005] = Defaults(2), --Pounce(Rank 1)
+	[9823] = Defaults(2), --Pounce(Rank 2)
+	[9827] = Defaults(2), --Pounce(Rank 3)
 	--Hunter
+	[1499] = Defaults(3), --Freezing Trap(Rank 1)
+	[14310] = Defaults(3), --Freezing Trap(Rank 2)
+	[14311] = Defaults(3), --Freezing Trap(Rank 3)
+	[13809] = Defaults(1), --Frost Trap
+	[19503] = Defaults(4), --Scatter Shot
+	[5116] = Defaults(2), --Concussive Shot
+	[297] = Defaults(2), --Wing Clip(Rank 1)
+	[14267] = Defaults(2), --Wing Clip(Rank 2)
+	[14268] = Defaults(2), --Wing Clip(Rank 3)
+	[1513] = Defaults(2), --Scare Beast(Rank 1)
+	[14326] = Defaults(2), --Scare Beast(Rank 2)
+	[14327] = Defaults(2), --Scare Beast(Rank 3)
+	[19577] = Defaults(2), --Intimidation
+	[19386] = Defaults(2), --Wyvern Sting(Rank 1)
+	[24132] = Defaults(2), --Wyvern Sting(Rank 2)
+	[24133] = Defaults(2), --Wyvern Sting(Rank 3)
+	[19229] = Defaults(2), --Improved Wing Clip
+	[19306] = Defaults(2), --Counterattack(Rank 1)
+	[20909] = Defaults(2), --Counterattack(Rank 2)
+	[20910] = Defaults(2), --Counterattack(Rank 3)
 	--Mage
+	[118] = Defaults(3), --Polymorph(Rank 1)
+	[12824] = Defaults(3), --Polymorph(Rank 2)
+	[12825] = Defaults(3), --Polymorph(Rank 3)
+	[12826] = Defaults(3), --Polymorph(Rank 4)
+	[122] = Defaults(1), --Frost Nova(Rank 1)
+	[865] = Defaults(1), --Frost Nova(Rank 2)
+	[6131] = Defaults(1), --Frost Nova(Rank 3)
+	[10230] = Defaults(1), --Frost Nova(Rank 4)
+	[12494] = Defaults(2), --Frostbite
+	[12355] = Defaults(2), --Impact
 	--Paladin
+	[853] = Defaults(3), --Hammer of Justice(Rank 1)
+	[5588] = Defaults(3), --Hammer of Justice(Rank 2)
+	[5589] = Defaults(3), --Hammer of Justice(Rank 3)
+	[10308] = Defaults(3), --Hammer of Justice(Rank 4)
+	[20066] = Defaults(3), --Repentance
 	--Priest
+	[8122] = Defaults(3), --Psychic Scream(Rank 1)
+	[8124] = Defaults(3), --Psychic Scream(Rank 2)
+	[10888] = Defaults(3), --Psychic Scream(Rank 3)
+	[10890] = Defaults(3), --Psychic Scream(Rank 4)
+	[605] = Defaults(5), --Mind Control(Rank 1)
+	[10911] = Defaults(5), --Mind Control(Rank 2)
+	[10912] = Defaults(5), --Mind Control(Rank 3)
+	[15269] = Defaults(2), --Blackout
+	[15407] = Defaults(2), --Mind Flay(Rank 1)
+	[17311] = Defaults(2), --Mind Flay(Rank 2)
+	[17312] = Defaults(2), --Mind Flay(Rank 3)
+	[17313] = Defaults(2), --Mind Flay(Rank 4)
+	[17314] = Defaults(2), --Mind Flay(Rank 5)
+	[18807] = Defaults(2), --Mind Flay(Rank 6)
 	--Rogue
+	[6770] = Defaults(4), --Sap(Rank 1)
+	[2070] = Defaults(4), --Sap(Rank 2)
+	[11297] = Defaults(4), --Sap(Rank 3)
+	[2094] = Defaults(5), --Blind
+	[408] = Defaults(4), --Kidney Shot(Rank 1)
+	[8643] = Defaults(4), --Kidney Shot(Rank 2)
+	[1833] = Defaults(2), --Cheap Shot
+	[1776] = Defaults(2), --Gouge(Rank 1)
+	[1777] = Defaults(2), --Gouge(Rank 2)
+	[8629] = Defaults(2), --Gouge(Rank 3)
+	[11285] = Defaults(2), --Gouge(Rank 4)
+	[11286] = Defaults(2), --Gouge(Rank 5)
+	[5530] = Defaults(2), -- Mace Stun Effect
 	--Shaman
+	[2484] = Defaults(1), --Earthbind Totem
+	[8056] = Defaults(2), --Frost Shock(Rank 1)
+	[8058] = Defaults(2), --Frost Shock(Rank 2)
+	[10472] = Defaults(2), --Frost Shock(Rank 3)
+	[10473] = Defaults(2), --Frost Shock(Rank 4)
 	--Warlock
+	[5782] = Defaults(3), --Fear(Rank 1)
+	[6213] = Defaults(3), --Fear(Rank 2)
+	[6215] = Defaults(3), --Fear(Rank 3)
+	[18223] = Defaults(2), --Curse of Exhaustion
+	[18093] = Defaults(2), --Pyroclasm
+	[710] = Defaults(2), --Banish(Rank 1)
+	[18647] = Defaults(2), --Banish(Rank 2)
 	--Warrior
+	[5246] = Defaults(4), --Intimidating Shout
+	[1715] = Defaults(2), --Hamstring(Rank 1)
+	[7372] = Defaults(2), --Hamstring(Rank 2)
+	[7373] = Defaults(2), --Hamstring(Rank 3)
+	[12809] = Defaults(2), --Concussion Blow
+	[20252] = Defaults(2), --Intercept(Rank 1)
+	[20616] = Defaults(2), --Intercept(Rank 2)
+	[20617] = Defaults(2), --Intercept(Rank 3)
 	--Racial
+	[20549] = Defaults(2), --War Stomp
 	},
 }
 
@@ -40,13 +140,26 @@ G.unitframe.aurafilters.TurtleBuffs = {
 	--Druid
 	--Hunter
 	--Mage
+	[11958] = Defaults(2), --Ice Block A
+	[27619] = Defaults(2), --Ice Block B
 	--Paladin
+	[498] = Defaults(2), --Divine Protection(Rank 1)
+	[5573] = Defaults(2), --Divine Protection(Rank 2)
+	[642] = Defaults(2), --Divine Shield(Rank 1)
+	[1020] = Defaults(2), --Divine Shield(Rank 2)
+	[1022] = Defaults(2), --Blessing of Protection(Rank 1)
+	[5599] = Defaults(2), --Blessing of Protection(Rank 2)
+	[10278] = Defaults(2), --Blessing of Protection(Rank 3)
 	--Priest
 	--Rogue
 	--Shaman
 	--Warlock
 	--Warrior
+	--Consumables
+	[3169] = Defaults(2), --Limited Invulnerability Potion
 	--Racial
+	--All Classes
+	[19753] = Defaults(2), --Divine Intervention
 	},
 }
 
@@ -202,7 +315,7 @@ G.unitframe.aurafilters.DungeonDebuffs = {
 		[7068] = Defaults(2), --Veil of Shadow
 		[7125] = Defaults(2), --Toxic Saliva
 		[7621] = Defaults(2), --Arugal's Curse
-	--
+	--Stratholme
 		[16798] = Defaults(2), --Enchanting Lullaby
 		[12734] = Defaults(2), --Ground Smash
 		[17293] = Defaults(2), --Burning Winds
@@ -252,16 +365,24 @@ E.ReverseTimer = {}
 
 -- BuffWatch: List of personal spells to show on unitframes as icon
 local function ClassBuff(id, point, color, anyUnit, onlyShowMissing, style, displayText, decimalThreshold, textColor, textThreshold, xOffset, yOffset, sizeOverride)
+	local name = GetSpellInfo(id)
+	if not name then return end
+
 	local r, g, b = 1, 1, 1
 	if color then r, g, b = unpack(color) end
 
 	local r2, g2, b2 = 1, 1, 1
 	if textColor then r2, g2, b2 = unpack(textColor) end
 
+	local rankText = GetSpellSubtext(id)
+	local spellRank = rankText and strfind(rankText, '%d') and GetSpellSubtext(id) or nil
+
 	return {
 		enabled = true,
 		id = id,
-		point = point,
+		name = name,
+		rank = spellRank,
+		point = point or 'TOPLEFT',
 		color = {r = r, g = g, b = b},
 		anyUnit = anyUnit,
 		onlyShowMissing = onlyShowMissing,

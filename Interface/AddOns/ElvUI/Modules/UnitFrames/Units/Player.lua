@@ -42,6 +42,7 @@ function UF:Construct_PlayerFrame(frame)
 	end
 
 	frame.PowerPrediction = self:Construct_PowerPrediction(frame) -- must be AFTER Power & AdditionalPower
+	frame.RaidRoleFramesAnchor = UF:Construct_RaidRoleFrames(frame)
 	frame.MouseGlow = self:Construct_MouseGlow(frame)
 	frame.TargetGlow = self:Construct_TargetGlow(frame)
 	frame.RaidTargetIndicator = self:Construct_RaidIcon(frame)
@@ -55,6 +56,8 @@ function UF:Construct_PlayerFrame(frame)
 	frame.Cutaway = self:Construct_Cutaway(frame)
 	frame.Fader = self:Construct_Fader()
 	frame.customTexts = {}
+
+	frame.EnergyManaRegen = self:Construct_EnergyManaRegen(frame)
 
 	frame:Point('BOTTOMLEFT', E.UIParent, 'BOTTOM', -413, 68) --Set to default position
 	E:CreateMover(frame, frame:GetName()..'Mover', L["Player Frame"], nil, nil, nil, 'ALL,SOLO', nil, 'unitframe,player,generalGroup')
@@ -175,6 +178,10 @@ function UF:Update_PlayerFrame(frame, db)
 	if E.db.unitframe.units.target.aurabar.attachTo == "PLAYER_AURABARS" and ElvUF_Target then
 		UF:Configure_AuraBars(ElvUF_Target)
 	end
+
+	UF:Configure_RaidRoleIcons(frame)
+
+	UF:Configure_EnergyManaRegen(frame)
 
 	--PvP & Prestige Icon
 	UF:Configure_PVPIcon(frame)

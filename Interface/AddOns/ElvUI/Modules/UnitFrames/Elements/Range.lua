@@ -16,7 +16,7 @@ function UF:UpdateRange(unit)
 	elseif self.forceNotInRange then
 		alpha = self.Fader.MinAlpha
 	elseif unit then
-	    local _, inRange = RC:GetRange(unit)
+	    local _, inRange = RC:GetRange(unit, true)
         if not inRange then
             alpha = self.Fader.MinAlpha
         elseif inRange then

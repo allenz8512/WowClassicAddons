@@ -12,12 +12,12 @@ local function LoadSkin()
 	S:HandleFrame(TaxiFrame, true, nil, 11, -12, -32, 76)
 	_G.TaxiPortrait:Kill() -- Blizz didnt name this TaxiFramePortrait
 
-	_G.TaxiMap:Point('TOPLEFT', 23, -70)
-	_G.TaxiRouteMap:Point('TOPLEFT', 23, -70)
+	S:HandlePointXY(_G.TaxiMap, -11, -71)
+	S:HandlePointXY(_G.TaxiRouteMap, -11, -71)
 
 	_G.TaxiMerchant:SetTextColor(1, 1, 1)
 
-	S:HandleCloseButton(_G.TaxiCloseButton, TaxiFrame.backdrop, 3, 3)
+	S:HandleCloseButton(_G.TaxiCloseButton, TaxiFrame.backdrop)
 end
 
 S:AddCallback('Skin_Taxi', LoadSkin)

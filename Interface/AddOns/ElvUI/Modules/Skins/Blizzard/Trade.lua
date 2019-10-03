@@ -15,24 +15,36 @@ local function LoadSkin()
 	if not E.private.skins.blizzard.enable or not E.private.skins.blizzard.trade then return end
 
 	local TradeFrame = _G.TradeFrame
-	S:HandleFrame(TradeFrame, true)
-
-	S:HandleCloseButton(TradeFrameCloseButton, TradeFrame.backdrop)
+	S:HandleFrame(TradeFrame, true, nil, -5, 0, -7)
 
 	S:HandleButton(_G.TradeFrameTradeButton, true)
 	S:HandleButton(_G.TradeFrameCancelButton, true)
+
+	S:HandlePointXY(_G.TradeFrameCloseButton, -6, 2)
+	S:HandlePointXY(_G.TradeFrameTradeButton, -91)
+	S:HandlePointXY(_G.TradePlayerItem1, 7)
+	S:HandlePointXY(_G.TradeRecipientItem1, 170)
 
 	S:HandleEditBox(_G.TradePlayerInputMoneyFrameGold)
 	S:HandleEditBox(_G.TradePlayerInputMoneyFrameSilver)
 	S:HandleEditBox(_G.TradePlayerInputMoneyFrameCopper)
 
-	_G.TradeRecipientItemsInset:Kill()
-	_G.TradePlayerItemsInset:Kill()
-	_G.TradePlayerInputMoneyInset:Kill()
-	_G.TradePlayerEnchantInset:Kill()
-	_G.TradeRecipientEnchantInset:Kill()
-	_G.TradeRecipientMoneyInset:Kill()
-	_G.TradeRecipientMoneyBg:Kill()
+	local tradeFrames = {
+		'TradeFramePlayerPortrait',
+		'TradeFrameRecipientPortrait',
+		'TradePlayerEnchantInset',
+		'TradePlayerInputMoneyInset',
+		'TradePlayerItemsInset',
+		'TradeRecipientEnchantInset',
+		'TradeRecipientItemsInset',
+		'TradeRecipientMoneyBg',
+		'TradeRecipientMoneyInset',
+		'TradeRecipientPortraitFrame'
+	}
+
+	for _, frame in ipairs(tradeFrames) do
+		_G[frame]:Kill()
+	end
 
 	for i = 1, _G.MAX_TRADE_ITEMS do
 		local player = _G['TradePlayerItem'..i]

@@ -1,5 +1,6 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Import: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local UF = E:GetModule('UnitFrames');
+local HealComm = LibStub("LibClassicHealComm-1.0")
 
 --WoW API / Variables
 local CreateFrame = CreateFrame
@@ -81,6 +82,7 @@ function UF:Configure_HealComm(frame)
 			frame:EnableElement('HealthPrediction')
 		end
 
+		healPrediction.healType = HealComm[frame.db.healPrediction.healType]
 		if frame.db.health then
 			local health = frame.Health
 			local orientation = frame.db.health.orientation or health:GetOrientation()

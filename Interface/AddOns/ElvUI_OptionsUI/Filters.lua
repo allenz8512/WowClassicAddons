@@ -729,10 +729,11 @@ local function UpdateFilterGroup()
 						local searchText = quickSearchText:lower()
 						for _, spell in pairs(list) do
 							if spell.id then
-								local name = GetSpellInfo(spell.id)
+								local name = spell.rank and format('%s (%s)', GetSpellInfo(spell.id), spell.rank) or GetSpellInfo(spell.id)
 								if name and name:lower():find(searchText) then values[spell.id] = name end
 							end
 						end
+
 						return values
 					end,
 					get = function(info) return selectedSpell end,

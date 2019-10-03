@@ -260,7 +260,7 @@ function NP:StylePlate(nameplate)
 
 	NP.Plates[nameplate] = nameplate:GetName()
 
---	NP:StyleFilterPlateStyled(nameplate)
+	NP:StyleFilterPlateStyled(nameplate)
 end
 
 function NP:UpdatePlate(nameplate)
@@ -292,7 +292,7 @@ function NP:UpdatePlate(nameplate)
 		end
 	end
 
-	--NP:StyleFilterEvents(nameplate)
+	NP:StyleFilterEvents(nameplate)
 end
 
 function NP:DisablePlate(nameplate, nameOnly)
@@ -387,7 +387,7 @@ function NP:PLAYER_ENTERING_WORLD()
 end
 
 function NP:ConfigureAll()
-	--NP:StyleFilterConfigure() -- keep this at the top
+	NP:StyleFilterConfigure() -- keep this at the top
 
 	NP:PLAYER_REGEN_ENABLED()
 
@@ -429,7 +429,7 @@ function NP:ConfigureAll()
 				NP.PlayerNamePlateAnchor:Show()
 			end
 
-			--NP:StyleFilterUpdate(nameplate, "NAME_PLATE_UNIT_ADDED") -- keep this at the end of the loop
+			NP:StyleFilterUpdate(nameplate, "NAME_PLATE_UNIT_ADDED") -- keep this at the end of the loop
 		end
 	end
 
@@ -463,7 +463,7 @@ end
 
 function NP:NamePlateCallBack(nameplate, event, unit)
 	if event == "NAME_PLATE_UNIT_ADDED" then
---		NP:StyleFilterClear(nameplate) -- keep this at the top
+		NP:StyleFilterClear(nameplate) -- keep this at the top
 
 		unit = unit or nameplate.unit
 
@@ -484,7 +484,7 @@ function NP:NamePlateCallBack(nameplate, event, unit)
 			NP:UpdatePlateGUID(nameplate, nameplate.unitGUID)
 		end
 
-		--NP:StyleFilterSetVariables(nameplate) -- sets: isTarget, isTargetingMe, isFocused
+		NP:StyleFilterSetVariables(nameplate) -- sets: isTarget, isTargetingMe, isFocused
 
 		if UnitIsUnit(unit, "player") and NP.db.units.PLAYER.enable then
 			nameplate.frameType = "PLAYER"
@@ -524,9 +524,9 @@ function NP:NamePlateCallBack(nameplate, event, unit)
 
 		nameplate:UpdateTags()
 
-		--NP:StyleFilterUpdate(nameplate, event) -- keep this at the end
+		NP:StyleFilterUpdate(nameplate, event) -- keep this at the end
 	elseif event == "NAME_PLATE_UNIT_REMOVED" then
-		--NP:StyleFilterClear(nameplate) -- keep this at the top
+		NP:StyleFilterClear(nameplate) -- keep this at the top
 
 		if nameplate.frameType == "PLAYER" and (nameplate ~= _G.ElvNP_Test) then
 			NP.PlayerNamePlateAnchor:Hide()
@@ -545,7 +545,7 @@ function NP:NamePlateCallBack(nameplate, event, unit)
 		nameplate.Health.cur = nil
 		nameplate.Power.cur = nil
 
-		--NP:StyleFilterClearVariables(nameplate)
+		NP:StyleFilterClearVariables(nameplate)
 	elseif event == "PLAYER_TARGET_CHANGED" then -- we need to check if nameplate exists in here
 		NP:SetupTarget(nameplate) -- pass it, even as nil here
 	end
@@ -582,12 +582,6 @@ function NP:Initialize()
 	NP.StatusBars = {}
 	NP.GroupRoles = {}
 	NP.multiplier = 0.35
-
-	local BlizzPlateManaBar = _G.NamePlateDriverFrame.classNamePlatePowerBar
-	if BlizzPlateManaBar then
-		BlizzPlateManaBar:Hide()
-		BlizzPlateManaBar:UnregisterAllEvents()
-	end
 
 	oUF:Spawn("player", "ElvNP_Player", "")
 
@@ -648,9 +642,9 @@ function NP:Initialize()
 	NP:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	NP:RegisterEvent("GROUP_ROSTER_UPDATE")
 	NP:RegisterEvent("GROUP_LEFT")
-	--NP:RegisterEvent("PLAYER_LOGOUT", NP.StyleFilterClearDefaults)
+	NP:RegisterEvent("PLAYER_LOGOUT", NP.StyleFilterClearDefaults)
 
-	--NP:StyleFilterInitialize()
+	NP:StyleFilterInitialize()
 	NP:HideInterfaceOptions()
 	NP:SetCVars()
 	NP:ConfigureAll()
