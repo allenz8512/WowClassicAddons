@@ -2,50 +2,35 @@
 MonkeyQuestConfig = {
 	["碧玉矿洞|白銀諾艾爾"] = {
 		["m_aQuestList"] = {
+			["擒虫先擒王 - false"] = {
+				["m_bChecked"] = true,
+			},
 			["荆棘谷 - true"] = {
 				["m_bChecked"] = false,
 			},
 			["生命之种 - false"] = {
 				["m_bChecked"] = true,
 			},
+			["霍尔雷·黑须 - false"] = {
+				["m_bChecked"] = true,
+			},
 			["塔纳利斯 - true"] = {
-				["m_bChecked"] = true,
-			},
-			["东瘟疫之地 - true"] = {
-				["m_bChecked"] = true,
-			},
-			["预言者迦玛兰 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["菲拉斯 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["琥珀酒 - false"] = {
+			["尤卡·斯库比格特 - false"] = {
 				["m_bChecked"] = true,
-			},
-			["小精龙的食物 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["沉没的神庙 - true"] = {
-				["m_bChecked"] = true,
-			},
-			["瓶中信 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["西部荒野 - true"] = {
-				["m_bChecked"] = false,
 			},
 			["失落的摩沙鲁石板 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["诅咒之地 - true"] = {
-				["m_bChecked"] = true,
+			["东瘟疫之地 - true"] = {
+				["m_bChecked"] = false,
 			},
-			["擒虫先擒王 - false"] = {
-				["m_bChecked"] = true,
+			["黑石深渊 - true"] = {
+				["m_bChecked"] = false,
 			},
 			["玛拉顿 - true"] = {
-				["m_bChecked"] = true,
+				["m_bChecked"] = false,
 			},
 			["极度粘稠的沥青 - false"] = {
 				["m_bChecked"] = true,
@@ -53,16 +38,16 @@ MonkeyQuestConfig = {
 			["禁锢我们的石头 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["尤卡·斯库比格特 - false"] = {
+			["瓶中信 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["黑石深渊 - true"] = {
+			["诅咒之地 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["霍尔雷·黑须 - false"] = {
-				["m_bChecked"] = true,
+			["西部荒野 - true"] = {
+				["m_bChecked"] = false,
 			},
-			["伊兰尼库斯精华 - false"] = {
+			["琥珀酒 - false"] = {
 				["m_bChecked"] = true,
 			},
 		},
@@ -95,9 +80,9 @@ MonkeyQuestConfig = {
 		["m_bHideTitleButtons"] = false,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11291503906,
-		["m_bNoBorder"] = true,
-		["m_bLocked"] = true,
 		["m_iQuestPadding"] = 2,
+		["m_bLocked"] = true,
+		["m_bNoBorder"] = true,
 		["m_bNoHeaders"] = true,
 		["m_bShowTooltipObjectives"] = true,
 		["m_strOverviewColour"] = "|cFF7F7F7F",
@@ -118,7 +103,7 @@ MonkeyQuestConfig = {
 		["m_bColourDoneOrFailed"] = false,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_iFrameBottom"] = 174.222305297852,
+		["m_iFrameBottom"] = 550.22216796875,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {

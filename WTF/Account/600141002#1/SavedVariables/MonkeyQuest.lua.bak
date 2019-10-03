@@ -9,10 +9,10 @@ MonkeyQuestConfig = {
 				["m_bChecked"] = true,
 			},
 			["塔纳利斯 - true"] = {
-				["m_bChecked"] = true,
+				["m_bChecked"] = false,
 			},
 			["东瘟疫之地 - true"] = {
-				["m_bChecked"] = true,
+				["m_bChecked"] = false,
 			},
 			["预言者迦玛兰 - false"] = {
 				["m_bChecked"] = true,
@@ -29,9 +29,6 @@ MonkeyQuestConfig = {
 			["沉没的神庙 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["伊兰尼库斯精华 - false"] = {
-				["m_bChecked"] = true,
-			},
 			["霍尔雷·黑须 - false"] = {
 				["m_bChecked"] = true,
 			},
@@ -45,7 +42,7 @@ MonkeyQuestConfig = {
 				["m_bChecked"] = false,
 			},
 			["玛拉顿 - true"] = {
-				["m_bChecked"] = true,
+				["m_bChecked"] = false,
 			},
 			["极度粘稠的沥青 - false"] = {
 				["m_bChecked"] = true,
@@ -57,7 +54,7 @@ MonkeyQuestConfig = {
 				["m_bChecked"] = true,
 			},
 			["诅咒之地 - true"] = {
-				["m_bChecked"] = true,
+				["m_bChecked"] = false,
 			},
 			["西部荒野 - true"] = {
 				["m_bChecked"] = false,
@@ -92,12 +89,12 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_iFrameBottom"] = 174.222305297852,
+		["m_iFrameBottom"] = 550.22216796875,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11291503906,
 		["m_bColourDoneOrFailed"] = false,
 		["m_bLocked"] = true,
-		["m_iQuestPadding"] = 2,
+		["m_bNoBorder"] = true,
 		["m_bNoHeaders"] = true,
 		["m_bShowNumQuests"] = true,
 		["m_strOverviewColour"] = "|cFF7F7F7F",
@@ -115,7 +112,7 @@ MonkeyQuestConfig = {
 		["m_bObjectives"] = false,
 		["m_bHideHeader"] = true,
 		["m_bShowTooltipObjectives"] = true,
-		["m_bNoBorder"] = true,
+		["m_iQuestPadding"] = 2,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
 		["m_bHideTitleButtons"] = false,
