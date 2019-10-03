@@ -1,14 +1,14 @@
 
 Postal3ClassicDB = {
-	["profileKeys"] = {
-		["白銀諾艾爾 - 碧玉矿洞"] = "白銀諾艾爾 - 碧玉矿洞",
-	},
 	["global"] = {
 		["BlackBook"] = {
 			["alts"] = {
-				"白銀諾艾爾|碧玉矿洞|Alliance|52|PALADIN", -- [1]
+				"白銀諾艾爾|碧玉矿洞|Alliance|53|PALADIN", -- [1]
 			},
 		},
+	},
+	["profileKeys"] = {
+		["白銀諾艾爾 - 碧玉矿洞"] = "白銀諾艾爾 - 碧玉矿洞",
 	},
 	["profiles"] = {
 		["白銀諾艾爾 - 碧玉矿洞"] = {
@@ -18,7 +18,9 @@ Postal3ClassicDB = {
 				},
 				["recent"] = {
 					"白银兽骑团员|碧玉矿洞|Alliance", -- [1]
-					"全弹发射|碧玉矿洞|Alliance", -- [2]
+					"院长帮帮我|碧玉矿洞|Alliance", -- [2]
+					"腊肉汤|碧玉矿洞|Alliance", -- [3]
+					"全弹发射|碧玉矿洞|Alliance", -- [4]
 				},
 			},
 		},

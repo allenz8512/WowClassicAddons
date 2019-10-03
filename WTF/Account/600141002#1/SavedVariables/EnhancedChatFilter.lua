@@ -2,76 +2,76 @@
 ecfDB = {
 	["enableDND"] = true,
 	["enableRepeat"] = true,
-	["addonQRF"] = false,
+	["repeatFilterGroup"] = true,
 	["addonRAF"] = false,
 	["enableMSF"] = false,
-	["repeatFilterGroup"] = true,
-	["blackWordFilterGroup"] = false,
-	["lootQualityMin"] = 0,
-	["lootCurrencyFilterList"] = {
-	},
-	["enableAggressive"] = false,
-	["enableCFA"] = true,
-	["lootItemFilterList"] = {
-	},
-	["lesserBlackWordThreshold"] = 3,
+	["addonQRF"] = false,
 	["blackWordList"] = {
 		["ADM"] = {
 		},
 		["AA"] = {
 		},
-		["STSM"] = {
+		["血色"] = {
 		},
 		["奥达曼"] = {
 		},
-		["大米"] = {
+		["剃刀"] = {
 		},
-		["血色"] = {
+		["STSM"] = {
 		},
 		["矿井"] = {
 		},
-		["图书馆"] = {
-		},
-		["ZR"] = {
-		},
-		["祖尔"] = {
+		["SW"] = {
 		},
 		["教堂"] = {
 		},
-		["诺莫瑞根"] = {
+		["祖尔"] = {
 		},
-		["死矿"] = {
+		["ZR"] = {
 		},
-		["监狱"] = {
+		["月饼"] = {
+		},
+		["矮子本"] = {
+		},
+		["矮人本"] = {
 		},
 		["黑暗深渊"] = {
 		},
 		["TD"] = {
 		},
-		["军火库"] = {
+		["XS"] = {
 		},
 		["武器库"] = {
 		},
-		["影牙"] = {
-		},
 		["ZUL"] = {
 		},
-		["XS"] = {
+		["影牙"] = {
 		},
-		["矮人本"] = {
+		["军火库"] = {
 		},
-		["矮子本"] = {
+		["监狱"] = {
 		},
-		["月饼"] = {
+		["死矿"] = {
+		},
+		["诺莫瑞根"] = {
 		},
 		["SK"] = {
 		},
-		["SW"] = {
+		["图书馆"] = {
 		},
-		["剃刀"] = {
+		["大米"] = {
 		},
 		["矮子副本"] = {
 		},
 	},
+	["lootQualityMin"] = 0,
+	["lesserBlackWordThreshold"] = 3,
+	["enableAggressive"] = false,
+	["enableCFA"] = true,
+	["lootItemFilterList"] = {
+	},
+	["lootCurrencyFilterList"] = {
+	},
+	["blackWordFilterGroup"] = false,
 	["advancedConfig"] = false,
 }

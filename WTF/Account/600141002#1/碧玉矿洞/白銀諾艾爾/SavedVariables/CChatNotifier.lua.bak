@@ -1,43 +1,43 @@
 
 CChatNotifier_settings = {
-	["mecolor"] = "|cffffffaa",
 	["mfcolor"] = "|cff00ff00",
+	["firstStart"] = false,
 	["sendercolor"] = "|cffff66ff",
-	["outputFormat"] = "<<ccaaaa>>[{T}] 找到 <00ff00>{K}<>! [{S}]<ff66ff>[{P}]<>: <ffffaa>{MS}<00ff00>{MF}<ffffaa>{ME}",
+	["soundId"] = "sound/interface/itellmessage.ogg",
 	["antiSpamWindow"] = 60,
-	["isActive"] = true,
-	["chatFrame"] = 1,
-	["classColor"] = true,
+	["isActive"] = false,
 	["showMinimapButton"] = true,
+	["classColor"] = true,
+	["chatFrame"] = 1,
 	["version"] = "1.0",
 	["mscolor"] = "|cffffffaa",
 	["snapToMinimap"] = true,
-	["soundId"] = "sound/interface/itellmessage.ogg",
-	["firstStart"] = false,
+	["outputFormat"] = "<<ccaaaa>>[{T}] 找到 <00ff00>{K}<>! [{S}]<ff66ff>[{P}]<>: <ffffaa>{MS}<00ff00>{MF}<ffffaa>{ME}",
+	["mecolor"] = "|cffffffaa",
 }
 CChatNotifier_data = {
-	["神庙-aa"] = {
-		["words"] = {
-			"神庙-aa", -- [1]
-		},
-		["active"] = true,
-	},
-	["马拉顿-aa"] = {
-		["words"] = {
-			"马拉顿-aa", -- [1]
-		},
-		["active"] = true,
-	},
-	["mld-aa"] = {
-		["active"] = true,
-		["words"] = {
-			"mld-aa", -- [1]
-		},
-	},
 	["sm-st-aa"] = {
+		["active"] = true,
 		["words"] = {
 			"sm-st-aa", -- [1]
 		},
+	},
+	["马拉顿-aa"] = {
+		["active"] = false,
+		["words"] = {
+			"马拉顿-aa", -- [1]
+		},
+	},
+	["mld-aa"] = {
+		["words"] = {
+			"mld-aa", -- [1]
+		},
+		["active"] = false,
+	},
+	["神庙-aa"] = {
 		["active"] = true,
+		["words"] = {
+			"神庙-aa", -- [1]
+		},
 	},
 }
