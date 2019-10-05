@@ -35,6 +35,10 @@
 -- Added group buffs for Intellect, Fortitude, Spirit, MotW, Shadow Prot,
 --  Might, Wisdom, Salvation, Kings, Light & Sanctuary
 
+-- 1.08
+-- Fixed temp enchant alignment when player has no normal buffs
+-- Fixed alt-rightclick error on another player when we have temp enchant
+
 -- ****************************************************************************
 -- **                                                                        **
 -- **  Variables                                                             **
@@ -46,8 +50,8 @@ local addonName, BUFFWATCHADDON = ...;
 BUFFWATCHADDON_G = { };
 
 BUFFWATCHADDON.NAME = "Buffwatch Classic";
-BUFFWATCHADDON.VERSION = "1.07";
-BUFFWATCHADDON.RELEASE_DATE = "01 Oct 2019";
+BUFFWATCHADDON.VERSION = "1.08";
+BUFFWATCHADDON.RELEASE_DATE = "02 Oct 2019";
 BUFFWATCHADDON.HELPFRAMENAME = "Buffwatch Help";
 BUFFWATCHADDON.MODE_DROPDOWN_LIST = {
     "Solo",
@@ -670,14 +674,16 @@ function BUFFWATCHADDON_G.Buff_Clicked(self, button, down)
 
                 -- Re-anchor any following buff
                 if nextbuffid then
-                    _G[playerframe.."_Buff"..nextbuffid]:ClearAllPoints();
-                    _G[playerframe.."_Buff"..nextbuffid]:SetPoint(self:GetPoint());
-                else
+                    local curr_buff = _G[playerframe.."_Buff"..nextbuffid];
+                    curr_buff:ClearAllPoints();
+                    curr_buff:SetPoint(self:GetPoint());
+                elseif Player_Info[playername].IsUnitPlayer then
                     -- Last buff, check for Temp Enchants and re-anchor first
                     local firsttempenchid = next(BuffwatchPlayerTempEnch, nil);
                     if firsttempenchid then
-                        _G[playerframe.."_TemporaryEnchant"..firsttempenchid]:ClearAllPoints();
-                        _G[playerframe.."_TemporaryEnchant"..firsttempenchid]:SetPoint(self:GetPoint());
+                        local curr_buff = _G[playerframe.."_TemporaryEnchant"..firsttempenchid];
+                        curr_buff:ClearAllPoints();
+                        curr_buff:SetPoint(self:GetPoint());
                     end
                 end
 
@@ -1843,6 +1849,18 @@ function BUFFWATCHADDON.SetBuffAlignment()
                 local curr_buff = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_Buff"..i];
 
                 curr_buff:SetPoint("TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_Name", "TOPLEFT", maxnamewidth + 5, 4);
+
+            elseif Player_Info[v.Name].IsUnitPlayer then
+
+                local firsttempenchid = next(BuffwatchPlayerTempEnch, nil);
+
+                if firsttempenchid then
+
+                    local curr_buff = _G["BuffwatchFrame_PlayerFrame"..v.ID.."_TemporaryEnchant"..firsttempenchid];
+
+                    curr_buff:SetPoint("TOPLEFT", "BuffwatchFrame_PlayerFrame"..v.ID.."_Name", "TOPLEFT", maxnamewidth + 5, 4);
+
+                end
 
             end
 
