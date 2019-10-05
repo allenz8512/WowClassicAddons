@@ -126,7 +126,7 @@ function TownsfolkUtil_GetTrainerTag(trainerType, expertise, branch)
 end
 
 function TownsfolkUtil_MenuLabel(label)
-    local info = UIDropDownMenu_CreateInfo()
+    local info = Lib_UIDropDownMenu_CreateInfo()
     info.text, info.notCheckable, info.isTitle = label, true, true
     return info
 end

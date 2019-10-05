@@ -14,8 +14,6 @@ local pairs, format = pairs, format
 -- WoW APIs
 local CreateFrame = CreateFrame
 local InterfaceOptionsFrame, InterfaceOptionsFrame_OpenToCategory = InterfaceOptionsFrame, InterfaceOptionsFrame_OpenToCategory
-local UIDropDownMenu_Initialize, UIDropDownMenu_CreateInfo = UIDropDownMenu_Initialize, UIDropDownMenu_CreateInfo
-local ToggleDropDownMenu, UIDropDownMenu_AddButton, UIDropDownMenu_AddSeparator = ToggleDropDownMenu, UIDropDownMenu_AddButton, UIDropDownMenu_AddSeparator
 
 -- Map button
 local setMapButtonTooltip = function(tooltip)
@@ -44,6 +42,14 @@ local minimapIconLDB = LDB:NewDataObject("TownsfolkTracker", {
     OnTooltipShow = setMapButtonTooltip,
     OnClick = handleMapButtonClick,
 })
+
+-- Slash command
+SLASH_TOWNSFOLK1 = '/townsfolktracker'
+SLASH_TOWNSFOLK2 = '/townsfolk'
+SLASH_TOWNSFOLK3 = '/tt'
+SlashCmdList["TOWNSFOLK"] = function(msg)
+    InterfaceOptionsFrame_OpenToCategory("Townsfolk Tracker")
+end
 
 -- Initialize addon
 function TownsfolkTracker:OnInitialize()
@@ -470,9 +476,9 @@ end
 function TownsfolkTracker:CreateTrackerList()
     local dropDown = CreateFrame("Frame", "tfTrackingMenu", UIParent, "UIDropDownMenuTemplate")
 
-    UIDropDownMenu_Initialize(dropDown, function(self, level, menuList)
+    Lib_UIDropDownMenu_Initialize(dropDown, function(self, level, menuList)
         -- None checkbox
-        local info = UIDropDownMenu_CreateInfo()
+        local info = Lib_UIDropDownMenu_CreateInfo()
 
         if ((level or 1) == 1) then
             -- none checked?
@@ -490,16 +496,16 @@ function TownsfolkTracker:CreateTrackerList()
                 end
             end
             info.text, info.checked, info.icon, info.isNotRadio, info.arg1, info.func = " "..L["All"], allChecked, [[Interface\Addons\TownsfolkTracker\Icons\Empty.tga]], true, "ALL", self.SetValue
-            UIDropDownMenu_AddButton(info)
+            Lib_UIDropDownMenu_AddButton(info)
             info.text, info.checked, info.arg1 = " "..L["None"], noneChecked, ""
-            UIDropDownMenu_AddButton(info)
+            Lib_UIDropDownMenu_AddButton(info)
 
-            UIDropDownMenu_AddSeparator()
+            Lib_UIDropDownMenu_AddSeparator({})
 
             -- Townsfolk types
-            UIDropDownMenu_AddButton(TownsfolkUtil_MenuLabel(L["Townsfolk"]))
+            Lib_UIDropDownMenu_AddButton(TownsfolkUtil_MenuLabel(L["Townsfolk"]))
 
-            info = UIDropDownMenu_CreateInfo()
+            info = Lib_UIDropDownMenu_CreateInfo()
             for folktype, townsfolk in TownsfolkUtil_PairsByKeys(TOWNSFOLK) do
                 if not TownsfolkUtil_IsInstanceType(folktype) then
                     info.text = " "..townsfolk.title
@@ -515,13 +521,13 @@ function TownsfolkTracker:CreateTrackerList()
                     info.func = self.SetValue
                     info.menuList = folktype
                     info.hasArrow = folktype == TF_PROFESSION_TRAINER
-                    UIDropDownMenu_AddButton(info)
+                    Lib_UIDropDownMenu_AddButton(info)
                 end
             end
             -- Instances types
-            UIDropDownMenu_AddSeparator()
-            UIDropDownMenu_AddButton(TownsfolkUtil_MenuLabel(L["Instances"]))
-            local info = UIDropDownMenu_CreateInfo()
+            Lib_UIDropDownMenu_AddSeparator({})
+            Lib_UIDropDownMenu_AddButton(TownsfolkUtil_MenuLabel(L["Instances"]))
+            local info = Lib_UIDropDownMenu_CreateInfo()
             for folktype, townsfolk in TownsfolkUtil_PairsByKeys(TOWNSFOLK) do
                 if TownsfolkUtil_IsInstanceType(folktype) then
                     info.text = " "..townsfolk.title
@@ -531,14 +537,14 @@ function TownsfolkTracker:CreateTrackerList()
                     info.keepShownOnClick = true
                     info.arg1 = folktype
                     info.func = self.SetValue
-                    UIDropDownMenu_AddButton(info)
+                    Lib_UIDropDownMenu_AddButton(info)
                 end
             end
         elseif (level == 2) then
             if (menuList == TF_PROFESSION_TRAINER) then
                 -- primary professions
-                UIDropDownMenu_AddButton(TownsfolkUtil_MenuLabel(L["Primary Professions"]), level)
-                local info = UIDropDownMenu_CreateInfo()
+                Lib_UIDropDownMenu_AddButton(TownsfolkUtil_MenuLabel(L["Primary Professions"]), level)
+                local info = Lib_UIDropDownMenu_CreateInfo()
                 for _, profType in pairs(TF_PRIMARY_PROFESSION) do
                     info.text = " "..L[profType]
                     info.icon = TOWNSFOLK[TF_PROFESSION_TRAINER].icon
@@ -547,13 +553,13 @@ function TownsfolkTracker:CreateTrackerList()
                     info.keepShownOnClick = true
                     info.arg1 = profType
                     info.func = self.SetValue
-                    UIDropDownMenu_AddButton(info, level)
+                    Lib_UIDropDownMenu_AddButton(info, level)
                 end
 
                 -- secondary
-                UIDropDownMenu_AddSeparator(level)
-                UIDropDownMenu_AddButton(TownsfolkUtil_MenuLabel(L["Secondary Professions"]), level)
-                local info = UIDropDownMenu_CreateInfo()
+                Lib_UIDropDownMenu_AddSeparator({}, level)
+                Lib_UIDropDownMenu_AddButton(TownsfolkUtil_MenuLabel(L["Secondary Professions"]), level)
+                local info = Lib_UIDropDownMenu_CreateInfo()
                 for _, profType in pairs(TF_SECONDARY_PROFESSION) do
                     info.text = " "..L[profType]
                     info.icon = TOWNSFOLK[TF_PROFESSION_TRAINER].icon
@@ -562,13 +568,13 @@ function TownsfolkTracker:CreateTrackerList()
                     info.keepShownOnClick = true
                     info.arg1 = profType
                     info.func = self.SetValue
-                    UIDropDownMenu_AddButton(info, level)
+                    Lib_UIDropDownMenu_AddButton(info, level)
                 end
 
                 -- other training
-                UIDropDownMenu_AddSeparator(level)
-                UIDropDownMenu_AddButton(TownsfolkUtil_MenuLabel(L["Other Training"]), level)
-                local info = UIDropDownMenu_CreateInfo()
+                Lib_UIDropDownMenu_AddSeparator({}, level)
+                Lib_UIDropDownMenu_AddButton(TownsfolkUtil_MenuLabel(L["Other Training"]), level)
+                local info = Lib_UIDropDownMenu_CreateInfo()
                 for _, profType in pairs(TF_ALT_TRAINING) do
                     info.text = " "..L[profType]
                     info.icon = TOWNSFOLK[TF_PROFESSION_TRAINER].icon
@@ -577,7 +583,7 @@ function TownsfolkTracker:CreateTrackerList()
                     info.keepShownOnClick = true
                     info.arg1 = profType
                     info.func = self.SetValue
-                    UIDropDownMenu_AddButton(info, level)
+                    Lib_UIDropDownMenu_AddButton(info, level)
                 end
             end
         end
@@ -611,7 +617,7 @@ end
 
 function TownsfolkTracker:OpenTracker()
     GameTooltip:Hide()
-    ToggleDropDownMenu(1, nil, tfTrackingMenu, "cursor", 3, -3)
+    Lib_ToggleDropDownMenu(1, nil, tfTrackingMenu, "cursor", 3, -3)
 end
 
 function TownsfolkTracker:ShowMapButton()
@@ -624,7 +630,8 @@ end
 
 function TownsfolkTracker:RegisterMapButton()
     local button = CreateFrame("Button", "tfAtlasButton", WorldMapFrame)
-    button:SetFrameStrata("FULLSCREEN_DIALOG")
+    button:SetFrameStrata(WorldMapFrame:GetFrameStrata())
+    button:SetFrameLevel(WorldMapFrame:GetFrameLevel() + 25)
     button:SetWidth(24)
     button:SetHeight(24)
 
