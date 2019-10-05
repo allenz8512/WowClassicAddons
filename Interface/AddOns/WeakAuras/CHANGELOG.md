@@ -1,23 +1,20 @@
-# [2.15.1](https://github.com/WeakAuras/WeakAuras2/tree/2.15.1) (2019-09-27)
+# [2.15.2](https://github.com/WeakAuras/WeakAuras2/tree/2.15.2) (2019-10-01)
 
-[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.15.0...2.15.1)
+[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.15.1...2.15.2)
 
 ## Highlights
 
- - Bug fixes
-- Workaround for things Blizzard broke in 8.2.5 
+ - Bug fixes! 
 
 ## Commits
 
 InfusOnWoW (3):
 
-- Fix LoadFunction
-- Make WA_GetUnitBuff work on 8.2.5
-- Fix description of "Specific Unit"
+- Item Cooldowns: Don't compare against actual gcd duration
+- Options: Layout buttons on unminimize
+- Fix TimerTick running after a aura is hidden
 
-mrbuds (3):
+mrbuds (1):
 
-- fix nil error in Action Usable spellInRange condition round 2
-- power trigger: invert table use for power types with classic's one this fix "stagger" not shown on retail
-- fix "select" conditions with function for values  fixes #1728
+- Check if cooldown is ready after SPELLS_CHANGED fix #1745
 
