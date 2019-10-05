@@ -124,10 +124,10 @@ local CustomizedIconTable = {
 local control_chatEmote = true;
 ------------------------------------------------------------------------------------------------
 local function IconSize(f)
-	local _, font = f:GetFont();
+	--local _, font = f:GetFont();
 	--local res=select(GetCurrentResolution(),GetScreenResolutions())
 	--local _,h=string.match(res,"(%d+)x(%d+)")
-	font = iconScale * font;--*h/800
+	font = iconScale * 16;--*h/800
 	font = floor(font);
 	return font;
 end
@@ -272,33 +272,38 @@ local function CreatePanel(mainButton)
 		panel.IconList[index] = CreateIcon(panel, EMOTE_DATA_LOCALE[v[1]] or "", v[2], px, py);
 		index = index + 1;
 		px = px + 1;
-	    if px >= 11 then
+		if px >= 11 then
 		px = 1;
-		    py = py + 1;
-	    end
+			py = py + 1;
+		end
 	end
 	for _, v in pairs(CustomizedIconTable) do
 		panel.IconList[index] = CreateIcon(panel, EMOTE_DATA_LOCALE[v[1]] or "", v[2], px, py);
 		index = index + 1;
 		px = px + 1;
-	    if px >= 11 then
-		px = 1;
-		    py = py + 1;
-	    end
+		if px >= 11 then
+			px = 1;
+			py = py + 1;
+		end
 	end
 
 	 return panel;
 end
 
-local Emote_Index2Path = {};
-local Emote_Path2Index = {};
+local Emote_Index2Path = nil;
+local Emote_Path2Index = nil;
 local function ChatEmoteFilter(self, event, msg, ...)
 	--print(msg)
-	for s in string.gmatch(msg, "({[^}]+})") do
-		if (Emote_Index2Path[s]) then
-			 msg = string.gsub(msg , s, "\124T" .. Emote_Index2Path[s] .. ":" ..IconSize(self) .. "\124t", 1);
+	-- for s in string.gmatch(msg, "({[^}]+})") do
+	-- 	if (Emote_Index2Path[s]) then
+	-- 		 msg = string.gsub(msg , s, "\124T" .. Emote_Index2Path[s] .. ":" ..IconSize(self) .. "\124t", 1);
+	-- 	end
+	-- end
+	for k, t in pairs(Emote_Index2Path) do
+		if string.find(msg, k) then
+			msg = string.gsub(msg, k, t);
 		end
-   end
+	end
 	return false, msg, ...
 end
 
@@ -322,18 +327,16 @@ local function SendChatMessage_Filter(text)
 	return text;
 end
 
-local function Init()
-	local mainButton = CreateMainButton();
-	local panel = CreatePanel(mainButton);
-	mainButton.panel = panel;
-
+local function setupTable()
+	Emote_Index2Path = {};
+	Emote_Path2Index = {};
 	for _, localeTable in pairs(EMOTE_DATA) do
 		for k, v in pairs(CustomizedIconTable) do
-			Emote_Index2Path["{" .. (localeTable[v[1]] or "") .. "}"] = v[2];
+			Emote_Index2Path["{" .. (localeTable[v[1]] or "") .. "}"] = "\124T" .. v[2] .. ":" ..IconSize(self) .. "\124t";
 		end
 	end
 	for k, v in pairs(SystemIconTable) do
-		Emote_Index2Path["{" .. v[1] .. "}"] = v[2];
+		Emote_Index2Path["{" .. v[1] .. "}"] = "\124T" .. v[2] .. ":" ..IconSize(self) .. "\124t";
 	end
 
 	local LT = EMOTE_DATA[LOCALE] or EMOTE_DATA["enUS"];
@@ -343,6 +346,12 @@ local function Init()
 	for k, v in pairs(SystemIconTable) do
 		Emote_Path2Index[v[2]] = "{" .. v[1] .. "}";
 	end
+
+end
+local function Init()
+	local mainButton = CreateMainButton();
+	local panel = CreatePanel(mainButton);
+	mainButton.panel = panel;
 
 	return mainButton;
 end
@@ -354,6 +363,7 @@ _G["BNSendWhisper"] = function(presenceID, text, ...) __BNSendWhisper(presenceID
 local __BNSendConversationMessage = BNSendConversationMessage;
 _G["BNSendConversationMessage"] = function(target, text, ...) __BNSendConversationMessage(target, SendChatMessage_Filter(text), ...);end
 
+setupTable();
 local mainButton = Init();
 local function chatEmote_ToggleOn(initing)
 	if not initing and control_chatEmote then
@@ -366,8 +376,8 @@ local function chatEmote_ToggleOn(initing)
 	end
 
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_CHANNEL", ChatEmoteFilter)
-	ChatFrame_AddMessageEventFilter("CHAT_MSG_CHANNEL_JOIN", ChatEmoteFilter)
-	ChatFrame_AddMessageEventFilter("CHAT_MSG_CHANNEL_LEAVE", ChatEmoteFilter)
+	--ChatFrame_AddMessageEventFilter("CHAT_MSG_CHANNEL_JOIN", ChatEmoteFilter)
+	--ChatFrame_AddMessageEventFilter("CHAT_MSG_CHANNEL_LEAVE", ChatEmoteFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_SAY", ChatEmoteFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_YELL", ChatEmoteFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_WHISPER", ChatEmoteFilter)
@@ -378,13 +388,14 @@ local function chatEmote_ToggleOn(initing)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_RAID_WARNING", ChatEmoteFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_PARTY", ChatEmoteFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_PARTY_LEADER", ChatEmoteFilter)
-	ChatFrame_AddMessageEventFilter("CHAT_MSG_INSTANCE_CHAT", ChatEmoteFilter)
-	ChatFrame_AddMessageEventFilter("CHAT_MSG_INSTANCE_CHAT_LEADER", ChatEmoteFilter)
+	--ChatFrame_AddMessageEventFilter("CHAT_MSG_INSTANCE_CHAT", ChatEmoteFilter)
+	--ChatFrame_AddMessageEventFilter("CHAT_MSG_INSTANCE_CHAT_LEADER", ChatEmoteFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_GUILD", ChatEmoteFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_OFFICER", ChatEmoteFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_AFK", ChatEmoteFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_EMOTE", ChatEmoteFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_DND", ChatEmoteFilter)
+	ChatFrame_AddMessageEventFilter("CHAT_MSG_COMMUNITIES_CHANNEL", ChatEmoteFilter)
 
 	return control_chatEmote;
 end
@@ -399,8 +410,8 @@ local function chatEmote_ToggleOff()
 	end
 
 	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_CHANNEL", ChatEmoteFilter)
-	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_CHANNEL_JOIN", ChatEmoteFilter)
-	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_CHANNEL_LEAVE", ChatEmoteFilter)
+	--ChatFrame_RemoveMessageEventFilter("CHAT_MSG_CHANNEL_JOIN", ChatEmoteFilter)
+	--ChatFrame_RemoveMessageEventFilter("CHAT_MSG_CHANNEL_LEAVE", ChatEmoteFilter)
 	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_SAY", ChatEmoteFilter)
 	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_YELL", ChatEmoteFilter)
 	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_WHISPER", ChatEmoteFilter)
@@ -411,13 +422,14 @@ local function chatEmote_ToggleOff()
 	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_RAID_WARNING", ChatEmoteFilter)
 	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_PARTY", ChatEmoteFilter)
 	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_PARTY_LEADER", ChatEmoteFilter)
-	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_INSTANCE_CHAT", ChatEmoteFilter)
-	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_INSTANCE_CHAT_LEADER", ChatEmoteFilter)
+	--ChatFrame_RemoveMessageEventFilter("CHAT_MSG_INSTANCE_CHAT", ChatEmoteFilter)
+	--ChatFrame_RemoveMessageEventFilter("CHAT_MSG_INSTANCE_CHAT_LEADER", ChatEmoteFilter)
 	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_GUILD", ChatEmoteFilter)
 	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_OFFICER", ChatEmoteFilter)
 	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_AFK", ChatEmoteFilter)
 	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_EMOTE", ChatEmoteFilter)
 	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_DND", ChatEmoteFilter)
+	ChatFrame_RemoveMessageEventFilter("CHAT_MSG_COMMUNITIES_CHANNEL", ChatEmoteFilter)
 
 	--SendChatMessage = __SendChatMessage;
 	--BNSendWhisper = BNSendWhisper;
@@ -429,5 +441,16 @@ end
 if FUNC then
 	FUNC.ON.chatEmote = chatEmote_ToggleOn;
 	FUNC.OFF.chatEmote = chatEmote_ToggleOff;
+	FUNC.SETSTYLE.chatEmote = function(style)
+		if style == 'blz' then
+			mainButton:SetNormalTexture(ICON_PATH .. "text_nor_icon");
+			mainButton:SetPushedTexture(ICON_PATH .. "text_push_icon");
+			mainButton:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight");
+		elseif style == 'ala' then
+			mainButton:SetNormalTexture(ICON_PATH .. "emote_nor");
+			mainButton:SetPushedTexture(ICON_PATH .. "emote_push");
+			mainButton:SetHighlightTexture(ICON_PATH .. "emote_highlight");
+		end
+	end
 end
 ------------------------------------------------------------------------------------------------

@@ -53,12 +53,14 @@ local function updateMsg(_gName)
 end
 
 local function welcometoGuildMsg_SetValue(msg)
+	msg = msg .. "\n\n";
 	WelcomeMsg_Format = {};
 	for v in string.gmatch(msg,"%s*([^\n]+)\n") do
+		v=string.gsub(v, "%%", "%%%%");
 		table.insert(WelcomeMsg_Format,v);
 	end
-	local _gName=GetGuildInfo("player");
-	if _gName then
+	gName=GetGuildInfo("player");
+	if gName and gName ~= "" then
 		updateMsg();
 	end
 end

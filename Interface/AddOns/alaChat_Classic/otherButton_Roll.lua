@@ -19,7 +19,7 @@ if not alaBaseBtn then
 	return;
 end
 
-local btnPackIndex = 3;
+local btnPackIndex = 8;
 --------------------------------------------------roll
 local control_roll=false;
 local btnRoll=nil;

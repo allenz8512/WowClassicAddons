@@ -109,6 +109,7 @@ L.SC_DATA3 = {
 	"^LookingForGroup$"
 };
 L.CHATBAR = {
+	ALAC_CHANNELBAR = "<\124cff00ff00alaChat\124r> Hotkey for channel",
 	T_SAY = "S",
 	T_PARTY = "P",
 	T_RAID = "R",
@@ -123,6 +124,9 @@ L.CHATBAR = {
 	LINE_DBM3 = "\124cff80ffffRight click to cancel countdown\124r",
 	T_STAT = "Stat Report",
 	LINE_STAT1 = "Stat Report",
+	KEYWORDHEIGHLIGHT_0 = "Key Word Highlight",
+	KEYWORDHEIGHLIGHT_1 = "Left Click to Edit Key Word",
+	KEYWORDHEIGHLIGHT_2 = "Right Click to Clear All Key Words",
 	READYCHECK = "Do Ready Check",
 };
 L.EMOTE_STRING = {
@@ -147,9 +151,10 @@ L.CONFIG = {
 	position			 = "Position",
 	scale				 = "Bar Scale",
 	alpha				 = "ALPHA",
+	barStyle			 = "Style of button",
 
 	shortChannelName	 = "Short channel name",
-	itemLinkEnhanced	 = "Public channel item link",
+	hyperLinkEnhanced	 = "Hyperlink in chat msg.(Shift click spell in the spellbook also works)",
 	chatEmote			 = "Emote",
 	ColorNameByClass	 = "Color Name By Class In ChatFrame",
 	shamanColor			 = "Change color for \124cfff48cbashaman\124r to \124cff006fdcBLUE\124r.";
@@ -184,11 +189,14 @@ L.CONFIG = {
 	statReport			 = "Stat Report",
 	copy				 = "Copy chat",
 	copyTagColor		 = "Color for timestamp",
+	copyTagFormat		 = "Format of tag [#s for original format]",
 	level				 = "Show guild member's level in chat frame",
 	--hideConfBtn			 = "Hide conf wheel",
 	editBoxTab			 = "Press tab to switch channel when chatbox is shown",
-	restoreAfterWhisper	 = "Reset to previous channel after whisper",
+	restoreAfterWhisper	 = "Reset to previous channel after whisper and channel",
 	hyperLinkHoverShow	 = "Show tooltip when mouse hovered hyperlink in chat frame",
+	keyWordHighlight	 = "Highlight key word",
+	keyWordColor		 = "Highlight color",
 };
 L.REPORT = {
 	neckLevel			 = "neck",

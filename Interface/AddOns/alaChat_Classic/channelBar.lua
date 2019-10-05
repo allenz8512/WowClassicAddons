@@ -52,9 +52,9 @@ local function SetEditBoxHeader(idx)
 						ChatEdit_DeactivateChat(editBox);
 					else
 						if editBox:HasFocus() then
-							local text = editBox:GetText():gsub("/[^%s]+%s", "");
-							ChatEdit_ActivateChat(editBox);
-							editBox:SetText("/"..t[i].." " .. text);
+							--local text = editBox:GetText():gsub("/[^%s]+%s", "");
+							--ChatEdit_ActivateChat(editBox);
+							editBox:SetText("/"..t[i].." " .. editBox:GetText():gsub("^/[^%s]+%s", ""));
 						else
 							ChatEdit_ActivateChat(editBox);
 							editBox:SetText("/"..t[i].." ");
@@ -91,9 +91,9 @@ local function SetEditBoxHeader(idx)
 			ChatEdit_DeactivateChat(editBox);
 		else
 			if editBox:HasFocus() then
-				local text = editBox:GetText():gsub("/[^%s]+%s", "");
-				ChatEdit_ActivateChat(editBox);
-				editBox:SetText(PREF[idx] .. text);
+				--local text = editBox:GetText():gsub("^/[^%s]+%s", "");
+				--ChatEdit_ActivateChat(editBox);
+				editBox:SetText(PREF[idx] .. editBox:GetText():gsub("^/[^%s]+%s", ""));
 			else
 				ChatEdit_ActivateChat(editBox);
 				editBox:SetText(PREF[idx]);
@@ -122,15 +122,15 @@ local control_style = "CHAR";
 local function SetStyle(i, style)
 	if style == "CHAR" then
 		if btn[i] then
-			alaBaseBtn:ChangeBtnTexture(btn[i], "char", CHAR[i]);
+			alaBaseBtn:ChangeBtnTexture(btn[i], "char", CHAR[i], nil, COLOR[i]);
 		end
 	elseif style == "CIRCLE" then
 		if btn[i] then
-			alaBaseBtn:ChangeBtnTexture(btn[i], ICON_PATH .. "channelBarCircle", nil, COLOR[i]);
+			alaBaseBtn:ChangeBtnTexture(btn[i], ICON_PATH .. "channelBarCircle", nil, nil, COLOR[i]);
 		end
 	elseif style == "SQUARE" then
 		if btn[i] then
-			alaBaseBtn:ChangeBtnTexture(btn[i], ICON_PATH .. "channelBarSquare", nil, COLOR[i]);
+			alaBaseBtn:ChangeBtnTexture(btn[i], ICON_PATH .. "channelBarSquare", nil, nil, COLOR[i]);
 		end
 	else
 		return;
@@ -159,7 +159,10 @@ for idx = 1, 9 do
 						end,
 						{
 							INFO[idx],
-						}
+						},
+						nil,
+						nil,
+						COLOR[idx]
 				);
 			end
 		else
@@ -190,7 +193,10 @@ for idx = 10, 14 do
 						end,
 						{
 							INFO[idx],
-						}
+						},
+						nil,
+						nil,
+						COLOR[idx]
 				);
 			end
 		else
@@ -245,20 +251,20 @@ FUNC.INIT.channelBarChannel = function()
 		{ r = 1.0, g = 0.8745, b = 0.7490, },
 	};
 	CHAR = {
-		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.SAY.r*255,ChatTypeInfo.SAY.g*255,ChatTypeInfo.SAY.b*255)..CB_DATA.T_SAY.."\124r",
-		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.PARTY.r*255,ChatTypeInfo.PARTY.g*255,ChatTypeInfo.PARTY.b*255)..CB_DATA.T_PARTY.."\124r",
-		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.RAID.r*255,ChatTypeInfo.RAID.g*255,ChatTypeInfo.RAID.b*255)..CB_DATA.T_RAID.."\124r",
-		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.RAID_WARNING.r*255,ChatTypeInfo.RAID_WARNING.g*255,ChatTypeInfo.RAID_WARNING.b*255)..CB_DATA.T_RW.."\124r",
-		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.INSTANCE_CHAT.r*255,ChatTypeInfo.INSTANCE_CHAT.g*255,ChatTypeInfo.INSTANCE_CHAT.b*255)..CB_DATA.T_INSTANCE_CHAT.."\124r",
-		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.GUILD.r*255,ChatTypeInfo.GUILD.g*255,ChatTypeInfo.GUILD.b*255)..CB_DATA.T_GUILD.."\124r",
-		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.YELL.r*255,ChatTypeInfo.YELL.g*255,ChatTypeInfo.YELL.b*255)..CB_DATA.T_YELL.."\124r",
-		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.WHISPER.r*255,ChatTypeInfo.WHISPER.g*255,ChatTypeInfo.WHISPER.b*255)..CB_DATA.T_WHISPER.."\124r",
-		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.OFFICER.r*255,ChatTypeInfo.OFFICER.g*255,ChatTypeInfo.OFFICER.b*255)..CB_DATA.T_OFFICER.."\124r",
-		"\124cffffdfbf" .. SC_DATA2[1][4] .."\124r",
-		"\124cffffdfbf" .. SC_DATA2[2][4] .."\124r",
-		"\124cffffdfbf" .. SC_DATA2[3][4] .."\124r",
-		"\124cffffdfbf" .. SC_DATA2[4][4] .."\124r",
-		"\124cffffdfbf世\124r",
+		CB_DATA.T_SAY,
+		CB_DATA.T_PARTY,
+		CB_DATA.T_RAID,
+		CB_DATA.T_RW,
+		CB_DATA.T_INSTANCE_CHAT,
+		CB_DATA.T_GUILD,
+		CB_DATA.T_YELL,
+		CB_DATA.T_WHISPER,
+		CB_DATA.T_OFFICER,
+		SC_DATA2[1][4],
+		SC_DATA2[2][4],
+		SC_DATA2[3][4],
+		SC_DATA2[4][4],
+		"世",
 	};
 	INFO = {
 		string.format("\124cff%.2x%.2x%.2x",ChatTypeInfo.SAY.r*255,ChatTypeInfo.SAY.g*255,ChatTypeInfo.SAY.b*255)..SAY.."\124r",
@@ -287,12 +293,12 @@ FUNC.INIT.channelBarChannel = function()
 		"/w ",
 		"/o ",
 	};
-	for i = 1, 13 do
-		LCONFIG.channelBarChannel[i] = INFO[i];
-	end
-	if GetLocale() == "zhCN" or GetLocale() == "zhTW" then
-		LCONFIG.channelBarChannel[14] = "\124cffffdfbf世界频道\124r";
-	end
+	-- for i = 1, 13 do
+	-- 	LCONFIG.channelBarChannel[i] = INFO[i];
+	-- end
+	-- if GetLocale() == "zhCN" or GetLocale() == "zhTW" then
+	-- 	LCONFIG.channelBarChannel[14] = INFO[14];
+	-- end
 end
 
 FUNC.SETVALUE.channelBarStyle = function(style)
@@ -300,19 +306,19 @@ FUNC.SETVALUE.channelBarStyle = function(style)
 		if style == "CHAR" then
 			for i = 1, 14 do
 				if btn[i] then
-					alaBaseBtn:ChangeBtnTexture(btn[i], "char", CHAR[i]);
+					alaBaseBtn:ChangeBtnTexture(btn[i], "char", CHAR[i], nil, COLOR[i]);
 				end
 			end
 		elseif style == "CIRCLE" then
 			for i = 1, 14 do
 				if btn[i] then
-					alaBaseBtn:ChangeBtnTexture(btn[i], ICON_PATH .. "channelBarCircle", nil, COLOR[i]);
+					alaBaseBtn:ChangeBtnTexture(btn[i], ICON_PATH .. "channelBarCircle", nil, nil, COLOR[i]);
 				end
 			end
 		elseif style == "SQUARE" then
 			for i = 1, 14 do
 				if btn[i] then
-					alaBaseBtn:ChangeBtnTexture(btn[i], ICON_PATH .. "channelBarSquare", nil, COLOR[i]);
+					alaBaseBtn:ChangeBtnTexture(btn[i], ICON_PATH .. "channelBarSquare", nil, nil, COLOR[i]);
 				end
 			end
 		else
@@ -322,5 +328,31 @@ FUNC.SETVALUE.channelBarStyle = function(style)
 	end
 end
 FUNC.INIT.channelBarStyle = function()
+end
+
+_G.alaChatChannelBarBindingFunc_ToggleChannel = function(channel)
+	if channel > 0 and (channel <= 13 or (channel <= 14 and GetLocale() == "zhCN" or GetLocale() == "zhTW")) then
+		SetEditBoxHeader(channel);
+	end
+end
+
+BINDING_HEADER_ALAC_CHANNELBAR = CB_DATA.ALAC_CHANNELBAR;
+BINDING_NAME_ALAC_SAY = SAY;
+BINDING_NAME_ALAC_PARTY = PARTY;
+BINDING_NAME_ALAC_RAID = RAID;
+BINDING_NAME_ALAC_RAID_WARING = RAID_WARNING;
+BINDING_NAME_ALAC_INSTANCE_CHAT = INSTANCE_CHAT;
+BINDING_NAME_ALAC_GUILD = GUILD;
+BINDING_NAME_ALAC_YELL = YELL;
+BINDING_NAME_ALAC_WHISPER = WHISPER;
+BINDING_NAME_ALAC_OFFICER = OFFICER;
+BINDING_NAME_ALAC_GENERAL = GENERAL;
+BINDING_NAME_ALAC_TRADE = TRADE;
+BINDING_NAME_ALAC_LOCALDEFENSE = SC_DATA2[3][1];
+BINDING_NAME_ALAC_LOOKINGFORGROUP = SC_DATA2[4][1];
+if GetLocale() == "zhCN" or GetLocale() == "zhTW" then
+	BINDING_NAME_ALAC_CUSTOM = SC_DATA2[5][1];
+else
+	BINDING_NAME_ALAC_CUSTOM = "NOTHING TO DO HERE";
 end
 ----------------------------------------------------------------------------------------------------

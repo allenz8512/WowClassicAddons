@@ -23,20 +23,20 @@ local function insertEditBox(text)
 	editBox:SetText(text);
 end
 
-local orig_ChatFrame_OnHyperlinkShow=ChatFrame_OnHyperlinkShow;
 local orig_timeStamp=CHAT_TIMESTAMP_FORMAT;
 
 local copy_color = "7f7fff";
+local stamp_fmt = "#s";
 local gsubfmt = "";
 
 local function set(fmt)
 	if fmt then
 		--\cffffff\Hcopy:id::::\h[time]\h\r
-		CHAT_TIMESTAMP_FORMAT="\124cff" .. copy_color .. "\124HalaCCopy:-1\124h"..fmt.."\124h\124r";
+		CHAT_TIMESTAMP_FORMAT="\124cff" .. copy_color .. "\124HalaCCopy:-1\124h" .. string.gsub(stamp_fmt, "#s", string.gsub(fmt, "%%", "%%%%")) .. "\124h\124r";
 	else
-		CHAT_TIMESTAMP_FORMAT="\124cff" .. copy_color .. "\124HalaCCopy:-1\124h**\124h\124r";
+		CHAT_TIMESTAMP_FORMAT="\124cff" .. copy_color .. "\124HalaCCopy:-1\124h" .. string.gsub(stamp_fmt, "#s", "**") .. "\124h\124r";
 	end
-	gsubfmt = "\124cff" .. copy_color .. "\124HalaCCopy:-1\124h**\124h\124r"
+	gsubfmt = "\124cff" .. copy_color .. "\124HalaCCopy:-1\124h**\124h\124r";
 end
 local function setColor(r, g, b)
 	copy_color = string.format("%.2x%.2x%.2x", r * 255, g * 255, b* 255);
@@ -44,61 +44,48 @@ local function setColor(r, g, b)
 		set(orig_timeStamp);
 	end
 end
-local function copy_Init()
-	ItemRefTooltip._SetHyperlink=ItemRefTooltip.SetHyperlink;
-	ItemRefTooltip.SetHyperlink=function(self,link)
-		if link=="alaCCopy:-1" then
-			local m=GetMouseFocus();
-			if not m:IsObjectType("FontString") then
-				m=m:GetParent();
-				if not m:IsObjectType("FontString") then
-					return;
-				end
-			end
-			local tx=m:GetText();
-			if type(tx)~="string" then
-				return;
-			end
-			--tx=string.gsub(tx,"\124cff%x%x%x%x%x%x\124H[^:]+[1-9-:]+\124h(.*)\124h\124r")
-			--tx=string.gsub(tx,"\124cffffffff\124H[^:]+[1-9-:]+\124h(.*)\124h\124r","%1");
-			tx=string.gsub(tx,gsubfmt,"");
-			tx=string.gsub(tx,"\124H.-\124h","");
-			tx=string.gsub(tx,"\124cff%x%x%x%x%x%x","");
-			tx=string.gsub(tx,"\124h","");
-			tx=string.gsub(tx,"\124r","");
-			insertEditBox(tx);
-			--print(gsub(tx,"\124","__"));
-		else
-			return self:_SetHyperlink(link);
+local function setStamp(fmt)
+	fmt = string.gsub(fmt, "%%", "%%%%");
+	stamp_fmt = fmt;
+	if fmt then
+		fmt = string.gsub(fmt, "\n", "");
+	end
+	if not fmt or fmt == "" then
+		CHAT_TIMESTAMP_FORMAT = nil;
+	else
+		if control_copy then
+			set(orig_timeStamp);
 		end
 	end
-	-- orig_ChatFrame_OnHyperlinkShow=ChatFrame_OnHyperlinkShow;
-	-- ChatFrame_OnHyperlinkShow=function(chatframe,link,text,button,...)
-	-- 	if link=="alaCCopy:-1" then
-	-- 		local m=GetMouseFocus();
-	-- 		if not m:IsObjectType("FontString") then
-	-- 			m=m:GetParent();
-	-- 			if not m:IsObjectType("FontString") then
-	-- 				return;
-	-- 			end
-	-- 		end
-	-- 		local tx=m:GetText();
-	-- 		if type(tx)~="string" then
-	-- 			return;
-	-- 		end
-	-- 		--tx=string.gsub(tx,"\124cff%x%x%x%x%x%x\124H[^:]+[1-9-:]+\124h(.*)\124h\124r")
-	-- 		--tx=string.gsub(tx,"\124cffffffff\124H[^:]+[1-9-:]+\124h(.*)\124h\124r","%1");
-	-- 		tx=string.gsub(tx,"\124cff7f7fff\124HalaCCopy:-1\124h**\124h\124r","");
-	-- 		tx=string.gsub(tx,"\124H.-\124h","");
-	-- 		tx=string.gsub(tx,"\124cff%x%x%x%x%x%x","");
-	-- 		tx=string.gsub(tx,"\124h","");
-	-- 		tx=string.gsub(tx,"\124r","");
-	-- 		insertEditBox(tx);
-	-- 		--print(gsub(tx,"\124","__"));
-	-- 	else
-	-- 		return orig_ChatFrame_OnHyperlinkShow(chatframe,link,text,button,...);
-	-- 	end
-	-- end
+end
+
+local _SetHyperlink = ItemRefTooltip.SetHyperlink;
+local function hook_SetHyperlink(self,link)
+	if link=="alaCCopy:-1" then
+		local m=GetMouseFocus();
+		if not m:IsObjectType("FontString") then
+			m=m:GetParent();
+			if not m:IsObjectType("FontString") then
+				return;
+			end
+		end
+		local tx=m:GetText();
+		if type(tx)~="string" then
+			return;
+		end
+		--tx=string.gsub(tx,"\124cff%x%x%x%x%x%x\124H[^:]+[1-9-:]+\124h(.*)\124h\124r")
+		--tx=string.gsub(tx,"\124cffffffff\124H[^:]+[1-9-:]+\124h(.*)\124h\124r","%1");
+		tx=string.gsub(tx,gsubfmt,"");
+		tx=string.gsub(tx,"\124H.-\124h","");
+		tx=string.gsub(tx,"\124cff%x%x%x%x%x%x","");
+		tx=string.gsub(tx,"\124h","");
+		tx=string.gsub(tx,"\124r","");
+		insertEditBox(tx);
+	else
+		return _SetHyperlink(self, link);
+	end
+end
+local function copy_Init()
 	orig_timeStamp=CHAT_TIMESTAMP_FORMAT;
 	hookfCall(InterfaceOptionsSocialPanelTimestamps,"SetValue",function(_,fmt)
 			if fmt=="none" then
@@ -111,29 +98,31 @@ local function copy_Init()
 			end
 		end
 		);
-	--set(orig_timeStamp);
 end
 local function copy_ToggleOn()
 	if control_copy then
 		return;
 	end
+	ItemRefTooltip.SetHyperlink = hook_SetHyperlink;
 	control_copy=true;
 	set(orig_timeStamp);
 	return control_copy;
 end
-local function copy_ToggleOff()
-	if not control_copy then
+local function copy_ToggleOff(loading)
+	if not control_copy or loading then
 		return;
 	end
+	ItemRefTooltip.SetHyperlink = _SetHyperlink;
 	control_copy=false;
 	CHAT_TIMESTAMP_FORMAT=orig_timeStamp;
 	return control_copy;
 end
-FUNC.INIT.copy=copy_Init;
-FUNC.ON.copy=copy_ToggleOn;
-FUNC.OFF.copy=copy_ToggleOff;
+FUNC.INIT.copy = copy_Init;
+FUNC.ON.copy = copy_ToggleOn;
+FUNC.OFF.copy = copy_ToggleOff;
 
 --FUNC.ON.copyTagColor=function()end
 --FUNC.OFF.copyTagColor=function()end
-FUNC.SETVALUE.copyTagColor=setColor;
+FUNC.SETVALUE.copyTagColor = setColor;
+FUNC.SETVALUE.copyTagFormat = setStamp;
 ----------------------------------------------------------------------------------------------------

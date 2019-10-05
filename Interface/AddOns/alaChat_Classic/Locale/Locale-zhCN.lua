@@ -109,6 +109,7 @@ L.SC_DATA3 = {
 	"^寻求组队$",
 };
 L.CHATBAR = {
+	ALAC_CHANNELBAR = "<\124cff00ff00alaChat\124r> 频道快捷键",
 	T_SAY = "说",
 	T_PARTY = "队",
 	T_RAID = "团",
@@ -123,6 +124,9 @@ L.CHATBAR = {
 	LINE_DBM3 = "\124cff80ffff右键点击取消倒计时\124r",
 	T_STAT = "属性通报",
 	LINE_STAT1 = "属性报告",
+	KEYWORDHEIGHLIGHT_0 = "关键词高亮",
+	KEYWORDHEIGHLIGHT_1 = "左键编辑关键词",
+	KEYWORDHEIGHLIGHT_2 = "右键清空关键词",
 	READYCHECK = "就位确认",
 };
 L.EMOTE_STRING = {
@@ -146,10 +150,11 @@ L.CONFIG = {
 
 	position				 = "位置",
 	scale					 = "缩放",
-	alpha				 = "ALPHA",
+	alpha					 = "透明度",
+	barStyle				 = "图标风格",
 
 	shortChannelName		 = "短频道名",
-	itemLinkEnhanced		 = "公共频道物品链接",
+	hyperLinkEnhanced		 = "聊天超链接(同时允许shift点击发送技能书技能)",
 	chatEmote				 = "聊天表情",
 	ColorNameByClass		 = "聊天职业着色",
 	shamanColor				 = "将\124cfff48cba萨满\124r的职业颜色改成与正式服一样的\124cff006fdc蓝色\124r";
@@ -169,6 +174,7 @@ L.CONFIG = {
 		TRADE,
 		"本地防务",
 		LOOK_FOR_GROUP,
+		"世界频道",
 		label				 = "频道切换栏",
 	},
 	filterQuestAnn			 = "屏蔽任务进度通报(大脚、有爱)",
@@ -184,11 +190,14 @@ L.CONFIG = {
 	statReport				 = "属性通报",
 	copy					 = "复制聊天",
 	copyTagColor			 = "时间戳颜色",
+	copyTagFormat			 = "时间戳格式【#s代表原始样式】",
 	level					 = "聊天框显示公会成员等级",
 	--hideConfBtn				 = "隐藏设置按钮",
 	editBoxTab				 = "聊天框Tab键切换频道",
-	restoreAfterWhisper		 = "密语之后恢复原来的频道",
+	restoreAfterWhisper		 = "密语和频道聊天之后恢复原来的频道",
 	hyperLinkHoverShow		 = "鼠标指向聊天框物品链接时显示提示",
+	keyWordHighlight		 = "关键词高亮",
+	keyWordColor			 = "高亮颜色",
 };
 L.REPORT = {
 	neckLevel			 = "项链",

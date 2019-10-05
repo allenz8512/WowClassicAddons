@@ -19,7 +19,7 @@ if not alaBaseBtn then
 	return;
 end
 
-local btnPackIndex = 4;
+local btnPackIndex = 9;
 --------------------------------------------------dbm pull
 local control_dbmCountDown=false;
 local btnDBMCountDown=nil;

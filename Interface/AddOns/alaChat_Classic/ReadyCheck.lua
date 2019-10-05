@@ -19,7 +19,7 @@ if not alaBaseBtn then
 	return;
 end
 
-local btnPackIndex = 5;
+local btnPackIndex = 10;
 --------------------------------------------------stat report
 local control_ReadyCheck=false;
 local btnReadyCheck=nil;

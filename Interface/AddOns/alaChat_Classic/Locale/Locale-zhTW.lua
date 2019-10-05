@@ -109,6 +109,7 @@ L.SC_DATA3 = {
 	"^尋求組隊$",
 };
 L.CHATBAR = {
+	ALAC_CHANNELBAR = "<\124cff00ff00alaChat\124r> 頻道熱鍵",
 	T_SAY = "說",
 	T_PARTY = "隊",
 	T_RAID = "團",
@@ -123,6 +124,9 @@ L.CHATBAR = {
 	LINE_DBM3 = "\124cff80ffffRight click to cancel countdown\124r",
 	T_STAT = "屬性通報",
 	LINE_STAT1 = "屬性報告",
+	KEYWORDHEIGHLIGHT_0 = "關鍵字突出顯示",
+	KEYWORDHEIGHLIGHT_1 = "左鍵編輯關鍵字",
+	KEYWORDHEIGHLIGHT_2 = "右鍵清空關鍵字",
 	READYCHECK = "就位確認",
 };
 L.EMOTE_STRING = {
@@ -147,9 +151,10 @@ L.CONFIG = {
 	position			 = "位置",
 	scale				 = "縮放",
 	alpha				 = "ALPHA",
+	barStyle			 = "图标风格",
 
 	shortChannelName	 = "短頻道名",
-	itemLinkEnhanced	 = "公共頻道物品鏈接",
+	hyperLinkEnhanced	 = "聊天超鏈接(同時允許shift點擊發送技能書技能)",
 	chatEmote			 = "聊天表情",
 	ColorNameByClass	 = "聊天職業著色",
 	shamanColor			 = "將\124cfff48cba薩滿\124r的職業顔色變成與正式服一樣的\124cff006fdc藍色\124r";
@@ -169,6 +174,7 @@ L.CONFIG = {
 		TRADE,
 		"本地防務",
 		LOOK_FOR_GROUP,
+		"世界頻道",
 		label			 = "頻道切換欄",
 	},
 	filterQuestAnn		 = "NONE",
@@ -184,11 +190,14 @@ L.CONFIG = {
 	statReport			 = "屬性通報",
 	copy				 = "複製聊天",
 	copyTagColor		 = "時間戳顔色",
+	copyTagFormat		 = "時間戳樣式【#s代表原始樣式】",
 	level				 = "聊天窗體顯示公會成員等級",
 	--hideConfBtn		 = "隱藏選項設置齒輪",
 	editBoxTab			 = "聊天框Tab鍵切換頻道",
-	restoreAfterWhisper	 = "私聊之後恢復到上次的聊天頻道",
+	restoreAfterWhisper	 = "私聊和頻道聊天之後恢復到上次的聊天頻道",
 	hyperLinkHoverShow	 = "鼠標指向聊天框的物品鏈接時顯示提示",
+	keyWordHighlight	 = "關鍵字突出顯示",
+	keyWordColor		 = "突出顯示顔色",
 };
 L.REPORT = {
 	neckLevel			 = "項鏈",

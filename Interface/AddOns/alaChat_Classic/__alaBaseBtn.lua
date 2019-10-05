@@ -1,6 +1,9 @@
 ﻿--[[--
 	alex@0
 --]]--
+----------------------------------------------------------------------------------------------------
+local ADDON, NS = ...;
+----------------------------------------------------------------------------------------------------
 local math,table,string,pairs,type,select,tonumber,unpack=math,table,string,pairs,type,select,tonumber,unpack;
 local _G=_G;
 local GameTooltip=GameTooltip;
@@ -8,7 +11,7 @@ local GameTooltip=GameTooltip;
 if not __alaBase then
 	return;
 end
-local __alaBaseBtn_Version=1.06;
+local __alaBaseBtn_Version=1.07;
 if __alaBaseBtn and __alaBaseBtn.Version>=__alaBaseBtn_Version then
 	return;
 end
@@ -332,49 +335,7 @@ function alaBaseBtn:CreateBtn(posIndexMajor,posIndexMinor,name,nTex,pTex,hTex,on
 	local btn=CreateFrame("Button",name,alaBaseBtn);
 	btn:SetWidth(btnSize);
 	btn:SetHeight(btnSize);
-	alaBaseBtn:ChangeBtnTexture(btn, nTex, pTex, color);
-	-- if nTex then
-	--     if string.lower(nTex)=="class" and pTex then
-	-- 	    btn:SetNormalTexture("Interface\\TARGETINGFRAME\\UI-CLASSES-CIRCLES");
-	-- 		btn:SetPushedTexture("Interface\\TARGETINGFRAME\\UI-CLASSES-CIRCLES");
-	-- 		if CLASS_ICON_TCOORDS[string.upper(pTex)] then
-	-- 			btn:GetNormalTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[pTex]));
-	-- 			btn:GetPushedTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[pTex]));
-	-- 		else
-	-- 			btn:GetNormalTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[select(2,UnitClass("player")) or "WARRIOR"]));
-	-- 			btn:GetPushedTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[select(2,UnitClass("player")) or "WARRIOR"]));
-	-- 		end
-	-- 	elseif string.lower(nTex)=="char" then
-	-- 		--local btnTexture=btn:CreateTexture(name.."Texture","BACKGROUND");
-	-- 		--btnTexture:SetAllPoints(btn);
-	-- 		--btnTexture:SetTexture("Interface\\AddOns\\_x\\icon\\text_push_frame");
-	-- 		--btnTexture:SetTexture("Interface\\Buttons\\UI-Quickslot-Depress");
-	-- 	    --btn:SetNormalTexture("Interface\\Buttons\\UI-Quickslot-Depress");
-	-- 		local btnFontString=btn:CreateFontString(name.."FontString","ARTWORK");
-	-- 		--local font,size,outline=PlayerFrame.healthbar.TextString:GetFont();
-	-- 		btnFontString:SetFont(GameFontNormal:GetFont(),22,"NORMAL");
-	-- 		--btnFontString:SetFont("Fonts\\ARKai_C.ttf",btnSize/2,"OUTLINE");
-	-- 		--btnFontString:SetAllPoints();
-	-- 		btnFontString:SetPoint("CENTER");
-	-- 		--btnFontString:SetPoint("CENTER",btn);
-	-- 		btnFontString:SetText(pTex);
-	-- 		--btnFontString:Show();
-	-- 		btn.fontString = btnFontString;
-	-- 	else
-	-- 		btn:SetNormalTexture(nTex);
-	-- 		if pTex then
-	-- 			btn:SetPushedTexture(pTex);
-	-- 		else
-	-- 			btn:SetPushedTexture(nTex);
-	-- 		end
-	-- 	end
-	-- end
-	if hTex then
-		btn:SetHighlightTexture(hTex);
-	else
-		btn:SetHighlightTexture("Interface\\Buttons\\ui-panel-minimizebutton-highlight");
-	end
-	btn:GetHighlightTexture():SetBlendMode("ADD");
+	alaBaseBtn:ChangeBtnTexture(btn, nTex, pTex, hTex,color);
 	--
 	btn:SetAlpha(alpha or 1);
 	btn:SetFrameLevel(32);
@@ -393,7 +354,7 @@ function alaBaseBtn:CreateBtn(posIndexMajor,posIndexMinor,name,nTex,pTex,hTex,on
 	end
 	return btn;
 end
-function alaBaseBtn:ChangeBtnTexture(btn, nTex, pTex, color)
+function alaBaseBtn:ChangeBtnTexture(btn, nTex, pTex, hTex, color)
 	if not btn then
 		return;
 	end
@@ -408,27 +369,68 @@ function alaBaseBtn:ChangeBtnTexture(btn, nTex, pTex, color)
 				btn:GetNormalTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[select(2,UnitClass("player")) or "WARRIOR"]));
 				btn:GetPushedTexture():SetTexCoord(unpack(CLASS_ICON_TCOORDS[select(2,UnitClass("player")) or "WARRIOR"]));
 			end
+			if hTex then
+				btn:SetHighlightTexture(hTex);
+				btn.hTex = hTex;
+			else
+				btn:SetHighlightTexture("Interface\\Buttons\\ui-panel-minimizebutton-highlight");
+			end
+			btn:GetHighlightTexture():SetBlendMode("ADD");
 			if btn.fontString then
 				btn.fontString:Hide();
 			end
+			btn.type = 'class';
 		elseif string.lower(nTex)=="char" then
-			--local btnTexture=btn:CreateTexture(name.."Texture","BACKGROUND");
-			--btnTexture:SetAllPoints(btn);
-			--btnTexture:SetTexture("Interface\\AddOns\\_x\\icon\\text_push_frame");
-			--btnTexture:SetTexture("Interface\\Buttons\\UI-Quickslot-Depress");
-			--btn:SetNormalTexture("Interface\\Buttons\\UI-Quickslot-Depress");
+			-- local btnTexture=btn:CreateTexture(name.."Texture","BACKGROUND");
+			-- btnTexture:SetAllPoints(btn);
+			-- btnTexture:SetTexture("Interface\\Buttons\\UI-Quickslot-Depress");
 			local btnFontString = btn.fontString or btn:CreateFontString(btn:GetName().."FontString","ARTWORK");
-			--local font,size,outline=PlayerFrame.healthbar.TextString:GetFont();
-			btnFontString:SetFont(GameFontNormal:GetFont(),21,"NORMAL");
-			--btnFontString:SetFont("Fonts\\ARKai_C.ttf",btnSize/2,"OUTLINE");
-			--btnFontString:SetAllPoints();
 			btnFontString:SetPoint("CENTER");
-			--btnFontString:SetPoint("CENTER",btn);
+			if alaBaseData.xBtn.style == 'blz' then
+				btn:SetBackdropColor({
+					bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
+					edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+					tile = true,
+					tileSize = 2,
+					edgeSize = 2,
+					insets = { left = 2, right = 2, top = 2, bottom = 2 }
+				});
+				btn:SetNormalTexture(NS.ICON_PATH .. "text_nor_frame");
+				btn:GetNormalTexture():SetVertexColor(1.0, 1.0, 1.0, 1.0);
+				btn:SetPushedTexture(NS.ICON_PATH .. "text_push_frame");
+				btn:GetPushedTexture():SetVertexColor(1.0, 1.0, 1.0, 1.0);
+				btn:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight");
+				btn:GetHighlightTexture():SetBlendMode("ADD");
+				btnFontString:SetFont(NumberFont_Shadow_Med:GetFont(),15,"NORMAL");
+				btnFontString:SetTextColor(1.0, 0.75, 0.25, 1.0);
+			elseif alaBaseData.xBtn.style == 'ala' then
+				btn:SetBackdropColor({
+					bgFile = nil,
+					edgeFile = nil,
+					tile = true,
+					tileSize = 0,
+					edgeSize = 0,
+					insets = { left = 0, right = 0, top = 0, bottom = 0 }
+				});
+				btn:SetNormalTexture(nil);
+				btn:SetPushedTexture(nil);
+				if hTex then
+					btn:SetHighlightTexture(hTex);
+					btn.hTex = hTex;
+				else
+					btn:SetHighlightTexture("Interface\\Buttons\\ui-panel-minimizebutton-highlight");
+				end
+				btn:GetHighlightTexture():SetBlendMode("ADD");
+				btnFontString:SetFont(SystemFont_Shadow_Med1:GetFont(),21,"NORMAL");
+				if color then
+					btnFontString:SetTextColor(color.r, color.g, color.b, 1.0);
+				end
+			end
 			btnFontString:SetText(pTex);
+			btnFontString:Show();
+			btn.color = color;
 			btn.fontString = btnFontString;
-			--btnFontString:Show();
-			btn:SetNormalTexture(nil);
-			btn:SetPushedTexture(nil);
+			btn.type = 'char';
 		else
 			btn:SetNormalTexture(nTex);
 			if pTex then
@@ -443,10 +445,19 @@ function alaBaseBtn:ChangeBtnTexture(btn, nTex, pTex, color)
 				if btn:GetPushedTexture() then
 					btn:GetPushedTexture():SetVertexColor(color.r, color.g, color.b, color.a or 1.0);
 				end
+				btn.color = color;
 			end
+			if hTex then
+				btn:SetHighlightTexture(hTex);
+				btn.hTex = hTex;
+			else
+				btn:SetHighlightTexture("Interface\\Buttons\\ui-panel-minimizebutton-highlight");
+			end
+			btn:GetHighlightTexture():SetBlendMode("ADD");
 			if btn.fontString then
 				btn.fontString:Hide();
 			end
+			btn.type = 'norm';
 		end
 	end
 end
@@ -540,6 +551,70 @@ function alaBaseBtn:Pos(p)
 		end
 	end
 end
+function alaBaseBtn:Style(s)
+	--'ala', 'blz'
+	if alaBaseData.xBtn.style ~= s and (s == 'blz' or s == 'ala') then
+		alaBaseData.xBtn.style = s;
+		if s == 'blz' then
+			for i = 1, #self.BtnList do
+				local l = self.BtnList[i];
+				for j = 1, #l do
+					local btn = self.BtnList[i][j];
+					if btn.type == 'char' then
+						btn:SetBackdropColor({
+							bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
+							edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+							tile = true,
+							tileSize = 2,
+							edgeSize = 2,
+							insets = { left = 2, right = 2, top = 2, bottom = 2 }
+						});
+						btn:SetNormalTexture(NS.ICON_PATH .. "text_nor_frame");
+						btn:GetNormalTexture():SetVertexColor(1.0, 1.0, 1.0, 1.0);
+						btn:SetPushedTexture(NS.ICON_PATH .. "text_push_frame");
+						btn:GetPushedTexture():SetVertexColor(1.0, 1.0, 1.0, 1.0);
+						btn:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight");
+						btn:GetHighlightTexture():SetBlendMode("ADD");
+						btn.fontString:SetFont(NumberFont_Shadow_Med:GetFont(),15,"NORMAL");
+						btn.fontString:SetTextColor(1.0, 0.75, 0.25, 1.0);
+						btn.fontString:SetText(btn.fontString:GetText());
+					end
+				end
+			end
+		elseif s == 'ala' then
+			for i = 1, #self.BtnList do
+				local l = self.BtnList[i];
+				for j = 1, #l do
+					local btn = self.BtnList[i][j];
+					if btn.type == 'char' then
+						btn:SetBackdropColor({
+							bgFile = nil,
+							edgeFile = nil,
+							tile = true,
+							tileSize = 0,
+							edgeSize = 0,
+							insets = { left = 0, right = 0, top = 0, bottom = 0 }
+						});
+						btn:SetNormalTexture(nil);
+						btn:SetPushedTexture(nil);
+						if hTex then
+							btn:SetHighlightTexture(hTex);
+							btn.hTex = hTex;
+						else
+							btn:SetHighlightTexture("Interface\\Buttons\\ui-panel-minimizebutton-highlight");
+						end
+						btn:GetHighlightTexture():SetBlendMode("ADD");
+						btn.fontString:SetFont(SystemFont_Shadow_Med1:GetFont(),21,"NORMAL");
+						if btn.color then
+							btn.fontString:SetTextColor(btn.color.r, btn.color.g, btn.color.b, 1.0);
+						end
+						btn.fontString:SetText(btn.fontString:GetText());
+					end
+				end
+			end
+		end
+	end
+end
 
 eventCall("PLAYER_ENTERING_WORLD",function()
 										alaBaseData = alaBaseData or {};
@@ -547,6 +622,7 @@ eventCall("PLAYER_ENTERING_WORLD",function()
 										alaBaseData.xBtn.posEx = alaBaseData.xBtn.posEx or "BELOW_EDITBOX";
 										alaBaseData.xBtn.scale = alaBaseData.xBtn.scale or 1.0;
 										alaBaseData.xBtn.alpha = alaBaseData.xBtn.alpha or 1.0;
+										alaBaseData.xBtn.style = alaBaseData.xBtn.style or 'ala';
 										--if alaBaseData.xBtn then
 											if not alaBaseData.xBtn._version or alaBaseData.xBtn._version < __alaBaseBtn_Version then
 												alaBaseData.xBtn._version = __alaBaseBtn_Version;
