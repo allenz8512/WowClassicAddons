@@ -5,6 +5,9 @@ MonkeyQuestConfig = {
 			["验证腐蚀 - false"] = {
 				["m_bChecked"] = true,
 			},
+			["收集堕落之水 - false"] = {
+				["m_bChecked"] = true,
+			},
 			["霍尔雷·黑须 - false"] = {
 				["m_bChecked"] = true,
 			},
@@ -116,33 +119,33 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_bHideTitleButtons"] = false,
+		["m_iFrameBottom"] = 94.22216796875,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11291503906,
-		["m_bNoBorder"] = true,
+		["m_bColourDoneOrFailed"] = false,
 		["m_bLocked"] = true,
 		["m_iQuestPadding"] = 2,
 		["m_bNoHeaders"] = true,
-		["m_bShowTooltipObjectives"] = true,
+		["m_bShowNumQuests"] = true,
 		["m_strOverviewColour"] = "|cFF7F7F7F",
 		["m_iAlpha"] = 0,
 		["m_bColourSubObjectivesByProgress"] = true,
-		["m_iFrameWidth"] = 240,
+		["m_strMidObjectiveColour"] = "|cFFFFFF00",
 		["m_iFontHeight"] = 13,
 		["m_strQuestTitleColour"] = "|cFFFFFFFF",
 		["m_bWorkComplete"] = true,
 		["m_bHideQuestsEnabled"] = false,
-		["m_strMidObjectiveColour"] = "|cFFFFFF00",
+		["m_iFrameWidth"] = 240,
 		["m_bCrashBorder"] = true,
 		["m_strHeaderOpenColour"] = "|cFFBFBFFF",
 		["m_iFrameTop"] = 720.888977050781,
 		["m_bObjectives"] = false,
 		["m_bHideHeader"] = true,
-		["m_bShowNumQuests"] = true,
-		["m_bColourDoneOrFailed"] = false,
+		["m_bShowTooltipObjectives"] = true,
+		["m_bNoBorder"] = true,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_iFrameBottom"] = 67.555534362793,
+		["m_bHideTitleButtons"] = false,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {
@@ -154,19 +157,19 @@ MonkeyQuestConfig = {
 			["贝尔丁的补给 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["啤酒烤猪排 - false"] = {
+			["灰色洞穴 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["海格纳的弹药 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["烹饪 - true"] = {
-				["m_bChecked"] = true,
-			},
 			["丹莫罗 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["灰色洞穴 - false"] = {
+			["烹饪 - true"] = {
+				["m_bChecked"] = true,
+			},
+			["啤酒烤猪排 - false"] = {
 				["m_bChecked"] = true,
 			},
 		},

@@ -1,11 +1,11 @@
 
 BuffwatchConfig = {
-	["debug"] = false,
-	["ExpiredSound"] = false,
 	["CooldownTextScale"] = 0.449999988079071,
+	["ExpiredSound"] = false,
+	["debug"] = false,
 	["Version"] = "1.08",
-	["ExpiredWarning"] = true,
 	["Spirals"] = true,
+	["ExpiredWarning"] = true,
 	["Alpha"] = 0.5,
 	["HideCooldownText"] = true,
 }

@@ -1,14 +1,14 @@
 
 Postal3ClassicDB = {
-	["profileKeys"] = {
-		["白銀諾艾爾 - 碧玉矿洞"] = "白銀諾艾爾 - 碧玉矿洞",
-	},
 	["global"] = {
 		["BlackBook"] = {
 			["alts"] = {
 				"白銀諾艾爾|碧玉矿洞|Alliance|54|PALADIN", -- [1]
 			},
 		},
+	},
+	["profileKeys"] = {
+		["白銀諾艾爾 - 碧玉矿洞"] = "白銀諾艾爾 - 碧玉矿洞",
 	},
 	["profiles"] = {
 		["白銀諾艾爾 - 碧玉矿洞"] = {

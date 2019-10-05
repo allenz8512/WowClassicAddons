@@ -1,7 +1,39 @@
 
 BugGrabberDB = {
-	["session"] = 290,
 	["lastSanitation"] = 3,
+	["session"] = 309,
 	["errors"] = {
+		{
+			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipAddMoney",
+			["time"] = "2019/10/05 21:05:45",
+			["session"] = 291,
+			["counter"] = 3,
+		}, -- [1]
+		{
+			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipCleared",
+			["time"] = "2019/10/05 21:05:45",
+			["session"] = 291,
+			["counter"] = 3,
+		}, -- [2]
+		{
+			["message"] = "Frame RecipeRadarAvailabilityTooltip: Unknown script element OnTooltipSetDefaultAnchor",
+			["time"] = "2019/10/05 21:05:45",
+			["session"] = 291,
+			["counter"] = 4,
+		}, -- [3]
+		{
+			["message"] = "Interface\\AddOns\\RealMobHealth\\Core.lua:18: attempt to index field 'APIVersion' (a nil value)",
+			["time"] = "2019/10/06 01:39:18",
+			["locals"] = "Name = \"RealMobHealth\"\nAddOn = <table> {\n HealthOverrides = <table> {\n }\n AddHealthOverride = <function> defined @Interface\\AddOns\\RealMobHealth\\Overrides.lua:25\n BroadcastMessage = <function> defined @Interface\\AddOns\\RealMobHealth\\Comms.lua:39\n table_ifind = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:31\n IsMobGUID = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:80\n ArgumentCheck = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:38\n IsBlacklistedGUID = <function> defined @Interface\\AddOns\\RealMobHealth\\Blacklist.lua:45\n FireAddOnEvent = <function> defined @Interface\\AddOns\\RealMobHealth\\Events.lua:124\n UnregisterAddOnEvent = <function> defined @Interface\\AddOns\\RealMobHealth\\Events.lua:111\n GetCreatureIDFromKey = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:94\n RegisterAddOnEvent = <function> defined @Interface\\AddOns\\RealMobHealth\\Events.lua:101\n table_find = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:32\n IsBlacklistedCreatureKey = <function> defined @Interface\\AddOns\\RealMobHealth\\Blacklist.lua:40\n HasHealthOverride = <function> defined @Interface\\AddOns\\RealMobHealth\\Overrides.lua:35\n IsBlacklistedUnit = <function> defined @Interface\\AddOns\\RealMobHealth\\Blacklist.lua:51\n Options = <table> {\n }\n IsBlacklistedCreatureID = <function> defined @Interface\\AddOns\\RealMobHealth\\Blacklist.lua:35\n UnregisterGameEvent = <function> defined @Interface\\AddOns\\RealMobHealth\\Events.lua:85\n API = <table> {\n }\n ClearTimer = <function> defined @Interface\\AddOns\\RealMobHealth\\Events.lua:145\n GetCreatureIDFromGUID = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:88\n IsUnitMob = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:86\n RegisterGameEvent = <function> defined @Interface\\AddOns\\RealMobHealth\\Events.lua:73\n SendMessage = <function> defined @Interface\\AddOns\\RealMobHealth\\Comms.lua:38\n GetUnitCreatureKey = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:101\n Localization = <table> {\n }\n SetTimerInterval = <function> defined @Interface\\AddOns\\RealMobHealth\\Events.lua:138\n GetUnitCreatureID = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:99\n BlacklistCreatureID = <function> defined @Interface\\AddOns\\RealMobHealth\\Blacklist.lua:27\n}\n(*temporary) = <table> {\n HasHealthOverride = <function> defined @Interface\\AddOns\\RealMobHealth\\Overrides.lua:35\n AddHealthOverride = <function> defined @Interface\\AddOns\\RealMobHealth\\Overrides.lua:25\n IsBlacklistedCreatureID = <function> defined @Interface\\AddOns\\RealMobHealth\\Blacklist.lua:35\n GetCreatureIDFromKey = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:94\n IsBlacklistedGUID = <function> defined @Interface\\AddOns\\RealMobHealth\\Blacklist.lua:45\n IsMobGUID = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:80\n GetCreatureIDFromGUID = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:88\n IsUnitMob = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:86\n IsBlacklistedCreatureKey = <function> defined @Interface\\AddOns\\RealMobHealth\\Blacklist.lua:40\n UnregisterAddOnEvent = <function> defined @Interface\\AddOns\\RealMobHealth\\Events.lua:111\n GetUnitCreatureKey = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:101\n IsBlacklistedUnit = <function> defined @Interface\\AddOns\\RealMobHealth\\Blacklist.lua:51\n RegisterAddOnEvent = <function> defined @Interface\\AddOns\\RealMobHealth\\Events.lua:101\n GetUnitCreatureID = <function> defined @Interface\\AddOns\\RealMobHealth\\SharedFuncs.lua:99\n BlacklistCreatureID = <function> defined @Interface\\AddOns\\RealMobHealth\\Blacklist.lua:27\n}\n(*temporary) = <table> {\n HasHealthOverride = <function> defined @Interface\\AddOns\\RealMobHealth\\Overrides.lua:35\n AddHealthOverride = <function> defined @Interface\\AddOns\\RealMobHealth\\Overrides.lua:25\n IsBlacklistedCreatureID = <function> defined @Interface\\AddOns\\RealMobHealth\\Blacklist.lua:35\n GetCreatureIDFromKey = <function> defined @Interface\\AddOns\\RealMobH",
+			["stack"] = "Interface\\AddOns\\RealMobHealth\\Core.lua:18: in main chunk",
+			["session"] = 309,
+			["counter"] = 1,
+		}, -- [4]
+		{
+			["message"] = "(null)",
+			["time"] = "2019/10/06 01:39:20",
+			["session"] = 309,
+			["counter"] = 3,
+		}, -- [5]
 	},
 }
