@@ -18,6 +18,8 @@ local LEVEL_RANGE_FORMAT = "  (|cffff0000%d|r: |cffff8040%d|r - |cff40bf40%d|r)"
 local LEVEL_RANGE_FORMAT2 = "  (|cffff8040%d|r - |cff40bf40%d|r)"
 local CONTENT_PHASE_FORMAT = "|cff00FF96".."<P: %d>".."|r"
 
+local IsMapsModuleAviable = AtlasLoot.Loader.IsMapsModuleAviable
+
 -- Saves all the items ;)
 ItemDB.Storage = {}
 
@@ -42,22 +44,7 @@ ItemDB.mt = {
 		contentList[t.__atlaslootdata.addonName][t.__atlaslootdata.contentCount] = k
 		contentList[t.__atlaslootdata.addonName][k] = t.__atlaslootdata.contentCount
 		v.__atlaslootdata = t.__atlaslootdata
-		--[=[
-		if v and v.items and #v.items > 0 then
-			local t = v.items
-			local npcID
-			for i = 1, #t do
-				npcID = t[i].npcId
-				if type(npcID) == "table" then
-					for j = 1, #npcID do
-						ItemDB.NpcList[npcID[j]] = v.__atlaslootdata.addonName..":"..k..":"..i
-					end
-				elseif npcID then
-					ItemDB.NpcList[npcID] = v.__atlaslootdata.addonName..":"..k..":"..i
-				end
-			end
-		end
-		]=]--
+		AtlasLoot.Data.AutoSelect:AddInstanceTable(t.__atlaslootdata.addonName, k, v)
 		rawset(t, k, v)
 	end
 }
@@ -415,6 +402,9 @@ local ATLAS_TEXTURE, PATH_TEXTURE = "|A:%s:0:0|a ","|T%s:0|t "
 local SpecialMobList = {
 	rare = format(ATLAS_TEXTURE, "nameplates-icon-elite-silver"),
 	elite = format(ATLAS_TEXTURE, "nameplates-icon-elite-gold"),
+	quest = format(ATLAS_TEXTURE, "QuestNormal"),
+	questTurnIn = format(ATLAS_TEXTURE, "QuestTurnin"),
+	boss = format(PATH_TEXTURE, "Interface\\TargetingFrame\\UI-TargetingFrame-Skull"),
 }
 
 --- Get the content Type
@@ -474,8 +464,20 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 		if AtlasLoot.db.ContentPhase.enableOnLootTable and index.ContentPhase and not ContentPhase:IsActive(index.ContentPhase) then
 			addEnd = addEnd.." "..format(CONTENT_PHASE_FORMAT, index.ContentPhase)
 		end
+		if IsMapsModuleAviable() and index.AtlasMapBossID then
+			addStart = addStart.."|cffffffff"..index.AtlasMapBossID..")|r "
+		end
+		if AtlasLoot.db.enableBossLevel and index.Level then
+			if type(index.Level) == "table" then
+				addStart = addStart.."|cff808080<"..index.Level[1].." - "..index.Level[2]..">|r "
+			elseif index.Level == 999 then
+				addStart = addStart..SpecialMobList.boss
+			else
+				addStart = addStart.."|cff808080<"..(index.Level == 999 and SpecialMobList.boss or index.Level)..">|r "
+			end
+		end
 		if index.specialType and SpecialMobList[index.specialType] then
-			addStart = SpecialMobList[index.specialType]
+			addStart = addStart..SpecialMobList[index.specialType]
 		end
 	end
 	if index.name then

@@ -25,7 +25,7 @@ local LoaderQueueSaves = {}
 local ModuleList = {}
 local LoadModuleSpam = {}
 
-
+local AtlasMapsModuleLoaded = false
 
 -- A list of officiel AtlasLoot modules
 local ATLASLOOT_MODULE_LIST = {
@@ -126,6 +126,14 @@ function Loader.Init()
 		AllLoaded = nil
 		Loader:LoadAllModules(loadCustom)
 	end
+
+	if ModuleList["AtlasLootClassic_Maps"] and ModuleList["AtlasLootClassic_Maps"].enabled then
+		Loader:LoadModule("AtlasLootClassic_Maps", function() AtlasMapsModuleLoaded = true end)
+	else
+		AtlasMapsModuleLoaded = false
+	end
+
+	AtlasLoot.Data.AutoSelect:RefreshOptions()
 end
 AtlasLoot:AddInitFunc(Loader.Init)
 
@@ -249,4 +257,8 @@ function Loader:LoadAllModules(loadCustom)
 			Loader:LoadModule(v.addonName)
 		end
 	end
+end
+
+function Loader:IsMapsModuleAviable()
+	return AtlasMapsModuleLoaded
 end
