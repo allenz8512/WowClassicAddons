@@ -2,53 +2,92 @@
 MonkeyQuestConfig = {
 	["碧玉矿洞|白銀諾艾爾"] = {
 		["m_aQuestList"] = {
-			["擒虫先擒王 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["荆棘谷 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["生命之种 - false"] = {
+			["验证腐蚀 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["霍尔雷·黑须 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["塔纳利斯 - true"] = {
+			["灼热峡谷 - true"] = {
 				["m_bChecked"] = false,
 			},
+			["塔纳利斯的账本 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["冬泉谷 - true"] = {
+				["m_bChecked"] = false,
+			},
+			["木喉要塞 - true"] = {
+				["m_bChecked"] = false,
+			},
+			["狮子大开口 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["被激怒的枭兽 - false"] = {
+				["m_bChecked"] = true,
+			},
 			["尤卡·斯库比格特 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["冬泉熊怪的威胁 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["北方的死木熊怪 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["扫清道路 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["琥珀酒 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["费伍德森林 - true"] = {
+				["m_bChecked"] = true,
+			},
+			["冬泉熊怪的活动 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["远方的软泥怪 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["雪怪计划！ - false"] = {
+				["m_bChecked"] = true,
+			},
+			["铁炉堡 - true"] = {
+				["m_bChecked"] = true,
+			},
+			["净化费伍德 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["失落的摩沙鲁石板 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["东瘟疫之地 - true"] = {
+			["更深重的堕落 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["瘟疫与你 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["与纳菲恩交谈 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["加德纳尔的势力 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["凯斯利尔的怨灵 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["西瘟疫之地 - true"] = {
 				["m_bChecked"] = false,
 			},
 			["黑石深渊 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["玛拉顿 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["极度粘稠的沥青 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["禁锢我们的石头 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["瓶中信 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["诅咒之地 - true"] = {
-				["m_bChecked"] = false,
-			},
 			["西部荒野 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["琥珀酒 - false"] = {
-				["m_bChecked"] = true,
+			["东瘟疫之地 - true"] = {
+				["m_bChecked"] = false,
 			},
 		},
 	},
@@ -80,9 +119,9 @@ MonkeyQuestConfig = {
 		["m_bHideTitleButtons"] = false,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11291503906,
-		["m_iQuestPadding"] = 2,
-		["m_bLocked"] = true,
 		["m_bNoBorder"] = true,
+		["m_bLocked"] = true,
+		["m_iQuestPadding"] = 2,
 		["m_bNoHeaders"] = true,
 		["m_bShowTooltipObjectives"] = true,
 		["m_strOverviewColour"] = "|cFF7F7F7F",
@@ -103,7 +142,7 @@ MonkeyQuestConfig = {
 		["m_bColourDoneOrFailed"] = false,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_iFrameBottom"] = 550.22216796875,
+		["m_iFrameBottom"] = 67.555534362793,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {

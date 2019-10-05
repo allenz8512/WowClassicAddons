@@ -16,28 +16,4 @@ CChatNotifier_settings = {
 	["firstStart"] = false,
 }
 CChatNotifier_data = {
-	["神庙-aa"] = {
-		["words"] = {
-			"神庙-aa", -- [1]
-		},
-		["active"] = true,
-	},
-	["马拉顿-aa"] = {
-		["words"] = {
-			"马拉顿-aa", -- [1]
-		},
-		["active"] = false,
-	},
-	["mld-aa"] = {
-		["active"] = false,
-		["words"] = {
-			"mld-aa", -- [1]
-		},
-	},
-	["sm-st-aa"] = {
-		["words"] = {
-			"sm-st-aa", -- [1]
-		},
-		["active"] = true,
-	},
 }

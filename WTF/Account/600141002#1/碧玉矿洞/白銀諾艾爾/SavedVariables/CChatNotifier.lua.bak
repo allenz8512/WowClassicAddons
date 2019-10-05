@@ -16,28 +16,4 @@ CChatNotifier_settings = {
 	["mecolor"] = "|cffffffaa",
 }
 CChatNotifier_data = {
-	["sm-st-aa"] = {
-		["active"] = true,
-		["words"] = {
-			"sm-st-aa", -- [1]
-		},
-	},
-	["马拉顿-aa"] = {
-		["active"] = false,
-		["words"] = {
-			"马拉顿-aa", -- [1]
-		},
-	},
-	["mld-aa"] = {
-		["words"] = {
-			"mld-aa", -- [1]
-		},
-		["active"] = false,
-	},
-	["神庙-aa"] = {
-		["active"] = true,
-		["words"] = {
-			"神庙-aa", -- [1]
-		},
-	},
 }

@@ -7,12 +7,12 @@ AtlasLootClassicDB = {
 		["白银兽骑团委 - 碧玉矿洞"] = "白银兽骑团委 - 碧玉矿洞",
 	},
 	["global"] = {
-		["__addonrevision"] = 1010008,
+		["__addonrevision"] = 1020002,
 	},
 	["profiles"] = {
 		["白銀諾艾爾 - 碧玉矿洞"] = {
 			["minimap"] = {
-				["minimapPos"] = 190.505047152416,
+				["minimapPos"] = 188.130074462598,
 			},
 			["GUI"] = {
 				["point"] = {
@@ -24,8 +24,8 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"TheTempleOfAtal'Hakkar", -- [2]
-					11, -- [3]
+					"BlackrockDepths", -- [2]
+					nil, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},

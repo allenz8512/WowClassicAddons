@@ -172,11 +172,11 @@ Bagnon_Sets = {
 			},
 			["color"] = {
 			},
-			["borderColor"] = {
-			},
+			["x"] = -494.111206054688,
 			["hiddenRules"] = {
 			},
-			["x"] = -494.111206054688,
+			["borderColor"] = {
+			},
 		},
 	},
 }

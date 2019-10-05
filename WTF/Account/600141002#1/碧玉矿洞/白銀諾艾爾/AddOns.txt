@@ -76,3 +76,5 @@ dct: enabled
 dct_damage: enabled
 dct_options: enabled
 [D4KiR] Healer Protection: disabled
+Ellipsis_Options: disabled
+Ellipsis: disabled
