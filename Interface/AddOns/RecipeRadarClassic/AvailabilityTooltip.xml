@@ -9,7 +9,7 @@
    <Script file="AvailabilityTooltip.lua"/>
    <Script file="Availability.lua"/>
 
-   <Frame name="RecipeRadarAvailabilityTooltip" inherits="GameTooltipTemplate" frameStrata="TOOLTIP" parent="UIParent" hidden="true">
+   <Frame name="RecipeRadarAvailabilityTooltip" frameStrata="TOOLTIP" parent="UIParent" hidden="true">
 
       <Scripts>
          <OnLoad>
