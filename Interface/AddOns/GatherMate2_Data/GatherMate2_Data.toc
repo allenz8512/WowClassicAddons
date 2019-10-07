@@ -1,0 +1,14 @@
+## Interface: 11302
+## Notes: Wowhead Data dump for GatherMate2 - Converted for Classic from Pre-Cata by TheSpanishInquisition
+## Title: GatherMate2Data
+## Author: kagaro, Xinhuan, Spinx
+## X-Category: Map
+## Version: v2019-09-25
+## LoadOnDemand: 1
+## Dependencies: GatherMate2
+
+MiningData.lua
+HerbalismData.lua
+FishData.lua
+TreasureData.lua
+GatherMateData.lua
