@@ -1,6 +1,6 @@
 
 AtlasOptions = {
-	["AtlasLocked"] = false,
+	["AtlasLocked"] = true,
 	["AtlasClamped"] = true,
 	["AtlasSortBy"] = 1,
 	["AtlasScale"] = 1,
@@ -12,6 +12,6 @@ AtlasOptions = {
 	["AtlasZone"] = 18,
 	["AtlasButtonRadius"] = 78,
 	["AtlasAutoSelect"] = true,
-	["AtlasButtonPosition"] = 336,
+	["AtlasButtonPosition"] = 340,
 	["AtlasRightClick"] = false,
 }

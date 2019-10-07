@@ -10,6 +10,7 @@ EllipsisDB = {
 					[10300] = true,
 				},
 			},
+			["locked"] = true,
 			["anchorData"] = {
 				{
 					["y"] = 5.33309936523438,
@@ -47,7 +48,6 @@ EllipsisDB = {
 					["point"] = "RIGHT",
 				}, -- [7]
 			},
-			["locked"] = true,
 		},
 	},
 }

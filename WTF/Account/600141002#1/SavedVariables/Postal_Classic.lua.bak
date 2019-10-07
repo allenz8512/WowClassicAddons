@@ -6,7 +6,7 @@ Postal3ClassicDB = {
 	["global"] = {
 		["BlackBook"] = {
 			["alts"] = {
-				"白銀諾艾爾|碧玉矿洞|Alliance|54|PALADIN", -- [1]
+				"白銀諾艾爾|碧玉矿洞|Alliance|55|PALADIN", -- [1]
 			},
 		},
 	},
@@ -17,11 +17,12 @@ Postal3ClassicDB = {
 					"白银兽骑团员", -- [1]
 				},
 				["recent"] = {
-					"白银兽骑团员|碧玉矿洞|Alliance", -- [1]
-					"数据结构-碧玉矿洞|碧玉矿洞|Alliance", -- [2]
+					"筱小贼|碧玉矿洞|Alliance", -- [1]
+					"白银兽骑团员|碧玉矿洞|Alliance", -- [2]
 					"院长帮帮我|碧玉矿洞|Alliance", -- [3]
-					"腊肉汤|碧玉矿洞|Alliance", -- [4]
-					"全弹发射|碧玉矿洞|Alliance", -- [5]
+					"数据结构-碧玉矿洞|碧玉矿洞|Alliance", -- [4]
+					"腊肉汤|碧玉矿洞|Alliance", -- [5]
+					"全弹发射|碧玉矿洞|Alliance", -- [6]
 				},
 			},
 		},

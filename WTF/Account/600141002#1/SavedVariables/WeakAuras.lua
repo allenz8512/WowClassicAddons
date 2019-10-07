@@ -6,7 +6,7 @@ WeakAurasSaved = {
 	},
 	["dbVersion"] = 24,
 	["minimap"] = {
-		["minimapPos"] = 198.434928981204,
+		["minimapPos"] = 199.002195712601,
 		["hide"] = false,
 	},
 	["lastUpgrade"] = 1570214941,

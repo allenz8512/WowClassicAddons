@@ -2,25 +2,22 @@
 MonkeyQuestConfig = {
 	["碧玉矿洞|白銀諾艾爾"] = {
 		["m_aQuestList"] = {
-			["验证腐蚀 - false"] = {
+			["决定性的打击 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["收集堕落之水 - false"] = {
+			["水之魂的帮助 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["霍尔雷·黑须 - false"] = {
+			["冬泉仪祭图腾 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["灼热峡谷 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["塔纳利斯的账本 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["冬泉谷 - true"] = {
+			["西瘟疫之地 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["木喉要塞 - true"] = {
+			["冬泉谷 - true"] = {
 				["m_bChecked"] = false,
 			},
 			["狮子大开口 - false"] = {
@@ -29,65 +26,62 @@ MonkeyQuestConfig = {
 			["被激怒的枭兽 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["尤卡·斯库比格特 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["冬泉熊怪的威胁 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["北方的死木熊怪 - false"] = {
+			["野猪的活力 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["扫清道路 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["琥珀酒 - false"] = {
+			["弯牙土狼的颚骨 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["尤卡·斯库比格特 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["费伍德森林 - true"] = {
-				["m_bChecked"] = true,
+				["m_bChecked"] = false,
 			},
-			["冬泉熊怪的活动 - false"] = {
-				["m_bChecked"] = true,
+			["铁炉堡 - true"] = {
+				["m_bChecked"] = false,
 			},
-			["远方的软泥怪 - false"] = {
+			["死木仪祭图腾 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["雪怪计划！ - false"] = {
 				["m_bChecked"] = true,
 			},
-			["铁炉堡 - true"] = {
-				["m_bChecked"] = true,
+			["黑石深渊 - true"] = {
+				["m_bChecked"] = false,
 			},
-			["净化费伍德 - false"] = {
+			["堕落熊怪 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["失落的摩沙鲁石板 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["更深重的堕落 - false"] = {
+			["秃鹫的活力 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["瘟疫与你 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["与纳菲恩交谈 - false"] = {
+			["远方的软泥怪 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["加德纳尔的势力 - false"] = {
+			["石化蜥蜴的大脑 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["凯斯利尔的怨灵 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["西瘟疫之地 - true"] = {
-				["m_bChecked"] = false,
+			["塔纳利斯的账本 - false"] = {
+				["m_bChecked"] = true,
 			},
-			["黑石深渊 - true"] = {
-				["m_bChecked"] = false,
+			["诅咒之地 - true"] = {
+				["m_bChecked"] = true,
 			},
-			["西部荒野 - true"] = {
-				["m_bChecked"] = false,
+			["霍尔雷·黑须 - false"] = {
+				["m_bChecked"] = true,
 			},
 			["东瘟疫之地 - true"] = {
 				["m_bChecked"] = false,
@@ -119,7 +113,7 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_iFrameBottom"] = 94.22216796875,
+		["m_iFrameBottom"] = 296.888824462891,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11291503906,
 		["m_bColourDoneOrFailed"] = false,

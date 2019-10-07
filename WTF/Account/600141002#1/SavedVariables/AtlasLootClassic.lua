@@ -39,7 +39,7 @@ AtlasLootClassicDB = {
 		},
 		["白銀諾艾爾 - 碧玉矿洞"] = {
 			["minimap"] = {
-				["minimapPos"] = 186.50894785022,
+				["minimapPos"] = 186.237081584954,
 			},
 			["GUI"] = {
 				["point"] = {
@@ -47,7 +47,7 @@ AtlasLootClassicDB = {
 					nil, -- [2]
 					"CENTER", -- [3]
 					5.33331489562988, -- [4]
-					0, -- [5]
+					-0.888895571231842, -- [5]
 				},
 				["selected"] = {
 					nil, -- [1]

@@ -1,9 +1,9 @@
 
 FiveSecondRule_Options = {
 	["showTicks"] = false,
-	["barLeft"] = 798.444885253906,
+	["barLeft"] = 585.111328125,
 	["unlocked"] = false,
 	["barHeight"] = 11.0000238418579,
-	["barTop"] = -606.666687011719,
+	["barTop"] = -794.222076416016,
 	["barWidth"] = 117.000061035156,
 }
