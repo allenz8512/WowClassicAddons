@@ -1,17 +1,17 @@
 
 BuffwatchPlayerConfig = {
 	["ShowPets"] = false,
-	["HideUnmonitored"] = false,
+	["Minimized"] = false,
 	["Scale"] = 1.5,
 	["ShowCastableBuffs"] = true,
-	["Version"] = "1.08",
+	["ShowAllForPlayer"] = false,
 	["AnchorPoint"] = "Auto",
 	["SortOrder"] = "Raid Order",
-	["ShowAllForPlayer"] = false,
+	["Version"] = "1.08",
 	["WindowLocked"] = false,
 	["ShowOnlyMine"] = true,
 	["Mode"] = "Party",
-	["Minimized"] = false,
+	["HideUnmonitored"] = false,
 }
 BuffwatchSaveTempEnch = {
 }
@@ -261,6 +261,10 @@ BuffwatchSaveBuffs = {
 			}, -- [1]
 		},
 	},
+	["未知目标"] = {
+		["Buffs"] = {
+		},
+	},
 	["玩具"] = {
 		["Buffs"] = {
 			{
@@ -268,10 +272,6 @@ BuffwatchSaveBuffs = {
 				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
-		},
-	},
-	["未知目标"] = {
-		["Buffs"] = {
 		},
 	},
 	["艾米莉"] = {

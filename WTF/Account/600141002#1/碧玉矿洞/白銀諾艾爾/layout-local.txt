@@ -13,13 +13,6 @@ X: 0
 Y: 0
 W: 365
 H: 240
-Frame: AtlasFrame
-FrameLevel: 1
-Anchor: CENTER
-X: 45
-Y: 86
-W: 921
-H: 601
 Frame: AtlasLoot_GUI-Frame
 FrameLevel: 1
 Anchor: CENTER
@@ -34,6 +27,13 @@ X: -2
 Y: 28
 W: 452
 H: 648
+Frame: AtlasFrame
+FrameLevel: 1
+Anchor: CENTER
+X: 45
+Y: 86
+W: 921
+H: 601
 Frame: Five Second Rule Statusbar
 FrameLevel: 1
 Anchor: BOTTOM

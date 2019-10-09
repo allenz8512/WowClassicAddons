@@ -6,7 +6,7 @@ Questie: enabled
 Auctionator: enabled
 MonkeyQuest: enabled
 MonkeyLibrary: enabled
-MonkeyBuddy: enabled
+MonkeyBuddy: disabled
 AtlasLootClassic: enabled
 AtlasLootClassic_Options: enabled
 AtlasLootClassic_Collections: enabled
