@@ -1,0 +1,34 @@
+## Interface: 11302
+## Title: Spellbook Abridged
+## Notes: A Spellbook Filter to reduce clutter from multiple ranks of the same spell.
+## Author: LBXZero
+## Version: 2.2
+
+SpellbookAbridged.xml
+
+# This Addon implements a means to filter the spells in SpellBookFrame.
+# The only filter so far is a Rank Filter that skips all ranks except 
+# for the last rank, which should be the highest rank available.
+#
+# SpellBookFrame Functions modified
+#
+# SpellButton_UpdateButton
+# SpellBook_GetCurrentPage
+# SpellBook_GetSpellBookSlot
+# SpellBookFrame_UpdateSkillLineTabs
+# SpellBook_UpdatePlayerTab
+# SpellBookFrame_OpenToPageForSlot
+# SpellBookFrame_Update
+#
+# SpellButton_OnClick is blocked
+# SpellButton_OnModifiedClick is blocked
+# 
+#
+# Change Log
+#	Version 2.2
+#		-Fixed problem with inability to cast spells directly from the spellbook
+#		-Fixed another Compatibility isse with other Addons where SpellTabInfo is collected before the Addon completes loading
+#
+#	Version 2.1
+#		-Changed when CreateSpellList function is triggered (now updates before SpellBookFrame_Update works)
+#		-Fixed Compatibility issue where an Addon uses any of the unused SkillLine Tabs
