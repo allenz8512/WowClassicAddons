@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 338,
 	["lastSanitation"] = 3,
-	["session"] = 337,
 	["errors"] = {
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'AuctionDB' 尝试调用保护功能 'ClearOverrideBindings()'。",
@@ -59,5 +59,19 @@ BugGrabberDB = {
 			["session"] = 337,
 			["counter"] = 8,
 		}, -- [7]
+		{
+			["message"] = "Interface\\AddOns\\KiwiItemInfo\\Locale.lua:45: attempt to index local 'toret' (a nil value)",
+			["time"] = "2019/10/09 15:00:34",
+			["locals"] = "str = \"KII_THANKS\"\ntoret = nil\n(*temporary) = \"zhCN\"\n(*temporary) = nil\n(*temporary) = \"attempt to index local 'toret' (a nil value)\"\nlocale = \"zhCN\"\n",
+			["stack"] = "Interface\\AddOns\\KiwiItemInfo\\Locale.lua:45: in function <Interface\\AddOns\\KiwiItemInfo\\Locale.lua:42>\nInterface\\AddOns\\KiwiItemInfo\\KiwiItemInfo-v2.2.1.lua:89: in function `Enable'\nInterface\\AddOns\\KiwiItemInfo\\KiwiItemInfo-v2.2.1.lua:150: in function `?'\nInterface\\AddOns\\KiwiItemInfo\\KiwiItemInfo-v2.2.1.lua:162: in function <Interface\\AddOns\\KiwiItemInfo\\KiwiItemInfo.lua:161>",
+			["session"] = 338,
+			["counter"] = 1,
+		}, -- [8]
+		{
+			["message"] = "Error loading Interface\\AddOns\\Postal_Classic\\locales\\esMX-西班牙语（拉丁美洲）.lua",
+			["time"] = "2019/10/09 15:00:35",
+			["session"] = 338,
+			["counter"] = 4,
+		}, -- [9]
 	},
 }

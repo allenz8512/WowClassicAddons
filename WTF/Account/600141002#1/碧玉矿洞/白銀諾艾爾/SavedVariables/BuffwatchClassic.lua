@@ -1,13 +1,13 @@
 
 BuffwatchPlayerConfig = {
 	["Minimized"] = false,
-	["Version"] = "1.08",
+	["ShowAllForPlayer"] = false,
 	["Scale"] = 1.5,
 	["ShowCastableBuffs"] = true,
-	["HideUnmonitored"] = false,
-	["AnchorPoint"] = "Auto",
 	["SortOrder"] = "Raid Order",
-	["ShowAllForPlayer"] = false,
+	["AnchorPoint"] = "Auto",
+	["HideUnmonitored"] = false,
+	["Version"] = "1.10",
 	["ShowPets"] = false,
 	["WindowLocked"] = false,
 	["Mode"] = "Party",
@@ -19,18 +19,18 @@ BuffwatchSaveBuffs = {
 	["人民币窝"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "力量祝福",
-				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
 			}, -- [1]
 		},
 	},
 	["重生的骑士"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "智慧祝福",
-				["Icon"] = 135970,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
@@ -41,54 +41,54 @@ BuffwatchSaveBuffs = {
 	["流量小心"] = {
 		["Buffs"] = {
 			{
-				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135906,
 				["Buff"] = "力量祝福",
+				["Icon"] = 135906,
+				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
 		},
 	},
 	["天意至尊"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "拯救祝福",
-				["Icon"] = 135967,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135967,
+				["Buff"] = "拯救祝福",
 			}, -- [1]
 		},
 	},
 	["飛揚"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "智慧祝福",
-				["Icon"] = 135970,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
 	["桉叶帝国"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "力量祝福",
-				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
 			}, -- [1]
 		},
 	},
 	["海豹"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "光明祝福",
-				["Icon"] = 135943,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135943,
+				["Buff"] = "光明祝福",
 			}, -- [1]
 		},
 	},
 	["牧小白"] = {
 		["Buffs"] = {
 			{
-				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135970,
 				["Buff"] = "智慧祝福",
+				["Icon"] = 135970,
+				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
 		},
 	},
@@ -99,45 +99,36 @@ BuffwatchSaveBuffs = {
 	["惹毛了乱锤"] = {
 		["Buffs"] = {
 			{
-				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135906,
 				["Buff"] = "力量祝福",
+				["Icon"] = 135906,
+				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
 		},
 	},
 	["波若波若密"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "智慧祝福",
-				["Icon"] = 135970,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
 	["一生挚爱倩"] = {
 		["Buffs"] = {
 			{
-				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135970,
 				["Buff"] = "智慧祝福",
+				["Icon"] = 135970,
+				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
 		},
 	},
 	["蜂恋蝶情"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "力量祝福",
+				["CasterName"] = "白銀諾艾爾",
 				["Icon"] = 135906,
-				["CasterName"] = "白銀諾艾爾",
-			}, -- [1]
-		},
-	},
-	["白銀諾艾爾"] = {
-		["Buffs"] = {
-			{
-				["Buff"] = "智慧祝福",
-				["Icon"] = 135970,
-				["CasterName"] = "白銀諾艾爾",
+				["Buff"] = "力量祝福",
 			}, -- [1]
 		},
 	},
@@ -148,45 +139,45 @@ BuffwatchSaveBuffs = {
 	["玻璃球"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "拯救祝福",
-				["Icon"] = 135967,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135967,
+				["Buff"] = "拯救祝福",
 			}, -- [1]
 		},
 	},
 	["星方武侠"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "力量祝福",
-				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
 			}, -- [1]
 		},
 	},
 	["地瓜爱番薯"] = {
 		["Buffs"] = {
 			{
-				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135906,
 				["Buff"] = "力量祝福",
+				["Icon"] = 135906,
+				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
 		},
 	},
 	["最爱百威"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "智慧祝福",
-				["Icon"] = 135970,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
 	["Devops"] = {
 		["Buffs"] = {
 			{
-				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135906,
 				["Buff"] = "力量祝福",
+				["Icon"] = 135906,
+				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
 		},
 	},
@@ -197,45 +188,45 @@ BuffwatchSaveBuffs = {
 	["貝貝"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "力量祝福",
-				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
 			}, -- [1]
 		},
 	},
 	["西瓜籽"] = {
 		["Buffs"] = {
 			{
-				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135906,
 				["Buff"] = "力量祝福",
+				["Icon"] = 135906,
+				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
 		},
 	},
 	["维兰德星歌"] = {
 		["Buffs"] = {
 			{
-				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135906,
 				["Buff"] = "力量祝福",
+				["Icon"] = 135906,
+				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
 		},
 	},
 	["Fuse"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "拯救祝福",
-				["Icon"] = 135967,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135967,
+				["Buff"] = "拯救祝福",
 			}, -- [1]
 		},
 	},
-	["洁白的纱布"] = {
+	["七仔"] = {
 		["Buffs"] = {
 			{
+				["Buff"] = "力量祝福",
+				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135970,
-				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
@@ -246,26 +237,26 @@ BuffwatchSaveBuffs = {
 	["圣人勿近"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "智慧祝福",
-				["Icon"] = 135970,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
-	["低调的粉刷匠"] = {
+	["射雕英雄传"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "拯救祝福",
-				["Icon"] = 135967,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
 			}, -- [1]
 		},
 	},
-	["妖魔山布丁"] = {
+	["玩具"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "智慧祝福",
-				["Icon"] = 135970,
+				["Buff"] = "力量祝福",
+				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
 			}, -- [1]
 		},
@@ -277,27 +268,27 @@ BuffwatchSaveBuffs = {
 	["艾米莉"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "拯救祝福",
+				["CasterName"] = "白銀諾艾爾",
 				["Icon"] = 135967,
-				["CasterName"] = "白銀諾艾爾",
+				["Buff"] = "拯救祝福",
 			}, -- [1]
 		},
 	},
-	["玩具"] = {
+	["妖魔山布丁"] = {
 		["Buffs"] = {
 			{
 				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135906,
-				["Buff"] = "力量祝福",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
-	["射雕英雄传"] = {
+	["低调的粉刷匠"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "力量祝福",
-				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135967,
+				["Buff"] = "拯救祝福",
 			}, -- [1]
 		},
 	},
@@ -305,12 +296,12 @@ BuffwatchSaveBuffs = {
 		["Buffs"] = {
 		},
 	},
-	["七仔"] = {
+	["洁白的纱布"] = {
 		["Buffs"] = {
 			{
+				["Buff"] = "智慧祝福",
+				["Icon"] = 135970,
 				["CasterName"] = "白銀諾艾爾",
-				["Icon"] = 135906,
-				["Buff"] = "力量祝福",
 			}, -- [1]
 		},
 	},

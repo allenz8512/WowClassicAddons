@@ -1,19 +1,19 @@
 
 CChatNotifier_settings = {
-	["mecolor"] = "|cffffffaa",
 	["mfcolor"] = "|cff00ff00",
+	["firstStart"] = false,
 	["sendercolor"] = "|cffff66ff",
-	["outputFormat"] = "<<ccaaaa>>[{T}] 找到 <00ff00>{K}<>! [{S}]<ff66ff>[{P}]<>: <ffffaa>{MS}<00ff00>{MF}<ffffaa>{ME}",
+	["soundId"] = "sound/interface/itellmessage.ogg",
 	["antiSpamWindow"] = 60,
 	["isActive"] = true,
-	["chatFrame"] = 1,
-	["classColor"] = true,
 	["showMinimapButton"] = true,
+	["classColor"] = true,
+	["chatFrame"] = 1,
 	["version"] = "1.0",
 	["mscolor"] = "|cffffffaa",
 	["snapToMinimap"] = true,
-	["soundId"] = "sound/interface/itellmessage.ogg",
-	["firstStart"] = false,
+	["outputFormat"] = "<<ccaaaa>>[{T}] 找到 <00ff00>{K}<>! [{S}]<ff66ff>[{P}]<>: <ffffaa>{MS}<00ff00>{MF}<ffffaa>{ME}",
+	["mecolor"] = "|cffffffaa",
 }
 CChatNotifier_data = {
 }

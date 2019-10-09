@@ -8314,6 +8314,211 @@ MarketWatcherHistory = {
 					}, -- [3]
 				}, -- [50]
 			},
+			[20520] = {
+				{
+					1570593865, -- [1]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						1, -- [3]
+						"Icymoon", -- [4]
+						20200, -- [5]
+						12000, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [2]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						3, -- [3]
+						"埃尔丶塑能者", -- [4]
+						24294, -- [5]
+						21864, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [3]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						5, -- [3]
+						"梅兰九姗", -- [4]
+						49500, -- [5]
+						49000, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [4]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						5, -- [3]
+						"老李", -- [4]
+						50000, -- [5]
+						50000, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [5]
+				}, -- [1]
+				{
+					1570599990, -- [1]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						1, -- [3]
+						"划水专业户", -- [4]
+						14500, -- [5]
+						3000, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [2]
+					{
+						"::::::", -- [1]
+						0, -- [2]
+						2, -- [3]
+						"海豚的微笑", -- [4]
+						18000, -- [5]
+						18000, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [3]
+					{
+						1, -- [1]
+						2, -- [2]
+						0, -- [3]
+						3, -- [4]
+						nil, -- [5]
+						12000, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [4]
+					{
+						1, -- [1]
+						4, -- [2]
+						0, -- [3]
+						3, -- [4]
+						nil, -- [5]
+						49000, -- [6]
+						0, -- [7]
+						3, -- [8]
+					}, -- [5]
+					{
+						1, -- [1]
+						5, -- [2]
+						0, -- [3]
+						2, -- [4]
+						nil, -- [5]
+						50000, -- [6]
+						0, -- [7]
+						2, -- [8]
+					}, -- [6]
+				}, -- [2]
+			},
+			[12628] = {
+				{
+					1569762189, -- [1]
+				}, -- [1]
+				{
+					1569770510, -- [1]
+				}, -- [2]
+				{
+					1569779033, -- [1]
+				}, -- [3]
+				{
+					1569808169, -- [1]
+				}, -- [4]
+				{
+					1569808276, -- [1]
+				}, -- [5]
+				{
+					1569822182, -- [1]
+				}, -- [6]
+				{
+					1569851956, -- [1]
+				}, -- [7]
+				{
+					1569902763, -- [1]
+				}, -- [8]
+				{
+					1569902955, -- [1]
+				}, -- [9]
+				{
+					1569948796, -- [1]
+				}, -- [10]
+				{
+					1570000632, -- [1]
+				}, -- [11]
+				{
+					1570038323, -- [1]
+				}, -- [12]
+				{
+					1570110284, -- [1]
+				}, -- [13]
+				{
+					1570119852, -- [1]
+				}, -- [14]
+				{
+					1570124049, -- [1]
+				}, -- [15]
+				{
+					1570173858, -- [1]
+				}, -- [16]
+				{
+					1570174021, -- [1]
+				}, -- [17]
+				{
+					1570188093, -- [1]
+				}, -- [18]
+				{
+					1570199709, -- [1]
+				}, -- [19]
+				{
+					1570200037, -- [1]
+				}, -- [20]
+				{
+					1570213729, -- [1]
+				}, -- [21]
+				{
+					1570213827, -- [1]
+				}, -- [22]
+				{
+					1570251837, -- [1]
+				}, -- [23]
+				{
+					1570279843, -- [1]
+				}, -- [24]
+				{
+					1570293621, -- [1]
+				}, -- [25]
+				{
+					1570348492, -- [1]
+				}, -- [26]
+				{
+					1570376094, -- [1]
+				}, -- [27]
+				{
+					1570462515, -- [1]
+				}, -- [28]
+				{
+					1570462816, -- [1]
+				}, -- [29]
+				{
+					1570537500, -- [1]
+				}, -- [30]
+				{
+					1570557768, -- [1]
+				}, -- [31]
+				{
+					1570583031, -- [1]
+				}, -- [32]
+				{
+					1570593740, -- [1]
+				}, -- [33]
+				{
+					1570593839, -- [1]
+				}, -- [34]
+				{
+					1570599960, -- [1]
+				}, -- [35]
+			},
 			[13072] = {
 				{
 					1569902958, -- [1]
@@ -9391,211 +9596,6 @@ MarketWatcherHistory = {
 					}, -- [6]
 				}, -- [27]
 			},
-			[12628] = {
-				{
-					1569762189, -- [1]
-				}, -- [1]
-				{
-					1569770510, -- [1]
-				}, -- [2]
-				{
-					1569779033, -- [1]
-				}, -- [3]
-				{
-					1569808169, -- [1]
-				}, -- [4]
-				{
-					1569808276, -- [1]
-				}, -- [5]
-				{
-					1569822182, -- [1]
-				}, -- [6]
-				{
-					1569851956, -- [1]
-				}, -- [7]
-				{
-					1569902763, -- [1]
-				}, -- [8]
-				{
-					1569902955, -- [1]
-				}, -- [9]
-				{
-					1569948796, -- [1]
-				}, -- [10]
-				{
-					1570000632, -- [1]
-				}, -- [11]
-				{
-					1570038323, -- [1]
-				}, -- [12]
-				{
-					1570110284, -- [1]
-				}, -- [13]
-				{
-					1570119852, -- [1]
-				}, -- [14]
-				{
-					1570124049, -- [1]
-				}, -- [15]
-				{
-					1570173858, -- [1]
-				}, -- [16]
-				{
-					1570174021, -- [1]
-				}, -- [17]
-				{
-					1570188093, -- [1]
-				}, -- [18]
-				{
-					1570199709, -- [1]
-				}, -- [19]
-				{
-					1570200037, -- [1]
-				}, -- [20]
-				{
-					1570213729, -- [1]
-				}, -- [21]
-				{
-					1570213827, -- [1]
-				}, -- [22]
-				{
-					1570251837, -- [1]
-				}, -- [23]
-				{
-					1570279843, -- [1]
-				}, -- [24]
-				{
-					1570293621, -- [1]
-				}, -- [25]
-				{
-					1570348492, -- [1]
-				}, -- [26]
-				{
-					1570376094, -- [1]
-				}, -- [27]
-				{
-					1570462515, -- [1]
-				}, -- [28]
-				{
-					1570462816, -- [1]
-				}, -- [29]
-				{
-					1570537500, -- [1]
-				}, -- [30]
-				{
-					1570557768, -- [1]
-				}, -- [31]
-				{
-					1570583031, -- [1]
-				}, -- [32]
-				{
-					1570593740, -- [1]
-				}, -- [33]
-				{
-					1570593839, -- [1]
-				}, -- [34]
-				{
-					1570599960, -- [1]
-				}, -- [35]
-			},
-			[20520] = {
-				{
-					1570593865, -- [1]
-					{
-						"::::::", -- [1]
-						0, -- [2]
-						1, -- [3]
-						"Icymoon", -- [4]
-						20200, -- [5]
-						12000, -- [6]
-						0, -- [7]
-						3, -- [8]
-					}, -- [2]
-					{
-						"::::::", -- [1]
-						0, -- [2]
-						3, -- [3]
-						"埃尔丶塑能者", -- [4]
-						24294, -- [5]
-						21864, -- [6]
-						0, -- [7]
-						3, -- [8]
-					}, -- [3]
-					{
-						"::::::", -- [1]
-						0, -- [2]
-						5, -- [3]
-						"梅兰九姗", -- [4]
-						49500, -- [5]
-						49000, -- [6]
-						0, -- [7]
-						3, -- [8]
-					}, -- [4]
-					{
-						"::::::", -- [1]
-						0, -- [2]
-						5, -- [3]
-						"老李", -- [4]
-						50000, -- [5]
-						50000, -- [6]
-						0, -- [7]
-						3, -- [8]
-					}, -- [5]
-				}, -- [1]
-				{
-					1570599990, -- [1]
-					{
-						"::::::", -- [1]
-						0, -- [2]
-						1, -- [3]
-						"划水专业户", -- [4]
-						14500, -- [5]
-						3000, -- [6]
-						0, -- [7]
-						3, -- [8]
-					}, -- [2]
-					{
-						"::::::", -- [1]
-						0, -- [2]
-						2, -- [3]
-						"海豚的微笑", -- [4]
-						18000, -- [5]
-						18000, -- [6]
-						0, -- [7]
-						3, -- [8]
-					}, -- [3]
-					{
-						1, -- [1]
-						2, -- [2]
-						0, -- [3]
-						3, -- [4]
-						nil, -- [5]
-						12000, -- [6]
-						0, -- [7]
-						3, -- [8]
-					}, -- [4]
-					{
-						1, -- [1]
-						4, -- [2]
-						0, -- [3]
-						3, -- [4]
-						nil, -- [5]
-						49000, -- [6]
-						0, -- [7]
-						3, -- [8]
-					}, -- [5]
-					{
-						1, -- [1]
-						5, -- [2]
-						0, -- [3]
-						2, -- [4]
-						nil, -- [5]
-						50000, -- [6]
-						0, -- [7]
-						2, -- [8]
-					}, -- [6]
-				}, -- [2]
-			},
 		},
 	},
 }
@@ -9614,15 +9614,15 @@ MarketWatcherWatched = {
 				["type"] = "商品",
 				["maxEntries"] = 100,
 				["classID"] = 7,
-				["texture"] = 134459,
-				["minLevel"] = 0,
-				["noneOnSale"] = true,
-				["name"] = "奥金锭",
-				["subClassID"] = 0,
-				["stackOnly"] = false,
-				["recordHistory"] = true,
-				["summaryConditional"] = "no",
 				["subType"] = "商品",
+				["summaryConditional"] = "no",
+				["noneOnSale"] = true,
+				["minLevel"] = 0,
+				["recordHistory"] = true,
+				["stackOnly"] = false,
+				["subClassID"] = 0,
+				["name"] = "奥金锭",
+				["texture"] = 134459,
 			},
 			[14552] = {
 				["equipLoc"] = "INVTYPE_SHOULDER",
@@ -9636,15 +9636,15 @@ MarketWatcherWatched = {
 				["type"] = "护甲",
 				["maxEntries"] = 100,
 				["classID"] = 4,
-				["subType"] = "板甲",
-				["summaryConditional"] = "no",
+				["texture"] = 135051,
+				["name"] = "牢狱肩甲",
 				["noneOnSale"] = true,
 				["minLevel"] = 50,
-				["recordHistory"] = true,
-				["stackOnly"] = false,
 				["subClassID"] = 4,
-				["name"] = "牢狱肩甲",
-				["texture"] = 135051,
+				["stackOnly"] = false,
+				["recordHistory"] = true,
+				["summaryConditional"] = "no",
+				["subType"] = "板甲",
 			},
 			[7939] = {
 				["equipLoc"] = "INVTYPE_CHEST",
@@ -9658,15 +9658,15 @@ MarketWatcherWatched = {
 				["type"] = "护甲",
 				["maxEntries"] = 100,
 				["classID"] = 4,
-				["subType"] = "板甲",
-				["summaryConditional"] = "no",
+				["texture"] = 132739,
+				["minLevel"] = 44,
 				["noneOnSale"] = true,
 				["name"] = "真银胸甲",
-				["recordHistory"] = true,
-				["stackOnly"] = false,
 				["subClassID"] = 4,
-				["minLevel"] = 44,
-				["texture"] = 132739,
+				["stackOnly"] = false,
+				["recordHistory"] = true,
+				["summaryConditional"] = "no",
+				["subType"] = "板甲",
 			},
 			[871] = {
 				["equipLoc"] = "INVTYPE_WEAPON",
@@ -9680,15 +9680,15 @@ MarketWatcherWatched = {
 				["type"] = "武器",
 				["maxEntries"] = 100,
 				["classID"] = 2,
-				["texture"] = 132408,
-				["minLevel"] = 42,
-				["noneOnSale"] = true,
-				["name"] = "风暴战斧",
-				["subClassID"] = 0,
-				["stackOnly"] = false,
-				["recordHistory"] = true,
-				["summaryConditional"] = "no",
 				["subType"] = "单手斧",
+				["summaryConditional"] = "no",
+				["noneOnSale"] = true,
+				["minLevel"] = 42,
+				["recordHistory"] = true,
+				["stackOnly"] = false,
+				["subClassID"] = 0,
+				["name"] = "风暴战斧",
+				["texture"] = 132408,
 			},
 			[18335] = {
 				["equipLoc"] = "",
@@ -9702,15 +9702,15 @@ MarketWatcherWatched = {
 				["type"] = "其它",
 				["maxEntries"] = 100,
 				["classID"] = 15,
-				["subType"] = "垃圾",
-				["summaryConditional"] = "no",
+				["texture"] = 134072,
+				["minLevel"] = 0,
 				["noneOnSale"] = true,
 				["name"] = "原始黑钻石",
-				["recordHistory"] = true,
-				["stackOnly"] = false,
 				["subClassID"] = 0,
-				["minLevel"] = 0,
-				["texture"] = 134072,
+				["stackOnly"] = false,
+				["recordHistory"] = true,
+				["summaryConditional"] = "no",
+				["subType"] = "垃圾",
 			},
 			[12359] = {
 				["equipLoc"] = "",
@@ -9724,15 +9724,15 @@ MarketWatcherWatched = {
 				["type"] = "商品",
 				["maxEntries"] = 100,
 				["classID"] = 7,
-				["subType"] = "商品",
-				["summaryConditional"] = "no",
+				["texture"] = 133221,
+				["minLevel"] = 0,
 				["noneOnSale"] = true,
 				["name"] = "瑟银锭",
-				["recordHistory"] = true,
-				["stackOnly"] = false,
 				["subClassID"] = 0,
-				["minLevel"] = 0,
-				["texture"] = 133221,
+				["stackOnly"] = false,
+				["recordHistory"] = true,
+				["summaryConditional"] = "no",
+				["subType"] = "商品",
 			},
 			[3860] = {
 				["equipLoc"] = "",
@@ -9746,15 +9746,15 @@ MarketWatcherWatched = {
 				["type"] = "商品",
 				["maxEntries"] = 100,
 				["classID"] = 7,
-				["subType"] = "商品",
-				["summaryConditional"] = "no",
+				["texture"] = 133220,
+				["minLevel"] = 0,
 				["noneOnSale"] = true,
 				["name"] = "秘银锭",
-				["recordHistory"] = true,
-				["stackOnly"] = false,
 				["subClassID"] = 0,
-				["minLevel"] = 0,
-				["texture"] = 133220,
+				["stackOnly"] = false,
+				["recordHistory"] = true,
+				["summaryConditional"] = "no",
+				["subType"] = "商品",
 			},
 			[12633] = {
 				["equipLoc"] = "INVTYPE_HEAD",
@@ -9768,15 +9768,15 @@ MarketWatcherWatched = {
 				["type"] = "护甲",
 				["maxEntries"] = 100,
 				["classID"] = 4,
-				["subType"] = "板甲",
-				["summaryConditional"] = "no",
+				["texture"] = 133111,
+				["name"] = "白魂头盔",
 				["noneOnSale"] = "true",
 				["minLevel"] = 55,
-				["recordHistory"] = false,
-				["stackOnly"] = false,
 				["subClassID"] = 4,
-				["name"] = "白魂头盔",
-				["texture"] = 133111,
+				["stackOnly"] = false,
+				["recordHistory"] = false,
+				["summaryConditional"] = "no",
+				["subType"] = "板甲",
 			},
 			[12800] = {
 				["equipLoc"] = "",
@@ -9790,15 +9790,15 @@ MarketWatcherWatched = {
 				["type"] = "商品",
 				["maxEntries"] = 100,
 				["classID"] = 7,
-				["subType"] = "商品",
-				["summaryConditional"] = "no",
+				["texture"] = 134094,
+				["minLevel"] = 0,
 				["noneOnSale"] = true,
 				["name"] = "艾泽拉斯钻石",
-				["recordHistory"] = true,
-				["stackOnly"] = false,
 				["subClassID"] = 0,
-				["minLevel"] = 0,
-				["texture"] = 134094,
+				["stackOnly"] = false,
+				["recordHistory"] = true,
+				["summaryConditional"] = "no",
+				["subType"] = "商品",
 			},
 			[13072] = {
 				["equipLoc"] = "INVTYPE_HAND",
@@ -9812,59 +9812,15 @@ MarketWatcherWatched = {
 				["type"] = "护甲",
 				["maxEntries"] = 100,
 				["classID"] = 4,
-				["subType"] = "板甲",
-				["summaryConditional"] = "no",
+				["texture"] = 132937,
+				["name"] = "握石护手",
 				["noneOnSale"] = true,
 				["minLevel"] = 55,
-				["recordHistory"] = true,
-				["stackOnly"] = false,
 				["subClassID"] = 4,
-				["name"] = "握石护手",
-				["texture"] = 132937,
-			},
-			[11302] = {
-				["equipLoc"] = "INVTYPE_TRINKET",
-				["summaryStackOnly"] = false,
-				["iLevel"] = 52,
-				["bidThreshold"] = 0,
-				["buyoutThreshold"] = 0,
-				["maxAge"] = 30,
-				["stackCount"] = 1,
-				["quality"] = 3,
-				["type"] = "护甲",
-				["maxEntries"] = 100,
-				["classID"] = 4,
-				["texture"] = 133439,
-				["minLevel"] = 47,
-				["noneOnSale"] = true,
-				["name"] = "乌瑟尔的力量",
-				["subClassID"] = 0,
 				["stackOnly"] = false,
 				["recordHistory"] = true,
 				["summaryConditional"] = "no",
-				["subType"] = "其它",
-			},
-			[12628] = {
-				["equipLoc"] = "INVTYPE_CHEST",
-				["summaryStackOnly"] = false,
-				["iLevel"] = 57,
-				["bidThreshold"] = 0,
-				["buyoutThreshold"] = 0,
-				["maxAge"] = 30,
-				["stackCount"] = 1,
-				["quality"] = 3,
-				["type"] = "护甲",
-				["maxEntries"] = 100,
-				["classID"] = 4,
 				["subType"] = "板甲",
-				["summaryConditional"] = "no",
-				["noneOnSale"] = true,
-				["name"] = "魔铸胸甲",
-				["recordHistory"] = true,
-				["stackOnly"] = false,
-				["subClassID"] = 4,
-				["minLevel"] = 52,
-				["texture"] = 132741,
 			},
 			[20520] = {
 				["equipLoc"] = "",
@@ -9878,15 +9834,59 @@ MarketWatcherWatched = {
 				["type"] = "商品",
 				["maxEntries"] = 100,
 				["classID"] = 7,
-				["texture"] = 136192,
-				["minLevel"] = 0,
+				["subType"] = "商品",
+				["summaryConditional"] = "no",
 				["noneOnSale"] = true,
-				["name"] = "黑暗符文",
+				["minLevel"] = 0,
+				["recordHistory"] = true,
+				["stackOnly"] = false,
 				["subClassID"] = 0,
+				["name"] = "黑暗符文",
+				["texture"] = 136192,
+			},
+			[12628] = {
+				["equipLoc"] = "INVTYPE_CHEST",
+				["summaryStackOnly"] = false,
+				["iLevel"] = 57,
+				["bidThreshold"] = 0,
+				["buyoutThreshold"] = 0,
+				["maxAge"] = 30,
+				["stackCount"] = 1,
+				["quality"] = 3,
+				["type"] = "护甲",
+				["maxEntries"] = 100,
+				["classID"] = 4,
+				["texture"] = 132741,
+				["minLevel"] = 52,
+				["noneOnSale"] = true,
+				["name"] = "魔铸胸甲",
+				["subClassID"] = 4,
 				["stackOnly"] = false,
 				["recordHistory"] = true,
 				["summaryConditional"] = "no",
-				["subType"] = "商品",
+				["subType"] = "板甲",
+			},
+			[11302] = {
+				["equipLoc"] = "INVTYPE_TRINKET",
+				["summaryStackOnly"] = false,
+				["iLevel"] = 52,
+				["bidThreshold"] = 0,
+				["buyoutThreshold"] = 0,
+				["maxAge"] = 30,
+				["stackCount"] = 1,
+				["quality"] = 3,
+				["type"] = "护甲",
+				["maxEntries"] = 100,
+				["classID"] = 4,
+				["subType"] = "其它",
+				["summaryConditional"] = "no",
+				["noneOnSale"] = true,
+				["minLevel"] = 47,
+				["recordHistory"] = true,
+				["stackOnly"] = false,
+				["subClassID"] = 0,
+				["name"] = "乌瑟尔的力量",
+				["texture"] = 133439,
 			},
 		},
 	},
@@ -9897,6 +9897,17 @@ MarketWatcherConfig = {
 			["reapplyFilters"] = false,
 			["allowTSOpen"] = false,
 			["ignoreOutliers"] = false,
+			["ignoreSensitivity"] = 3,
+			["bidPriceMarkdown"] = 0,
+			["saveOnBrowse"] = false,
+			["queryDelay"] = 0.5,
+			["lastRecordedScan"] = 1570599991,
+			["defaultUndercut"] = 0,
+			["graphSettings"] = {
+				["Low"] = {
+					true, -- [1]
+				},
+			},
 			["filters"] = {
 				["historicalBelowThis"] = {
 					["value"] = "0",
@@ -9905,17 +9916,6 @@ MarketWatcherConfig = {
 					["value"] = "0",
 				},
 			},
-			["saveOnBrowse"] = false,
-			["graphSettings"] = {
-				["Low"] = {
-					true, -- [1]
-				},
-			},
-			["queryDelay"] = 0.5,
-			["lastRecordedScan"] = 1570599991,
-			["defaultUndercut"] = 0,
-			["bidPriceMarkdown"] = 0,
-			["ignoreSensitivity"] = 3,
 		},
 	},
 }
