@@ -2,40 +2,43 @@
 MonkeyQuestConfig = {
 	["碧玉矿洞|白銀諾艾爾"] = {
 		["m_aQuestList"] = {
-			["决定性的打击 - false"] = {
+			["拉克维的气味 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["水之魂的帮助 - false"] = {
+			["索瑞森废墟 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["冬泉仪祭图腾 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["灼热峡谷 - true"] = {
+			["神秘的粘液 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["西瘟疫之地 - true"] = {
-				["m_bChecked"] = false,
+			["安戈洛的猩猩 - false"] = {
+				["m_bChecked"] = true,
 			},
 			["冬泉谷 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["狮子大开口 - false"] = {
+			["燃烧平原 - true"] = {
 				["m_bChecked"] = true,
 			},
 			["被激怒的枭兽 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["野猪的活力 - false"] = {
+			["黑龙的威胁 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["扫清道路 - false"] = {
+			["好东西 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["弯牙土狼的颚骨 - false"] = {
+			["熄灭火焰 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["尤卡·斯库比格特 - false"] = {
+			["霍尔雷·黑须 - false"] = {
+				["m_bChecked"] = true,
+			},
+			["雷布里·斯库比格特 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["费伍德森林 - true"] = {
@@ -47,40 +50,40 @@ MonkeyQuestConfig = {
 			["死木仪祭图腾 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["雪怪计划！ - false"] = {
-				["m_bChecked"] = true,
-			},
 			["黑石深渊 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["堕落熊怪 - false"] = {
+			["安戈洛环形山 - true"] = {
+				["m_bChecked"] = false,
+			},
+			["消灭火腹食人魔 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["失落的摩沙鲁石板 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["秃鹫的活力 - false"] = {
+			["历史的残片 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["瘟疫与你 - false"] = {
+			["黑石山 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["远方的软泥怪 - false"] = {
+			["被禁锢的古树 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["石化蜥蜴的大脑 - false"] = {
+			["为库米沙效力 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["凯斯利尔的怨灵 - false"] = {
+			["征服者派隆 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["塔纳利斯的账本 - false"] = {
+			["五十个！ - false"] = {
 				["m_bChecked"] = true,
 			},
 			["诅咒之地 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["霍尔雷·黑须 - false"] = {
+			["当心翼手龙 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["东瘟疫之地 - true"] = {
@@ -113,33 +116,33 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_iFrameBottom"] = 296.888824462891,
+		["m_bHideTitleButtons"] = false,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11291503906,
-		["m_bColourDoneOrFailed"] = false,
+		["m_bNoBorder"] = true,
 		["m_bLocked"] = true,
 		["m_iQuestPadding"] = 2,
 		["m_bNoHeaders"] = true,
-		["m_bShowNumQuests"] = true,
+		["m_bShowTooltipObjectives"] = true,
 		["m_strOverviewColour"] = "|cFF7F7F7F",
 		["m_iAlpha"] = 0,
 		["m_bColourSubObjectivesByProgress"] = true,
-		["m_strMidObjectiveColour"] = "|cFFFFFF00",
+		["m_iFrameWidth"] = 240,
 		["m_iFontHeight"] = 13,
 		["m_strQuestTitleColour"] = "|cFFFFFFFF",
 		["m_bWorkComplete"] = true,
 		["m_bHideQuestsEnabled"] = false,
-		["m_iFrameWidth"] = 240,
+		["m_strMidObjectiveColour"] = "|cFFFFFF00",
 		["m_bCrashBorder"] = true,
 		["m_strHeaderOpenColour"] = "|cFFBFBFFF",
 		["m_iFrameTop"] = 720.888977050781,
 		["m_bObjectives"] = false,
 		["m_bHideHeader"] = true,
-		["m_bShowTooltipObjectives"] = true,
-		["m_bNoBorder"] = true,
+		["m_bShowNumQuests"] = true,
+		["m_bColourDoneOrFailed"] = false,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_bHideTitleButtons"] = false,
+		["m_iFrameBottom"] = 86.222282409668,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {
@@ -151,19 +154,19 @@ MonkeyQuestConfig = {
 			["贝尔丁的补给 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["灰色洞穴 - false"] = {
+			["啤酒烤猪排 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["海格纳的弹药 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["丹莫罗 - true"] = {
-				["m_bChecked"] = true,
-			},
 			["烹饪 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["啤酒烤猪排 - false"] = {
+			["丹莫罗 - true"] = {
+				["m_bChecked"] = true,
+			},
+			["灰色洞穴 - false"] = {
 				["m_bChecked"] = true,
 			},
 		},
