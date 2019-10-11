@@ -2,10 +2,19 @@
 ecfDB = {
 	["enableDND"] = true,
 	["enableRepeat"] = true,
-	["repeatFilterGroup"] = true,
+	["addonQRF"] = false,
 	["addonRAF"] = false,
 	["enableMSF"] = false,
-	["addonQRF"] = false,
+	["repeatFilterGroup"] = true,
+	["blackWordFilterGroup"] = false,
+	["lootQualityMin"] = 0,
+	["lootCurrencyFilterList"] = {
+	},
+	["enableAggressive"] = false,
+	["enableCFA"] = true,
+	["lootItemFilterList"] = {
+	},
+	["lesserBlackWordThreshold"] = 3,
 	["blackWordList"] = {
 		["ADM"] = {
 		},
@@ -39,17 +48,17 @@ ecfDB = {
 		},
 		["ZUL"] = {
 		},
-		["军火库"] = {
-		},
 		["影牙"] = {
 		},
-		["XS"] = {
+		["军火库"] = {
+		},
+		["玛拉顿"] = {
 		},
 		["卖G"] = {
 		},
-		["祖尔"] = {
-		},
 		["收米"] = {
+		},
+		["祖尔"] = {
 		},
 		["ZR"] = {
 		},
@@ -57,7 +66,7 @@ ecfDB = {
 		},
 		["G团"] = {
 		},
-		["诺莫瑞根"] = {
+		["MLD"] = {
 		},
 		["AA"] = {
 		},
@@ -67,35 +76,26 @@ ecfDB = {
 		},
 		["武器库"] = {
 		},
-		["教堂"] = {
+		["大米"] = {
 		},
 		["收号"] = {
 		},
-		["大米"] = {
+		["教堂"] = {
 		},
 		["监狱"] = {
 		},
 		["矮子本"] = {
 		},
-		["MLD"] = {
+		["诺莫瑞根"] = {
 		},
 		["收G"] = {
 		},
 		["马拉顿"] = {
 		},
-		["玛拉顿"] = {
+		["XS"] = {
 		},
 		["矮子副本"] = {
 		},
 	},
-	["lootQualityMin"] = 0,
-	["lesserBlackWordThreshold"] = 3,
-	["enableAggressive"] = false,
-	["enableCFA"] = true,
-	["lootItemFilterList"] = {
-	},
-	["lootCurrencyFilterList"] = {
-	},
-	["blackWordFilterGroup"] = false,
 	["advancedConfig"] = false,
 }
