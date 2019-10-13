@@ -148,7 +148,7 @@ ItemRackUser = {
 		},
 	},
 	["EnableQueues"] = "ON",
-	["CurrentSet"] = "输出",
+	["ButtonSpacing"] = 4,
 	["Alpha"] = 1,
 	["ItemsUsed"] = {
 	},
@@ -158,12 +158,12 @@ ItemRackUser = {
 		["Set"] = {
 		},
 	},
-	["Queues"] = {
+	["Hidden"] = {
 	},
 	["Buttons"] = {
 	},
-	["Hidden"] = {
+	["Queues"] = {
 	},
 	["MenuScale"] = 0.85,
-	["ButtonSpacing"] = 4,
+	["CurrentSet"] = "输出",
 }

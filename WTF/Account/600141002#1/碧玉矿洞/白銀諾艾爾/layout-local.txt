@@ -1,11 +1,4 @@
 Version: 1
-Frame: Five Second Rule Statusbar
-FrameLevel: 1
-Anchor: BOTTOM
-X: -210
-Y: 155
-W: 117
-H: 11
 Frame: BuffwatchFrame
 FrameLevel: 1
 Anchor: LEFT
@@ -20,13 +13,6 @@ X: 0
 Y: 0
 W: 365
 H: 240
-Frame: AtlasLoot_GUI-Frame
-FrameLevel: 1
-Anchor: CENTER
-X: 5
-Y: -1
-W: 920
-H: 600
 Frame: AtlasFrame
 FrameLevel: 1
 Anchor: CENTER
@@ -34,6 +20,20 @@ X: 45
 Y: 86
 W: 921
 H: 601
+Frame: AtlasLoot_GUI-Frame
+FrameLevel: 1
+Anchor: CENTER
+X: 5
+Y: -1
+W: 920
+H: 600
+Frame: Five Second Rule Statusbar
+FrameLevel: 1
+Anchor: BOTTOM
+X: -210
+Y: 155
+W: 117
+H: 11
 Frame: RecipeRadarFrame
 FrameLevel: 1
 Anchor: LEFT

@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 346,
 	["lastSanitation"] = 3,
+	["session"] = 355,
 	["errors"] = {
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'AuctionDB' 尝试调用保护功能 'ClearOverrideBindings()'。",
@@ -44,34 +44,64 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [5]
 		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ItemRack' 尝试调用保护功能 'AutoEquipCursorItem()'。",
+			["time"] = "2019/10/12 23:09:12",
+			["locals"] = "InCombatSkipped",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `AutoEquipCursorItem'\n[string \"*:OnMouseUp\"]:4: in function `oldCharacterModelFrame_OnMouseUp'\nInterface\\AddOns\\ItemRack\\ItemRackButtons.lua:101: in function <Interface\\AddOns\\ItemRack\\ItemRackButtons.lua:97>",
+			["session"] = 349,
+			["counter"] = 1,
+		}, -- [6]
+		{
+			["message"] = "...olkTracker\\Libs\\NoTaintUIDropDown\\UIDropDownMenu.lua:820: Usage: PlaySound(soundKitID, optional[\"SFX\",\"Music\",\"Ambience\", \"Dialog\" or \"Master\"], [forceNoDuplicates, runFinishCallback])",
+			["time"] = "2019/10/11 12:29:19",
+			["locals"] = "(*temporary) = \"UChatScrollButton\"\n",
+			["stack"] = "[C]: ?\n...olkTracker\\Libs\\NoTaintUIDropDown\\UIDropDownMenu.lua:820: in function `Lib_UIDropDownMenuButton_OnClick'\n[string \"*:OnClick\"]:1: in function <[string \"*:OnClick\"]:1>",
+			["session"] = 349,
+			["counter"] = 4,
+		}, -- [7]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'RecipeRadarClassic' 尝试调用保护功能 'CompactRaidFrameContainer:Hide()'。",
+			["time"] = "2019/10/13 02:04:46",
+			["locals"] = "InCombatSkipped",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Hide'\n...mpactRaidFrames\\Blizzard_CompactRaidFrameManager.lua:494: in function `CompactRaidFrameManager_UpdateContainerVisibility'\n...mpactRaidFrames\\Blizzard_CompactRaidFrameManager.lua:439: in function <...mpactRaidFrames\\Blizzard_CompactRaidFrameManager.lua:428>\n...mpactRaidFrames\\Blizzard_CompactRaidFrameManager.lua:478: in function `CompactRaidFrameManager_SetSetting'\n...rd_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua:565: in function `func'\n...rd_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua:542: in function `CompactUnitFrameProfiles_ApplyProfile'\n...rd_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua:173: in function `CompactUnitFrameProfiles_ApplyCurrentSettings'\n...rd_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua:82: in function `CompactUnitFrameProfiles_CancelChanges'\n...rd_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua:75: in function <...rd_CUFProfiles\\Blizzard_CompactUnitFrameProfiles.lua:73>\n[C]: in function `pcall'\nInterface\\FrameXML\\InterfaceOptionsFrame.lua:217: in function <Interface\\FrameXML\\InterfaceOptionsFrame.lua:216>\n[C]: in function `securecall'\nInterface\\FrameXML\\InterfaceOptionsFrame.lua:252: in function <Interface\\FrameXML\\InterfaceOptionsFrame.lua:248>",
+			["session"] = 354,
+			["counter"] = 1,
+		}, -- [8]
+		{
+			["message"] = "Error loading Interface\\AddOns\\Postal_Classic\\locales\\esMX-西班牙语（拉丁美洲）.lua",
+			["session"] = 355,
+			["time"] = "2019/10/09 15:00:35",
+			["counter"] = 72,
+		}, -- [9]
+		{
+			["message"] = "Couldn't open Interface\\AddOns\\RecipeRadarClassic\\Libs\\LibTouristClassic-1.0-90228\\CallbackHandler-1.0-7\\CallbackHandler-1.0.xml",
+			["session"] = 355,
+			["time"] = "2019/10/13 01:35:41",
+			["counter"] = 20,
+		}, -- [10]
+		{
 			["message"] = "Interface\\AddOns\\Questie\\Modules\\QuestieTooltips.lua:80: Usage: UnitGUID(\"unit\")",
 			["time"] = "2019/10/06 11:44:47",
 			["locals"] = "InCombatSkipped",
 			["stack"] = "[C]: in function `UnitGUID'\nInterface\\AddOns\\Questie\\Modules\\QuestieTooltips.lua:80: in function <Interface\\AddOns\\Questie\\Modules\\QuestieTooltips.lua:75>\n[C]: ?\n[C]: ?\n[C]: ?\n[C]: in function `SetUnit'\nInterface\\FrameXML\\UnitFrame.lua:291: in function `UnitFrame_UpdateTooltip'\nInterface\\FrameXML\\UnitFrame.lua:277: in function <Interface\\FrameXML\\UnitFrame.lua:264>",
-			["session"] = 339,
-			["counter"] = 10,
-		}, -- [6]
+			["session"] = 355,
+			["counter"] = 12,
+		}, -- [11]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'Atlas' 尝试调用保护功能 'MultiBarBottomLeft:SetFrameStrata()'。",
 			["time"] = "2019/10/06 11:28:25",
 			["locals"] = "InCombatSkipped",
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `SetFrameStrata'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:379: in function `Atlas_Init'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:326: in function `Atlas_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:403: in function `RaidFrame_LoadUI'\nInterface\\FrameXML\\RaidFrame.lua:59: in function <Interface\\FrameXML\\RaidFrame.lua:50>",
-			["session"] = 340,
-			["counter"] = 5,
-		}, -- [7]
+			["session"] = 355,
+			["counter"] = 10,
+		}, -- [12]
 		{
 			["message"] = "Interface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:150: Wrong object type for function",
 			["time"] = "2019/10/06 15:54:13",
 			["locals"] = "(*temporary) = <table> {\n}\n(*temporary) = nil\n",
 			["stack"] = "[C]: in function `IsForbidden'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:150: in function `Atr_FrameIsAccessible'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:138: in function `Atr_IsAuctionatorFrame'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:77: in function <Interface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:76>\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:132: in function `Atr_LocalizeFrames'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:1178: in function `Atr_Init'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:917: in function `Atr_OnAddonLoaded'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:168: in function `Atr_EventHandler'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:364: in function `AuctionFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:1124: in function <Interface\\FrameXML\\UIParent.lua:658>",
-			["session"] = 340,
-			["counter"] = 6,
-		}, -- [8]
-		{
-			["message"] = "Error loading Interface\\AddOns\\Postal_Classic\\locales\\esMX-西班牙语（拉丁美洲）.lua",
-			["time"] = "2019/10/09 15:00:35",
-			["session"] = 346,
-			["counter"] = 36,
-		}, -- [9]
+			["session"] = 355,
+			["counter"] = 10,
+		}, -- [13]
 	},
 }

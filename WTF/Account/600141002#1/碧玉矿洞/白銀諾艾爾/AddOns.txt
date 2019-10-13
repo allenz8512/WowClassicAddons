@@ -41,7 +41,7 @@ WeakAuras: enabled
 WeakAurasModelPaths: enabled
 WeakAurasOptions: enabled
 ElvUI_LocationPlus: enabled
-Details_TinyThreat: enabled
+Details_TinyThreat: disabled
 Atlas: enabled
 AtlasQuest: enabled
 FriendsMenuXP: enabled
@@ -52,8 +52,8 @@ NoGoldSeller: disabled
 dct_spellAlert: disabled
 ItemTooltipProfessionIcons: enabled
 Mendeleev: disabled
-Talented: disabled
-Talented_Data: disabled
+Talented: enabled
+Talented_Data: enabled
 AdvancedInterfaceOptions: enabled
 AuctionDB: enabled
 AutoDismount: enabled
