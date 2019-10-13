@@ -538,11 +538,13 @@ QuestieConfig = {
 				[4224] = true,
 				[531] = true,
 				[7321] = true,
+				[4264] = true,
 				[3161] = true,
 				[536] = true,
 				[4284] = true,
 				[4288] = true,
 				[538] = true,
+				[4296] = true,
 				[540] = true,
 				[3181] = true,
 				[4324] = true,
@@ -682,6 +684,7 @@ QuestieConfig = {
 				[5244] = true,
 				[658] = true,
 				[659] = true,
+				[4241] = true,
 				[1319] = true,
 				[3661] = true,
 				[661] = true,
@@ -725,6 +728,7 @@ QuestieConfig = {
 				[1396] = true,
 				[1398] = true,
 				[3823] = true,
+				[3825] = true,
 				[703] = true,
 				[704] = true,
 				[4601] = true,
@@ -805,12 +809,15 @@ QuestieConfig = {
 				[5249] = true,
 				[8460] = true,
 				[5261] = true,
+				[4242] = true,
 				[4262] = true,
 				[4266] = true,
+				[4282] = true,
 				[4286] = true,
 				[4290] = true,
 				[4298] = true,
 				[3182] = true,
+				[4322] = true,
 				[4342] = true,
 				[5385] = true,
 				[5401] = true,
@@ -821,6 +828,7 @@ QuestieConfig = {
 				[4450] = true,
 				[5501] = true,
 				[4502] = true,
+				[4510] = true,
 				[1642] = true,
 				[1643] = true,
 				[1644] = true,
@@ -887,75 +895,80 @@ QuestieConfig = {
 				[2641] = true,
 				[4263] = true,
 				[4267] = true,
+				[4283] = true,
 				[4287] = true,
 				[2661] = true,
 				[3702] = true,
+				[3824] = true,
+				[713] = true,
 				[939] = true,
-				[542] = true,
+				[2662] = true,
 				[8465] = true,
 				[8464] = true,
-				[3764] = true,
 				[8462] = true,
-				[2745] = true,
 				[8366] = true,
-				[4513] = true,
+				[3764] = true,
+				[537] = true,
+				[2745] = true,
 				[7721] = true,
 				[7070] = true,
 				[607] = true,
 				[2924] = true,
 				[7046] = true,
-				[630] = true,
-				[3903] = true,
+				[1189] = true,
+				[1176] = true,
+				[7003] = true,
+				[6762] = true,
 				[4503] = true,
 				[3790] = true,
 				[2769] = true,
-				[739] = true,
-				[5545] = true,
-				[7003] = true,
-				[6762] = true,
+				[6761] = true,
+				[630] = true,
+				[4507] = true,
+				[6661] = true,
 				[3802] = true,
 				[2781] = true,
 				[2783] = true,
-				[633] = true,
-				[6761] = true,
-				[6661] = true,
-				[1267] = true,
 				[6624] = true,
-				[1780] = true,
-				[2040] = true,
-				[1786] = true,
-				[2801] = true,
+				[739] = true,
+				[5545] = true,
+				[633] = true,
+				[1267] = true,
 				[6182] = true,
 				[6181] = true,
+				[1780] = true,
+				[2801] = true,
+				[2040] = true,
+				[1786] = true,
 				[726] = true,
 				[5883] = true,
-				[642] = true,
 				[5882] = true,
-				[4605] = true,
 				[5863] = true,
+				[657] = true,
+				[5503] = true,
 				[3842] = true,
 				[3844] = true,
-				[4864] = true,
-				[5503] = true,
+				[642] = true,
+				[4605] = true,
 				[2605] = true,
-				[2581] = true,
+				[4861] = true,
 				[5246] = true,
-				[624] = true,
+				[2872] = true,
+				[2581] = true,
+				[4864] = true,
 				[5204] = true,
 				[5203] = true,
 				[5202] = true,
+				[2845] = true,
+				[2821] = true,
+				[3378] = true,
+				[5158] = true,
+				[624] = true,
 				[1559] = true,
 				[1560] = true,
-				[2845] = true,
 				[2606] = true,
-				[2821] = true,
-				[656] = true,
-				[3378] = true,
-				[657] = true,
-				[5158] = true,
-				[660] = true,
 				[3884] = true,
-				[2240] = true,
+				[656] = true,
 				[2865] = true,
 				[2867] = true,
 				[2869] = true,
@@ -967,47 +980,47 @@ QuestieConfig = {
 				[3904] = true,
 				[5762] = true,
 				[978] = true,
-				[1320] = true,
+				[2240] = true,
 				[979] = true,
-				[4861] = true,
-				[1107] = true,
+				[560] = true,
+				[660] = true,
+				[1320] = true,
+				[4513] = true,
 				[1324] = true,
-				[537] = true,
-				[665] = true,
-				[2158] = true,
+				[4508] = true,
 				[7848] = true,
-				[2662] = true,
+				[665] = true,
 				[4787] = true,
 				[8551] = true,
-				[1338] = true,
 				[610] = true,
 				[4493] = true,
+				[2158] = true,
+				[542] = true,
+				[1338] = true,
 				[4863] = true,
-				[2872] = true,
-				[2861] = true,
 				[2923] = true,
 				[2864] = true,
 				[2927] = true,
 				[2929] = true,
+				[2861] = true,
 				[551] = true,
 				[1360] = true,
 				[4142] = true,
-				[560] = true,
 				[2939] = true,
 				[2941] = true,
 				[2943] = true,
 				[2945] = true,
 				[2947] = true,
-				[1363] = true,
+				[1107] = true,
 				[2951] = true,
+				[1363] = true,
 				[4136] = true,
 				[3377] = true,
 				[1117] = true,
 				[3908] = true,
-				[1176] = true,
 				[2963] = true,
+				[3903] = true,
 				[691] = true,
-				[1189] = true,
 				[2969] = true,
 				[692] = true,
 				[693] = true,
@@ -1024,7 +1037,7 @@ QuestieConfig = {
 				[711] = true,
 				[712] = true,
 				[724] = true,
-				[713] = true,
+				[4024] = true,
 				[2500] = true,
 				[7029] = true,
 				[721] = true,
@@ -15398,6 +15411,559 @@ QuestieConfig = {
 					["Quest"] = 4241,
 					["Level"] = 58,
 				}, -- [1226]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+					["Level"] = 58,
+					["Quest"] = 4507,
+					["Timestamp"] = 1570943904,
+				}, -- [1227]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 58,
+					["Quest"] = 4507,
+					["Timestamp"] = 1570943904,
+				}, -- [1228]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 58,
+					["Quest"] = 4508,
+					["Timestamp"] = 1570943913,
+				}, -- [1229]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+					["Level"] = 58,
+					["Quest"] = 4241,
+					["Timestamp"] = 1570947143,
+				}, -- [1230]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 58,
+					["Quest"] = 4241,
+					["Timestamp"] = 1570947143,
+				}, -- [1231]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 58,
+					["Quest"] = 4242,
+					["Timestamp"] = 1570947147,
+				}, -- [1232]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+					["Level"] = 58,
+					["Quest"] = 4242,
+					["Timestamp"] = 1570947481,
+				}, -- [1233]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 58,
+					["Quest"] = 4242,
+					["Timestamp"] = 1570947481,
+				}, -- [1234]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 58,
+					["Quest"] = 4264,
+					["Timestamp"] = 1570948248,
+				}, -- [1235]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+					["Level"] = 58,
+					["Quest"] = 4264,
+					["Timestamp"] = 1570948427,
+				}, -- [1236]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 58,
+					["Quest"] = 4264,
+					["Timestamp"] = 1570948427,
+				}, -- [1237]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 58,
+					["Quest"] = 4282,
+					["Timestamp"] = 1570948429,
+				}, -- [1238]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+					["Level"] = 58,
+					["Quest"] = 4282,
+					["Timestamp"] = 1570951083,
+				}, -- [1239]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 58,
+					["Quest"] = 4282,
+					["Timestamp"] = 1570951084,
+				}, -- [1240]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "无尽的风暴",
+							["Level"] = 55,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 58,
+					["Quest"] = 4322,
+					["Timestamp"] = 1570951085,
+				}, -- [1241]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570981581,
+					["Quest"] = 4508,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+				}, -- [1242]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570981581,
+					["Quest"] = 4508,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [1243]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570981625,
+					["Quest"] = 4510,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+				}, -- [1244]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570981677,
+					["Quest"] = 4510,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+				}, -- [1245]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570981677,
+					["Quest"] = 4510,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [1246]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570985156,
+					["Quest"] = 4322,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+				}, -- [1247]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570985156,
+					["Quest"] = 4322,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [1248]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570985163,
+					["Quest"] = 6402,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+				}, -- [1249]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570985290,
+					["Quest"] = 4024,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+				}, -- [1250]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570985290,
+					["Quest"] = 4024,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [1251]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570986791,
+					["Quest"] = 4296,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+				}, -- [1252]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570986791,
+					["Quest"] = 4296,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [1253]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570986947,
+					["Quest"] = 4283,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+				}, -- [1254]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570986947,
+					["Quest"] = 4283,
+					["Level"] = 58,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [1255]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570986951,
+					["Event"] = "Level",
+					["NewLevel"] = 59,
+				}, -- [1256]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570986951,
+					["Quest"] = 3824,
+					["Level"] = 59,
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+				}, -- [1257]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570986952,
+					["Quest"] = 3824,
+					["Level"] = 59,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [1258]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570986969,
+					["Quest"] = 3825,
+					["Level"] = 59,
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+				}, -- [1259]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570987370,
+					["Quest"] = 3825,
+					["Level"] = 59,
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+				}, -- [1260]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570987370,
+					["Quest"] = 3825,
+					["Level"] = 59,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [1261]
 			},
 			["TrackerHiddenObjectives"] = {
 			},
@@ -15698,12 +16264,12 @@ QuestieConfig = {
 				[3364] = true,
 				[179] = true,
 				[3365] = true,
-				[218] = true,
 				[420] = true,
+				[233] = true,
 				[182] = true,
 				[234] = true,
 				[2160] = true,
-				[233] = true,
+				[218] = true,
 				[3361] = true,
 			},
 		},
@@ -15717,10 +16283,11 @@ QuestieConfig = {
 		["trackerEnabled"] = false,
 	},
 	["profileKeys"] = {
+		["白银兽骑团员 - 碧玉矿洞"] = "Default",
 		["白银兽骑团委 - 碧玉矿洞"] = "Default",
 		["白银兽骑团友 - 碧玉矿洞"] = "Default",
-		["白银兽骑团员 - 碧玉矿洞"] = "Default",
 		["白銀諾艾爾 - 碧玉矿洞"] = "Default",
+		["白银兽骑团副 - 碧玉矿洞"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

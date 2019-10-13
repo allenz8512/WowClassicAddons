@@ -1,17 +1,17 @@
 
 BuffwatchPlayerConfig = {
 	["Minimized"] = false,
-	["HideUnmonitored"] = false,
+	["ShowPets"] = false,
 	["Scale"] = 1.5,
 	["ShowCastableBuffs"] = true,
 	["Version"] = "1.11",
 	["AnchorPoint"] = "Auto",
-	["SortOrder"] = "Raid Order",
+	["HideUnmonitored"] = false,
 	["ShowAllForPlayer"] = false,
 	["ShowOnlyMine"] = true,
 	["WindowLocked"] = false,
 	["Mode"] = "Party",
-	["ShowPets"] = false,
+	["SortOrder"] = "Raid Order",
 }
 BuffwatchSaveTempEnch = {
 }
@@ -145,9 +145,9 @@ BuffwatchSaveBuffs = {
 	["白銀諾艾爾"] = {
 		["Buffs"] = {
 			{
-				["Buff"] = "力量祝福",
-				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
@@ -191,6 +191,25 @@ BuffwatchSaveBuffs = {
 			}, -- [1]
 		},
 	},
+	["涛涛浩浩"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Rank"] = "等级 6",
+				["Icon"] = 135906,
+				["Buff"] = "力量祝福",
+			}, -- [1]
+		},
+	},
+	["无尽的风暴"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
+			}, -- [1]
+		},
+	},
 	["龙谷池岚"] = {
 		["Buffs"] = {
 			{
@@ -198,6 +217,15 @@ BuffwatchSaveBuffs = {
 				["Rank"] = "等级 6",
 				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
+			}, -- [1]
+		},
+	},
+	["妖魔山布丁"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
@@ -223,7 +251,17 @@ BuffwatchSaveBuffs = {
 			}, -- [1]
 		},
 	},
-	["妖魔山布丁"] = {
+	["心有痕"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Rank"] = "等级 5",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
+			}, -- [1]
+		},
+	},
+	["三月青衫湿"] = {
 		["Buffs"] = {
 			{
 				["CasterName"] = "白銀諾艾爾",
@@ -241,22 +279,21 @@ BuffwatchSaveBuffs = {
 			}, -- [1]
 		},
 	},
-	["心有痕"] = {
-		["Buffs"] = {
-			{
-				["CasterName"] = "白銀諾艾爾",
-				["Rank"] = "等级 5",
-				["Icon"] = 135970,
-				["Buff"] = "智慧祝福",
-			}, -- [1]
-		},
-	},
-	["维兰德星歌"] = {
+	["玩具"] = {
 		["Buffs"] = {
 			{
 				["Buff"] = "力量祝福",
 				["Icon"] = 135906,
 				["CasterName"] = "白銀諾艾爾",
+			}, -- [1]
+		},
+	},
+	["黑手追击令"] = {
+		["Buffs"] = {
+			{
+				["CasterName"] = "白銀諾艾爾",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
@@ -270,13 +307,12 @@ BuffwatchSaveBuffs = {
 			}, -- [1]
 		},
 	},
-	["涛涛浩浩"] = {
+	["帝国一米三"] = {
 		["Buffs"] = {
 			{
 				["CasterName"] = "白銀諾艾爾",
-				["Rank"] = "等级 6",
-				["Icon"] = 135906,
-				["Buff"] = "力量祝福",
+				["Icon"] = 135970,
+				["Buff"] = "智慧祝福",
 			}, -- [1]
 		},
 	},
@@ -312,7 +348,7 @@ BuffwatchSaveBuffs = {
 		["Buffs"] = {
 		},
 	},
-	["玩具"] = {
+	["维兰德星歌"] = {
 		["Buffs"] = {
 			{
 				["Buff"] = "力量祝福",

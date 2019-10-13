@@ -5,8 +5,8 @@ MonkeyQuestConfig = {
 			["冬泉仪祭图腾 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["东瘟疫之地 - true"] = {
-				["m_bChecked"] = false,
+			["菲诺克 - false"] = {
+				["m_bChecked"] = true,
 			},
 			["蜘蛛卵 - false"] = {
 				["m_bChecked"] = true,
@@ -17,28 +17,28 @@ MonkeyQuestConfig = {
 			["座狼之源 - false"] = {
 				["m_bChecked"] = true,
 			},
+			["达纳苏斯 - true"] = {
+				["m_bChecked"] = true,
+			},
 			["末日扣环 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["消灭火腹食人魔 - false"] = {
+			["临危不惧 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["历史的残片 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["逝者的荣耀 - false"] = {
-				["m_bChecked"] = true,
-			},
 			["基布雷尔的特殊宠物 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["剧毒之水 - false"] = {
+			["弗林特·沙多摩尔 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["塔纳利斯 - true"] = {
-				["m_bChecked"] = true,
+			["安戈洛环形山 - true"] = {
+				["m_bChecked"] = false,
 			},
-			["王国的命运 - false"] = {
+			["爱情药水 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["西瘟疫之地 - true"] = {
@@ -50,16 +50,7 @@ MonkeyQuestConfig = {
 			["燃烧平原 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["视灵药剂 - false"] = {
-				["m_bChecked"] = true,
-			},
 			["蛛后的乳汁 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["捕捉皇后 - false"] = {
-				["m_bChecked"] = true,
-			},
-			["邪恶之雾 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["暴风城 - true"] = {
@@ -68,50 +59,47 @@ MonkeyQuestConfig = {
 			["费伍德森林 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["黑龙的威胁 - false"] = {
-				["m_bChecked"] = true,
-			},
 			["死木仪祭图腾 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["第一个和最后一个 - false"] = {
+			["枭首示众 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["黑石塔 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["雏龙精华 - false"] = {
+			["集合在暴风城 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["失落的摩沙鲁石板 - false"] = {
 				["m_bChecked"] = true,
 			},
+			["视灵药剂 - false"] = {
+				["m_bChecked"] = true,
+			},
 			["五十个！ - false"] = {
 				["m_bChecked"] = true,
 			},
-			["七贤石板 - false"] = {
+			["冲破牢笼！ - false"] = {
 				["m_bChecked"] = true,
 			},
 			["蛮王戈泰什 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["真正的主人 - false"] = {
+			["王国的命运 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["菲诺克 - false"] = {
+			["塔纳利斯 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["爱情药水 - false"] = {
-				["m_bChecked"] = true,
+			["黑石塔 - true"] = {
+				["m_bChecked"] = false,
 			},
 			["黑石深渊 - true"] = {
 				["m_bChecked"] = false,
 			},
-			["安戈洛环形山 - true"] = {
-				["m_bChecked"] = false,
-			},
-			["弗林特·沙多摩尔 - false"] = {
+			["七贤石板 - false"] = {
 				["m_bChecked"] = true,
+			},
+			["东瘟疫之地 - true"] = {
+				["m_bChecked"] = false,
 			},
 		},
 	},
@@ -140,7 +128,7 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_iFrameBottom"] = 200.888870239258,
+		["m_iFrameBottom"] = 376.888916015625,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11291503906,
 		["m_bColourDoneOrFailed"] = false,
@@ -170,6 +158,10 @@ MonkeyQuestConfig = {
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {
+		["m_aQuestList"] = {
+		},
+	},
+	["碧玉矿洞|白银兽骑团副"] = {
 		["m_aQuestList"] = {
 		},
 	},
