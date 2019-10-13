@@ -1,16 +1,19 @@
-tag a941ac4da5b98ebdac9229b4c0b5a5350c9f7ced Release-1-4
+tag 72333166aba8b3a75f6f7121c5fe9874d57ac8be Release-1-13
 Author:	Stefan Pedersen <sp@ceptu.com>
-Date:	Thu Sep 12 01:54:39 2019 +0200
+Date:	Sat Oct 12 13:12:10 2019 +0200
 
-commit 45a594da84ff4e89adad82f01d76ed809247bf7c
+commit eb5b7daec0780a2b221328cda01f9943f115e74b
 Author: Stefan Pedersen <sp@ceptu.com>
-Date:   Thu Sep 12 01:54:27 2019 +0200
+Date:   Sat Oct 12 13:12:02 2019 +0200
 
-    Release 1.4
+    Release 1.13
 
-commit 8653672f409534d76e6d9b3f27271bf1b2e5d336
+commit b85438b40e07fffea592e91d2f62c9f8ea681afc
 Author: Stefan Pedersen <sp@ceptu.com>
-Date:   Thu Sep 12 01:53:35 2019 +0200
+Date:   Sat Oct 12 13:11:47 2019 +0200
 
-    Update frame strata
+    Revert to using a running average to filer out MP5, Consumabes, and buffs such as Innervate, Blessing of Wisdom etc.
+    The running average is reset when items are changed or when leaving ghost form.
+    
+    Use localized strings for spells to avoid bugs in non-enUS clients.
 
