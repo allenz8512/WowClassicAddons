@@ -183,10 +183,6 @@ function AddOn:OnInitialize()
 	self:Contruct_StaticPopups()
 	self:InitializeInitialModules()
 
-	if self.private.general.minimap.enable then
-		self.Minimap:SetGetMinimapShape()
-	end
-
 	if GetAddOnEnableState(self.myname, "Tukui") == 2 then
 		self:StaticPopup_Show("TUKUI_ELVUI_INCOMPATIBLE")
 	end

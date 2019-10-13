@@ -543,11 +543,6 @@ E.Options.args.general = {
 						}
 					}
 				},
-				objectiveTracker = {
-					order = 8,
-					type = 'toggle',
-					name = L["ObjectiveTracker Enhancements"],
-				},
 --[=[
 				itemLevelInfo = {
 					order = 11,
@@ -681,24 +676,13 @@ E.Options.args.tagGroup = {
 	order = 925,
 	type = "group",
 	name = L["Available Tags"],
-	args = {
-		header = {
-			order = 1,
-			type = "header",
-			name = L["Available Tags"],
-		},
-		spacer = {
-			order = 2,
-			type = "description",
-			name = "",
-		},
-	}
+	args = {}
 }
 
 for Tag in next, E.oUF.Tags.Events do
 	E.Options.args.tagGroup.args[Tag] = {
-		type = "description",
-		fontSize = "medium",
+		type = 'description',
+		fontSize = 'medium',
 		name = Tag,
 	}
 end

@@ -14,15 +14,16 @@ local Update = function(self, elapsed)
 	if element.sinceLastUpdate > 0.01 then
 		local powerType = UnitPowerType("player")
 
+		element:SetValue(0)
+		element.Spark:Hide()
+
 		if powerType ~= Enum.PowerType.Energy and powerType ~= Enum.PowerType.Mana then
 			return
 		end
 
 		CurrentValue = UnitPower('player', powerType)
 
-		if powerType == Enum.PowerType.Mana and (not CurrentValue or CurrentValue >= UnitPowerMax('player', Enum.PowerType.Mana)) then
-			element:SetValue(0)
-			element.Spark:Hide()
+		if not CurrentValue or CurrentValue >= UnitPowerMax('player', powerType) then
 			return
 		end
 
@@ -30,7 +31,7 @@ local Update = function(self, elapsed)
 		if not (Now == nil) then
 			local Timer = Now - LastTickTime
 
-			if (CurrentValue > LastValue) or powerType == Enum.PowerType.Energy and (Now >= LastTickTime + 2) then
+			if (CurrentValue > LastValue) then
 				LastTickTime = Now
 			end
 
@@ -74,7 +75,6 @@ local EventHandler = function(self, event, _, _, spellID)
 			return
 		end
 
-		self.EnergyManaRegen.Spark:Hide()
 		LastTickTime = GetTime() + 5
 		allowPowerEvent = false
 	end

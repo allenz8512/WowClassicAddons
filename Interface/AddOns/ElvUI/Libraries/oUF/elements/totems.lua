@@ -86,21 +86,9 @@ local function UpdateTotem(self, event, slot)
 			totem.Cooldown:SetCooldown(start, duration)
 		end
 
-		if totem:IsObjectType("Statusbar") then
-			totem:SetValue(0)
-			totem:SetScript("OnUpdate",function(self,elapsed)
-				self.total = (self.total or 0) + elapsed
-				if (self.total >= .01) then
-					self.total = 0
-					local _, _, startTime, expiration = GetTotemInfo(slot)
-					if ((GetTime() - startTime) == 0) then
-						self:SetValue(0)
-					else
-						self:SetValue(1 - ((GetTime() - startTime) / expiration))
-					end
-				end
-			end)
-		end
+		totem:Show()
+	else
+		totem:Hide()
 	end
 
 	--[[ Callback: Totems:PostUpdate(slot, haveTotem, name, start, duration, icon)

@@ -1371,22 +1371,23 @@ local function findAura(casterGUID, spellID, ...)
 		end
 	end
 end
+
 local function parseHotHeal(casterGUID, wasUpdated, spellID, tickAmount, duration, ...)
 	local spellName = GetSpellInfo(spellID)
 	if( not tickAmount or not spellID or select("#", ...) == 0 ) then return end
 	-- Retrieve the hot information
 	local stack, spellDuration, endTime = findAura(casterGUID, spellID, ...)
-	endTime = endTime and endTime > 0 and endTime or (GetTime() + (duration or spellDuration))
-	if( not stack or not (duration or spellDuration) or not endTime ) then return end
+	endTime = endTime and endTime > 0 and endTime or (GetTime() + duration)
+	if( not stack or not duration or not endTime ) then return end
 
 	pendingHots[casterGUID] = pendingHots[casterGUID] or {}
 	pendingHots[casterGUID][spellName] = pendingHots[casterGUID][spellName] or {}
 
 	local pending = pendingHots[casterGUID][spellName]
-	pending.duration = (duration or spellDuration)
+	pending.duration = duration
 	pending.endTime = endTime
 	pending.stack = stack
-	pending.totalTicks = totalTicks or 0
+	pending.totalTicks = totalTicks
 	pending.tickInterval = 3
 	pending.spellID = spellID
 	pending.isMutliTarget = select("#", ...) > 1
