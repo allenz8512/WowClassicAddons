@@ -1,6 +1,6 @@
 ﻿## Interface: 11302
 ## Author: Lag
-## Version: v1.2.2
+## Version: v1.2.3
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
@@ -8,7 +8,7 @@
 ## Title-deDE: AtlasLootClassic |cFF0099FF[Fraktionen]|r
 ## Title-esES: AtlasLootClassic |cFF0099FF[Factions]|r
 ## Title-esMX: AtlasLootClassic |cFF0099FF[Factions]|r
-## Title-frFR: AtlasLootClassic |cFF0099FF[Factions]|r
+## Title-frFR: AtlasLoot Classic |cFF0099FF[Factions]|r
 ## Title-itIT: AtlasLootClassic |cFF0099FF[Factions]|r
 ## Title-koKR: AtlasLoot 클래식 |cFF0099FF[평판]|r
 ## Title-ptBR: AtlasLootClassic |cFF0099FF[Factions]|r
@@ -19,7 +19,7 @@
 ## Notes-deDE: AtlasLoot Beuteverzeichnis der Fraktionen
 ## Notes-esES: AtlasLoot loot tables from Factions
 ## Notes-esMX: AtlasLoot loot tables from Factions
-## Notes-frFR: AtlasLoot loot tables from Factions
+## Notes-frFR: Tables de butin des factions
 ## Notes-itIT: AtlasLoot loot tables from Factions
 ## Notes-koKR: 진영의 AtlasLoot 전리품 표
 ## Notes-ptBR: AtlasLoot loot tables from Factions

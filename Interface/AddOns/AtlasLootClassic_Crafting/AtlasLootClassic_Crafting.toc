@@ -1,6 +1,6 @@
 ## Interface: 11302
 ## Author: Lag
-## Version: v1.2.2
+## Version: v1.2.3
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
@@ -8,7 +8,7 @@
 ## Title-deDE: AtlasLootClassic |cFF0099FF[Berufe]|r
 ## Title-esES: AtlasLootClassic |cFF0099FF[Crafting]|r
 ## Title-esMX: AtlasLootClassic |cFF0099FF[Crafting]|r
-## Title-frFR: AtlasLootClassic |cFF0099FF[Crafting]|r
+## Title-frFR: AtlasLoot Classic |cFF0099FF[Artisanat]|r
 ## Title-itIT: AtlasLootClassic |cFF0099FF[Crafting]|r
 ## Title-koKR: AtlasLoot 클래식 |cFF0099FF[제작 아이템]|r
 ## Title-ptBR: AtlasLootClassic |cFF0099FF[Crafting]|r
@@ -19,7 +19,7 @@
 ## Notes-deDE: AtlasLoot Beuteverzeichnis der Berufe
 ## Notes-esES: AtlasLoot loot tables of Crafting Items
 ## Notes-esMX: AtlasLoot loot tables of Crafting Items
-## Notes-frFR: Notes-Artisanat
+## Notes-frFR: Tables de butin des objets d'artisanat
 ## Notes-itIT: AtlasLoot loot tables of Crafting Items
 ## Notes-koKR: 제작 아이템의 AtlasLoot 전리품 표
 ## Notes-ptBR: AtlasLoot loot tables of Crafting Items

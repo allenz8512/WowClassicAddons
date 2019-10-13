@@ -1,6 +1,6 @@
 ﻿## Interface: 11302
 ## Author: Lag
-## Version: v1.2.2
+## Version: v1.2.3
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
@@ -19,7 +19,7 @@
 ## Notes-deDE: AtlasLoot Optionen
 ## Notes-esES: AtlasLoot options module
 ## Notes-esMX: AtlasLoot options module
-## Notes-frFR: AtlasLoot options module
+## Notes-frFR: Module des options
 ## Notes-itIT: AtlasLoot options module
 ## Notes-koKR: AtlasLoot 옵션 모듈
 ## Notes-ptBR: AtlasLoot options module
