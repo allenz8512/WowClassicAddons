@@ -1,9 +1,12 @@
 -- Local vars and funcs
 local addonName, BUFFWATCHADDON = ...;
 
+local LRankText = nil;
+local NoLocale = false;
+
 function BUFFWATCHADDON.GetSpellRank(spellId)
 
-    if spellId > 32768 then return nil; end
+    if NoLocale or spellId > 32768 then return nil; end
 
     local byteval = string.byte(BUFFWATCHADDON.SpellRanks, spellId);
 
@@ -12,20 +15,40 @@ function BUFFWATCHADDON.GetSpellRank(spellId)
     else
         return nil;
     end
+
 end
 
 function BUFFWATCHADDON.GetSpellRankText(spellId)
 
-    if spellId > 32768 then return nil; end
+    local rank = BUFFWATCHADDON.GetSpellRank(spellId);
 
-    local byteval = string.byte(BUFFWATCHADDON.SpellRanks, spellId);
-
-    if byteval > 48 then
-        return GetSpellSubtext(spellId); -- Get localized string for rank, now we know the subtext is a rank
+    if rank then
+        return LRankText..rank;
     else
         return nil;
     end
+
 end
+
+-- Simple localization for rank text until we do something for the whole addon
+function BUFFWATCHADDON.SetLocalization()
+
+    local locale = GetLocale();
+
+    if locale == "enUS" then LRankText = "Rank ";
+    elseif locale == "enGB" then LRankText = "Rank ";
+    elseif locale == "deDE" then LRankText = "Rang ";
+    elseif locale == "esES" then LRankText = "Rango ";
+    elseif locale == "esMX" then LRankText = "Rango ";
+    elseif locale == "frFR" then LRankText = "Rang ";
+    elseif locale == "ptBR" then LRankText = "Grau ";
+    elseif locale == "ruRU" then LRankText = "Уровень ";
+    else
+        NoLocale = true;
+    end
+
+end
+BUFFWATCHADDON.SetLocalization();
 
 BUFFWATCHADDON.SpellRanks = table.concat({
     ".........1......1...................................1.............1....1.....1..........1.........111...........1..1.1.1.1......",

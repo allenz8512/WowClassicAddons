@@ -46,6 +46,13 @@
 -- Fixed issue with buff rank localization
 -- Fixed buff names for Flasks & Elixirs
 
+-- 1.11
+-- Changed method for buff rank localization as rank information wasn't always
+--  returned by the api and was getting lost at initial login
+-- Buff ranks are enabled for locales: enUS, enGB, deDE, esES, esMX, frFR,
+--  ptBR and ruRU
+-- Other localizations will always cast max rank until they can be added
+
 -- ****************************************************************************
 -- **                                                                        **
 -- **  Variables                                                             **
@@ -57,8 +64,8 @@ local addonName, BUFFWATCHADDON = ...;
 BUFFWATCHADDON_G = { };
 
 BUFFWATCHADDON.NAME = "Buffwatch Classic";
-BUFFWATCHADDON.VERSION = "1.10";
-BUFFWATCHADDON.RELEASE_DATE = "07 Oct 2019";
+BUFFWATCHADDON.VERSION = "1.11";
+BUFFWATCHADDON.RELEASE_DATE = "11 Oct 2019";
 BUFFWATCHADDON.HELPFRAMENAME = "Buffwatch Help";
 BUFFWATCHADDON.MODE_DROPDOWN_LIST = {
     "Solo",
@@ -2354,15 +2361,12 @@ function BUFFWATCHADDON.FindBuff(playerbuffs, buff, rank, castername)
 
         if playerbuffs[i]["Buff"] == buff then
 
-            if rank and playerbuffs[i]["Rank"] ~= rank then
-                return 0;
-            end
+            if (not rank or playerbuffs[i]["Rank"] == rank)
+                and (not castername or UnitName(playerbuffs[i]["Caster"]) == castername) then
 
-            if castername and UnitName(playerbuffs[i]["Caster"]) ~= castername then
-                return 0;
-            end
+                return i;
 
-            return i;
+            end
 
         end
 
