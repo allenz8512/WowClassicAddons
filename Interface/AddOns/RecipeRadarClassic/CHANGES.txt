@@ -1,22 +1,40 @@
-lightweight tag f0cc882d28893ebb27eff23768244b14de4d5923 1.0.0.20-beta
+lightweight tag fe97c24b43861dcf2badeed22f05463043bc0d37 1.0.0.21
 Author:	Yunohu <kernighan@gmail.com>
-Date:	Thu Sep 26 21:19:54 2019 +0000
+Date:	Fri Oct 11 20:59:18 2019 +0000
 
-commit f0cc882d28893ebb27eff23768244b14de4d5923
+commit fe97c24b43861dcf2badeed22f05463043bc0d37
 Author: Yunohu <kernighan@gmail.com>
-Date:   Thu Sep 26 21:19:54 2019 +0000
+Date:   Fri Oct 11 20:59:18 2019 +0000
 
-    Version 1.0.0.20
+    Bump version to 1.0.0.21
 
-commit 0070746c4674db1c62f16df976909cd931afb80a
+commit 315d158e09a66188d708b4281587ed34915355ee
 Author: Yunohu <kernighan@gmail.com>
-Date:   Thu Sep 26 21:19:44 2019 +0000
+Date:   Fri Oct 11 20:58:43 2019 +0000
 
-    Fix loading LibTourist
+    Only use latest released version of software (latest tag)
 
-commit d76519a466c252f49b822fc5f2c7a37d1e137427
+commit 2a8d23fe6f17c27e176605ce638cc99c37236df1
 Author: Yunohu <kernighan@gmail.com>
-Date:   Thu Sep 26 20:36:13 2019 +0000
+Date:   Fri Oct 11 20:57:56 2019 +0000
 
-    Drop mapIDs file
+    Update with latest fixes
+
+commit 2bb1984cb5d5f8314a4e03539cab83920a2d1019
+Author: Yunohu <kernighan@gmail.com>
+Date:   Fri Oct 11 20:54:55 2019 +0000
+
+    Fix #16 -- Fix the tooltip to get rid of various errors
+
+commit f76037c1876b551b99fa085a25fa55783ef2983a
+Author: Yunohu <kernighan@gmail.com>
+Date:   Fri Oct 11 17:19:25 2019 +0000
+
+    Fix #29 - Update Vendor-Tron and Super-Seller recipes to be accurate
+
+commit 5c03ecacbe42f7e552acd357288eac15f83eb534
+Author: Yunohu <kernighan@gmail.com>
+Date:   Thu Oct 3 15:10:02 2019 +0000
+
+    Fix #26 - Typo Skill -> Spell
 

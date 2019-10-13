@@ -76,7 +76,6 @@ RecipeRadar_RecipeData = {
             { Region = 1455, Vendor = L["Soolie Berryfizz"], Team = "Alliance" },
             { Region = 1457, Vendor = L["Ulthir"], Team = "Alliance" },
             { Region = 1454, Vendor = L["Kor'geld"], Team = "Horde" },
-            { Region = 1443, Vendor = L["Vendor-Tron 1000"], Team = "Neutral" },
          },
       },
       {
@@ -89,7 +88,6 @@ RecipeRadar_RecipeData = {
          Locations = {
             { Region = 1457, Vendor = L["Ulthir"], Team = "Alliance" },
             { Region = 1454, Vendor = L["Hagrus"], Team = "Horde" },
-            { Region = 1443, Vendor = L["Vendor-Tron 1000"], Team = "Neutral" },
          },
       },
       {
@@ -1453,7 +1451,6 @@ RecipeRadar_RecipeData = {
          Cost = 2000,
          Locations = {
             { Region = 1434, Vendor = L["Mazk Snipeshot"], Team = "Neutral" },
-            { Region = 1443, Vendor = L["Super-Seller 680"], Team = "Neutral" },
          },
       },
       {
@@ -1499,7 +1496,6 @@ RecipeRadar_RecipeData = {
          Cost = 2000,
          Locations = {
             { Region = 1431, Vendor = L["Kzixx"], Team = "Neutral" },
-            { Region = 1443, Vendor = L["Super-Seller 680"], Team = "Neutral" },
             { Region = 1442, Vendor = L["Veenix"], Team = "Neutral" },
             { Region = 1424, Vendor = L["Zixil"], Team = "Neutral" },
          },
@@ -1536,7 +1532,6 @@ RecipeRadar_RecipeData = {
          Cost = 1800,
          Locations = {
             { Region = 1416, Vendor = L["Rizz Loosebolt"], Team = "Neutral" },
-            { Region = 1443, Vendor = L["Super-Seller 680"], Team = "Neutral" },
          },
       },
       {
@@ -1671,7 +1666,6 @@ RecipeRadar_RecipeData = {
             { Region = 1440, Vendor = L["Lardan"], Team = "Alliance" },
             { Region = 1441, Vendor = L["Jandia"], Team = "Horde" },
             { Region = 1417, Vendor = L["Keena"], Team = "Horde" },
-            { Region = 1443, Vendor = L["Vendor-Tron 1000"], Team = "Neutral" },
          },
       },
       {
@@ -1730,7 +1724,6 @@ RecipeRadar_RecipeData = {
          Locations = {
             { Region = 1437, Vendor = L["Wenna Silkbeard"], Team = "Alliance" },
             { Region = 1424, Vendor = L["George Candarte"], Team = "Horde" },
-            { Region = 1443, Vendor = L["Vendor-Tron 1000"], Team = "Neutral" },
          },
       },
       {
@@ -1745,7 +1738,6 @@ RecipeRadar_RecipeData = {
             { Region = 1457, Vendor = L["Saenorion"], Team = "Alliance" },
             { Region = 1444, Vendor = L["Jangdor Swiftstrider"], Team = "Horde" },
             { Region = 1458, Vendor = L["Joseph Moore"], Team = "Horde" },
-            { Region = 1443, Vendor = L["Vendor-Tron 1000"], Team = "Neutral" },
          },
       },
       {
@@ -1996,7 +1988,6 @@ RecipeRadar_RecipeData = {
          Cost = 3000,
          Locations = {
             { Region = 1434, Vendor = L["Rikqiz"], Team = "Neutral" },
-            { Region = 1443, Vendor = L["Vendor-Tron 1000"], Team = "Neutral" },
          },
       },
       {
@@ -2614,7 +2605,6 @@ RecipeRadar_RecipeData = {
          Locations = {
             { Region = 1431, Vendor = L["Sheri Zipstitch"], Team = "Alliance" },
             { Region = 1424, Vendor = L["Mallen Swain"], Team = "Horde" },
-            { Region = 1443, Vendor = L["Super-Seller 680"], Team = "Neutral" },
          },
       },
       {
@@ -2794,7 +2784,6 @@ RecipeRadar_RecipeData = {
          Skill = 180,
          Cost = 1200,
          Locations = {
-            { Region = 1443, Vendor = L["Super-Seller 680"], Team = "Neutral" },
             { Region = 1434, Vendor = L["Xizk Goodstitch"], Team = "Neutral" },
          },
       },
@@ -2817,7 +2806,6 @@ RecipeRadar_RecipeData = {
          Skill = 165,
          Cost = 1000,
          Locations = {
-            { Region = 1443, Vendor = L["Super-Seller 680"], Team = "Neutral" },
             { Region = 1434, Vendor = L["Xizk Goodstitch"], Team = "Neutral" },
          },
       },
@@ -3235,7 +3223,7 @@ RecipeRadar_RecipeData = {
    Recipes = {
       {
          ID = 16072,
-         Skill = 3413,
+         Spell = 3413,
          Item = 0,
          Type = L["Cooking"],
          Skill = 125,

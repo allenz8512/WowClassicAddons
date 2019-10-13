@@ -1,4 +1,8 @@
 Recipe Radar Classic ChangeLog
+v 1.0.0.21
+- Fix Tooltip errors (Issue #16)
+- Fix incorrectly listed vendor locations for some recipes (Issue #29)
+- Fix Expert Cookbook incorrectly showing up after being learned (Issue #26)
 v 1.0.0.20
 - Fix HereBeDragons error by fixing LibTourist library loading
 v 1.0.0.18

@@ -4,7 +4,7 @@
 local L = LibStub("AceLocale-3.0"):GetLocale("RecipeRadarClassic")
 local BFAC = LibStub("LibBabble-Faction-3.0"):GetLookupTable()
 
-RECIPERADAR_VERSION = "1.0.0.20"
+RECIPERADAR_VERSION = "1.0.0.21"
 
 RECIPERADAR_VENDORS_DISPLAYED = 8
 RECIPERADAR_VENDOR_HEIGHT = 16
