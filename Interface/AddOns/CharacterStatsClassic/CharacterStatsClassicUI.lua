@@ -17,11 +17,11 @@ local UIConfig = core.UIConfig;
 local CSC_UIFrame = core.UIConfig;
 
 local statsDropdownList = {
-    "Base Stats",
-    "Melee",
-    "Ranged",
-    "Spell",
-    "Defenses"
+    PLAYERSTAT_BASE_STATS,
+    PLAYERSTAT_MELEE_COMBAT,
+    PLAYERSTAT_RANGED_COMBAT,
+    PLAYERSTAT_SPELL_COMBAT,
+    PLAYERSTAT_DEFENSES
 }
 
 local NUM_STATS_TO_SHOW = 6;
@@ -47,8 +47,8 @@ function UIConfig:InitializeStatsFrames(leftParentFrame, rightParentFrame)
         local actualOffset = accumulatedOffsetY;
         
         if i == 1 then 
-            actualOffset = 35;
-            accumulatedOffsetY = 35;
+            actualOffset = 32;
+            accumulatedOffsetY = 32;
         end
 
         LeftStatsTable[i] = CreateFrame("Frame", nil, leftParentFrame, "CharacterStatFrameTemplate");
@@ -64,40 +64,38 @@ function UIConfig:InitializeStatsFrames(leftParentFrame, rightParentFrame)
 end
 
 function UIConfig:SetCharacterStats(statsTable, category)
-    --local characterFrameTab = PanelTemplates_GetSelectedTab(CharacterFrame);
-    --print(characterFrameTab);
+
     CSC_ResetStatFrames(statsTable);
 
-    if category == "Base Stats" then
-        -- str, agility, stamina, intelect, spirit, armor
+    if category == PLAYERSTAT_BASE_STATS then
+        -- str, agility, stamina, intelect, spirit
         CSC_PaperDollFrame_SetPrimaryStats(statsTable, "player");
-    elseif category == "Defenses" then
+    elseif category == PLAYERSTAT_DEFENSES then
         -- armor, defense, dodge, parry, block
         CSC_PaperDollFrame_SetArmor(statsTable[1], "player");
         CSC_PaperDollFrame_SetDefense(statsTable[2], "player");
         CSC_PaperDollFrame_SetDodge(statsTable[3], "player");
         CSC_PaperDollFrame_SetParry(statsTable[4], "player");
         CSC_PaperDollFrame_SetBlock(statsTable[5], "player");
-        --CSC_PaperDollFrame_SetStagger(statsTable[6], "player"); Is this useful?
-    elseif category == "Melee" then
+    elseif category == PLAYERSTAT_MELEE_COMBAT then
         -- damage, Att Power, speed, hit raiting, crit chance
         CSC_PaperDollFrame_SetDamage(statsTable[1], "player", category);
         CSC_PaperDollFrame_SetMeleeAttackPower(statsTable[2], "player");
         CSC_PaperDollFrame_SetAttackSpeed(statsTable[3], "player");
         CSC_PaperDollFrame_SetCritChance(statsTable[4], "player", category);
         CSC_PaperDollFrame_SetHitChance(statsTable[5], "player");
-    elseif category == "Ranged" then
+    elseif category == PLAYERSTAT_RANGED_COMBAT then
         CSC_PaperDollFrame_SetDamage(statsTable[1], "player", category);
         CSC_PaperDollFrame_SetRangedAttackPower(statsTable[2], "player");
         CSC_PaperDollFrame_SetRangedAttackSpeed(statsTable[3], "player");
         CSC_PaperDollFrame_SetCritChance(statsTable[4], "player", category);
-        CSC_PaperDollFrame_SetHitChance(statsTable[5], "player");
-    elseif category == "Spell" then
-        -- bonus dmg, bonus healing, crit chance, mana regen
+        CSC_PaperDollFrame_SetRangedHitChance(statsTable[5], "player");
+    elseif category == PLAYERSTAT_SPELL_COMBAT then
+        -- bonus dmg, bonus healing, crit chance, mana regen, hit
         CSC_PaperDollFrame_SetSpellPower(statsTable[1], "player");
         CSC_PaperDollFrame_SetHealing(statsTable[2], "player");
         CSC_PaperDollFrame_SetManaRegen(statsTable[3], "player");
-        CSC_PaperDollFrame_SetCritChance(statsTable[4], "player", category);
+        CSC_PaperDollFrame_SetSpellCritChance(statsTable[4], "player");
         CSC_PaperDollFrame_SetSpellHitChance(statsTable[5], "player");
     end
 end
@@ -107,15 +105,14 @@ function UIConfig:CreateMenu()
     CharacterAttributesFrame:Hide();
 
     CSC_UIFrame.CharacterStatsPanel = CreateFrame("Frame", nil, CharacterFrame); --CharacterFrameInsetRight
-	CSC_UIFrame.CharacterStatsPanel:SetPoint("LEFT", CharacterFrame, "BOTTOMLEFT", 50, 75);
+	CSC_UIFrame.CharacterStatsPanel:SetPoint("LEFT", CharacterFrame, "BOTTOMLEFT", 50, 75); --85 for 6 stats
 	CSC_UIFrame.CharacterStatsPanel:SetHeight(320);
     CSC_UIFrame.CharacterStatsPanel:SetWidth(200);
 
     UIConfig:SetupDropdown();
 
     UIConfig:InitializeStatsFrames(CSC_UIFrame.CharacterStatsPanel.leftStatsDropDown, CSC_UIFrame.CharacterStatsPanel.rightStatsDropDown);
-    UIConfig:SetCharacterStats(LeftStatsTable, statsDropdownList[UISettingsCharacter.selectedLeftStatsCategory]);
-    UIConfig:SetCharacterStats(RightStatsTable, statsDropdownList[UISettingsCharacter.selectedRightStatsCategory]);
+    UIConfig:UpdateStats();
 end
 
 function UIConfig:UpdateStats()
@@ -178,6 +175,7 @@ end
 function ToggleCharacter(tab, onlyShow)
     if ( tab == "PaperDollFrame") then
         CSC_UIFrame.CharacterStatsPanel:Show();
+        CSC_UIFrame:UpdateStats();
     else
         CSC_UIFrame.CharacterStatsPanel:Hide();
     end

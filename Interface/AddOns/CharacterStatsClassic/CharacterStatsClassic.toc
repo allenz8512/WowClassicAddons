@@ -1,7 +1,7 @@
 ## Interface: 11302
 ## Author: Peter Getov
-## Version: 1.0
-## Title: |cfffe7b2cCharacterStatsClassic|r
+## Version: 2.3
+## Title: |cff00aeffCharacterStatsClassic|r
 ## Notes: Advanced Character Stats
 ## DefaultState:  enabled
 ## SavedVariables: CharacterStatsClassicDB
@@ -10,3 +10,4 @@
 CharacterStatsClassicUI.lua
 CharacterStatsClassicCore.lua
 CharacterStatsClassicUtils.lua
+ClassUtils.lua
