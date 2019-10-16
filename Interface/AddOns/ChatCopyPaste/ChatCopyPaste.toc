@@ -1,0 +1,10 @@
+## Interface: 80205
+## Notes: A simple chat copy paste addon.
+## Title: ChatCopyPaste
+## Author: Novaspark-Firemaw EU
+## Version: 1.0.0
+## SavedVariables: CCPData
+
+embeds.xml
+
+ChatCopyPaste.lua
