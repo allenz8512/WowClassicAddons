@@ -1,0 +1,128 @@
+﻿## Interface: 11302
+## Title: Missing TradeSkills List
+## Author: Thumbkin
+## Notes: Shows missing skills & recipes for a profession and where to get them.
+## SavedVariables: MTSL_PLAYERS, MTSLUI_PLAYER
+## Version: 1.13.20
+
+
+##
+## Load all global variables, saved variables & locale
+##
+
+Data\GlobalVariables.lua
+
+Logic\GlobalVariables.lua
+Logic\SavedVariables.lua
+
+UI\GlobalVariables.lua
+UI\Locales.lua
+UI\SavedVariables.lua
+
+##
+## Load the data
+##
+
+# Shared data
+Data\Factions.lua
+Data\Npcs.lua
+Data\Objects.lua
+Data\Quests.lua
+Data\Continents.lua
+Data\Zones.lua
+
+# Alchemy
+Data\Alchemy\Alchemy_Levels.lua
+Data\Alchemy\Alchemy_Skills.lua
+Data\Alchemy\Alchemy_Items.lua
+
+# Blacksmithing
+Data\Blacksmithing\Blacksmithing_Levels.lua
+Data\Blacksmithing\Blacksmithing_Skills.lua
+Data\Blacksmithing\Blacksmithing_Items.lua
+
+# Cooking
+Data\Cooking\Cooking_Levels.lua
+Data\Cooking\Cooking_Skills.lua
+Data\Cooking\Cooking_Items.lua
+
+# Enchanting
+Data\Enchanting\Enchanting_Levels.lua
+Data\Enchanting\Enchanting_Skills.lua
+Data\Enchanting\Enchanting_Items.lua
+
+# Engineering
+Data\Engineering\Engineering_Levels.lua
+Data\Engineering\Engineering_Skills.lua
+Data\Engineering\Engineering_Items.lua
+
+# First Aid
+Data\FirstAid\FirstAid_Levels.lua
+Data\FirstAid\FirstAid_Skills.lua
+Data\FirstAid\FirstAid_Items.lua
+
+# Leatherworking
+Data\Leatherworking\Leatherworking_Levels.lua
+Data\Leatherworking\Leatherworking_Skills.lua
+Data\Leatherworking\Leatherworking_Items.lua
+
+# Mining
+Data\Mining\Mining_Levels.lua
+Data\Mining\Mining_Skills.lua
+Data\Mining\Mining_Items.lua
+
+# Tailoring
+Data\Tailoring\Tailoring_Levels.lua
+Data\Tailoring\Tailoring_Skills.lua
+Data\Tailoring\Tailoring_Items.lua
+
+##
+## Load the logic
+##
+Logic\Tools.lua
+Logic\FactionReputation.lua
+Logic\ItemObject.lua
+Logic\PlayerNpc.lua
+Logic\Profession.lua
+Logic\Quest.lua
+Logic\Skill.lua
+Logic\World.lua
+
+##
+## Load the UI
+##
+
+# Shared functions
+UI\Fonts.lua
+UI\Tools.lua
+UI\EventHandler.lua
+
+# Shared Frames
+UI\Common\BaseFrame.lua
+UI\Common\ExpandButton.lua
+UI\Common\HorizontalSlider.lua
+UI\Common\ListItem.lua
+UI\Common\ListFrame.lua
+UI\Common\PlayerListFrame.lua
+UI\Common\FilterFrame.lua
+UI\Common\PlayerFilterFrame.lua
+UI\Common\ProfessionListFrame.lua
+UI\Common\ProgressBar.lua
+UI\Common\SkillDetailFrame.lua
+UI\Common\TitleFrame.lua
+UI\Common\VerticalSlider.lua
+
+# Components for OptionsFrame
+UI\Options\ConfigFrame.lua
+UI\Options\SaveFrame.lua
+UI\Options\ResetFrame.lua
+
+# MainFrames
+UI\MainFrames\AccountExplorerFrame.lua
+UI\MainFrames\DatabaseExplorerFrame.lua
+UI\MainFrames\OptionsMenuFrame.lua
+UI\MainFrames\ToggleButton.lua
+UI\MainFrames\MissingTradeSkillsFrame.lua
+
+## Initialise the frames & start the addon
+MissingTradeSkillsList.lua
