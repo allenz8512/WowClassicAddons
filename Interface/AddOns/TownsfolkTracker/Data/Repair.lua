@@ -68,6 +68,7 @@ TF_REPAIR_VENDORS = {
     { zone = TF_ZONE.SILVERPINE_FOREST, x = 0.4461, y = 0.3911, name = "Alexandre Lefevre", tag = "Leather Armor Merchant", faction = TF_FACTION.HORDE },
     { zone = TF_ZONE.SILVERPINE_FOREST, x = 0.4479, y = 0.3924, name = "Andrea Boynton", tag = "Clothier", faction = TF_FACTION.HORDE },
     { zone = TF_ZONE.SILVERPINE_FOREST, x = 0.4501, y = 0.393, name = "Nadia Vernon", tag = "Bowyer", faction = TF_FACTION.HORDE },
+    { zone = TF_ZONE.SILVERPINE_FOREST, x = 0.4644, y = 0.8644, name = "Wallace the Blind", tag = "Weaponsmith", faction = TF_FACTION.ALLIANCE },
     { zone = TF_ZONE.HILLSBRAD_FOOTHILLS, x = 0.6044, y = 0.2618, name = "Ott", tag = "Weaponsmith", faction = TF_FACTION.HORDE },
     { zone = TF_ZONE.HILLSBRAD_FOOTHILLS, x = 0.8014, y = 0.389, name = "Kris Legace", tag = "Freewheeling Tradeswoman" },
     { zone = TF_ZONE.HILLSBRAD_FOOTHILLS, x = 0.5122, y = 0.5698, name = "Robert Aebischer", tag = "Superior Armorsmith", faction = TF_FACTION.ALLIANCE },

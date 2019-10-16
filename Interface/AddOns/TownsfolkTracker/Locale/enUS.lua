@@ -1069,6 +1069,7 @@ L["Hartash"] = true
 L["Zulrg"] = true
 L["Altsoba Ragetotem"] = true
 L["Smith Slagtree"] = true
+L["Wallace the Blind"] = true
 
 -- Stable Masters
 L["Sikwa"] = true
@@ -1588,6 +1589,9 @@ L["Haromm"] = true
 L["Rogvar"] = true
 L["Balai Lok'Wein"] = true
 L["Nat Pagle"] = true
+L["Karolek"] = true
+L["Kamari"] = true
+L["Thuwd"] = true
 
 -- Transportation Zones
 L["Skull Rock, Durotar"] = true
