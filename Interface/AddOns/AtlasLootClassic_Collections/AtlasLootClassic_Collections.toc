@@ -1,6 +1,6 @@
 ﻿## Interface: 11302
 ## Author: Lag
-## Version: v1.2.3
+## Version: v1.3.1
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
@@ -21,7 +21,7 @@
 ## Notes-esMX: AtlasLoot loot tables from Collections
 ## Notes-frFR: Tables de butin des collections
 ## Notes-itIT: AtlasLoot loot tables from Collections
-## Notes-koKR: AtlasLoot loot tables from Collections
+## Notes-koKR: 수집품에 대한 AtlasLoot 전리품 테이블
 ## Notes-ptBR: AtlasLoot loot tables from Collections
 ## Notes-ruRU: Таблицы добычи AtlasLoot для коллекций предметов.
 ## Notes-zhCN: 收藏物品资料库。

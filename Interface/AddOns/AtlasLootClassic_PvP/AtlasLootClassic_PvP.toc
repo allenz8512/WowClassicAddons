@@ -1,6 +1,6 @@
 ﻿## Interface: 11302
 ## Author: Lag
-## Version: v1.2.3
+## Version: v1.3.1
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
@@ -21,7 +21,7 @@
 ## Notes-esMX: AtlasLoot loot tables from PvP
 ## Notes-frFR: Tables de butin JcJ
 ## Notes-itIT: AtlasLoot loot tables from PvP
-## Notes-koKR: PvP의 AtlasLoot 전리품 표
+## Notes-koKR: PvP에 대한 AtlasLoot 전리품 테이블
 ## Notes-ptBR: AtlasLoot loot tables from PvP
 ## Notes-ruRU: Таблицы добычи AtlasLoot для PvP.
 ## Notes-zhCN: AtlasLoot  PvP掉落列表
