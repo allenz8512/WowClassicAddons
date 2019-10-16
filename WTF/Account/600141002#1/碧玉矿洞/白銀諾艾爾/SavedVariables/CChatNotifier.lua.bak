@@ -1,25 +1,25 @@
 
 CChatNotifier_settings = {
-	["mecolor"] = "|cffffffaa",
 	["mfcolor"] = "|cff00ff00",
+	["firstStart"] = false,
 	["sendercolor"] = "|r",
-	["outputFormat"] = "[{P}]<>: <ffffaa>{MS}<00ff00>{MF}<ffffaa>{ME}",
+	["soundId"] = "sound/interface/itellmessage.ogg",
 	["antiSpamWindow"] = 60,
 	["isActive"] = false,
-	["chatFrame"] = 1,
-	["classColor"] = true,
 	["showMinimapButton"] = true,
+	["classColor"] = true,
+	["chatFrame"] = 1,
 	["version"] = "1.0",
 	["mscolor"] = "|cffffffaa",
 	["snapToMinimap"] = true,
-	["soundId"] = "sound/interface/itellmessage.ogg",
-	["firstStart"] = false,
+	["outputFormat"] = "[{P}]<>: <ffffaa>{MS}<00ff00>{MF}<ffffaa>{ME}",
+	["mecolor"] = "|cffffffaa",
 }
 CChatNotifier_data = {
 	["黑石深渊"] = {
-		["active"] = true,
 		["words"] = {
 			"黑石深渊", -- [1]
 		},
+		["active"] = true,
 	},
 }

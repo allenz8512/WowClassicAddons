@@ -1,11 +1,12 @@
 
 QuestAnnounceDB = {
 	["profileKeys"] = {
+		["湊阿庫婭 - 碧玉矿洞"] = "Default",
 		["白银兽骑团员 - 碧玉矿洞"] = "Default",
 		["白银兽骑团委 - 碧玉矿洞"] = "Default",
 		["白银兽骑团友 - 碧玉矿洞"] = "Default",
-		["白銀諾艾爾 - 碧玉矿洞"] = "Default",
 		["白银兽骑团副 - 碧玉矿洞"] = "Default",
+		["白銀諾艾爾 - 碧玉矿洞"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -17,9 +18,9 @@ QuestAnnounceDB = {
 				},
 				["settings"] = {
 					["enable"] = true,
-					["every"] = 1,
 					["debug"] = false,
 					["sound"] = true,
+					["every"] = 1,
 				},
 				["announceIn"] = {
 					["party"] = true,

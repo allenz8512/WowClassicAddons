@@ -27,9 +27,9 @@ Quartz3DB = {
 				["Default"] = {
 					["w"] = 190,
 					["y"] = 276.888732910156,
-					["font"] = "默认",
-					["border"] = "ElvUI GlowBorder",
 					["x"] = 753,
+					["border"] = "ElvUI GlowBorder",
+					["font"] = "默认",
 					["texture"] = "ElvUI Norm",
 				},
 			},
@@ -44,11 +44,12 @@ Quartz3DB = {
 		},
 	},
 	["profileKeys"] = {
+		["湊阿庫婭 - 碧玉矿洞"] = "Default",
 		["白银兽骑团员 - 碧玉矿洞"] = "Default",
 		["白银兽骑团委 - 碧玉矿洞"] = "Default",
 		["白银兽骑团友 - 碧玉矿洞"] = "Default",
-		["白銀諾艾爾 - 碧玉矿洞"] = "Default",
 		["白银兽骑团副 - 碧玉矿洞"] = "Default",
+		["白銀諾艾爾 - 碧玉矿洞"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

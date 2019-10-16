@@ -41,7 +41,7 @@ WeakAuras: enabled
 WeakAurasModelPaths: enabled
 WeakAurasOptions: enabled
 ElvUI_LocationPlus: enabled
-Details_TinyThreat: disabled
+Details_TinyThreat: enabled
 Atlas: enabled
 AtlasQuest: enabled
 FriendsMenuXP: enabled

@@ -4,8 +4,8 @@ alaBaseData = {
 		["posEx"] = "ABOVE_CHATFRAME",
 		["style"] = "ala",
 		["scale"] = 1,
-		["_version"] = 1.07,
 		["alpha"] = 1,
+		["_version"] = 1.07,
 		["pos"] = {
 			"BOTTOMLEFT", -- [1]
 			"ChatFrame1Tab", -- [2]
@@ -60,16 +60,16 @@ alaChatConfig = {
 	["channelBarStyle"] = "CHAR",
 	["copyTagFormat"] = "#s",
 	["welcomeToGuild"] = false,
-	["broadCastNewMember"] = false,
-	["hyperLinkEnhanced"] = true,
+	["keyWordHighlight"] = true,
+	["shamanColor"] = false,
 	["alpha"] = 1,
 	["copy"] = false,
-	["bfWorld_Ignore_Switch"] = false,
-	["hyperLinkHoverShow"] = false,
-	["editBoxTab"] = true,
 	["filterQuestAnn"] = false,
+	["editBoxTab"] = true,
+	["hyperLinkHoverShow"] = false,
+	["bfWorld_Ignore_Switch"] = false,
 	["DBMCountDown"] = true,
-	["shamanColor"] = false,
-	["keyWordHighlight"] = true,
+	["hyperLinkEnhanced"] = true,
+	["broadCastNewMember"] = false,
 	["bfWorld_Ignore"] = false,
 }

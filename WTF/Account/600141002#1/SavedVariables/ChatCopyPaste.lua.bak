@@ -1,0 +1,2 @@
+
+CCPData = nil
