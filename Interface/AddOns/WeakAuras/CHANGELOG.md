@@ -1,20 +1,31 @@
-# [2.15.2](https://github.com/WeakAuras/WeakAuras2/tree/2.15.2) (2019-10-01)
+# [2.15.3](https://github.com/WeakAuras/WeakAuras2/tree/2.15.3) (2019-10-12)
 
-[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.15.1...2.15.2)
+[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.15.2...2.15.3)
 
 ## Highlights
 
- - Bug fixes! 
+ - bug fixes! 
 
 ## Commits
 
 InfusOnWoW (3):
 
-- Item Cooldowns: Don't compare against actual gcd duration
-- Options: Layout buttons on unminimize
-- Fix TimerTick running after a aura is hidden
+- Add VEHICLE_UPDATE to zone load options
+- Observer new restrictions on Chat Messages introduced in 8.2.5
+- BuffTrigger 2: Fix matchCountPerUnit for "Combine Units"
 
-mrbuds (1):
+Jaime Pillora (1):
 
-- Check if cooldown is ready after SPELLS_CHANGED fix #1745
+- fix github actions link (#1749)
+
+Stanzilla (1):
+
+- change packaging to now push the wowi version to the same project
+
+mrbuds (4):
+
+- Swing Timer trigger: handle change of attack speed fixes #1759
+- fix type error in CheckCombatLogFlags when showing fake state fixes #1751
+- use ScanUnitEvents callback for libclassiccasterino fixes #1752
+- Classic: cast trigger fix events registration
 
