@@ -97,6 +97,7 @@ function ML.Frame(addon, name, global, template, parent) -- to not shadow self b
   end
 
   f.Snap = function(w)
+    addon:GridUpdateHeader(w)
     w:setSizeToChildren()
     addon:SnapFrame(w)
   end
@@ -318,6 +319,39 @@ function ML.Frame(addon, name, global, template, parent) -- to not shadow self b
     return object
   end
 
+  f.PlaceGrid = function(self, object, x, y, optOffsetX, optOffsetY)
+    if not self.grid then
+      self.grid = {}
+    end
+    if not self.grid[x] then
+      self.grid[x] = {}
+    end
+    self.grid[x][y] = object
+    object.inGrid = {x, y}
+    if x == 1 then
+      if y == 1 then
+        object:Place(optOffsetX, optOffsetY)
+      else
+        self.numObjects = self.numObjects + 1
+        local prev = self.grid[1][y - 1]
+        local yO = (optOffsetY or 8) + (prev.extraHeight or 0)
+        object:placeBelow(prev, optOffsetX, yO)
+      end
+    else
+      self.numObjects = self.numObjects + 1
+      if y == 1 then
+        local prev = self.grid[x - 1][1]
+        object:placeRight(prev, optOffsetX, optOffsetY)
+      else
+        local leftAnchor = self.grid[x][1]
+        object:setPoint("LEFT", leftAnchor, "LEFT", optOffsetX, 0)
+        local topAnchor = self.grid[1][y]
+        local yAdjustment = addon:WidgetHeightAdjustment(object) - addon:WidgetHeightAdjustment(topAnchor)
+        object:setPoint("BOTTOM", topAnchor, "BOTTOM", 0, (optOffsetY or 0) + yAdjustment)
+      end
+    end
+  end
+
   -- To be used by the various factories/sub widget creation to add common methods to them
   -- (learned after coming up with this pattern on my own that that this seems to be
   -- called Mixins in blizzard code, though that doesn't cover forwarding or children tracking)
@@ -339,6 +373,10 @@ function ML.Frame(addon, name, global, template, parent) -- to not shadow self b
     end
     widget.PlaceLeft = function(...)
       widget.parent:PlaceLeft(...)
+      return widget
+    end
+    widget.PlaceGrid = function(...)
+      widget.parent:PlaceGrid(...)
       return widget
     end
     if not widget.Init then
@@ -581,16 +619,29 @@ function ML.Frame(addon, name, global, template, parent) -- to not shadow self b
       s.inset = inset
     end
     s.extraWidth = 24 -- scrollbar is outside
+    s.setScrollChild = function(p, c) -- set scroll child relationship and fix the frame level (classic)
+      if p.inset then
+        c:SetFrameLevel(p.inset:GetFrameLevel() + 1)
+      end
+      p:SetScrollChild(c)
+    end
+    s.addScrollChild = function(p, frameType) -- nil frameType for our container frame
+      local c
+      if frameType then
+        c = CreateFrame(frameType, nil, s)
+      else
+        c = addon:Frame(nil, nil, nil, p)
+      end
+      p:setScrollChild(c)
+      return c
+    end
     self:addMethods(s)
     return s
   end
 
   f.addScrollEditFrame = function(self, width, height, font, noInset)
     local s = self:addScrollingFrame(width, height, noInset)
-    local e = CreateFrame("EditBox", nil, s)
-    if s.inset then
-      e:SetFrameLevel(s.inset:GetFrameLevel() + 1)
-    end
+    local e = s:addScrollChild("EditBox")
     e:SetWidth(width)
     e:SetFontObject(font or f.defaultFont or ChatFontNormal)
     if self.defaultTextColor then
@@ -599,7 +650,6 @@ function ML.Frame(addon, name, global, template, parent) -- to not shadow self b
     e:SetMultiLine(true)
     --    e:GetRegions():SetNonSpaceWrap(false)
     --    e:GetRegions():SetWordWrap(false)
-    s:SetScrollChild(e)
     s.editBox = e
     return s
   end
@@ -668,6 +718,93 @@ function ML.Frame(addon, name, global, template, parent) -- to not shadow self b
     f:addText("Real UI:"):Place(50, 40)
   end
 
+  return f
+end
+
+function ML:Table(f, data)
+  for y, l in ipairs(data) do
+    for x, c in ipairs(l) do
+      self:Debug("adding at % %: %", x, y, c)
+      if type(c) == "string" then
+        c = f:addText(c)
+      end
+      c:PlaceGrid(x, y)
+    end
+  end
+end
+
+function ML:GetFullWidth(w)
+  return (w.GetStringWidth and w:GetStringWidth() or w:GetWidth()) + (w.extraWidth or 0)
+end
+
+-- todo: make up my mind about widget/frame/toplevel(addon) functions...
+
+function ML:GridUpdateHeader(f)
+  if not f.grid then
+    return
+  end
+  for x, c in ipairs(f.grid) do
+    local header, headerWidth
+    for y, l in ipairs(c) do
+      if y == 1 then
+        header = l
+        headerWidth = self:GetFullWidth(l)
+      else
+        local thisWidth = self:GetFullWidth(l)
+        if thisWidth > headerWidth then
+          self:Debug("Found wider at % % : %", x, y, thisWidth)
+          header.extraWidth = (header.extraWidth or 0) + (thisWidth - headerWidth)
+          headerWidth = thisWidth
+          header:SetWidth(thisWidth)
+        end
+      end
+    end
+  end
+end
+
+function ML:WidgetHeightAdjustment(object)
+  local yAdjustment = 0
+  local oType = object:GetObjectType()
+  if oType == "CheckButton" then
+    yAdjustment = -7
+  elseif oType == "Button" then
+    yAdjustment = -4
+  end
+  return yAdjustment
+end
+
+function ML:TableDemo(n, onlyText)
+  local f = self:StandardFrame("TableDemo", "Table Demo")
+  local s = f:addScrollingFrame()
+  s:Place(5, 14) -- because of inset
+  local g = s:addScrollChild()
+  local t = {{"Hdr1", "H2", "Header 3"}}
+  n = n or 20
+  for i = 1, n do
+    local t1 = tostring(i)
+    local t2 = self:RandomId(1, 6)
+    local t3 = self:RandomId(3, 15)
+    if not onlyText then
+      t1 = g:addButton(t1)
+      t2 = g:addCheckBox(t2)
+    end
+    table.insert(t, {t1, t2, t3})
+  end
+  self:Table(g, t)
+  f.grid = g.grid
+  f:Snap()
+  local cell = f.grid[2][3]
+  C_Timer.After(2, function()
+    local t = cell
+    if cell.Text then
+      t = cell.Text
+    end
+    t:SetText("updated now...")
+    if cell.Text then
+      cell.extraWidth = t:GetStringWidth()
+    end
+    f:Snap()
+  end)
   return f
 end
 
