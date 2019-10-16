@@ -2,13 +2,18 @@
 ## Title: Spellbook Abridged
 ## Notes: A Spellbook Filter to reduce clutter from multiple ranks of the same spell.
 ## Author: LBXZero
-## Version: 2.2
+## Version: 2.3
 
 SpellbookAbridged.xml
 
 # This Addon implements a means to filter the spells in SpellBookFrame.
 # The only filter so far is a Rank Filter that skips all ranks except 
 # for the last rank, which should be the highest rank available.
+#
+# To relocate the Rank Filter Button, hold CTRL+ Right Click, drag to new location, and then release buttons
+#
+# Slash Commands:
+#	"/sba" resets Rank Filter Button's location (will change if more functions are added)
 #
 # SpellBookFrame Functions modified
 #
@@ -25,6 +30,10 @@ SpellbookAbridged.xml
 # 
 #
 # Change Log
+#	Version 2.3
+#		-Rank Filter Button can be dragged to a new location (Hold CTRL+Right Click to move)
+#		-Fix compatibility issue with addon "Clique"
+#
 #	Version 2.2
 #		-Fixed problem with inability to cast spells directly from the spellbook
 #		-Fixed another Compatibility isse with other Addons where SpellTabInfo is collected before the Addon completes loading

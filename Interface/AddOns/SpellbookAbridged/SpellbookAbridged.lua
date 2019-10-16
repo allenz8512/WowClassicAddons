@@ -8,6 +8,14 @@ local AUTOCAST_STATE = 1073741824; -- 2^30 Spell Flag for Autocast's State (0 = 
 local IS_CASTABLE = 2147483648; -- 2^31 Assuming Spell Flag for Is Castable (0 = passive, 1 = castable);
 local FLAG_MASK = 16777215; -- Value for retrieving the SpellID from Pet Spells
 
+-- Slash command to reset Rank Filter Button Location
+SLASH_SBA1 = "/sba";
+SlashCmdList["SBA"] = function (msg, editbox)
+	RankFilterButton:ClearAllPoints();
+	RankFilterButton:SetPoint("TOPRIGHT", SpellBookFrame, "TOPRIGHT", -130, -40);
+end
+
+
 function SpellBookAbridged_OnLoad(self)
 	--- Ensure the SpellList is properly generated when starting
 	self:RegisterEvent("PLAYER_LOGIN");
@@ -35,10 +43,35 @@ function SpellBookAbridged_OnLoad(self)
 	SBA_SpellButton10 = CreateFrame("CheckButton", "SBA_SpellButton10", SpellButton10, "SBA_SpellButtonTemplate");
 	SBA_SpellButton11 = CreateFrame("CheckButton", "SBA_SpellButton11", SpellButton11, "SBA_SpellButtonTemplate");
 	SBA_SpellButton12 = CreateFrame("CheckButton", "SBA_SpellButton12", SpellButton12, "SBA_SpellButtonTemplate");
+	
+	-- Stuff for Rank Filter Button
+	self:RegisterForDrag("RightButton");
 end
 
-function SpellBookAbridged_OnEvent()
+function SpellBookAbridged_OnEvent(self, event, ...)
 	-- When Spells change or such, set flag so the next time SpellBookFrame_Update function is called.
+	-- Player_Login event is last event in loading, so this is a safe time to process some addon compatibility fixes
+	if (event == "PLAYER_LOGIN") then
+		-- Clique initializes on demand, so the Spellbook Buttons are not available after addons load.
+		-- Therefore, I must force Clique to initialize its CliqueSpellButtons so I can process a simple change.
+		if Clique then
+			CliqueConfig:OnShow();
+			CliqueConfig:OnHide();
+		end
+		-- Set Frame Level of any child of SpellBookFrame's SpellButtonXX 1 higher than SpellBookAbridged's Action button
+		for i = 1, 12 do
+			local parent = _G["SpellButton" .. i];
+			local SBAchild = parent.SBAchild;
+			local children = { parent:GetChildren() };
+			local test = SBAchild:GetName();
+			for _, child in ipairs(children) do
+				if (child:GetName() ~= test) then
+					child:SetFrameLevel(SBAchild:GetFrameLevel() +1);
+				end
+			end
+		end
+	end
+	
 	SpellsChanged = true;
 end
 
@@ -64,6 +97,7 @@ function SBA_SpellButton_OnLoad(self)
 	self:SetAttribute("checkselfcast", true); -- Check for SELFCAST modifier
 	self:SetAllPoints();
 	self.parent = parent;
+	parent.SBAchild = self;
 	self:RegisterForDrag("LeftButton");
 	self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
 end
@@ -102,6 +136,15 @@ function RankFilterButton_OnClick()
 	end
 end
 
+function RankFilterButton_OnDragStart(self)
+	if (IsControlKeyDown() and not(InCombatLockdown())) then
+		self:StartMoving();
+	end
+end
+
+function RankFilterButton_OnDragStop(self)
+	self:StopMovingOrSizing();
+end
 
 -- Functions to read Spell List
 
@@ -229,7 +272,7 @@ SpellButton_UpdateButton = function(self)
 	end
 
 	--- Define SecureActionButton as child
-	local _, child = self:GetChildren();  -- Grab 2nd child, the SecureActionButton
+	local child = self.SBAchild;  -- Grab SpellBook Abridged's child button
 	
 	-- If no spell, hide everything and return, or kiosk mode and future spell
 	if ( not texture or (strlen(texture) == 0) or (slotType == "FUTURESPELL" and IsKioskModeEnabled())) then
