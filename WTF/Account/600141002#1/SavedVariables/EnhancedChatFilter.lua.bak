@@ -2,19 +2,10 @@
 ecfDB = {
 	["enableDND"] = true,
 	["enableRepeat"] = true,
-	["addonQRF"] = false,
+	["repeatFilterGroup"] = true,
 	["addonRAF"] = false,
 	["enableMSF"] = false,
-	["repeatFilterGroup"] = true,
-	["blackWordFilterGroup"] = false,
-	["lootQualityMin"] = 0,
-	["lootCurrencyFilterList"] = {
-	},
-	["enableAggressive"] = false,
-	["enableCFA"] = true,
-	["lootItemFilterList"] = {
-	},
-	["lesserBlackWordThreshold"] = 3,
+	["addonQRF"] = false,
 	["blackWordList"] = {
 		["ADM"] = {
 		},
@@ -60,7 +51,7 @@ ecfDB = {
 		},
 		["神庙"] = {
 		},
-		["玛拉顿"] = {
+		["XS"] = {
 		},
 		["卖G"] = {
 		},
@@ -68,7 +59,7 @@ ecfDB = {
 		},
 		["小米"] = {
 		},
-		["MLD"] = {
+		["诺莫瑞根"] = {
 		},
 		["武器库"] = {
 		},
@@ -82,16 +73,25 @@ ecfDB = {
 		},
 		["矮子本"] = {
 		},
-		["诺莫瑞根"] = {
+		["MLD"] = {
 		},
 		["收G"] = {
 		},
 		["马拉顿"] = {
 		},
-		["XS"] = {
+		["玛拉顿"] = {
 		},
 		["矮子副本"] = {
 		},
 	},
+	["lootQualityMin"] = 0,
+	["lesserBlackWordThreshold"] = 3,
+	["enableAggressive"] = false,
+	["enableCFA"] = true,
+	["lootItemFilterList"] = {
+	},
+	["lootCurrencyFilterList"] = {
+	},
+	["blackWordFilterGroup"] = false,
 	["advancedConfig"] = false,
 }
