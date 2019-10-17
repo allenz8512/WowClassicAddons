@@ -1,0 +1,13 @@
+tag fc839e87bb42de106db5879dde3cfd321898400a 1.5-classic
+Author:	Justwait <justwait@method.gg>
+Date:	Sun Sep 8 18:26:28 2019 +0200
+
+1.5 tag
+
+commit 14b396bca5fb7fe7025142d9258daf55a2bc3095
+Author: Justwait <justwait@method.gg>
+Date:   Sun Sep 8 18:26:14 2019 +0200
+
+    - Allow animation speed to be changed
+    - Draw animations on a higher frame level than before
+
