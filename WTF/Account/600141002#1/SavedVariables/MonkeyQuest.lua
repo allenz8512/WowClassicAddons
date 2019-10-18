@@ -95,33 +95,33 @@ MonkeyQuestConfig = {
 		["m_iHighlightAlpha"] = 1,
 		["m_bShowQuestLevel"] = true,
 		["m_bShowDailyNumQuests"] = false,
-		["m_iFrameBottom"] = 216.888870239258,
+		["m_bHideTitleButtons"] = false,
 		["m_bHideCompletedQuests"] = true,
 		["m_iFrameLeft"] = 1469.11291503906,
-		["m_bColourDoneOrFailed"] = false,
-		["m_bLocked"] = true,
 		["m_iQuestPadding"] = 2,
+		["m_bLocked"] = true,
+		["m_bNoBorder"] = true,
 		["m_bNoHeaders"] = true,
-		["m_bShowNumQuests"] = true,
+		["m_bShowTooltipObjectives"] = true,
 		["m_strOverviewColour"] = "|cFF7F7F7F",
 		["m_iAlpha"] = 0,
 		["m_bColourSubObjectivesByProgress"] = true,
-		["m_strMidObjectiveColour"] = "|cFFFFFF00",
+		["m_iFrameWidth"] = 240,
 		["m_iFontHeight"] = 13,
 		["m_strQuestTitleColour"] = "|cFFFFFFFF",
 		["m_bWorkComplete"] = true,
 		["m_bHideQuestsEnabled"] = false,
-		["m_iFrameWidth"] = 240,
+		["m_strMidObjectiveColour"] = "|cFFFFFF00",
 		["m_bCrashBorder"] = true,
 		["m_strHeaderOpenColour"] = "|cFFBFBFFF",
 		["m_iFrameTop"] = 720.888977050781,
 		["m_bObjectives"] = false,
 		["m_bHideHeader"] = true,
-		["m_bShowTooltipObjectives"] = true,
-		["m_bNoBorder"] = true,
+		["m_bShowNumQuests"] = true,
+		["m_bColourDoneOrFailed"] = false,
 		["m_bShowQuestTextTooltip"] = false,
 		["m_bHideTitle"] = true,
-		["m_bHideTitleButtons"] = false,
+		["m_iFrameBottom"] = 216.888870239258,
 		["m_bGrowUp"] = false,
 	},
 	["碧玉矿洞|白银兽骑团员"] = {
@@ -141,47 +141,47 @@ MonkeyQuestConfig = {
 			["贝尔丁的补给 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["灰色洞穴 - false"] = {
+			["啤酒烤猪排 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["海格纳的弹药 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["丹莫罗 - true"] = {
-				["m_bChecked"] = true,
-			},
 			["烹饪 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["啤酒烤猪排 - false"] = {
+			["丹莫罗 - true"] = {
+				["m_bChecked"] = true,
+			},
+			["灰色洞穴 - false"] = {
 				["m_bChecked"] = true,
 			},
 		},
 	},
 	["碧玉矿洞|湊阿庫婭"] = {
 		["m_aQuestList"] = {
-			["我的兄弟，尼普希 - false"] = {
+			["狗头人的耳朵 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["卡尔·雷矛的订单 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["矿道地铁 - true"] = {
+			["荣誉学员 - false"] = {
 				["m_bChecked"] = true,
 			},
 			["洛克莫丹 - true"] = {
 				["m_bChecked"] = true,
 			},
-			["肮脏的爪子 - false"] = {
-				["m_bChecked"] = true,
-			},
 			["塞尔萨玛血肠 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["荣誉学员 - false"] = {
+			["肮脏的爪子 - false"] = {
 				["m_bChecked"] = true,
 			},
-			["狗头人的耳朵 - false"] = {
+			["矿道地铁 - true"] = {
+				["m_bChecked"] = true,
+			},
+			["我的兄弟，尼普希 - false"] = {
 				["m_bChecked"] = true,
 			},
 		},

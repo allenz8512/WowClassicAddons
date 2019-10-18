@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 404,
 	["lastSanitation"] = 3,
-	["session"] = 401,
 	["errors"] = {
 		{
 			["message"] = "...tails\\Libs\\DF\\Details-Framework-Classic\\dropdown.lua:962: attempt to index field 'dropdown' (a nil value)",
@@ -59,10 +59,18 @@ BugGrabberDB = {
 			["counter"] = 3,
 		}, -- [7]
 		{
-			["message"] = "Couldn't open Interface\\AddOns\\RecipeRadarClassic\\Libs\\LibTouristClassic-1.0-90228\\CallbackHandler-1.0-7\\CallbackHandler-1.0.xml",
-			["time"] = "2019/10/16 19:19:10",
-			["session"] = 401,
-			["counter"] = 65,
+			["message"] = "Interface\\AddOns\\WeakAuras\\WeakAuras-2.15.2.lua:742: attempt to index field '?' (a nil value)",
+			["time"] = "2019/10/18 00:26:59",
+			["locals"] = "(*temporary) = nil\n(*temporary) = \"\"\n(*temporary) = nil\n(*temporary) = \"attempt to index field '?' (a nil value)\"\nconditionChecksTimers = <table> {\n recheckTime = <table> {\n }\n recheckHandle = <table> {\n }\n}\nid = \"模版1\"\ncloneId = \"\"\nclones = <table> {\n 正义之怒 = <table> {\n }\n 庇护祝福 = <table> {\n }\n 圣印 = <table> {\n }\n 神圣之盾 = <table> {\n }\n 光环 = <table> {\n }\n 审判 = <table> {\n }\n 奉献 = <table> {\n }\n}\nWeakAuras = <table> {\n SetAuraVisibility = <function> defined @Interface\\AddOns\\WeakAuras\\BuffTrigger.lua:296\n ScheduleCooldownScan = <function> defined @Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:3062\n CheckItemSlotCooldowns = <function> defined @Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:2223\n OpenIconPicker = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:4734\n IsEnvironmentInitialized = <function> defined @Interface\\AddOns\\WeakAuras\\AuraEnvironment.lua:144\n form_types = <table> {\n }\n ConfirmDelete = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:1352\n SafeToNumber = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:6658\n tutorials = <table> {\n }\n pet_spec_types = <table> {\n }\n LayoutDisplayButtons = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:1564\n author_option_classes = <table> {\n }\n animations = <table> {\n }\n TenchInit = <function> defined @Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:2923\n regionTypes = <table> {\n }\n absorb_modes = <table> {\n }\n bufftrigger_2_combine_types = <table> {\n }\n miss_types = <table> {\n }\n faction_group = <table> {\n }\n OpenOptions = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:71\n autoeventend_types = <table> {\n }\n talent_types = <table> {\n }\n EJIcons = <table> {\n }\n SetModel = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:6630\n reset_swing_spells = <table> {\n }\n spec_types_all = <table> {\n }\n GetAuraTooltipInfo = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:5200\n FinishLoadUnload = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:2241\n subRegionTypes = <table> {\n }\n ToggleMinimap = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:127\n ConstructOptions = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:205\n FrameTick = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:528\n ResetCollapsed = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:4908\n BorderOptions = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:4125\n RegisterLoadEvents = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:2113\n GetFrameLevelFor = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:5320\n text_automatic_width = <table> {\n }\n custom_trigger_types = <table> {\n }\n RenameCollapsedData = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:5052\n LoadEncounterInitScripts = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:1870\n subRegionOptions = <table> {\n }\n TimerTick = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:474\n IsSpellInRange = <function> defined @Interface\\AddOns\\WeakAuras\\Prototypes.lua:23\n text_rotate_types = <table> {\n }\n MultipleDisplayTooltipDesc = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:193\n UpdateMouseoverTooltip = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:5147\n WatchSpellCooldown = <function> defined @Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:2316\n anim_color_types = <table> {\n }\n loaded = <table> {\n }\n AddOption = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:2641\n Convert = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:2468\n printPrefix = \"|cff9900ffWeakAuras:|r \"\n CheckCooldownReady = <function> defined @Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:2274\n IsDisplayPicked = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:4470\n L = <table> {\n }\n event_prototypes = <table> {\n }\n Ca",
+			["stack"] = "Interface\\AddOns\\WeakAuras\\WeakAuras-2.15.2.lua:742: in function `func'\n...ce\\AddOns\\Details\\Libs\\AceTimer-3.0\\AceTimer-3.0-17.lua:57: in function <...ce\\AddOns\\Details\\Libs\\AceTimer-3.0\\AceTimer-3.0.lua:50>",
+			["session"] = 402,
+			["counter"] = 6,
 		}, -- [8]
+		{
+			["message"] = "Couldn't open Interface\\AddOns\\RecipeRadarClassic\\Libs\\LibTouristClassic-1.0-90228\\CallbackHandler-1.0-7\\CallbackHandler-1.0.xml",
+			["session"] = 404,
+			["time"] = "2019/10/16 19:19:10",
+			["counter"] = 80,
+		}, -- [9]
 	},
 }

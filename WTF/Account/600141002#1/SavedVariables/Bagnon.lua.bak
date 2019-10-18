@@ -2,7 +2,8 @@
 Bagnon_Sets = {
 	["tackleColor"] = {
 	},
-	["tipCount"] = false,
+	["leatherColor"] = {
+	},
 	["engineerColor"] = {
 	},
 	["refrigeColor"] = {
@@ -13,17 +14,6 @@ Bagnon_Sets = {
 	["reagentColor"] = {
 	},
 	["gemColor"] = {
-	},
-	["enchantColor"] = {
-	},
-	["glowAlpha"] = 0.5,
-	["normalColor"] = {
-	},
-	["profiles"] = {
-	},
-	["mineColor"] = {
-	},
-	["leatherColor"] = {
 	},
 	["global"] = {
 		["inventory"] = {
@@ -63,17 +53,17 @@ Bagnon_Sets = {
 				["misc"] = false,
 				["trade"] = false,
 				["equip"] = false,
-				["contain"] = true,
 				["use"] = false,
+				["contain"] = true,
 			},
 			["y"] = 230.666641235352,
 			["x"] = -120.223510742188,
 			["borderColor"] = {
 			},
-			["itemScale"] = 1,
-			["scale"] = 1,
-			["alpha"] = 1,
 			["bagBreak"] = false,
+			["alpha"] = 1,
+			["scale"] = 1,
+			["itemScale"] = 1,
 		},
 		["vault"] = {
 			["rules"] = {
@@ -177,12 +167,22 @@ Bagnon_Sets = {
 			},
 			["color"] = {
 			},
-			["borderColor"] = {
-			},
+			["x"] = -494.111206054688,
 			["hiddenRules"] = {
 			},
-			["x"] = -494.111206054688,
+			["borderColor"] = {
+			},
 		},
+	},
+	["glowAlpha"] = 0.5,
+	["normalColor"] = {
+	},
+	["profiles"] = {
+	},
+	["mineColor"] = {
+	},
+	["tipCount"] = false,
+	["enchantColor"] = {
 	},
 	["herbColor"] = {
 	},

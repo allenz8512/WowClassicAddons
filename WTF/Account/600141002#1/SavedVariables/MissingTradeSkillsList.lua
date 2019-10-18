@@ -91,8 +91,6 @@ MTSL_PLAYERS = {
 					["NAME"] = "Engineering",
 					["SPELLID_HIGHEST_KNOWN_RANK"] = 12656,
 					["AMOUNT_MISSING"] = 78,
-					["SKILL_LEVEL"] = 285,
-					["AMOUNT_LEARNED"] = 93,
 					["LEARNED_SKILLS"] = {
 						12759, -- [1]
 						12895, -- [2]
@@ -188,6 +186,8 @@ MTSL_PLAYERS = {
 						4036, -- [92]
 						12656, -- [93]
 					},
+					["AMOUNT_LEARNED"] = 93,
+					["SKILL_LEVEL"] = 285,
 				},
 				["Mining"] = {
 					["MISSING_SKILLS"] = {
@@ -200,8 +200,6 @@ MTSL_PLAYERS = {
 					["NAME"] = "Mining",
 					["SPELLID_HIGHEST_KNOWN_RANK"] = 2575,
 					["AMOUNT_MISSING"] = 5,
-					["SKILL_LEVEL"] = 300,
-					["AMOUNT_LEARNED"] = 11,
 					["LEARNED_SKILLS"] = {
 						2657, -- [1]
 						3304, -- [2]
@@ -215,6 +213,8 @@ MTSL_PLAYERS = {
 						16153, -- [10]
 						2575, -- [11]
 					},
+					["AMOUNT_LEARNED"] = 11,
+					["SKILL_LEVEL"] = 300,
 				},
 				["First Aid"] = {
 					["MISSING_SKILLS"] = {
@@ -226,6 +226,8 @@ MTSL_PLAYERS = {
 					["NAME"] = "First Aid",
 					["SPELLID_HIGHEST_KNOWN_RANK"] = 10846,
 					["AMOUNT_MISSING"] = 4,
+					["SKILL_LEVEL"] = 300,
+					["AMOUNT_LEARNED"] = 13,
 					["LEARNED_SKILLS"] = {
 						3275, -- [1]
 						3276, -- [2]
@@ -241,8 +243,6 @@ MTSL_PLAYERS = {
 						3273, -- [12]
 						10846, -- [13]
 					},
-					["SKILL_LEVEL"] = 300,
-					["AMOUNT_LEARNED"] = 13,
 				},
 				["Cooking"] = {
 					["MISSING_SKILLS"] = {
@@ -274,8 +274,6 @@ MTSL_PLAYERS = {
 					["NAME"] = "Cooking",
 					["SPELLID_HIGHEST_KNOWN_RANK"] = 18260,
 					["AMOUNT_MISSING"] = 24,
-					["AMOUNT_LEARNED"] = 61,
-					["SKILL_LEVEL"] = 300,
 					["LEARNED_SKILLS"] = {
 						2538, -- [1]
 						7752, -- [2]
@@ -339,6 +337,8 @@ MTSL_PLAYERS = {
 						2550, -- [60]
 						18260, -- [61]
 					},
+					["SKILL_LEVEL"] = 300,
+					["AMOUNT_LEARNED"] = 61,
 				},
 			},
 		},

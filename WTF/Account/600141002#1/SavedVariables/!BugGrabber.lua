@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 402,
 	["lastSanitation"] = 3,
+	["session"] = 405,
 	["errors"] = {
 		{
 			["message"] = "...tails\\Libs\\DF\\Details-Framework-Classic\\dropdown.lua:962: attempt to index field 'dropdown' (a nil value)",
@@ -51,26 +51,34 @@ BugGrabberDB = {
 			["counter"] = 2,
 		}, -- [6]
 		{
-			["message"] = "Interface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:150: Wrong object type for function",
-			["time"] = "2019/10/16 23:12:15",
-			["locals"] = "(*temporary) = <table> {\n}\n(*temporary) = nil\n",
-			["stack"] = "[C]: in function `IsForbidden'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:150: in function `Atr_FrameIsAccessible'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:138: in function `Atr_IsAuctionatorFrame'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:77: in function <Interface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:76>\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:132: in function `Atr_LocalizeFrames'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:1178: in function `Atr_Init'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:917: in function `Atr_OnAddonLoaded'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:168: in function `Atr_EventHandler'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:364: in function `AuctionFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:1124: in function <Interface\\FrameXML\\UIParent.lua:658>",
-			["session"] = 399,
-			["counter"] = 3,
-		}, -- [7]
-		{
-			["message"] = "Couldn't open Interface\\AddOns\\RecipeRadarClassic\\Libs\\LibTouristClassic-1.0-90228\\CallbackHandler-1.0-7\\CallbackHandler-1.0.xml",
-			["session"] = 402,
-			["time"] = "2019/10/16 19:19:10",
-			["counter"] = 70,
-		}, -- [8]
-		{
 			["message"] = "Interface\\AddOns\\WeakAuras\\WeakAuras-2.15.2.lua:742: attempt to index field '?' (a nil value)",
 			["time"] = "2019/10/18 00:26:59",
 			["locals"] = "(*temporary) = nil\n(*temporary) = \"\"\n(*temporary) = nil\n(*temporary) = \"attempt to index field '?' (a nil value)\"\nconditionChecksTimers = <table> {\n recheckTime = <table> {\n }\n recheckHandle = <table> {\n }\n}\nid = \"模版1\"\ncloneId = \"\"\nclones = <table> {\n 正义之怒 = <table> {\n }\n 庇护祝福 = <table> {\n }\n 圣印 = <table> {\n }\n 神圣之盾 = <table> {\n }\n 光环 = <table> {\n }\n 审判 = <table> {\n }\n 奉献 = <table> {\n }\n}\nWeakAuras = <table> {\n SetAuraVisibility = <function> defined @Interface\\AddOns\\WeakAuras\\BuffTrigger.lua:296\n ScheduleCooldownScan = <function> defined @Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:3062\n CheckItemSlotCooldowns = <function> defined @Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:2223\n OpenIconPicker = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:4734\n IsEnvironmentInitialized = <function> defined @Interface\\AddOns\\WeakAuras\\AuraEnvironment.lua:144\n form_types = <table> {\n }\n ConfirmDelete = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:1352\n SafeToNumber = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:6658\n tutorials = <table> {\n }\n pet_spec_types = <table> {\n }\n LayoutDisplayButtons = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:1564\n author_option_classes = <table> {\n }\n animations = <table> {\n }\n TenchInit = <function> defined @Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:2923\n regionTypes = <table> {\n }\n absorb_modes = <table> {\n }\n bufftrigger_2_combine_types = <table> {\n }\n miss_types = <table> {\n }\n faction_group = <table> {\n }\n OpenOptions = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:71\n autoeventend_types = <table> {\n }\n talent_types = <table> {\n }\n EJIcons = <table> {\n }\n SetModel = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:6630\n reset_swing_spells = <table> {\n }\n spec_types_all = <table> {\n }\n GetAuraTooltipInfo = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:5200\n FinishLoadUnload = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:2241\n subRegionTypes = <table> {\n }\n ToggleMinimap = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:127\n ConstructOptions = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:205\n FrameTick = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:528\n ResetCollapsed = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:4908\n BorderOptions = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:4125\n RegisterLoadEvents = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:2113\n GetFrameLevelFor = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:5320\n text_automatic_width = <table> {\n }\n custom_trigger_types = <table> {\n }\n RenameCollapsedData = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:5052\n LoadEncounterInitScripts = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:1870\n subRegionOptions = <table> {\n }\n TimerTick = <function> defined @Interface\\AddOns\\WeakAuras\\RegionTypes\\RegionPrototype.lua:474\n IsSpellInRange = <function> defined @Interface\\AddOns\\WeakAuras\\Prototypes.lua:23\n text_rotate_types = <table> {\n }\n MultipleDisplayTooltipDesc = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:193\n UpdateMouseoverTooltip = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:5147\n WatchSpellCooldown = <function> defined @Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:2316\n anim_color_types = <table> {\n }\n loaded = <table> {\n }\n AddOption = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:2641\n Convert = <function> defined @Interface\\AddOns\\WeakAuras\\WeakAuras.lua:2468\n printPrefix = \"|cff9900ffWeakAuras:|r \"\n CheckCooldownReady = <function> defined @Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:2274\n IsDisplayPicked = <function> defined @Interface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:4470\n L = <table> {\n }\n event_prototypes = <table> {\n }\n Ca",
 			["stack"] = "Interface\\AddOns\\WeakAuras\\WeakAuras-2.15.2.lua:742: in function `func'\n...ce\\AddOns\\Details\\Libs\\AceTimer-3.0\\AceTimer-3.0-17.lua:57: in function <...ce\\AddOns\\Details\\Libs\\AceTimer-3.0\\AceTimer-3.0.lua:50>",
 			["session"] = 402,
 			["counter"] = 6,
+		}, -- [7]
+		{
+			["message"] = "Couldn't open Interface\\AddOns\\RecipeRadarClassic\\Libs\\LibTouristClassic-1.0-90228\\CallbackHandler-1.0-7\\CallbackHandler-1.0.xml",
+			["time"] = "2019/10/16 19:19:10",
+			["session"] = 405,
+			["counter"] = 85,
+		}, -- [8]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'Atlas' 尝试调用保护功能 'MultiBarBottomLeft:SetFrameStrata()'。",
+			["time"] = "2019/10/18 15:18:15",
+			["locals"] = "InCombatSkipped",
+			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `SetFrameStrata'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:379: in function `Atlas_Init'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:326: in function `Atlas_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\n...dOns\\Bagnon\\external\\Wildpants\\features\\commands.lua:73: in function <...dOns\\Bagnon\\external\\Wildpants\\features\\commands.lua:72>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2078: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:1884: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:1784: in function <Interface\\FrameXML\\UIParent.lua:1780>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2526: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2547: in function `ShowOptionsPanel'\n[string \"*:OnClick\"]:2: in function <[string \"*:OnClick\"]:1>",
+			["session"] = 405,
+			["counter"] = 1,
 		}, -- [9]
+		{
+			["message"] = "Interface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:150: Wrong object type for function",
+			["time"] = "2019/10/16 23:12:15",
+			["locals"] = "(*temporary) = <table> {\n}\n(*temporary) = nil\n",
+			["stack"] = "[C]: in function `IsForbidden'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:150: in function `Atr_FrameIsAccessible'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:138: in function `Atr_IsAuctionatorFrame'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:77: in function <Interface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:76>\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:132: in function `Atr_LocalizeFrames'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:1178: in function `Atr_Init'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:917: in function `Atr_OnAddonLoaded'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:168: in function `Atr_EventHandler'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:364: in function `AuctionFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:1124: in function <Interface\\FrameXML\\UIParent.lua:658>",
+			["session"] = 405,
+			["counter"] = 4,
+		}, -- [10]
 	},
 }

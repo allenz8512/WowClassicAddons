@@ -26,10 +26,10 @@ Quartz3DB = {
 			["profiles"] = {
 				["Default"] = {
 					["w"] = 190,
-					["y"] = 276.888732910156,
-					["font"] = "默认",
+					["y"] = 387.999816894531,
+					["x"] = 749.444641113281,
 					["border"] = "ElvUI GlowBorder",
-					["x"] = 753,
+					["font"] = "默认",
 					["texture"] = "ElvUI Norm",
 				},
 			},
@@ -48,8 +48,8 @@ Quartz3DB = {
 		["白银兽骑团员 - 碧玉矿洞"] = "Default",
 		["白银兽骑团委 - 碧玉矿洞"] = "Default",
 		["白银兽骑团友 - 碧玉矿洞"] = "Default",
-		["白銀諾艾爾 - 碧玉矿洞"] = "Default",
 		["白银兽骑团副 - 碧玉矿洞"] = "Default",
+		["白銀諾艾爾 - 碧玉矿洞"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
