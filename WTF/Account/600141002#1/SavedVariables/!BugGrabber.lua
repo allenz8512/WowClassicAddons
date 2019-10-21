@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 405,
+	["session"] = 417,
 	["errors"] = {
 		{
 			["message"] = "...tails\\Libs\\DF\\Details-Framework-Classic\\dropdown.lua:962: attempt to index field 'dropdown' (a nil value)",
@@ -19,21 +19,13 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [2]
 		{
-			["message"] = "Interface\\AddOns\\Questie\\Modules\\QuestieTooltips.lua:80: Usage: UnitGUID(\"unit\")",
-			["time"] = "2019/10/16 20:54:53",
-			["locals"] = "(*temporary) = nil\n",
-			["stack"] = "[C]: in function `UnitGUID'\nInterface\\AddOns\\Questie\\Modules\\QuestieTooltips.lua:80: in function <Interface\\AddOns\\Questie\\Modules\\QuestieTooltips.lua:75>\n[C]: ?\n[C]: ?\n[C]: ?\n[C]: in function `SetUnit'\nInterface\\FrameXML\\UnitFrame.lua:291: in function `UnitFrame_UpdateTooltip'\nInterface\\FrameXML\\UnitFrame.lua:277: in function <Interface\\FrameXML\\UnitFrame.lua:264>",
-			["session"] = 391,
-			["counter"] = 3,
-		}, -- [3]
-		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'SpellbookAbridged' 尝试调用保护功能 'SpellBookSpellIconsFrame:Show()'。",
 			["time"] = "2019/10/17 02:20:07",
 			["locals"] = "InCombatSkipped",
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `Show'\nInterface\\FrameXML\\SpellBookFrame.lua:148: in function `origSpellBookFrame_Update'\n...rface\\AddOns\\SpellbookAbridged\\SpellBookAbridged-2.3.lua:243: in function <...rface\\AddOns\\SpellbookAbridged\\SpellBookAbridged.lua:235>\n[C]: in function `SpellBookFrame_Update'\nInterface\\FrameXML\\SpellBookFrame.lua:97: in function <Interface\\FrameXML\\SpellBookFrame.lua:96>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2078: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:1923: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:1784: in function <Interface\\FrameXML\\UIParent.lua:1780>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2526: in function `ShowUIPanel'\nInterface\\FrameXML\\SpellBookFrame.lua:46: in function `ToggleSpellBook'\n[string \"TOGGLESPELLBOOK\"]:1: in function <[string \"TOGGLESPELLBOOK\"]:1>",
 			["session"] = 396,
 			["counter"] = 1,
-		}, -- [4]
+		}, -- [3]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'CensusPlusClassic' 尝试调用保护功能 'MultiBarBottomLeft:SetShown()'。",
 			["time"] = "2019/10/17 21:17:11",
@@ -41,7 +33,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `SetShown'\nInterface\\FrameXML\\MultiActionBars.lua:36: in function <Interface\\FrameXML\\MultiActionBars.lua:34>\nInterface\\FrameXML\\MultiActionBars.lua:52: in function `MultiActionBar_Update'\nInterface\\FrameXML\\InterfaceOptionsPanels.lua:1175: in function `setFunc'\nInterface\\FrameXML\\InterfaceOptionsPanels.lua:87: in function <Interface\\FrameXML\\InterfaceOptionsPanels.lua:83>\n[C]: in function `pcall'\nInterface\\FrameXML\\InterfaceOptionsFrame.lua:217: in function <Interface\\FrameXML\\InterfaceOptionsFrame.lua:216>\n[C]: in function `securecall'\nInterface\\FrameXML\\InterfaceOptionsFrame.lua:252: in function <Interface\\FrameXML\\InterfaceOptionsFrame.lua:248>",
 			["session"] = 399,
 			["counter"] = 1,
-		}, -- [5]
+		}, -- [4]
 		{
 			["message"] = "Interface\\AddOns\\Details\\classes\\classe_damage.lua:1821: error - no spell id for DTBS friendly fire 清算",
 			["time"] = "2019/10/17 21:34:46",
@@ -49,7 +41,7 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `error'\nInterface\\AddOns\\Details\\classes\\classe_damage.lua:1821: in function <Interface\\AddOns\\Details\\classes\\classe_damage.lua:1568>\n(tail call): ?\n(tail call): ?\n...nterface\\AddOns\\Details\\classes\\classe_instancia.lua:2388: in function `TrocaTabela'\nInterface\\AddOns\\Details\\gumps\\switch-切换.lua:258: in function <Interface\\AddOns\\Details\\gumps\\switch.lua:249>",
 			["session"] = 399,
 			["counter"] = 2,
-		}, -- [6]
+		}, -- [5]
 		{
 			["message"] = "Interface\\AddOns\\WeakAuras\\WeakAuras-2.15.2.lua:742: attempt to index field '?' (a nil value)",
 			["time"] = "2019/10/18 00:26:59",
@@ -57,13 +49,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\WeakAuras\\WeakAuras-2.15.2.lua:742: in function `func'\n...ce\\AddOns\\Details\\Libs\\AceTimer-3.0\\AceTimer-3.0-17.lua:57: in function <...ce\\AddOns\\Details\\Libs\\AceTimer-3.0\\AceTimer-3.0.lua:50>",
 			["session"] = 402,
 			["counter"] = 6,
-		}, -- [7]
-		{
-			["message"] = "Couldn't open Interface\\AddOns\\RecipeRadarClassic\\Libs\\LibTouristClassic-1.0-90228\\CallbackHandler-1.0-7\\CallbackHandler-1.0.xml",
-			["time"] = "2019/10/16 19:19:10",
-			["session"] = 405,
-			["counter"] = 85,
-		}, -- [8]
+		}, -- [6]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'Atlas' 尝试调用保护功能 'MultiBarBottomLeft:SetFrameStrata()'。",
 			["time"] = "2019/10/18 15:18:15",
@@ -71,7 +57,7 @@ BugGrabberDB = {
 			["stack"] = "Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[C]: in function `SetFrameStrata'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:379: in function `Atlas_Init'\nInterface\\AddOns\\Atlas\\Atlas-1.0(1.13.0).lua:326: in function `Atlas_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\n...dOns\\Bagnon\\external\\Wildpants\\features\\commands.lua:73: in function <...dOns\\Bagnon\\external\\Wildpants\\features\\commands.lua:72>\n[C]: in function `Show'\nInterface\\FrameXML\\UIParent.lua:2078: in function `SetUIPanel'\nInterface\\FrameXML\\UIParent.lua:1884: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:1784: in function <Interface\\FrameXML\\UIParent.lua:1780>\n[C]: in function `SetAttribute'\nInterface\\FrameXML\\UIParent.lua:2526: in function `ShowUIPanel'\nInterface\\FrameXML\\UIParent.lua:2547: in function `ShowOptionsPanel'\n[string \"*:OnClick\"]:2: in function <[string \"*:OnClick\"]:1>",
 			["session"] = 405,
 			["counter"] = 1,
-		}, -- [9]
+		}, -- [7]
 		{
 			["message"] = "Interface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:150: Wrong object type for function",
 			["time"] = "2019/10/16 23:12:15",
@@ -79,6 +65,36 @@ BugGrabberDB = {
 			["stack"] = "[C]: in function `IsForbidden'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:150: in function `Atr_FrameIsAccessible'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:138: in function `Atr_IsAuctionatorFrame'\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:77: in function <Interface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:76>\nInterface\\AddOns\\Auctionator\\AuctionatorLocalize.lua:132: in function `Atr_LocalizeFrames'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:1178: in function `Atr_Init'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:917: in function `Atr_OnAddonLoaded'\nInterface\\AddOns\\Auctionator\\Auctionator-8.1.0.lua:168: in function `Atr_EventHandler'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n[C]: ?\n[C]: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:353: in function `UIParentLoadAddOn'\nInterface\\FrameXML\\UIParent.lua:364: in function `AuctionFrame_LoadUI'\nInterface\\FrameXML\\UIParent.lua:1124: in function <Interface\\FrameXML\\UIParent.lua:658>",
 			["session"] = 405,
 			["counter"] = 4,
+		}, -- [8]
+		{
+			["message"] = "Interface\\AddOns\\SortBags\\SortBags.lua:432: attempt to compare number with nil",
+			["time"] = "2019/10/18 19:11:12",
+			["locals"] = "container = 2\nposition = 4\nlink = \"|cffffffff|Hitem:17033::::::::59:::::::|h[]|h|r\"\n_ = 13\n_ = 25\nitemID = 17033\nenchantID = \"\"\nsuffixID = \"\"\nuniqueID = \"\"\n_ = nil\n_ = nil\nquality = nil\n_ = nil\n_ = nil\n_ = nil\n_ = nil\nstack = nil\nslot = nil\n_ = nil\n_ = nil\nclassId = nil\nsubClassId = nil\ncharges = 1\nusable = nil\nsoulbound = nil\nquest = nil\nconjured = nil\nsortKey = <table> {\n}\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to compare number with nil\"\nMOUNTS = <table> {\n 19030 = true\n 18778 = true\n 21324 = true\n 18786 = true\n 18788 = true\n 18790 = true\n 18794 = true\n 18796 = true\n 18798 = true\n 5655 = true\n 5656 = true\n 8586 = true\n 8588 = true\n 8591 = true\n 8592 = true\n 8595 = true\n 5665 = true\n 19872 = true\n 5668 = true\n 1132 = true\n 18241 = true\n 18243 = true\n 18245 = true\n 5864 = true\n 19902 = true\n 12302 = true\n 12303 = true\n 18767 = true\n 13322 = true\n 18773 = true\n 18902 = true\n 18777 = true\n 13327 = true\n 8629 = true\n 13329 = true\n 18785 = true\n 18787 = true\n 18789 = true\n 5873 = true\n 18793 = true\n 18795 = true\n 18797 = true\n 2414 = true\n 13086 = true\n 12326 = true\n 12330 = true\n 21176 = true\n 21323 = true\n 21321 = true\n 21218 = true\n 13335 = true\n 13328 = true\n 18791 = true\n 13334 = true\n 13333 = true\n 13332 = true\n 13331 = true\n 13317 = true\n 5872 = true\n 12351 = true\n 8631 = true\n 12353 = true\n 12354 = true\n 15292 = true\n 15277 = true\n 15293 = true\n 8632 = true\n 18247 = true\n 18242 = true\n 18244 = true\n 18246 = true\n 18248 = true\n 13326 = true\n 8563 = true\n 13321 = true\n 8628 = true\n 18766 = true\n 15290 = true\n 2411 = true\n 18772 = true\n 18774 = true\n 18776 = true\n}\nSPECIAL = <table> {\n 5462 = true\n 17117 = true\n 11511 = true\n 13289 = true\n 13347 = true\n 17696 = true\n}\nKEYS = <table> {\n 13544 = true\n 20402 = true\n 9240 = true\n 12324 = true\n 12384 = true\n 17191 = true\n 16309 = true\n}\nTOOLS = <table> {\n 6218 = true\n 15846 = true\n 7005 = true\n 19727 = true\n 6339 = true\n 6219 = true\n 5956 = true\n 11145 = true\n 11130 = true\n 16207 = true\n 6256 = true\n 6367 = true\n 12709 = true\n 9149 = true\n 6365 = true\n 10498 = true\n 2901 = true\n}\nENCHANTING_MATERIALS = <table> {\n 10940 = true\n 11134 = true\n 16203 = true\n 11135 = true\n 11174 = true\n 16204 = true\n 11082 = true\n 11137 = true\n 11083 = true\n 10998 = true\n 20725 = true\n 11138 = true\n 11084 = true\n 11139 = true\n 11178 = true\n 10938 = true\n 14344 = true\n 14343 = true\n 11177 = true\n 10939 = true\n 10978 = true\n 11175 = true\n 16202 = true\n 11176 = true\n}\nHERBS = <table> {\n 13467 = true\n 13465 = true\n 13466 = true\n 3369 = true\n 13468 = true\n 13464 = true\n 3355 = true\n 2447 = true\n 2449 = true\n 8153 = true\n 2453 = true\n 3819 = true\n 3356 = true\n 3358 = true\n 8836 = true\n 13463 = true\n 3821 = true\n 765 = true\n 8839 = true\n 8845 = true\n 8831 = true\n 4625 = true\n 8838 = true\n 8846 = true\n 2450 = true\n 2452 = true\n 3818 = true\n 3820 = true\n 3357 = true\n 785 = true\n}\nitemStacks = <table> {\n 14047::::1:0 = 20\n 11040::::1:0 = 20\n 2672::::1:0 = 10\n}\nitemSortKeys = <table> {\n 14047::::1:0 = <table> {\n }\n 11040::::1:0 = <table> {\n }\n 2672::::1:0 = <table> {\n }\n}\nCLASSES = <table> {\n 1 = <table> {\n }\n 2 = <table> {\n }\n 3 = <table> {\n }\n 4 = <table> {\n }\n 5 = <table> {\n }\n}\nitemClasses = <table> {\n}\n",
+			["stack"] = "Interface\\AddOns\\SortBags\\SortBags.lua:432: in function `Item'\nInterface\\AddOns\\SortBags\\SortBags.lua:302: in function `Initialize'\nInterface\\AddOns\\SortBags\\SortBags.lua:130: in function `Start'\nInterface\\AddOns\\SortBags\\SortBags.lua:10: in function `SortBags'\n...\\Bagnon\\external\\Wildpants\\components\\sortButton.lua:37: in function <...\\Bagnon\\external\\Wildpants\\components\\sortButton.lua:26>",
+			["session"] = 406,
+			["counter"] = 2,
+		}, -- [9]
+		{
+			["message"] = "Interface\\AddOns\\MBB\\MBB-4.0.lua:602: LibDBIcon10_AHDBminimapButton:SetPoint(): trying to anchor to itself",
+			["time"] = "2019/10/21 14:49:05",
+			["locals"] = "(*temporary) = LibDBIcon10_AHDBminimapButton {\n 0 = <userdata>\n fadeOut = <unnamed> {\n }\n ohide = <function> defined =[C]:-1\n isMouseDown = false\n PixelSnapDisabled = true\n oclick = <function> defined @Interface\\AddOns\\AtlasLootClassic\\Libs\\LibDBIcon-1.0\\LibDBIcon-1.0.lua:142\n opoint = <table> {\n }\n db = <table> {\n }\n icon = <unnamed> {\n }\n Hide = <function> defined @Interface\\AddOns\\MBB\\MBB.lua:380\n ClearAllPoints = <function> defined @Interface\\AddOns\\MBB\\MBB.lua:492\n dataObject = <table> {\n }\n parentisvisible = true\n oenter = <function> defined @Interface\\AddOns\\AtlasLootClassic\\Libs\\LibDBIcon-1.0\\LibDBIcon-1.0.lua:60\n oleave = <function> defined @Interface\\AddOns\\AtlasLootClassic\\Libs\\LibDBIcon-1.0\\LibDBIcon-1.0.lua:81\n Show = <function> defined @Interface\\AddOns\\MBB\\MBB.lua:363\n oshow = <function> defined =[C]:-1\n SetPoint = <function> defined @Interface\\AddOns\\MBB\\MBB.lua:494\n osize = <table> {\n }\n osetpoint = <function> defined =[C]:-1\n oclearallpoints = <function> defined =[C]:-1\n isvisible = true\n}\n(*temporary) = \"RIGHT\"\n(*temporary) = LibDBIcon10_AHDBminimapButton {\n 0 = <userdata>\n fadeOut = <unnamed> {\n }\n ohide = <function> defined =[C]:-1\n isMouseDown = false\n PixelSnapDisabled = true\n oclick = <function> defined @Interface\\AddOns\\AtlasLootClassic\\Libs\\LibDBIcon-1.0\\LibDBIcon-1.0.lua:142\n opoint = <table> {\n }\n db = <table> {\n }\n icon = <unnamed> {\n }\n Hide = <function> defined @Interface\\AddOns\\MBB\\MBB.lua:380\n ClearAllPoints = <function> defined @Interface\\AddOns\\MBB\\MBB.lua:492\n dataObject = <table> {\n }\n parentisvisible = true\n oenter = <function> defined @Interface\\AddOns\\AtlasLootClassic\\Libs\\LibDBIcon-1.0\\LibDBIcon-1.0.lua:60\n oleave = <function> defined @Interface\\AddOns\\AtlasLootClassic\\Libs\\LibDBIcon-1.0\\LibDBIcon-1.0.lua:81\n Show = <function> defined @Interface\\AddOns\\MBB\\MBB.lua:363\n oshow = <function> defined =[C]:-1\n SetPoint = <function> defined @Interface\\AddOns\\MBB\\MBB.lua:494\n osize = <table> {\n }\n osetpoint = <function> defined =[C]:-1\n oclearallpoints = <function> defined =[C]:-1\n isvisible = true\n}\n(*temporary) = \"LEFT\"\n(*temporary) = 0\n(*temporary) = 0\n",
+			["stack"] = "[C]: in function `osetpoint'\nInterface\\AddOns\\MBB\\MBB-4.0.lua:602: in function `MBB_SetPositions'\nInterface\\AddOns\\MBB\\MBB-4.0.lua:725: in function `MBB_OnUpdate'\n[string \"*:OnUpdate\"]:1: in function <[string \"*:OnUpdate\"]:1>",
+			["session"] = 413,
+			["counter"] = 2,
 		}, -- [10]
+		{
+			["message"] = "Interface\\AddOns\\Questie\\Modules\\QuestieTooltips.lua:80: Usage: UnitGUID(\"unit\")",
+			["time"] = "2019/10/16 20:54:53",
+			["locals"] = "(*temporary) = nil\n",
+			["stack"] = "[C]: in function `UnitGUID'\nInterface\\AddOns\\Questie\\Modules\\QuestieTooltips.lua:80: in function <Interface\\AddOns\\Questie\\Modules\\QuestieTooltips.lua:75>\n[C]: ?\n[C]: ?\n[C]: ?\n[C]: in function `SetUnit'\nInterface\\FrameXML\\UnitFrame.lua:291: in function `UnitFrame_UpdateTooltip'\nInterface\\FrameXML\\UnitFrame.lua:277: in function <Interface\\FrameXML\\UnitFrame.lua:264>",
+			["session"] = 414,
+			["counter"] = 4,
+		}, -- [11]
+		{
+			["message"] = "Couldn't open Interface\\AddOns\\RecipeRadarClassic\\Libs\\LibTouristClassic-1.0-90228\\CallbackHandler-1.0-7\\CallbackHandler-1.0.xml",
+			["time"] = "2019/10/16 19:19:10",
+			["session"] = 417,
+			["counter"] = 145,
+		}, -- [12]
 	},
 }

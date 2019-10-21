@@ -13,7 +13,7 @@ ItemTooltipIconsConfig = {
 			["showProfs"] = true,
 			["profFlags"] = 255,
 			["includeVendor"] = false,
-			["questFlags"] = 2097151,
+			["questFlags"] = 1048575,
 			["showQuests"] = true,
 			["iconSize"] = 16,
 		},
@@ -26,6 +26,14 @@ ItemTooltipIconsConfig = {
 			["iconSize"] = 16,
 		},
 		["白银兽骑团员"] = {
+			["showProfs"] = true,
+			["profFlags"] = 255,
+			["includeVendor"] = false,
+			["questFlags"] = 2097151,
+			["showQuests"] = true,
+			["iconSize"] = 16,
+		},
+		["紫咲詩音"] = {
 			["showProfs"] = true,
 			["profFlags"] = 255,
 			["includeVendor"] = false,

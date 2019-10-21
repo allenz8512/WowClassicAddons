@@ -111,12 +111,24 @@ WeakAurasSaved = {
 			["anchorFrameType"] = "SCREEN",
 			["load"] = {
 				["use_class"] = true,
-				["spec"] = {
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "PALADIN",
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -127,20 +139,11 @@ WeakAurasSaved = {
 			},
 			["alpha"] = 0.7,
 			["glowFrequency"] = 0.25,
-			["progressPrecision"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["glowType"] = "Pixel",
-			["glowThickness"] = 1,
 			["keepAspectRatio"] = false,
 			["authorOptions"] = {
 			},
-			["glowLines"] = 8,
-			["regionType"] = "icon",
+			["glowType"] = "Pixel",
+			["glowThickness"] = 1,
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -155,6 +158,10 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
+			["glowLength"] = 4,
+			["glowLines"] = 8,
+			["regionType"] = "icon",
+			["useglowColor"] = false,
 			["uid"] = "1qpyQAHUbcD",
 			["xOffset"] = 188,
 			["glowYOffset"] = 0,
@@ -164,14 +171,19 @@ WeakAurasSaved = {
 			["useGlowColor"] = true,
 			["glowScale"] = 1,
 			["id"] = "正义之怒",
-			["useglowColor"] = false,
+			["progressPrecision"] = 0,
 			["frameStrata"] = 1,
 			["width"] = 24,
-			["icon"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["config"] = {
 			},
 			["inverse"] = false,
-			["glowLength"] = 4,
+			["icon"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -204,7 +216,7 @@ WeakAurasSaved = {
 						["trigger"] = 1,
 						["op"] = "<=",
 						["variable"] = "expirationTime",
-						["value"] = "30",
+						["value"] = "60",
 					},
 					["changes"] = {
 						{
@@ -218,7 +230,7 @@ WeakAurasSaved = {
 						}, -- [1]
 						{
 							["value"] = true,
-							["property"] = "sub.2.text_visible",
+							["property"] = "sub.1.text_visible",
 						}, -- [2]
 					},
 				}, -- [3]
@@ -366,39 +378,20 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["height"] = 24,
+			["keepAspectRatio"] = false,
 			["glowLines"] = 8,
-			["load"] = {
-				["use_class"] = true,
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "PALADIN",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
 			["alpha"] = 0.7,
 			["glowFrequency"] = 0.25,
-			["glowLength"] = 10,
-			["keepAspectRatio"] = false,
-			["glowType"] = "buttonOverlay",
-			["glowThickness"] = 3,
-			["authorOptions"] = {
-			},
+			["xOffset"] = 0,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
-			["xOffset"] = 0,
-			["regionType"] = "icon",
+			["glowType"] = "buttonOverlay",
+			["glowThickness"] = 3,
+			["glowLength"] = 10,
 			["actions"] = {
 				["start"] = {
 				},
@@ -407,8 +400,39 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
-			["uid"] = "0)RvRmFy0Ut",
 			["useglowColor"] = false,
+			["regionType"] = "icon",
+			["load"] = {
+				["use_class"] = true,
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["uid"] = "0)RvRmFy0Ut",
+			["authorOptions"] = {
+			},
 			["glowYOffset"] = 0,
 			["zoom"] = 0,
 			["auto"] = true,
@@ -633,11 +657,25 @@ WeakAurasSaved = {
 			},
 			["height"] = 20,
 			["load"] = {
-				["spec"] = {
+				["use_class"] = true,
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -874,20 +912,28 @@ WeakAurasSaved = {
 				}, -- [3]
 			},
 			["height"] = 48,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["authorOptions"] = {
 			},
 			["load"] = {
 				["use_class"] = true,
-				["spec"] = {
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "PALADIN",
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -898,20 +944,16 @@ WeakAurasSaved = {
 			},
 			["frameStrata"] = 1,
 			["glowFrequency"] = 0.25,
-			["glowXOffset"] = 0,
-			["authorOptions"] = {
-			},
-			["glowType"] = "Pixel",
-			["glowThickness"] = 3,
-			["glowLines"] = 8,
-			["glowLength"] = 10,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
+			["glowLength"] = 10,
+			["glowType"] = "Pixel",
+			["glowThickness"] = 3,
+			["glowXOffset"] = 0,
 			["actions"] = {
 				["start"] = {
 				},
@@ -920,9 +962,17 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
+			["useglowColor"] = false,
+			["regionType"] = "icon",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["config"] = {
 			},
-			["useglowColor"] = false,
+			["glowLines"] = 8,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
 			["useGlowColor"] = true,
@@ -1159,11 +1209,25 @@ WeakAurasSaved = {
 			},
 			["height"] = 64,
 			["load"] = {
-				["spec"] = {
+				["use_class"] = true,
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -1173,16 +1237,7 @@ WeakAurasSaved = {
 				},
 			},
 			["glowFrequency"] = 0.25,
-			["progressPrecision"] = 0,
-			["zoom"] = 0,
-			["glowType"] = "buttonOverlay",
-			["glowThickness"] = 1,
-			["uid"] = "F2IpVGf25gM",
-			["xOffset"] = 240,
-			["keepAspectRatio"] = false,
-			["regionType"] = "icon",
 			["width"] = 64,
-			["glowLines"] = 8,
 			["actions"] = {
 				["start"] = {
 				},
@@ -1191,9 +1246,19 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["glowType"] = "buttonOverlay",
+			["glowThickness"] = 1,
+			["xOffset"] = 240,
+			["useglowColor"] = false,
+			["glowLines"] = 8,
+			["regionType"] = "icon",
 			["glowLength"] = 10,
-			["glowYOffset"] = 0,
+			["authorOptions"] = {
+			},
+			["progressPrecision"] = 0,
+			["uid"] = "F2IpVGf25gM",
 			["alpha"] = 0.7,
+			["zoom"] = 0,
 			["cooldownTextDisabled"] = false,
 			["auto"] = true,
 			["glowScale"] = 1,
@@ -1201,12 +1266,11 @@ WeakAurasSaved = {
 			["selfPoint"] = "CENTER",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["authorOptions"] = {
-			},
+			["keepAspectRatio"] = false,
 			["config"] = {
 			},
 			["inverse"] = false,
-			["useglowColor"] = false,
+			["glowYOffset"] = 0,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -1350,14 +1414,30 @@ WeakAurasSaved = {
 			},
 			["height"] = 24,
 			["width"] = 24,
+			["glowLines"] = 8,
+			["frameStrata"] = 1,
+			["glowFrequency"] = 0.25,
+			["glowXOffset"] = 0,
 			["load"] = {
 				["use_class"] = true,
-				["spec"] = {
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "PALADIN",
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -1366,17 +1446,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["frameStrata"] = 1,
-			["glowFrequency"] = 0.25,
-			["parent"] = "Protection Paladin",
-			["icon"] = true,
 			["glowType"] = "buttonOverlay",
 			["glowThickness"] = 3,
-			["glowXOffset"] = 0,
-			["glowLines"] = 8,
+			["progressPrecision"] = 0,
+			["authorOptions"] = {
+			},
 			["xOffset"] = -236,
 			["regionType"] = "icon",
-			["progressPrecision"] = 0,
+			["useglowColor"] = false,
 			["config"] = {
 			},
 			["color"] = {
@@ -1392,14 +1469,13 @@ WeakAurasSaved = {
 			["auto"] = true,
 			["glowScale"] = 1,
 			["id"] = "保护祝福",
-			["useglowColor"] = false,
+			["parent"] = "Protection Paladin",
 			["alpha"] = 0.7,
 			["glowYOffset"] = 0,
-			["selfPoint"] = "CENTER",
+			["icon"] = true,
 			["uid"] = "A6ZaLyqLVi8",
 			["inverse"] = false,
-			["authorOptions"] = {
-			},
+			["selfPoint"] = "CENTER",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -1499,13 +1575,12 @@ WeakAurasSaved = {
 				"圣疗术 2", -- [18]
 			},
 			["borderBackdrop"] = "Blizzard Tooltip",
-			["authorOptions"] = {
-			},
+			["scale"] = 1,
 			["border"] = false,
-			["yOffset"] = -190,
-			["anchorPoint"] = "CENTER",
+			["borderEdge"] = "Square Full White",
+			["regionType"] = "group",
 			["borderSize"] = 2,
-			["uid"] = "BqpJOUGfRf)",
+			["xOffset"] = 24,
 			["borderColor"] = {
 				0, -- [1]
 				0, -- [2]
@@ -1552,18 +1627,18 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["scale"] = 1,
-			["borderOffset"] = 4,
-			["borderEdge"] = "Square Full White",
+			["yOffset"] = -190,
+			["internalVersion"] = 24,
+			["anchorPoint"] = "CENTER",
 			["selfPoint"] = "BOTTOMLEFT",
 			["id"] = "Protection Paladin",
-			["regionType"] = "group",
+			["borderOffset"] = 4,
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["internalVersion"] = 24,
+			["borderInset"] = 1,
 			["config"] = {
 			},
-			["borderInset"] = 1,
+			["uid"] = "BqpJOUGfRf)",
 			["subRegions"] = {
 			},
 			["conditions"] = {
@@ -1582,7 +1657,8 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["xOffset"] = 24,
+			["authorOptions"] = {
+			},
 		},
 		["审判"] = {
 			["glow"] = true,
@@ -1680,12 +1756,24 @@ WeakAurasSaved = {
 			["anchorFrameType"] = "SCREEN",
 			["load"] = {
 				["use_class"] = true,
-				["spec"] = {
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "PALADIN",
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -1696,20 +1784,11 @@ WeakAurasSaved = {
 			},
 			["alpha"] = 0.7,
 			["glowFrequency"] = 0.25,
-			["progressPrecision"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["glowType"] = "buttonOverlay",
-			["glowThickness"] = 3,
 			["keepAspectRatio"] = false,
 			["authorOptions"] = {
 			},
-			["glowLines"] = 8,
-			["regionType"] = "icon",
+			["glowType"] = "buttonOverlay",
+			["glowThickness"] = 3,
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -1724,6 +1803,10 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
+			["glowLength"] = 10,
+			["glowLines"] = 8,
+			["regionType"] = "icon",
+			["useglowColor"] = false,
 			["uid"] = "L1EidKV08j)",
 			["xOffset"] = -168,
 			["glowYOffset"] = 0,
@@ -1733,14 +1816,19 @@ WeakAurasSaved = {
 			["useGlowColor"] = false,
 			["glowScale"] = 1,
 			["id"] = "审判",
-			["useglowColor"] = false,
+			["progressPrecision"] = 0,
 			["frameStrata"] = 1,
 			["width"] = 96,
-			["icon"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["config"] = {
 			},
 			["inverse"] = false,
-			["glowLength"] = 10,
+			["icon"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -1906,20 +1994,30 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["height"] = 96,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["glowXOffset"] = 0,
+			["glowLines"] = 8,
+			["frameStrata"] = 1,
+			["glowFrequency"] = 0.25,
 			["load"] = {
 				["use_class"] = true,
-				["spec"] = {
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "PALADIN",
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -1928,21 +2026,23 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["frameStrata"] = 1,
-			["glowFrequency"] = 0.25,
-			["authorOptions"] = {
-			},
-			["glowXOffset"] = 0,
+			["progressPrecision"] = 0,
 			["glowType"] = "buttonOverlay",
 			["glowThickness"] = 3,
-			["parent"] = "Protection Paladin",
-			["progressPrecision"] = 0,
-			["glowLines"] = 8,
-			["regionType"] = "icon",
+			["authorOptions"] = {
+			},
 			["xOffset"] = 120,
+			["icon"] = true,
+			["regionType"] = "icon",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["config"] = {
 			},
-			["icon"] = true,
+			["parent"] = "Protection Paladin",
 			["width"] = 96,
 			["cooldownTextDisabled"] = false,
 			["useGlowColor"] = false,
@@ -2122,15 +2222,39 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["height"] = 24,
+			["authorOptions"] = {
+			},
 			["glowLines"] = 8,
+			["alpha"] = 0.7,
+			["glowFrequency"] = 0.25,
+			["progressPrecision"] = 0,
+			["keepAspectRatio"] = false,
+			["glowType"] = "buttonOverlay",
+			["glowThickness"] = 3,
+			["selfPoint"] = "CENTER",
+			["icon"] = true,
+			["useglowColor"] = false,
+			["regionType"] = "icon",
 			["load"] = {
 				["use_class"] = true,
-				["spec"] = {
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "PALADIN",
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -2139,20 +2263,8 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["alpha"] = 0.7,
-			["glowFrequency"] = 0.25,
-			["selfPoint"] = "CENTER",
-			["authorOptions"] = {
-			},
-			["glowType"] = "buttonOverlay",
-			["glowThickness"] = 3,
-			["parent"] = "Protection Paladin",
-			["keepAspectRatio"] = false,
-			["progressPrecision"] = 0,
-			["regionType"] = "icon",
-			["icon"] = true,
 			["uid"] = "TDwmHVSWO9e",
-			["useglowColor"] = false,
+			["parent"] = "Protection Paladin",
 			["glowYOffset"] = 0,
 			["zoom"] = 0,
 			["auto"] = true,
@@ -2352,20 +2464,28 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["height"] = 24,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["authorOptions"] = {
 			},
 			["load"] = {
 				["use_class"] = true,
-				["spec"] = {
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "PALADIN",
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -2376,20 +2496,16 @@ WeakAurasSaved = {
 			},
 			["frameStrata"] = 1,
 			["glowFrequency"] = 0.25,
-			["glowXOffset"] = 0,
-			["authorOptions"] = {
-			},
-			["glowType"] = "Pixel",
-			["glowThickness"] = 1,
-			["glowLines"] = 8,
-			["glowLength"] = 4,
 			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
+			["glowLength"] = 4,
+			["glowType"] = "Pixel",
+			["glowThickness"] = 1,
+			["glowXOffset"] = 0,
 			["actions"] = {
 				["start"] = {
 				},
@@ -2398,9 +2514,17 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
+			["useglowColor"] = false,
+			["regionType"] = "icon",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["config"] = {
 			},
-			["useglowColor"] = false,
+			["glowLines"] = 8,
 			["width"] = 24,
 			["cooldownTextDisabled"] = false,
 			["useGlowColor"] = true,
@@ -2446,7 +2570,7 @@ WeakAurasSaved = {
 					["check"] = {
 						["trigger"] = 1,
 						["op"] = "<=",
-						["value"] = "30",
+						["value"] = "60",
 						["variable"] = "expirationTime",
 					},
 					["changes"] = {
@@ -2461,7 +2585,7 @@ WeakAurasSaved = {
 						}, -- [1]
 						{
 							["value"] = true,
-							["property"] = "sub.2.text_visible",
+							["property"] = "sub.1.text_visible",
 						}, -- [2]
 					},
 				}, -- [3]
@@ -2570,11 +2694,25 @@ WeakAurasSaved = {
 			},
 			["height"] = 64,
 			["load"] = {
-				["spec"] = {
+				["use_class"] = true,
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -2588,21 +2726,15 @@ WeakAurasSaved = {
 			["glowType"] = "buttonOverlay",
 			["glowThickness"] = 1,
 			["uid"] = "xDisX03LUJU",
-			["xOffset"] = -288,
-			["keepAspectRatio"] = false,
-			["regionType"] = "icon",
-			["width"] = 64,
-			["glowLines"] = 8,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
+			["parent"] = "Protection Paladin",
+			["authorOptions"] = {
 			},
+			["regionType"] = "icon",
+			["keepAspectRatio"] = false,
+			["xOffset"] = -288,
 			["glowLength"] = 10,
-			["glowYOffset"] = 0,
+			["useglowColor"] = false,
+			["width"] = 64,
 			["alpha"] = 0.7,
 			["cooldownTextDisabled"] = false,
 			["auto"] = true,
@@ -2611,15 +2743,21 @@ WeakAurasSaved = {
 			["selfPoint"] = "CENTER",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["authorOptions"] = {
-			},
+			["glowYOffset"] = 0,
 			["config"] = {
 			},
 			["inverse"] = false,
-			["useglowColor"] = false,
+			["glowLines"] = 8,
 			["conditions"] = {
 			},
-			["parent"] = "Protection Paladin",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
 			["glowBorder"] = false,
 		},
 		["神圣之盾"] = {
@@ -2794,16 +2932,27 @@ WeakAurasSaved = {
 				}, -- [3]
 			},
 			["height"] = 48,
-			["authorOptions"] = {
-			},
+			["glowYOffset"] = 0,
 			["load"] = {
 				["use_class"] = true,
-				["spec"] = {
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "PALADIN",
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -2814,12 +2963,10 @@ WeakAurasSaved = {
 			},
 			["alpha"] = 0.7,
 			["glowFrequency"] = 0.25,
-			["parent"] = "Protection Paladin",
 			["glowLength"] = 10,
+			["keepAspectRatio"] = false,
 			["glowType"] = "Pixel",
 			["glowThickness"] = 3,
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
 			["actions"] = {
 				["start"] = {
 				},
@@ -2828,10 +2975,12 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["progressPrecision"] = 0,
+			["selfPoint"] = "CENTER",
 			["regionType"] = "icon",
-			["glowLines"] = 8,
+			["useglowColor"] = false,
 			["uid"] = "TXUjWXV89zq",
-			["glowYOffset"] = 0,
+			["glowLines"] = 8,
 			["anchorFrameType"] = "SCREEN",
 			["zoom"] = 0,
 			["auto"] = true,
@@ -2839,14 +2988,15 @@ WeakAurasSaved = {
 			["useGlowColor"] = true,
 			["glowScale"] = 1,
 			["id"] = "神圣之盾",
-			["useglowColor"] = false,
+			["authorOptions"] = {
+			},
 			["frameStrata"] = 1,
 			["width"] = 48,
-			["xOffset"] = 0,
+			["parent"] = "Protection Paladin",
 			["config"] = {
 			},
 			["inverse"] = false,
-			["progressPrecision"] = 0,
+			["xOffset"] = 0,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -3040,11 +3190,25 @@ WeakAurasSaved = {
 			},
 			["height"] = 20,
 			["load"] = {
-				["spec"] = {
+				["use_class"] = true,
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -3207,11 +3371,25 @@ WeakAurasSaved = {
 			},
 			["height"] = 28,
 			["load"] = {
-				["spec"] = {
+				["use_class"] = true,
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -3223,12 +3401,12 @@ WeakAurasSaved = {
 			["alpha"] = 0.7,
 			["glowFrequency"] = 0.25,
 			["glowYOffset"] = 0,
-			["width"] = 28,
+			["progressPrecision"] = 0,
 			["glowType"] = "Pixel",
 			["glowThickness"] = 2,
-			["parent"] = "Protection Paladin",
-			["progressPrecision"] = 0,
 			["keepAspectRatio"] = false,
+			["parent"] = "Protection Paladin",
+			["glowLines"] = 8,
 			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
@@ -3306,7 +3484,7 @@ WeakAurasSaved = {
 					},
 				}, -- [3]
 			},
-			["glowLines"] = 8,
+			["width"] = 28,
 			["glowBorder"] = false,
 		},
 		["圣疗术"] = {
@@ -3407,6 +3585,30 @@ WeakAurasSaved = {
 			["glowLines"] = 8,
 			["frameStrata"] = 1,
 			["glowFrequency"] = 0.25,
+			["xOffset"] = -236,
+			["glowLength"] = 10,
+			["glowType"] = "buttonOverlay",
+			["glowThickness"] = 3,
+			["glowXOffset"] = 0,
+			["parent"] = "Protection Paladin",
+			["progressPrecision"] = 0,
+			["regionType"] = "icon",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["config"] = {
+			},
+			["icon"] = true,
+			["width"] = 24,
+			["cooldownTextDisabled"] = false,
+			["useGlowColor"] = false,
+			["zoom"] = 0,
+			["auto"] = true,
+			["glowScale"] = 1,
+			["id"] = "圣疗术",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -3421,14 +3623,28 @@ WeakAurasSaved = {
 					["duration_type"] = "seconds",
 				},
 			},
+			["alpha"] = 0.7,
+			["glowYOffset"] = 0,
 			["load"] = {
 				["use_class"] = true,
-				["spec"] = {
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "PALADIN",
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -3437,35 +3653,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["glowType"] = "buttonOverlay",
-			["glowThickness"] = 3,
-			["xOffset"] = -236,
-			["glowLength"] = 10,
-			["progressPrecision"] = 0,
-			["regionType"] = "icon",
-			["glowXOffset"] = 0,
-			["config"] = {
-			},
-			["icon"] = true,
-			["width"] = 24,
-			["cooldownTextDisabled"] = false,
-			["useGlowColor"] = false,
-			["zoom"] = 0,
-			["auto"] = true,
-			["glowScale"] = 1,
-			["id"] = "圣疗术",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["alpha"] = 0.7,
-			["glowYOffset"] = 0,
-			["useglowColor"] = false,
 			["uid"] = "CshjXQjY)YR",
 			["inverse"] = false,
-			["parent"] = "Protection Paladin",
+			["useglowColor"] = false,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -3610,20 +3800,30 @@ WeakAurasSaved = {
 			["subRegions"] = {
 			},
 			["height"] = 24,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["glowXOffset"] = 0,
+			["glowLines"] = 8,
+			["frameStrata"] = 1,
+			["glowFrequency"] = 0.25,
 			["load"] = {
 				["use_class"] = true,
-				["spec"] = {
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "PALADIN",
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -3632,21 +3832,23 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["frameStrata"] = 1,
-			["glowFrequency"] = 0.25,
-			["authorOptions"] = {
-			},
-			["glowXOffset"] = 0,
+			["progressPrecision"] = 0,
 			["glowType"] = "Pixel",
 			["glowThickness"] = 1,
-			["parent"] = "Protection Paladin",
-			["progressPrecision"] = 0,
-			["glowLines"] = 8,
-			["regionType"] = "icon",
+			["authorOptions"] = {
+			},
 			["xOffset"] = 188,
+			["icon"] = true,
+			["regionType"] = "icon",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["config"] = {
 			},
-			["icon"] = true,
+			["parent"] = "Protection Paladin",
 			["width"] = 24,
 			["cooldownTextDisabled"] = false,
 			["useGlowColor"] = true,
@@ -3782,12 +3984,24 @@ WeakAurasSaved = {
 			["glowYOffset"] = 0,
 			["load"] = {
 				["use_class"] = true,
-				["spec"] = {
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "PALADIN",
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -3798,19 +4012,10 @@ WeakAurasSaved = {
 			},
 			["alpha"] = 0.7,
 			["glowFrequency"] = 0.25,
-			["progressPrecision"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["glowType"] = "buttonOverlay",
-			["glowThickness"] = 3,
 			["keepAspectRatio"] = false,
 			["glowLength"] = 10,
-			["glowLines"] = 8,
-			["regionType"] = "icon",
+			["glowType"] = "buttonOverlay",
+			["glowThickness"] = 3,
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -3825,6 +4030,10 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
+			["parent"] = "Protection Paladin",
+			["glowLines"] = 8,
+			["regionType"] = "icon",
+			["useglowColor"] = false,
 			["uid"] = "JO73YMPNNhn",
 			["xOffset"] = 48,
 			["anchorFrameType"] = "SCREEN",
@@ -3834,9 +4043,18 @@ WeakAurasSaved = {
 			["useGlowColor"] = false,
 			["glowScale"] = 1,
 			["id"] = "奉献 2",
-			["useglowColor"] = false,
+			["progressPrecision"] = 0,
 			["frameStrata"] = 1,
 			["width"] = 30,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["config"] = {
+			},
+			["inverse"] = false,
 			["actions"] = {
 				["start"] = {
 				},
@@ -3845,10 +4063,6 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
-			["config"] = {
-			},
-			["inverse"] = false,
-			["parent"] = "Protection Paladin",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -3985,34 +4199,10 @@ WeakAurasSaved = {
 			["glowLines"] = 8,
 			["frameStrata"] = 1,
 			["glowFrequency"] = 0.25,
-			["glowColor"] = {
-				1, -- [1]
-				1, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["load"] = {
-				["use_class"] = true,
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "PALADIN",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["glowType"] = "buttonOverlay",
-			["glowThickness"] = 3,
 			["glowXOffset"] = 0,
 			["parent"] = "Protection Paladin",
-			["xOffset"] = -48,
-			["regionType"] = "icon",
+			["glowType"] = "buttonOverlay",
+			["glowThickness"] = 3,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -4026,6 +4216,16 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["duration_type"] = "seconds",
 				},
+			},
+			["authorOptions"] = {
+			},
+			["xOffset"] = -48,
+			["regionType"] = "icon",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 			["config"] = {
 			},
@@ -4044,14 +4244,44 @@ WeakAurasSaved = {
 			["auto"] = true,
 			["glowScale"] = 1,
 			["id"] = "圣盾术",
-			["color"] = {
+			["glowColor"] = {
 				1, -- [1]
 				1, -- [2]
-				1, -- [3]
+				0, -- [3]
 				1, -- [4]
 			},
 			["alpha"] = 0.7,
 			["glowYOffset"] = 0,
+			["load"] = {
+				["use_class"] = true,
+				["use_race"] = false,
+				["race"] = {
+					["single"] = "Human",
+					["multi"] = {
+						["Dwarf"] = true,
+						["Human"] = true,
+					},
+				},
+				["faction"] = {
+					["single"] = "Alliance",
+				},
+				["use_faction"] = true,
+				["class"] = {
+					["single"] = "PALADIN",
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["uid"] = "wPy034RpNRg",
+			["inverse"] = false,
 			["triggers"] = {
 				{
 					["trigger"] = {
@@ -4139,10 +4369,6 @@ WeakAurasSaved = {
 					},
 				}, -- [4]
 				["activeTriggerMode"] = -10,
-			},
-			["uid"] = "wPy034RpNRg",
-			["inverse"] = false,
-			["authorOptions"] = {
 			},
 			["conditions"] = {
 				{
@@ -5642,21 +5868,21 @@ WeakAurasSaved = {
 					}, -- [3]
 					{
 						["trigger"] = {
-							["subeventPrefix"] = "SPELL",
+							["hostility"] = "friendly",
 							["type"] = "status",
 							["use_hostility"] = true,
 							["unevent"] = "auto",
-							["use_specific_unit"] = true,
+							["unit"] = "party3",
 							["use_absorbMode"] = true,
 							["use_character"] = true,
-							["hostility"] = "friendly",
+							["subeventPrefix"] = "SPELL",
 							["use_class"] = true,
 							["character"] = "player",
 							["class"] = "PRIEST",
 							["event"] = "Unit Characteristics",
 							["use_unit"] = true,
 							["subeventSuffix"] = "_CAST_START",
-							["unit"] = "party3",
+							["use_specific_unit"] = true,
 							["duration"] = "1",
 						},
 						["untrigger"] = {
@@ -7890,21 +8116,21 @@ WeakAurasSaved = {
 					}, -- [3]
 					{
 						["trigger"] = {
-							["subeventPrefix"] = "SPELL",
+							["hostility"] = "friendly",
 							["type"] = "status",
 							["use_hostility"] = true,
 							["unevent"] = "auto",
-							["use_specific_unit"] = true,
+							["unit"] = "party3",
 							["duration"] = "1",
 							["use_character"] = true,
-							["hostility"] = "friendly",
+							["subeventPrefix"] = "SPELL",
 							["use_class"] = true,
 							["character"] = "player",
 							["class"] = "MAGE",
 							["event"] = "Unit Characteristics",
 							["use_unit"] = true,
 							["subeventSuffix"] = "_CAST_START",
-							["unit"] = "party3",
+							["use_specific_unit"] = true,
 							["use_absorbMode"] = true,
 						},
 						["untrigger"] = {
@@ -7938,21 +8164,21 @@ WeakAurasSaved = {
 					}, -- [5]
 					{
 						["trigger"] = {
-							["subeventPrefix"] = "SPELL",
+							["hostility"] = "friendly",
 							["type"] = "status",
 							["use_hostility"] = true,
 							["unevent"] = "auto",
-							["unit"] = "player",
+							["use_unit"] = true,
 							["duration"] = "1",
 							["use_character"] = true,
-							["hostility"] = "friendly",
+							["subeventPrefix"] = "SPELL",
 							["use_class"] = true,
 							["character"] = "player",
 							["class"] = "MAGE",
 							["event"] = "Unit Characteristics",
 							["use_name"] = false,
 							["subeventSuffix"] = "_CAST_START",
-							["use_unit"] = true,
+							["unit"] = "player",
 							["use_absorbMode"] = true,
 						},
 						["untrigger"] = {
@@ -9232,21 +9458,21 @@ WeakAurasSaved = {
 					}, -- [2]
 					{
 						["trigger"] = {
-							["use_unit"] = true,
+							["hostility"] = "friendly",
 							["type"] = "status",
 							["use_hostility"] = true,
 							["unevent"] = "auto",
-							["use_specific_unit"] = true,
+							["unit"] = "party2",
 							["duration"] = "1",
 							["use_character"] = true,
-							["hostility"] = "friendly",
+							["use_unit"] = true,
 							["use_class"] = true,
 							["character"] = "player",
 							["class"] = "DRUID",
 							["event"] = "Unit Characteristics",
 							["subeventPrefix"] = "SPELL",
 							["subeventSuffix"] = "_CAST_START",
-							["unit"] = "party2",
+							["use_specific_unit"] = true,
 							["use_absorbMode"] = true,
 						},
 						["untrigger"] = {
@@ -9256,21 +9482,21 @@ WeakAurasSaved = {
 					}, -- [3]
 					{
 						["trigger"] = {
-							["use_unit"] = true,
+							["hostility"] = "friendly",
 							["type"] = "status",
 							["use_hostility"] = true,
 							["unevent"] = "auto",
-							["use_specific_unit"] = true,
+							["unit"] = "party3",
 							["duration"] = "1",
 							["use_character"] = true,
-							["hostility"] = "friendly",
+							["use_unit"] = true,
 							["use_class"] = true,
 							["character"] = "player",
 							["class"] = "DRUID",
 							["event"] = "Unit Characteristics",
 							["subeventPrefix"] = "SPELL",
 							["subeventSuffix"] = "_CAST_START",
-							["unit"] = "party3",
+							["use_specific_unit"] = true,
 							["use_absorbMode"] = true,
 						},
 						["untrigger"] = {
@@ -9280,21 +9506,21 @@ WeakAurasSaved = {
 					}, -- [4]
 					{
 						["trigger"] = {
-							["use_unit"] = true,
+							["hostility"] = "friendly",
 							["type"] = "status",
 							["use_hostility"] = true,
 							["unevent"] = "auto",
-							["use_specific_unit"] = true,
+							["unit"] = "party4",
 							["use_absorbMode"] = true,
 							["use_character"] = true,
-							["hostility"] = "friendly",
+							["use_unit"] = true,
 							["use_class"] = true,
 							["character"] = "player",
 							["class"] = "DRUID",
 							["event"] = "Unit Characteristics",
 							["subeventPrefix"] = "SPELL",
 							["subeventSuffix"] = "_CAST_START",
-							["unit"] = "party4",
+							["use_specific_unit"] = true,
 							["duration"] = "1",
 						},
 						["untrigger"] = {

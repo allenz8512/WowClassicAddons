@@ -44,6 +44,7 @@ Quartz3DB = {
 		},
 	},
 	["profileKeys"] = {
+		["紫咲詩音 - 碧玉矿洞"] = "Default",
 		["湊阿庫婭 - 碧玉矿洞"] = "Default",
 		["白银兽骑团员 - 碧玉矿洞"] = "Default",
 		["白银兽骑团委 - 碧玉矿洞"] = "Default",

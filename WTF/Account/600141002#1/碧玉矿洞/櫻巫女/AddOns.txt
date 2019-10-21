@@ -4,3 +4,4 @@ NugRunningOptions: disabled
 WeakAuras: enabled
 WeakAurasOptions: enabled
 dct_damage: disabled
+CensusPlusClassic: disabled

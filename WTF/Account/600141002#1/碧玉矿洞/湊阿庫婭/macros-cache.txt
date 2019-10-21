@@ -1,0 +1,3 @@
+VER 3 0000000001000001 "切换武器" "Ability_Warrior_Challange."
+/equip [mod:shift] 风暴战斧;伊兰尼库斯之牙
+END

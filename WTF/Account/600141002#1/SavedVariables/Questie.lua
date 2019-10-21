@@ -2,14 +2,36 @@
 QuestieConfig = {
 	["char"] = {
 		["湊阿庫婭 - 碧玉矿洞"] = {
+			["journey"] = {
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1571641390,
+					["Quest"] = 2178,
+					["Level"] = 12,
+					["Event"] = "Quest",
+					["SubType"] = "Abandon",
+				}, -- [1]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1571641390,
+					["Quest"] = 2178,
+					["Level"] = 12,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [2]
+			},
 			["complete"] = {
 				[291] = true,
+				[954] = true,
 				[420] = true,
 				[182] = true,
 				[183] = true,
 				[1861] = true,
 				[432] = true,
 				[433] = true,
+				[1141] = true,
 				[310] = true,
 				[311] = true,
 				[313] = true,
@@ -20,25 +42,28 @@ QuestieConfig = {
 				[319] = true,
 				[320] = true,
 				[384] = true,
+				[955] = true,
 				[6661] = true,
+				[2178] = true,
+				[983] = true,
 				[1879] = true,
 				[400] = true,
 				[234] = true,
-				[5541] = true,
-				[233] = true,
 				[3364] = true,
 				[287] = true,
-				[170] = true,
-				[282] = true,
-				[2160] = true,
-				[3365] = true,
-				[179] = true,
+				[3114] = true,
 				[218] = true,
+				[170] = true,
+				[2160] = true,
+				[282] = true,
+				[3365] = true,
+				[233] = true,
+				[179] = true,
 				[412] = true,
 				[413] = true,
 				[414] = true,
 				[1880] = true,
-				[3114] = true,
+				[5541] = true,
 			},
 		},
 		["白银兽骑团委 - 碧玉矿洞"] = {
@@ -863,6 +888,7 @@ QuestieConfig = {
 				[2039] = true,
 				[5083] = true,
 				[5091] = true,
+				[4084] = true,
 				[6134] = true,
 				[514] = true,
 				[4124] = true,
@@ -1115,6 +1141,7 @@ QuestieConfig = {
 				[2930] = true,
 				[734] = true,
 				[1469] = true,
+				[3961] = true,
 				[2940] = true,
 				[2942] = true,
 				[737] = true,
@@ -1125,7 +1152,7 @@ QuestieConfig = {
 				[2964] = true,
 				[2970] = true,
 				[2972] = true,
-				[2982] = true,
+				[4005] = true,
 				[2988] = true,
 				[2990] = true,
 				[2992] = true,
@@ -1243,24 +1270,24 @@ QuestieConfig = {
 				[4287] = true,
 				[2661] = true,
 				[3702] = true,
-				[4321] = true,
+				[2662] = true,
 				[8465] = true,
 				[8464] = true,
 				[8462] = true,
 				[8366] = true,
-				[665] = true,
+				[537] = true,
 				[7721] = true,
 				[7070] = true,
-				[939] = true,
 				[607] = true,
+				[939] = true,
 				[2924] = true,
 				[7046] = true,
 				[721] = true,
 				[713] = true,
-				[3764] = true,
 				[7003] = true,
-				[2745] = true,
+				[3764] = true,
 				[6762] = true,
+				[2745] = true,
 				[6761] = true,
 				[6661] = true,
 				[6624] = true,
@@ -1269,56 +1296,57 @@ QuestieConfig = {
 				[725] = true,
 				[1189] = true,
 				[5883] = true,
+				[5882] = true,
 				[4503] = true,
 				[3790] = true,
 				[2769] = true,
+				[5863] = true,
+				[657] = true,
 				[630] = true,
 				[4507] = true,
-				[5882] = true,
-				[5863] = true,
 				[3802] = true,
 				[2781] = true,
 				[2783] = true,
-				[4508] = true,
+				[5503] = true,
 				[739] = true,
 				[5545] = true,
 				[633] = true,
-				[5503] = true,
-				[1267] = true,
 				[2605] = true,
+				[1267] = true,
+				[4493] = true,
 				[1780] = true,
 				[3824] = true,
+				[5246] = true,
 				[2040] = true,
 				[1786] = true,
 				[610] = true,
-				[5246] = true,
 				[5204] = true,
 				[5203] = true,
 				[5202] = true,
-				[642] = true,
+				[3451] = true,
 				[3842] = true,
 				[3844] = true,
-				[3451] = true,
-				[4605] = true,
 				[2821] = true,
+				[642] = true,
 				[5158] = true,
-				[2240] = true,
+				[4605] = true,
 				[624] = true,
-				[2581] = true,
+				[2240] = true,
 				[4864] = true,
+				[2581] = true,
 				[4861] = true,
 				[4808] = true,
-				[2872] = true,
+				[4321] = true,
 				[2845] = true,
-				[1360] = true,
-				[657] = true,
+				[622] = true,
+				[656] = true,
 				[4513] = true,
 				[1559] = true,
 				[1560] = true,
 				[2606] = true,
-				[3637] = true,
+				[4508] = true,
 				[3884] = true,
-				[656] = true,
+				[3637] = true,
 				[2865] = true,
 				[2867] = true,
 				[2869] = true,
@@ -1330,32 +1358,32 @@ QuestieConfig = {
 				[3904] = true,
 				[5762] = true,
 				[978] = true,
-				[4493] = true,
+				[660] = true,
 				[979] = true,
 				[3914] = true,
-				[660] = true,
 				[1320] = true,
+				[2861] = true,
 				[1324] = true,
-				[2864] = true,
-				[537] = true,
+				[2928] = true,
+				[560] = true,
 				[7848] = true,
-				[2662] = true,
+				[665] = true,
 				[4787] = true,
 				[8551] = true,
 				[2158] = true,
 				[542] = true,
-				[4142] = true,
-				[2928] = true,
+				[2872] = true,
+				[2864] = true,
 				[3942] = true,
-				[2861] = true,
-				[2923] = true,
 				[4863] = true,
+				[2923] = true,
+				[4142] = true,
 				[2927] = true,
 				[2929] = true,
-				[560] = true,
 				[4136] = true,
-				[551] = true,
 				[3378] = true,
+				[551] = true,
+				[1360] = true,
 				[2939] = true,
 				[2941] = true,
 				[2943] = true,
@@ -1406,16 +1434,12 @@ QuestieConfig = {
 				[1015] = true,
 				[1221] = true,
 				[2952] = true,
-				[622] = true,
+				[2982] = true,
 				[621] = true,
 				[623] = true,
 				[625] = true,
 				[627] = true,
 				[1253] = true,
-			},
-			["TrackedQuests"] = {
-			},
-			["TrackerHiddenObjectives"] = {
 			},
 			["journey"] = {
 				{
@@ -16430,12 +16454,290 @@ QuestieConfig = {
 					["Quest"] = 5343,
 					["Timestamp"] = 1571317729,
 				}, -- [1269]
+				{
+					["Party"] = {
+						{
+							["Class"] = "战士",
+							["Name"] = "海豹",
+							["Level"] = 56,
+						}, -- [1]
+						{
+							["Class"] = "战士",
+							["Name"] = "海豹",
+							["Level"] = 56,
+						}, -- [2]
+						{
+							["Class"] = "战士",
+							["Name"] = "海豹",
+							["Level"] = 56,
+						}, -- [3]
+					},
+					["Level"] = 59,
+					["Quest"] = 4084,
+					["Timestamp"] = 1571405616,
+					["SubType"] = "Abandon",
+					["Event"] = "Quest",
+				}, -- [1270]
+				{
+					["Party"] = {
+						{
+							["Class"] = "战士",
+							["Name"] = "海豹",
+							["Level"] = 56,
+						}, -- [1]
+						{
+							["Class"] = "战士",
+							["Name"] = "海豹",
+							["Level"] = 56,
+						}, -- [2]
+						{
+							["Class"] = "战士",
+							["Name"] = "海豹",
+							["Level"] = 56,
+						}, -- [3]
+					},
+					["Level"] = 59,
+					["Quest"] = 4084,
+					["Timestamp"] = 1571405616,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [1271]
+				{
+					["Party"] = {
+						{
+							["Class"] = "战士",
+							["Name"] = "海豹",
+							["Level"] = 56,
+						}, -- [1]
+						{
+							["Class"] = "战士",
+							["Name"] = "海豹",
+							["Level"] = 56,
+						}, -- [2]
+						{
+							["Class"] = "战士",
+							["Name"] = "海豹",
+							["Level"] = 56,
+						}, -- [3]
+					},
+					["Level"] = 59,
+					["Quest"] = 4005,
+					["Timestamp"] = 1571405629,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [1272]
+				{
+					["Party"] = {
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [1]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [2]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [3]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [4]
+					},
+					["Level"] = 59,
+					["Quest"] = 4005,
+					["Timestamp"] = 1571406580,
+					["SubType"] = "Abandon",
+					["Event"] = "Quest",
+				}, -- [1273]
+				{
+					["Party"] = {
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [1]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [2]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [3]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [4]
+					},
+					["Level"] = 59,
+					["Quest"] = 4005,
+					["Timestamp"] = 1571406580,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [1274]
+				{
+					["Party"] = {
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [1]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [2]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [3]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [4]
+					},
+					["Level"] = 59,
+					["Quest"] = 3961,
+					["Timestamp"] = 1571406585,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [1275]
+				{
+					["Party"] = {
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [1]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [2]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [3]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [4]
+					},
+					["Level"] = 59,
+					["Quest"] = 3961,
+					["Timestamp"] = 1571406641,
+					["SubType"] = "Abandon",
+					["Event"] = "Quest",
+				}, -- [1276]
+				{
+					["Party"] = {
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [1]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [2]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [3]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [4]
+					},
+					["Level"] = 59,
+					["Quest"] = 3961,
+					["Timestamp"] = 1571406641,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [1277]
+				{
+					["Party"] = {
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [1]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [2]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [3]
+						{
+							["Class"] = "潜行者",
+							["Name"] = "筱小贼",
+							["Level"] = 60,
+						}, -- [4]
+					},
+					["Level"] = 59,
+					["Quest"] = 3962,
+					["Timestamp"] = 1571406654,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [1278]
+				{
+					["Timestamp"] = 1571673474,
+					["Party"] = {
+						{
+							["Class"] = "猎人",
+							["Name"] = "全弹发射",
+							["Level"] = 58,
+						}, -- [1]
+						{
+							["Class"] = "猎人",
+							["Name"] = "全弹发射",
+							["Level"] = 58,
+						}, -- [2]
+						{
+							["Class"] = "猎人",
+							["Name"] = "全弹发射",
+							["Level"] = 58,
+						}, -- [3]
+						{
+							["Class"] = "猎人",
+							["Name"] = "全弹发射",
+							["Level"] = 58,
+						}, -- [4]
+					},
+					["Event"] = "Level",
+					["NewLevel"] = 60,
+				}, -- [1279]
+			},
+			["TrackerHiddenObjectives"] = {
+			},
+			["TrackedQuests"] = {
 			},
 			["TrackerHiddenQuests"] = {
 			},
 		},
 	},
 	["profileKeys"] = {
+		["紫咲詩音 - 碧玉矿洞"] = "Default",
 		["湊阿庫婭 - 碧玉矿洞"] = "Default",
 		["白银兽骑团员 - 碧玉矿洞"] = "Default",
 		["白银兽骑团委 - 碧玉矿洞"] = "Default",
